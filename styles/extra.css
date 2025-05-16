@@ -1,0 +1,22 @@
+.justified-text {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Mở rộng bảng trong bài viết */
+.md-typeset table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Cho phép nội dung xuống dòng nếu cần */
+.md-typeset table td,
+.md-typeset table th {
+  word-wrap: break-word;
+  white-space: normal;
+}
