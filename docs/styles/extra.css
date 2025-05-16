@@ -1,0 +1,9 @@
+.justified-text {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
