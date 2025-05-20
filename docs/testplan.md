@@ -59,17 +59,17 @@ Kiểm thử tất cả các chức năng trong module **Quản lý lớp học*
 
 ### 4. Phương pháp kiểm thử
 
-#### 4.1 Phương pháp:
+#### 4.1 Phương pháp
 - **Kiểm thử thủ công (Manual Testing)**
 - **Kiểm thử tự động (Automated Testing)**
 
-#### 4.2  Loại kiểm thử:
+#### 4.2 Loại kiểm thử
 - **Kiểm thử chức năng (Functional Testing):** Kiểm tra hệ thống hoạt động đúng theo mô tả.
 - **Kiểm thử hồi quy (Regression Testing):** Kiểm tra chức năng cũ vẫn hoạt động đúng sau cập nhật. *(Chạy sau khi hoàn tất kiểm thử thủ công)*
 - **Kiểm thử khả dụng (Usability Testing):** Đánh giá trải nghiệm người dùng là giáo viên.
 - **Kiểm thử tương thích trình duyệt (Compatibility Testing):** Kiểm tra hiển thị và thao tác trên Chrome, Firefox, Edge.
 
-#### 4.3 Công cụ sử dụng:
+#### 4.3 Công cụ sử dụng
 - **Microsoft Excel:** Quản lý test case và tổng hợp kết quả.
 - **Selenium:** Viết kịch bản kiểm thử tự động cho các luồng lặp lại.
 
@@ -116,13 +116,13 @@ Kiểm thử tất cả các chức năng trong module **Quản lý lớp học*
 ---  
 ### 9. Tiêu chí bắt đầu và kết thúc kiểm thử (Entry & Exit Criteria)
 
-#### 9.1 Tiêu chí bắt đầu (Entry Criteria):
+#### 9.1 Tiêu chí bắt đầu (Entry Criteria)
 - Chức năng đã được phát triển đầy đủ và ổn định (**code complete**)
 - Môi trường staging đã sẵn sàng và ổn định
 - Test case đã được viết và được review nội bộ
 - Đã có dữ liệu test hoặc dữ liệu mẫu phù hợp
 
-#### 9.2 Tiêu chí kết thúc (Exit Criteria):
+#### 9.2 Tiêu chí kết thúc (Exit Criteria)
 - Tối thiểu **95% test case pass**
 - **5% còn lại** bắt buộc là những test case có **mức độ ưu tiên thấp** (Low Priority)
 - Không còn lỗi **Critical** hoặc **High severity** chưa xử lý
