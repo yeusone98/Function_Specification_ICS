@@ -79,12 +79,12 @@ Kiểm thử tất cả các chức năng trong module **Quản lý lớp học*
 
 | **Giai đoạn**            | **Ngày bắt đầu** | **Ngày kết thúc** |
 |--------------------------|------------------|--------------------|
-| Lập kế hoạch             | 20/05/2025       |                    |
-| Thiết kế test case       | 20/05/2025       |                    |
-| Thực thi kiểm thử        | 20/05/2025       |                    |
-| Kiểm tra lỗi sau khi   sửa     | 20/05/2025       |                    |
-| Hoàn tất kiểm thử        | 20/05/2025       |                    |
-| Báo cáo kết quả kiểm thử | 20/05/2025       |                    |
+| Lập kế hoạch             | 20/05/2025       |          20/05/2025          |
+| Thiết kế test case       | 20/05/2025       |       23/05/2025             |
+| Thực thi kiểm thử        | 24/05/2025       |         	24/05/2025	           |
+| Kiểm tra lỗi sau khi   sửa     | 25/05/2025       |        25/05/2025            |
+| Hoàn tất kiểm thử        | 26/05/2025       |       26/05/2025             |
+| Báo cáo kết quả kiểm thử | 27/05/2025       |        27/05/2025            |
 
 ---
 
