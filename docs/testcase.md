@@ -77,4 +77,39 @@ Scenario: Bắt đầu buổi học thành công khi đã tick xác nhận đọ
     And tiến trình “Đi học” cập nhật đúng phần trăm theo số lượng đã điểm danh (nghỉ CP, KP tính là vắng mặt)
     And tiến trình “BTVN” hiển thị là 0%
 ```
+```
+Scenario: Cho phép kết thúc điểm danh khi tick “Không có dặn dò cho học viên”
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đang ở trạng thái "Chưa bắt đầu"
 
+    When giáo viên truy cập vào bài học "Bài 20: ABCXYZ"
+    And tick chọn “Tôi đã đọc ghi chú”
+    And nhấn “Bắt đầu buổi học”
+    And xác nhận bắt đầu
+    And hệ thống chuyển sang giao diện điểm danh
+    And giáo viên chọn trạng thái điểm danh cho toàn bộ học viên
+    And tick “Không có dặn dò cho học viên”
+    And nhấn “Kết thúc buổi học”
+    And xác nhận kết thúc
+
+    Then hệ thống lưu toàn bộ dữ liệu điểm danh và xác nhận không có ghi chú
+    And giao diện chuyển sang màn hình “Hoàn thành buổi học”
+    And tiến trình “Đi học” hiển thị đúng theo số lượng điểm danh (Nghỉ CP, KP = vắng mặt)
+    And tiến trình “BTVN” hiển thị là 0%
+```
+```
+Scenario: Giáo viên truy cập lại buổi học “Đã mở” để tiếp tục điểm danh
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đang ở trạng thái "Đã mở"
+    And buổi học chưa được điểm danh đầy đủ
+
+    When giáo viên truy cập lại bài học "Bài 20: ABCXYZ" trong tab "Bài học"
+    And nhấn nút “Điểm danh”
+    And xác nhận bắt đầu điểm danh
+
+    Then hệ thống chuyển đến giao diện điểm danh học viên
+    And dữ liệu điểm danh trước đó (nếu có) vẫn giữ nguyên
+    And giáo viên có thể tiếp tục hoặc cập nhật trạng thái điểm danh cho từng học viên
+```
