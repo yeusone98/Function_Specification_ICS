@@ -14,8 +14,6 @@
     And nếu giáo viên truy cập thủ công qua URL, hệ thống sẽ chặn và hiển thị thông báo "Bạn không có quyền truy cập"
 ```    
 ```
-Feature: Quản Lý Bài Học
-
   Scenario: Giáo viên chỉ thấy bài học thuộc lớp mà mình được phân công
     Given giáo viên "test001@gmail.com" đã được phân công dạy lớp "Long_Test"
 
@@ -28,8 +26,6 @@ Feature: Quản Lý Bài Học
     Then giáo viên thấy chính xác 2 bài học: "Bài 20: ABCXYZ" và "Bài 21: DEF123"
 ```
 ```
-Feature: Bắt đầu buổi học sau khi xác nhận đã đọc ghi chú
-
   Scenario: Không thể bắt đầu buổi học nếu chưa tick xác nhận đã đọc ghi chú
     Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
     And được phân công dạy lớp "Long_Test"
@@ -61,8 +57,6 @@ Scenario: Bắt đầu buổi học thành công khi đã tick xác nhận đọ
 ```
 
 ```
-Feature: Điểm danh và kết thúc buổi học
-
   Scenario: Điểm danh và kết thúc buổi học khi đã cập nhật đầy đủ trạng thái và ghi chú
     Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
     And được phân công dạy lớp "Long_Test"
