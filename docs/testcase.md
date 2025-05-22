@@ -1,6 +1,7 @@
 # TEST CASE  
 
 ## Feature: Quản Lý Bài Học
+
 ```
   Scenario: Giáo viên không thấy bài học nếu chưa được phân công
     Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
@@ -37,6 +38,19 @@
     And lưu thay đổi
 
     Then giáo viên "test001@gmail.com" khi truy cập lại danh sách bài học sẽ thấy bài học "Bài 21: MNOP" với mô tả là "Mô tả đã chỉnh sửa"
+```
+
+```
+Scenario: Admin không thể chỉnh sửa bài học nếu bài học đã bắt đầu
+    Given bài học "Bài ABCXYZ" đã ở trạng thái “Đã mở”
+    And admin đã đăng nhập thành công vào hệ thống
+    And truy cập vào lớp "Long_Test"
+
+    When admin mở danh sách bài học
+    And nhấn vào bài học "ABCXYZ"
+
+    Then hệ thống sẽ không hiện thị nút chỉnh sửa
+    And hiển thị bài học đã mở
 ```
 
 ```
@@ -241,3 +255,5 @@ Scenario: Giáo viên xem được đúng nội dung ghi chú ở bảng thống
       | Ghi chú từ Giáo viên cho Học viên   | Trống   |
       | Ghi chú từ Giáo viên cho Team Support | 12345   |
 ```
+## Feature: Quản Lý Bài Tập Và Kiểm Tra
+
