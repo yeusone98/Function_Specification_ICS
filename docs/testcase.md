@@ -211,17 +211,33 @@ Scenario: Cho phép hoàn thành buổi học khi giáo viên không nhập ghi 
 ```
 Scenario: Nếu chỉ nhập ghi chú cho Support, phần học viên sẽ hiển thị "Trống"
     Given giáo viên "test001@gmail.com" đã đăng nhập thành công
-    And đang ở màn hình “Hoàn tất buổi học” cho bài học "Bài 2000"
+    And đang ở màn hình “Hoàn thành buổi học” cho bài học "Bài ABCXYZ"
     And đã kết thúc điểm danh trước đó
 
-    When giáo viên chỉ nhập ghi chú cho Team Support là “12345”
-    And không nhập gì ở ghi chú cho học viên
+    When giáo viên chỉ nhập ghi chú cho học viên gửi support là “12345”
+    And không nhập gì ở ghi chú cho học viên gửi học viên
+    And tick không dặn dò cho team Support, không có dặn dò cho giáo viên
     And nhấn “Hoàn thành buổi học”
     And xác nhận trong popup
 
-    Then buổi học được đánh dấu “Đã hoàn tất”
-    And khi giáo viên xem lại popup ghi chú ở trang Tổng Quan Lớp
-    Then hệ thống hiển thị:
+    Then buổi học được cập nhật sang trạng thái “Đã hoàn tất”
+    And giao diện hiển thị thông báo “Buổi học đã kết thúc”
+    And khi giáo viên xem lại popup ghi chú ở bảng thống kê học viên:
+      | Ghi chú từ Giáo viên cho Học viên   | Trống   |
+      | Ghi chú từ Giáo viên cho Team Support | 12345   |
+```
+
+```
+Scenario: Giáo viên xem được đúng nội dung ghi chú ở bảng thống kê học viên trang tổng quan lớp
+    Given giáo viên "test001@gmail.com" đã hoàn tất bài học "Bài ABCXYZ" với ghi chú:
+      | Ghi chú gửi học viên     | (bỏ trống) |
+      | Ghi chú gửi Team Support | 12345      |
+
+    And đang truy cập trang “Tổng Quan Lớp” của lớp "Long_Test"
+
+    When giáo viên nhấn vào ghi chú tại dòng học viên "Dương"
+
+    Then hệ thống hiển thị popup ghi chú gồm:
       | Ghi chú từ Giáo viên cho Học viên   | Trống   |
       | Ghi chú từ Giáo viên cho Team Support | 12345   |
 ```
