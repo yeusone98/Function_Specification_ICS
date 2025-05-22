@@ -59,3 +59,28 @@ Scenario: Bắt đầu buổi học thành công khi đã tick xác nhận đọ
     And hệ thống ẩn mô tả bài học
     And chuyển đến giao diện điểm danh
 ```
+
+```
+Feature: Điểm danh và kết thúc buổi học
+
+  Scenario: Điểm danh và kết thúc buổi học khi đã cập nhật đầy đủ trạng thái và ghi chú
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đang ở trạng thái "Chưa bắt đầu"
+
+    When giáo viên truy cập vào bài học "Bài 20: ABCXYZ"
+    And tick xác nhận “Tôi đã đọc ghi chú”
+    And nhấn “Bắt đầu buổi học”
+    And xác nhận trong popup
+    And hệ thống chuyển sang giao diện điểm danh
+    And giáo viên chọn trạng thái điểm danh cho tất cả học viên
+    And nhập ghi chú tổng cho lớp: “Lớp ổn định, không vấn đề”
+    And nhấn nút “Kết thúc buổi học”
+    And xác nhận trong popup kết thúc
+
+    Then hệ thống lưu toàn bộ dữ liệu điểm danh và ghi chú lớp học
+    And giao diện điều hướng sang bước diện “Hoàn thành buổi học”
+    And tiến trình “Đi học” cập nhật đúng phần trăm theo số lượng đã điểm danh (nghỉ CP, KP tính là vắng mặt)
+    And tiến trình “BTVN” hiển thị là 0%
+```
+
