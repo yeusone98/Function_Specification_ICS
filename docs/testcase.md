@@ -208,4 +208,20 @@ Scenario: Cho phép hoàn thành buổi học khi giáo viên không nhập ghi 
       | Không ghi chú | Nút xem bị disable           |
 ```
 
+```
+Scenario: Nếu chỉ nhập ghi chú cho Support, phần học viên sẽ hiển thị "Trống"
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công
+    And đang ở màn hình “Hoàn tất buổi học” cho bài học "Bài 2000"
+    And đã kết thúc điểm danh trước đó
 
+    When giáo viên chỉ nhập ghi chú cho Team Support là “12345”
+    And không nhập gì ở ghi chú cho học viên
+    And nhấn “Hoàn thành buổi học”
+    And xác nhận trong popup
+
+    Then buổi học được đánh dấu “Đã hoàn tất”
+    And khi giáo viên xem lại popup ghi chú ở trang Tổng Quan Lớp
+    Then hệ thống hiển thị:
+      | Ghi chú từ Giáo viên cho Học viên   | Trống   |
+      | Ghi chú từ Giáo viên cho Team Support | 12345   |
+```
