@@ -110,6 +110,57 @@ Scenario: Giáo viên truy cập lại buổi học “Đã mở” để tiếp
     And xác nhận bắt đầu điểm danh
 
     Then hệ thống chuyển đến giao diện điểm danh học viên
-    And dữ liệu điểm danh trước đó (nếu có) vẫn giữ nguyên
-    And giáo viên có thể tiếp tục hoặc cập nhật trạng thái điểm danh cho từng học viên
+    And dữ liệu điểm danh và ghi chú trước đó (nếu có) vẫn giữ nguyên
+    And giáo viên có thể tiếp tục hoặc cập nhật trạng thái điểm danh cho từng học viên và ghi chú lớp học
+```
+
+```
+Scenario: Không thể kết thúc buổi học nếu chưa điểm danh tất cả học viên
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đang ở trạng thái "Đã mở"
+    And giáo viên chưa chọn trạng thái điểm danh cho tất cả học viên
+
+    When giáo viên truy cập vào bài học "Bài 20: ABCXYZ"
+    And nhấn nút “Điểm danh”
+    And nhấn nút "Xác nhận"
+    And điểm danh học viên A
+    And không điểm danh học viên B 
+    And tick “Không có dặn dò cho học viên”
+    And nhấn nút “Kết thúc buổi học”
+
+    Then nút “Kết thúc buổi học” bị disable và không thể nhấn
+    And không hiển thị popup xác nhận
+    And trạng thái buổi học vẫn giữ nguyên là “Đã mở”
+```
+```
+Scenario: Giáo viên truy cập lại buổi học đã điểm danh để hoàn thành buổi học
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đang ở trạng thái "Đã mở"
+    And buổi học đã kết thúc bước điểm danh và đang ở bước hoàn thành buổi học
+
+    When giáo viên truy cập lại bài học "Bài 20: ABCXYZ"
+    And hệ thống hiển thị nút “Hoàn thành buổi học”
+    And giáo viên nhấn nút “Hoàn thành buổi học”
+    And xác nhận trong popup để chuyển sang màn hình hoàn thành buổi học
+    And nhập ghi chú cho học viên (Gửi Support)
+    And nhập ghi chú cho học viên (Gửi học viên)
+    And nhập ghi chú của giáo viên gửi cho Team Support
+    And nhập ghi chú của giáo viên gửi cho giáo viên tiếp theo
+    And nhấn “Xác nhận” để hoàn tất buổi học
+
+    Then hệ thống cập nhật trạng thái buổi học thành “Đã hoàn tất”
+    And giao diện hiển thị “Buổi học đã kết thúc”
+    And trên danh sách bài học, bài học hiển thị trạng thái hoàn tất, tên và avatar giáo viên
+    And tiến độ “Đi học” và “BTVN” hiển thị đúng theo dữ liệu
+    And bảng học viên hiển thị:
+      | Trường hợp                | Hành vi                                 |
+      |---------------------------|------------------------------------------|
+      | Có ghi chú                | Cho phép click để xem chi tiết          |
+      | Không có ghi chú          | Nút bị disable, không thể click         |
+    And ghi chú tổng quan hiển thị đầy đủ:
+      | - Nhận xét lớp của giáo viên
+      | - Ghi chú gửi cho Team Support
+      | - Ghi chú gửi cho giáo viên tiếp theo
 ```
