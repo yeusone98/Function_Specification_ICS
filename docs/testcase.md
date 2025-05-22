@@ -164,3 +164,103 @@ Scenario: Giáo viên truy cập lại buổi học đã điểm danh để hoà
       | - Ghi chú gửi cho Team Support
       | - Ghi chú gửi cho giáo viên tiếp theo
 ```
+```
+Scenario: Cho phép hoàn thành buổi học khi giáo viên không nhập ghi chú và tick cả 2 checkbox “Không có dặn dò”
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đã ở trạng thái “Đã mở”
+    And buổi học đã kết thúc bước điểm danh và đang ở bước hoàn tất
+
+    When giáo viên truy cập lại bài học "Bài 20: ABCXYZ"
+    And nhấn nút “Hoàn thành buổi học”
+    And hệ thống hiển thị màn hình hoàn tất buổi học
+    And giáo viên tick cả 2 checkbox:
+      | “Không có dặn dò cho Team Support”       |
+      | “Không có dặn dò cho giáo viên tiếp theo”|
+
+    And nhấn nút “Hoàn thành buổi học”
+    And xác nhận trong popup: “Giáo viên vui lòng kiểm tra các ghi chú và tắt record Google Meet trước khi hoàn thành buổi học”
+
+    Then buổi học được cập nhật sang trạng thái “Đã hoàn tất”
+    And giao diện hiển thị thông báo “Buổi học đã kết thúc”
+    And trong danh sách bài học, hiển thị:
+      | Trạng thái     | Đã hoàn tất                |
+      | Tiêu đề        | Bài 20: ABCXYZ             |
+      | Tên GV         | test001@gmail.com          |
+      | Tiến trình     | BTVN = 0%, Đi học = đúng % |
+    And bảng thống kê học viên:
+      | Có ghi chú  | Nút xem chi tiết được enable  |
+      | Không ghi chú | Nút xem bị disable           |
+📌 Giải thích kiểm thử:
+Mục kiểm thử	Mục tiêu
+Không nhập ghi chú	✅ Được phép, miễn là tick đủ 2 checkbox
+Xác nhận popup	✅ Phải hiển thị đúng nội dung
+Cập nhật trạng thái	✅ Sang “Đã hoàn tất”
+Giao diện danh sách	✅ Hiển thị đúng tiến trình & bảng học viên
+
+📦 Dạng Markdown cho MkDocs .md
+markdown
+Copy
+Edit
+### TC_010 - Hoàn thành buổi học khi không nhập ghi chú và tick đủ 2 checkbox
+
+```gherkin
+Feature: Hoàn thành buổi học mà không cần ghi chú nếu đã tick “Không có dặn dò”
+
+  Scenario: Cho phép hoàn thành buổi học khi giáo viên không nhập ghi chú và tick cả 2 checkbox “Không có dặn dò”
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đã ở trạng thái “Đã mở”
+    And buổi học đã kết thúc bước điểm danh và đang ở bước hoàn tất
+
+    When giáo viên truy cập lại bài học "Bài 20: ABCXYZ"
+    And nhấn nút “Hoàn thành buổi học”
+    And hệ thống hiển thị màn hình hoàn tất buổi học
+    And giáo viên tick cả 2 checkbox:
+      | “Không có dặn dò cho Team Support”       |
+      | “Không có dặn dò cho giáo viên tiếp theo”|
+
+    And nhấn nút “Hoàn thành buổi học”
+    And xác nhận trong popup: “Giáo viên vui lòng kiểm tra các ghi chú và tắt record Google Meet trước khi hoàn thành buổi học”
+
+    Then buổi học được cập nhật sang trạng thái “Đã hoàn tất”
+    And giao diện hiển thị thông báo “Buổi học đã kết thúc”
+    And trong danh sách bài học, hiển thị:
+      | Trạng thái     | Đã hoàn tất                |
+      | Tiêu đề        | Bài 20: ABCXYZ             |
+      | Tên GV         | test001@gmail.com          |
+      | Tiến trình     | BTVN = 0%, Đi học = đúng % |
+    And bảng thống kê học viên:
+      | Có ghi chú  | Nút xem chi tiết được enable  |
+      | Không ghi chú | Nút xem bị disable           |
+
+```
+Scenario: Cho phép hoàn thành buổi học khi giáo viên không nhập ghi chú và tick cả 2 checkbox “Không có dặn dò”
+    Given giáo viên "test001@gmail.com" đã đăng nhập thành công vào hệ thống
+    And được phân công dạy lớp "Long_Test"
+    And bài học "Bài 20: ABCXYZ" đã ở trạng thái “Đã mở”
+    And buổi học đã kết thúc bước điểm danh và đang ở bước hoàn tất
+
+    When giáo viên truy cập lại bài học "Bài 20: ABCXYZ"
+    And nhấn nút “Hoàn thành buổi học”
+    And hệ thống hiển thị màn hình hoàn tất buổi học
+    And giáo viên tick cả 2 checkbox:
+      | “Không có dặn dò cho Team Support”       |
+      | “Không có dặn dò cho giáo viên tiếp theo”|
+
+    And nhấn nút “Hoàn thành buổi học”
+    And xác nhận trong popup: “Giáo viên vui lòng kiểm tra các ghi chú và tắt record Google Meet trước khi hoàn thành buổi học”
+
+    Then buổi học được cập nhật sang trạng thái “Đã hoàn tất”
+    And giao diện hiển thị thông báo “Buổi học đã kết thúc”
+    And trong danh sách bài học, hiển thị:
+      | Trạng thái     | Đã hoàn tất                |
+      | Tiêu đề        | Bài 20: ABCXYZ             |
+      | Tên GV và avatar         | test001@gmail.com          |
+      | Tiến trình     | BTVN = đúng%, Đi học = đúng % |
+    And bảng thống kê học viên:
+      | Có ghi chú  | Nút xem chi tiết được enable  |
+      | Không ghi chú | Nút xem bị disable           |
+```
+
+
