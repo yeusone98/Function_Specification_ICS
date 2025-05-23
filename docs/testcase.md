@@ -301,6 +301,7 @@ Scenario: Giáo viên truy cập BTVN đã giao và có học viên nộp
 
     Then hệ thống chuyển đến giao diện chấm điểm
     And hiển thị danh sách học viên đã nộp với trạng thái “Chưa chấm”
+    And hiển thị % học sinh đã nộp bài
 ```
 
 ```
@@ -369,19 +370,31 @@ Scenario: Khi giáo viên chấm điểm xong toàn bộ học viên
     When giáo viên chấm đầy đủ tất cả câu hỏi cho từng học viên
 
     Then hệ thống cập nhật trạng thái bài là “Đã chấm”
-    And progress trạng thái hiển thị “100%”
 ```
+
 ```
-Given bài tập về nhà "ABCXYZ" đã được giao và có học viên nộp
+Scenario: Một phần học sinh được chấm → trạng thái vẫn là “Chưa chấm”
+  Given tất cả học viên đã nộp bài tập về nhà "ABCXYZ"
 
-  When giáo viên chỉ chấm điểm cho một số học viên
+  When giáo viên chỉ chấm điểm cho một phần
 
-  Then trạng thái bài hiển thị là “Chưa chấm”
-  And tiến độ hiển thị phần trăm chính xác theo số lượng đã chấm
+  Then trạng thái bài là “Chưa chấm”
 ```
 
 ## 3. Feature: Quản Lý Bài Kiểm Tra
 
+```
+Scenario: Admin thêm bài kiểm tra mới vào lớp học
+  Given admin đã đăng nhập hệ thống
+  When admin vào tab "Bài tập và kiểm tra"
+  And nhấn "Thêm bài kiểm tra" cho lớp "Long_Test"
+  And nhập thông tin tên bài kiểm tra "ABCXYZ" và nội dung chi tiết
+
+  Then bài kiểm tra "ABCXYZ" được thêm vào danh sách của lớp
+  And trạng thái hiển thị là "Chưa giao"
+```
+
+```
 Scenario: Trạng thái bài kiểm tra là "Chưa giao" khi giáo viên chưa giao bài
   Given admin đã tạo bài kiểm tra "ABCXYZ" cho lớp "Long_Test"
 
@@ -395,3 +408,141 @@ Scenario: Trạng thái bài kiểm tra là "Chưa giao" khi giáo viên chưa g
     | Nội dung           | Các câu hỏi của bài kiểm tra        |
 
   And giáo viên không thể thao tác: chấm điểm / xem chi tiết
+```
+
+```
+Scenario: Giáo viên giao bài kiểm tra sau khi được admin thêm
+  Given bài kiểm tra "ABCXYZ" đang ở trạng thái “Chưa giao”
+  And giáo viên đã đăng nhập
+
+  When giáo viên truy cập tab “Bài tập và kiểm tra”
+  And nhấn vào “Giao bài”
+
+  Then hệ thống chuyển bài kiểm tra sang trạng thái “Đang đợi nộp bài”
+  And học sinh sẽ thấy bài kiểm tra trong ứng dụng học tập
+```
+
+```
+Scenario: Giáo viên thu hồi bài kiểm tra ở các trạng thái đang đợi nộp bài, chưa chấm và đã chấm
+  Given bài kiểm tra "ABCXYZ" đang ở trạng thái "đang đợi nộp bài" hoặc "chưa chấm" hoặc "đã chấm"
+
+  When giáo viên nhấn nút “Thu hồi”
+
+  Then hệ thống cập nhật trạng thái bài kiểm tra về “Chưa giao”
+  And học sinh không còn thấy bài kiểm tra trong app học tập
+
+Examples:
+  | trạng_thái     |
+  |----------------|
+  | Đang đợi nộp bài |
+  | Chưa chấm        |
+  | Đã chấm          |
+```
+
+```
+Scenario: Bài kiểm tra đã giao nhưng học sinh chưa làm → trạng thái là “Đang đợi nộp bài”
+  Given giáo viên "test001@gmail.com" đã giao bài kiểm tra "ABCXYZ"
+  And bài học tương ứng đã được hoàn tất
+  And học sinh chưa nộp bài trên ứng dụng học tập
+
+  When giáo viên truy cập tab “Bài tập và Kiểm tra”
+  And chọn bài kiểm tra "ABCXYZ"
+
+  Then hệ thống hiển thị bài kiểm tra "ABCXYZ" với:
+    | Thành phần         | Nội dung hiển thị       |
+    |--------------------|--------------------------|
+    | Trạng thái         | Đang đợi nộp bài         |
+    | Nội dung           | Thông tin học viên chưa nộp bài |
+```
+
+
+
+```
+Scenario: Giáo viên truy cập bài kiểm tra đã giao và có học sinh nộp
+  Given giáo viên đã đăng nhập thành công
+  And bài kiểm tra "ABCXYZ" đã được giao và có học sinh nộp bài
+
+  When giáo viên nhấn vào bài "ABCXYZ" trong tab “Bài tập và kiểm tra”
+
+  Then hệ thống chuyển đến giao diện chấm điểm
+  And hiển thị danh sách học sinh đã nộp với trạng thái “Chưa chấm”
+  And hiển thị % học sinh đã nộp bài
+```
+
+```
+Scenario: Khi giáo viên chấm điểm xong toàn bộ học sinh
+  Given tất cả học sinh đã nộp bài kiểm tra "ABCXYZ"
+  When giáo viên hoàn tất việc chấm
+
+  Then trạng thái bài chuyển sang “Đã chấm”
+```
+
+```
+Scenario: Một phần học sinh được chấm → trạng thái vẫn là “Chưa chấm”
+  Given tất cả đã nộp bài kiểm tra "ABCXYZ"
+
+  When giáo viên chỉ chấm điểm cho một phần
+
+  Then trạng thái bài kiểm tra là “Chưa chấm”
+```
+
+```
+Scenario: Lọc danh sách câu hỏi theo trạng thái “Chưa chấm”
+  When giáo viên chọn bộ lọc “Chưa chấm”
+
+  Then chỉ hiển thị các câu chưa có điểm hoặc nhận xét
+```
+```
+Scenario: Lọc danh sách câu hỏi theo trạng thái “Đã chấm”
+  When giáo viên chọn bộ lọc “Đã chấm”
+
+  Then chỉ hiển thị các câu đã chấm xong
+```
+```
+Scenario: Lọc học sinh chưa được chấm ở câu đang chọn
+  When giáo viên chọn một câu hỏi bất kỳ
+  And áp dụng bộ lọc “Chưa chấm”
+
+  Then chỉ hiển thị học sinh chưa được chấm câu đó
+```
+
+```
+Scenario: Giáo viên chấm một câu với nhận xét đầy đủ và nhiều tệp đính kèm hợp lệ
+  When giáo viên nhập điểm (1–10)
+  And nhập nhận xét văn bản
+  And ghi âm + gửi
+  And đính kèm nhiều file ảnh hợp lệ (.jpg, .png, .bmp, .webp), ≤25MB
+  And đính kèm nhiều file ghi âm
+
+  Then trạng thái câu hỏi là “Đã chấm”
+  And hiển thị icon/audio/ảnh tương ứng
+```
+
+```
+Scenario: Không thể tải lên file quá 25MB
+  When giáo viên đính kèm ảnh > 25MB
+
+  Then hệ thống báo lỗi “Dung lượng vượt giới hạn 25MB”
+  And không cho phép upload
+```
+
+
+
+
+
+
+
+
+
+
+```
+Scenario: Giáo viên có thể sửa điểm và nhận xét cho bài đã chấm
+  Given bài kiểm tra "ABCXYZ" đã được chấm và hiển thị “Đã chấm”
+
+  When giáo viên truy cập lại bài
+  And chọn câu hỏi đã chấm của một học sinh
+  And thay đổi điểm hoặc nhận xét
+
+  Then hệ thống lưu dữ liệu cập nhật mới
+  And trạng thái bài vẫn giữ là “Đã chấm”
+```
