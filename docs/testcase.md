@@ -255,5 +255,23 @@ Scenario: Giáo viên xem được đúng nội dung ghi chú ở bảng thống
       | Ghi chú từ Giáo viên cho Học viên   | Trống   |
       | Ghi chú từ Giáo viên cho Team Support | 12345   |
 ```
-## Feature: Quản Lý Bài Tập Và Kiểm Tra
+## Feature: Quản Lý Bài Tập Về Nhà
+```
+ Scenario: Trạng thái bài tập là "Chưa giao" khi bài học chưa bắt đầu hoặc chưa học xong
+    Given admin đã tạo bài tập về nhà "Test011" cho lớp "Long_Test"
+    And bài học tương ứng vẫn đang ở một trong các trạng thái sau:
+      | Trạng thái bài học         |
+      |----------------------------|
+      | Chưa bắt đầu buổi học      |
+      | Đã bắt đầu nhưng chưa kết thúc |
 
+    When giáo viên truy cập tab “Bài tập và kiểm tra”
+
+    Then hệ thống hiển thị bài tập "Test011" với:
+      | Thành phần              | Nội dung hiển thị      |
+      |-------------------------|-------------------------|
+      | Trạng thái bài tập      | Chưa giao               |
+      | Mô tả / thông báo chính | Bài học chưa mở         |
+
+    And giáo viên không thể thao tác: giao bài / chấm điểm / xem chi tiết
+```
