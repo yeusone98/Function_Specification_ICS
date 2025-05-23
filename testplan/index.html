@@ -1,0 +1,936 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../testcase/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Kế hoạch kiểm thử (Test Plan) - ICS docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ke-hoach-kiem-thu-test-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ICS docs" class="md-header__button md-logo" aria-label="ICS docs" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ICS docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kế hoạch kiểm thử (Test Plan)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ICS docs" class="md-nav__button md-logo" aria-label="ICS docs" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    ICS docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testcase/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TEST CASE
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Kế hoạch kiểm thử (Test Plan)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kế hoạch kiểm thử (Test Plan)
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pham-vi-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Phạm vi kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-muc-tieu-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mục tiêu kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-phuong-phap-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Phương pháp kiểm thử
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Phương pháp kiểm thử">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-phuong-phap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Phương pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-loai-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Loại kiểm thử
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-cong-cu-su-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Công cụ sử dụng
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lich-trinh-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Lịch trình kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-moi-truong-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Môi trường kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-nhan-su-va-trach-nhiem" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Nhân sự và trách nhiệm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-rui-ro-va-phuong-an-giam-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Rủi ro và phương án giảm thiểu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-tieu-chi-bat-au-va-ket-thuc-kiem-thu-entry-exit-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Tiêu chí bắt đầu và kết thúc kiểm thử (Entry &amp; Exit Criteria)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Tiêu chí bắt đầu và kết thúc kiểm thử (Entry &amp; Exit Criteria)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-tieu-chi-bat-au-entry-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Tiêu chí bắt đầu (Entry Criteria)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-tieu-chi-ket-thuc-exit-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Tiêu chí kết thúc (Exit Criteria)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pham-vi-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Phạm vi kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-muc-tieu-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mục tiêu kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-phuong-phap-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Phương pháp kiểm thử
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Phương pháp kiểm thử">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-phuong-phap" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Phương pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-loai-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 Loại kiểm thử
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-cong-cu-su-dung" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 Công cụ sử dụng
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-lich-trinh-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Lịch trình kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-moi-truong-kiem-thu" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Môi trường kiểm thử
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-nhan-su-va-trach-nhiem" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Nhân sự và trách nhiệm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-rui-ro-va-phuong-an-giam-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Rủi ro và phương án giảm thiểu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-tieu-chi-bat-au-va-ket-thuc-kiem-thu-entry-exit-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Tiêu chí bắt đầu và kết thúc kiểm thử (Entry &amp; Exit Criteria)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Tiêu chí bắt đầu và kết thúc kiểm thử (Entry &amp; Exit Criteria)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-tieu-chi-bat-au-entry-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 Tiêu chí bắt đầu (Entry Criteria)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92-tieu-chi-ket-thuc-exit-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 Tiêu chí kết thúc (Exit Criteria)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ke-hoach-kiem-thu-test-plan">Kế hoạch kiểm thử (Test Plan)</h1>
+<hr />
+<table>
+<thead>
+<tr>
+<th><strong>Mục</strong></th>
+<th><strong>Chi tiết</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên kế hoạch kiểm thử</td>
+<td>ICS Sakumi – Tính năng quản lý lớp học dành cho giáo viên</td>
+</tr>
+<tr>
+<td>Người lập</td>
+<td>Vương (QC Tester)</td>
+</tr>
+<tr>
+<td>Ngày lập</td>
+<td>20/05/2025</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="1-gioi-thieu">1. Giới thiệu</h3>
+<p>Tài liệu này mô tả kế hoạch kiểm thử cho các chức năng thuộc module <strong>Quản lý lớp học</strong> trong hệ thống ICS Nhật Ngữ Sakumi, được sử dụng bởi người dùng có vai trò <strong>Giáo viên</strong>.</p>
+<p>Mục tiêu của kế hoạch kiểm thử:
+- Đảm bảo các chức năng hoạt động đúng theo đặc tả đã được phê duyệt.
+- Phát hiện và ghi nhận lỗi phần mềm trong quá trình sử dụng thực tế.
+- Đánh giá tính ổn định, khả năng sử dụng và trải nghiệm người dùng từ góc nhìn của giáo viên.</p>
+<hr />
+<h3 id="2-pham-vi-kiem-thu">2. Phạm vi kiểm thử</h3>
+<p>Kiểm thử tất cả các chức năng trong module <strong>Quản lý lớp học</strong> dành cho <strong>giáo viên</strong>, bao gồm:</p>
+<ul>
+<li>Hiển thị danh sách lớp và thống kê tổng quan (H-001, H-002)</li>
+<li>Truy cập và xem chi tiết bài học (đã học, chưa học, đang học) (H-003, H-004)</li>
+<li>Quản lý quy trình dạy học theo từng trạng thái buổi học (<strong>F-001</strong>):<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;• Chưa bắt đầu<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;• Đã bắt đầu – chưa điểm danh<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;• Đã điểm danh – chưa hoàn tất</li>
+<li>Thực hiện điểm danh và ghi chú buổi học (H-005, H-006)</li>
+<li>Chấm điểm bài tập và bài kiểm tra (F-002, F-003)</li>
+<li>Quản lý bài tập và kiểm tra (H-007)</li>
+<li>Theo dõi tiến độ tự học của học viên (H-008)</li>
+<li>Xem đánh giá giáo viên trong lớp (H-009)  </li>
+<li>Giao bài kiểm tra cho học viên (F-005)</li>
+<li>Thu hồi bài kiểm tra đã giao (F-006)</li>
+</ul>
+<hr />
+<h3 id="3-muc-tieu-kiem-thu">3. Mục tiêu kiểm thử</h3>
+<ul>
+<li>Kiểm tra hiển thị chính xác danh sách lớp và chỉ số tổng quan (H-001, H-002)</li>
+<li>Đảm bảo giáo viên xem được chi tiết bài học (H-003, H-004)</li>
+<li>Kiểm tra luồng thao tác buổi học theo từng trạng thái (F-001)</li>
+<li>Kiểm tra thao tác điểm danh và ghi chú lớp học (H-005, H-006)</li>
+<li>Đảm bảo chức năng chấm bài hoạt động đúng và cập nhật trạng thái bài chấm (F-002, F-003)</li>
+<li>Xác minh dữ liệu tổng quan bài tập/kiểm tra hiển thị chính xác (H-007)</li>
+<li>Đảm bảo dữ liệu tự học được ghi nhận và hiển thị đúng theo học viên (H-008)</li>
+<li>Kiểm tra hiển thị đánh giá giáo viên trong từng buổi học (H-009)</li>
+<li>Đảm bảo hệ thống hoạt động mượt trên trình duyệt phổ biến (Chrome, Firefox, Edge)</li>
+<li>Kiểm tra trải nghiệm thực tế của giáo viên khi thao tác liên tục    </li>
+<li>Đảm bảo chức năng giao bài kiểm tra cho học viên đúng điều kiện, trạng thái cập nhật chính xác (F-005)</li>
+<li>Kiểm tra khả năng thu hồi bài kiểm tra đã giao và cập nhật lại trạng thái phù hợp (F-006)</li>
+</ul>
+<hr />
+<h3 id="4-phuong-phap-kiem-thu">4. Phương pháp kiểm thử</h3>
+<h4 id="41-phuong-phap">4.1 Phương pháp</h4>
+<ul>
+<li><strong>Kiểm thử thủ công (Manual Testing)</strong></li>
+<li><strong>Kiểm thử tự động (Automated Testing)</strong></li>
+</ul>
+<h4 id="42-loai-kiem-thu">4.2 Loại kiểm thử</h4>
+<ul>
+<li><strong>Kiểm thử chức năng (Functional Testing):</strong> Kiểm tra hệ thống hoạt động đúng theo mô tả.</li>
+<li><strong>Kiểm thử hồi quy (Regression Testing):</strong> Kiểm tra chức năng cũ vẫn hoạt động đúng sau cập nhật. <em>(Chạy sau khi hoàn tất kiểm thử thủ công)</em></li>
+<li><strong>Kiểm thử khả dụng (Usability Testing):</strong> Đánh giá trải nghiệm người dùng là giáo viên.</li>
+<li><strong>Kiểm thử tương thích trình duyệt (Compatibility Testing):</strong> Kiểm tra hiển thị và thao tác trên Chrome, Firefox, Edge.</li>
+</ul>
+<h4 id="43-cong-cu-su-dung">4.3 Công cụ sử dụng</h4>
+<ul>
+<li><strong>Microsoft Excel:</strong> Quản lý test case và tổng hợp kết quả.</li>
+<li><strong>Selenium:</strong> Viết kịch bản kiểm thử tự động cho các luồng lặp lại.</li>
+</ul>
+<hr />
+<h3 id="5-lich-trinh-kiem-thu">5. Lịch trình kiểm thử</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Giai đoạn</strong></th>
+<th><strong>Ngày bắt đầu</strong></th>
+<th><strong>Ngày kết thúc</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lập kế hoạch</td>
+<td>20/05/2025</td>
+<td>20/05/2025</td>
+</tr>
+<tr>
+<td>Thiết kế test case</td>
+<td>20/05/2025</td>
+<td>23/05/2025</td>
+</tr>
+<tr>
+<td>Thực thi kiểm thử</td>
+<td>24/05/2025</td>
+<td>24/05/2025</td>
+</tr>
+<tr>
+<td>Kiểm tra lỗi sau khi   sửa</td>
+<td>25/05/2025</td>
+<td>25/05/2025</td>
+</tr>
+<tr>
+<td>Hoàn tất kiểm thử</td>
+<td>26/05/2025</td>
+<td>26/05/2025</td>
+</tr>
+<tr>
+<td>Báo cáo kết quả kiểm thử</td>
+<td>27/05/2025</td>
+<td>27/05/2025</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="6-moi-truong-kiem-thu">6. Môi trường kiểm thử</h3>
+<ul>
+<li><strong>Trình duyệt &amp; phần mềm:</strong> Google Chrome bản mới nhất</li>
+<li><strong>Đường dẫn kiểm thử (Staging):</strong> <a href="https://ics.pls.edu.vn/">https://ics.pls.edu.vn/</a></li>
+</ul>
+<hr />
+<h3 id="7-nhan-su-va-trach-nhiem">7. Nhân sự và trách nhiệm</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Vai trò</strong></th>
+<th><strong>Tên</strong></th>
+<th><strong>Trách nhiệm</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QC</td>
+<td>Vương</td>
+<td>Lập kế hoạch kiểm thử, điều phối thực hiện</td>
+</tr>
+<tr>
+<td>QC</td>
+<td>Vương</td>
+<td>Thực hiện test, ghi nhận lỗi, phối hợp xử lý bug, viết test report</td>
+</tr>
+<tr>
+<td>Dev support</td>
+<td>Long, Trí</td>
+<td>Phân tích lỗi, sửa lỗi, hỗ trợ thiết lập và cấu hình môi trường</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="8-rui-ro-va-phuong-an-giam-thieu">8. Rủi ro và phương án giảm thiểu</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Rủi ro</strong></th>
+<th><strong>Phương án giảm thiểu</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thay đổi yêu cầu giữa chừng</td>
+<td>Khóa phạm vi kiểm thử trước khi chạy test chính thức</td>
+</tr>
+<tr>
+<td>Thiếu dữ liệu học viên thực tế để kiểm thử</td>
+<td>Tạo dữ liệu mẫu có tính đại diện cao, mô phỏng tình huống thực tế</td>
+</tr>
+<tr>
+<td>Không thể kiểm thử toàn bộ test case (thiếu thời gian, nguồn lực)</td>
+<td>Ưu tiên chạy test case theo mức độ ưu tiên (High/Medium trước)</td>
+</tr>
+<tr>
+<td>Thiết kế test case chưa bao phủ hết luồng thực tế → Khách hàng phát hiện lỗi ngoài dự đoán</td>
+<td>Review chéo test case, tổ chức test exploratory và bổ sung tình huống thực tế từ end-user</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="9-tieu-chi-bat-au-va-ket-thuc-kiem-thu-entry-exit-criteria">9. Tiêu chí bắt đầu và kết thúc kiểm thử (Entry &amp; Exit Criteria)</h3>
+<h4 id="91-tieu-chi-bat-au-entry-criteria">9.1 Tiêu chí bắt đầu (Entry Criteria)</h4>
+<ul>
+<li>Chức năng đã được phát triển đầy đủ và ổn định (<strong>code complete</strong>)</li>
+<li>Môi trường staging đã sẵn sàng và ổn định</li>
+<li>Test case đã được viết và được review nội bộ</li>
+<li>Đã có dữ liệu test hoặc dữ liệu mẫu phù hợp</li>
+</ul>
+<h4 id="92-tieu-chi-ket-thuc-exit-criteria">9.2 Tiêu chí kết thúc (Exit Criteria)</h4>
+<ul>
+<li>Tối thiểu <strong>95% test case pass</strong></li>
+<li><strong>5% còn lại</strong> bắt buộc là những test case có <strong>mức độ ưu tiên thấp</strong> (Low Priority)</li>
+<li>Không còn lỗi <strong>Critical</strong> hoặc <strong>High severity</strong> chưa xử lý</li>
+<li>Tất cả lỗi còn lại đã được ghi nhận và có kế hoạch xử lý cụ thể</li>
+<li>Hoàn tất báo cáo test và gửi cho các bên liên quan</li>
+</ul>
+<div style="text-align: center;"> - HẾT - </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../testcase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TEST CASE">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                TEST CASE
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
