@@ -1,6 +1,6 @@
 # TEST CASE 
 
-## Feature: Quản Lý Bài Học
+## 1. Feature: Quản Lý Bài Học
 
 ```
   Scenario: Giáo viên không thấy bài học nếu chưa được phân công
@@ -255,10 +255,10 @@ Scenario: Giáo viên xem được đúng nội dung ghi chú ở bảng thống
       | Ghi chú từ Giáo viên cho Học viên   | Trống   |
       | Ghi chú từ Giáo viên cho Team Support | 12345   |
 ```
-## Feature: Quản Lý Bài Tập Về Nhà
+## 2. Feature: Quản Lý Bài Tập Về Nhà
 ```
  Scenario: Trạng thái bài tập là "Chưa giao" khi bài học chưa bắt đầu hoặc chưa học xong
-    Given admin đã tạo bài tập về nhà "Test011" cho lớp "Long_Test"
+    Given admin đã tạo bài tập về nhà "ABCXYZ" cho lớp "Long_Test"
     And bài học tương ứng vẫn đang ở một trong các trạng thái sau:
       | Trạng thái bài học         |
       |----------------------------|
@@ -266,12 +266,132 @@ Scenario: Giáo viên xem được đúng nội dung ghi chú ở bảng thống
       | Đã bắt đầu nhưng chưa kết thúc |
 
     When giáo viên truy cập tab “Bài tập và kiểm tra”
+    And chọn bài tập về nhà "ABCXYZ"
 
-    Then hệ thống hiển thị bài tập "Test011" với:
+    Then hệ thống hiển thị bài tập "ABCXYZ" với:
       | Thành phần              | Nội dung hiển thị      |
       |-------------------------|-------------------------|
       | Trạng thái bài tập      | Chưa giao               |
-      | Mô tả / thông báo chính | Bài học chưa mở         |
+      | Nội dung | Bài học chưa mở         |
 
     And giáo viên không thể thao tác: giao bài / chấm điểm / xem chi tiết
 ```
+```
+Scenario: Bài kiểm tra đã giao nhưng học sinh chưa làm → trạng thái là “Đang đợi nộp bài”
+    Given giáo viên "test001@gmail.com" đã giao bài kiểm tra “ABCXYZ”
+    And bài học tương ứng đã được hoàn tất
+    And học sinh chưa nộp bài tập về nhà trên ứng dụng học tập
+
+    When giáo viên truy cập tab “Bài tập và Kiểm tra”
+    And chọn bài tập về nhà “ABCXYZ”
+
+    Then hệ thống hiển thị bài tập "ABCXYZ" với:
+      | Thành phần              | Nội dung hiển thị      |
+      |-------------------------|-------------------------|
+      | Trạng thái bài tập      | Đang đợi nộp bài               |
+      | Nội dung | Thông tin học viên chưa nộp bài         |
+```
+
+```
+Scenario: Giáo viên truy cập BTVN đã giao và có học viên nộp
+    Given giáo viên đã đăng nhập thành công
+    And bài tập về nhà "ABCXYZ" đã được giao và có học viên nộp bài
+
+    When giáo viên nhấn vào bài "ABCXYZ" trong tab “Bài tập và kiểm tra”
+
+    Then hệ thống chuyển đến giao diện chấm điểm
+    And hiển thị danh sách học viên đã nộp với trạng thái “Chưa chấm”
+```
+
+```
+Scenario: Lọc danh sách câu hỏi theo trạng thái “Chưa chấm”
+  Given đang ở giao diện chấm điểm bài "ABCXYZ"
+
+  When giáo viên chọn bộ lọc “Chưa chấm” trong phần câu hỏi
+
+  Then chỉ hiển thị các câu chưa có chấm
+```
+
+
+```
+Scenario: Lọc danh sách câu hỏi theo trạng thái “Đã chấm”
+  Given đang ở giao diện chấm điểm bài "ABCXYZ"
+
+  When giáo viên chọn bộ lọc “Chưa chấm” trong phần câu hỏi
+
+  Then chỉ hiển thị các câu đã có điểm
+```
+
+```
+Scenario: Lọc học viên chưa được chấm ở câu đang chọn
+  Given đang chọn một câu bất kỳ trong bài "ABCXYZ"
+
+  When giáo viên chọn bộ lọc “Chưa chấm ”
+
+  Then danh sách hiển thị chỉ còn các học viên chưa được chấm câu đó
+```
+
+```
+Scenario: Giáo viên chấm một câu với nhận xét đầy đủ và nhiều tệp đính kèm hợp lệ
+  Given đang chọn một câu hỏi trong bài "ABCXYZ"
+  And hiển thị đáp án của học viên
+
+  When giáo viên chấm điểm từ 1 đến 10
+  And nhập nhận xét văn bản
+  And ghi âm nhận xét và gửi
+  And đính kèm nhiều file ảnh định dạng hợp lệ (.jpg, .png, .gif, .bmp, .webp)
+  And mỗi file có dung lượng nhỏ hơn hoặc bằng 25MB
+  And đính kèm nhiều file ghi âm có dung lượng hợp lệ
+
+  Then hệ thống lưu toàn bộ dữ liệu
+  And trạng thái câu hỏi chuyển sang “Đã chấm”
+  And hiển thị:
+    - Icon âm thanh tương ứng với từng file ghi âm
+    - Tên file ảnh hoặc icon ảnh đại diện cho từng tệp đính kèm
+    - File ghi âm có thể phát lại
+    - File ảnh có thể mở xem lại
+```
+
+```
+Scenario: Không thể tải lên file quá 25MB
+  Given giáo viên đang chấm bài "ABCXYZ"
+
+  When đính kèm một file ảnh có dung lượng 30MB
+
+  Then hệ thống hiển thị thông báo “Dung lượng file vượt quá giới hạn 25MB”
+  And không cho phép upload
+```
+```
+Scenario: Khi giáo viên chấm điểm xong toàn bộ học viên
+    Given bài tập về nhà "ABCXYZ" đã được giao
+    And tất cả học viên trong lớp đã nộp bài
+
+    When giáo viên chấm đầy đủ tất cả câu hỏi cho từng học viên
+
+    Then hệ thống cập nhật trạng thái bài là “Đã chấm”
+    And progress trạng thái hiển thị “100%”
+```
+```
+Given bài tập về nhà "ABCXYZ" đã được giao và có học viên nộp
+
+  When giáo viên chỉ chấm điểm cho một số học viên
+
+  Then trạng thái bài hiển thị là “Chưa chấm”
+  And tiến độ hiển thị phần trăm chính xác theo số lượng đã chấm
+```
+
+## 3. Feature: Quản Lý Bài Kiểm Tra
+
+Scenario: Trạng thái bài kiểm tra là "Chưa giao" khi giáo viên chưa giao bài
+  Given admin đã tạo bài kiểm tra "ABCXYZ" cho lớp "Long_Test"
+
+  When giáo viên truy cập tab “Bài tập và kiểm tra”
+  And chọn bài kiểm tra "ABCXYZ" trong danh sách
+
+  Then hệ thống hiển thị bài kiểm tra "ABCXYZ" với:
+    | Thành phần         | Nội dung hiển thị     |
+    |--------------------|------------------------|
+    | Trạng thái         | Chưa giao              |
+    | Nội dung           | Các câu hỏi của bài kiểm tra        |
+
+  And giáo viên không thể thao tác: chấm điểm / xem chi tiết
