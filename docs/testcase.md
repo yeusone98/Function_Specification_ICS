@@ -253,8 +253,45 @@ Scenario: Giáo viên xem được đúng nội dung ghi chú ở bảng thống
 
     Then hệ thống hiển thị popup ghi chú gồm:
       | Ghi chú từ Giáo viên cho Học viên   | Trống   |
-      | Ghi chú từ Giáo viên cho Team Support | 12345   |
+      | Ghi chú từ Giáo viên cho Team Support | 12345   |  
+```  
+
 ```
+Scenario: Sắp xếp danh sách bài học theo thứ tự mở thực tế
+  Given lớp "Long_Test" có các bài học từ Bài 1 đến Bài 10
+  And giáo viên đã lần lượt mở 3 bài: "Bài 1", "Bài 2", "Bài 3"
+  And danh sách bài học hiện tại là:
+    | Tên bài học |
+    |-------------|
+    | Bài 1       |
+    | Bài 2       |
+    | Bài 3       |
+    | Bài 4       |
+    | Bài 5       |
+    | …           |
+    | Bài 10      |
+
+  When giáo viên mở tiếp bài "Bài 10"
+
+  Then danh sách bài học được cập nhật lại như sau:
+    | Tên bài học |
+    |-------------|
+    | Bài 1       |
+    | Bài 2       |
+    | Bài 3       |
+    | Bài 10      |
+    | Bài 4       |
+    | Bài 5       |
+    | Bài 6       |
+    | Bài 7       |
+    | Bài 8       |
+    | Bài 9       |
+
+  And các bài đã mở giữ nguyên thứ tự mở ban đầu
+  And bài mới mở được nối vào **sau cùng trong nhóm đã mở**
+  And các bài chưa mở thì vẫn hiển thị theo thứ tự ban đầu sau nhóm đã mở
+```
+
 ## 2. Feature: Quản Lý Bài Tập Về Nhà
 ```
  Scenario: Trạng thái bài tập là "Chưa giao" khi bài học chưa bắt đầu hoặc chưa học xong
@@ -380,6 +417,19 @@ Scenario: Một phần học sinh được chấm → trạng thái vẫn là �
 
   Then trạng thái bài là “Chưa chấm”
 ```
+
+```
+Scenario: Giáo viên có thể sửa điểm và nhận xét cho bài tập về nhà đã chấm
+  Given bài tập về nhà "ABCXYZ" đã được chấm và hiển thị “Đã chấm”
+
+  When giáo viên truy cập lại bài
+  And chọn câu hỏi đã chấm của một học sinh
+  And thay đổi điểm hoặc nhận xét
+
+  Then hệ thống lưu dữ liệu cập nhật mới
+  And trạng thái bài tập về nhà vẫn giữ là “Đã chấm”
+```
+
 
 ## 3. Feature: Quản Lý Bài Kiểm Tra
 
@@ -526,23 +576,16 @@ Scenario: Không thể tải lên file quá 25MB
   And không cho phép upload
 ```
 
-
-
-
-
-
-
-
-
-
 ```
-Scenario: Giáo viên có thể sửa điểm và nhận xét cho bài đã chấm
+Scenario: Giáo viên có thể sửa điểm và nhận xét cho bài kiểm tra đã chấm
   Given bài kiểm tra "ABCXYZ" đã được chấm và hiển thị “Đã chấm”
 
   When giáo viên truy cập lại bài
   And chọn câu hỏi đã chấm của một học sinh
   And thay đổi điểm hoặc nhận xét
 
-  Then hệ thống lưu dữ liệu cập nhật mới
-  And trạng thái bài vẫn giữ là “Đã chấm”
+      Then hệ thống lưu dữ liệu cập nhật mới
+      And trạng thái bài kiểm tra vẫn giữ là “Đã chấm”
 ```
+
+
