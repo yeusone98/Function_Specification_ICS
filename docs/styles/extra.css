@@ -26,3 +26,83 @@
   text-align: justify;
 }
 
+/* Áp dụng chung */
+.md-typeset table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Tiêu đề bảng */
+.md-typeset table th {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Cài đặt mặc định cho Light Mode */
+.md-typeset table td {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  padding: 10px;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Xen kẽ dòng trong LIGHT MODE */
+.md-typeset table tr:nth-child(even) td {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* --- DARK MODE: 2 màu xen kẽ rõ ràng --- */
+[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(odd) td {
+  background-color: #1f1f1f; /* màu tối hơn */
+}
+[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) td {
+  background-color: #2a2a2a; /* màu sáng hơn */
+}
+
+/* Hover (hiệu ứng nhẹ) */
+.md-typeset table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+[data-md-color-scheme="default"] .md-typeset table tr:hover td {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+:root {
+  --md-admonition-icon--book: url("https://cdn.jsdelivr.net/npm/@mdi/svg/svg/book-open-variant.svg");
+}
+
+.md-typeset .admonition.book,
+.md-typeset details.book {
+  border-color: #4caf50; /* xanh lá nhẹ */
+}
+
+.md-typeset .book > .admonition-title,
+.md-typeset .book > summary {
+  background-color: rgba(76, 175, 80, 0.1); /* nền xanh lá mờ */
+  border-color: #4caf50;
+}
+
+/* Icon quyển sách */
+.md-typeset .book > .admonition-title::before,
+.md-typeset .book > summary::before {
+  background-color: #4caf50;
+  -webkit-mask-image: var(--md-admonition-icon--book);
+  mask-image: var(--md-admonition-icon--book);
+}
+
+
+details.book[open] summary ~ * {
+  animation: fadeIn 0.2s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

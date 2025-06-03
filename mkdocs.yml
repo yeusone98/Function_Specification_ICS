@@ -49,4 +49,10 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - tables
-  
+
+extra:
+  admonition:
+    icons:
+      info: material/book-open-variant
+extra_javascript:
+  - scripts/open-toc-book.js
