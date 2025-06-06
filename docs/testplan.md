@@ -1,4 +1,4 @@
-# Kế hoạch kiểm thử (Test Plan)
+# 🧪 Kế hoạch kiểm thử (Test Plan)
 
 ---
 

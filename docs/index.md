@@ -1,4 +1,4 @@
-# Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi
+# 📄 Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi
 ---
 
 ## 1. Giới thiệu
@@ -607,7 +607,6 @@
     | **Trường hợp không có dữ liệu**   | - Nếu chưa có nội dung: hiển thị “Chưa có nội dung nào cho buổi họp này”.<br>- Nếu không tick chọn nội dung nào khi thêm mới: nút “Thêm” bị vô hiệu hóa. |
 
 
-
 ### 3.4 Quản lý trợ giảng (Admin)
 
 #### 3.4.1 Tạo mới trợ giảng { #toc-3-4-1}
@@ -651,32 +650,6 @@
     | **Điều kiện**                   | - Chỉ xóa trợ giảng chưa gán lớp hoặc đang ở trạng thái “Vô hiệu”. |
     | **Kết quả hiển thị**            | - Trợ giảng bị loại khỏi danh sách và không thể tìm thấy trong các chức năng gán lớp. |
     | **Trường hợp không có dữ liệu** | - Nếu không tìm thấy ID trợ giảng trong hệ thống sẽ báo lỗi không tồn tại. |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
