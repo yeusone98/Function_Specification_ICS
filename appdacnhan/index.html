@@ -1,0 +1,2026 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../testplan/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>📄 Tài liệu đặc tả chức năng App Đắc Nhân - ICS docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tai-lieu-ac-ta-chuc-nang-app-ac-nhan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ICS docs" class="md-header__button md-logo" aria-label="ICS docs" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ICS docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📄 Tài liệu đặc tả chức năng App Đắc Nhân
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="deep-purple"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ICS docs" class="md-nav__button md-logo" aria-label="ICS docs" data-md-component="logo">
+      
+  <img src="../assets/images/favicon.png" alt="logo">
+
+    </a>
+    ICS docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📄 Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    📄 Tài liệu đặc tả chức năng App Đắc Nhân
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    📄 Tài liệu đặc tả chức năng App Đắc Nhân
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pham-vi-he-thong" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Phạm vi hệ thống
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Phạm vi hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cac-chuc-nang-chinh-danh-cho-hoc-vien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các chức năng chính dành cho học viên:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cac-chuc-nang-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Các chức năng chính
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Các chức năng chính">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Chức năng đăng nhập
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-chuc-nang-quan-ly-khoa-hoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Chức năng quản lý khóa học
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Chức năng quản lý khóa học">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Chức năng hiển thi danh sách khóa học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Chức năng hiển thị thông số tổng quát một khóa học
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-chuc-nang-quan-ly-bai-hoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Chức năng quản lý bài học
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Chức năng quản lý bài học">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 Chức năng hiển thị danh sách bài học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 Chức năng hiển thị chi tiết bài học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3 Chức năng duyệt kiến thức
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4 Chức năng học qua flashcard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5 Chức năng luyện nhớ chuyển sâu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.6 Chức năng bài tập củng cố
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.7 Chức năng học từ vựng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.8 Chức năng duyệt từ vựng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.9 Chức năng luyện tập từ vựng – chế độ Học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.10 Chức năng luyện tập từ vựng – chế độ FlashCard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.11 Chức năng luyện tập từ vựng – chế độ Thử thách
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.12 Chức năng học ngữ pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.13 Chức năng luyện tập ngữ pháp – chế độ Trắc nghiệm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.14 Chức năng luyện tập ngữ pháp – chế độ Học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.15 Chức năng luyện tập ngữ pháp – chế độ FlashCard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.16 Chức năng luyện tập ngữ pháp – chế độ Flashcard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.17 Chức năng duyệt ngữ pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.18 Chức năng Học kỹ năng nghe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🧪 Kế hoạch kiểm thử (Test Plan)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Giới thiệu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-pham-vi-he-thong" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Phạm vi hệ thống
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Phạm vi hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cac-chuc-nang-chinh-danh-cho-hoc-vien" class="md-nav__link">
+    <span class="md-ellipsis">
+      Các chức năng chính dành cho học viên:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-cac-chuc-nang-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Các chức năng chính
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Các chức năng chính">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Chức năng đăng nhập
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-chuc-nang-quan-ly-khoa-hoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Chức năng quản lý khóa học
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Chức năng quản lý khóa học">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 Chức năng hiển thi danh sách khóa học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 Chức năng hiển thị thông số tổng quát một khóa học
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-chuc-nang-quan-ly-bai-hoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Chức năng quản lý bài học
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Chức năng quản lý bài học">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 Chức năng hiển thị danh sách bài học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 Chức năng hiển thị chi tiết bài học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3 Chức năng duyệt kiến thức
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4 Chức năng học qua flashcard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.5 Chức năng luyện nhớ chuyển sâu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.6 Chức năng bài tập củng cố
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.7 Chức năng học từ vựng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.8 Chức năng duyệt từ vựng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.9 Chức năng luyện tập từ vựng – chế độ Học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.10 Chức năng luyện tập từ vựng – chế độ FlashCard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.11 Chức năng luyện tập từ vựng – chế độ Thử thách
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.12 Chức năng học ngữ pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.13 Chức năng luyện tập ngữ pháp – chế độ Trắc nghiệm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.14 Chức năng luyện tập ngữ pháp – chế độ Học
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.15 Chức năng luyện tập ngữ pháp – chế độ FlashCard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.16 Chức năng luyện tập ngữ pháp – chế độ Flashcard
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.17 Chức năng duyệt ngữ pháp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-3-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.18 Chức năng Học kỹ năng nghe
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tai-lieu-ac-ta-chuc-nang-app-ac-nhan">📄 Tài liệu đặc tả chức năng App Đắc Nhân</h1>
+<h2 id="1-gioi-thieu">1. Giới thiệu</h2>
+<ul>
+<li>
+<p><strong>Mục tiêu:</strong><br />
+  Ứng dụng <strong>Đắc Nhân Tiếng Trung</strong> được xây dựng để hỗ trợ học viên theo dõi quá trình học tập tiếng Trung tại trung tâm, bao gồm: bài học theo buổi, bài tập về nhà, kiểm tra định kỳ, tổng quan tiến độ và thư viện học tập.<br />
+  Hệ thống cung cấp trải nghiệm học tập minh bạch, cá nhân hóa, đồng thời giúp giáo viên và trung tâm nắm bắt tiến độ học và mức độ hoàn thành của học viên một cách trực quan.<br />
+  Ứng dụng hướng đến việc tự động hóa phần lớn quy trình đào tạo và nâng cao hiệu quả giảng dạy.</p>
+</li>
+<li>
+<p><strong>Đối tượng sử dụng:</strong><br />
+  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ<br />
+  🔹 Tester: xây dựng và thực hiện test case để kiểm thử hệ thống</p>
+</li>
+</ul>
+<p>Dưới đây là nội dung <strong>phạm vi hệ thống</strong> đã được bổ sung phần <strong>Thư viện học tập</strong>, trình bày theo định dạng MkDocs như bạn yêu cầu:</p>
+<hr />
+<h2 id="2-pham-vi-he-thong">2. Phạm vi hệ thống</h2>
+<p>Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho học viên đang theo học các khoá tiếng Trung tại trung tâm. Ứng dụng hỗ trợ học viên theo dõi quá trình học, kiểm tra và tự học theo lộ trình đã được phân phối bởi giáo viên. Tất cả nội dung học tập đều được đồng bộ từ hệ thống giảng dạy chính và hiển thị cá nhân hóa theo từng lớp và từng khoá học mà học viên tham gia.</p>
+<p>Ứng dụng hướng đến người dùng duy nhất là:</p>
+<ul>
+<li><strong>Student (Học viên)</strong>: Người học tiếng Trung tại trung tâm</li>
+</ul>
+<h3 id="cac-chuc-nang-chinh-danh-cho-hoc-vien">Các chức năng chính dành cho học viên:</h3>
+<ul>
+<li>
+<p>📘 <strong>Bài học</strong>:<br />
+   • Xem danh sách các buổi học theo thứ tự thời gian<br />
+   • Truy cập nội dung bài học chi tiết: chủ đề, mục tiêu học, từ vựng, ngữ pháp, kỹ năng<br />
+   • Xem trạng thái từng buổi học: Có mặt, Vắng, Vào trễ  </p>
+</li>
+<li>
+<p>📝 <strong>Kiểm tra</strong>:<br />
+   • Xem danh sách bài kiểm tra được giao<br />
+   • Thực hiện bài kiểm tra (nếu hệ thống mở truy cập)<br />
+   • Theo dõi điểm số, trạng thái hoàn thành  </p>
+</li>
+<li>
+<p>🎯 <strong>Tự học</strong>:<br />
+   • Ôn tập từ vựng, ngữ pháp và kỹ năng nghe đọc theo dạng flashcard hoặc bài tập<br />
+   • Theo dõi tiến độ học tập theo từng hoạt động: Luyện nhớ, Củng cố, Kiến thức nền, Kỹ năng  </p>
+</li>
+<li>
+<p>📊 <strong>Tổng quan lớp học</strong>:<br />
+   • Xem tổng số buổi học đã hoàn thành / tổng số buổi<br />
+   • Tỉ lệ điểm danh, tỉ lệ làm bài tập về nhà<br />
+   • Điểm trung bình bài tập và điểm kiểm tra  </p>
+</li>
+<li>
+<p>📚 <strong>Thư viện học tập</strong>:<br />
+   • Gồm 3 mục: <strong>Kiến thức</strong>, <strong>Kỹ năng</strong> và <strong>Tiến trình</strong><br />
+   • Học viên ôn tập lại các nội dung đã học và đã note từ bài học chính (bao gồm Từ vựng, Ngữ pháp, Nghe, Đọc)<br />
+   • Hiển thị tiến độ học tập cá nhân bằng biểu đồ trực quan theo ngày/tuần/tháng<br />
+   • Cung cấp 2 chế độ luyện tập: <em>Duyệt</em> và <em>Luyện tập</em>    </p>
+</li>
+</ul>
+<p>Ứng dụng không hỗ trợ các vai trò khác như admin, giáo viên hay quản trị. Toàn bộ dữ liệu học tập được đồng bộ từ hệ thống chính do giáo viên và bộ phận điều phối cập nhật.</p>
+<hr />
+<h2 id="3-cac-chuc-nang-chinh">3. Các chức năng chính</h2>
+<h3 id="toc-3-1">3.1 Chức năng đăng nhập</h3>
+<details class="book">
+<summary>Đăng nhập</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Đăng nhập</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên đăng nhập vào ứng dụng bằng email và mật khẩu được cấp bởi trung tâm. Việc đăng nhập giúp xác thực tài khoản và truy xuất dữ liệu học tập cá nhân như lớp học, bài học, kiểm tra, thư viện…<br><br><strong>Tài khoản học viên sẽ được cấp bởi bộ phận Support của trung tâm.</strong></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình đăng nhập (email, mật khẩu)<br> - Nút “Đăng nhập”<br> - Link “Quên mật khẩu”<br> - Nút “Liên hệ Support để được hỗ trợ”</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Truy cập ứng dụng → hiển thị form Email và Mật khẩu, kèm nút Đăng nhập<br>2. Học viên nhập thông tin → có thể ẩn/hiện mật khẩu<br>3. Nhấn Đăng nhập:<br>&emsp;– Nếu hợp lệ → đăng nhập thành công<br>&emsp;– Nếu sai → báo lỗi “Email hoặc mật khẩu không đúng”<br>4. Nhấn “Quên mật khẩu” → hiển thị: “Liên hệ support để được hỗ trợ”</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Nút “Đăng nhập” luôn cho phép nhấn dù chưa nhập đủ thông tin<br> - Hệ thống kiểm tra và hiển thị lỗi tương ứng nếu để trống</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Nếu đăng nhập thành công → chuyển sang màn hình chính<br> - Nếu sai thông tin → hiển thị lỗi: “Email hoặc mật khẩu không đúng”<br> - Nếu để trống:<br>&emsp;• Không nhập email → lỗi “Vui lòng nhập email”<br>&emsp;• Không nhập mật khẩu → lỗi “Vui lòng nhập mật khẩu”</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Email, mật khẩu trống nhưng vẫn cho phép nhấn nút “Đăng nhập”, hệ thống sẽ cảnh báo lỗi tương ứng sau đó</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="32-chuc-nang-quan-ly-khoa-hoc">3.2 Chức năng quản lý khóa học</h3>
+<h4 id="toc-3-2-1">3.2.1 Chức năng hiển thi danh sách khóa học</h4>
+<details class="book">
+<summary>Hiển thị khoá học</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Hiển thị khoá học</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên xem danh sách các khoá học mà mình đang tham gia. Mỗi khoá học được hiển thị cùng với mã khoá học, tên khoá học, trạng thái và tiến độ học tập.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Trang “Khoá học của bạn”<br> - Các card hiển thị thông tin khoá học</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công → hiển thị danh sách khoá học đang tham gia<br>2. Mỗi khoá học hiển thị:<br>&emsp;• <strong>Mã khoá học</strong> (ví dụ: H1 TEST)<br>&emsp;• <strong>Tên khoá học</strong> (ví dụ: Tiếng Trung Nhập Môn)<br>&emsp;• <strong>Trạng thái</strong>: “Chưa bắt đầu”, “Đang học”, “Đã hoàn thành”<br>&emsp;• <strong>Tiến độ học</strong>: % hoàn thành (ví dụ: 100%)</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Học viên đã có khoá học được phân công trong hệ thống</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách khoá học được hiển thị theo thứ tự (có thể mặc định theo trạng thái)<br> - Mỗi khoá học thể hiện rõ: mã, tên, trạng thái và % tiến độ<br> - Các trạng thái có màu phân biệt:<br>&emsp;• Xanh lá: Đã hoàn thành<br>&emsp;• Cam: Đang học<br>&emsp;• Xám: Chưa bắt đầu</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Hiển thị dòng thông báo: “Bạn chưa được phân công khoá học nào”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-2-2">3.2.2 Chức năng hiển thị thông số tổng quát một khóa học</h4>
+<details class="book">
+<summary>Hiển thị thông số tổng quát một khóa học</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Hiển thị tổng quát một khóa học</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên theo dõi tổng quan tình hình học tập của lớp mình, hiển thị các chỉ số trung bình như số buổi đã học, tỉ lệ điểm danh, tỉ lệ làm bài tập, điểm bài tập và điểm kiểm tra.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Tab "Tổng quát" trong chi tiết lớp học<br> - Các thành phần thống kê dạng biểu đồ tròn và thanh ngang</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ danh sách khóa học → chọn một khóa cụ thể<br>3. Hệ thống hiển thị tab “Tổng quát” mặc định<br>4. Các chỉ số hiển thị gồm:<br>&emsp;• Số buổi đã học / tổng số buổi<br>&emsp;• Tỉ lệ điểm danh (%)<br>&emsp;• Tỉ lệ làm bài tập về nhà (%)<br>&emsp;• Điểm trung bình bài tập về nhà<br>&emsp;• Điểm trung bình kiểm tra</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Học viên đã được phân vào lớp có dữ liệu học tập</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Tất cả chỉ số hiển thị dạng số và thanh progress<br> - Dữ liệu được tổng hợp trung bình từ kết quả học tập của chính học viên</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Nếu chưa học buổi nào hoặc chưa có bài tập/kiểm tra → hiển thị giá trị “0” tương ứng và thanh tiến độ rỗng</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="33-chuc-nang-quan-ly-bai-hoc">3.3 Chức năng quản lý bài học</h3>
+<h4 id="toc-3-3-1">3.3.1 Chức năng hiển thị danh sách bài học</h4>
+<details class="book">
+<summary>Hiển thị danh sách bài học</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Hiển thị danh sách bài học</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên có thể theo dõi toàn bộ danh sách buổi học của lớp mà mình đang tham gia. Mỗi buổi học sẽ hiển thị thông tin chi tiết như tiêu đề, nội dung học, trạng thái điểm danh, trạng thái hoàn thành buổi và các chỉ số đi kèm.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình đăng nhập<br> - Màn hình danh sách khóa học<br> - Tab <strong>Bài học</strong> trong giao diện lớp học<br> - Các thẻ buổi học</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công bằng email và mật khẩu được cấp.<br>2. Tại màn hình chính, chọn một <strong>khóa học bất kỳ</strong> từ danh sách hiển thị.<br>3. Giao diện chuyển đến màn hình lớp học tương ứng.<br>4. Nhấn vào tab <strong>Bài học</strong> để xem toàn bộ danh sách buổi học.<br>5. Với mỗi buổi học:<br>&emsp;• Hiển thị tiêu đề (VD: Buổi 1, Buổi 2…) và chủ đề chính<br>&emsp;• Nội dung học: từ vựng, ngữ pháp, luyện nói, đọc hiểu…<br>&emsp;• Trạng thái điểm danh: Có mặt, Vắng, Vào trễ, Chưa điểm danh<br>&emsp;• Trạng thái học: Hoàn thành, Đang học, Chưa bắt đầu, Xem sớm</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Chỉ hiển thị các buổi học thuộc lớp mà học viên đang tham gia<br> - Trạng thái điểm danh và hoàn thành được cập nhật bởi giáo viên</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách buổi học được sắp xếp theo thứ tự thời gian<br> - Mỗi thẻ buổi học hiển thị:<br>&emsp;• Số buổi và tiêu đề<br>&emsp;• Nội dung chi tiết<br>&emsp;• Trạng thái học (theo màu)<br>&emsp;• Trạng thái điểm danh (theo tag chữ)</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Nếu lớp chưa có buổi học nào → hiển thị thông báo: “Chưa có buổi học nào được tạo cho lớp này”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-2">3.3.2 Chức năng hiển thị chi tiết bài học</h4>
+<details class="book">
+<summary>Hiển thị chi tiết bài học</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Hiển thị chi tiết bài học</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên có thể xem nội dung chi tiết từng buổi học của lớp đang theo học, bao gồm phân loại phần bắt buộc, kiến thức nền, kỹ năng, trạng thái hoàn thành, và mô tả tóm tắt từng hoạt động học tập.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình chi tiết bài học<br> - Các khối nội dung theo từng phần: Phần bắt buộc, Kiến thức nền, Kỹ năng<br> - Các dòng trạng thái như: “Chưa hoàn thành”, “Hoàn thành”</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ danh sách khóa học → chọn một khóa học cụ thể<br>3. Chuyển đến màn hình chi tiết lớp → chọn tab “Bài học”<br>4. Nhấn vào một buổi học trong danh sách<br>5. Hệ thống hiển thị chi tiết bài học</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td><strong>– Phần bắt buộc</strong>: Dạng timeline, hiển thị các mục như “Duyệt Kiến Thức”, “Học qua Flashcard”, “Luyện nhớ chuyên sâu”, “Bài tập củng cố”. Mỗi mục có icon, tên hoạt động và trạng thái (Chưa hoàn thành / Hoàn thành)<br><strong>– Kiến thức nền</strong>: Tách riêng thành 2 mục “Từ vựng” và “Ngữ pháp” kèm tiến độ phần trăm<br><strong>– Kỹ năng</strong>: Gồm “Nghe” và “Đọc” hiển thị tiến độ phần trăm tương ứng</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách nội dung học tập theo từng phần<br> - Các trạng thái hiển thị nổi bật bằng màu sắc (cam cho “Chưa hoàn thành”, xanh cho “Hoàn thành”)<br> - Bar tiến độ phần trăm thể hiện rõ mức độ hoàn thành mỗi mục</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa có dữ liệu ở một mục nào đó → mục đó không hiển thị<br> - Nếu toàn bộ nội dung chưa có → hiển thị thông báo: “Chưa có nội dung học tập cho buổi học này”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-3">3.3.3 Chức năng duyệt kiến thức</h4>
+<details class="book">
+<summary>Duyệt kiến thức</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Duyệt kiến thức</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng giúp học viên ôn lại từ vựng và ngữ pháp đã học thông qua các card hiển thị nội dung. Mỗi thẻ gồm từ trọng tâm, ví dụ minh họa và hai lựa chọn: “Đã thuộc” hoặc “Cần học lại”.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Duyệt Kiến Thức” trong chi tiết bài học<br> - Card hiển thị: từ vựng (chữ Hán + nghĩa), ví dụ minh họa có highlight từ chính<br> - Màn hình tổng kết số lượng “Đã thuộc” / “Cần học lại”</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ danh sách khóa học → chọn một khóa học<br>3. Vào tab “Bài học” → chọn một buổi học cụ thể<br>4. Trong phần bắt buộc → chọn “Duyệt Kiến Thức”<br>5. Lần lượt xem các card và chọn “Đã thuộc” hoặc “Cần học lại”<br>6. Sau card cuối → hiển thị kết quả tổng kết</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>- Mỗi card gồm:<br>&emsp;• Từ trọng tâm (chữ Hán, nghĩa tiếng Việt)<br>&emsp;• Câu ví dụ minh họa có highlight từ trọng tâm<br>&emsp;• Thanh tiến độ<br>&emsp;• Nút lựa chọn: “Đã thuộc” / “Cần học lại”<br> - Giao diện kết thúc thể hiện tổng số nội dung theo từng nhóm</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Các card hiển thị lần lượt, không có hành động lật<br> - Tiến độ được cập nhật theo thao tác<br> - Màn hình tổng kết số lượng đã học / cần học lại sau khi hoàn tất</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Nếu không có nội dung duyệt sẽ hiển thị không có dữ liệu</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-4">3.3.4 Chức năng học qua flashcard</h4>
+<details class="book">
+<summary>Học qua Flashcard</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Học qua Flashcard</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên ôn luyện từ vựng, ngữ pháp và ví dụ thông qua các flashcard có thể lật và phát âm thanh. Có 3 loại flashcard hiển thị khác nhau, tùy chỉnh tốc độ phát và thứ tự trình bày.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Học qua Flashcard” trong chi tiết bài học<br> - Màn hình flashcard có thể lật<br> - Pop-up “Tùy chọn” gồm: Xem tất cả, Xáo trộn, Tự chạy, Chậm / Bình thường / Nhanh</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ danh sách khóa học → chọn một khóa học<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần bắt buộc → chọn “Học qua Flashcard”<br>5. Chọn loại flashcard hiển thị<br>6. Tùy chỉnh tùy chọn: tốc độ phát tự động, tự chạy, xáo trộn, xem tất cả</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• <strong>Flashcard loại 1</strong>: Mặt trước hiển thị chữ Hán, phiên âm, nghĩa và ví dụ minh họa; mặt sau là dịch nghĩa ví dụ<br>• <strong>Flashcard loại 2</strong>: Mặt trước hiển thị hình ảnh + nghĩa tiếng Việt; mặt sau là chữ Hán, phiên âm và ví dụ minh họa<br>• <strong>Flashcard loại 3</strong>: Mặt trước hiển thị ví dụ tiếng Trung; mặt sau là nghĩa dịch, từ trọng tâm, hình minh họa và phiên âm<br><br><strong>Tùy chọn:</strong><br>&emsp;– Xem tất cả: hiển thị toàn bộ flashcard dạng list<br>&emsp;– Xáo trộn: trộn ngẫu nhiên thứ tự thẻ<br>&emsp;– Tự chạy: lật và phát âm thủ công<br>&emsp;– Phát tự động (Chậm / Bình thường / Nhanh): tự động lật và phát âm thanh theo tốc độ chọn<br><br><strong>Tương tác:</strong><br>&emsp;– Bấm một lần vào thẻ để lật mặt<br>&emsp;– Nhấn biểu tượng loa để nghe phát âm<br>&emsp;– Nhấn vào trạng thái “Chưa thuộc” / “Đã thuộc” để đánh dấu ghi nhớ<br>&emsp;– Khi học hết tất cả flashcard → mục “Học qua Flashcard” sẽ được đánh dấu hoàn thành</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Flashcard hiển thị đúng loại đã chọn<br> - Tùy chọn hoạt động chính xác<br> - Có thể nghe phát âm qua nút loa<br> - Thanh điều hướng hiển thị tổng số và thứ tự thẻ<br> - Trạng thái ghi nhớ (Chưa thuộc / Đã thuộc) thay đổi đúng thao tác<br> - Mục học được đánh dấu hoàn thành sau khi hoàn tất tất cả flashcard</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Không có flashcard → Hiển thị không có dữ liệu</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-5">3.3.5 Chức năng luyện nhớ chuyển sâu</h4>
+<details class="book">
+<summary>Luyện nhớ chuyên sâu</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện nhớ chuyên sâu</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng giúp học viên củng cố từ vựng và ngữ pháp đã học thông qua nhiều hình thức tương tác như flashcard, card nội dung, trắc nghiệm và sắp xếp câu.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Luyện nhớ chuyên sâu” trong chi tiết bài học<br> - Các loại giao diện tương ứng với từng dạng nội dung học:<br>&emsp;• Flashcard có thể lật và phát âm thanh<br>&emsp;• Card đơn hiển thị nghĩa và ví dụ<br>&emsp;• Trắc nghiệm lựa chọn hoặc ghép cặp<br>&emsp;• Sắp xếp từ thành câu đúng</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ danh sách khóa học → chọn một khóa học<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần bắt buộc → chọn “Luyện nhớ chuyên sâu”<br>5. Thực hiện lần lượt từng nội dung học được hệ thống hiển thị<br>6. Sau mỗi phần nội dung học sẽ có câu hỏi kiểm tra. Nếu trả lời đúng toàn bộ, học viên mới được tiếp tục học nội dung tiếp theo</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• <strong>Flashcard</strong>:<br>&emsp;– Hiển thị nhiều loại flashcard (giống chức năng "Học qua Flashcard")<br>&emsp;– Cho phép nghe âm <br><br>• <strong>Card nội dung</strong>:<br>&emsp;– Hiển thị từ mới (Chữ Hán + Nghĩa tiếng Việt)<br>&emsp;– Ví dụ minh họa có highlight từ cần ghi nhớ<br><br>• <strong>Trắc nghiệm</strong>:<br>&emsp;– Dạng lựa chọn 1 đáp án đúng<br>&emsp;– Dạng ghép cặp nghĩa - chữ Hán<br>&emsp;– Dạng điền chỗ trống vào câu<br><br>• <strong>Sắp xếp từ thành câu</strong>:<br>&emsp;– Câu được chia nhỏ thành các từ / cụm từ<br>&emsp;– Học viên kéo thả để sắp xếp thành câu hoàn chỉnh</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Mỗi loại bài học có tiến độ phần trăm<br> - Trả lời đúng câu hỏi kiểm tra sau mỗi mốc phần trăm mới được học tiếp<br> - Màn hình kết thúc hiển thị tiến độ hoàn thành, thông báo nếu hoàn thành toàn bộ<br>- Mục học được đánh dấu hoàn thành sau khi hoàn tất luyện nhớ chuyên sâu</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có nội dung luyện nhớ chuyên sâu -&gt; Hiển thị không có dữ liệu</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-6">3.3.6 Chức năng bài tập củng cố</h4>
+<details class="book">
+<summary>Bài Tập Củng Cố</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Bài Tập Củng Cố</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Học viên</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên làm bài tập để ôn luyện và kiểm tra khả năng ghi nhớ, áp dụng từ vựng và ngữ pháp đã học. Các câu hỏi sẽ được sinh ngẫu nhiên theo bài học tương ứng và bao phủ nhiều dạng bài. Không có phần học, chỉ có phần làm bài liên tiếp các câu. Kết quả đúng/sai không ảnh hưởng tới việc được làm tiếp.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>Giao diện làm bài tập, giao diện hiển thị kết quả sau khi chấm</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Chọn tab bài học → chọn "Bài Tập Củng Cố"<br>4. Làm lần lượt các loại bài tập (30 câu hoặc tuỳ mỗi bài)<br>5. Sau khi làm xong, chuyển sang màn hình hiển thị kết quả</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Học viên đã vào bài học có bài tập củng cố</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>1. Giao diện bài tập: hiện từng câu hỏi, có thể chuyển qua lại giữa các câu<br>2. Giao diện kết quả:<br>&emsp;- Nếu đã chấm: hiển thị điểm và từng câu đúng/sai, trạng thái hiển thị điểm<br>&emsp;- Nếu chưa chấm: hiện thông báo “Kết quả đang được chấm. Bạn đợi một tí nhé!” và hiển thị đáp án đúng/sai một số câu tự động chấm trước, trạng thái hiển thị chưa chấm</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Hiển thị thông báo: "Chưa có bài tập cho bài học này"</td>
+</tr>
+</tbody>
+</table>
+<details class="info">
+<summary>Các loại câu hỏi</summary>
+<ul>
+<li>
+<p><strong>Loại 1: Viết chữ Hán từ phiên âm và nghĩa</strong><br />
+  Hiển thị phiên âm và nghĩa tiếng Việt, học viên dùng vẽ tay để viết chữ Hán tương ứng. Có nút "Xóa nét" và "Hoàn tác nét vẽ".</p>
+</li>
+<li>
+<p><strong>Loại 2: Nối từ vựng với nghĩa tương ứng</strong><br />
+  Hiển thị 2 cột gồm từ tiếng Trung và nghĩa tiếng Việt, học viên dùng thao tác kéo – nối cặp tương ứng.</p>
+</li>
+<li>
+<p><strong>Loại 3: Sắp xếp thành câu hoàn chỉnh</strong><br />
+  Các thẻ từ bị xáo trộn, học viên kéo thả theo đúng thứ tự tạo thành câu hoàn chỉnh.</p>
+</li>
+<li>
+<p><strong>Loại 4: Điền từ vào chỗ trống</strong><br />
+  Một câu có chỗ trống và 4 lựa chọn từ, học viên chọn từ phù hợp điền vào chỗ trống.</p>
+</li>
+<li>
+<p><strong>Loại 5: Chọn câu trả lời đúng</strong><br />
+  Câu hỏi hiển thị tiếng Trung và 4 đáp án (câu hoặc từ), học viên chọn đáp án đúng.</p>
+</li>
+<li>
+<p><strong>Loại 6: Chọn câu tiếng Trung tương ứng với nghĩa tiếng Việt</strong><br />
+  Câu tiếng Việt và 4 câu tiếng Trung, học viên chọn câu dịch đúng nhất.</p>
+</li>
+<li>
+<p><strong>Loại 7: Nghe đoạn ghi âm và chọn đáp án đúng</strong><br />
+  Hiển thị nút phát audio, 4 đáp án lựa chọn để xác định âm đúng hoặc nghĩa.</p>
+</li>
+<li>
+<p><strong>Loại 8: Đọc to từ được yêu cầu</strong><br />
+  Hiển thị từ cần đọc. Học viên nhấn nút micro, ghi âm và gửi bài.</p>
+</li>
+<li>
+<p><strong>Loại 9: Đặt câu với từ cho trước</strong><br />
+  Hiển thị 1 từ. Học viên tự viết một câu hoàn chỉnh có sử dụng từ đó.</p>
+</li>
+<li>
+<p><strong>Loại 10: Đặt câu với cấu trúc cho trước</strong><br />
+  Hiển thị cấu trúc ngữ pháp (ví dụ: 几 + lượng từ + danh từ). Học viên viết một câu đúng mẫu.</p>
+</li>
+<li>
+<p><strong>Loại 11: Nói đoạn văn gồm 3–5 câu</strong><br />
+  Học viên được yêu cầu trình bày 1 đoạn văn bằng lời, có thể bấm ghi âm để nói.</p>
+</li>
+</ul>
+</details>
+<details class="info">
+<summary>Hiển thị kết quả sau khi làm bài</summary>
+<ul>
+<li>
+<p>Nếu <strong>chưa chấm</strong>:<br />
+  Hiển thị thông báo <code>"Kết quả đang được chấm. Bạn đợi một tí nhé!"</code><br />
+  Có biểu tượng đồng hồ lớn ở giữa.</p>
+</li>
+<li>
+<p>Nếu <strong>đã chấm</strong>:  </p>
+</li>
+<li>Hiển thị điểm tổng (ví dụ: <code>Điểm số: 1.6</code>)  </li>
+<li>Với từng câu:  <ul>
+<li>✅ Đúng: viền xanh, có tick xanh  </li>
+<li>❌ Sai: viền đỏ, có dấu x đỏ  </li>
+<li>Nếu bỏ qua: dòng <code>"Bạn đã bỏ qua câu này!"</code>  </li>
+<li>Nếu là câu viết tay: hiển thị lại phần chữ học viên đã viết  </li>
+<li>Nếu là nghe – nói: có thể phát lại đoạn âm thanh hoặc xem nút ghi âm  </li>
+<li>Nếu là câu sắp xếp hoặc nối: hiển thị đồng thời <strong>Đáp án của bạn</strong> và <strong>Đáp án đúng</strong></li>
+</ul>
+</li>
+</ul>
+</details>
+</details>
+<h4 id="toc-3-3-7">3.3.7 Chức năng học từ vựng</h4>
+<details class="book">
+<summary>Học từ vựng</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Học từ vựng</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng giúp học viên ghi nhớ từ mới thông qua hình ảnh, âm thanh, ví dụ minh họa và thao tác tương tác như đánh dấu đã thuộc hoặc lưu vào thư viện từ cá nhân.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Từ vựng” trong phần “Kiến thức nền” của bài học<br> - Giao diện danh sách từ gồm nhiều thẻ từ<br> - Giao diện chi tiết từ vựng khi nhấn vào từng thẻ</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần “Kiến thức nền” → chọn “Từ vựng”<br>5. Nhấn vào một từ bất kỳ để xem thông tin chi tiết<br>6. Học viên có thể nghe phát âm, xem nghĩa, ví dụ minh họa<br>7. Có thể đánh dấu đã thuộc hoặc lưu vào thư viện</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• Danh sách từ:<br>&emsp;– Hiển thị thẻ từ gồm: hình ảnh, chữ Hán, phiên âm, nghĩa tiếng Việt<br>&emsp;– Có nút loa để phát âm<br>&emsp;– Nhãn “Đã thuộc” nếu đã ghi nhớ<br><br>• Màn hình chi tiết từ:<br>&emsp;– Hiển thị rõ hình ảnh, chữ Hán, phiên âm, loại từ, nghĩa<br>&emsp;– Ví dụ đầy đủ: tiếng Trung + dịch tiếng Việt, highlight từ đang học<br>&emsp;– Nút loa phát âm<br>&emsp;– Nút “Đánh dấu đã thuộc” (biểu tượng bóng đèn); từ đã đánh dấu sẽ được tính vào % từ vựng đã thuộc<br>&emsp;– Nút lưu từ vào thư viện (biểu tượng ngôi sao)</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Học viên nắm rõ nghĩa và cách dùng từ thông qua ví dụ minh họa<br> - Trạng thái “Đã thuộc” được lưu lại và hiển thị trực tiếp trên thẻ từ<br> - Từ vựng được lưu vào thư viện cá nhân nếu học viên chọn lưu</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu bài học không có từ vựng → hiển thị thông báo “Không có từ vựng để học”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-8">3.3.8 Chức năng duyệt từ vựng</h4>
+<details class="book">
+<summary>Duyệt từ vựng</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Duyệt từ vựng</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên lần lượt xem lại các từ vựng dưới dạng card đơn, gồm chữ Hán, nghĩa và ví dụ minh họa. Học viên có thể tự đánh giá từng từ là “Đã thuộc” hoặc “Cần học lại”.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Từ vựng” → nút “Duyệt”<br> - Card từ không lật được, chỉ hiển thị thông tin một chiều<br> - Nút chọn “Đã thuộc” hoặc “Cần học lại” dưới mỗi card<br> - Màn hình kết thúc hiển thị số lượng đã thuộc / cần học lại</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần “Từ vựng” → chọn nút “Duyệt”<br>5. Lần lượt xem từng card nội dung từ vựng<br>6. Nhấn “Đã thuộc” hoặc “Cần học lại” để chuyển sang từ tiếp theo<br>7. Xem màn hình thống kê kết quả sau khi duyệt xong</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• Card từ:<br>&emsp;– Hiển thị chữ Hán, nghĩa tiếng Việt<br>&emsp;– Câu ví dụ có highlight từ cần học<br>&emsp;– Thanh tiến độ theo số lượng từ<br><br>• Tác vụ:<br>&emsp;– Nhấn “Đã thuộc” để đánh dấu và chuyển tiếp<br>&emsp;– Nhấn “Cần học lại” để ghi nhận và chuyển tiếp<br><br>• Màn hình kết thúc:<br>&emsp;– Tổng kết số từ đã thuộc và cần học lại<br>&emsp;– Nút “Duyệt lại” để làm lại từ đầu</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Những từ được chọn “Đã thuộc” sẽ được tính vào % hoàn thành từ vựng<br> - Giao diện hiển thị rõ tiến độ đã học và thống kê khi kết thúc duyệt</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có từ nào để duyệt → hiển thị “Không có từ vựng để duyệt”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-9">3.3.9 Chức năng luyện tập từ vựng – chế độ Học</h4>
+<details class="book">
+<summary>Luyện tập từ vựng – chế độ Học</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập từ vựng – chế độ Học</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên luyện tập từ vựng theo trình tự từng bước: xem câu ví dụ chứa từ vựng, lật thẻ để xem nghĩa đầy đủ, xác nhận đã hiểu. Sau một số thẻ sẽ chèn câu hỏi trắc nghiệm để kiểm tra ghi nhớ.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Từ vựng” → nhấn nút “Luyện tập” → chọn chế độ “Học”<br> - Giao diện flashcard:<br>&emsp;• Mặt trước: câu ví dụ có từ cần học + nút phát âm<br>&emsp;• Mặt sau: hình ảnh, nghĩa, loại từ, ví dụ dịch<br>&emsp;• Nút “Tiếp theo” để lật card<br>&emsp;• Nút “Hoàn thành” → “Tiếp tục” để chuyển sang từ khác<br> - Câu hỏi trắc nghiệm xuất hiện sau một số thẻ</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần “Từ vựng” → nhấn “Luyện tập” → chọn chế độ “Học”<br>5. Xem câu ví dụ ở mặt trước của flashcard<br>6. Nhấn “Tiếp theo” để lật thẻ hiển thị mặt sau<br>7. Xem nội dung chi tiết: từ, hình, nghĩa, dịch<br>8. Nhấn “Hoàn thành” → “Tiếp tục” để chuyển sang từ tiếp theo<br>9. Sau một số từ, hệ thống hiển thị câu hỏi trắc nghiệm kiểm tra<br>10. Trả lời đúng → tiếp tục học; nếu sai → phải thử lại</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• Flashcard:<br>&emsp;– Mặt trước: câu tiếng Trung có từ cần học (highlight), có nút phát âm<br>&emsp;– Mặt sau: hình ảnh, nghĩa tiếng Việt, loại từ, ví dụ dịch nghĩa<br><br>• Hành động:<br>&emsp;– Nút “Tiếp theo” lật card<br>&emsp;– Nút “Hoàn thành” → hiển thị nút “Tiếp tục”<br><br>• Câu hỏi trắc nghiệm:<br>&emsp;– Dạng chọn 1 đáp án đúng<br>&emsp;– Có phản hồi đúng/sai<br>&emsp;– Sau đúng → hiển thị “Tiếp tục”</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Khi hoàn tất toàn bộ thẻ → hiển thị “Chúc mừng đã hoàn thành phần học”</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có từ nào để luyện → hiển thị “Không có nội dung để luyện tập”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-10">3.3.10 Chức năng luyện tập từ vựng – chế độ FlashCard</h4>
+<details class="book">
+<summary>Luyện tập từ vựng – chế độ FlashCard</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập từ vựng – chế độ FlashCard</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng giúp học viên ôn luyện từ vựng bằng flashcard có thể lật, phát âm thanh và tùy chỉnh hiển thị. Tương tự chức năng “Học qua Flashcard” nhưng không ảnh hưởng tới % tiến độ từ vựng.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Từ vựng” → chọn “Luyện tập” → chọn “FlashCard”<br> - Giao diện flashcard giống chức năng “Học qua Flashcard”<br> - Có nút tùy chọn: Xem tất cả, Xáo trộn, Tự chạy, FlashCard 2</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần “Từ vựng” → nhấn “Luyện tập” → chọn “FlashCard”<br>5. Lựa chọn loại flashcard<br>6. Tùy chỉnh hiển thị và thao tác luyện tập</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• <strong>Loại flashcard</strong> (giống “Học qua Flashcard”):<br>&emsp;– <strong>Flashcard loại 1</strong>: Mặt trước hiển thị chữ Hán, phiên âm, nghĩa và ví dụ minh họa; mặt sau là dịch nghĩa ví dụ<br>&emsp;– <strong>Flashcard loại 2</strong>: Mặt trước hiển thị hình ảnh + nghĩa tiếng Việt; mặt sau là chữ Hán, phiên âm và ví dụ minh họa<br>&emsp;– <strong>Flashcard loại 3</strong>: Mặt trước hiển thị ví dụ tiếng Trung; mặt sau là nghĩa dịch, từ trọng tâm, hình minh họa và phiên âm<br><br>• <strong>Tùy chọn:</strong><br>&emsp;– <strong>Xem tất cả</strong>: Hiển thị toàn bộ flashcard dạng danh sách dọc (list view)<br>&emsp;– <strong>Xáo trộn</strong>: Trộn ngẫu nhiên thứ tự các thẻ trong bộ hiện tại<br>&emsp;– <strong>Tự chạy</strong>: Flashcard lật tự động theo thời gian mặc định<br>&emsp;– <strong>FlashCard 2</strong>: Chuyển sang loại flashcard thứ 2 (mặt trước là hình + nghĩa, mặt sau là chữ Hán + ví dụ)<br><br>• <strong>Tương tác:</strong><br>&emsp;– Bấm 1 lần vào thẻ để lật mặt<br>&emsp;– Nhấn biểu tượng loa để nghe phát âm<br>&emsp;– Dùng thanh điều hướng để chuyển qua lại giữa các thẻ<br>&emsp;– Có hiển thị trạng thái “Đã thuộc” nếu từ vựng đó đã được học trước đó</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Flashcard hiển thị đúng loại đã chọn<br> - Tùy chọn hoạt động chính xác theo thiết lập<br> - Có thể nghe phát âm qua nút loa<br> - Không tính vào % tiến độ từ vựng<br> - Không đánh dấu hoàn thành phần học</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có flashcard → hiển thị “Không có nội dung để luyện tập”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-11">3.3.11 Chức năng luyện tập từ vựng – chế độ Thử thách</h4>
+<details class="book">
+<summary>Luyện tập từ vựng – chế độ Thử thách</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập từ vựng – chế độ Thử thách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng giúp học viên kiểm tra khả năng ghi nhớ từ vựng thông qua hình thức trắc nghiệm có thời gian giới hạn và giới hạn số lần sai.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Từ vựng” → nhấn “Luyện tập” → chọn “Thử thách”<br> - Giao diện hiển thị từng thẻ từ có hình ảnh, chữ Hán<br> - Danh sách 4 đáp án nghĩa tiếng Việt<br> - Thanh thời gian và biểu tượng sao thể hiện số lượt sai</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Trong phần “Từ vựng” → nhấn “Luyện tập” → chọn “Thử thách”<br>5. Trả lời lần lượt các câu hỏi trắc nghiệm từ vựng<br>6. Mỗi câu có giới hạn thời gian và tối đa 3 lượt sai (3 sao)<br>7. Trả lời đúng → tiếp tục sang câu tiếp theo<br>8. Trả lời sai → mất 1 sao<br>9. Sai 3 lần hoặc hết câu hỏi → hiển thị kết quả (Win hoặc Lose)</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• Mỗi câu hỏi gồm:<br>&emsp;– Hình ảnh minh họa + chữ Hán<br>&emsp;– 4 lựa chọn nghĩa tiếng Việt<br>&emsp;– Đáp án đúng sẽ có viền xanh, sai có viền đỏ<br><br>• Thanh công cụ:<br>&emsp;– <strong>Đồng hồ đếm thời gian</strong>: giới hạn mỗi câu ~10s<br>&emsp;– <strong>Ba sao</strong>: tượng trưng 3 lượt sai<br><br>• Kết thúc:<br>&emsp;– <strong>Win</strong>: Trả lời đúng toàn bộ trong giới hạn sai → hiển thị "Chúc mừng bạn đã vượt qua thử thách"<br>&emsp;– <strong>Lose</strong>: Sai quá 3 lần → hiển thị "Thật tiếc bạn không vượt qua được thử thách"<br>&emsp;– Có nút “Quay lại” hoặc “Làm lại”</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Câu trả lời được phản hồi đúng/sai ngay lập tức<br> - Hiển thị sao mất và thời gian thực tế<br> - Có popup kết thúc với hai lựa chọn: quay lại hoặc làm lại<br> - Không ảnh hưởng đến % tiến độ từ vựng</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có từ nào để thử thách → hiển thị “Không có nội dung để luyện tập”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-12">3.3.12 Chức năng học ngữ pháp</h4>
+<details class="book">
+<summary>Học ngữ pháp</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Học ngữ pháp</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên xem chi tiết các điểm ngữ pháp có trong bài học bao gồm cấu trúc, công thức, giải thích và ví dụ minh họa. Học viên có thể đánh dấu “Đã thuộc” các điểm ngữ pháp và lưu vào thư viện để xem lại sau.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Ngữ pháp” trong bài học<br> - Danh sách ngữ pháp dạng thẻ<br> - Màn hình chi tiết hiển thị đầy đủ công thức, giải nghĩa và ví dụ<br> - Biểu tượng “Đã thuộc” và “Lưu vào thư viện” trên màn hình chi tiết</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Chọn mục “Ngữ pháp”<br>5. Xem danh sách các cấu trúc ngữ pháp<br>6. Nhấn vào một cấu trúc để xem chi tiết giải thích<br>7. Đọc công thức, ví dụ, dịch nghĩa<br>8. Nhấn biểu tượng “Đã thuộc” để đánh dấu<br>9. Nhấn biểu tượng lưu để thêm vào thư viện cá nhân<br>10. Có thể nhấn “Luyện tập” để chuyển sang bài tập luyện tập ngữ pháp tương ứng</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• Thẻ danh sách:<br>&emsp;– Tên cấu trúc ngữ pháp bằng tiếng Trung và tiếng Việt<br><br>• Màn hình chi tiết:<br>&emsp;– Công thức ngữ pháp<br>&emsp;– Giải thích ngắn gọn cách dùng<br>&emsp;– Các ví dụ minh họa bằng tiếng Trung, phiên âm, dịch nghĩa tiếng Việt<br>&emsp;– Các điểm nhấn tô đậm, gạch dưới các thành phần quan trọng<br>&emsp;– Nút “Luyện tập” ở cuối màn hình<br>&emsp;– Biểu tượng “Đã thuộc” để đánh dấu ghi nhớ<br>&emsp;– Biểu tượng lưu vào thư viện cá nhân</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hiển thị đúng danh sách ngữ pháp có trong bài học<br> - Hiển thị đúng công thức, giải thích, ví dụ tương ứng<br> - Các mục đã đánh dấu “Đã thuộc” sẽ được tính vào tiến độ học tập<br> - Mục đã lưu có thể được truy xuất từ thư viện</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có cấu trúc ngữ pháp → hiển thị “Không có nội dung để học”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-13">3.3.13 Chức năng luyện tập ngữ pháp – chế độ Trắc nghiệm</h4>
+<details class="book">
+<summary>Luyện tập ngữ pháp – chế độ Trắc nghiệm</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập ngữ pháp – chế độ Trắc nghiệm</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên luyện tập điểm ngữ pháp thông qua các câu hỏi trắc nghiệm dạng điền chỗ trống và sắp xếp câu. Kết quả chỉ mang tính luyện tập, không được lưu lại.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Popup “Luyện tập” trong danh sách ngữ pháp hoặc chi tiết cấu trúc<br> - Màn hình câu hỏi trắc nghiệm<br> - Màn hình kết quả sau khi hoàn thành bài</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Chọn mục “Ngữ pháp”<br>5. Chọn một cấu trúc hoặc nhấn luyện tập từ danh sách<br>6. Chọn chế độ “Trắc nghiệm”<br>7. Trả lời lần lượt các câu hỏi<br>8. Nhấn “Kết thúc” để xem kết quả tổng hợp</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>• Có thể bao gồm 2 loại câu hỏi:<br>&emsp;– <strong>Chọn đáp án đúng</strong>: điền vào chỗ trống phù hợp với ngữ pháp<br>&emsp;– <strong>Sắp xếp câu</strong>: kéo thả các thành phần để tạo câu đúng theo ngữ pháp<br><br>• Mỗi câu hiển thị:<br>&emsp;– Nội dung câu hỏi<br>&emsp;– Các lựa chọn hoặc khối từ cần sắp xếp<br>&emsp;– Chỉ báo số thứ tự câu hỏi<br><br>• Khi nhấn "Kết thúc":<br>&emsp;– Hiển thị điểm số tổng (nếu có)<br>&emsp;– Danh sách câu đúng/sai<br>&emsp;– Câu bị bỏ qua được đánh dấu rõ ràng<br>&emsp;– Hiển thị đáp án đúng để học viên so sánh</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hiển thị toàn bộ danh sách câu hỏi đã làm kèm trạng thái đúng/sai<br> - Câu trả lời sai được tô đỏ, đúng được tô xanh<br> - Có ghi chú rõ: "Bạn đã bỏ qua câu này" nếu chưa chọn đáp án<br> - Kết quả không lưu vào hệ thống, chỉ hiển thị tại thời điểm hoàn thành</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu cấu trúc ngữ pháp chưa có câu hỏi luyện tập → hiển thị “Chưa có bài luyện tập cho mục này”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-14">3.3.14 Chức năng luyện tập ngữ pháp – chế độ Học</h4>
+<details class="book">
+<summary>Luyện tập ngữ pháp – chế độ Học</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập ngữ pháp – chế độ Học</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên học từng cấu trúc ngữ pháp thông qua flashcard trình bày ví dụ cụ thể. Sau mỗi flashcard có thể làm bài luyện tập nhanh như điền chỗ trống hoặc sắp xếp câu.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Giao diện học FlashCard ngữ pháp<br> - Giao diện sắp xếp câu / điền từ sau mỗi flashcard<br> - Giao diện kết quả đúng/sai từng câu<br> - Giao diện tổng kết hoàn thành</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học → chọn khóa học<br>3. Vào tab "Ngữ pháp" → chọn một mục ngữ pháp cụ thể<br>4. Nhấn nút “Luyện tập” → chọn “Học”<br>5. Học qua từng flashcard ngữ pháp<br>6. Thực hiện các bài luyện tập nhanh (trắc nghiệm / sắp xếp)<br>7. Tiếp tục đến flashcard tiếp theo cho đến khi kết thúc</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>- FlashCard hiển thị cấu trúc + ví dụ minh họa<br> - Sau mỗi thẻ có thể xuất hiện bài luyện tập nhanh (sắp xếp hoặc chọn đáp án đúng)<br> - Câu trả lời được đánh giá đúng/sai ngay sau khi trả lời<br> - Hiển thị tiến độ và nút “Tiếp tục” chuyển sang thẻ tiếp theo<br> - Hiển thị thông báo “Hoàn thành” sau khi học xong toàn bộ</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hiển thị đúng/sai từng câu luyện tập<br> - FlashCard đánh dấu hoàn thành<br> - Giao diện tổng kết hiển thị điểm hoặc nhận xét động viên</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Không có cấu trúc ngữ pháp → hiển thị “Không có dữ liệu để học”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-15">3.3.15 Chức năng luyện tập ngữ pháp – chế độ FlashCard</h4>
+<details class="book">
+<summary>Luyện tập ngữ pháp – chế độ FlashCard</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập ngữ pháp – chế độ FlashCard</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên học từng điểm ngữ pháp dưới dạng thẻ FlashCard. Mỗi thẻ gồm mặt trước – sau để luyện ghi nhớ, có thể đánh dấu “Đã thuộc”. Có 3 loại thẻ: (1) Tên &amp; ví dụ, (2) Tên &amp; định nghĩa, (3) Ví dụ &amp; dịch nghĩa.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình flashcard luyện ngữ pháp<br> - Màn hình chọn chế độ flashcard<br> - Tùy chọn: xem tất cả, xáo trộn, tự chạy<br> - Giao diện trạng thái “Đã thuộc” và thanh tiến độ</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Chọn khóa học cụ thể<br>3. Vào tab “Ngữ pháp” → chọn cấu trúc cần luyện<br>4. Chọn nút “Luyện tập” → chọn chế độ “FlashCard”<br>5. Flashcard hiển thị lần lượt theo thứ tự<br>6. Học viên lật thẻ và nhấn đánh dấu “Đã thuộc” (nếu cần)<br>7. Có thể sử dụng tùy chọn: xem tất cả, xáo trộn, tự chạy<br>8. Kết thúc khi học hết tất cả thẻ</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>- <strong>Flashcard loại 1</strong>: Mặt trước là tên cấu trúc + định nghĩa, mặt sau là 1–2 ví dụ minh họa kèm dịch nghĩa<br> - <strong>Flashcard loại 2</strong>: Mặt trước là định nghĩa bằng tiếng Việt, mặt sau là tên cấu trúc<br> - <strong>Flashcard loại 3</strong>: Mặt trước là ví dụ tiếng Trung, mặt sau là dịch nghĩa + cấu trúc liên quan<br> - Nút đánh dấu “Đã thuộc” hiển thị ở góc flashcard<br> - Giao diện chuyển thẻ bằng nút trái/phải hoặc vuốt ngang<br> - Tùy chọn khi bấm nút ⚙: “Xem tất cả” – hiển thị toàn bộ flashcard trong 1 danh sách; “Xáo trộn” – học ngẫu nhiên; “Tự chạy” – lật và chuyển thẻ tự động theo thời gian</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Flashcard đánh dấu “Đã thuộc” sẽ hiển thị trạng thái và cập nhật vào % tiến độ đã học ngữ pháp<br> - Tính phần trăm số cấu trúc đã đánh dấu thuộc (áp dụng cho thống kê tổng ngữ pháp đã nắm)<br> - Lưu trạng thái flashcard đã học để đồng bộ giữa các lần mở ứng dụng</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa có flashcard cho cấu trúc ngữ pháp → hiển thị “Không có dữ liệu để luyện tập”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-16">3.3.16 Chức năng luyện tập ngữ pháp – chế độ Flashcard</h4>
+<details class="book">
+<summary>Luyện tập ngữ pháp – chế độ Flashcard</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Luyện tập ngữ pháp – chế độ Flashcard</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên ôn tập ngữ pháp bằng thẻ flashcard có thể tự đánh dấu "Đã thuộc", hỗ trợ 3 loại flashcard hiển thị (tiêu đề, ví dụ, giải nghĩa). Kết thúc sẽ có thống kê số lượng đã thuộc và cần học lại.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình flashcard<br> - Popup chọn chế độ học<br> - Popup tuỳ chọn: Xem tất cả, Xáo trộn, Tự chạy<br> - Màn hình kết quả tổng kết sau khi duyệt</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Vào tab “Ngữ pháp” trong bài học<br>3. Nhấn nút “Luyện tập” → chọn “Flashcard”<br>4. Xem lần lượt từng flashcard, bấm lật mặt sau nếu cần<br>5. Nhấn “Đã thuộc” hoặc “Cần học lại” để đánh dấu<br>6. Sau khi duyệt hết, hệ thống hiển thị tổng kết số lượng và phần trăm<br>7. Học viên có thể chọn “Duyệt lại” nếu muốn</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>- Có 3 loại flashcard:<br>&emsp;• <strong>Loại 1</strong>: Mặt trước là tiêu đề, mặt sau là ví dụ<br>&emsp;• <strong>Loại 2</strong>: Mặt trước là tiêu đề + ví dụ, mặt sau lặp lại ví dụ<br>&emsp;• <strong>Loại 3</strong>: Mặt trước là ví dụ, mặt sau là tiêu đề + dịch nghĩa<br> - Nút đánh dấu: “Đã thuộc” / “Cần học lại” hiển thị rõ ràng<br> - Có nút cài đặt với các tuỳ chọn: Xem tất cả, Xáo trộn, Tự chạy</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Thống kê số lượng ngữ pháp “Đã thuộc” và “Cần học lại”<br> - Tính tỷ lệ phần trăm đã nắm của ngữ pháp<br> - Ghi nhận kết quả để hiển thị % nắm ngữ pháp ở danh sách tổng quan</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Hiển thị thông báo “Không có nội dung để học”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-17">3.3.17 Chức năng duyệt ngữ pháp</h4>
+<details class="book">
+<summary>Duyệt ngữ pháp</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Duyệt ngữ pháp</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép học viên xem lại các cấu trúc ngữ pháp ở dạng card thông tin (không phải flashcard), bao gồm công thức, giải nghĩa và ví dụ. Học viên có thể tự đánh dấu “Đã thuộc” hoặc “Cần học lại” cho từng cấu trúc. Sau khi duyệt xong sẽ có thống kê kết quả.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Mục “Ngữ pháp” trong bài học<br> - Giao diện danh sách ngữ pháp<br> - Giao diện card nội dung ngữ pháp (không lật)<br> - Giao diện thống kê sau khi duyệt</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn một buổi học<br>4. Chọn mục “Ngữ pháp”<br>5. Nhấn nút “Duyệt”<br>6. Xem từng card ngữ pháp (không lật mặt)<br>7. Với mỗi card, chọn “Đã thuộc” hoặc “Cần học lại”<br>8. Sau khi duyệt hết, hiển thị màn hình thống kê kết quả</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>- Card thông tin gồm:<br>&emsp;• Tên cấu trúc (tiếng Trung &amp; tiếng Việt)<br>&emsp;• Mô tả/giải thích ngắn gọn<br>&emsp;• Ví dụ minh họa (câu tiếng Trung + dịch tiếng Việt)<br> - Nút lựa chọn: “Đã thuộc” / “Cần học lại”<br> - Thanh tiến độ thể hiện % duyệt<br> - Giao diện kết thúc hiển thị số lượng đã thuộc và cần học lại</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hiển thị nội dung cấu trúc đúng như dữ liệu ngữ pháp<br> - Ghi nhận được lựa chọn học viên (đã thuộc/cần học lại)<br> - Hiển thị chính xác thống kê kết quả duyệt</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có cấu trúc ngữ pháp nào, hiển thị thông báo “Không có dữ liệu để duyệt”</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-3-18">3.3.18 Chức năng Học kỹ năng nghe</h4>
+<details class="book">
+<summary>Học kỹ năng nghe</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Học kỹ năng nghe</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Học viên luyện tập kỹ năng nghe thông qua các đoạn hội thoại có kèm audio. Giao diện cho phép tùy chỉnh hiển thị và tốc độ phát, đồng thời có thể đánh dấu đã thuộc hoặc lưu vào thư viện để học lại sau.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Danh sách bài nghe<br> - Màn hình chi tiết bài nghe (audio + phụ đề)<br> - Popup tùy chọn tốc độ<br> - Nút đánh dấu “Đã thuộc” và “Lưu vào thư viện”</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn kỹ năng “Nghe”<br>4. Xem danh sách các bài hội thoại → chọn một bài<br>5. Tại màn hình chi tiết bài nghe:<br>&emsp;– Nhấn nút phát audio<br>&emsp;– Có thể bật/tắt phiên âm, dịch nghĩa, phụ đề<br>&emsp;– Tùy chọn tốc độ phát (Chậm / Bình thường / Nhanh)<br>&emsp;– Đánh dấu “Đã thuộc” hoặc “Lưu vào thư viện” nếu cần<br>6. Nhấn nút “Luyện tập” để chuyển sang phần luyện tập nếu có</td>
+</tr>
+<tr>
+<td><strong>Chi tiết hiển thị</strong></td>
+<td>- Danh sách bài nghe gồm tiêu đề tiếng Trung và dịch nghĩa<br> - Mỗi bài có icon tai nghe thể hiện kỹ năng nghe<br> - Màn hình chi tiết bài nghe hiển thị:<br>&emsp;• Thanh phát audio (có nút play, thời gian)<br>&emsp;• Các khối thoại gồm phiên âm, tiếng Trung, dịch nghĩa<br>&emsp;• Các nút chức năng: “Phiên âm”, “Dịch nghĩa”, “Phụ đề”, “Tốc độ”<br>&emsp;• Nút “Đã thuộc” và “Lưu vào thư viện” nằm góc phải phía trên</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Audio được phát đúng nội dung hội thoại<br> - Hiển thị đúng các khối thoại với cấu trúc: Phiên âm – Tiếng Trung – Dịch nghĩa<br> - Cho phép thay đổi hiển thị từng lớp thông tin<br> - Cập nhật trạng thái “Đã thuộc” và “Lưu vào thư viện” cho từng bài nghe</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Không có bài nghe trong danh sách → hiển thị thông báo “Không có bài luyện nghe nào”</td>
+</tr>
+</tbody>
+</table>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: 📄 Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                📄 Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../testplan/" class="md-footer__link md-footer__link--next" aria-label="Next: 🧪 Kế hoạch kiểm thử (Test Plan)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                🧪 Kế hoạch kiểm thử (Test Plan)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../scripts/open-toc-book.js"></script>
+      
+    
+  </body>
+</html>
