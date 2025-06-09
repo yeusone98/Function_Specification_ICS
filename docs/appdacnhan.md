@@ -386,15 +386,44 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
     | **Trường hợp không có dữ liệu** | - Nếu không có cấu trúc ngữ pháp nào, hiển thị thông báo “Không có dữ liệu để duyệt” |
 
 
-#### 3.3.18 Chức năng Học kỹ năng nghe { #toc-3-3-18 }
+#### 3.3.18 Chức năng kỹ năng nghe { #toc-3-3-18 }
 
-??? book "Học kỹ năng nghe"
+??? book "Kỹ năng nghe"
     | Trường                     | Nội dung |
     |---------------------------|----------|
-    | **Tên chức năng**         | Học kỹ năng nghe |
+    | **Tên chức năng**         | Kỹ năng nghe |
     | **Mô tả**                 | Học viên luyện tập kỹ năng nghe thông qua các đoạn hội thoại có kèm audio. Giao diện cho phép tùy chỉnh hiển thị và tốc độ phát, đồng thời có thể đánh dấu đã thuộc hoặc lưu vào thư viện để học lại sau. |
     | **Giao diện liên quan**   | - Danh sách bài nghe<br> - Màn hình chi tiết bài nghe (audio + phụ đề)<br> - Popup tùy chọn tốc độ<br> - Nút đánh dấu “Đã thuộc” và “Lưu vào thư viện” |
     | **Luồng thao tác chính**  | 1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào tab “Bài học” → chọn kỹ năng “Nghe”<br>4. Xem danh sách các bài hội thoại → chọn một bài<br>5. Tại màn hình chi tiết bài nghe:<br>&emsp;– Nhấn nút phát audio<br>&emsp;– Có thể bật/tắt phiên âm, dịch nghĩa, phụ đề<br>&emsp;– Tùy chọn tốc độ phát (Chậm / Bình thường / Nhanh)<br>&emsp;– Đánh dấu “Đã thuộc” hoặc “Lưu vào thư viện” nếu cần<br>6. Nhấn nút “Luyện tập” để chuyển sang phần luyện tập nếu có |
-    | **Chi tiết hiển thị**     | - Danh sách bài nghe gồm tiêu đề tiếng Trung và dịch nghĩa<br> - Mỗi bài có icon tai nghe thể hiện kỹ năng nghe<br> - Màn hình chi tiết bài nghe hiển thị:<br>&emsp;• Thanh phát audio (có nút play, thời gian)<br>&emsp;• Các khối thoại gồm phiên âm, tiếng Trung, dịch nghĩa<br>&emsp;• Các nút chức năng: “Phiên âm”, “Dịch nghĩa”, “Phụ đề”, “Tốc độ”<br>&emsp;• Nút “Đã thuộc” và “Lưu vào thư viện” nằm góc phải phía trên |
-    | **Kết quả hiển thị**      | - Audio được phát đúng nội dung hội thoại<br> - Hiển thị đúng các khối thoại với cấu trúc: Phiên âm – Tiếng Trung – Dịch nghĩa<br> - Cho phép thay đổi hiển thị từng lớp thông tin<br> - Cập nhật trạng thái “Đã thuộc” và “Lưu vào thư viện” cho từng bài nghe |
+    | **Chi tiết hiển thị**     | - Danh sách bài nghe gồm tiêu đề tiếng Trung và dịch nghĩa<br> - Mỗi bài có icon tai nghe thể hiện kỹ năng nghe<br> - Màn hình chi tiết bài nghe hiển thị:<br>&emsp;• Thanh phát audio (có nút play, thời gian)<br>&emsp;• Các khối thoại gồm Phiên âm, Tiếng Trung, Dịch nghĩa<br>&emsp;• Các khối thoại hiển thị theo block → **khi audio phát đến đoạn nào thì block đoạn đó được highlight màu cam**<br>&emsp;• Người dùng có thể nhấn vào từng block → player sẽ chuyển (seek) tới thời gian bắt đầu của đoạn đó và phát tiếp<br>&emsp;• Các nút chức năng: “Phiên âm”, “Dịch nghĩa”, “Phụ đề”, “Tốc độ”<br>&emsp;• Nút “Đã thuộc” và “Lưu vào thư viện” nằm góc phải phía trên |
+    | **Kết quả hiển thị**      | - Audio được phát đúng nội dung hội thoại<br> - Block hội thoại được highlight theo đúng đoạn audio đang phát<br> - Khi nhấn vào block đoạn văn → player sẽ phát từ thời điểm đó<br> - Hiển thị đúng các khối thoại với cấu trúc: Phiên âm – Tiếng Trung – Dịch nghĩa<br> - Cho phép thay đổi hiển thị từng lớp thông tin<br> - Cập nhật trạng thái “Đã thuộc” và “Lưu vào thư viện” cho từng bài nghe |
     | **Trường hợp không có dữ liệu** | - Không có bài nghe trong danh sách → hiển thị thông báo “Không có bài luyện nghe nào” |
+
+
+#### 3.3.19 Chức năng Luyện tập kỹ năng nghe – chế độ Học { #toc-3-3-19 }
+
+??? book "Chức năng Luyện tập kỹ năng nghe – chế độ Học"
+    | Trường                    | Nội dung |
+    |--------------------------|---------|
+    | **Tên chức năng**        | Luyện tập kỹ năng nghe – chế độ Học |
+    | **Mô tả**                | Học viên chọn chế độ "Học" trong Luyện tập kỹ năng nghe. Hệ thống lần lượt hiển thị các phần nội dung giúp học viên ghi nhớ và rèn luyện kỹ năng nghe: nghe - hiểu - ghi nhớ - vận dụng. |
+    | **Giao diện liên quan**   | Danh sách bài nghe <br> Chi tiết bài nghe <br> Popup chọn chế độ Luyện tập <br> Màn hình Học qua FlashCard <br> Màn hình Ghi nhớ nội dung <br> Màn hình Câu hỏi xếp câu <br> Màn hình hoàn thành phần học |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công <br> 2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể <br> 3. Chọn mục Kỹ năng nghe, nhấn "Luyện tập" <br> 4. Chọn chế độ "Học" trong popup chọn chế độ <br> 5. Hệ thống lần lượt hiển thị các phần học như sau: <br> &emsp; • **Phần 1**: Học qua FlashCard — tự động phát âm thanh lần đầu khi hiển thị card <br> &emsp; &emsp; - Học viên nhấn "Tiếp theo" để lật card, xem nghĩa <br> &emsp; &emsp; - Nhấn "Hoàn thành" để chuyển sang phần Ghi nhớ nội dung <br> &emsp; • **Phần 2**: Ghi nhớ nội dung — hiển thị câu tiếng Trung + nghĩa tiếng Việt, học viên nhấn "Tiếp tục" để sang câu tiếp theo <br> &emsp; • **Phần 3**: Câu hỏi **Sắp xếp thành câu có nghĩa** — học viên kéo thả hoặc chọn các từ để sắp xếp thành câu đúng <br> &emsp; &emsp; - Nhấn "Kiểm tra" để kiểm tra kết quả <br> &emsp; - Tiếp tục luyện tập các câu tiếp theo <br> 6. Sau khi hoàn thành toàn bộ nội dung, hiển thị màn hình chúc mừng hoàn thành phần học |
+    | **Chi tiết hiển thị**    | - Popup chọn chế độ Luyện tập gồm: "Học", "FlashCard" <br> - Với chế độ "Học": <br> &emsp; • Phần Học qua FlashCard tự phát âm thanh lần đầu khi vào card <br> &emsp; • Học viên thao tác lần lượt qua các bước (xem nghĩa → ghi nhớ → sắp xếp câu) <br> &emsp; • Phần Sắp xếp câu có nghĩa là **bài tập dạng câu hỏi**, không phải card FlashCard <br> - Không có chức năng "Đã thuộc" hoặc "Lưu vào thư viện" trong chế độ Học |
+    | **Kết quả hiển thị**     | - Hiển thị lần lượt 3 phần học: Học qua FlashCard → Ghi nhớ nội dung → Câu hỏi Sắp xếp câu <br> - Không có nút "Đã thuộc", "Lưu vào thư viện" trong toàn bộ chế độ Học <br> - Kết thúc hiển thị màn hình chúc mừng hoàn thành phần học |
+    | **Trường hợp không có dữ liệu** | - Nếu bài nghe chưa có nội dung, hiển thị thông báo "Chưa có nội dung để luyện tập" |
+
+
+
+#### 3.3.20 Chức năng Luyện tập kỹ năng nghe – chế độ FlashCard { #toc-3-3-20 }
+
+??? book "Luyện tập kỹ năng nghe – chế độ FlashCard"
+    | Trường                     | Nội dung |
+    |---------------------------|----------|
+    | **Tên chức năng**         | Luyện tập kỹ năng nghe – chế độ FlashCard |
+    | **Mô tả**                 | Học viên luyện tập kỹ năng nghe thông qua FlashCard. Có 3 loại FlashCard. Mỗi FlashCard tự phát âm lần đầu khi hiển thị. Học viên có thể sử dụng nút Tự chạy để điều chỉnh cách chuyển card theo vòng lặp Nhanh → Tự chạy → Chậm → Bình thường → Nhanh. |
+    | **Giao diện liên quan**   | - Danh sách bài nghe → Luyện tập → chọn chế độ FlashCard<br> - Màn hình FlashCard từng câu<br> - Nút "Tự chạy" hiển thị trạng thái hiện tại |
+    | **Luồng thao tác chính**  | 1. Học viên đăng nhập thành công<br> 2. Từ danh sách khóa học → chọn một khóa học cụ thể<br> 3. Vào tab **Bài học** → chọn 1 **buổi học**<br> 4. Trong buổi học → chọn tab **Kỹ năng nghe**<br> 5. Chọn bài nghe → vào màn hình chi tiết bài nghe<br> 6. Nhấn **Luyện tập** → chọn chế độ **FlashCard**<br> 7. FlashCard tự động phát âm lần đầu khi hiển thị<br> 8. Học viên có thể sử dụng các tuỳ chọn:<br> &emsp;- **Xem tất cả**: hiển thị toàn bộ FlashCard ở dạng danh sách<br> &emsp;- **Xáo trộn**: xáo trộn thứ tự FlashCard<br> &emsp;- **Tự chạy**: nút trên màn hình có vòng lặp trạng thái:<br> &emsp;&emsp;→ Nhanh → Tự chạy (thủ công, học viên tự bấm qua card) → Chậm → Bình thường → Nhanh → ...<br> &emsp;- Khi đang ở trạng thái nào, label trên nút hiển thị tên trạng thái đó<br> 9. Học viên có thể điều hướng FlashCard bằng nút trái/phải hoặc vuốt ngang<br> 10. Hoàn thành bài luyện tập hoặc thoát |
+    | **Chi tiết hiển thị**     | - **FlashCard loại 1**: Mặt trước có icon phát âm thanh, mặt sau có câu tiếng Trung + dịch nghĩa<br> - **FlashCard loại 2**: Mặt trước có câu tiếng Trung + icon phát âm thanh, mặt sau có dịch nghĩa + icon phát âm thanh<br> - **FlashCard loại 3**: Mặt trước có câu tiếng Trung + icon phát âm thanh, mặt sau có dịch nghĩa<br> - Nút "Đã thuộc / Chưa thuộc" hiển thị trên mỗi card (không ảnh hưởng % tiến độ)<br> - Thanh phân trang hiển thị số lượng card (VD: 1/6)<br> - Nút "Tùy chọn" chứa các chức năng: Xem tất cả, Xáo trộn, Tự chạy (vòng lặp trạng thái) |
+    | **Kết quả hiển thị**      | - FlashCard tự động phát âm khi hiển thị<br> - Học viên có thể đánh dấu Đã thuộc / Chưa thuộc<br> - Nút "Tự chạy" hoạt động theo đúng vòng lặp trạng thái<br> - Toàn bộ tuỳ chọn hoạt động chính xác theo logic yêu cầu |
+    | **Trường hợp không có dữ liệu** | - Nếu không có FlashCard → hiển thị "Không có nội dung để luyện tập" |
