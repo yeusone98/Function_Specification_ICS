@@ -837,3 +837,17 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
     | **Chi tiết hiển thị** | - **Mật khẩu cũ**:<br>&emsp;• Học viên nhập mật khẩu hiện tại<br> - **Mật khẩu mới**:<br>&emsp;• Nhập mật khẩu mới (tối thiểu 6 ký tự)<br> - **Xác nhận mật khẩu mới**:<br>&emsp;• Nhập lại mật khẩu mới để xác nhận<br> - **Nút Lưu thông tin**:<br>&emsp;• Sau khi nhấn → thực hiện kiểm tra và lưu lại mật khẩu mới |
     | **Kết quả hiển thị** | - Nếu đổi mật khẩu thành công → hiển thị thông báo thành công<br> - Nếu có lỗi → hiển thị thông báo lỗi tương ứng |
     | **Trường hợp không có dữ liệu** | - Nếu bỏ trống trường nào → hiển thị yêu cầu nhập đầy đủ |
+
+
+### 3.7 Chức năng Góp ý { #toc-3-7 }
+
+??? book "Góp ý"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Góp ý |
+    | **Mô tả** | Chức năng cho phép học viên gửi góp ý trực tiếp về trung tâm để cải thiện chất lượng dịch vụ và trải nghiệm học tập. Học viên có thể chọn loại góp ý và gửi góp ý có/không kèm thông tin cá nhân. |
+    | **Giao diện liên quan** | - Màn hình lớp học (tab Tổng quan / Bài học / Kiểm tra...) → button **Gửi góp ý đến trung tâm**<br> - Popup **Góp ý** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Vào 1 lớp học cụ thể → tại tab **Tổng quan** (hoặc các tab khác nếu có)<br>3. Nhấn **Gửi góp ý đến trung tâm** → mở popup Góp ý<br>4. Tại popup, học viên thực hiện:<br>&emsp;• Chọn **Loại góp ý** (Dropdown, bắt buộc chọn)<br>&emsp;• Nhập **Nội dung góp ý** (Textbox, bắt buộc nhập)<br>&emsp;• (Tùy chọn) Tick **Ẩn danh** nếu không muốn gửi kèm thông tin cá nhân<br>5. Nhấn **Gửi góp ý**:<br>&emsp;• Nếu đầy đủ thông tin → gửi thành công → hiển thị thông báo gửi thành công<br>&emsp;• Nếu thiếu loại góp ý hoặc nội dung → báo lỗi yêu cầu nhập đầy đủ<br>6. Nếu nhấn **Hủy** → đóng popup, không gửi |
+    | **Chi tiết hiển thị** | - **Dropdown Loại góp ý** (bắt buộc chọn):<br>&emsp;• Góp ý chung<br>&emsp;• Góp ý về Giáo trình<br>&emsp;• Góp ý về Giảng viên<br>&emsp;• Góp ý về Hỗ trợ học viên<br>&emsp;• Góp ý về Lộ trình<br>&emsp;• Góp ý về Bài tập về nhà<br>&emsp;• Góp ý về Kiểm tra<br>&emsp;• Góp ý về Học phí<br>&emsp;• Các loại khác nếu có (danh sách có thể mở rộng bởi trung tâm)<br> - **Textbox nhập nội dung góp ý**:<br>&emsp;• Placeholder: “Góp ý của bạn rất quan trọng với chúng tôi. Bạn hãy thoải mái góp ý mọi điểm tại đây nhé!”<br> - **Checkbox Ẩn danh**:<br>&emsp;• Nếu tick **Ẩn danh** → góp ý sẽ không gửi kèm thông tin cá nhân (Họ tên, Email, SĐT).<br>&emsp;• Nếu không tick → gửi kèm thông tin cá nhân của học viên.<br> - **Nút Gửi góp ý**:<br>&emsp;• Khi gửi thành công → hiển thị thông báo **Gửi góp ý thành công**<br> - **Nút Hủy**:<br>&emsp;• Đóng popup, không gửi dữ liệu |
+    | **Kết quả hiển thị** | - Góp ý được gửi về **BAN QUẢN LÝ CHẤT LƯỢNG & BAN HỖ TRỢ KHÁCH HÀNG**.<br> - Nếu tick **Ẩn danh** → không kèm thông tin cá nhân.<br> - Nếu không tick Ẩn danh → kèm thông tin học viên. |
+    | **Trường hợp không có dữ liệu** | - Nếu không chọn **Loại góp ý** → cảnh báo: **"Vui lòng chọn loại góp ý"**.<br> - Nếu không nhập **Nội dung góp ý** → cảnh báo: **"Vui lòng nhập nội dung góp ý"**. |
