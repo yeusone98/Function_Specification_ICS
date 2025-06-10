@@ -7,9 +7,10 @@
   Hệ thống cung cấp trải nghiệm học tập minh bạch, cá nhân hóa, đồng thời giúp giáo viên và trung tâm nắm bắt tiến độ học và mức độ hoàn thành của học viên một cách trực quan.
   Ứng dụng hướng đến việc tự động hóa phần lớn quy trình đào tạo và nâng cao hiệu quả giảng dạy.
 
-- **Đối tượng sử dụng:**
-  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ
+- **Đối tượng sử dụng:**<br>
+  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ<br>
   🔹 Tester: xây dựng và thực hiện test case để kiểm thử hệ thống
+
 
 
 Dưới đây là nội dung **phạm vi hệ thống** đã được bổ sung phần **Thư viện học tập**, trình bày theo định dạng MkDocs như bạn yêu cầu:
@@ -26,38 +27,37 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
 
 ### Các chức năng chính dành cho học viên:
 
-* 📘 **Bài học**:
-   • Xem danh sách các buổi học theo thứ tự thời gian
-   • Truy cập nội dung bài học chi tiết: chủ đề, mục tiêu học, từ vựng, ngữ pháp, kỹ năng
+* 📘 **Bài học**:<br>
+   • Xem danh sách các buổi học theo thứ tự thời gian<br>
+   • Truy cập nội dung bài học chi tiết: chủ đề, mục tiêu học, từ vựng, ngữ pháp, kỹ năng<br>
    • Xem trạng thái từng buổi học: Có mặt, Vắng, Vào trễ
 
-* 📝 **Kiểm tra**:
-   • Xem danh sách bài kiểm tra được giao
-   • Thực hiện bài kiểm tra (nếu hệ thống mở truy cập)
+* 📝 **Kiểm tra**:<br>
+   • Xem danh sách bài kiểm tra được giao<br>
+   • Thực hiện bài kiểm tra (nếu hệ thống mở truy cập)<br>
    • Theo dõi điểm số, trạng thái hoàn thành
 
-* 🎯 **Tự học**:
-   • Ôn tập từ vựng, ngữ pháp và kỹ năng nghe đọc theo dạng flashcard hoặc bài tập
+* 🎯 **Tự học**:<br>
+   • Ôn tập từ vựng, ngữ pháp và kỹ năng nghe đọc theo dạng flashcard hoặc bài tập<br>
    • Theo dõi tiến độ học tập theo từng hoạt động: Luyện nhớ, Củng cố, Kiến thức nền, Kỹ năng
 
-* 📊 **Tổng quan lớp học**:
-   • Xem tổng số buổi học đã hoàn thành / tổng số buổi
-   • Tỉ lệ điểm danh, tỉ lệ làm bài tập về nhà
+* 📊 **Tổng quan lớp học**:<br>
+   • Xem tổng số buổi học đã hoàn thành / tổng số buổi<br>
+   • Tỉ lệ điểm danh, tỉ lệ làm bài tập về nhà<br>
    • Điểm trung bình bài tập và điểm kiểm tra
 
-* 📚 **Thư viện học tập**:
-   • Gồm 3 mục: **Kiến thức**, **Kỹ năng** và **Tiến trình**
-   • Học viên ôn tập lại các nội dung đã học và đã note từ bài học chính (bao gồm Từ vựng, Ngữ pháp, Nghe, Đọc)
-   • Hiển thị tiến độ học tập cá nhân bằng biểu đồ trực quan theo ngày/tuần/tháng
+* 📚 **Thư viện học tập**:<br>
+   • Gồm 3 mục: **Kiến thức**, **Kỹ năng** và **Tiến trình**<br>
+   • Học viên ôn tập lại các nội dung đã học và đã note từ bài học chính (bao gồm Từ vựng, Ngữ pháp, Nghe, Đọc)<br>
+   • Hiển thị tiến độ học tập cá nhân bằng biểu đồ trực quan theo ngày/tuần/tháng<br>
    • Cung cấp 2 chế độ luyện tập: *Duyệt* và *Luyện tập*
 
-Ứng dụng không hỗ trợ các vai trò khác như admin, giáo viên hay quản trị. Toàn bộ dữ liệu học tập được đồng bộ từ hệ thống chính do giáo viên và bộ phận điều phối cập nhật.
 
 ---
 
 ## 3. Các chức năng chính
 
-### 3.1 Chức năng đăng nhập { #toc-3-1}
+#### 3.1 Chức năng đăng nhập { #toc-3-1 }
 
 ??? book "Đăng nhập"
     | Trường                | Nội dung |
@@ -65,10 +65,11 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
     | **Tên chức năng**     | Đăng nhập |
     | **Mô tả**              | Chức năng cho phép học viên đăng nhập vào ứng dụng bằng email và mật khẩu được cấp bởi trung tâm. Việc đăng nhập giúp xác thực tài khoản và truy xuất dữ liệu học tập cá nhân như lớp học, bài học, kiểm tra, thư viện…<br><br>**Tài khoản học viên sẽ được cấp bởi bộ phận Support của trung tâm.** |
     | **Giao diện liên quan** | - Màn hình đăng nhập (email, mật khẩu)<br> - Nút “Đăng nhập”<br> - Link “Quên mật khẩu”<br> - Nút “Liên hệ Support để được hỗ trợ” |
-    | **Luồng thao tác chính** | 1. Truy cập ứng dụng → hiển thị form Email và Mật khẩu, kèm nút Đăng nhập<br>2. Học viên nhập thông tin → có thể ẩn/hiện mật khẩu<br>3. Nhấn Đăng nhập:<br>&emsp;– Nếu hợp lệ → đăng nhập thành công<br>&emsp;– Nếu sai → báo lỗi “Email hoặc mật khẩu không đúng”<br>4. Nhấn “Quên mật khẩu” → hiển thị: “Liên hệ support để được hỗ trợ” |
-    | **Điều kiện**          | - Nút “Đăng nhập” luôn cho phép nhấn dù chưa nhập đủ thông tin<br> - Hệ thống kiểm tra và hiển thị lỗi tương ứng nếu để trống |
-    | **Kết quả hiển thị**   | - Nếu đăng nhập thành công → chuyển sang màn hình chính<br> - Nếu sai thông tin → hiển thị lỗi: “Email hoặc mật khẩu không đúng”<br> - Nếu để trống:<br>&emsp;• Không nhập email → lỗi “Vui lòng nhập email”<br>&emsp;• Không nhập mật khẩu → lỗi “Vui lòng nhập mật khẩu” |
-    | **Trường hợp không có dữ liệu** | Email, mật khẩu trống nhưng vẫn cho phép nhấn nút “Đăng nhập”, hệ thống sẽ cảnh báo lỗi tương ứng sau đó |
+    | **Luồng thao tác chính** | 1. Truy cập ứng dụng → hiển thị form Email và Mật khẩu, kèm nút Đăng nhập<br>2. Học viên nhập thông tin → có thể ẩn/hiện mật khẩu<br>3. Nhấn Đăng nhập:<br>&emsp;– Nếu hợp lệ → đăng nhập thành công<br>&emsp;– Nếu sai → hiển thị lỗi tương ứng:<br>&emsp;&emsp;• Email không đúng format → lỗi **"Email không hợp lệ"**<br>&emsp;&emsp;• Email hợp lệ nhưng không tồn tại → lỗi **"Email không tồn tại"**<br>&emsp;&emsp;• Email đúng, password sai → lỗi **"Mật khẩu không đúng"**<br>&emsp;&emsp;• Password không đạt yêu cầu (ít hơn 6 ký tự) → lỗi **"Mật khẩu phải có ít nhất 6 ký tự"**<br>4. Nhấn “Quên mật khẩu” → hiển thị: “Liên hệ support để được hỗ trợ” |
+    | **Điều kiện**          | - Nút “Đăng nhập” luôn cho phép nhấn dù chưa nhập đủ thông tin<br> - Hệ thống kiểm tra và hiển thị lỗi tương ứng nếu để trống / sai định dạng / sai thông tin |
+    | **Kết quả hiển thị**   | - Nếu đăng nhập thành công → chuyển sang màn hình chính<br> - Nếu lỗi:<br>&emsp;• Email không nhập → lỗi **"Vui lòng nhập email"**<br>&emsp;• Mật khẩu không nhập → lỗi **"Vui lòng nhập mật khẩu"**<br>&emsp;• Email sai format → lỗi **"Email không hợp lệ"**<br>&emsp;• Email không tồn tại → lỗi **"Email không tồn tại"**<br>&emsp;• Mật khẩu sai → lỗi **"Mật khẩu không đúng"**<br>&emsp;• Mật khẩu không đạt yêu cầu → lỗi **"Mật khẩu phải có ít nhất 6 ký tự"** |
+    | **Trường hợp không có dữ liệu** | Email, mật khẩu trống → vẫn cho phép nhấn nút “Đăng nhập”, hệ thống sẽ cảnh báo lỗi tương ứng sau đó |
+
 
 ### 3.2 Chức năng quản lý khóa học
 
@@ -454,6 +455,19 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
     | **Kết quả hiển thị**      | - Học viên có thể đánh dấu Đã thuộc / Chưa thuộc (không ảnh hưởng % kỹ năng đọc)<br> - Nút "Tự chạy" hoạt động theo đúng vòng lặp trạng thái<br> - Toàn bộ tuỳ chọn hoạt động chính xác theo logic yêu cầu |
     | **Trường hợp không có dữ liệu** | - Nếu không có FlashCard → hiển thị "Không có nội dung để luyện tập" |
 
+#### 3.3.24 Chức năng Luyện tập Kỹ năng Đọc – chế độ Trắc nghiệm { #toc-3-3-24 }
+
+??? book "Luyện tập Kỹ năng Đọc – chế độ Trắc nghiệm"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập Kỹ năng Đọc – chế độ Trắc nghiệm |
+    | **Mô tả** | Học viên luyện tập kỹ năng đọc hiểu bài đọc thông qua chế độ Trắc nghiệm. Mỗi câu hỏi có nhiều lựa chọn, học viên chọn 1 đáp án đúng. Học viên có thể xem danh sách các câu hỏi để chọn câu làm tiếp. Sau khi làm xong toàn bộ câu hỏi và **Nộp bài** → hệ thống mới hiển thị kết quả và giải thích từng câu. |
+    | **Giao diện liên quan** | - Tab **Bài học** → chọn buổi học → tab **Kỹ năng Đọc**<br> - Danh sách bài đọc → màn hình chi tiết bài đọc<br> - Nhấn **Luyện tập** → chọn chế độ **Trắc nghiệm**<br> - Màn hình câu hỏi trắc nghiệm<br> - Danh sách các câu hỏi (dạng số thứ tự 1 / 2 / 3 / ...), cho phép chọn câu bất kỳ<br> - Màn hình hiển thị kết quả sau khi Nộp bài |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình danh sách khóa học → chọn 1 khóa học cụ thể<br>3. Vào tab **Bài học** → chọn buổi học<br>4. Chọn tab **Kỹ năng Đọc**<br>5. Chọn bài đọc → vào màn hình chi tiết bài đọc<br>6. Nhấn **Luyện tập** → chọn chế độ **Trắc nghiệm**<br>7. Lần lượt trả lời từng câu hỏi:<br>&emsp;– Đọc câu hỏi + các lựa chọn đáp án<br>&emsp;– Chọn 1 đáp án đúng<br>8. Có thể mở **danh sách các câu hỏi** (dạng số thứ tự 1/2/3/...) → chọn sang câu bất kỳ để làm tiếp<br>9. Sau khi trả lời xong tất cả câu → nhấn **Nộp bài**<br>10. Sau khi Nộp bài → hệ thống hiển thị kết quả:<br>&emsp;– Hiển thị đúng/sai từng câu<br>&emsp;– Hiển thị block **Giải thích** cho từng câu<br>11. Học viên có thể duyệt lại từng câu để xem giải thích |
+    | **Chi tiết hiển thị** | - Câu hỏi dạng **nhiều lựa chọn** → chọn 1 đáp án đúng<br> - Màn hình mỗi câu hiển thị:<br>&emsp;• Câu hỏi (text tiếng Trung hoặc dịch nghĩa)<br>&emsp;• Danh sách các đáp án dạng button<br> - **Trước khi Nộp bài:**<br>&emsp;• Học viên chỉ có thể chọn đáp án<br>&emsp;• Không hiển thị Giải thích<br> - **Danh sách câu hỏi:**<br>&emsp;• Mở được menu danh sách các câu hỏi (dạng số thứ tự 1 / 2 / 3 / ...)<br>&emsp;• Có thể chọn sang câu bất kỳ để làm tiếp<br> - **Sau khi Nộp bài:**<br>&emsp;• Hiển thị kết quả đúng/sai từng câu (màu xanh/đỏ)<br>&emsp;• Hiển thị block **Giải thích** bên dưới mỗi câu<br> - Thanh phân trang + điều hướng dưới cùng có nút **Quay lại**, **Tiếp theo**, **Nộp bài** (ở câu cuối) |
+    | **Kết quả hiển thị** | - Học viên làm xong toàn bộ câu hỏi → nhấn **Nộp bài** → mới hiển thị kết quả<br> - Mỗi câu sau khi Nộp bài sẽ hiển thị **Đúng/Sai** + **Giải thích** rõ ràng<br> - Có thể duyệt lại từng câu để xem lại kết quả + giải thích<br> - Danh sách câu hỏi (menu số thứ tự) hoạt động chính xác<br> - Không có nút **Đã thuộc** / **Lưu** trong chế độ Trắc nghiệm |
+    | **Trường hợp không có dữ liệu** | - Nếu bài đọc không có câu hỏi → hiển thị **Không có nội dung luyện tập** |
+
 
 ### 3.4 Chức năng làm bài kiểm tra { #toc-3-4}
 
@@ -657,3 +671,169 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
     | **Chi tiết hiển thị** | - **Popup chọn hình thức luyện tập:**<br>&emsp;• **FlashCard** (chế độ đang mô tả)<br><br> - **Popup chọn kiến thức luyện tập:**<br>&emsp;• Từ vựng<br>&emsp;• Ngữ pháp<br>&emsp;• Cả hai<br><br> - **Popup chọn nội dung cụ thể:**<br>&emsp;• **Chọn tất cả** hoặc **Chưa thuộc**<br>&emsp;• Danh sách các item để chọn<br>&emsp;• **Ràng buộc tối thiểu 5 nội dung mỗi loại** → nếu không đủ → cảnh báo + không cho qua bước tiếp theo<br><br> - **Flashcard:**<br>&emsp;• **Từ vựng – có 3 loại Flashcard:**<br>&emsp;&emsp;– **Loại 1:** Mặt trước: chữ Hán, phiên âm, nghĩa, ví dụ; mặt sau: dịch nghĩa ví dụ<br>&emsp;&emsp;– **Loại 2:** Mặt trước: hình ảnh + nghĩa tiếng Việt; mặt sau: chữ Hán + phiên âm + ví dụ<br>&emsp;&emsp;– **Loại 3:** Mặt trước: ví dụ tiếng Trung; mặt sau: nghĩa dịch, từ trọng tâm, hình ảnh, phiên âm<br><br>&emsp;• **Ngữ pháp – có 3 loại Flashcard:**<br>&emsp;&emsp;– **Loại 1:** Mặt trước: tiêu đề ngữ pháp; mặt sau: ví dụ<br>&emsp;&emsp;– **Loại 2:** Mặt trước: tiêu đề + ví dụ; mặt sau: lặp lại ví dụ<br>&emsp;&emsp;– **Loại 3:** Mặt trước: ví dụ; mặt sau: tiêu đề + dịch nghĩa<br><br> - **Tùy chọn:**<br>&emsp;• **Xem tất cả**: hiển thị toàn bộ FlashCard ở dạng danh sách<br>&emsp;• **Xáo trộn**: xáo trộn thứ tự FlashCard<br>&emsp;• **Tự chạy**: nút trên màn hình có vòng lặp trạng thái:<br>&emsp;&emsp;→ **Nhanh** → **Tự chạy** (thủ công, học viên tự bấm qua card) → **Chậm** → **Bình thường** → **Nhanh** → ...<br>&emsp;• Khi đang ở trạng thái nào, label trên nút hiển thị **tên trạng thái đó** (ví dụ: Nhanh / Chậm / Bình thường / Tự chạy)<br><br> - **Tương tác:**<br>&emsp;• Bấm 1 lần vào thẻ để lật mặt<br>&emsp;• Nhấn biểu tượng loa để nghe phát âm (với từ vựng)<br>&emsp;• Nhấn **Đã thuộc** / **Cần học lại** |
     | **Kết quả hiển thị** | - Flashcard hiển thị đúng loại đã chọn<br> - Tùy chọn hoạt động chính xác theo thiết lập (bao gồm vòng lặp trạng thái **Tự chạy**)<br> - Có thể nghe phát âm với Từ vựng<br> - **Khi học viên chọn Đã thuộc → cập nhật vào % tiến độ Từ vựng / Ngữ pháp trong Thư viện học tập**<br> - Các lựa chọn **Đã thuộc** / **Cần học lại** được ghi nhận và đồng bộ trạng thái giữa các lần học |
     | **Trường hợp không có dữ liệu** | - Nếu không có nội dung để luyện tập → hiển thị **Không có nội dung để luyện tập** |
+
+
+#### 3.5.15 Chức năng Kỹ năng Nghe trong Thư viện học tập { #toc-3-5-15 }
+
+??? book "Kỹ năng Nghe trong Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Kỹ năng Nghe trong Thư viện học tập |
+    | **Mô tả** | Học viên luyện tập kỹ năng nghe thông qua các đoạn hội thoại có kèm audio trong Thư viện học tập. Giao diện cho phép tùy chỉnh hiển thị và tốc độ phát, đồng thời có thể đánh dấu **Đã thuộc** hoặc **Lưu** để học lại sau. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** trong Thư viện học tập → mục **Nghe**<br> - Danh sách bài nghe<br> - Màn hình chi tiết bài nghe (audio + phụ đề)<br> - Popup tùy chọn tốc độ<br> - Nút đánh dấu **Đã thuộc** và **Lưu** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → nhấn vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Tại mục **Nghe** → chọn bài nghe từ danh sách<br>5. Vào màn hình chi tiết bài nghe:<br>&emsp;– Nhấn nút phát audio<br>&emsp;– Có thể bật/tắt **Phiên âm**, **Dịch nghĩa**, **Phụ đề**<br>&emsp;– Tùy chọn tốc độ phát (**Chậm / Bình thường / Nhanh**)<br>&emsp;– Đánh dấu **Đã thuộc** hoặc **Lưu** bài nếu muốn<br>6. Nhấn nút **Luyện tập** để chọn chế độ luyện tập nếu có |
+    | **Chi tiết hiển thị** | - Danh sách bài nghe gồm tiêu đề tiếng Trung + dịch nghĩa<br> - Mỗi bài có icon tai nghe<br> - Màn hình chi tiết bài nghe:<br>&emsp;• Thanh phát audio (play, thời gian)<br>&emsp;• Các block thoại: Phiên âm – Tiếng Trung – Dịch nghĩa<br>&emsp;• Block thoại highlight theo đoạn audio đang phát<br>&emsp;• Người dùng có thể nhấn block → seek đến đoạn đó<br>&emsp;• Các nút: **Phiên âm**, **Dịch nghĩa**, **Phụ đề**, **Tốc độ**<br>&emsp;• Nút **Đã thuộc** và **Lưu** ở góc phải trên |
+    | **Kết quả hiển thị** | - Audio phát đúng nội dung<br> - Block thoại highlight chính xác theo audio<br> - Seek block hoạt động đúng<br> - Hiển thị đầy đủ thông tin thoại<br> - **Khi học viên nhấn Đã thuộc → cập nhật vào % tiến độ Kỹ năng Nghe trong Thư viện học tập**<br> - Cập nhật trạng thái **Lưu** cho từng bài nghe |
+    | **Trường hợp không có dữ liệu** | - Nếu không có bài nghe → hiển thị **Không có bài luyện nghe nào** |
+
+
+#### 3.5.16 Chức năng Luyện tập Kỹ năng Nghe trong Thư viện học tập – chế độ Học { #toc-3-5-16 }
+
+??? book "Luyện tập Kỹ năng Nghe trong Thư viện học tập – chế độ Học"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập Kỹ năng Nghe trong Thư viện học tập – chế độ Học |
+    | **Mô tả** | Học viên chọn chế độ **Học** trong Luyện tập kỹ năng nghe từ Thư viện học tập. Hệ thống lần lượt hiển thị các phần nội dung giúp học viên ghi nhớ và rèn luyện kỹ năng nghe: nghe – hiểu – ghi nhớ – vận dụng. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** → mục **Nghe** → chọn bài nghe → màn hình chi tiết → nhấn **Luyện tập** → chọn chế độ **Học**<br> - Màn hình Học qua FlashCard<br> - Màn hình Ghi nhớ nội dung<br> - Màn hình Câu hỏi xếp câu<br> - Màn hình hoàn thành phần học |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Chọn bài nghe → vào màn hình chi tiết<br>5. Nhấn **Luyện tập** → chọn chế độ **Học**<br>6. Thực hiện các phần học:<br>&emsp;• **Phần 1:** Học qua FlashCard → auto phát âm lần đầu khi hiển thị<br>&emsp;• **Phần 2:** Ghi nhớ nội dung → hiển thị câu + nghĩa → học viên nhấn **Tiếp tục**<br>&emsp;• **Phần 3:** Câu hỏi **Sắp xếp thành câu có nghĩa** → kéo thả / chọn các từ → kiểm tra kết quả<br>7. Hoàn thành toàn bộ bài → hiển thị màn hình chúc mừng |
+    | **Chi tiết hiển thị** | - Popup chọn chế độ **Học**<br> - Phần FlashCard tự phát âm lần đầu<br> - Lần lượt qua các bước:<br>&emsp;• Xem nghĩa → Ghi nhớ → Sắp xếp câu<br> - **Sắp xếp câu** là bài tập, không phải FlashCard<br> - Không có **Đã thuộc** / **Lưu** trong chế độ Học |
+    | **Kết quả hiển thị** | - Hiển thị lần lượt 3 phần học<br> - Không có nút **Đã thuộc** / **Lưu** trong toàn bộ chế độ Học<br> - Kết thúc hiển thị màn hình chúc mừng hoàn thành phần học |
+    | **Trường hợp không có dữ liệu** | - Nếu bài nghe không có nội dung → hiển thị **Chưa có nội dung để luyện tập** |
+
+
+#### 3.5.17 Chức năng Luyện tập Kỹ năng Nghe trong Thư viện học tập – chế độ FlashCard { #toc-3-5-17 }
+
+??? book "Luyện tập Kỹ năng Nghe trong Thư viện học tập – chế độ FlashCard"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập Kỹ năng Nghe trong Thư viện học tập – chế độ FlashCard |
+    | **Mô tả** | Học viên luyện tập kỹ năng nghe thông qua FlashCard. Có 3 loại FlashCard. Mỗi FlashCard tự phát âm lần đầu khi hiển thị. Học viên có thể sử dụng nút **Tự chạy** để điều chỉnh cách chuyển card theo vòng lặp **Nhanh → Tự chạy → Chậm → Bình thường → Nhanh**. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** → mục **Nghe** → chọn bài nghe → màn hình chi tiết → nhấn **Luyện tập** → chọn chế độ **FlashCard**<br> - Màn hình FlashCard từng câu<br> - Nút **Tự chạy** hiển thị trạng thái hiện tại |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Chọn bài nghe → vào màn hình chi tiết<br>5. Nhấn **Luyện tập** → chọn chế độ **FlashCard**<br>6. FlashCard auto phát âm lần đầu<br>7. Học viên có thể sử dụng các tùy chọn:<br>&emsp;– **Xem tất cả**<br>&emsp;– **Xáo trộn**<br>&emsp;– **Tự chạy**: vòng lặp trạng thái<br>&emsp;&emsp;→ Nhanh → Tự chạy → Chậm → Bình thường → Nhanh → ...<br>&emsp;– Label nút hiển thị đúng trạng thái hiện tại<br>8. Điều hướng FlashCard bằng nút / vuốt ngang<br>9. Hoàn thành bài hoặc thoát |
+    | **Chi tiết hiển thị** | - FlashCard 3 loại:<br>&emsp;• **Loại 1:** Mặt trước: icon phát âm + câu; mặt sau: câu + dịch nghĩa<br>&emsp;• **Loại 2:** Mặt trước: câu + icon phát âm; mặt sau: dịch nghĩa + icon phát âm<br>&emsp;• **Loại 3:** Mặt trước: câu + icon phát âm; mặt sau: dịch nghĩa<br> - Nút **Đã thuộc** / **Chưa thuộc** (không ảnh hưởng % tiến độ)<br> - Thanh phân trang hiện số card<br> - Nút **Tùy chọn**: Xem tất cả, Xáo trộn, Tự chạy |
+    | **Kết quả hiển thị** | - FlashCard auto phát âm<br> - Đánh dấu **Đã thuộc** / **Chưa thuộc**<br> - **Tự chạy** hoạt động đúng vòng lặp<br> - Toàn bộ tùy chọn hoạt động đúng yêu cầu |
+    | **Trường hợp không có dữ liệu** | - Nếu không có FlashCard → hiển thị **Không có nội dung để luyện tập** |
+
+#### 3.5.18 Chức năng Kỹ năng Đọc trong Thư viện học tập { #toc-3-5-18 }
+
+??? book "Kỹ năng Đọc trong Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Kỹ năng Đọc trong Thư viện học tập |
+    | **Mô tả** | Học viên luyện tập kỹ năng đọc qua các bài đọc tiếng Trung đã lưu trong Thư viện học tập. Giao diện cho phép tùy chỉnh chế độ dịch, cỡ chữ, đánh dấu **Đã thuộc**, **Lưu**, và tra nghĩa từ vựng được highlight sẵn trong bài đọc. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** trong Thư viện học tập → mục **Đọc**<br> - Danh sách bài đọc<br> - Màn hình chi tiết bài đọc<br> - Popup **Tùy chỉnh** (chọn chế độ dịch + chỉnh cỡ chữ)<br> - Popup tra nghĩa khi nhấn từ highlight<br> - Nút **Đã thuộc**, **Lưu** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → nhấn vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Tại mục **Đọc** → chọn bài đọc từ danh sách<br>5. Vào màn hình chi tiết bài đọc:<br>&emsp;– Xem bài đọc, từ highlight có thể nhấn để tra nghĩa<br>&emsp;– Mở popup **Tùy chỉnh** để:<br>&emsp;&emsp;• Chọn chế độ dịch (**Đọc hiểu** / **Dịch câu** / **Dịch từ**)<br>&emsp;&emsp;• Điều chỉnh cỡ chữ<br>&emsp;– Đánh dấu **Đã thuộc** → cập nhật vào % tiến độ Kỹ năng Đọc<br>&emsp;– Nhấn **Lưu** để lưu bài đọc vào Thư viện<br>6. Nhấn **Luyện tập** để vào phần luyện tập nếu có |
+    | **Chi tiết hiển thị** | - Danh sách bài đọc gồm tiêu đề tiếng Trung + dịch nghĩa<br> - Mỗi bài có icon kỹ năng đọc<br> - Màn hình chi tiết bài đọc:<br>&emsp;• Nội dung bài đọc có từ được highlight sẵn<br>&emsp;• Popup tra nghĩa (nghĩa, phiên âm, audio, ảnh, ví dụ)<br>&emsp;• Nút **Đã thuộc**, **Lưu** ở góc phải trên<br>&emsp;• Nút **Luyện tập** ở dưới cùng<br>&emsp;• Nút **Cài đặt** mở popup **Tùy chỉnh**:<br>&emsp;&emsp;◦ **Chế độ dịch**:<br>&emsp;&emsp;&emsp;– **Đọc hiểu**: không dịch<br>&emsp;&emsp;&emsp;– **Dịch câu**: bật/tắt dịch từng câu<br>&emsp;&emsp;&emsp;– **Dịch từ**: từ highlight, nhấn vào để tra nghĩa<br>&emsp;&emsp;◦ **Cỡ chữ**: chỉnh cỡ chữ bài đọc |
+    | **Kết quả hiển thị** | - Nội dung bài đọc hiển thị đúng<br> - Popup tra nghĩa hoạt động chính xác<br> - Chế độ dịch và cỡ chữ thay đổi theo lựa chọn<br> - **Khi nhấn Đã thuộc → cập nhật vào % tiến độ Kỹ năng Đọc trong Thư viện học tập**<br> - Bài đọc được lưu khi chọn **Lưu** |
+    | **Trường hợp không có dữ liệu** | - Không có bài đọc → hiển thị **Không có bài luyện đọc nào** |
+
+#### 3.5.18 Chức năng Kỹ năng Đọc trong Thư viện học tập { #toc-3-5-18 }
+
+??? book "Kỹ năng Đọc trong Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Kỹ năng Đọc trong Thư viện học tập |
+    | **Mô tả** | Học viên luyện tập kỹ năng đọc qua các bài đọc tiếng Trung đã lưu trong Thư viện học tập. Giao diện cho phép tùy chỉnh chế độ dịch, cỡ chữ, đánh dấu **Đã thuộc**, **Lưu**, và tra nghĩa từ vựng được highlight sẵn trong bài đọc. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** trong Thư viện học tập → mục **Đọc**<br> - Danh sách bài đọc<br> - Màn hình chi tiết bài đọc<br> - Popup **Tùy chỉnh** (chọn chế độ dịch + chỉnh cỡ chữ)<br> - Popup tra nghĩa khi nhấn từ highlight<br> - Nút **Đã thuộc**, **Lưu** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → nhấn vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Tại mục **Đọc** → chọn bài đọc từ danh sách<br>5. Vào màn hình chi tiết bài đọc:<br>&emsp;– Xem bài đọc, từ highlight có thể nhấn để tra nghĩa<br>&emsp;– Mở popup **Tùy chỉnh** để:<br>&emsp;&emsp;• Chọn chế độ dịch (**Đọc hiểu** / **Dịch câu** / **Dịch từ**)<br>&emsp;&emsp;• Điều chỉnh cỡ chữ<br>&emsp;– Đánh dấu **Đã thuộc** → cập nhật vào % tiến độ Kỹ năng Đọc<br>&emsp;– Nhấn **Lưu** để lưu bài đọc vào Thư viện<br>6. Nhấn **Luyện tập** để vào phần luyện tập nếu có |
+    | **Chi tiết hiển thị** | - Danh sách bài đọc gồm tiêu đề tiếng Trung + dịch nghĩa<br> - Mỗi bài có icon kỹ năng đọc<br> - Màn hình chi tiết bài đọc:<br>&emsp;• Nội dung bài đọc có từ được highlight sẵn<br>&emsp;• Popup tra nghĩa (nghĩa, phiên âm, audio, ảnh, ví dụ)<br>&emsp;• Nút **Đã thuộc**, **Lưu** ở góc phải trên<br>&emsp;• Nút **Luyện tập** ở dưới cùng<br>&emsp;• Nút **Cài đặt** mở popup **Tùy chỉnh**:<br>&emsp;&emsp;◦ **Chế độ dịch**:<br>&emsp;&emsp;&emsp;– **Đọc hiểu**: không dịch<br>&emsp;&emsp;&emsp;– **Dịch câu**: bật/tắt dịch từng câu<br>&emsp;&emsp;&emsp;– **Dịch từ**: từ highlight, nhấn vào để tra nghĩa<br>&emsp;&emsp;◦ **Cỡ chữ**: chỉnh cỡ chữ bài đọc |
+    | **Kết quả hiển thị** | - Nội dung bài đọc hiển thị đúng<br> - Popup tra nghĩa hoạt động chính xác<br> - Chế độ dịch và cỡ chữ thay đổi theo lựa chọn<br> - **Khi nhấn Đã thuộc → cập nhật vào % tiến độ Kỹ năng Đọc trong Thư viện học tập**<br> - Bài đọc được lưu khi chọn **Lưu** |
+    | **Trường hợp không có dữ liệu** | - Không có bài đọc → hiển thị **Không có bài luyện đọc nào** |
+
+
+#### 3.5.19 Chức năng Luyện tập Kỹ năng Đọc trong Thư viện học tập – chế độ Học { #toc-3-5-19 }
+
+??? book "Luyện tập Kỹ năng Đọc trong Thư viện học tập – chế độ Học"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập Kỹ năng Đọc trong Thư viện học tập – chế độ Học |
+    | **Mô tả** | Học viên luyện tập đọc hiểu nội dung bài đọc trong Thư viện học tập thông qua chế độ học với Flashcard và câu hỏi **Sắp xếp câu có nghĩa**. Các từ được highlight có thể nhấn để tra nghĩa. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** → mục **Đọc** → chọn bài đọc → màn hình chi tiết → nhấn **Luyện tập** → chọn chế độ **Học**<br> - Màn hình Học qua Flashcard<br> - Popup **Tiếp tục** (nội dung Flashcard + dịch nghĩa)<br> - Màn hình **Sắp xếp thành câu có nghĩa** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Chọn bài đọc → vào màn hình chi tiết<br>5. Nhấn **Luyện tập** → chọn chế độ **Học**<br>6. Luồng luyện tập:<br>&emsp;– **Flashcard:** hiển thị mặt trước → nhấn **Tiếp tục** để lật mặt sau<br>&emsp;– Mặt sau: hiển thị nội dung còn lại → nhấn **Hoàn thành** → hiện popup **Tiếp tục** → sang từ tiếp theo<br>&emsp;– **Sắp xếp thành câu có nghĩa:** hiển thị dịch nghĩa câu → học viên nhấn vào từ tiếng Trung để sắp xếp thành câu đúng<br>7. Sau khi hoàn thành → màn hình chúc mừng hoàn thành phần học |
+    | **Chi tiết hiển thị** | - Các từ được highlight (màu cam) → nhấn để tra nghĩa<br> - Flashcard:<br>&emsp;• Một mặt hiển thị câu dịch hoặc câu tiếng Trung<br>&emsp;• Nhấn **Tiếp tục** để lật mặt sau<br>&emsp;• Nhấn **Hoàn thành** → popup **Tiếp tục** → sang từ tiếp theo<br> - **Sắp xếp thành câu có nghĩa:**<br>&emsp;• Hiển thị câu dịch nghĩa<br>&emsp;• Các từ tiếng Trung ngẫu nhiên bên dưới → nhấn từ để sắp xếp vào ô phía trên<br> - Thanh tiến độ hiển thị % hoàn thành |
+    | **Kết quả hiển thị** | - Flashcard hiển thị đúng nội dung bài đọc đã chọn<br> - Popup tra nghĩa từ highlight hoạt động chính xác<br> - Câu sắp xếp đúng → cập nhật tiến độ<br> - Hoàn thành bài luyện tập → hiển thị màn hình chúc mừng |
+    | **Trường hợp không có dữ liệu** | - Nếu bài đọc không có nội dung → hiển thị **Không có nội dung luyện tập** |
+
+
+#### 3.5.20 Chức năng Luyện tập Kỹ năng Đọc trong Thư viện học tập – chế độ Trắc nghiệm { #toc-3-5-20 }
+
+??? book "Luyện tập Kỹ năng Đọc trong Thư viện học tập – chế độ Trắc nghiệm"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập Kỹ năng Đọc trong Thư viện học tập – chế độ Trắc nghiệm |
+    | **Mô tả** | Học viên luyện tập kỹ năng đọc hiểu bài đọc thông qua chế độ Trắc nghiệm. Mỗi câu hỏi có nhiều lựa chọn, học viên chọn 1 đáp án đúng. Học viên có thể xem danh sách các câu hỏi để chọn câu làm tiếp. Sau khi làm xong toàn bộ câu hỏi và **Nộp bài** → hệ thống mới hiển thị kết quả và giải thích từng câu. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** → mục **Đọc** → chọn bài đọc → màn hình chi tiết → nhấn **Luyện tập** → chọn chế độ **Trắc nghiệm**<br> - Màn hình câu hỏi trắc nghiệm<br> - Danh sách các câu hỏi (dạng số thứ tự 1 / 2 / 3 / ...), cho phép chọn câu bất kỳ<br> - Màn hình hiển thị kết quả sau khi Nộp bài |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Chọn bài đọc → vào màn hình chi tiết<br>5. Nhấn **Luyện tập** → chọn chế độ **Trắc nghiệm**<br>6. Lần lượt trả lời từng câu hỏi:<br>&emsp;– Đọc câu hỏi + các lựa chọn đáp án<br>&emsp;– Chọn 1 đáp án đúng<br>7. Có thể mở **danh sách các câu hỏi** (dạng số thứ tự 1/2/3/...) → chọn sang câu bất kỳ để làm tiếp<br>8. Sau khi trả lời xong tất cả câu → nhấn **Nộp bài**<br>9. Sau khi Nộp bài → hệ thống hiển thị kết quả:<br>&emsp;– Hiển thị đúng/sai từng câu<br>&emsp;– Hiển thị block **Giải thích** cho từng câu<br>10. Học viên có thể duyệt lại từng câu để xem giải thích |
+    | **Chi tiết hiển thị** | - Câu hỏi dạng **nhiều lựa chọn** → chọn 1 đáp án đúng<br> - Màn hình mỗi câu hiển thị:<br>&emsp;• Câu hỏi (text tiếng Trung hoặc dịch nghĩa)<br>&emsp;• Danh sách các đáp án dạng button<br> - **Trước khi Nộp bài:**<br>&emsp;• Học viên chỉ có thể chọn đáp án<br>&emsp;• Không hiển thị Giải thích<br> - **Danh sách câu hỏi:**<br>&emsp;• Mở được menu danh sách các câu hỏi (dạng số thứ tự 1 / 2 / 3 / ...)<br>&emsp;• Có thể chọn sang câu bất kỳ để làm tiếp<br> - **Sau khi Nộp bài:**<br>&emsp;• Hiển thị kết quả đúng/sai từng câu (màu xanh/đỏ)<br>&emsp;• Hiển thị block **Giải thích** bên dưới mỗi câu<br> - Thanh phân trang + điều hướng dưới cùng có nút **Quay lại**, **Tiếp theo**, **Nộp bài** (ở câu cuối) |
+    | **Kết quả hiển thị** | - Học viên làm xong toàn bộ câu hỏi → nhấn **Nộp bài** → mới hiển thị kết quả<br> - Mỗi câu sau khi Nộp bài sẽ hiển thị **Đúng/Sai** + **Giải thích** rõ ràng<br> - Có thể duyệt lại từng câu để xem lại kết quả + giải thích<br> - Danh sách câu hỏi (menu số thứ tự) hoạt động chính xác<br> - Không có nút **Đã thuộc** / **Lưu** trong chế độ Trắc nghiệm |
+    | **Trường hợp không có dữ liệu** | - Nếu bài đọc không có câu hỏi → hiển thị **Không có nội dung luyện tập** |
+
+
+#### 3.5.21 Chức năng Duyệt Kỹ năng trong Thư viện học tập { #toc-3-5-21 }
+
+??? book "Duyệt Kỹ năng trong Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Duyệt Kỹ năng trong Thư viện học tập |
+    | **Mô tả** | Chức năng cho phép học viên duyệt lại nội dung đã lưu trong Thư viện học tập theo dạng FlashCard. Học viên có thể chọn Duyệt **Tất cả**, hoặc chỉ Duyệt **Kỹ năng Đọc** hoặc **Kỹ năng Nghe**. Duyệt các nội dung này giúp học viên ôn tập lại mà không làm thay đổi % tiến độ kỹ năng. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** → nút **Duyệt**<br> - Popup chọn nội dung Duyệt (**Tất cả / Đọc / Nghe**)<br> - Màn hình FlashCard Duyệt nội dung<br> - Màn hình **Hoàn thành Duyệt** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Nhấn nút **Duyệt**<br>5. Popup chọn nội dung cần Duyệt:<br>&emsp;– **Duyệt tất cả**<br>&emsp;– **Đọc**<br>&emsp;– **Nghe**<br>6. Nhấn **Duyệt** → vào màn hình FlashCard Duyệt<br>7. Lần lượt Duyệt các FlashCard:<br>&emsp;– Nếu là **Đọc**: FlashCard hiển thị câu tiếng Trung + dịch nghĩa<br>&emsp;– Nếu là **Nghe**: FlashCard tự động phát âm + hiển thị câu + điều khiển phát âm (Pause / Play)<br>8. Học viên nhấn **Đã thuộc** hoặc **Cần học lại** cho từng card<br>9. Sau khi Duyệt hết → hiển thị **Màn hình Hoàn thành Duyệt** |
+    | **Chi tiết hiển thị** | - **Popup chọn nội dung Duyệt**:<br>&emsp;• Duyệt tất cả<br>&emsp;• Đọc<br>&emsp;• Nghe<br> - Màn hình FlashCard:<br>&emsp;• Thanh tiến độ session Duyệt<br>&emsp;• Số thứ tự card (VD: 3/38)<br>&emsp;• **FlashCard Đọc**:<br>&emsp;&emsp;– Hiển thị câu tiếng Trung + dịch nghĩa<br>&emsp;• **FlashCard Nghe**:<br>&emsp;&emsp;– Hiển thị câu tiếng Trung<br>&emsp;&emsp;– Auto phát âm khi hiển thị card<br>&emsp;&emsp;– Có nút **Pause / Play** để điều khiển phát âm<br> - Nút **Đã thuộc** / **Cần học lại** hiển thị rõ dưới mỗi card<br> - Nút **Quay lại** ở góc phải trên cùng |
+    | **Kết quả hiển thị** | - FlashCard hiển thị đúng nội dung theo loại Kỹ năng đã chọn<br> - FlashCard Nghe auto phát âm + có điều khiển<br> - Học viên nhấn **Đã thuộc** / **Cần học lại** → tự đánh giá trong session Duyệt<br> - **Hành động Duyệt không cập nhật vào % tiến độ Kỹ năng Đọc / Nghe**<br> - Thanh tiến độ hiển thị % duyệt của session Duyệt<br> - **Sau khi Duyệt hết** → hiển thị **Màn hình Hoàn thành Duyệt**:<br>&emsp;• Cột trái: **Đã thuộc** → số lượng → màu xanh<br>&emsp;• Cột phải: **Cần học lại** → số lượng → màu đỏ<br>&emsp;• Nút **Duyệt lại** để lặp lại session Duyệt |
+    | **Trường hợp không có dữ liệu** | - Nếu không có nội dung để Duyệt → hiển thị **Không có nội dung để duyệt** |
+
+#### 3.5.22 Chức năng Luyện tập Kỹ năng trong Thư viện học tập { #toc-3-5-22 }
+
+??? book "Luyện tập Kỹ năng trong Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập Kỹ năng trong Thư viện học tập |
+    | **Mô tả** | Học viên luyện tập kỹ năng **Nghe** / **Đọc** trong Thư viện học tập thông qua 2 loại card: **FlashCard** và **Ghi nhớ nội dung**. Mỗi nội dung luyện tập gồm 3 bước: học qua FlashCard → Ghi nhớ nội dung → làm bài tập **Sắp xếp từ**. Học viên phải lần lượt học và làm đúng bài tập thì mới được tiếp tục. |
+    | **Giao diện liên quan** | - Tab **Kỹ năng** → nút **Luyện tập**<br> - Popup chọn **kỹ năng luyện tập** (Nghe / Đọc)<br> - Popup chọn **kiến thức luyện tập** (Chọn tất cả / Chưa thuộc / từng nội dung)<br> - Màn hình **FlashCard**<br> - Màn hình **Ghi nhớ nội dung**<br> - Màn hình **Sắp xếp thành câu có nghĩa** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Vào tab **Kỹ năng**<br>4. Nhấn nút **Luyện tập**<br>5. Popup chọn **kỹ năng luyện tập**:<br>&emsp;– Nghe<br>&emsp;– Đọc<br>6. Chọn xong kỹ năng → popup chọn **kiến thức luyện tập**:<br>&emsp;– Chọn tất cả<br>&emsp;– Chưa thuộc<br>&emsp;– Chọn từng nội dung<br>7. Nhấn **Bắt đầu** để vào luyện tập<br>8. Luyện tập từng nội dung theo 3 bước:<br>&emsp;• **Bước 1: FlashCard**<br>&emsp;&emsp;– Mặt trước: hiển thị nội dung (text / audio)<br>&emsp;&emsp;– Nhấn **Tiếp tục** → lật mặt sau<br>&emsp;&emsp;– Mặt sau: hiển thị nội dung còn lại<br>&emsp;&emsp;– Nhấn **Hoàn thành** → hiện popup câu + dịch nghĩa → nhấn **Tiếp tục** → sang Bước 2<br>&emsp;• **Bước 2: Ghi nhớ nội dung card**<br>&emsp;&emsp;– Hiển thị card **Ghi nhớ nội dung**:<br>&emsp;&emsp;&emsp;• Đọc: hiển thị câu dịch nghĩa<br>&emsp;&emsp;&emsp;• Nghe: auto phát audio + hiển thị text / dịch<br>&emsp;&emsp;– Nhấn **Tiếp tục** → sang Bước 3<br>&emsp;• **Bước 3: Sắp xếp thành câu có nghĩa**<br>&emsp;&emsp;– Hiển thị dịch nghĩa câu<br>&emsp;&emsp;– Các từ tiếng Trung → học viên nhấn để sắp xếp vào ô phía trên<br>&emsp;&emsp;– Nhấn **Kiểm tra** để kiểm tra kết quả<br>&emsp;&emsp;– Nếu đúng → tiếp tục nội dung tiếp theo<br>&emsp;&emsp;– Nếu sai → thử lại |
+    | **Chi tiết hiển thị** | - Popup chọn **kỹ năng Luyện tập**:<br>&emsp;• Nghe<br>&emsp;• Đọc<br> - Popup chọn **kiến thức Luyện tập**:<br>&emsp;• Chọn tất cả<br>&emsp;• Chưa thuộc<br>&emsp;• Chọn từng nội dung<br> - FlashCard:<br>&emsp;• Mặt trước: nội dung (text / audio)<br>&emsp;• Mặt sau: nội dung còn lại<br>&emsp;• **Tiếp tục** → lật mặt sau<br>&emsp;• **Hoàn thành** → hiển thị popup câu + dịch nghĩa → nhấn **Tiếp tục** sang Ghi nhớ nội dung<br> - **Ghi nhớ nội dung**:<br>&emsp;• Đọc: hiển thị câu dịch nghĩa<br>&emsp;• Nghe: auto phát âm thanh + hiển thị text / dịch<br>&emsp;• Nhấn **Tiếp tục** sang Sắp xếp từ<br> - **Sắp xếp thành câu có nghĩa**:<br>&emsp;• Hiển thị dịch nghĩa câu<br>&emsp;• Các từ tiếng Trung → nhấn vào từ để sắp xếp<br>&emsp;• Nút **Kiểm tra** → nếu đúng → tiếp tục nội dung tiếp theo<br>&emsp;• Nếu sai → thử lại |
+    | **Kết quả hiển thị** | - Lần lượt học qua **FlashCard → Ghi nhớ nội dung → Sắp xếp từ** cho từng nội dung<br> - Học viên phải làm đúng **Sắp xếp từ** mới được tiếp tục<br> - Đảm bảo học viên rèn luyện sâu từng nội dung đã chọn |
+    | **Trường hợp không có dữ liệu** | - Nếu không có nội dung → hiển thị **Không có nội dung để luyện tập** |
+
+
+#### 3.5.23 Chức năng Thống kê Tiến trình trong Thư viện học tập { #toc-3-5-23 }
+
+??? book "Thống kê Tiến trình trong Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Thống kê Tiến trình trong Thư viện học tập |
+    | **Mô tả** | Chức năng giúp học viên theo dõi tiến trình học tập của bản thân trong Thư viện học tập thông qua các thống kê trực quan: **% Tiến trình tổng**, biểu đồ nội dung hoàn thành, và bảng chi tiết theo từng kỹ năng / kiến thức. |
+    | **Giao diện liên quan** | - Tab **Tiến trình** trong Thư viện học tập<br> - Vòng tròn **% Tiến trình tổng**<br> - Filter chọn **Loại nội dung**:<br>&emsp;• Toàn bộ<br>&emsp;• Kỹ năng<br>&emsp;• Kiến thức<br>&emsp;• Từ vựng<br>&emsp;• Ngữ pháp<br>&emsp;• Đọc<br>&emsp;• Nghe<br> - Filter chọn **Thời gian**:<br>&emsp;• Tuần này<br>&emsp;• Tháng này<br>&emsp;• Toàn bộ<br> - Biểu đồ đường (số nội dung hoàn thành theo ngày)<br> - Các khối chi tiết số nội dung hoàn thành theo từng kỹ năng |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình **Cùng học kiến thức mới** → vào box **Thư viện học tập**<br>3. Chọn tab **Tiến trình**<br>4. Xem vòng tròn **% Tiến trình tổng**:<br>&emsp;• % tiến trình tính trên tổng số nội dung đã học / tổng số nội dung trong Thư viện<br>5. Chọn **Loại nội dung** muốn xem thống kê:<br>&emsp;• Toàn bộ<br>&emsp;• Kỹ năng / Kiến thức / Từ vựng / Ngữ pháp / Đọc / Nghe<br>6. Chọn **Mốc thời gian** muốn xem:<br>&emsp;• Tuần này / Tháng này / Toàn bộ<br>7. Xem biểu đồ tổng quan số nội dung đã hoàn thành:<br>&emsp;• Trục hoành: Ngày<br>&emsp;• Trục tung: Số nội dung<br>8. Dưới biểu đồ, xem các khối chi tiết:<br>&emsp;– Mỗi khối hiển thị tổng số **Nội dung đã hoàn thành** theo mốc thời gian<br>&emsp;– Có thể expand khối để xem chi tiết theo từng kỹ năng:<br>&emsp;&emsp;• Từ vựng<br>&emsp;&emsp;• Ngữ pháp<br>&emsp;&emsp;• Đọc<br>&emsp;&emsp;• Nghe |
+    | **Chi tiết hiển thị** | - **Vòng tròn % Tiến trình tổng**:<br>&emsp;• Hiển thị % tiến trình học tập tổng (số nội dung đã học / tổng số nội dung trong Thư viện)<br> - **Filter loại nội dung**:<br>&emsp;• Toàn bộ<br>&emsp;• Kỹ năng<br>&emsp;• Kiến thức<br>&emsp;• Từ vựng<br>&emsp;• Ngữ pháp<br>&emsp;• Đọc<br>&emsp;• Nghe<br> - **Filter mốc thời gian**:<br>&emsp;• Tuần này<br>&emsp;• Tháng này<br>&emsp;• Toàn bộ<br> - **Biểu đồ đường**:<br>&emsp;• Trục hoành: Ngày<br>&emsp;• Trục tung: Số nội dung<br>&emsp;• Mỗi điểm thể hiện số nội dung hoàn thành trong ngày tương ứng<br>&emsp;• Nếu không có nội dung → hiển thị **Năm nay bạn chưa học được nội dung gì!!!**<br> - **Khối chi tiết số nội dung đã hoàn thành**:<br>&emsp;• Mỗi khối có tiêu đề: **Hôm nay / Tuần này / Tháng này / Năm nay**<br>&emsp;• Số tổng **Nội dung đã hoàn thành**<br>&emsp;• Expand khối sẽ hiển thị số nội dung theo từng kỹ năng:<br>&emsp;&emsp;– Từ vựng<br>&emsp;&emsp;– Ngữ pháp<br>&emsp;&emsp;– Đọc<br>&emsp;&emsp;– Nghe |
+    | **Kết quả hiển thị** | - Hiển thị vòng tròn % tiến trình tổng chính xác<br> - Biểu đồ hiển thị đúng số nội dung hoàn thành theo ngày, theo mốc thời gian và loại nội dung đã chọn<br> - Các khối chi tiết hiển thị đúng số **Nội dung đã hoàn thành** tổng + chi tiết theo từng kỹ năng<br> - Cho phép học viên theo dõi tiến trình học tập một cách trực quan và chi tiết<br> - Nếu không có dữ liệu → hiển thị thông báo phù hợp (**Năm nay bạn chưa học được nội dung gì!!!**) |
+    | **Trường hợp không có dữ liệu** | - Nếu không có nội dung nào hoàn thành trong mốc thời gian / loại nội dung → hiển thị **Không có nội dung** hoặc thông báo phù hợp |
+
+
+### 3.6 Chức năng cài đặt
+
+#### 3.6.1 Chức năng Chỉnh sửa hồ sơ { #toc-3-6-1 }
+
+??? book "Chỉnh sửa hồ sơ"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Chỉnh sửa hồ sơ |
+    | **Mô tả** | Chức năng cho phép học viên chỉnh sửa thông tin cá nhân của mình trong hồ sơ tài khoản, bao gồm: ảnh đại diện, họ tên, số điện thoại, tỉnh/thành phố. |
+    | **Giao diện liên quan** | - Màn hình **Cài đặt** → chọn **Chỉnh sửa hồ sơ**<br> - Màn hình **Chỉnh sửa hồ sơ** (có nút Lưu thông tin) |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình chính → vào **Cài đặt**<br>3. Chọn **Chỉnh sửa hồ sơ**<br>4. Màn hình hiển thị các trường thông tin:<br>&emsp;– Ảnh đại diện (bấm icon bút để thay ảnh)<br>&emsp;– Họ và tên (editable)<br>&emsp;– Email (không cho phép sửa)<br>&emsp;– Số điện thoại (editable)<br>&emsp;– Tỉnh/Thành phố (editable)<br>5. Học viên chỉnh sửa thông tin mong muốn<br>6. Nhấn **Lưu thông tin** để cập nhật |
+    | **Chi tiết hiển thị** | - **Ảnh đại diện**:<br>&emsp;• Hiển thị ảnh hiện tại → bấm icon bút để mở upload ảnh mới<br> - **Họ và tên**:<br>&emsp;• Có thể chỉnh sửa<br> - **Email**:<br>&emsp;• Hiển thị email hiện tại → không cho sửa<br> - **Số điện thoại**:<br>&emsp;• Có thể chỉnh sửa<br>&emsp;• Bàn phím số khi chỉnh sửa<br> - **Tỉnh/Thành phố**:<br>&emsp;• Có thể chỉnh sửa<br> - **Nút Lưu thông tin**:<br>&emsp;• Sau khi nhấn → lưu lại thông tin mới<br>&emsp;• Nếu có lỗi → hiển thị thông báo lỗi |
+    | **Kết quả hiển thị** | - Thông tin sau khi chỉnh sửa được lưu lại thành công<br> - Màn hình hiển thị thông báo cập nhật thành công |
+    | **Trường hợp không có dữ liệu** | - Nếu chưa có dữ liệu của một trường → hiển thị trống để học viên điền mới |
+
+#### 3.6.2 Chức năng Đổi mật khẩu { #toc-3-6-2 }
+
+??? book "Đổi mật khẩu"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Đổi mật khẩu |
+    | **Mô tả** | Chức năng cho phép học viên thay đổi mật khẩu tài khoản của mình để đảm bảo an toàn bảo mật. |
+    | **Giao diện liên quan** | - Màn hình **Cài đặt** → chọn **Chỉnh sửa hồ sơ** → nút **Đổi mật khẩu**<br> - Màn hình **Đổi mật khẩu** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình chính → vào **Cài đặt**<br>3. Chọn **Chỉnh sửa hồ sơ** → nhấn nút **Đổi mật khẩu**<br>4. Màn hình **Đổi mật khẩu** hiển thị các trường:<br>&emsp;– Mật khẩu cũ<br>&emsp;– Mật khẩu mới<br>&emsp;– Xác nhận mật khẩu mới<br>5. Học viên nhập đầy đủ thông tin<br>6. Nhấn **Lưu thông tin** để cập nhật<br>7. Hệ thống kiểm tra:<br>&emsp;– Nếu thành công → hiển thị thông báo thành công<br>&emsp;– Nếu lỗi (mật khẩu cũ sai / mật khẩu mới không khớp / chưa đủ 6 ký tự) → hiển thị thông báo lỗi |
+    | **Chi tiết hiển thị** | - **Mật khẩu cũ**:<br>&emsp;• Học viên nhập mật khẩu hiện tại<br> - **Mật khẩu mới**:<br>&emsp;• Nhập mật khẩu mới (tối thiểu 6 ký tự)<br> - **Xác nhận mật khẩu mới**:<br>&emsp;• Nhập lại mật khẩu mới để xác nhận<br> - **Nút Lưu thông tin**:<br>&emsp;• Sau khi nhấn → thực hiện kiểm tra và lưu lại mật khẩu mới |
+    | **Kết quả hiển thị** | - Nếu đổi mật khẩu thành công → hiển thị thông báo thành công<br> - Nếu có lỗi → hiển thị thông báo lỗi tương ứng |
+    | **Trường hợp không có dữ liệu** | - Nếu bỏ trống trường nào → hiển thị yêu cầu nhập đầy đủ |
