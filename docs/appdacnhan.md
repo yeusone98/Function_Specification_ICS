@@ -2,18 +2,14 @@
 
 ## 1. Giới thiệu
 
-- **Mục tiêu:**
+- **Mục tiêu:** <div class="justified-text">
   Ứng dụng **Đắc Nhân Tiếng Trung** được xây dựng để hỗ trợ học viên theo dõi quá trình học tập tiếng Trung tại trung tâm, bao gồm: bài học theo buổi, bài tập về nhà, kiểm tra định kỳ, tổng quan tiến độ và thư viện học tập.
   Hệ thống cung cấp trải nghiệm học tập minh bạch, cá nhân hóa, đồng thời giúp giáo viên và trung tâm nắm bắt tiến độ học và mức độ hoàn thành của học viên một cách trực quan.
-  Ứng dụng hướng đến việc tự động hóa phần lớn quy trình đào tạo và nâng cao hiệu quả giảng dạy.
+  Ứng dụng hướng đến việc tự động hóa phần lớn quy trình đào tạo và nâng cao hiệu quả giảng dạy.</div>
 
 - **Đối tượng sử dụng:**<br>
   🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ<br>
   🔹 Tester: xây dựng và thực hiện test case để kiểm thử hệ thống
-
-
-
-Dưới đây là nội dung **phạm vi hệ thống** đã được bổ sung phần **Thư viện học tập**, trình bày theo định dạng MkDocs như bạn yêu cầu:
 
 ---
 
@@ -25,7 +21,7 @@ Hệ thống Đắc Nhân Tiếng Trung là nền tảng học tập dành cho h
 
 * **Student (Học viên)**: Người học tiếng Trung tại trung tâm
 
-### Các chức năng chính dành cho học viên:
+* **Các chức năng chính dành cho học viên**:
 
 * 📘 **Bài học**:<br>
    • Xem danh sách các buổi học theo thứ tự thời gian<br>
