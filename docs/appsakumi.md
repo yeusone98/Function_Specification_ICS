@@ -259,7 +259,7 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | Trường | Nội dung |
     |--------|----------|
     | **Tên chức năng** | Bật/tắt dịch nghĩa từ vựng |
-    | **Phạm vi sử dụng** | Hiển thị trong chi tiết nhóm từ vựng của Thư viện học tập |
+    | **Phạm vi sử dụng** | Hiển thị trong chi tiết nhóm từ vựng của mục từ vựng kiến thức nền |
     | **Mô tả** | Cho phép người dùng bật hoặc tắt việc hiển thị nghĩa tiếng Việt của các từ/cụm từ trong nhóm từ vựng. Giúp tập trung ghi nhớ từ Nhật và kiểm tra khả năng ghi nhớ. |
     | **Giao diện liên quan** | - Icon dịch (biểu tượng ngôn ngữ) góc trên cùng bên phải màn hình từ vựng<br> - Từ/cụm từ có thể ẩn/hiện phần nghĩa tương ứng dưới dạng toggle |
     | **Luồng thao tác chính** | 1. Người dùng truy cập app, vào thư viện học tập<br>2. Chọn tab "Từ vựng" → chọn nhóm từ bất kỳ<br>3. Tại màn hình từ vựng chi tiết → nhấn vào nút icon dịch (góc phải trên cùng)<br>4. Toàn bộ phần nghĩa tiếng Việt của từng từ sẽ được bật hoặc ẩn đi tương ứng |
@@ -374,27 +374,12 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     |---------------------------|----------|
     | **Tên chức năng**         | Luyện tập ngữ pháp – chế độ Trắc nghiệm |
     | **Phạm vi sử dụng**       | Dành cho người dùng đang học phần Ngữ pháp trong khối Kiến thức nền |
-    | **Mô tả**                 | Cho phép người dùng ôn tập ngữ pháp thông qua các dạng câu hỏi trắc nghiệm: sắp xếp từ thành câu và điền từ còn thiếu. Các điểm ngữ pháp liên quan sẽ được highlight màu hồng để người học dễ nhận diện. |
-    | **Giao diện liên quan**   | - Màn hình chi tiết điểm ngữ pháp<br> - Popup chọn chế độ → chọn “Trắc nghiệm” |
-    | **Luồng thao tác chính**  | 1. Người dùng truy cập ứng dụng<br>2. Chọn cấp độ học (N5 → N2)<br>3. Vào tab “Kiến thức nền” → chọn “Ngữ pháp”<br>4. Chọn điểm ngữ pháp cụ thể → nhấn “Luyện tập” → chọn “Trắc nghiệm”<br>5. Thực hiện từng câu trắc nghiệm<br>6. Nhấn “Kết thúc” → popup xác nhận nộp bài<br>7. Nhấn “Xem đáp án” để hiển thị kết quả |
-    | **Chi tiết hiển thị**     | - Các dạng bài:<br>&emsp;• Sắp xếp từ thành câu có nghĩa<br>&emsp;• Điền từ vào chỗ trống<br>- Thành phần hiển thị:<br>&emsp;• Vùng câu hỏi có highlight từ trọng tâm<br>&emsp;• Danh sách lựa chọn dạng nút<br>&emsp;• Bộ đếm câu hỏi (VD: 2/13) + điều hướng trái/phải<br>&emsp;• Nút “Xem hướng dẫn” trên cùng<br>&emsp;• Nút “Kết thúc” để nộp bài<br>- Popup xác nhận luôn hiển thị khi nhấn “Kết thúc”, kể cả khi đã làm hết tất cả các câu hỏi. Có 2 tùy chọn:<br>&emsp;• “Làm lại”: quay về bài<br>&emsp;• “Xem đáp án”: hiển thị kết quả |
-    | **Kết quả hiển thị**      | - Hiển thị từng câu:<br>&emsp;• Đáp án người dùng chọn<br>&emsp;• Đáp án đúng<br>&emsp;• Màu xanh: đúng, màu đỏ: sai<br>- Hiển thị điểm tổng kết (thang 10)<br>- Hiển thị phản hồi theo điểm số (VD: "Cố gắng hơn nữa nhé") |
-    | **Trường hợp không có dữ liệu** | - Nếu điểm ngữ pháp không có bài trắc nghiệm → ẩn nút “Luyện tập” |
-
-#### 3.12.4 Chức năng luyện tập ngữ pháp – chế độ Trắc nghiệm {#toc-3-12-4}
-
-??? book "Luyện tập ngữ pháp – chế độ Trắc nghiệm"
-    | Trường                     | Nội dung |
-    |---------------------------|----------|
-    | **Tên chức năng**         | Luyện tập ngữ pháp – chế độ Trắc nghiệm |
-    | **Phạm vi sử dụng**       | Dành cho người dùng đang học phần Ngữ pháp trong khối Kiến thức nền |
     | **Mô tả**                 | Cho phép người dùng ôn tập ngữ pháp thông qua các dạng câu hỏi trắc nghiệm: sắp xếp từ thành câu và điền từ vào chỗ trống. Các từ liên quan đến điểm ngữ pháp sẽ được highlight màu hồng để dễ nhận diện. |
     | **Giao diện liên quan**   | - Màn hình chi tiết điểm ngữ pháp<br> - Popup chọn chế độ → chọn “Trắc nghiệm” |
     | **Luồng thao tác chính**  | 1. Người dùng truy cập ứng dụng<br>2. Chọn cấp độ học (N5 → N2)<br>3. Vào tab “Kiến thức nền” → chọn “Ngữ pháp”<br>4. Chọn điểm ngữ pháp → nhấn “Luyện tập” → chọn chế độ “Trắc nghiệm”<br>5. Trả lời từng câu hỏi trắc nghiệm<br>6. Nhấn “Kết thúc” → hiển thị popup xác nhận nộp bài<br>7. Nhấn “Xem đáp án” để xem kết quả |
     | **Chi tiết hiển thị**     | - **Dạng bài:**<br>&emsp;• Sắp xếp thành câu có nghĩa<br>&emsp;• Chọn đáp án đúng để điền vào chỗ trống<br>- **Thành phần giao diện:**<br>&emsp;• Vùng câu hỏi có từ liên quan được highlight màu hồng<br>&emsp;• Lựa chọn dạng nút, có thể chọn hoặc kéo thả (nếu có)<br>&emsp;• Bộ điều hướng chuyển câu (mũi tên trái/phải)<br>&emsp;• Bộ đếm câu hỏi (VD: 6/13)<br>&emsp;• Nút “Xem hướng dẫn”<br>&emsp;• Nút “Kết thúc”<br>- **Popup xác nhận nộp bài:**<br>&emsp;• Dù người dùng đã làm hết câu hỏi hay chưa vẫn luôn hiển thị popup xác nhận<br>&emsp;• Có dòng trạng thái: “Số câu chưa hoàn thành: X/Y” (VD: 11/13)<br>&emsp;• Có 2 lựa chọn:<br>&emsp;&emsp;– “Làm lại”: quay lại bài làm<br>&emsp;&emsp;– “Xem đáp án”: nộp bài và hiển thị kết quả |
     | **Kết quả hiển thị**      | - Từng câu:<br>&emsp;• Đáp án người dùng chọn (highlight)<br>&emsp;• Đáp án đúng<br>&emsp;• Hiển thị màu xanh nếu đúng, đỏ nếu sai<br> - Điểm tổng kết (thang 10)<br> - Phản hồi tổng quát theo điểm số (VD: “Điểm số chưa ổn lắm! Cố gắng hơn nữa nhé”) |
     | **Trường hợp không có dữ liệu** | - Nếu điểm ngữ pháp không có dữ liệu trắc nghiệm → ẩn nút “Luyện tập” |
-
 
 
 ### 3.13 Chức quản lý Hán tự
@@ -446,20 +431,6 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | Trường | Nội dung |
     |--------|----------|
     | **Tên chức năng** | Luyện tập Hán tự – chế độ Học |
-    | **Phạm vi sử dụng** | Hán tự trong tab “Kiến thức nền” |
-    | **Mô tả** | Cho phép học viên luyện tập từng chữ Hán theo hai loại thẻ:<br>&emsp;• Flashcard: có thao tác lật mặt thẻ, xác nhận hoàn thành<br>&emsp;• Ghi nhớ nội dung: chỉ hiển thị một chiều (không lật)<br>Sau một số thẻ sẽ có câu hỏi kiểm tra ghi nhớ (trắc nghiệm). |
-    | **Giao diện liên quan** | - Danh sách Hán tự → nút “Luyện tập” → chọn chế độ “Học”<br> - Giao diện flashcard:<br>&emsp;• Mặt trước: chữ Hán<br>&emsp;• Mặt sau: nghĩa, âm On, âm Kun, âm Hán Việt, từ vựng ví dụ<br> - Giao diện ghi nhớ nội dung:<br>&emsp;• Không có mặt sau<br> - Giao diện câu hỏi:<br>&emsp;• Trắc nghiệm 1 đáp án đúng |
-    | **Luồng thao tác chính** | 1. Người dùng truy cập ứng dụng<br>2. Chọn cấp độ học (VD: N5 → N2)<br>3. Vào tab “Kiến thức nền” → chọn “Hán tự”<br>4. Chọn nhóm → nhấn “Luyện tập” → chọn “Học”<br>5. Hiển thị từng flashcard hoặc ghi nhớ nội dung<br>6. Với flashcard:<br>&emsp;• Nhấn “Tiếp theo” → lật mặt sau<br>&emsp;• Nhấn “Hoàn thành” → hiện nút “Tiếp tục” để chuyển sang từ mới<br>7. Với ghi nhớ nội dung:<br>&emsp;• Nhấn “Hoàn thành” → chuyển sang từ mới luôn<br>8. Sau một số thẻ hệ thống chèn câu hỏi trắc nghiệm<br>9. Trả lời đúng → tiếp tục<br>10. Trả lời sai → hiện đáp án đúng, yêu cầu thử lại |
-    | **Chi tiết hiển thị** | - Flashcard:<br>&emsp;• Mặt trước: chữ Hán<br>&emsp;• Mặt sau: âm On, âm Kun, Hán Việt, nghĩa, từ vựng<br> - Ghi nhớ nội dung:<br>&emsp;• Không có mặt sau<br> - Câu hỏi trắc nghiệm: chọn nghĩa đúng<br> - Nút thao tác:<br>&emsp;• “Tiếp theo”, “Hoàn thành”, “Tiếp tục” |
-    | **Kết quả hiển thị** | - Khi hoàn thành toàn bộ thẻ và câu hỏi → hiển thị “Chúc mừng đã hoàn thành phần học” |
-    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không có Hán tự nào để luyện tập trong nhóm này” |
-
-#### 3.13.5 Chức năng luyện tập Hán tự – chế độ Học {#toc-3-13-5}
-
-??? book "Luyện tập Hán tự – chế độ Học"
-    | Trường | Nội dung |
-    |--------|----------|
-    | **Tên chức năng** | Luyện tập Hán tự – chế độ Học |
     | **Mô tả** | Chức năng cho phép học viên luyện tập Hán tự theo hai dạng thẻ:<br>&emsp;• **Flashcard**: hiển thị chữ Hán và yêu cầu ghi nhớ cách đọc – nghĩa – ví dụ<br>&emsp;• **Card ghi nhớ nội dung**: hiển thị luôn toàn bộ nội dung (âm đọc, nghĩa, ví dụ)<br>Sau một số thẻ sẽ chèn các loại câu hỏi kiểm tra ghi nhớ như: trắc nghiệm chọn nghĩa đúng, chọn âm đọc đúng. |
     | **Giao diện liên quan** | - Màn hình nhóm Hán tự → nhấn nút “Luyện tập” → chọn chế độ “Học”<br> - Giao diện card ghi nhớ:<br>&emsp;• Hiển thị Hán tự, nghĩa, câu ví dụ<br>&emsp;• Nút “Tiếp tục”<br> - Giao diện flashcard:<br>&emsp;• Mặt trước: Hán tự<br>&emsp;• Mặt sau: âm On, âm Kun, bộ thủ, nghĩa, ví dụ<br>&emsp;• Nút “Tiếp theo”, “Hoàn thành”, “Tiếp tục”<br> - Giao diện câu hỏi:<br>&emsp;• Trắc nghiệm chọn nghĩa đúng<br>&emsp;• Trắc nghiệm chọn âm đọc đúng |
     | **Luồng thao tác chính** | 1. Người dùng truy cập ứng dụng<br>2. Từ màn hình chính chọn cấp độ (VD: N5)<br>3. Vào tab “Kiến thức nền” → chọn “Hán tự”<br>4. Chọn nhóm Hán tự → nhấn “Luyện tập” và chọn chế độ “Học”<br>5. Lần lượt xem từng thẻ:<br>&emsp;• Nếu là card ghi nhớ: hiển thị nội dung cố định → nhấn “Tiếp tục”<br>&emsp;• Nếu là flashcard: nhấn “Tiếp theo” để lật, nhấn “Hoàn thành” → “Tiếp tục”<br>6. Sau một số thẻ, hệ thống tự chèn câu hỏi kiểm tra:<br>&emsp;• Trắc nghiệm chọn nghĩa<br>&emsp;• Trắc nghiệm chọn cách đọc<br>7. Trả lời đúng → tiếp tục<br>8. Trả lời sai quá số lần quy định → yêu cầu trả lời đúng mới được tiếp tục |
@@ -468,7 +439,7 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không có Hán tự nào để luyện tập” |
 
 
-#### 3.13.6 Chức năng luyện tập Hán tự – chế độ Flashcard {#toc-3-13-6}
+#### 3.13.5 Chức năng luyện tập Hán tự – chế độ Flashcard {#toc-3-13-5}
 
 ??? book "Luyện tập Hán tự – chế độ Flashcard"
     | Trường | Nội dung |
@@ -481,7 +452,7 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Kết quả hiển thị** | - Flashcard hiển thị đúng loại đã chọn<br> - Trạng thái "Đã thuộc" hiển thị nhãn màu hồng trên thẻ<br> - Khi tất cả Hán tự trong nhóm đều “Đã thuộc” → hiển thị màn hình hoàn thành với icon cúp + dòng “Chúc mừng bạn đã hoàn thành Flashcard” và nút “Xem tất cả”<br>&emsp;→ Nhấn “Xem tất cả” để xem lại toàn bộ flashcard |
     | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không có Hán tự nào để luyện tập” |
 
-#### 3.13.7 Chức năng luyện tập Hán tự – chế độ Vẽ {#toc-3-13-7}
+#### 3.13.6 Chức năng luyện tập Hán tự – chế độ Vẽ {#toc-3-13-6}
 
 ??? book "Luyện tập Hán tự – chế độ Vẽ"
     | Trường | Nội dung |
@@ -824,3 +795,7 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Chi tiết hiển thị** | - Vòng tròn tiến trình tổng (%)<br> - Bộ lọc loại nội dung:<br>&emsp;• Toàn bộ / Kỹ năng / Kiến thức / Từ vựng / Ngữ pháp / Đọc / Nghe<br> - Bộ lọc mốc thời gian:<br>&emsp;• Tuần này / Tháng này / Toàn bộ<br> - Biểu đồ đường:<br>&emsp;• Trục hoành: Ngày<br>&emsp;• Trục tung: Số lượng nội dung hoàn thành<br> - Khối chi tiết:<br>&emsp;• Tổng số nội dung đã hoàn thành<br>&emsp;• Xem theo từng kỹ năng khi mở rộng |
     | **Kết quả hiển thị** | - Hiển thị đúng tiến độ tổng và từng mục<br> - Biểu đồ, số liệu cập nhật chính xác theo thời gian và bộ lọc<br> - Có thông báo nếu không có nội dung: **Năm nay bạn chưa học được nội dung gì!!!** |
     | **Trường hợp không có dữ liệu** | - Nếu không có nội dung học trong mốc thời gian / loại nội dung → hiển thị: **Không có nội dung** hoặc **Năm nay bạn chưa học được nội dung gì!!!** |
+
+
+### 3.19 Chức năng quản lý lộ trình học tập { #toc-3-19}
+
