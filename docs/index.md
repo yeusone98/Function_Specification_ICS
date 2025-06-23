@@ -1,13 +1,12 @@
-# 📄 Tài liệu đặc tả chức năng ICS Nhật Ngữ Sakumi
+# 📄 Tài liệu đặc tả chức năng ICS
 ---
 
 ## 1. Giới thiệu
 
 - **Mục tiêu:** <div class="justified-text"> ICS Nhật Ngữ Sakumi được xây dựng để hỗ trợ việc quản lý toàn diện các hoạt động giảng dạy tại trung tâm đào tạo tiếng Nhật, bao gồm: quản lý giáo viên, học viên, lớp học, lịch dạy, giáo trình và hệ thống đánh giá. Hệ thống giúp số hóa dữ liệu đào tạo, tự động hóa quy trình quản lý và nâng cao hiệu quả vận hành trong đào tạo tiếng Nhật. </div>
-- **Đối tượng sử dụng:**  
-  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ  
+- **Đối tượng sử dụng:**
+  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ
   🔹 Tester: xây dựng và thực hiện test case để kiểm thử hệ thống
-
 
 ---
 
@@ -16,22 +15,22 @@
 </div>
 
 - **Master**: Người dùng cấp cao nhất với quyền kiểm soát toàn hệ thống
-- **Admin**:  
-  🔹 Quản lý học viên, giáo viên, lớp học và phân ca giảng dạy  
-  🔹 Tổ chức cuộc họp (học viên, giáo viên, admin), đánh giá kết quả học tập và giảng dạy  
-  🔹 Theo dõi quy trình lớp học, checklist và mức độ hoàn thành  
-  🔹 Quản lý bài học, lịch dạy, kết quả học tập, hóa đơn và khảo sát  
-  
-- **Curriculum Development**:  
-  🔹 Quản lý danh mục: mindset, tiêu chuẩn giáo trình, hướng dẫn giảng dạy  
-  🔹 Quản lý khóa học và bài học  
-  🔹 Quản lý cấp độ  
+- **Admin**:
+  🔹 Quản lý học viên, giáo viên, lớp học và phân ca giảng dạy
+  🔹 Tổ chức cuộc họp (học viên, giáo viên, admin), đánh giá kết quả học tập và giảng dạy
+  🔹 Theo dõi quy trình lớp học, checklist và mức độ hoàn thành
+  🔹 Quản lý bài học, lịch dạy, kết quả học tập, hóa đơn và khảo sát
+
+- **Curriculum Development**:
+  🔹 Quản lý danh mục: mindset, tiêu chuẩn giáo trình, hướng dẫn giảng dạy
+  🔹 Quản lý khóa học và bài học
+  🔹 Quản lý cấp độ
   🔹 Tạo và quản lý khảo sát giáo viên và học sinh
 
-- **Teacher**:  
-  🔹 Xem và cập nhật lịch học, lớp được phân công  
-  🔹 Quản lý tiến độ lớp: điểm danh, bài tập, ghi chú đánh giá học viên và buổi học, theo dõi quá trình tự học của học viên   
-  🔹 Truy cập tài liệu giảng dạy, tiêu chuẩn lớp, checklist giảng dạy  
+- **Teacher**:
+  🔹 Xem và cập nhật lịch học, lớp được phân công
+  🔹 Quản lý tiến độ lớp: điểm danh, bài tập, ghi chú đánh giá học viên và buổi học, theo dõi quá trình tự học của học viên
+  🔹 Truy cập tài liệu giảng dạy, tiêu chuẩn lớp, checklist giảng dạy
   🔹 Tham gia khảo sát ,cuộc họp và ghi nhận đánh giá
 
 
@@ -89,7 +88,7 @@
     | **Luồng thao tác chính**    | 1. Giáo viên vào giao diện lớp học và chuyển sang tab “Bài học”.<br>2. Nhấn vào tên một bài học đã học trong danh sách bên phải.<br>3. Hệ thống hiển thị chi tiết bài học gồm thông tin học viên và các ghi chú nếu có.<br>4. Nếu buổi học đã có ghi chú từ trước, hệ thống hiển thị các vùng nhập:<br>&emsp;- Nhận xét lớp<br>&emsp;- Ghi chú của giáo viên cho Support<br>&emsp;- Ghi chú của giáo viên cho giáo viên tiếp theo.<br>5. Giáo viên có thể xem bảng thông tin chi tiết của từng học viên. |
     | **Điều kiện**               | Buổi học đã diễn ra. Nếu chưa học, sẽ hiển thị giao diện khác. Nếu buổi học đã được ghi chú, hệ thống mới hiển thị vùng nhập nhận xét và các loại ghi chú. |
     | **Kết quả hiển thị**        | Giao diện gồm 2 phần chính:<br><br>**(1) Thông tin ghi chú lớp học (nếu đã ghi):**<br>&emsp;• Nhận xét của giáo viên về lớp<br>&emsp;• Ghi chú gửi Support<br>&emsp;• Ghi chú gửi giáo viên kế tiếp<br><br>**(2) Danh sách học viên và kết quả:**<br>&emsp;• Số thứ tự<br>&emsp;• Họ và tên học viên<br>&emsp;• Trạng thái đi học (Có mặt, Nghỉ có phép, Đi trễ, Ra sớm, ...)<br>&emsp;• Điểm bài tập về nhà<br>&emsp;• Ghi chú (hiển thị biểu tượng, nhấn để xem popup chi tiết nếu có) |
-    | **Trường hợp không có dữ liệu** | Bảng danh sách học viên vẫn hiển thị, nhưng không có điểm hoặc trạng thái nộp bài. Các vùng ghi chú sẽ không hiển thị nếu chưa có ghi chú nào được nhập. |  
+    | **Trường hợp không có dữ liệu** | Bảng danh sách học viên vẫn hiển thị, nhưng không có điểm hoặc trạng thái nộp bài. Các vùng ghi chú sẽ không hiển thị nếu chưa có ghi chú nào được nhập. |
 
 #### 3.1.4 Chức năng hiển thi chi tiết bài học (Chưa học) { #toc-3-1-4 }
 ??? book "Hiển thị chi tiết bài học (Chưa học)"
@@ -451,7 +450,7 @@
     | **Kết quả hiển thị**          | - Giáo viên bị loại khỏi danh sách lớp hiện tại.<br>- Hệ thống cập nhật lại danh sách hiển thị tức thì. |
     | **Trường hợp không có dữ liệu** | - Nếu lớp không có giáo viên nào sau khi xóa: hiển thị thông báo “Lớp chưa có giáo viên nào”. |
 
-#### 3.3.9 Cập nhật thông tin giáo viên (Chức năng này chưa có) { #toc-3-3-9 } 
+#### 3.3.9 Cập nhật thông tin giáo viên (Chức năng này chưa có) { #toc-3-3-9 }
 ??? book "Cập nhật thông tin giáo viên"
     | Trường                        | Nội dung |
     | ----------------------------- | -------- |
@@ -490,7 +489,7 @@
     | **Vai trò**                  | Admin |
     | **Mô tả**                     | Cho phép admin xóa nhanh trợ giảng đã gán vào lớp bằng cách nhấn vào nút “x” nằm cạnh tên trợ giảng trong vùng hiển thị danh sách đã gán. Hành động không yêu cầu xác nhận. |
     | **Giao diện liên quan**       | - Tab “Trợ giảng” trong trang chi tiết lớp học |
-    | Luồng thao tác chính | 1. Truy cập danh sách trợ giảng đã gán:<br> a. Admin chọn lớp học cụ thể → vào mục Cài đặt → chuyển sang tab Trợ giảng.<br><br>2. Xóa trợ giảng khỏi lớp:<br> a. Tại vùng “Gán trợ giảng”, mỗi người được hiển thị dưới dạng thẻ có tên và biểu tượng “x” màu đỏ.<br> b. Admin nhấn vào biểu tượng “x” ở thẻ trợ giảng cần xóa.<br> c. Hệ thống lập tức loại bỏ người đó khỏi danh sách, không có popup xác nhận.<br><br>3. Giao diện cập nhật:<br> a. Giao diện tự động cập nhật lại danh sách đã gán, không cần reload trang. |  
+    | Luồng thao tác chính | 1. Truy cập danh sách trợ giảng đã gán:<br> a. Admin chọn lớp học cụ thể → vào mục Cài đặt → chuyển sang tab Trợ giảng.<br><br>2. Xóa trợ giảng khỏi lớp:<br> a. Tại vùng “Gán trợ giảng”, mỗi người được hiển thị dưới dạng thẻ có tên và biểu tượng “x” màu đỏ.<br> b. Admin nhấn vào biểu tượng “x” ở thẻ trợ giảng cần xóa.<br> c. Hệ thống lập tức loại bỏ người đó khỏi danh sách, không có popup xác nhận.<br><br>3. Giao diện cập nhật:<br> a. Giao diện tự động cập nhật lại danh sách đã gán, không cần reload trang. |
     | **Điều kiện**                 | - Admin có quyền chỉnh sửa lớp học.<br>- Trợ giảng phải đang nằm trong lớp. |
     | **Kết quả hiển thị**          | - Thẻ trợ giảng sẽ biến mất khỏi vùng “Gán trợ giảng” ngay sau khi xóa.<br>- Giao diện phản ánh thay đổi tức thì. |
     | **Trường hợp không có dữ liệu** | - Nếu lớp chưa có trợ giảng nào: không hiển thị vùng danh sách đã gán. |
@@ -657,9 +656,9 @@
 
 ---
 
-## 4. Yêu cầu phi chức năng  
+## 4. Yêu cầu phi chức năng
 
-### 4.1. Quản lý truy cập theo vai trò  
+### 4.1. Quản lý truy cập theo vai trò
 
 Hệ thống phải áp dụng cơ chế kiểm soát truy cập theo vai trò để đảm bảo phân quyền rõ ràng, ngăn chặn truy cập trái phép và bảo vệ dữ liệu đào tạo.
 
@@ -667,14 +666,14 @@ Hệ thống phải áp dụng cơ chế kiểm soát truy cập theo vai trò �
 - Hệ thống chỉ hiển thị chức năng tương ứng với vai trò đã được phân
 - Mọi thao tác thực thi (trên frontend và API) đều phải xác thực quyền trước khi xử lý
 
-### 4.2. Hiệu năng hệ thống 
+### 4.2. Hiệu năng hệ thống
 
 Hệ thống cần đảm bảo hiệu suất ổn định khi có nhiều người dùng đồng thời và thao tác trên các chức năng quản lý dữ liệu
 
 - Thời gian phản hồi cho các thao tác CRUD cơ bản (tạo, đọc, sửa, xóa) không vượt quá **2 giây**
 - Khi có ≥ 50 lớp học, ≥ 500 học viên: các danh sách hiển thị vẫn phải hỗ trợ **tìm kiếm, lọc và phân trang** mượt mà
 
-### 4.3. Bảo mật hệ thống 
+### 4.3. Bảo mật hệ thống
 
 Để đảm bảo an toàn dữ liệu và quyền riêng tư người dùng:
 
@@ -684,14 +683,14 @@ Hệ thống cần đảm bảo hiệu suất ổn định khi có nhiều ngư�
 - Phải có cơ chế **ghi log hoạt động** để truy vết khi có sự cố bảo mật
 
 
-### 4.4. Khả năng mở rộng và bảo trì 
+### 4.4. Khả năng mở rộng và bảo trì
 
 - Hệ thống được thiết kế theo hướng **modular (module-based)**, dễ dàng thêm mới chức năng mà không ảnh hưởng đến các phần hiện có
 - Có thể mở rộng hệ thống để phục vụ tối thiểu **500 người dùng đồng thời** mà không cần cấu hình lại hệ thống lõi
 - Cấu trúc mã nguồn và tài liệu phải đủ rõ ràng để nhóm phát triển và bảo trì hiểu được luồng hệ thống
 
 
-### 4.5. Khả năng tương thích 
+### 4.5. Khả năng tương thích
 
 - Hệ thống phải hiển thị và hoạt động tốt trên các trình duyệt phổ biến hiện nay như:
   - Google Chrome (latest)
@@ -701,7 +700,7 @@ Hệ thống cần đảm bảo hiệu suất ổn định khi có nhiều ngư�
 - Yêu cầu hoạt động tương thích trên điện thoại và máy tính bảng
 
 
-### 4.6. Tính ổn định và phục hồi 
+### 4.6. Tính ổn định và phục hồi
 
 - Tỷ lệ sẵn sàng của hệ thống yêu cầu ≥ **99.5%** trong thời gian hoạt động (giờ hành chính).
 - Có cơ chế sao lưu định kỳ dữ liệu hệ thống (backup daily/weekly).
