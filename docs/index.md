@@ -4,8 +4,8 @@
 ## 1. Giới thiệu
 
 - **Mục tiêu:** <div class="justified-text"> ICS Nhật Ngữ Sakumi được xây dựng để hỗ trợ việc quản lý toàn diện các hoạt động giảng dạy tại trung tâm đào tạo tiếng Nhật, bao gồm: quản lý giáo viên, học viên, lớp học, lịch dạy, giáo trình và hệ thống đánh giá. Hệ thống giúp số hóa dữ liệu đào tạo, tự động hóa quy trình quản lý và nâng cao hiệu quả vận hành trong đào tạo tiếng Nhật. </div>
-- **Đối tượng sử dụng:**
-  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ
+- **Đối tượng sử dụng:**<br>
+  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ<br>
   🔹 Tester: xây dựng và thực hiện test case để kiểm thử hệ thống
 
 ---
