@@ -600,10 +600,9 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Mô tả** | Hiển thị nội dung chi tiết của một bài đọc theo cấp độ đã chọn. Người dùng có thể lựa chọn chế độ dịch (Đọc hiểu / Dịch câu / Dịch từ vựng), điều chỉnh cỡ chữ, bật/tắt phiên âm, lưu bài vào thư viện hoặc đánh dấu bài đã thuộc bằng icon 💡 để cập nhật tiến độ kỹ năng Đọc. |
     | **Giao diện liên quan** | - Màn hình chi tiết bài đọc<br> - Icon cài đặt (⚙️) mở popup tùy chỉnh<br> - Các khối văn bản tiếng Nhật có phiên âm và dịch nghĩa<br> - Icon 💡 (đánh dấu đã thuộc), ⭐ (lưu vào thư viện) |
     | **Luồng thao tác chính** | 1. Người dùng truy cập ứng dụng<br>2. Từ màn hình danh sách khóa học chọn một khóa học cụ thể<br>3. Vào mục “Kỹ năng” → chọn “Đọc”<br>4. Chọn một bài đọc bất kỳ trong danh sách<br>5. Màn hình chi tiết bài đọc hiển thị:<br>&emsp;• Văn bản tiếng Nhật chia đoạn, có phiên âm<br>&emsp;• Người dùng có thể nhấn ⚙️ để tùy chỉnh:<br>&emsp;&emsp;– Chế độ dịch: Đọc hiểu / Dịch câu / Dịch từ vựng<br>&emsp;&emsp;– Cỡ chữ: kéo thanh trượt<br>6. Nhấn icon 💡 để đánh dấu **“đã thuộc”** bài đọc → cập nhật % tiến độ<br>7. Nhấn icon ⭐ để lưu vào thư viện<br>8. Nhấn “Luyện tập” để chuyển sang phần luyện kỹ năng |
-    | **Chi tiết hiển thị** | - Văn bản được chia theo đoạn/câu rõ ràng<br> - Có thể bật/tắt từng lớp:<br>&emsp;• Phiên âm (furigana)<br>&emsp;• Dịch theo chế độ:<br>&emsp;&emsp;– **Đọc hiểu**: hiện toàn bộ nội dung dịch<br>&emsp;&emsp;– **Dịch câu**: hiển thị dịch dưới mỗi câu<br>&emsp;&emsp;– **Dịch từ vựng**: gắn nghĩa ngay trên từ khóa<br> - 💡 Dùng để đánh dấu **bài đã thuộc** và tăng tiến độ kỹ năng Đọc<br> - ⭐ Dùng để lưu bài vào thư viện cá nhân |
+    | **Chi tiết hiển thị** | - Văn bản được chia theo đoạn/câu rõ ràng<br>&emsp;• Dịch theo chế độ:<br>&emsp;&emsp;– **Đọc hiểu**: hiện toàn bộ nội dung dịch<br>&emsp;&emsp;– **Dịch câu**: hiển thị dịch dưới mỗi câu<br>&emsp;&emsp;– **Dịch từ vựng**: gắn nghĩa ngay trên từ khóa<br> - 💡 Dùng để đánh dấu **bài đã thuộc** và tăng tiến độ kỹ năng Đọc<br> - ⭐ Dùng để lưu bài vào thư viện cá nhân |
     | **Kết quả hiển thị** | - Bài đọc hiển thị đầy đủ văn bản, phiên âm, nghĩa<br> - Cài đặt chế độ dịch và cỡ chữ phản hồi đúng<br> - Nhấn 💡 → cập nhật trạng thái đã thuộc và % tiến độ<br> - Nhấn ⭐ để lưu bài đọc vào thư viện |
     | **Trường hợp không có dữ liệu** | Hiển thị thông báo: **“Không có nội dung bài đọc cho cấp độ này”** |
-
 
 #### 3.16.3 Chức năng luyện tập kỹ năng đọc – chế độ Học {#toc-3-16-3}
 
@@ -796,6 +795,128 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Kết quả hiển thị** | - Hiển thị đúng tiến độ tổng và từng mục<br> - Biểu đồ, số liệu cập nhật chính xác theo thời gian và bộ lọc<br> - Có thông báo nếu không có nội dung: **Năm nay bạn chưa học được nội dung gì!!!** |
     | **Trường hợp không có dữ liệu** | - Nếu không có nội dung học trong mốc thời gian / loại nội dung → hiển thị: **Không có nội dung** hoặc **Năm nay bạn chưa học được nội dung gì!!!** |
 
+### 3.19 Chức năng quản lý lộ trình học tập {#toc-3-19}
 
-### 3.19 Chức năng quản lý lộ trình học tập { #toc-3-19}
+#### 3.19.1 Chức năng tạo lộ trình học tập cá nhân { #toc-3-19-1}
+??? book "Tạo lộ trình học cá nhân hóa"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Tạo lộ trình học cá nhân hóa |
+    | **Mô tả** | Cho phép người dùng tạo lộ trình học dựa trên cấp độ (N5–N2), mục tiêu học, khối lượng học mỗi ngày, số ngày học trong tuần và thời gian học mỗi ngày. Hệ thống sẽ sinh lộ trình chi tiết phù hợp và hiển thị dạng tuần – buổi. |
+    | **Giao diện liên quan** | - Tab **Lộ trình**<br> - Màn hình chọn cấp độ + mục tiêu<br> - Popup chọn nội dung học<br> - Giao diện kiểm tra trình độ<br> - Màn hình chọn thời lượng học<br> - Giao diện chọn ngày trong tuần<br> - Màn hình đặt tên lộ trình<br> - Màn hình tổng kết lộ trình |
+    | **Luồng thao tác chính** | 1. Người dùng mở ứng dụng<br>2. Truy cập tab **Lộ trình**<br>3. Nhấn nút **➕ Thêm lộ trình mới** ở góc phải<br>4. Chọn cấp độ học (N5 → N2)<br>5. Chọn loại lộ trình: Tổng hợp / Ôn tập / JLPT<br>6. Nhấn **Tiếp theo**<br>7. Giao diện hiển thị mô tả nội dung học mỗi buổi → người dùng xác nhận<br>8. Màn hình hỏi “Bạn có muốn kiểm tra trình độ không?” → chọn **Bắt đầu kiểm tra** hoặc **Bỏ qua**<br>9. Chọn **thời gian học mỗi ngày** bằng cách kéo chọn (ví dụ: 30 phút)<br>10. Chọn **các ngày học trong tuần** bằng cách tick thứ (T2–CN), có thể chọn tùy ý<br>11. Đặt **tên lộ trình học** (ví dụ: “Lộ trình N2 tháng 6”)<br>12. Nhấn **Xác nhận** → hệ thống sinh lộ trình<br>13. Màn hình hiển thị lộ trình tổng thể: Tuần 1, Tuần 2,... với các buổi học phân bố theo thứ đã chọn |
+    | **Chi tiết hiển thị** | - Mỗi buổi học gồm: từ vựng, ngữ pháp, kỹ năng (nghe – đọc – nói – hán tự)<br> - Có trạng thái hiển thị: Chưa hoàn thành, Chưa bắt đầu<br> - Lịch học hiển thị theo các thứ trong tuần đã chọn<br> - Tổng thời gian mỗi ngày = thời lượng đã thiết lập |
+    | **Kết quả hiển thị** | - Lộ trình học được khởi tạo và hiển thị dạng Tuần – Buổi<br> - Các buổi học hiển thị đầy đủ nội dung, có thể bắt đầu học ngay<br> - Tiến độ được theo dõi xuyên suốt trong tab **Lộ trình** |
+    | **Trường hợp không có dữ liệu** | - Nếu người dùng không chọn đủ thông tin → không thể nhấn **Tạo lộ trình**<br> - Nếu lỗi khi sinh lộ trình → hiển thị: **“Không thể tạo lộ trình. Vui lòng thử lại sau.”** |
 
+#### 3.19.2 Chức năng xem chi tiết một ngày học trong lộ trình {#toc-3-19-2}
+
+??? book "Xem chi tiết một ngày học trong lộ trình"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Xem chi tiết một ngày học trong lộ trình |
+    | **Mô tả** | Cho phép người dùng xem chi tiết nội dung cần học trong từng ngày thuộc lộ trình học đã tạo. Mỗi buổi học được trình bày rõ các phần: từ vựng, ngữ pháp, Hán tự, kỹ năng (nghe – đọc). |
+    | **Giao diện liên quan** | - Tab **Lộ trình**<br> - Màn hình lộ trình theo tuần<br> - Danh sách ngày học trong tuần<br> - Mỗi ngày là một khối nội dung mở rộng |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập tab **Lộ trình**<br>2. Chọn tuần học (ví dụ: Tuần 1)<br>3. Danh sách các ngày học hiển thị theo chiều dọc<br>4. Nhấn vào ngày bất kỳ (VD: Ngày 1) để mở chi tiết<br>5. Nội dung hiển thị gồm:<br>&emsp;• **Từ vựng**: số lượng từ + nội dung<br>&emsp;• **Ngữ pháp**: tiêu đề + ví dụ (VD: câu khẳng định / câu phủ định)<br>&emsp;• **Hán tự**: số lượng và bài học<br>&emsp;• **Nghe**: tên bài nghe (VD: “Tọa độ TQ”)<br>&emsp;• **Đọc hiểu**: tiêu đề văn bản<br>6. Với mỗi mục, hiển thị trạng thái: **Đã hoàn thành** / **Chưa hoàn thành**<br>7. Có thể nhấn vào mục bất kỳ để bắt đầu học ngay |
+    | **Chi tiết hiển thị** | - Mỗi khối nội dung được phân rõ bằng biểu tượng (📘 từ vựng, 🧠 ngữ pháp, 🀄 hán tự...)<br> - Trạng thái hoàn thành hiển thị bằng nhãn màu (VD: “Chưa hoàn thành”)<br> - Thứ tự học có thể cố định hoặc tự do tùy thiết kế hệ thống |
+    | **Kết quả hiển thị** | - Người dùng có cái nhìn tổng quan về nội dung cần học trong ngày<br> - Có thể chọn học trực tiếp từng phần<br> - Trạng thái học được cập nhật ngay khi hoàn tất từng phần |
+    | **Trường hợp không có dữ liệu** | - Nếu ngày chưa có nội dung học → hiển thị: **“Ngày này chưa có bài học.”** hoặc không cho mở chi tiết |
+
+
+### 3.20 Chức năng giới thiệu ứng dụng
+
+#### 3.20.1 Chức năng giới thiệu Nhật Ngữ Sakumi { #toc-3-20-1}
+
+??? book "Giới thiệu Nhật ngữ Sakumi"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Giới thiệu Nhật ngữ Sakumi |
+    | **Mô tả** | Trình bày các nội dung giới thiệu về thương hiệu Sakumi thông qua nhiều slide liên tiếp. Mỗi slide có thể là dạng video hoặc văn bản tùy nội dung. Người dùng có thể điều hướng bằng vuốt hoặc nút, và tương tác với video như chỉnh tốc độ, fullscreen. |
+    | **Giao diện liên quan** | - Màn hình slide giới thiệu<br> - Slide có thể là: video / văn bản<br> - Nút điều hướng: **Tiếp theo**, **Bắt đầu trải nghiệm**<br> - Dấu chấm tiến độ (slide indicator)<br> - Khung phát video có tốc độ và fullscreen |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập mục **Giới thiệu Sakumi** từ menu hoặc khi đăng nhập lần đầu<br>2. Các slide lần lượt hiển thị nội dung giới thiệu về thương hiệu<br>3. Người dùng có thể:<br>&emsp;• Vuốt trái/phải để điều hướng<br>&emsp;• Nhấn **Tiếp theo** để chuyển slide<br>4. Nếu slide là video:<br>&emsp;• Nhấn nút Play để phát<br>&emsp;• Chỉnh tốc độ phát: 0.25x → 2.0x<br>&emsp;• Nhấn **Fullscreen** để xem toàn màn hình<br>5. Slide cuối cùng hiển thị nội dung kết thúc<br>6. Nhấn **Bắt đầu trải nghiệm** để vào màn hình chính |
+    | **Chi tiết hiển thị** | - Giao diện slide được thiết kế đồng nhất:<br>&emsp;• Slide video có thanh điều khiển và tốc độ<br>&emsp;• Slide văn bản có tiêu đề + đoạn mô tả<br> - Indicator dưới đáy thể hiện vị trí hiện tại<br> - Trải nghiệm mượt trên cả Android & iOS |
+    | **Kết quả hiển thị** | - Truyền tải rõ nét hình ảnh thương hiệu, phương pháp, sứ mệnh Sakumi<br> - Người dùng cảm thấy được định hướng và gắn kết trước khi vào học |
+    | **Trường hợp không có dữ liệu** | - Nếu video lỗi → hiển thị: **“Không thể phát video. Vui lòng thử lại sau.”**<br> - Nếu slide lỗi → hiển thị: **“Không thể tải nội dung giới thiệu.”** |
+
+
+#### 3.20.2 Chức năng Giới thiệu các khóa học tương tác tại Sakumi {#toc-3-20-2}
+
+??? book "Giới thiệu khóa học tương tác tại Sakumi"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Giới thiệu các khóa học tương tác tại Sakumi |
+    | **Mô tả** | Chuỗi slide giới thiệu hình thức học tương tác trực tuyến tại Nhật Ngữ Sakumi. Người học sẽ nắm rõ cách hoạt động của các lớp học thực tế, từ việc vào lớp – luyện tập – tương tác – kiểm tra – chấm điểm. Slide được trình bày bằng video hoặc văn bản, có thể điều hướng và tương tác dễ dàng. |
+    | **Giao diện liên quan** | - Màn hình slide giới thiệu<br> - Slide chứa video hoặc mô tả<br> - Nút điều hướng: **Tiếp theo**, **Bắt đầu trải nghiệm**<br> - Dấu chấm chỉ vị trí slide<br> - Trình phát video tích hợp: điều chỉnh tốc độ + fullscreen |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập mục **Giới thiệu khóa học tương tác** trong app (hoặc tự động hiển thị khi lần đầu vào tab “Lớp học tương tác”)<br>2. Slide lần lượt trình bày các chủ đề như:<br>&emsp;• Giới thiệu mô hình học tương tác trực tuyến tại Sakumi<br>&emsp;• Vào lớp – tham gia học qua Zoom / Google Meet<br>&emsp;• Giáo viên giảng bài – tương tác qua bảng điện tử / mic<br>&emsp;• Làm bài tập ngay trên hệ thống<br>&emsp;• Hệ thống tự động chấm điểm – phản hồi<br>3. Các slide có thể ở dạng video minh họa hoặc mô tả ngắn<br>4. Nếu slide là video:<br>&emsp;• Có thể nhấn Play để phát<br>&emsp;• Tùy chọn tốc độ: 0.25x – 2.0x<br>&emsp;• Xem toàn màn hình với nút Fullscreen<br>5. Điều hướng bằng vuốt trái/phải hoặc nút **Tiếp theo**<br>6. Kết thúc bằng nút **Bắt đầu trải nghiệm lớp học tương tác** |
+    | **Chi tiết hiển thị** | - Slide video: player có tốc độ & fullscreen<br> - Slide văn bản: tiêu đề, mô tả ngắn căn giữa<br> - Indicator dưới cùng thể hiện tiến độ<br> - Thiết kế trực quan, đồng bộ phong cách Sakumi |
+    | **Kết quả hiển thị** | - Người học hiểu rõ cách hoạt động của lớp học tương tác<br> - Tăng tỷ lệ tham gia lớp và tương tác hiệu quả với giáo viên<br> - Giao diện onboarding hiện đại, tối ưu trải nghiệm người học |
+    | **Trường hợp không có dữ liệu** | - Nếu không thể phát video → hiển thị: **“Không thể phát video. Vui lòng thử lại sau.”**<br> - Nếu nội dung slide không tải được → hiển thị: **“Không thể tải nội dung giới thiệu.”** |
+
+
+#### 3.20.3 Chức năng Giới thiệu cộng đồng Nhật Ngữ Sakumi {#toc-3-20-3}
+
+??? book "Giới thiệu cộng đồng Nhật Ngữ Sakumi"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Giới thiệu cộng đồng Nhật Ngữ Sakumi |
+    | **Mô tả** | Hiển thị màn hình giới thiệu các kênh cộng đồng chính thức của Sakumi trên mạng xã hội, bao gồm Facebook, YouTube và TikTok. Người dùng có thể nhấn vào từng biểu tượng để mở trang tương ứng trong trình duyệt hoặc app. |
+    | **Giao diện liên quan** | - Màn hình “Giới thiệu cộng đồng”<br> - Logo thương hiệu Sakumi<br> - Các nút liên kết có icon: Facebook, YouTube, TikTok<br> - Nút quay lại |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập mục **Cộng đồng Sakumi** từ menu hoặc banner trên trang chủ<br>2. Màn hình hiển thị giới thiệu ngắn gọn cộng đồng học viên Sakumi<br>3. Bên dưới là 3 biểu tượng tương ứng:<br>&emsp;• Facebook (truy cập fanpage Sakumi)<br>&emsp;• YouTube (truy cập kênh video học tập Sakumi)<br>&emsp;• TikTok (xem mẹo học & nội dung ngắn)<br>4. Người dùng nhấn vào biểu tượng bất kỳ → hệ thống mở liên kết trong trình duyệt hoặc app mặc định<br>5. Có thể nhấn nút “Quay lại” để trở về trang chính |
+    | **Chi tiết hiển thị** | - Logo Sakumi hiển thị nổi bật phía trên<br> - Mỗi liên kết là một nút hình tròn với icon tương ứng (theo brand màu của mạng xã hội)<br> - Khoảng cách và căn giữa hợp lý giữa các nút<br> - Có thể track lượt click (nếu tích hợp analytics) |
+    | **Kết quả hiển thị** | - Người dùng dễ dàng theo dõi các kênh cộng đồng chính thức của Sakumi<br> - Tăng tương tác qua các nền tảng mạng xã hội<br> - Kết nối học viên ngoài phạm vi ứng dụng |
+    | **Trường hợp không có dữ liệu** | - Nếu không mở được liên kết → hiển thị toast: **“Không thể mở liên kết. Vui lòng thử lại.”**<br> - Nếu mất kết nối mạng → hiển thị: **“Vui lòng kiểm tra kết nối internet.”** |
+
+
+#### 3.20.4 Chức năng Giới thiệu Ưu đãi Khóa học Dành cho Bạn {#toc-3-20-4}
+
+??? book "Giới thiệu Ưu đãi khóa học dành cho bạn"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Giới thiệu Ưu đãi Khóa học Dành cho Bạn |
+    | **Mô tả** | Hiển thị các chương trình ưu đãi học phí hiện có dưới dạng slide, giúp người dùng dễ dàng cập nhật thông tin khuyến mãi và khuyến khích đăng ký khóa học. |
+    | **Giao diện liên quan** | - Màn hình ưu đãi khóa học<br> - Slide hình ảnh + tiêu đề + mô tả<br> - Nút **Tiếp theo** / **Quay lại**<br> - Indicator vị trí slide |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập chức năng **Ưu đãi Khóa học** từ menu hoặc trang chủ<br>2. Giao diện hiển thị các ưu đãi dưới dạng slide ngang<br>3. Người dùng có thể:<br>&emsp;• Vuốt trái/phải để chuyển slide<br>&emsp;• Nhấn nút **Tiếp theo** để chuyển đến ưu đãi kế tiếp<br>4. Ở mỗi slide hiển thị:<br>&emsp;• Hình ảnh minh họa ưu đãi<br>&emsp;• Tiêu đề + mô tả ngắn gọn<br>5. Sau khi xem xong, có thể thoát ra hoặc chuyển tới chức năng liên quan như đăng ký tư vấn |
+    | **Chi tiết hiển thị** | - Slide thiết kế trực quan, nổi bật mức giảm giá / nội dung ưu đãi<br> - Các slide có định dạng đồng nhất: hình ảnh + tiêu đề + mô tả<br> - Có thể thêm nút CTA nếu muốn điều hướng đến đăng ký hoặc chat tư vấn |
+    | **Kết quả hiển thị** | - Người dùng biết rõ các ưu đãi đang được áp dụng tại Sakumi<br> - Gia tăng tỉ lệ đăng ký khóa học qua các kênh trực tiếp<br> - Giao diện rõ ràng, dễ thao tác và thu hút |
+    | **Trường hợp không có dữ liệu** | - Nếu không có chương trình ưu đãi → hiển thị: **“Hiện tại chưa có chương trình ưu đãi nào.”** |
+
+#### 3.20.5 Chức năng Giới thiệu phản hồi 5 sao từ học viên {#toc-3-20-5}
+
+??? book "Giới thiệu phản hồi 5 sao từ học viên"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Giới thiệu phản hồi 5 sao từ học viên |
+    | **Mô tả** | Hiển thị các đánh giá tích cực từ học viên đã trải nghiệm khóa học tại Sakumi, nhằm tạo độ tin cậy và tăng tỷ lệ chuyển đổi. Các phản hồi được trình bày theo dạng slide có thể vuốt hoặc điều hướng bằng nút. |
+    | **Giao diện liên quan** | - Màn hình phản hồi học viên<br> - Slide chứa ảnh chụp đánh giá từ App Store / Google Play<br> - Tên học viên + khóa học tương ứng<br> - Nút **Tiếp theo** / **Quay lại**<br> - Indicator vị trí slide |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập chức năng **Phản hồi học viên** từ menu hoặc cuối màn giới thiệu<br>2. Giao diện hiển thị các phản hồi 5 sao từ học viên<br>3. Mỗi slide hiển thị:<br>&emsp;• Ảnh chụp màn hình phần đánh giá (xếp hạng + bình luận)<br>&emsp;• Tên học viên + khóa học đang học<br>4. Người dùng có thể:<br>&emsp;• Vuốt trái/phải để xem tiếp<br>&emsp;• Nhấn nút **Tiếp theo** để chuyển slide<br>5. Sau khi xem xong, có thể chuyển sang chức năng tiếp theo (VD: xem ưu đãi / đăng ký) |
+    | **Chi tiết hiển thị** | - Mỗi slide hiển thị rõ phần nhận xét + sao đánh giá<br> - Phần tên học viên và khóa học căn giữa, chữ nhỏ hơn<br> - Giao diện thống nhất, nhẹ nhàng, mang tính truyền cảm hứng |
+    | **Kết quả hiển thị** | - Tăng độ tin cậy cho ứng dụng thông qua phản hồi thực tế<br> - Học viên mới được tiếp thêm động lực để tham gia<br> - Hỗ trợ thuyết phục trong quá trình onboarding |
+    | **Trường hợp không có dữ liệu** | - Nếu không có phản hồi → hiển thị: **“Chưa có phản hồi từ học viên.”** |
+
+#### 3.20.6 Chức năng Nhận Tư Vấn Khóa Học Miễn Phí {#toc-3-20-6}
+
+??? book "Nhận tư vấn khóa học miễn phí"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Nhận tư vấn khóa học miễn phí |
+    | **Mô tả** | Cho phép người dùng dễ dàng liên hệ với trung tâm Sakumi để nhận tư vấn khóa học miễn phí thông qua nhiều kênh liên lạc như Messenger, Zalo hoặc gọi điện thoại. |
+    | **Giao diện liên quan** | - Màn hình danh sách tính năng<br> - Popup lựa chọn kênh liên lạc<br> - Trình gọi hệ thống / mở ứng dụng Zalo hoặc Messenger |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập tính năng **Nhận Tư Vấn Khóa Học Miễn Phí** từ danh sách menu<br>2. Ứng dụng hiển thị popup lựa chọn phương thức liên lạc gồm:<br>&emsp;• Messenger<br>&emsp;• Zalo<br>&emsp;• Điện thoại<br>3. Người dùng chọn 1 phương thức:<br>&emsp;• Nếu chọn **Messenger** → mở ứng dụng Messenger và vào chat với fanpage Sakumi<br>&emsp;• Nếu chọn **Zalo** → mở ứng dụng Zalo và đến trang tư vấn<br>&emsp;• Nếu chọn **Điện thoại** → gọi đến số hotline định sẵn<br>4. Sau khi hoàn tất hoặc quay lại, người dùng được đưa về giao diện trước đó |
+    | **Chi tiết hiển thị** | - Popup thiết kế dạng bo góc, nền sáng, 3 dòng lựa chọn rõ ràng<br> - Icon ứng với từng kênh (Messenger, Zalo, Điện thoại)<br> - Mỗi kênh có thể mở bằng `URL scheme` hoặc `tel:` tùy hệ điều hành<br> - Có nút “Hủy” để đóng popup |
+    | **Kết quả hiển thị** | - Người dùng nhanh chóng kết nối tư vấn mà không cần nhập form<br> - Trải nghiệm thân thiện, đa kênh, linh hoạt<br> - Tăng tỷ lệ liên hệ và chốt học viên |
+    | **Trường hợp không có dữ liệu** | - Nếu không mở được app → hiển thị: **“Không thể mở ứng dụng. Vui lòng thử lại.”**<br> - Nếu không có số hotline → không hiển thị tùy chọn gọi điện |
+
+
+### 3.21 Chức năng quản lý luyện thi JLPT
+### 3.21.1 Chức năng Luyện Mondai (Từ vựng – Ngữ pháp – Đọc – Nghe) {#toc-3-27}
+
+??? book "Luyện Mondai – Từ vựng, Ngữ pháp, Đọc hiểu, Nghe hiểu"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện Mondai |
+    | **Mô tả** | Cho phép người dùng luyện đề theo từng kỹ năng trong kỳ thi JLPT: Từ vựng, Ngữ pháp, Đọc hiểu và Nghe hiểu. Hỗ trợ 2 chế độ luyện tập là "Luyện từng câu" và "Làm tính giờ". |
+    | **Giao diện liên quan** | - Màn hình chọn kỹ năng<br> - Danh sách Mondai (Mondai 1, 2...)<br> - Popup chọn chế độ luyện: Luyện từng câu / Làm tính giờ<br> - Giao diện câu hỏi + đáp án<br> - Giao diện kết quả chấm điểm |
+    | **Luồng thao tác chính** | 1. Người dùng truy cập chức năng **Luyện Mondai** từ menu hoặc tab kỹ năng<br>2. Chọn kỹ năng: Từ vựng / Ngữ pháp / Đọc / Nghe<br>3. Chọn mondai muốn luyện (Mondai 1, Mondai 2...)<br>4. Popup hiển thị 2 chế độ luyện:<br>&emsp;• **Luyện từng câu**: Hiện kết quả và giải thích sau mỗi câu<br>&emsp;• **Làm tính giờ**: Làm hết bài mới chấm điểm + phân tích<br>5. Người dùng chọn chế độ và nhấn **Luyện tập** để bắt đầu<br>6. Trong quá trình luyện:<br>&emsp;• Hiển thị từng câu hỏi và lựa chọn<br>&emsp;• Chuyển câu bằng nút “Câu tiếp theo”<br>7. Sau khi hoàn tất:<br>&emsp;• Nếu là “Làm tính giờ” → hiện popup kết quả tổng thể (số điểm, thời gian, đúng/sai)<br>&emsp;• Nếu là “Luyện từng câu” → mỗi câu hiện đáp án + giải thích sau khi chọn |
+    | **Chi tiết hiển thị** | - Câu hỏi trắc nghiệm: 3–4 đáp án<br> - Câu Nghe có nút phát audio<br> - Giao diện gọn, rõ, tập trung vào nội dung<br> - Chế độ “Làm tính giờ” có tính thời gian thực tế<br> - Chế độ “Luyện từng câu” giúp người học hiểu bài sâu hơn |
+    | **Kết quả hiển thị** | - Người học có thể ôn tập hiệu quả, sát đề thi thật<br> - Có thể chọn chế độ phù hợp với mục tiêu học: hiểu sâu / kiểm tra nhanh<br> - Hệ thống cập nhật tiến độ học |
+    | **Trường hợp không có dữ liệu** | - Nếu chưa có mondai cho kỹ năng được chọn → hiển thị: **“Chưa có nội dung luyện tập cho mục này.”** |
