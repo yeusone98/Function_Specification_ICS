@@ -754,7 +754,6 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Trường hợp không có dữ liệu** | - Nếu không có bài đọc nào đã lưu → hiển thị: **Không có bài luyện đọc nào** |
 
 
-
 #### 3.18.8 Chức năng Duyệt Kỹ năng trong Thư viện học tập { #toc-3-18-8 }
 
 ??? book "Duyệt Kỹ năng trong Thư viện học tập"
@@ -908,7 +907,7 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
 
 
 ### 3.21 Chức năng quản lý luyện thi JLPT
-### 3.21.1 Chức năng Luyện Mondai (Từ vựng – Ngữ pháp – Đọc – Nghe) {#toc-3-27}
+#### 3.21.1 Chức năng Luyện Mondai (Từ vựng – Ngữ pháp – Đọc – Nghe) {#toc-3-27}
 
 ??? book "Luyện Mondai – Từ vựng, Ngữ pháp, Đọc hiểu, Nghe hiểu"
     | Trường | Nội dung |
@@ -920,3 +919,401 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Chi tiết hiển thị** | - Câu hỏi trắc nghiệm: 3–4 đáp án<br> - Câu Nghe có nút phát audio<br> - Giao diện gọn, rõ, tập trung vào nội dung<br> - Chế độ “Làm tính giờ” có tính thời gian thực tế<br> - Chế độ “Luyện từng câu” giúp người học hiểu bài sâu hơn |
     | **Kết quả hiển thị** | - Người học có thể ôn tập hiệu quả, sát đề thi thật<br> - Có thể chọn chế độ phù hợp với mục tiêu học: hiểu sâu / kiểm tra nhanh<br> - Hệ thống cập nhật tiến độ học |
     | **Trường hợp không có dữ liệu** | - Nếu chưa có mondai cho kỹ năng được chọn → hiển thị: **“Chưa có nội dung luyện tập cho mục này.”** |
+
+### 3.22 Quản lý bảng chữ (Chỉ có ở cấp độ N5)
+#### 3.22.1 Hiển thị bảng chữ Hiragana { #toc-3-22-1}
+
+??? book "Hiển thị bảng chữ Hiragana"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Hiển thị bảng chữ Hiragana |
+    | **Phạm vi sử dụng** | Mục “Bảng chữ” trên màn hình chính |
+    | **Mô tả** | Hiển thị toàn bộ bảng chữ Hiragana, bao gồm 3 phần: bảng chữ chính, bảng biến âm và bảng chữ kết hợp. Mỗi chữ cái được trình bày cùng phiên âm romaji. Các **nguyên âm** (a, i, u, e, o) hiển thị theo hàng ngang trên cùng, còn **phụ âm** (k, s, t, n, h...) nằm dọc bên trái. Những chữ **đã đánh dấu "Đã thuộc" sẽ được tô nền hồng** để theo dõi tiến độ ghi nhớ. |
+    | **Giao diện liên quan** | - Màn hình “Hiragana”<br> - Tabs: **Cơ bản**, **Biến âm**, **Kết hợp**<br> - Nút “Luyện tập” (góc trên bên phải)<br> - Lưới chữ cái dạng bảng: cột dọc phụ âm, hàng ngang nguyên âm |
+    | **Luồng thao tác chính** | 1. Người dùng mở ứng dụng → nhấn “Bảng chữ Hiragana”<br>2. Màn hình hiển thị 3 tab tương ứng:<br>&emsp;• **Cơ bản**: bảng 46 chữ chính (あ〜ん)<br>&emsp;• **Biến âm**: tenten (が, だ...) + maru (ぱ, ぴ...)<br>&emsp;• **Kết hợp**: các âm ghép (きゃ, しゅ, にょ...)<br>3. Trong mỗi tab, bảng được trình bày:<br>&emsp;• Cột trái: phụ âm (k, s, t, n, h, m, y, r, w)<br>&emsp;• Hàng ngang trên cùng: nguyên âm (a, i, u, e, o)<br>&emsp;• Ô giao giữa hàng và cột là chữ Hiragana kèm phiên âm romaji<br>4. Chữ đã đánh dấu "Đã thuộc" → tô nền hồng<br>5. Người dùng có thể nhấn vào từng chữ để xem chi tiết hoặc luyện tập |
+    | **Điều kiện hiển thị** | Dữ liệu bảng chữ Hiragana được tải thành công |
+    | **Kết quả hiển thị** | - Giao diện bảng chữ hiển thị đầy đủ, rõ ràng và phản hồi nhanh<br> - Nguyên âm / phụ âm sắp xếp đúng quy tắc phát âm tiếng Nhật<br> - Các chữ đã thuộc được hiển thị nổi bật bằng màu nền hồng<br> - Người dùng có thể nhấn vào ô chữ để học hoặc luyện tập trực tiếp |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không có dữ liệu bảng chữ cho chế độ này” |
+
+#### 3.22.2 Chức năng xem chi tiết chữ Hiragana {#toc-3-22-2}
+
+??? book "Xem chi tiết chữ Hiragana (áp dụng cho Cơ bản, Biến âm, Kết hợp)"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Xem chi tiết một chữ Hiragana |
+    | **Phạm vi sử dụng** | Màn hình Bảng chữ → nhấn vào 1 ô chữ bất kỳ (thuộc Cơ bản, Biến âm hoặc Kết hợp) |
+    | **Mô tả** | Hiển thị chi tiết thông tin học tập cho từng chữ Hiragana, bao gồm: chữ viết, phát âm, mẹo ghi nhớ, chữ dễ nhầm và từ vựng ứng dụng. Cho phép người dùng lưu chữ vào Thư viện cá nhân và đánh dấu là "Đã thuộc". |
+    | **Giao diện liên quan** | - Màn hình chi tiết chữ Hiragana<br>- Có nút quay lại, biểu tượng ⭐ và 💡 ở góc phải trên |
+    | **Luồng thao tác chính** | <br>1. Người dùng truy cập Bảng chữ Hiragana<br>2. Nhấn vào 1 ô chữ bất kỳ → chuyển sang màn hình chi tiết<br>3. Màn hình hiển thị nội dung sau:<br>&emsp;• **Chữ Hiragana lớn** + **romaji** + nút **nghe phát âm**<br>&emsp;• **Mẹo nhớ**: hình minh họa và ví dụ gợi nhớ<br>&emsp;• **Dễ nhầm**: các chữ thường bị nhầm với chữ hiện tại<br>&emsp;• **Từ vựng**: danh sách từ có chứa chữ này, gồm hiragana, nghĩa tiếng Việt, nút nghe<br>4. Người dùng có thể:<br>&emsp;• Nhấn biểu tượng ⭐ → **lưu chữ vào Thư viện học tập cá nhân**<br>&emsp;• Nhấn biểu tượng 💡 → **đánh dấu "Đã thuộc"**, dùng để tô hồng ở bảng chữ<br>&emsp;• Dùng mũi tên trái/phải để xem chữ trước/sau |
+    | **Điều kiện hiển thị** | Có dữ liệu chi tiết của chữ đã chọn (được load hoặc cache nội bộ) |
+    | **Kết quả hiển thị** | - Thông tin đầy đủ, trực quan, dễ nhớ<br> - Chữ sau khi đánh dấu "Đã thuộc" → hiển thị nền hồng trong bảng chữ<br> - Chữ sau khi lưu vào Thư viện → hiển thị trong mục Thư viện học tập (tab Bảng chữ) |
+    | **Trường hợp không có dữ liệu** | Hiển thị: “Hiện chưa có dữ liệu chi tiết cho chữ này. Vui lòng thử lại sau.” |
+
+
+#### 3.22.3 Chức năng thêm nhiều chữ cái vào Thư viện học tập {#toc-3-22-3}
+
+??? book "Thêm nhiều chữ cái vào Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Thêm nhiều chữ cái vào Thư viện học tập |
+    | **Phạm vi sử dụng** | Biểu tượng ⭐➕ (nằm ở góc phải màn hình Bảng chữ Hiragana) |
+    | **Mô tả** | Khi người dùng nhấn vào biểu tượng “⭐➕”, một popup hiển thị cho phép chọn nhanh nhiều chữ cái để thêm vào Thư viện. Chữ đã có trong Thư viện được tô **hồng đậm**. Chữ đang được chọn thêm mới sẽ được **highlight viền trắng**. |
+    | **Giao diện liên quan** | - Biểu tượng ⭐➕ ở màn hình “Hiragana”<br>- Popup “Cập nhật danh sách yêu thích”<br>- 2 dropdown lọc theo **Loại bảng chữ** và **Phạm vi hàng/cột**<br>- Checkbox “Chọn tất cả”<br>- Lưới các chữ cái (dạng ô vuông) |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính, người dùng nhấn vào “Bảng chữ”<br>2. Hiển thị bảng Hiragana với tab mặc định là “Cơ bản” (gồm các chữ cái thuộc hàng -, k, s, t, n, h, m, y, r, w và các cột a, i, u, e, o)<br>3. Nhấn vào biểu tượng ⭐➕ ở góc trên bên phải màn hình<br>4. Hiện popup “Cập nhật danh sách yêu thích” gồm 2 bộ lọc: Loại bảng chữ (Bảng chữ chính, Tenten, Maru, Ảo âm) và Phạm vi (Hàng -, k, s, t, n, h, m, y, r, w, z, p hoặc Cột a, i, u, e, o)<br>5. Người dùng chọn một loại bảng và hàng/cột để lọc hiển thị chữ cái tương ứng<br>6. Các chữ cái hiển thị có 3 trạng thái: (i) Đã có trong Thư viện – nền hồng đậm, người dùng vẫn có thể nhấn để **bỏ chọn** (khi nhấn “Đồng ý” sẽ bị **xóa khỏi Thư viện**); (ii) Chữ đang được thêm mới – viền trắng nền hồng nhạt; (iii) Chữ chưa chọn – nền trắng<br>7. Có thể chọn thủ công từng chữ hoặc chọn nhanh toàn bộ bằng checkbox “Chọn tất cả”<br>8. Nhấn nút “Đồng ý” để cập nhật: thêm chữ mới và gỡ các chữ đã bỏ chọn khỏi Thư viện<br>9. Popup đóng lại, quay về bảng chữ, các ô chữ được thêm sẽ hiển thị nền hồng đậm, còn các chữ bị gỡ sẽ trở lại nền trắng. |
+    | **Kết quả hiển thị** | - Các chữ được chọn sẽ được thêm mới vào Thư viện học tập<br>- Khi quay lại bảng chữ, những chữ này sẽ được **tô hồng**<br>- Popup đóng lại, người dùng nhận phản hồi thành công |
+    | **Trường hợp không có dữ liệu** | - Nếu không có chữ nào hiển thị: “Không tìm thấy chữ phù hợp với bộ lọc hiện tại.”<br>- Nếu không chọn chữ nào mà vẫn nhấn “Đồng ý”: không lưu, popup giữ nguyên |
+
+
+#### 3.22.4 Chức năng Luyện tập chế độ duyệt bài {#toc-3-22-4}
+
+??? book "Luyện tập – Duyệt bài"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Duyệt bài |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Hiragana |
+    | **Mô tả** | Người dùng chọn chế độ "Duyệt bài" để lần lượt xem từng chữ cái Hiragana theo dạng flashcard. Với mỗi thẻ, người dùng xác nhận “Đã nhớ” hoặc bỏ qua. Chữ đã nhớ sẽ được đánh dấu nền hồng trên bảng chữ và có trạng thái đã thuộc khi quay lại popup. |
+    | **Giao diện liên quan** | - Màn hình Bảng chữ Hiragana<br>- Popup “Luyện tập”<br>- Giao diện flashcard chế độ Duyệt bài<br>- Màn hình thống kê sau duyệt |
+    | **Luồng thao tác chính** | 1. Từ **màn hình chính**, chọn tab **Bảng chữ Hiragana**<br>2. Người dùng có thể:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nhấn nút **“Luyện tập”** ở góc trên<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nhấn vào tiêu đề **Bảng chữ chính / Tenten / Maru / Ảo âm**<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nhấn vào **hàng** (ví dụ: `k`, `s`, `t`...) hoặc **cột** (ví dụ: `a`, `i`, `u`...)<br>3. Popup “Luyện tập” hiển thị tương ứng với bảng chữ, hàng/cột đã chọn<br>4. Chọn chế độ **Duyệt bài**<br>5. Giao diện flashcard hiển thị lần lượt từng chữ:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nút **“Đã nhớ”** → đánh dấu là đã thuộc<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nút **“Quay lại”** (từ flashcard thứ 2 trở đi) để xem lại thẻ trước đó<br>6. Khi duyệt xong toàn bộ chữ:<br>&nbsp;&nbsp;&nbsp;&nbsp;→ Màn hình **thống kê kết quả** hiển thị:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Số chữ **đã nhớ** (nền xanh, đậm)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Số chữ **cần học lại** (nền đỏ, đậm)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Nút **“Duyệt lại”** để luyện lại toàn bộ phần nội dung vừa học |
+    | **Điều kiện hiển thị** | Có dữ liệu chữ cái thuộc bảng chữ và hàng/cột đã chọn |
+    | **Kết quả hiển thị** | - Flashcard hiển thị các chữ lần lượt<br>- Trạng thái “đã nhớ” được lưu và đồng bộ trên bảng chữ<br>- Giao diện thống kê kết quả hiện ra sau khi duyệt xong |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không tìm thấy chữ phù hợp để luyện tập” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Hàng: `-`, `k`, `s`, `t`, `n`, `h`, `m`, `y`, `r`, `w`...<br>Cột: `a`, `i`, `u`, `e`, `o` |
+
+
+#### 3.22.5 Chức năng Luyện tập – Chế độ Học {#toc-3-22-5}
+
+??? book "Luyện tập – Chế độ Học"
+| Trường | Nội dung |
+|--------|----------|
+| **Tên chức năng** | Luyện tập – Chế độ Học |
+| **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Hiragana: nhấn nút “Luyện tập” hoặc nhấn vào tên bảng chữ, hàng, cột |
+| **Mô tả** | Chế độ Học cho phép người dùng học chữ Hiragana thông qua các card nội dung và flashcard, xen kẽ với các chặn kiểm tra tiến độ. Mỗi chữ có thể được đánh dấu đã nhớ hoặc thêm vào thư viện. Sau khi hoàn thành, người học sẽ nhận được thống kê và thông báo chúc mừng. |
+| **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình card học<br>- Flashcard có 2 mặt (trước/sau)<br>- Bài kiểm tra giữa chừng (câu hỏi)<br>- Thống kê kết quả<br>- Popup hoàn thành luyện tập |
+| **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Hiragana<br>2. Nhấn nút “Luyện tập” hoặc nhấn vào bảng chữ / hàng / cột<br>3. Popup “Luyện tập” hiển thị<br>4. Người dùng chọn chế độ “Học”<br>5. Hệ thống hiển thị lần lượt các nội dung học:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Với card chữ: hiện chữ + phiên âm + nghĩa, nhấn **“Hoàn thành”** → sang nội dung kế tiếp<br>&nbsp;&nbsp;&nbsp;&nbsp;– Với flashcard:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Mặt trước: hiện chữ + nút **🌟** (Thêm vào Thư viện), **💡** (Đánh dấu đã thuộc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Nhấn “Tiếp theo” → lật sang mặt sau<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Nhấn “Hoàn thành” → sang nội dung kế tiếp<br>6. Sau một số lượng nội dung, hiển thị **bài kiểm tra chặn tiến độ** gồm các dạng:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nối chữ (drag and drop)<br>&nbsp;&nbsp;&nbsp;&nbsp;– Vẽ chữ<br>&nbsp;&nbsp;&nbsp;&nbsp;– Chọn đáp án đúng<br>&nbsp;&nbsp;&nbsp;&nbsp;– Phát âm đúng từ<br>&nbsp;&nbsp;&nbsp;&nbsp;• Câu đúng → hiện “Hoàn thành”<br>&nbsp;&nbsp;&nbsp;&nbsp;• Câu sai → hiện “Không hoàn thành”<br>7. Sau khi hoàn tất tất cả nội dung học → hiển thị:<br>&nbsp;&nbsp;&nbsp;&nbsp; - Popup “Chúc mừng bạn đã hoàn thành luyện tập” + nút “Quay lại” và nút “Học” |
+| **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn (bảng chữ chính, tenten, maru, ảo âm, hàng/cột) |
+| **Kết quả hiển thị** | - Giao diện học từng nội dung 1 cách tuần tự<br>- Các chữ được đánh dấu **“đã nhớ”** sẽ chuyển nền **hồng** tại bảng chữ<br>- Các chữ được thêm vào Thư viện bằng nút **🌟**<br>- Hiển thị popup hoàn thành cuối buổi học |
+| **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không tìm thấy chữ phù hợp để luyện tập” |
+| **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+| **Phân loại theo hàng/cột** | Có thể lọc và học theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`,...) tùy vào lựa chọn trước đó |
+
+
+#### 3.22.6 Chức năng Luyện tập – Chế độ Xem Chi tiết {#toc-3-22-6}
+
+??? book "Luyện tập – Chế độ Xem Chi tiết"
+
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Chế độ Xem Chi tiết |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Hiragana: nhấn nút “Luyện tập” hoặc nhấn vào từng bảng/hàng/cột để chọn chế độ "Chi tiết" |
+    | **Mô tả** | Cho phép người dùng xem chi tiết từng chữ Hiragana: hình chữ, cách đọc, phát âm, mẹo nhớ, chữ dễ nhầm, từ vựng minh họa. Có thể thao tác thêm vào thư viện (⭐) hoặc đánh dấu đã thuộc (💡) cho từng chữ |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình chi tiết chữ Hiragana |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính ➝ vào Bảng chữ Hiragana<br>2. Nhấn nút “Luyện tập” hoặc chọn trực tiếp bảng/chữ hàng/cột<br>3. Popup xuất hiện ➝ chọn chế độ **Chi tiết** ➝ chọn bảng chữ (Bảng chữ chính, Tenten, Maru, Ảo âm) và lọc theo hàng/cột nếu muốn<br>4. Màn hình chi tiết chữ xuất hiện với nội dung từng chữ và các thao tác kèm theo |
+    | **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn |
+    | **Kết quả hiển thị** | Giao diện chi tiết chữ gồm:<br>• Chữ + romaji + nút phát âm<br>• Mẹo nhớ: hình minh họa và ghi chú<br>• Dễ nhầm: liệt kê các chữ dễ nhầm lẫn<br>• Từ vựng: các từ chứa chữ đang xem<br>• ⭐: Thêm vào thư viện<br>• 💡: Đánh dấu đã thuộc |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không tìm thấy chữ phù hợp để luyện tập” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Có thể lọc theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`,...) |
+
+
+#### 3.22.7 Chức năng Luyện tập – Chế độ Luyện viết {#toc-3-22-7}
+
+??? book "Luyện tập – Chế độ Luyện viết"
+
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng**  | Luyện tập – Chế độ Luyện viết |
+    | **Phạm vi sử dụng**| Popup "Luyện tập" tại màn hình Bảng chữ Hiragana: nhấn nút “Luyện tập” hoặc nhấn vào Bảng chữ, Hàng, Cột → chọn mục “Luyện viết”. |
+    | **Mô tả** | Cho phép người dùng luyện cách viết từng chữ Hiragana bằng tay theo đúng thứ tự nét, kèm hướng dẫn viết, phát âm và điều hướng giữa các chữ trong danh sách luyện. |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình luyện viết tay chữ Hiragana với:<br>• Nét viết mẫu động (animation)<br>• Số thứ tự nét<br>• Khung viết tay<br>• Nút “Hoàn tác nét viết”<br>• Nút “Xóa”<br>• Nút “Ẩn/Hiện hướng dẫn viết”<br>• Nút **🔊 Phát âm chữ**<br>• Nút điều hướng ← → để chuyển sang chữ khác |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Hiragana<br>2. Nhấn nút “Luyện tập” hoặc nhấn vào bảng/chữ/hàng/cột → hiện popup luyện tập<br>3. Chọn chế độ **Luyện viết**<br>4. Giao diện luyện chữ hiển thị từng chữ theo danh sách đã chọn<br>5. Người dùng có thể:<br>&emsp;- Xem nét viết động kèm số thứ tự<br>&emsp;- Viết tay theo khung<br>&emsp;- Nhấn 🔊 để phát âm chữ hiện tại<br>&emsp;- Nhấn **Hoàn tác** để quay lại từng nét<br>&emsp;- Nhấn **Xóa** để viết lại<br>&emsp;- Nhấn **Ẩn/Hiện hướng dẫn** để bật/tắt nét mẫu<br>&emsp;- Dùng **← / →** để chuyển sang chữ khác hoặc quay lại chữ trước |
+    | **Điều kiện hiển thị** | Có dữ liệu chữ viết phù hợp với lựa chọn bảng/hàng/cột |
+    | **Kết quả hiển thị** | - Người học luyện viết từng chữ đúng thứ tự nét<br>- Có thể nghe phát âm và tự đánh giá<br>- Giao diện phản hồi tốt với thao tác viết và chuyển trang |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không tìm thấy chữ phù hợp để luyện viết” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Có thể luyện theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`, `e`, `o`) |
+
+
+#### 3.22.8 Chức năng Luyện tập – Chế độ Flashcard {#toc-3-22-8}
+
+??? book "Luyện tập – Chế độ Flashcard"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Chế độ Flashcard |
+    | **Phạm vi sử dụng** | Popup “Luyện tập” tại màn hình Bảng chữ Hiragana: nhấn nút “Luyện tập” hoặc chọn trực tiếp bảng chữ, cột, hàng |
+    | **Mô tả** | Chế độ Flashcard cho phép người học ôn tập bảng chữ Hiragana thông qua các thẻ 2 mặt, có thể đánh dấu “Đã thuộc” hoặc thêm vào thư viện để học tiếp. Có 3 loại flashcard: <br>- Loại 1: Hiển thị hướng viết chữ<br>- Loại 2: Hiển thị chữ + phiên âm + âm thanh + câu gợi nhớ<br>- Loại 3: Hình minh họa + nét viết + câu gợi nhớ |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình flashcard<br>- Popup tùy chỉnh (hiện tất cả, xáo trộn, tự chạy, chọn loại flashcard)<br>- Popup hoàn thành khi đánh dấu hết các thẻ đã thuộc |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Hiragana<br>2. Nhấn nút “Luyện tập” hoặc chọn bảng chữ/cột/hàng<br>3. Chọn chế độ “Flashcard”<br>4. Giao diện hiển thị thẻ flashcard (1 trong 3 loại)<br>5. Người dùng có thể:<br> • Lật mặt sau flashcard<br> • Đánh dấu thuộc (biểu tượng bóng đèn)<br> • Thêm vào thư viện (biểu tượng ngôi sao)<br> • Chuyển thẻ bằng nút trái/phải<br>6. Khi tất cả thẻ được đánh dấu là đã thuộc → hiện popup “Chúc mừng” |
+    | **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn (bảng chữ chính, tenten, maru, ảo âm...) |
+    | **Kết quả hiển thị** | - Giao diện flashcard với nội dung tương ứng<br>- Biểu tượng trạng thái: đã thuộc / thêm thư viện<br>- Điều hướng giữa các thẻ<br>- Tùy chọn điều chỉnh cách học |
+    | **Tùy chỉnh flashcard** | - **Hiện tất cả**: Hiển thị cả thẻ đã thuộc và chưa thuộc<br>- **Xáo trộn**: Đảo thứ tự flashcard<br>- **Tự chạy**: Tự động chuyển flashcard theo tốc độ (Chậm – Tiêu chuẩn – Nhanh)<br>⮕ Lưu ý: Tự chạy chỉ tự lướt, không tự lật thẻ<br>- **Chọn loại flashcard**: Chuyển giữa loại 1, 2, 3 |
+    | **Kết thúc luyện tập** | - Khi người dùng đã đánh dấu tất cả flashcard là “đã thuộc” (nếu không bật “Hiện tất cả”) → hiện popup “Chúc mừng – Bạn đã nhớ hết phần Flashcard rồi !!!” kèm nút “Học lại” |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không tìm thấy chữ phù hợp để luyện tập” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Có thể lọc và học theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`, `e`, `o`) |
+
+
+#### 3.22.9 Chức năng Luyện tập – Chế độ Trắc nghiệm {#toc-3-22-9}
+
+??? book "Luyện tập – Chế độ Trắc nghiệm"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Chế độ Trắc nghiệm |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Hiragana: nhấn nút “Luyện tập” hoặc chọn trực tiếp từng bảng, cột hoặc hàng, sau đó chọn “Trắc nghiệm” |
+    | **Mô tả** | Chế độ Trắc nghiệm cho phép người dùng kiểm tra khả năng ghi nhớ chữ Hiragana thông qua các câu hỏi dạng chọn đáp án đúng. Mỗi câu có 1 câu hỏi và 4 phương án. Có phát âm chữ để nghe trước khi chọn. |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình bài kiểm tra trắc nghiệm với thanh tiến độ, câu hỏi, lựa chọn đáp án và biểu tượng loa |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Hiragana<br>2. Nhấn nút “Luyện tập” hoặc chọn trực tiếp bảng/cột/hàng<br>3. Chọn chế độ “Trắc nghiệm”<br>4. Hệ thống hiển thị từng câu hỏi: có thể là **âm thanh phát âm chữ** hoặc **ký tự**<br>5. Người dùng chọn 1 trong 4 đáp án<br>6. Hiển thị phản hồi đúng/sai: màu xanh lá (đúng), đỏ (sai)<br>7. Tự động chuyển sang câu tiếp theo<br>8. Sau khi làm xong, hiển thị kết quả tổng hợp phần trăm và thống kê đúng/sai từng chữ |
+    | **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn (Bảng chữ Chính, Tenten, Maru, Kết hợp) |
+    | **Kết quả hiển thị** | - Câu hỏi + 4 lựa chọn<br>- Biểu tượng phát âm trung tâm để phát lại câu hỏi (không bị tắt khi tắt âm)<br>- Màu sắc phản hồi sau chọn: đỏ (sai), xanh lá (đúng)<br>- **Thanh tiến độ**:<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Màu xanh: số câu đã làm hoặc đang làm<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Màu đỏ: số câu làm đúng<br>- Màn hình kết quả cuối: phần trăm đúng, danh sách chữ, nút “Làm lại” |
+    | **Âm thanh** | - Có 2 loại âm thanh:<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Âm thanh câu hỏi (phát âm chữ): luôn phát được, không bị tắt<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Âm thanh hiệu ứng chọn đáp án: có thể tắt bằng cách nhấn biểu tượng **loa** ở góc phải trên màn hình |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không có dữ liệu để kiểm tra” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Tenten, Maru, Kết hợp |
+    | **Phân loại theo hàng/cột** | Có thể lọc và luyện tập theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`,...) |
+
+
+#### 3.22.10 Chức năng Luyện tập – chế độ Thử thách 1 {#toc-3-22-10}
+
+??? book "Luyện tập – chế độ Thử thách 1"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – chế độ Thử thách 1 |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Hiragana |
+    | **Mô tả** | Chế độ Thử thách 1 kiểm tra khả năng nhận diện nhanh Hiragana bằng cách hiển thị **romaji (phiên âm)**, yêu cầu người dùng chọn đúng **chữ Hiragana tương ứng**. Có giới hạn **thời gian cho từng câu** (thể hiện bằng thanh tiến độ) và **tối đa 3 lần sai toàn bài** (bao gồm cả chọn sai và hết giờ). |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình thử thách: romaji + lưới đáp án<br>- Thanh tiến độ thời gian (mỗi câu)<br>- Trái tim hiển thị số lần sai còn lại<br>- Popup “Thành công” hoặc “Thua”<br>- Thông báo phản hồi đúng/sai/hết giờ |
+    | **Luồng thao tác chính** |<br>1. Người dùng vào **Bảng chữ Hiragana**<br>2. Nhấn **Luyện tập** → chọn chế độ **Thử thách 1**<br>3. Bài gồm 16 câu hỏi:<br>&emsp;• Hiển thị 1 romaji (VD: `sa`, `ryu`)<br>&emsp;• 16 đáp án là chữ Hiragana<br>&emsp;• Thanh thời gian + trái tim<br>4. Người dùng chọn đáp án hoặc hết giờ:<br>&emsp;• ✅ Đúng:<br>&emsp;&emsp;– Tô xanh lá đáp án đúng<br>&emsp;&emsp;– Hiện thông báo “Làm tốt lắm, tiếp tục nào”<br>&emsp;&emsp;– Cập nhật vào **đã thuộc**, tô **hồng** trong bảng<br>&emsp;&emsp;– Tăng % tiến độ<br>&emsp;&emsp;– Tự chuyển câu tiếp theo<br>&emsp;• ❌ Sai:<br>&emsp;&emsp;– Tô đỏ chữ sai, xanh lá chữ đúng<br>&emsp;&emsp;– Hiện thông báo “Sai rồi bạn ơi, ‘xx’ mới đúng”<br>&emsp;&emsp;– Mất 1 tim<br>&emsp;• ⏰ Hết giờ:<br>&emsp;&emsp;– Tô xanh chữ đúng<br>&emsp;&emsp;– Hiện thông báo “Hết giờ cho câu này”<br>&emsp;&emsp;– Mất 1 tim<br>5. Sai đủ **3 lần** → popup “Thua”<br>6. Hoàn thành đúng → popup “Thành công” |
+    | **Chi tiết hiển thị** | - Câu hỏi: romaji lớn, màu đậm<br>- 16 ô đáp án chữ Hiragana<br>- Thanh thời gian: 5–7s / câu<br>- Mỗi sai/hết giờ mất 1 tim (tối đa 3)<br>- Thông báo:<br>&emsp;• ✅ “Làm tốt lắm, tiếp tục nào”<br>&emsp;• ❌ “Sai rồi bạn ơi, ‘さ’ mới đúng”<br>&emsp;• ⏰ “Hết giờ cho câu này”<br>- Popup kết quả:<br>&emsp;• 🎉 “Thành công rồi!”<br>&emsp;• 😢 “Hãy luyện tập thật tốt nhé!” |
+    | **Kết quả hiển thị** | - Cập nhật từ đã thuộc (tô hồng trong bảng)<br>- Cập nhật % hoàn thành bảng chữ<br>- Hiện popup kết quả<br>- Cho làm lại |
+    | **Điều kiện hiển thị** | Có đủ số lượng chữ trong bảng hiện tại để tạo thử thách |
+    | **Trường hợp không có dữ liệu** | “Không đủ dữ liệu để bắt đầu thử thách. Vui lòng chọn nhiều chữ hơn nhé.” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Biến âm, Kết hợp |
+
+
+#### 3.22.11 Chức năng Luyện tập – chế độ Thử thách 2 {#toc-3-22-11}
+
+??? book "Luyện tập – chế độ Thử thách 2"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – chế độ Thử thách 2 |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Hiragana |
+    | **Mô tả** | Chế độ Thử thách 2 kiểm tra khả năng đọc Hiragana bằng cách hiển thị **chữ Hiragana**, yêu cầu người dùng chọn đúng **romaji tương ứng**. Luật chơi, giao diện, thời gian, tim và chấm điểm hoàn toàn giống Thử thách 1, chỉ khác chiều câu hỏi – đáp án. |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình thử thách: chữ Hiragana + lưới đáp án romaji<br>- Thanh tiến độ thời gian (mỗi câu)<br>- Trái tim hiển thị số lần sai còn lại<br>- Popup “Thành công” hoặc “Thua”<br>- Thông báo phản hồi đúng/sai/hết giờ |
+    | **Luồng thao tác chính** |<br>1. Người dùng vào **Bảng chữ Hiragana**<br>2. Nhấn **Luyện tập** → chọn chế độ **Thử thách 2**<br>3. Bài gồm 16 câu hỏi:<br>&emsp;• Hiển thị 1 chữ Hiragana (VD: `き`, `ちゅ`)<br>&emsp;• 16 đáp án là romaji<br>&emsp;• Thanh thời gian + trái tim<br>4. Người dùng chọn hoặc hết giờ:<br>&emsp;• ✅ Đúng → tô xanh, thông báo, cập nhật từ đã thuộc, tăng %<br>&emsp;• ❌ Sai → tô đỏ/sai, hiện đúng, trừ tim<br>&emsp;• ⏰ Hết giờ → hiện đúng, trừ tim<br>5. Sai đủ 3 lần → popup “Thua”<br>6. Làm đúng hết → popup “Thành công” |
+    | **Chi tiết hiển thị** | - Câu hỏi: chữ Hiragana to, màu đậm<br>- 16 ô đáp án romaji<br>- Thanh thời gian: 5–7s / câu<br>- Mỗi sai/hết giờ mất 1 tim<br>- Thông báo:<br>&emsp;• ✅ “Làm tốt lắm, tiếp tục nào”<br>&emsp;• ❌ “Sai rồi bạn ơi, ‘ki’ mới đúng”<br>&emsp;• ⏰ “Hết giờ cho câu này”<br>- Popup kết quả:<br>&emsp;• 🎉 “Thành công rồi!”<br>&emsp;• 😢 “Hãy luyện tập thật tốt nhé!” |
+    | **Kết quả hiển thị** | - Từ đúng → vào danh sách đã thuộc (tô hồng)<br>- Tăng % bảng chữ<br>- Hiện popup kết quả<br>- Có thể làm lại |
+    | **Điều kiện hiển thị** | Có đủ số lượng chữ để tạo thử thách |
+    | **Trường hợp không có dữ liệu** | “Không đủ dữ liệu để bắt đầu thử thách. Vui lòng chọn nhiều chữ hơn nhé.” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Biến âm, Kết hợp |
+
+
+
+#### 3.22.12 Hiển thị bảng chữ Katakana { #toc-3-22-12}
+
+??? book "Hiển thị bảng chữ Katakana"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Hiển thị bảng chữ Katakana |
+    | **Phạm vi sử dụng** | Mục “Bảng chữ” trên màn hình chính |
+    | **Mô tả** | Hiển thị toàn bộ bảng chữ Katakana, bao gồm 3 phần: bảng chữ chính, bảng biến âm và bảng chữ kết hợp. Mỗi chữ cái được trình bày cùng phiên âm romaji. Các **nguyên âm** (a, i, u, e, o) hiển thị theo hàng ngang trên cùng, còn **phụ âm** (k, s, t, n, h...) nằm dọc bên trái. Những chữ **đã đánh dấu "Đã thuộc" sẽ được tô nền hồng** để theo dõi tiến độ ghi nhớ. |
+    | **Giao diện liên quan** | - Màn hình “Katakana”<br> - Tabs: **Cơ bản**, **Biến âm**, **Kết hợp**<br> - Nút “Luyện tập” (góc trên bên phải)<br> - Lưới chữ cái dạng bảng: cột dọc phụ âm, hàng ngang nguyên âm |
+    | **Luồng thao tác chính** | 1. Người dùng mở ứng dụng → nhấn “Bảng chữ Katakana”<br>2. Màn hình hiển thị 3 tab tương ứng:<br>&emsp;• **Cơ bản**: bảng 46 chữ chính (あ〜ん)<br>&emsp;• **Biến âm**: tenten (が, だ...) + maru (ぱ, ぴ...)<br>&emsp;• **Kết hợp**: các âm ghép (きゃ, しゅ, にょ...)<br>3. Trong mỗi tab, bảng được trình bày:<br>&emsp;• Cột trái: phụ âm (k, s, t, n, h, m, y, r, w)<br>&emsp;• Hàng ngang trên cùng: nguyên âm (a, i, u, e, o)<br>&emsp;• Ô giao giữa hàng và cột là chữ Katakana kèm phiên âm romaji<br>4. Chữ đã đánh dấu "Đã thuộc" → tô nền hồng<br>5. Người dùng có thể nhấn vào từng chữ để xem chi tiết hoặc luyện tập |
+    | **Điều kiện hiển thị** | Dữ liệu bảng chữ Katakana được tải thành công |
+    | **Kết quả hiển thị** | - Giao diện bảng chữ hiển thị đầy đủ, rõ ràng và phản hồi nhanh<br> - Nguyên âm / phụ âm sắp xếp đúng quy tắc phát âm tiếng Nhật<br> - Các chữ đã thuộc được hiển thị nổi bật bằng màu nền hồng<br> - Người dùng có thể nhấn vào ô chữ để học hoặc luyện tập trực tiếp |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không có dữ liệu bảng chữ cho chế độ này” |
+
+#### 3.22.13 Chức năng xem chi tiết chữ Katakana {#toc-3-22-13}
+
+??? book "Xem chi tiết chữ Katakana (áp dụng cho Cơ bản, Biến âm, Kết hợp)"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Xem chi tiết một chữ Katakana |
+    | **Phạm vi sử dụng** | Màn hình Bảng chữ → nhấn vào 1 ô chữ bất kỳ (thuộc Cơ bản, Biến âm hoặc Kết hợp) |
+    | **Mô tả** | Hiển thị chi tiết thông tin học tập cho từng chữ Katakana, bao gồm: chữ viết, phát âm, mẹo ghi nhớ, chữ dễ nhầm và từ vựng ứng dụng. Cho phép người dùng lưu chữ vào Thư viện cá nhân và đánh dấu là "Đã thuộc". |
+    | **Giao diện liên quan** | - Màn hình chi tiết chữ Katakana<br>- Có nút quay lại, biểu tượng ⭐ và 💡 ở góc phải trên |
+    | **Luồng thao tác chính** | <br>1. Người dùng truy cập Bảng chữ Katakana<br>2. Nhấn vào 1 ô chữ bất kỳ → chuyển sang màn hình chi tiết<br>3. Màn hình hiển thị nội dung sau:<br>&emsp;• **Chữ Katakana lớn** + **romaji** + nút **nghe phát âm**<br>&emsp;• **Mẹo nhớ**: hình minh họa và ví dụ gợi nhớ<br>&emsp;• **Dễ nhầm**: các chữ thường bị nhầm với chữ hiện tại<br>&emsp;• **Từ vựng**: danh sách từ có chứa chữ này, gồm Katakana, nghĩa tiếng Việt, nút nghe<br>4. Người dùng có thể:<br>&emsp;• Nhấn biểu tượng ⭐ → **lưu chữ vào Thư viện học tập cá nhân**<br>&emsp;• Nhấn biểu tượng 💡 → **đánh dấu "Đã thuộc"**, dùng để tô hồng ở bảng chữ<br>&emsp;• Dùng mũi tên trái/phải để xem chữ trước/sau |
+    | **Điều kiện hiển thị** | Có dữ liệu chi tiết của chữ đã chọn (được load hoặc cache nội bộ) |
+    | **Kết quả hiển thị** | - Thông tin đầy đủ, trực quan, dễ nhớ<br> - Chữ sau khi đánh dấu "Đã thuộc" → hiển thị nền hồng trong bảng chữ<br> - Chữ sau khi lưu vào Thư viện → hiển thị trong mục Thư viện học tập (tab Bảng chữ) |
+    | **Trường hợp không có dữ liệu** | Hiển thị: “Hiện chưa có dữ liệu chi tiết cho chữ này. Vui lòng thử lại sau.” |
+
+
+#### 3.22.14 Chức năng thêm nhiều chữ cái vào Thư viện học tập {#toc-3-22-14}
+
+??? book "Thêm nhiều chữ cái vào Thư viện học tập"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Thêm nhiều chữ cái vào Thư viện học tập |
+    | **Phạm vi sử dụng** | Biểu tượng ⭐➕ (nằm ở góc phải màn hình Bảng chữ Katakana) |
+    | **Mô tả** | Khi người dùng nhấn vào biểu tượng “⭐➕”, một popup hiển thị cho phép chọn nhanh nhiều chữ cái để thêm vào Thư viện. Chữ đã có trong Thư viện được tô **hồng đậm**. Chữ đang được chọn thêm mới sẽ được **highlight viền trắng**. |
+    | **Giao diện liên quan** | - Biểu tượng ⭐➕ ở màn hình “Katakana”<br>- Popup “Cập nhật danh sách yêu thích”<br>- 2 dropdown lọc theo **Loại bảng chữ** và **Phạm vi hàng/cột**<br>- Checkbox “Chọn tất cả”<br>- Lưới các chữ cái (dạng ô vuông) |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính, người dùng nhấn vào “Bảng chữ”<br>2. Hiển thị bảng Katakana với tab mặc định là “Cơ bản” (gồm các chữ cái thuộc hàng -, k, s, t, n, h, m, y, r, w và các cột a, i, u, e, o)<br>3. Nhấn vào biểu tượng ⭐➕ ở góc trên bên phải màn hình<br>4. Hiện popup “Cập nhật danh sách yêu thích” gồm 2 bộ lọc: Loại bảng chữ (Bảng chữ chính, Tenten, Maru, Ảo âm) và Phạm vi (Hàng -, k, s, t, n, h, m, y, r, w, z, p hoặc Cột a, i, u, e, o)<br>5. Người dùng chọn một loại bảng và hàng/cột để lọc hiển thị chữ cái tương ứng<br>6. Các chữ cái hiển thị có 3 trạng thái: (i) Đã có trong Thư viện – nền hồng đậm, người dùng vẫn có thể nhấn để **bỏ chọn** (khi nhấn “Đồng ý” sẽ bị **xóa khỏi Thư viện**); (ii) Chữ đang được thêm mới – viền trắng nền hồng nhạt; (iii) Chữ chưa chọn – nền trắng<br>7. Có thể chọn thủ công từng chữ hoặc chọn nhanh toàn bộ bằng checkbox “Chọn tất cả”<br>8. Nhấn nút “Đồng ý” để cập nhật: thêm chữ mới và gỡ các chữ đã bỏ chọn khỏi Thư viện<br>9. Popup đóng lại, quay về bảng chữ, các ô chữ được thêm sẽ hiển thị nền hồng đậm, còn các chữ bị gỡ sẽ trở lại nền trắng. |
+    | **Kết quả hiển thị** | - Các chữ được chọn sẽ được thêm mới vào Thư viện học tập<br>- Khi quay lại bảng chữ, những chữ này sẽ được **tô hồng**<br>- Popup đóng lại, người dùng nhận phản hồi thành công |
+    | **Trường hợp không có dữ liệu** | - Nếu không có chữ nào hiển thị: “Không tìm thấy chữ phù hợp với bộ lọc hiện tại.”<br>- Nếu không chọn chữ nào mà vẫn nhấn “Đồng ý”: không lưu, popup giữ nguyên |
+
+
+#### 3.22.15 Chức năng Luyện tập chế độ duyệt bài {#toc-3-22-15}
+
+??? book "Luyện tập – Duyệt bài"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Duyệt bài |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Katakana |
+    | **Mô tả** | Người dùng chọn chế độ "Duyệt bài" để lần lượt xem từng chữ cái Katakana theo dạng flashcard. Với mỗi thẻ, người dùng xác nhận “Đã nhớ” hoặc bỏ qua. Chữ đã nhớ sẽ được đánh dấu nền hồng trên bảng chữ và có trạng thái đã thuộc khi quay lại popup. |
+    | **Giao diện liên quan** | - Màn hình Bảng chữ Katakana<br>- Popup “Luyện tập”<br>- Giao diện flashcard chế độ Duyệt bài<br>- Màn hình thống kê sau duyệt |
+    | **Luồng thao tác chính** | 1. Từ **màn hình chính**, chọn tab **Bảng chữ Katakana**<br>2. Người dùng có thể:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nhấn nút **“Luyện tập”** ở góc trên<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nhấn vào tiêu đề **Bảng chữ chính / Tenten / Maru / Ảo âm**<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nhấn vào **hàng** (ví dụ: `k`, `s`, `t`...) hoặc **cột** (ví dụ: `a`, `i`, `u`...)<br>3. Popup “Luyện tập” hiển thị tương ứng với bảng chữ, hàng/cột đã chọn<br>4. Chọn chế độ **Duyệt bài**<br>5. Giao diện flashcard hiển thị lần lượt từng chữ:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nút **“Đã nhớ”** → đánh dấu là đã thuộc<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nút **“Quay lại”** (từ flashcard thứ 2 trở đi) để xem lại thẻ trước đó<br>6. Khi duyệt xong toàn bộ chữ:<br>&nbsp;&nbsp;&nbsp;&nbsp;→ Màn hình **thống kê kết quả** hiển thị:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Số chữ **đã nhớ** (nền xanh, đậm)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Số chữ **cần học lại** (nền đỏ, đậm)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Nút **“Duyệt lại”** để luyện lại toàn bộ phần nội dung vừa học |
+    | **Điều kiện hiển thị** | Có dữ liệu chữ cái thuộc bảng chữ và hàng/cột đã chọn |
+    | **Kết quả hiển thị** | - Flashcard hiển thị các chữ lần lượt<br>- Trạng thái “đã nhớ” được lưu và đồng bộ trên bảng chữ<br>- Giao diện thống kê kết quả hiện ra sau khi duyệt xong |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không tìm thấy chữ phù hợp để luyện tập” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Hàng: `-`, `k`, `s`, `t`, `n`, `h`, `m`, `y`, `r`, `w`...<br>Cột: `a`, `i`, `u`, `e`, `o` |
+
+
+#### 3.22.16 Chức năng Luyện tập – Chế độ Học {#toc-3-22-16}
+
+??? book "Luyện tập – Chế độ Học"
+| Trường | Nội dung |
+|--------|----------|
+| **Tên chức năng** | Luyện tập – Chế độ Học |
+| **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Katakana: nhấn nút “Luyện tập” hoặc nhấn vào tên bảng chữ, hàng, cột |
+| **Mô tả** | Chế độ Học cho phép người dùng học chữ Katakana thông qua các card nội dung và flashcard, xen kẽ với các chặn kiểm tra tiến độ. Mỗi chữ có thể được đánh dấu đã nhớ hoặc thêm vào thư viện. Sau khi hoàn thành, người học sẽ nhận được thống kê và thông báo chúc mừng. |
+| **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình card học<br>- Flashcard có 2 mặt (trước/sau)<br>- Bài kiểm tra giữa chừng (câu hỏi)<br>- Thống kê kết quả<br>- Popup hoàn thành luyện tập |
+| **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Katakana<br>2. Nhấn nút “Luyện tập” hoặc nhấn vào bảng chữ / hàng / cột<br>3. Popup “Luyện tập” hiển thị<br>4. Người dùng chọn chế độ “Học”<br>5. Hệ thống hiển thị lần lượt các nội dung học:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Với card chữ: hiện chữ + phiên âm + nghĩa, nhấn **“Hoàn thành”** → sang nội dung kế tiếp<br>&nbsp;&nbsp;&nbsp;&nbsp;– Với flashcard:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Mặt trước: hiện chữ + nút **🌟** (Thêm vào Thư viện), **💡** (Đánh dấu đã thuộc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Nhấn “Tiếp theo” → lật sang mặt sau<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Nhấn “Hoàn thành” → sang nội dung kế tiếp<br>6. Sau một số lượng nội dung, hiển thị **bài kiểm tra chặn tiến độ** gồm các dạng:<br>&nbsp;&nbsp;&nbsp;&nbsp;– Nối chữ (drag and drop)<br>&nbsp;&nbsp;&nbsp;&nbsp;– Vẽ chữ<br>&nbsp;&nbsp;&nbsp;&nbsp;– Chọn đáp án đúng<br>&nbsp;&nbsp;&nbsp;&nbsp;– Phát âm đúng từ<br>&nbsp;&nbsp;&nbsp;&nbsp;• Câu đúng → hiện “Hoàn thành”<br>&nbsp;&nbsp;&nbsp;&nbsp;• Câu sai → hiện “Không hoàn thành”<br>7. Sau khi hoàn tất tất cả nội dung học → hiển thị:<br>&nbsp;&nbsp;&nbsp;&nbsp; - Popup “Chúc mừng bạn đã hoàn thành luyện tập” + nút “Quay lại” và nút “Học” |
+| **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn (bảng chữ chính, tenten, maru, ảo âm, hàng/cột) |
+| **Kết quả hiển thị** | - Giao diện học từng nội dung 1 cách tuần tự<br>- Các chữ được đánh dấu **“đã nhớ”** sẽ chuyển nền **hồng** tại bảng chữ<br>- Các chữ được thêm vào Thư viện bằng nút **🌟**<br>- Hiển thị popup hoàn thành cuối buổi học |
+| **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không tìm thấy chữ phù hợp để luyện tập” |
+| **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+| **Phân loại theo hàng/cột** | Có thể lọc và học theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`,...) tùy vào lựa chọn trước đó |
+
+
+#### 3.22.17 Chức năng Luyện tập – Chế độ Xem Chi tiết {#toc-3-22-17}
+
+??? book "Luyện tập – Chế độ Xem Chi tiết"
+
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Chế độ Xem Chi tiết |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Katakana: nhấn nút “Luyện tập” hoặc nhấn vào từng bảng/hàng/cột để chọn chế độ "Chi tiết" |
+    | **Mô tả** | Cho phép người dùng xem chi tiết từng chữ Katakana: hình chữ, cách đọc, phát âm, mẹo nhớ, chữ dễ nhầm, từ vựng minh họa. Có thể thao tác thêm vào thư viện (⭐) hoặc đánh dấu đã thuộc (💡) cho từng chữ |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình chi tiết chữ Katakana |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính ➝ vào Bảng chữ Katakana<br>2. Nhấn nút “Luyện tập” hoặc chọn trực tiếp bảng/chữ hàng/cột<br>3. Popup xuất hiện ➝ chọn chế độ **Chi tiết** ➝ chọn bảng chữ (Bảng chữ chính, Tenten, Maru, Ảo âm) và lọc theo hàng/cột nếu muốn<br>4. Màn hình chi tiết chữ xuất hiện với nội dung từng chữ và các thao tác kèm theo |
+    | **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn |
+    | **Kết quả hiển thị** | Giao diện chi tiết chữ gồm:<br>• Chữ + romaji + nút phát âm<br>• Mẹo nhớ: hình minh họa và ghi chú<br>• Dễ nhầm: liệt kê các chữ dễ nhầm lẫn<br>• Từ vựng: các từ chứa chữ đang xem<br>• ⭐: Thêm vào thư viện<br>• 💡: Đánh dấu đã thuộc |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không tìm thấy chữ phù hợp để luyện tập” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Có thể lọc theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`,...) |
+
+
+#### 3.22.18 Chức năng Luyện tập – Chế độ Luyện viết {#toc-3-22-18}
+
+??? book "Luyện tập – Chế độ Luyện viết"
+
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng**  | Luyện tập – Chế độ Luyện viết |
+    | **Phạm vi sử dụng**| Popup "Luyện tập" tại màn hình Bảng chữ Katakana: nhấn nút “Luyện tập” hoặc nhấn vào Bảng chữ, Hàng, Cột → chọn mục “Luyện viết”. |
+    | **Mô tả** | Cho phép người dùng luyện cách viết từng chữ Katakana bằng tay theo đúng thứ tự nét, kèm hướng dẫn viết, phát âm và điều hướng giữa các chữ trong danh sách luyện. |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình luyện viết tay chữ Katakana với:<br>• Nét viết mẫu động (animation)<br>• Số thứ tự nét<br>• Khung viết tay<br>• Nút “Hoàn tác nét viết”<br>• Nút “Xóa”<br>• Nút “Ẩn/Hiện hướng dẫn viết”<br>• Nút **🔊 Phát âm chữ**<br>• Nút điều hướng ← → để chuyển sang chữ khác |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Katakana<br>2. Nhấn nút “Luyện tập” hoặc nhấn vào bảng/chữ/hàng/cột → hiện popup luyện tập<br>3. Chọn chế độ **Luyện viết**<br>4. Giao diện luyện chữ hiển thị từng chữ theo danh sách đã chọn<br>5. Người dùng có thể:<br>&emsp;- Xem nét viết động kèm số thứ tự<br>&emsp;- Viết tay theo khung<br>&emsp;- Nhấn 🔊 để phát âm chữ hiện tại<br>&emsp;- Nhấn **Hoàn tác** để quay lại từng nét<br>&emsp;- Nhấn **Xóa** để viết lại<br>&emsp;- Nhấn **Ẩn/Hiện hướng dẫn** để bật/tắt nét mẫu<br>&emsp;- Dùng **← / →** để chuyển sang chữ khác hoặc quay lại chữ trước |
+    | **Điều kiện hiển thị** | Có dữ liệu chữ viết phù hợp với lựa chọn bảng/hàng/cột |
+    | **Kết quả hiển thị** | - Người học luyện viết từng chữ đúng thứ tự nét<br>- Có thể nghe phát âm và tự đánh giá<br>- Giao diện phản hồi tốt với thao tác viết và chuyển trang |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo: “Không tìm thấy chữ phù hợp để luyện viết” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Có thể luyện theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`, `e`, `o`) |
+
+
+#### 3.22.19 Chức năng Luyện tập – Chế độ Flashcard {#toc-3-22-19}
+
+??? book "Luyện tập – Chế độ Flashcard"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Chế độ Flashcard |
+    | **Phạm vi sử dụng** | Popup “Luyện tập” tại màn hình Bảng chữ Katakana: nhấn nút “Luyện tập” hoặc chọn trực tiếp bảng chữ, cột, hàng |
+    | **Mô tả** | Chế độ Flashcard cho phép người học ôn tập bảng chữ Katakana thông qua các thẻ 2 mặt, có thể đánh dấu “Đã thuộc” hoặc thêm vào thư viện để học tiếp. Có 3 loại flashcard: <br>- Loại 1: Hiển thị hướng viết chữ<br>- Loại 2: Hiển thị chữ + phiên âm + âm thanh + câu gợi nhớ<br>- Loại 3: Hình minh họa + nét viết + câu gợi nhớ |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình flashcard<br>- Popup tùy chỉnh (hiện tất cả, xáo trộn, tự chạy, chọn loại flashcard)<br>- Popup hoàn thành khi đánh dấu hết các thẻ đã thuộc |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Katakana<br>2. Nhấn nút “Luyện tập” hoặc chọn bảng chữ/cột/hàng<br>3. Chọn chế độ “Flashcard”<br>4. Giao diện hiển thị thẻ flashcard (1 trong 3 loại)<br>5. Người dùng có thể:<br> • Lật mặt sau flashcard<br> • Đánh dấu thuộc (biểu tượng bóng đèn)<br> • Thêm vào thư viện (biểu tượng ngôi sao)<br> • Chuyển thẻ bằng nút trái/phải<br>6. Khi tất cả thẻ được đánh dấu là đã thuộc → hiện popup “Chúc mừng” |
+    | **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn (bảng chữ chính, tenten, maru, ảo âm...) |
+    | **Kết quả hiển thị** | - Giao diện flashcard với nội dung tương ứng<br>- Biểu tượng trạng thái: đã thuộc / thêm thư viện<br>- Điều hướng giữa các thẻ<br>- Tùy chọn điều chỉnh cách học |
+    | **Tùy chỉnh flashcard** | - **Hiện tất cả**: Hiển thị cả thẻ đã thuộc và chưa thuộc<br>- **Xáo trộn**: Đảo thứ tự flashcard<br>- **Tự chạy**: Tự động chuyển flashcard theo tốc độ (Chậm – Tiêu chuẩn – Nhanh)<br>⮕ Lưu ý: Tự chạy chỉ tự lướt, không tự lật thẻ<br>- **Chọn loại flashcard**: Chuyển giữa loại 1, 2, 3 |
+    | **Kết thúc luyện tập** | - Khi người dùng đã đánh dấu tất cả flashcard là “đã thuộc” (nếu không bật “Hiện tất cả”) → hiện popup “Chúc mừng – Bạn đã nhớ hết phần Flashcard rồi !!!” kèm nút “Học lại” |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không tìm thấy chữ phù hợp để luyện tập” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ chính, Tenten, Maru, Ảo âm |
+    | **Phân loại theo hàng/cột** | Có thể lọc và học theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`, `e`, `o`) |
+
+
+#### 3.22.20 Chức năng Luyện tập – Chế độ Trắc nghiệm {#toc-3-22-20}
+
+??? book "Luyện tập – Chế độ Trắc nghiệm"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – Chế độ Trắc nghiệm |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Katakana: nhấn nút “Luyện tập” hoặc chọn trực tiếp từng bảng, cột hoặc hàng, sau đó chọn “Trắc nghiệm” |
+    | **Mô tả** | Chế độ Trắc nghiệm cho phép người dùng kiểm tra khả năng ghi nhớ chữ Katakana thông qua các câu hỏi dạng chọn đáp án đúng. Mỗi câu có 1 câu hỏi và 4 phương án. Có phát âm chữ để nghe trước khi chọn. |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình bài kiểm tra trắc nghiệm với thanh tiến độ, câu hỏi, lựa chọn đáp án và biểu tượng loa |
+    | **Luồng thao tác chính** | 1. Từ màn hình chính → vào Bảng chữ Katakana<br>2. Nhấn nút “Luyện tập” hoặc chọn trực tiếp bảng/cột/hàng<br>3. Chọn chế độ “Trắc nghiệm”<br>4. Hệ thống hiển thị từng câu hỏi: có thể là **âm thanh phát âm chữ** hoặc **ký tự**<br>5. Người dùng chọn 1 trong 4 đáp án<br>6. Hiển thị phản hồi đúng/sai: màu xanh lá (đúng), đỏ (sai)<br>7. Tự động chuyển sang câu tiếp theo<br>8. Sau khi làm xong, hiển thị kết quả tổng hợp phần trăm và thống kê đúng/sai từng chữ |
+    | **Điều kiện hiển thị** | Có dữ liệu bảng chữ phù hợp với lựa chọn (Bảng chữ Chính, Tenten, Maru, Kết hợp) |
+    | **Kết quả hiển thị** | - Câu hỏi + 4 lựa chọn<br>- Biểu tượng phát âm trung tâm để phát lại câu hỏi (không bị tắt khi tắt âm)<br>- Màu sắc phản hồi sau chọn: đỏ (sai), xanh lá (đúng)<br>- **Thanh tiến độ**:<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Màu xanh: số câu đã làm hoặc đang làm<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Màu đỏ: số câu làm đúng<br>- Màn hình kết quả cuối: phần trăm đúng, danh sách chữ, nút “Làm lại” |
+    | **Âm thanh** | - Có 2 loại âm thanh:<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Âm thanh câu hỏi (phát âm chữ): luôn phát được, không bị tắt<br>&nbsp;&nbsp;&nbsp;&nbsp;+ Âm thanh hiệu ứng chọn đáp án: có thể tắt bằng cách nhấn biểu tượng **loa** ở góc phải trên màn hình |
+    | **Trường hợp không có dữ liệu** | Hiển thị thông báo “Không có dữ liệu để kiểm tra” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Tenten, Maru, Kết hợp |
+    | **Phân loại theo hàng/cột** | Có thể lọc và luyện tập theo từng hàng (`k`, `s`, `t`,...) hoặc từng cột (`a`, `i`, `u`,...) |
+
+
+#### 3.22.21 Chức năng Luyện tập – chế độ Thử thách 1 {#toc-3-22-21}
+
+??? book "Luyện tập – chế độ Thử thách 1"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – chế độ Thử thách 1 |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Katakana |
+    | **Mô tả** | Chế độ Thử thách 1 kiểm tra khả năng nhận diện nhanh Katakana bằng cách hiển thị **romaji (phiên âm)**, yêu cầu người dùng chọn đúng **chữ Katakana tương ứng**. Có giới hạn **thời gian cho từng câu** (thể hiện bằng thanh tiến độ) và **tối đa 3 lần sai toàn bài** (bao gồm cả chọn sai và hết giờ). |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình thử thách: romaji + lưới đáp án<br>- Thanh tiến độ thời gian (mỗi câu)<br>- Trái tim hiển thị số lần sai còn lại<br>- Popup “Thành công” hoặc “Thua”<br>- Thông báo phản hồi đúng/sai/hết giờ |
+    | **Luồng thao tác chính** |<br>1. Người dùng vào **Bảng chữ Katakana**<br>2. Nhấn **Luyện tập** → chọn chế độ **Thử thách 1**<br>3. Bài gồm 16 câu hỏi:<br>&emsp;• Hiển thị 1 romaji (VD: `sa`, `ryu`)<br>&emsp;• 16 đáp án là chữ Katakana<br>&emsp;• Thanh thời gian + trái tim<br>4. Người dùng chọn đáp án hoặc hết giờ:<br>&emsp;• ✅ Đúng:<br>&emsp;&emsp;– Tô xanh lá đáp án đúng<br>&emsp;&emsp;– Hiện thông báo “Làm tốt lắm, tiếp tục nào”<br>&emsp;&emsp;– Cập nhật vào **đã thuộc**, tô **hồng** trong bảng<br>&emsp;&emsp;– Tăng % tiến độ<br>&emsp;&emsp;– Tự chuyển câu tiếp theo<br>&emsp;• ❌ Sai:<br>&emsp;&emsp;– Tô đỏ chữ sai, xanh lá chữ đúng<br>&emsp;&emsp;– Hiện thông báo “Sai rồi bạn ơi, ‘xx’ mới đúng”<br>&emsp;&emsp;– Mất 1 tim<br>&emsp;• ⏰ Hết giờ:<br>&emsp;&emsp;– Tô xanh chữ đúng<br>&emsp;&emsp;– Hiện thông báo “Hết giờ cho câu này”<br>&emsp;&emsp;– Mất 1 tim<br>5. Sai đủ **3 lần** → popup “Thua”<br>6. Hoàn thành đúng → popup “Thành công” |
+    | **Chi tiết hiển thị** | - Câu hỏi: romaji lớn, màu đậm<br>- 16 ô đáp án chữ Katakana<br>- Thanh thời gian: 5–7s / câu<br>- Mỗi sai/hết giờ mất 1 tim (tối đa 3)<br>- Thông báo:<br>&emsp;• ✅ “Làm tốt lắm, tiếp tục nào”<br>&emsp;• ❌ “Sai rồi bạn ơi, ‘さ’ mới đúng”<br>&emsp;• ⏰ “Hết giờ cho câu này”<br>- Popup kết quả:<br>&emsp;• 🎉 “Thành công rồi!”<br>&emsp;• 😢 “Hãy luyện tập thật tốt nhé!” |
+    | **Kết quả hiển thị** | - Cập nhật từ đã thuộc (tô hồng trong bảng)<br>- Cập nhật % hoàn thành bảng chữ<br>- Hiện popup kết quả<br>- Cho làm lại |
+    | **Điều kiện hiển thị** | Có đủ số lượng chữ trong bảng hiện tại để tạo thử thách |
+    | **Trường hợp không có dữ liệu** | “Không đủ dữ liệu để bắt đầu thử thách. Vui lòng chọn nhiều chữ hơn nhé.” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Biến âm, Kết hợp |
+
+
+#### 3.22.22 Chức năng Luyện tập – chế độ Thử thách 2 {#toc-3-22-22}
+
+??? book "Luyện tập – chế độ Thử thách 2"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Luyện tập – chế độ Thử thách 2 |
+    | **Phạm vi sử dụng** | Popup "Luyện tập" tại màn hình Bảng chữ Katakana |
+    | **Mô tả** | Chế độ Thử thách 2 kiểm tra khả năng đọc Katakana bằng cách hiển thị **chữ Katakana**, yêu cầu người dùng chọn đúng **romaji tương ứng**. Luật chơi, giao diện, thời gian, tim và chấm điểm hoàn toàn giống Thử thách 1, chỉ khác chiều câu hỏi – đáp án. |
+    | **Giao diện liên quan** | - Popup “Luyện tập”<br>- Màn hình thử thách: chữ Katakana + lưới đáp án romaji<br>- Thanh tiến độ thời gian (mỗi câu)<br>- Trái tim hiển thị số lần sai còn lại<br>- Popup “Thành công” hoặc “Thua”<br>- Thông báo phản hồi đúng/sai/hết giờ |
+    | **Luồng thao tác chính** |<br>1. Người dùng vào **Bảng chữ Katakana**<br>2. Nhấn **Luyện tập** → chọn chế độ **Thử thách 2**<br>3. Bài gồm 16 câu hỏi:<br>&emsp;• Hiển thị 1 chữ Katakana (VD: `き`, `ちゅ`)<br>&emsp;• 16 đáp án là romaji<br>&emsp;• Thanh thời gian + trái tim<br>4. Người dùng chọn hoặc hết giờ:<br>&emsp;• ✅ Đúng → tô xanh, thông báo, cập nhật từ đã thuộc, tăng %<br>&emsp;• ❌ Sai → tô đỏ/sai, hiện đúng, trừ tim<br>&emsp;• ⏰ Hết giờ → hiện đúng, trừ tim<br>5. Sai đủ 3 lần → popup “Thua”<br>6. Làm đúng hết → popup “Thành công” |
+    | **Chi tiết hiển thị** | - Câu hỏi: chữ Katakana to, màu đậm<br>- 16 ô đáp án romaji<br>- Thanh thời gian: 5–7s / câu<br>- Mỗi sai/hết giờ mất 1 tim<br>- Thông báo:<br>&emsp;• ✅ “Làm tốt lắm, tiếp tục nào”<br>&emsp;• ❌ “Sai rồi bạn ơi, ‘ki’ mới đúng”<br>&emsp;• ⏰ “Hết giờ cho câu này”<br>- Popup kết quả:<br>&emsp;• 🎉 “Thành công rồi!”<br>&emsp;• 😢 “Hãy luyện tập thật tốt nhé!” |
+    | **Kết quả hiển thị** | - Từ đúng → vào danh sách đã thuộc (tô hồng)<br>- Tăng % bảng chữ<br>- Hiện popup kết quả<br>- Có thể làm lại |
+    | **Điều kiện hiển thị** | Có đủ số lượng chữ để tạo thử thách |
+    | **Trường hợp không có dữ liệu** | “Không đủ dữ liệu để bắt đầu thử thách. Vui lòng chọn nhiều chữ hơn nhé.” |
+    | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Biến âm, Kết hợp |
+
+4. Đắc tả các chức năng chính Sakumi - Học viên
+
+### 4.1 Chức năng Góp ý { #toc-4-1 }
+
+??? book "Góp ý"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Góp ý |
+    | **Mô tả** | Chức năng cho phép học viên gửi góp ý trực tiếp về trung tâm để cải thiện chất lượng dịch vụ và trải nghiệm học tập. Học viên có thể chọn loại góp ý và gửi góp ý có/không kèm thông tin cá nhân. |
+    | **Giao diện liên quan** | - Màn hình lớp học (tab Tổng quan / Bài học / Kiểm tra...) → button **Gửi góp ý đến trung tâm**<br> - Popup **Góp ý** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Vào 1 lớp học cụ thể → tại tab **Tổng quan** (hoặc các tab khác nếu có)<br>3. Nhấn **Gửi góp ý đến trung tâm** → mở popup Góp ý<br>4. Tại popup, học viên thực hiện:<br>&emsp;• Chọn **Loại góp ý** (Dropdown, bắt buộc chọn)<br>&emsp;• Nhập **Nội dung góp ý** (Textbox, bắt buộc nhập)<br>&emsp;• (Tùy chọn) Tick **Ẩn danh** nếu không muốn gửi kèm thông tin cá nhân<br>5. Nhấn **Gửi góp ý**:<br>&emsp;• Nếu đầy đủ thông tin → gửi thành công → hiển thị thông báo gửi thành công<br>&emsp;• Nếu thiếu loại góp ý hoặc nội dung → báo lỗi yêu cầu nhập đầy đủ<br>6. Nếu nhấn **Hủy** → đóng popup, không gửi |
+    | **Chi tiết hiển thị** | - **Dropdown Loại góp ý** (bắt buộc chọn):<br>&emsp;• Góp ý chung<br>&emsp;• Góp ý về Giáo trình<br>&emsp;• Góp ý về Giảng viên<br>&emsp;• Góp ý về Hỗ trợ học viên<br>&emsp;• Góp ý về Lộ trình<br>&emsp;• Góp ý về Bài tập về nhà<br>&emsp;• Góp ý về Kiểm tra<br>&emsp;• Góp ý về Học phí<br>&emsp;• Các loại khác nếu có (danh sách có thể mở rộng bởi trung tâm)<br> - **Textbox nhập nội dung góp ý**:<br>&emsp;• Placeholder: “Góp ý của bạn rất quan trọng với chúng tôi. Bạn hãy thoải mái góp ý mọi điểm tại đây nhé!”<br> - **Checkbox Ẩn danh**:<br>&emsp;• Nếu tick **Ẩn danh** → góp ý sẽ không gửi kèm thông tin cá nhân (Họ tên, Email, SĐT).<br>&emsp;• Nếu không tick → gửi kèm thông tin cá nhân của học viên.<br> - **Nút Gửi góp ý**:<br>&emsp;• Khi gửi thành công → hiển thị thông báo **Gửi góp ý thành công**<br> - **Nút Hủy**:<br>&emsp;• Đóng popup, không gửi dữ liệu |
+    | **Kết quả hiển thị** | - Góp ý được gửi về **BAN QUẢN LÝ CHẤT LƯỢNG & BAN HỖ TRỢ KHÁCH HÀNG**.<br> - Nếu tick **Ẩn danh** → không kèm thông tin cá nhân.<br> - Nếu không tick Ẩn danh → kèm thông tin học viên. |
+    | **Trường hợp không có dữ liệu** | - Nếu không chọn **Loại góp ý** → cảnh báo: **"Vui lòng chọn loại góp ý"**.<br> - Nếu không nhập **Nội dung góp ý** → cảnh báo: **"Vui lòng nhập nội dung góp ý"**. |
+
+### 4.2 Chức năng Đổi mật khẩu { #toc-3-6-2 }
+
+??? book "Đổi mật khẩu"
+    | Trường | Nội dung |
+    |--------|----------|
+    | **Tên chức năng** | Đổi mật khẩu |
+    | **Mô tả** | Chức năng cho phép học viên thay đổi mật khẩu tài khoản của mình để đảm bảo an toàn bảo mật. |
+    | **Giao diện liên quan** | - Màn hình **Cài đặt** → chọn **Tài khoản sakumi** → nút **Đổi mật khẩu**<br> - Màn hình **Đổi mật khẩu** |
+    | **Luồng thao tác chính** | 1. Học viên đăng nhập thành công<br>2. Từ màn hình chính → vào **Cài đặt**<br>3. Chọn **Tài khoản Sakumi** → nhấn nút **Đổi mật khẩu**<br>4. Màn hình **Đổi mật khẩu** hiển thị các trường:<br>&emsp;– Mật khẩu cũ<br>&emsp;– Mật khẩu mới<br>&emsp;– Xác nhận mật khẩu mới<br>5. Học viên nhập đầy đủ thông tin<br>6. Nhấn **Lưu thông tin** để cập nhật<br>7. Hệ thống kiểm tra:<br>&emsp;– Nếu thành công → hiển thị thông báo thành công<br>&emsp;– Nếu lỗi (mật khẩu cũ sai / mật khẩu mới không khớp / chưa đủ 6 ký tự) → hiển thị thông báo lỗi |
+    | **Chi tiết hiển thị** | - **Mật khẩu cũ**:<br>&emsp;• Học viên nhập mật khẩu hiện tại<br> - **Mật khẩu mới**:<br>&emsp;• Nhập mật khẩu mới (tối thiểu 6 ký tự)<br> - **Xác nhận mật khẩu mới**:<br>&emsp;• Nhập lại mật khẩu mới để xác nhận<br> - **Nút Lưu thông tin**:<br>&emsp;• Sau khi nhấn → thực hiện kiểm tra và lưu lại mật khẩu mới |
+    | **Kết quả hiển thị** | - Nếu đổi mật khẩu thành công → hiển thị thông báo thành công<br> - Nếu có lỗi → hiển thị thông báo lỗi tương ứng |
+    | **Trường hợp không có dữ liệu** | - Nếu bỏ trống trường nào → hiển thị yêu cầu nhập đầy đủ |
+

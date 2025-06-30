@@ -1,4 +1,4 @@
-# 📄 Tài liệu đặc tả chức năng App Đắc Nhân
+# 🈶 Tài liệu đặc tả chức năng App Đắc Nhân
 
 ## 1. Giới thiệu
 
