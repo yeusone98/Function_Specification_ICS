@@ -15,23 +15,23 @@
 </div>
 
 - **Master**: Người dùng cấp cao nhất với quyền kiểm soát toàn hệ thống
-- **Admin**:
-  🔹 Quản lý học viên, giáo viên, lớp học và phân ca giảng dạy
-  🔹 Tổ chức cuộc họp (học viên, giáo viên, admin), đánh giá kết quả học tập và giảng dạy
-  🔹 Theo dõi quy trình lớp học, checklist và mức độ hoàn thành
-  🔹 Quản lý bài học, lịch dạy, kết quả học tập, hóa đơn và khảo sát
+- **Admin**:<br>
+  🔹 Quản lý học viên, giáo viên, lớp học và phân ca giảng dạy<br>
+  🔹 Tổ chức cuộc họp (học viên, giáo viên, admin), đánh giá kết quả học tập và giảng dạy<br>
+  🔹 Theo dõi quy trình lớp học, checklist và mức độ hoàn thành<br>
+  🔹 Quản lý bài học, lịch dạy, kết quả học tập, hóa đơn và khảo sát<br>
 
-- **Curriculum Development**:
-  🔹 Quản lý danh mục: mindset, tiêu chuẩn giáo trình, hướng dẫn giảng dạy
-  🔹 Quản lý khóa học và bài học
-  🔹 Quản lý cấp độ
-  🔹 Tạo và quản lý khảo sát giáo viên và học sinh
+- **Curriculum Development**:<br>
+  🔹 Quản lý danh mục: mindset, tiêu chuẩn giáo trình, hướng dẫn giảng dạy<br>
+  🔹 Quản lý khóa học và bài học<br>
+  🔹 Quản lý cấp độ<br>
+  🔹 Tạo và quản lý khảo sát giáo viên và học sinh<br>
 
-- **Teacher**:
-  🔹 Xem và cập nhật lịch học, lớp được phân công
-  🔹 Quản lý tiến độ lớp: điểm danh, bài tập, ghi chú đánh giá học viên và buổi học, theo dõi quá trình tự học của học viên
-  🔹 Truy cập tài liệu giảng dạy, tiêu chuẩn lớp, checklist giảng dạy
-  🔹 Tham gia khảo sát ,cuộc họp và ghi nhận đánh giá
+- **Teacher**:<br>
+  🔹 Xem và cập nhật lịch học, lớp được phân công<br>
+  🔹 Quản lý tiến độ lớp: điểm danh, bài tập, ghi chú đánh giá học viên và buổi học, theo dõi quá trình tự học của học viên<br>
+  🔹 Truy cập tài liệu giảng dạy, tiêu chuẩn lớp, checklist giảng dạy<br>
+  🔹 Tham gia khảo sát ,cuộc họp và ghi nhận đánh giá<br>
 
 
 
