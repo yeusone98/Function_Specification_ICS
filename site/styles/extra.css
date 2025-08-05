@@ -21,8 +21,12 @@
   white-space: normal;
 }
 
-.md-typeset table td, 
+.md-typeset table td,
 .md-typeset table th {
   text-align: justify;
 }
 
+table {
+  margin-left: auto;
+  margin-right: auto;
+}

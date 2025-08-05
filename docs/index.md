@@ -1,79 +1,228 @@
 # 📄 Tài liệu đặc tả chức năng ICS
 ---
+## 1. Giới thiệu hệ thống ICS
 
-## 1. Giới thiệu
+<div style="text-align:justify">
 
-- **Mục tiêu:** <div class="justified-text"> ICS Nhật Ngữ Sakumi được xây dựng để hỗ trợ việc quản lý toàn diện các hoạt động giảng dạy tại trung tâm đào tạo tiếng Nhật, bao gồm: quản lý giáo viên, học viên, lớp học, lịch dạy, giáo trình và hệ thống đánh giá. Hệ thống giúp số hóa dữ liệu đào tạo, tự động hóa quy trình quản lý và nâng cao hiệu quả vận hành trong đào tạo tiếng Nhật. </div>
-- **Đối tượng sử dụng:**<br>
-  🔹 Developer: triển khai các module chức năng dựa trên mô tả nghiệp vụ<br>
-  🔹 Tester: xây dựng và thực hiện test case để kiểm thử hệ thống
+ICS được xây dựng nhằm hỗ trợ <b>quản lý toàn diện các hoạt động giảng dạy</b> tại nhiều trung tâm đào tạo ngoại ngữ khác nhau. Hệ thống tập trung số hóa quy trình quản lý, tăng cường hiệu quả điều hành và đảm bảo tính thống nhất trong vận hành đào tạo tại các trung tâm thành viên.
 
----
-
-## 2. Phạm vi hệ thống
-<div class="justified-text">Hệ thống Sakumi là nền tảng quản lý đào tạo tiếng Nhật, hỗ trợ tổ chức và điều hành các hoạt động giảng dạy, học tập và quản lý chất lượng đào tạo. Hệ thống cung cấp các chức năng khác nhau cho từng vai trò người dùng, bao gồm: Master, Admin, Teacher và Curriculum Development.
 </div>
 
-- **Master**: Người dùng cấp cao nhất với quyền kiểm soát toàn hệ thống
-- **Admin**:<br>
-  🔹 Quản lý học viên, giáo viên, lớp học và phân ca giảng dạy<br>
-  🔹 Tổ chức cuộc họp (học viên, giáo viên, admin), đánh giá kết quả học tập và giảng dạy<br>
-  🔹 Theo dõi quy trình lớp học, checklist và mức độ hoàn thành<br>
-  🔹 Quản lý bài học, lịch dạy, kết quả học tập, hóa đơn và khảo sát<br>
+### 1.1 Trung tâm áp dụng ICS
 
-- **Curriculum Development**:<br>
-  🔹 Quản lý danh mục: mindset, tiêu chuẩn giáo trình, hướng dẫn giảng dạy<br>
-  🔹 Quản lý khóa học và bài học<br>
-  🔹 Quản lý cấp độ<br>
-  🔹 Tạo và quản lý khảo sát giáo viên và học sinh<br>
+<div style="text-align:justify">
+ICS hiện đang triển khai tại <b>6 trung tâm đào tạo ngoại ngữ</b>:
+</div>
 
-- **Teacher**:<br>
-  🔹 Xem và cập nhật lịch học, lớp được phân công<br>
-  🔹 Quản lý tiến độ lớp: điểm danh, bài tập, ghi chú đánh giá học viên và buổi học, theo dõi quá trình tự học của học viên<br>
-  🔹 Truy cập tài liệu giảng dạy, tiêu chuẩn lớp, checklist giảng dạy<br>
-  🔹 Tham gia khảo sát ,cuộc họp và ghi nhận đánh giá<br>
+<!-- Bảng giữ nguyên như hiện tại -->
+
+<div style="text-align:center">
+<table style="margin-left:auto; margin-right:auto; width:100%; max-width:700px;">
+  <thead>
+    <tr>
+      <th>Trung tâm</th>
+      <th>Ngôn ngữ đào tạo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Betreux Deutsch</td>
+      <td>Tiếng Đức</td>
+    </tr>
+    <tr>
+      <td>Creatis Français</td>
+      <td>Tiếng Pháp</td>
+    </tr>
+    <tr>
+      <td>Creative English</td>
+      <td>Tiếng Anh</td>
+    </tr>
+    <tr>
+      <td>SaeChang</td>
+      <td>Tiếng Hàn</td>
+    </tr>
+    <tr>
+      <td>Hoa Ngữ Đắc Nhân</td>
+      <td>Tiếng Trung</td>
+    </tr>
+    <tr>
+      <td>Nhật Ngữ Sakumi</td>
+      <td>Tiếng Nhật</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+### 1.2 Vai trò người dùng trong hệ thống
+
+<div style="text-align:center">
+  <table style="margin-left:auto; margin-right:auto; width:100%; max-width:700px;">
+    <thead>
+      <tr style="background-color: #4CAF50; color: #fff; text-align: center;">
+        <th style="padding: 12px; width: 180px;">Vai trò</th>
+        <th style="padding: 12px;">Mô tả chức năng chính</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:bold;">Master</td>
+        <td>Người dùng cấp cao nhất, có toàn quyền truy cập và quản lý toàn bộ hệ thống, bao gồm cấu hình trung tâm, phân quyền, và giám sát tổng thể.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Admin</td>
+        <td>Quản lý lớp học, học viên, giáo viên, bài học, lịch dạy, điểm danh, bài tập, kiểm tra, khảo sát, họp lớp và đánh giá chất lượng giảng dạy.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Curriculum Development</td>
+        <td>Quản lý nội dung đào tạo: khóa học, bài học, cấp độ, tiêu chuẩn lớp, hướng dẫn giảng dạy và khảo sát đánh giá chất lượng học tập.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Teacher</td>
+        <td>Xem và cập nhật lịch học, quản lý lớp được phân công, điểm danh, chấm bài, ghi chú buổi học, theo dõi học viên và truy cập tài liệu giảng dạy.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Trợ giảng</td>
+        <td>Hỗ trợ giáo viên trong việc điểm danh, theo dõi sĩ số, hỗ trợ giao bài, và quan sát tiến độ học tập. Có quyền hạn giới hạn hơn so với giáo viên.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
+### 1.3 Tính năng nổi bật
+<div style="text-align:justify; max-width:800px; margin:auto;">
+<ul>
+  <li>Quản lý giảng dạy theo vai trò, phù hợp với nghiệp vụ vận hành thực tế.</li>
+  <li>Theo dõi tiến độ học tập, điểm danh, bài tập và kiểm tra.</li>
+  <li>Quản lý nội dung giảng dạy, lịch học, tiêu chuẩn lớp và khảo sát đánh giá.</li>
+  <li>Tích hợp đầy đủ công cụ hỗ trợ vận hành lớp học từ lúc mở cho đến khi hoàn tất.</li>
+</ul>
+</div>
 
 
+<div style="text-align:justify; max-width:800px; margin:auto; color:#d74444;">
+🔐 <b> Mỗi vai trò chỉ được thao tác trong phạm vi chức năng được cấp quyền. </b>
+</div>
 ---
 
-## 3. Các chức năng chính
+## 2. Phạm vi hệ thống ICS
 
-### 3.1 Hiển thị (Teacher)
+<div style="text-align:justify">
 
-#### 3.1.1 Chức năng thống kê tổng quan các lớp học { #toc-3-1-1 }
+ICS là hệ thống quản lý toàn diện quy trình giảng dạy và vận hành tại các trung tâm ngoại ngữ. Hệ thống hỗ trợ đa vai trò, kết nối giữa giáo viên, trợ giảng, quản lý đào tạo, bộ phận học vụ, CSKH và tài chính. ICS giúp đảm bảo tính minh bạch, hiệu quả và nhất quán trong mọi khâu vận hành lớp học.
 
-??? book "Hiển thị thống kê tổng quan các lớp học"
+</div>
 
+### 2.1 Phân hệ chức năng chính
+
+<div style="text-align:center">
+  <table style="margin-left:auto; margin-right:auto; width:100%; max-width:900px;">
+    <thead>
+      <tr style="background-color: #4CAF50; color: #fff; text-align: center;">
+        <th style="padding: 12px; width: 220px;">Phân hệ</th>
+        <th style="padding: 12px;">Chức năng chính</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight:bold;">Lớp học</td>
+        <td>Quản lý thông tin lớp, sĩ số, phân công giáo viên và trợ giảng, theo dõi trạng thái lớp theo từng buổi.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Lịch học</td>
+        <td>Quản lý lịch dạy chi tiết, cập nhật điểm danh, trạng thái buổi học, tình trạng học viên.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Bài học</td>
+        <td>Mở và quản lý bài học theo tiến độ, đánh dấu hoàn thành, theo dõi nội dung đã học và chưa học.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Bài tập & kiểm tra</td>
+        <td>Giao bài, chấm bài, cho phép thiết lập lại bài làm và theo dõi tiến độ làm bài của học viên.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Tự học</td>
+        <td>Truy cập tài liệu học tập, flashcard, bài luyện tập cá nhân theo chương trình đã phân phối.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Tiêu chuẩn lớp học</td>
+        <td>Thiết lập chuẩn đầu ra, quy định về số buổi học, bài kiểm tra và điều kiện hoàn thành khóa học.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Đánh giá & khảo sát</td>
+        <td>Gửi khảo sát định kỳ cho học viên/phụ huynh/giáo viên, tổng hợp kết quả để đánh giá chất lượng giảng dạy.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Họp lớp</td>
+        <td>Ghi nhận nội dung họp lớp giữa admin và giáo viên, đánh giá tình hình học tập và đề xuất xử lý học viên yếu.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Chăm sóc học viên (CSKH)</td>
+        <td>Ghi nhận tương tác, cảnh báo rủi ro, lịch sử xử lý vấn đề học vụ và báo cáo tình trạng học viên.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Học phí & hóa đơn</td>
+        <td>Quản lý học phí, hóa đơn của từng học viên, đối soát thanh toán và trạng thái nợ phí theo lớp.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Ưu đãi & voucher</td>
+        <td>Tạo và quản lý mã ưu đãi, theo dõi lượt sử dụng và trạng thái áp dụng vào học phí hoặc khóa học.</td>
+      </tr>
+      <tr>
+        <td style="font-weight:bold;">Tài liệu & công cụ</td>
+        <td>Quản lý kho tài liệu giảng dạy, công cụ hỗ trợ lớp học (PDF, link Google Drive, Quizlet, video,...).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### 2.2 Phạm vi sử dụng
+
+<div style="text-align:justify; max-width:800px; margin:auto;">
+ICS được sử dụng bởi các nhóm người dùng nội bộ tại trung tâm, bao gồm:
+<ul>
+  <li><b>Master</b>: Quản lý cấu hình hệ thống, phân quyền, báo cáo tổng hợp liên trung tâm.</li>
+  <li><b>Admin</b>: Quản lý lớp học, học viên, lịch học, báo cáo học tập, chăm sóc học viên và tài chính.</li>
+  <li><b>Curriculum Development</b>: Thiết kế chương trình đào tạo, tạo bài học, tiêu chuẩn lớp và tài liệu.</li>
+  <li><b>Teacher</b>: Giảng dạy, điểm danh, giao bài/chấm bài, nhận xét học viên theo từng buổi.</li>
+  <li><b>Trợ giảng</b>: Hỗ trợ theo dõi lớp học, điểm danh, quan sát tình hình học viên và hỗ trợ giảng dạy.</li>
+</ul>
+</div>
+
+<div style="text-align:justify; max-width:800px; margin:auto; color:#d74444;">
+📌 <b>ICS là hệ thống vận hành nội bộ. Học viên không trực tiếp thao tác trên ICS — thông tin của họ được quản lý bởi bộ phận đào tạo và CSKH. </b>
+</div>
+---
+
+## 3. Các chức năng chính - Vai trò admin
+
+### 3.1 Hiển thị thống kê chi tiết từng lớp học { #toc-3-1-2 }
+
+??? book "Hiển thị thống kê chi tiết từng lớp học"
     | Trường dữ liệu            | Nội dung |
     |---------------------------|---------|
-    | **Tên chức năng**         | Hiển thị thống kê tổng quan các lớp học |
-    | **Vai trò**               | Giáo viên |
-    | **Mô tả**                 | Giao diện hiển thị tổng quan tất cả lớp học mà giáo viên đang phụ trách, bao gồm các chỉ số học tập, kết quả lớp và danh sách lớp kèm thông tin đánh giá tổng hợp. |
-    | **Giao diện liên quan**   | Trang đầu (màn hình mặc định sau khi giáo viên đăng nhập hệ thống) |
-    | **Luồng thao tác chính**  | 1. Giáo viên đăng nhập vào hệ thống.<br>2. Hệ thống hiển thị ngay giao diện thống kê tổng quan.<br>3. Giáo viên xem các chỉ số tổng quan ở trên và danh sách lớp học bên dưới.<br>4. Nhấn vào một lớp cụ thể để xem bảng thống kê chi tiết của lớp đó. |
-    | **Điều kiện**             | Giáo viên có ít nhất một lớp học được phân công. Nếu không có lớp, hệ thống sẽ hiển thị trạng thái rỗng hoặc thông báo không có dữ liệu. |
-    | **Kết quả hiển thị**      | Giao diện gồm 3 phần chính:<br>**(1) Thống kê tổng quan:**<br>&emsp;• **Số lớp** – Tổng số lớp mà giáo viên đang phụ trách.<br>&emsp;• **Tỷ lệ lên kỳ** – Trung bình tỷ lệ KPI của các lớp *chưa đạt 100%* KPI.<br>&emsp;&emsp;&nbsp;&nbsp;→ Ví dụ: Có 3 lớp, KPI lần lượt là 75%, 50%, 100%. Tỷ lệ lên kỳ = (75 + 50) / 2 = 62.5%.<br>&emsp;• **Tỷ lệ đi học** – Trung bình tỷ lệ đi học của tất cả các lớp:<br>&emsp;&emsp;&nbsp;&nbsp;→ Tính bằng trung bình % số buổi học có mặt của học viên trên tổng số buổi ở mỗi lớp.<br>&emsp;• **Tỷ lệ làm BTVN** – Trung bình tỷ lệ hoàn thành bài tập về nhà của tất cả các lớp:<br>&emsp;&emsp;&nbsp;&nbsp;→ Tính bằng trung bình % số bài đã nộp / số bài được giao trong mỗi lớp.<br>&emsp;• **Tỷ lệ đạt KPI** – Trung bình % KPI của tất cả các lớp (kể cả lớp đạt 100%).<br>&emsp;• **Đánh giá tổng** – Tổng hợp định tính theo tiêu chí nội bộ: Tốt, Khá, Trung bình... |
-    |                           | **(2) Danh sách lớp học:**<br>&emsp;• Mã lớp<br>&emsp;• Tên khóa học<br>&emsp;• Đánh giá<br>&emsp;• KPI<br>&emsp;• Số buổi hoàn thành |
-    |                           | **(3) Chi tiết lớp học:**<br>&emsp;• Hiển thị khi chọn một lớp cụ thể.<br>&emsp;• Bao gồm: kết quả, ngày bắt đầu/kết thúc, khung giờ học, sĩ số, tỷ lệ đi học, tỷ lệ BTVN, điểm kiểm tra, điểm BTVN, thời gian học.<br><br>**Lưu ý:** Khi truy cập, hệ thống mặc định chọn và hiển thị lớp đầu tiên. Giáo viên có thể thay đổi lớp để xem thống kê tương ứng. |
-    | **Trường hợp không có dữ liệu** | Hiển thị tất cả chỉ số tổng quan ở mức 0, danh sách lớp rỗng và không hiển thị bảng thống kê lớp chi tiết. |
+    | **Tên chức năng**         | Hiển thị thống kê chi tiết từng lớp học |
+    | **Vai trò**               | Giáo viên, Trợ giảng, Support |
+    | **Mô tả**                 | Giao diện chi tiết cho một lớp cụ thể, hiển thị trung bình các chỉ số học tập và danh sách học viên đang theo học. |
+    | **Giao diện liên quan**   | Giao diện tổng quan lớp – phần hiển thị sau khi chọn một lớp cụ thể |
+    | **Luồng thao tác chính**  | 1. Người dùng chọn một lớp từ danh sách lớp đang phụ trách.<br>2. Hệ thống hiển thị thống kê chi tiết của lớp. |
+    | **Điều kiện**             | Lớp có học viên đang học. |
+    | **Kết quả hiển thị**      | Gồm 2 phần chính:<br>**(1) Thống kê tổng quan lớp:**<br>&emsp;• **Sĩ số** – Số học viên đang học / tổng học viên.<br>&emsp;• **Đi học** – Trung bình tỷ lệ điểm danh của học viên.<br>&emsp;• **Bài tập về nhà** – Trung bình phần trăm hoàn thành bài tập.<br>&emsp;• **Điểm kiểm tra** – Điểm trung bình của các bài kiểm tra (nếu có).<br>&emsp;• **Điểm BTVN** – Trung bình điểm của bài tập về nhà đã được chấm.<br>&emsp;• **Thời gian học** – Trung bình thời lượng học của học viên.<br><br>**(2) Danh sách học viên:**<br>&emsp;• Họ tên học viên<br>&emsp;• Mã học viên<br>&emsp;• Email<br>&emsp;• Ghi chú bất thường nếu có (ví dụ học kém, cảnh báo nghỉ học, chưa đóng học phí v.v.)|
+    | **Cách tính toán**        | Chỉ lấy dữ liệu từ học viên đang học (trạng thái hoạt động). Các giá trị được làm tròn tới 2 chữ số thập phân. |
+    | **Trường hợp không có học viên** | Hiển thị thông báo “Không có học viên đang theo học trong lớp này.” và ẩn biểu đồ thống kê. |
 
+### 3.1.2 Chức năng hiển thị thống kê chi tiết học viên { #toc-3-1-2 }
 
-#### 3.1.2 Chức năng hiển thị tổng quan chi tiết lớp học { #toc-3-1-2 }
-
-??? book "Hiển thị tổng quan chi tiết lớp học"
-
-    | Trường dữ liệu              | Nội dung |
-    |-----------------------------|---------|
-    | **Tên chức năng**           | Hiển thị tổng quan chi tiết lớp học |
-    | **Vai trò**                 | Giáo viên |
-    | **Mô tả**                   | Cho phép giáo viên xem chi tiết toàn bộ thông tin học tập của một lớp mà họ đang phụ trách, bao gồm thông tin lớp, danh sách học viên, bảng bài học và biểu đồ đánh giá. |
-    | **Giao diện liên quan**     | Trang Tổng quan lớp (hiển thị khi nhấn biểu tượng `>` từ danh sách lớp học ở màn hình tổng quan) |
-    | **Luồng thao tác chính**    | 1. Giáo viên đăng nhập vào hệ thống.<br>2. Ở màn hình tổng quan các lớp, giáo viên nhấn vào biểu tượng `>` của một lớp bất kỳ.<br>3. Hệ thống chuyển đến trang Tổng quan lớp hiển thị đầy đủ chi tiết lớp học được chọn.<br>4. Nếu bài học đã có ghi chú, giáo viên có thể nhấn vào biểu tượng ghi chú để xem popup ghi chú chi tiết.<br>5. Giáo viên có thể nhấn vào biểu tượng thời gian để mở popup thời lượng học và xem chi tiết theo từng hoạt động. |
-    | **Điều kiện**               | Lớp đã có học viên và dữ liệu học tập liên quan. Nếu không có học viên, bảng danh sách sẽ rỗng và không hiển thị bảng bài học. |
-    | **Kết quả hiển thị**        | Giao diện gồm 3 phần chính:<br><br>**(1) Thông tin lớp học:**<br>&emsp;• **Sĩ số** – Số lượng học viên trong lớp.<br>&emsp;• **Tỷ lệ đi học** – Trung bình % số buổi có mặt của học viên trong lớp.<br>&emsp;• **Tỷ lệ làm bài tập** – Trung bình % hoàn thành bài tập về nhà của học viên trong lớp.<br>&emsp;• **Điểm kiểm tra** – Trung bình điểm kiểm tra các học viên.<br>&emsp;• **Điểm BTVN** – Trung bình điểm bài tập về nhà đã chấm.<br>&emsp;• **Thời gian học** – Tổng thời gian học trung bình mà mỗi học viên đã tham gia trong lớp.<br>&emsp;• **Bài học gần đây (6 buổi):** hiển thị bằng biểu tượng thể hiện kết hợp giữa đi học và làm BTVN với 4 trạng thái:<br>&emsp;&emsp;– Có đi học và có làm BTVN<br>&emsp;&emsp;– Có đi học nhưng không làm BTVN<br>&emsp;&emsp;– Không đi học nhưng có làm BTVN<br>&emsp;&emsp;– Không đi học và không làm BTVN<br><br>**(2) Danh sách học viên:**<br>&emsp;• Tên học viên<br>&emsp;• Trạng thái học viên (Hoàn thành, Đang học, Người xem, Đăng ký lại, Lên kỳ lên khóa, Chuyển lớp, Bảo lưu, Nghỉ học, Bỏ cọc, Bắt buộc lên, Xóa)<br>&emsp;• **Bài học gần đây (3 buổi):** biểu tượng như phần (1)<br>&emsp;• Đánh giá tổng hợp<br><br>**(3) Bảng bài học:**<br>&emsp;• Tên bài học<br>&emsp;• Ghi chú:<br>&emsp;&emsp;– Nếu có ghi chú: nhấn vào biểu tượng để xem popup gồm: Ghi chú từ giáo viên đến học viên và ghi chú cho team Support.<br>&emsp;&emsp;– Nếu không có ghi chú: biểu tượng bị mờ, không thể nhấn.<br>&emsp;• Trạng thái điểm danh: Không điểm danh, Có mặt, Đi trễ, Ra sớm, Đi trễ + Ra sớm, Nghỉ có phép, Nghỉ không phép<br>&emsp;• Điểm số:<br>&emsp;&emsp;– Đã chấm: hiển thị điểm số<br>&emsp;&emsp;– Chưa chấm: đã nộp nhưng chưa chấm<br>&emsp;&emsp;– Chưa nộp: chưa gửi bài<br>&emsp;• Thời gian học: Nhấn biểu tượng để mở popup hiển thị chi tiết thời lượng theo từng hoạt động gồm: BTVN, Nghe, Từ vựng, Ngữ pháp, Đọc, Flashcard, Lật flashcard, Duyệt bài, Kiểm tra. |
-    | **Trường hợp không có dữ liệu** | Hiển thị bảng dữ liệu đang trống. |
+??? book "Hiển thị thống kê chi tiết học viên"
+    | Trường dữ liệu            | Nội dung |
+    |---------------------------|----------|
+    | **Tên chức năng**         | Hiển thị thống kê chi tiết học viên |
+    | **Vai trò**               | Giáo viên, trợ giảng, support |
+    | **Mô tả**                 | Giao diện hiển thị chi tiết thông tin học tập của từng học viên trong lớp: trạng thái học, kết quả từng bài học, điểm số và thời gian học. |
+    | **Giao diện liên quan**   | Giao diện "Tổng quan lớp" – khi chọn học viên trong danh sách lớp |
+    | **Luồng thao tác chính**  | 1. Giáo viên chọn lớp cần xem thống kê.<br>2. Danh sách học viên trong lớp được hiển thị.<br>3. Giáo viên có thể dùng ô tìm kiếm để lọc học viên theo tên.<br>4. Chọn một học viên để xem chi tiết thống kê học tập. |
+    | **Kết quả hiển thị**      | **(1) Chức năng tìm kiếm học viên:**<br>&emsp;• Tìm kiếm theo **tên học viên**. <br>**(2) Trạng thái bài học gần đây:**<br>&emsp;• Đi học và làm BTVN<br>&emsp;• Đi học nhưng không làm BTVN<br>&emsp;• Vắng học nhưng làm BTVN<br>&emsp;• Vắng học và không làm BTVN<br><br>**(3) Trạng thái học viên:**<br>&emsp;• Đang học<br>&emsp;• Hoàn thành<br>&emsp;• Dự thính<br>&emsp;• Nghỉ học<br>&emsp;• Chỉ xem<br>&emsp;• Kiểm thử<br>&emsp;• Xóa<br><br>**(4) Trạng thái điểm danh:**<br>&emsp;• Có mặt<br>&emsp;• Vào trễ<br>&emsp;• Ra sớm<br>&emsp;• Vào trễ & ra sớm<br>&emsp;• Nghỉ có phép (cp)<br>&emsp;• Nghỉ không phép (kp)<br>&emsp;• Chưa điểm danh<br><br>**(5) Học phí:**<br>&emsp;• Đã thanh toán / Chưa thanh toán<br><br>**(6) Thời gian học:**<br>&emsp;• Tính trung bình từ các hoạt động: BTVN, từ vựng, nghe, học flashcard, duyệt, ngữ pháp, đọc, lật flashcard, luyện nhớ<br><br>**(7) Chỉ số học tập khác:**<br>&emsp;• Điểm kiểm tra<br>&emsp;• Điểm BTVN<br>&emsp;• Tỷ lệ hoàn thành BTVN<br>&emsp;→ **Tất cả chỉ số này được tính trung bình từ các bài học đã tham gia.** |
+    | **Trường hợp không có dữ liệu** | Hiển thị trạng thái rỗng cho từng thành phần và thông báo “Chưa có dữ liệu học tập”. |
 
 
 #### 3.1.3 Chức năng hiển thi chi tiết bài học (Đã học) { #toc-3-1-3 }
@@ -182,7 +331,6 @@
     | **Điều kiện**               | - Giáo viên phải được phân công lớp học.<br>- Chỉ có thể xem chi tiết bài đã giao. |
     | **Kết quả hiển thị**        | - Hai tab rõ ràng: “Bài tập về nhà” và “Kiểm tra”<br>- Danh sách bài thể hiện trạng thái, số lượng học viên, % hoàn thành<br>- Khi chọn bài:<br>&emsp;• Nếu chưa giao:<br>&emsp;&emsp;- BTVN: “Bài học chưa mở”<br>&emsp;&emsp;- Kiểm tra: nút “Giao bài”<br>&emsp;• Nếu đã giao:<br>&emsp;&emsp;- Hiển thị chi tiết học viên<br>&emsp;&emsp;- Nếu là kiểm tra: có thêm nút “Thu hồi”<br>- Ngay trong tiêu đề tab BTVN / Kiểm tra: hiển thị số lượng bài chưa chấm đã có học viên nộp |
     | **Trường hợp không có dữ liệu** | - Không có học viên làm bài: các cột để trống hoặc “Chưa nộp”<br>- Không có bài tập / kiểm tra nào: hiển thị danh sách trống hoặc thông báo phù hợp |
-
 
 ### 3.2 Quản lý lớp học (Teacher)
 
@@ -604,6 +752,36 @@
     | **Điều kiện**                     | - Chỉ tài khoản **Admin** có quyền thêm/sửa nội dung buổi họp.<br>- Buổi họp phải ở trạng thái hợp lệ (đã lên lịch). |
     | **Kết quả hiển thị**              | - Các nội dung mới hiển thị trong danh sách nội dung chi tiết của buổi họp.<br>- Giao diện phản ánh trạng thái và loại nội dung tương ứng.<br>- Toàn bộ dữ liệu được lưu tự động và hiển thị đúng vị trí đã chọn. |
     | **Trường hợp không có dữ liệu**   | - Nếu chưa có nội dung: hiển thị “Chưa có nội dung nào cho buổi họp này”.<br>- Nếu không tick chọn nội dung nào khi thêm mới: nút “Thêm” bị vô hiệu hóa. |
+
+
+
+#### 3.3.19 Thiết lập lại nộp bài (Reset kết quả bài tập về nhà và kiểm tra học viên) { #toc-3-3-19 }
+
+??? book "Thiết lập lại nộp bài (Reset kết quả bài tập về nhà và kiểm tra học viên)"
+    | Trường dữ liệu              | Nội dung |
+    |-----------------------------|---------|
+    | **Tên chức năng**           | Thiết lập lại nộp bài |
+    | **Vai trò**                 | Admin |
+    | **Mô tả**                   | Cho phép Admin **thiết lập lại toàn bộ kết quả làm bài** của một học viên đối với một bài kiểm tra hoặc bài tập về nhà đã được giao. Chức năng này sẽ **xoá điểm số, trạng thái nộp bài, thời gian làm bài và các ghi chú** liên quan, đưa bài làm của học viên về trạng thái như chưa từng nộp. |
+    | **Giao diện liên quan**     | - Trang chi tiết lớp học<br>- Tab “Kiểm tra” hoặc “Bài tập về nhà”<br>- Giao diện danh sách bài đã giao<br>- Popup xác nhận thiết lập lại |
+    | **Luồng thao tác chính**    | 1. Admin vào **trang Tổng quan** và chọn **lớp học cụ thể**<br>2. Trong giao diện lớp học, chọn tab **“Kiểm tra”** hoặc **“Bài tập về nhà”**<br>3. Nhấn vào **biểu tượng mũi tên xoay vòng 🔁** tại dòng của học viên cần reset bài<br>4. Hệ thống hiển thị **popup xác nhận:**<br>&emsp;• Tiêu đề: *Thiết lập lại nộp bài*<br>&emsp;• Nội dung: *“Bạn chắc chắn muốn thiết lập lại kết quả làm bài của học viên?”*<br>5. Nhấn **“Xác nhận”** để hoàn tất<br>6. Hệ thống xoá toàn bộ dữ liệu làm bài và cập nhật lại trạng thái thành *“Chưa nộp”* |
+    | **Điều kiện**               | - Bài tập hoặc kiểm tra đã được giao<br>- Học viên đã từng nộp bài và có kết quả chấm điểm<br>- Admin có quyền chỉnh sửa kết quả bài làm |
+    | **Kết quả hiển thị**        | - Trạng thái bài làm chuyển về **“Chưa nộp”**<br>- Các trường: điểm số, trạng thái chấm, thời gian làm bài, số câu bỏ qua… đều bị xoá<br>- Giao diện học viên sẽ không thấy bài làm đã nộp trước đó<br>- Admin có thể giao lại nếu cần |
+    | **Trường hợp không có dữ liệu** | - Nếu học viên chưa nộp bài: biểu tượng thiết lập lại không hiển thị<br>- Nếu chưa có bài tập/kiểm tra nào: giao diện trống hoặc hiển thị thông báo phù hợp |
+
+#### 3.3.20 Tìm kiếm và lọc danh sách lớp học { #toc-3-3-20 }
+
+??? book "Tìm kiếm và lọc danh sách lớp học"
+    | Trường dữ liệu              | Nội dung |
+    |-----------------------------|---------|
+    | **Tên chức năng**           | Tìm kiếm và lọc danh sách lớp học |
+    | **Vai trò**                 | Admin |
+    | **Mô tả**                   | Cho phép Admin tìm kiếm nhanh và lọc danh sách lớp học dựa theo các tiêu chí: **Tên lớp**, **Loại lớp**, **Trạng thái**, **Trình độ**, **Học kỳ**. Chức năng này hỗ trợ người dùng quản lý lớp dễ dàng và truy cập chính xác vào lớp cần thao tác. |
+    | **Giao diện liên quan**     | - Màn hình danh sách lớp học (tab "Lớp") |
+    | **Luồng thao tác chính**    | 1. Admin truy cập vào mục **“Lớp”** từ sidebar<br>2. Giao diện hiển thị toàn bộ danh sách lớp học<br>3. Người dùng có thể thao tác các bước:<br>&emsp;a. **Tìm kiếm theo tên lớp:** nhập từ khoá vào ô tìm kiếm phía trên<br>&emsp;b. **Chọn bộ lọc:**<br>&emsp;&emsp;- **Loại lớp** (ví dụ: Lớp chung, Lớp 1-1)<br>&emsp;&emsp;- **Trạng thái lớp** (ví dụ: Đang học, Đã kết thúc, Sắp bắt đầu)<br>&emsp;&emsp;- **Trình độ** (ví dụ: Sơ cấp N5, N4...)<br>&emsp;&emsp;- **Học kỳ** (ví dụ: Kỳ Xuân, Hè, Thu, Đông)<br>4. Danh sách lớp tự động cập nhật sau mỗi thao tác lọc hoặc tìm kiếm |
+    | **Điều kiện**               | - Có ít nhất một lớp học trong hệ thống<br>- Các bộ lọc phải có dữ liệu cấu hình sẵn từ backend |
+    | **Kết quả hiển thị**        | - Giao diện danh sách lớp cập nhật theo bộ lọc hoặc từ khoá tìm kiếm<br>- Hiển thị đúng các thông tin: Mã lớp, Khoá học, Sĩ số, Điểm số, % đi học, % làm bài, Đánh giá tổng kết |
+    | **Trường hợp không có dữ liệu** | - Không tìm thấy lớp phù hợp: hiển thị thông báo *“Không tìm thấy lớp học phù hợp với tiêu chí tìm kiếm”*<br>- Tất cả bộ lọc trống: hiển thị toàn bộ danh sách lớp học |
 
 
 ### 3.4 Quản lý trợ giảng (Admin)
