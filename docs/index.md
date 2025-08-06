@@ -828,8 +828,31 @@ ICS được sử dụng bởi các nhóm người dùng nội bộ tại trung 
     | **Kết quả hiển thị**            | - Trợ giảng bị loại khỏi danh sách và không thể tìm thấy trong các chức năng gán lớp. |
     | **Trường hợp không có dữ liệu** | - Nếu không tìm thấy ID trợ giảng trong hệ thống sẽ báo lỗi không tồn tại. |
 
-
-
+### 3.5 Quản lý hóa đơn (Admin, Support)
+#### 3.5.1 Chức năng thống kê hóa đơn {#toc-3-5-1}
+??? book "Chức năng thống kê hóa đơn"
+    | Trường                          | Nội dung |
+    | ------------------------------- | -------- |
+    | **Tên chức năng**               | Thống kê hóa đơn |
+    | **Vai trò**                     | Admin, Support |
+    | **Mô tả**                       | Cho phép admin xem thông tin về hóa đơn có trên hệ thống. Sau khi truy cập đến màn hình quản lý hóa đơn, admin có thể xem, sửa, xóa toàn bộ thông tin về từng hóa đơn, chỉnh sửa, tìm kiếm thủ công, tìm kiếm bằng bộ lọc và xem biểu đồ thống kê về các thông tin như số ngày, tổng KPI, số hóa đơn, tổng giá trị các hóa đơn. |
+    | **Giao diện liên quan**         | - Màn hình quản lý lớp.<br>- Thanh công cụ (nằm bên trái màn hình).<br>- Menu Thống kê.<br>- Submenu Hóa đơn. |
+    | **Luồng thao tác chính**        | <br>1. Từ thanh công cụ, chọn menu Thống kê.<br>2. Từ menu Thống kê, chọn submenu Hóa đơn.<br>3. Xem thông tin trên màn hình quản lý hóa đơn. |
+    | **Điều kiện**                   | - Đăng nhập thành công vào tài khoản admin.<br>- Nhìn thấy màn hình quản lý lớp và thanh công cụ. |
+    | **Kết quả hiển thị**            | - Dashboard bao gồm các biểu đồ thống kê về các thông tin như số ngày, tổng KPI, số hóa đơn, tổng giá trị các hóa đơn. Thông tin tổng quát về các hóa đơn được hiển thị dạng bảng bao gồm các cột **Hóa Đơn**, **Trạng Thái**, **Loại Hóa Đơn**, **Tên Học Viên**, **Mã Học Viên**, **Người Phụ Trách**, **Ngày Ghi Nhận**, **Số Tiền Đã Đóng**, **Số KPI**. Số lượng hóa đơn hiển thị trên bảng được đặt mặc định tại 20 hóa đơn (có thể tùy chỉnh giữa các giá trị: 20, 50, 100, 200). |
+    | **Trường hợp không có dữ liệu** | - Nếu không có dữ liệu, các biểu đồ và bảng dữ liệu hóa đơn sẽ trống và hình minh họa và dòng chữ "Bảng dữ liệu này đang trống" sẽ hiển thị trên màn hình. |
+#### 3.5.2 Chức năng tạo hóa đơn {#toc-3-5-2}
+??? book "Chức năng tạo hóa đơn"
+    | Trường                          | Nội dung |
+    | ------------------------------- | -------- |
+    | **Tên chức năng**               | Tạo hóa đơn |
+    | **Vai trò**                     | Admin, Support |
+    | **Mô tả**                       | Cho phép admin tạo một hóa đơn bằng việc cung cấp các thông tin cần thiết (bắt buộc) như sau:<br>&emsp;1.**Hóa đơn**.<br>&emsp;2.**Trạng thái**.<br>&emsp;3.**Tên học viên**.<br>&emsp;4.**Mã học viên**.<br>&emsp;5. **Chọn ngày tạo**.<br>&emsp;6.**Loại hóa đơn**.<br>&emsp;7.**Số tiền**.<br>&emsp;8.**Loại tài khoản**.<br>&emsp;9.**Quy đổi (VNĐ)**.<br>&emsp;10. **Người phụ trách**. |
+    | **Giao diện liên quan**         | - Màn hình quản lý hóa đơn.<br>- Nút tạo hóa đơn (nằm bên phải dòng chữ "Quản lý hóa đơn").<br>- Popup "Tạo hóa đơn".<br>- Popup "Lịch".<br>- Popup "Thêm người phụ trách". |
+    | **Luồng thao tác chính**        | <br>1. Từ màn hình quản lý hóa đơn, chọn nút (+) để tạo hóa đơn.<br>2. Hệ thống hiển thị popup "Tạo hóa đơn" với các trường thông tin:<br>&emsp;a. **Hóa đơn**: nhập tên hóa đơn.<br>&emsp;b. **Trạng thái**: chọn trạng thái phù hợp cho hóa đơn: *Đợi lớp*, *Xác nhận*, *Hoàn tiền*, *Học trước*, *Hủy đơn*.<br>&emsp;c. **Tên học viên**: nhập tên học viên được tạo hóa đơn.<br>&emsp;d. **Mã học viên**: nhập mã học viên.<br>&emsp;e. **Chọn ngày tạo**: chọn từ popup "Lịch" (định dạng: *dddd/dd/mm*).<br>&emsp;f. **Loại hóa đơn**: chọn từ danh sách bao gồm *Sale*, *Cọc*, *Upsale*, *Renew*, *Bổ sung cọc*, *Resale*, *Bổ sung học phí*.<br>&emsp;g. **Số tiền**: nhập vào số tiền tương ứng (số dương), chọn đơn vị phù hợp (VNĐ, ¥).<br>&emsp;h. **Loại tài khoản**: chọn từ danh sách bao gồm *Tài khoản công ty*, *Tài khoản cá nhân*, *Tiền mặt*, *Khác*.<br>&emsp;i. **Quy đổi (VNĐ)**: nhập giá trị nếu đơn vị không phải VNĐ.<br>&emsp;k. **Người phụ trách**:<br>&emsp;&emsp;- Chọn vào nút (+) (bên cạnh chữ "Người phụ trách")để popup "Thêm người phụ trách" xuất hiện.<br>&emsp;&emsp;- Lần lượt chọn *Người phụ trách* chịu trách nhiệm với hóa đơn và *Số KPI* tương ứng.<br>4. Chọn nút "Thêm" trên popup "Tạo hóa đơn". |
+    | **Điều kiện**                   | - Đăng nhập thành công vào tài khoản admin.<br>- Nhìn thấy màn hình quản lý hóa đơn. |
+    | **Kết quả hiển thị**            | - Dashboard với các biểu đồ sẽ tự động được cập nhật và bảng dữ liệu hóa đơn tự động hiển thị hóa đơn mới tạo ở phía dưới cùng của bảng.  |
+    | **Trường hợp không có dữ liệu** | Nếu không có dữ liệu được hiển thị trên màn hình hiện tại:<br>&emsp;1. Kiểm tra dòng cuối cùng của bảng dữ liệu:<br>&emsp;&emsp;a. Chuyển sang trang cuối cùng của bảng dữ liệu đang được hiển thị.<br>&emsp;&emsp;b. Nếu không có quá nhiều dữ liệu, chọn số lượng dòng cùng xuất hiện trong một trang nhiều hơn giá trị hiện tại.  |
 
 
 ---
