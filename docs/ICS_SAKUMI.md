@@ -213,7 +213,6 @@ ICS hiện được triển khai tại **6 trung tâm đào tạo ngoại ngữ*
     | **Trường hợp không có dữ liệu** | <div align="justify">- Nếu không có bài học: Danh sách trống, hiển thị "Chưa có bài học" hoặc nút thêm.<br>- Nếu thông tin mới không hợp lệ (tiêu đề trống): Không cho lưu, hiển thị lỗi "Vui lòng điền đầy đủ thông tin bắt buộc."<br>- Nếu bài học đã mở: Không hiển thị nút chỉnh sửa/xóa, thông báo "Bài học đã mở, không thể chỉnh sửa."<br>- Nếu lớp chính thức: Không hiển thị nút mở toàn bộ.<br>- Nếu bài học chưa kết thúc: Không hiển thị chi tiết học viên, hoặc hiển thị "Bài học chưa bắt đầu."</div>
 
 
-
 ### 2.9 Giảng dạy - Giao Bài Tập Về Nhà - Chấm Điểm { #toc-2-9 }
 
 ??? book "Giảng dạy - Giao Bài Tập Về Nhà - Chấm Điểm"

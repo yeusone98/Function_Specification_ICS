@@ -1307,7 +1307,7 @@ Hệ thống **Sakumi – Nhật ngữ thông minh** gồm 2 ứng dụng độc
     | **Trường hợp không có dữ liệu** | “Không đủ dữ liệu để bắt đầu thử thách. Vui lòng chọn nhiều chữ hơn nhé.” |
     | **Phạm vi bảng chữ hỗ trợ** | Bảng chữ Chính, Biến âm, Kết hợp |
 
-4. Đắc tả các chức năng chính Sakumi - Học viên
+## 4. Đặc tả các chức năng chính Sakumi - Học viên
 
 ### 4.1 Chức năng Góp ý { #toc-4-1 }
 
