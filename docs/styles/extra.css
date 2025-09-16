@@ -106,3 +106,30 @@ details.book[open] summary ~ * {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* BUDDY */
+.highlight_text_farLeft {
+    text-align: right;
+    color: red;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* Tuỳ chỉnh màu cho ??? info */
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: #4caf50; /* viền xanh lá */
+}
+
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color: rgba(76, 175, 80, 0.1); /* nền xanh lá mờ */
+  border-color: #4caf50;
+}
+
+/* Icon info */
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before {
+  background-color: #4caf50;
+}
+/*BUDDY*/
