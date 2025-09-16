@@ -1,5 +1,4 @@
 <p class="highlight_text_farLeft">(FSD for PLS Buddy +)</p>
-<title>🈶 Tài liệu đặc tả chức năng website Buddy+ - ICS docs</title>
 
 # Tài liệu đặc tả chức năng dành cho PLS Buddy +
 ## I. Giới thiệu hệ thống và tài liệu
@@ -300,7 +299,8 @@
         | Kết quả hiển thị | - Danh sách tài liệu ở bên phải, chi tiết hiển thị ở phần nội dung chính.<br>- Người phụ trách: có đầy đủ thao tác quản lý (thêm/sửa/xóa/kích hoạt).<br>- Người đào tạo: chỉ xem nội dung của tài liệu đã kích hoạt theo quy trình.<br>- Người được đào tạo: chỉ xem nội dung và file đính kèm theo mục con. |
         | Trường hợp không có dữ liệu | - Người phụ trách: hiển thị thông báo “Chưa có tài liệu đào tạo cho vị trí này” và nút “Nhập Tài Liệu Mới”.<br>- Người đào tạo: nếu chưa có tài liệu được kích hoạt → danh sách trống.<br>- Người được đào tạo: nếu chưa có tài liệu được công bố → hiển thị danh sách trống, nếu chưa được gán quy trình đào tạo, hiển thị thông báo "Ứng viên chưa được gán chương trình đào tạo".  |
 ---
-???+ info "6. Cụm chức năng quản lý phỏng vấn." 
+???+ info "6. Cụm chức năng quản lý phỏng vấn."
+    ### 6. Cụm chức năng quản lý phỏng vấn {#toc-6}
     #### 6.1. Xem lại kết quả kiểm tra ứng viên {#toc-6-1}
     ??? book "Xem lại kết quả kiểm tra ứng viên"
         | Trường | Nội dung |
