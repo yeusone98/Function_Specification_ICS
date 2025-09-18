@@ -132,4 +132,46 @@ details.book[open] summary ~ * {
 .md-typeset .info > summary::before {
   background-color: #4caf50;
 }
+
+.table-container {
+  text-align: center;
+}
+
+.custom-table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 700px;
+  border-collapse: collapse;
+}
+
+.custom-table thead tr {
+  background-color: rgba(64, 81, 181, 1);
+  color: #fff;
+  text-align: center;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  border: 1px solid #666666;
+}
+
+.custom-table th.smaller_th {
+  width: 24%;
+  padding: right;
+  text-align: left;
+}
+
+.custom-table td.bold {
+  font-weight: bold;
+  border: 1px solid #666666;
+  text-align: left;
+}
+
+.custom-table td.light {
+  font-weight: lighter;
+  border: 1px solid #666666;
+  text-align: center;
+}
 /*BUDDY*/

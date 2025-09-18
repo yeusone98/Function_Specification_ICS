@@ -3,7 +3,17 @@
 # Tài liệu đặc tả chức năng dành cho PLS Buddy +
 ## I. Giới thiệu hệ thống và tài liệu
 ### 1. Về hệ thống PLS Buddy +
+PLS Buddy+ là hệ thống hỗ trợ quản lý toàn bộ vòng đời tuyển dụng và đào tạo nhân sự trong doanh nghiệp.  
+Hệ thống cung cấp các chức năng chính bao gồm: quản lý ứng viên, quản lý vị trí tuyển dụng, quản lý phỏng vấn, quản lý đào tạo, và phân quyền theo vai trò.  
+Mục tiêu của PLS Buddy+ là giúp các bên liên quan (người phụ trách, người phỏng vấn, người đào tạo, ứng viên) dễ dàng tương tác, theo dõi tiến trình, và tối ưu hiệu quả quản lý tuyển dụng – đào tạo.
+
 ### 2. Về FSD PLS Buddy +
+FSD PLS Buddy+ là tài liệu đặc tả chức năng (Functional Specification Document – FSD) của hệ thống **PLS Buddy+**.  
+Tài liệu này mô tả chi tiết các **chức năng, luồng xử lý, giao diện liên quan, điều kiện và kết quả hiển thị** của từng chức năng trong hệ thống.  
+Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội ngũ phát triển, kiểm thử và vận hành hệ thống, đảm bảo việc xây dựng, triển khai và sử dụng PLS Buddy+ thống nhất và hiệu quả.
+
+---
+
 ## II. Các vai trò trong hệ thống
 ### Bảng vai trò {#toc-2.1}
 <div class="table-container">
@@ -11,30 +21,25 @@
     <thead>
       <tr>
         <th class="smaller_th">Vai trò</th>
-        <th class="smaller_th">Tên gọi khác</th>
         <th>Mô tả chức năng chính</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="bold">Người phụ trách</td>
-        <td class="bold">Handler</td>
-        <td class="light">place_holder_</td>
+        <td class="bold">Người phụ trách (Handler)</td>
+        <td class="light" style="text-align:left">Quản lý toàn bộ quy trình tuyển dụng: thêm và cập nhật ứng viên, gán người phỏng vấn/người đào tạo, theo dõi trạng thái ứng viên, thiết lập vị trí tuyển dụng, tiêu chuẩn, lịch phỏng vấn và quy trình đào tạo.</td>
       </tr>
       <tr>
-        <td class="bold">Người phỏng vấn</td>
-        <td class="bold">Interviewer</td>
-        <td class="light">place_holder_</td>
+        <td class="bold">Người phỏng vấn (Interviewer)</td>
+        <td class="light" style="text-align:left">Thực hiện phỏng vấn ứng viên được phân công, đánh giá kết quả phỏng vấn theo bộ câu hỏi và tiêu chí đánh giá, xem lịch và lịch sử phỏng vấn các ứng viên được gán.</td>
       </tr>
       <tr>
-        <td class="bold">Người đào tạo</td>
-        <td class="bold">Trainer</td>
-        <td class="light">place_holder_</td>
+        <td class="bold">Người đào tạo (Trainer)</td>
+        <td class="light" style="text-align:left">Tham gia đào tạo ứng viên/nhân sự sau khi được gán, theo dõi và đánh giá tiến trình đào tạo, sử dụng tài liệu đào tạo, quản lý lịch trình và tiêu chuẩn đào tạo của ứng viên được phân công.</td>
       </tr>
       <tr>
-        <td class="bold">Ứng viên / Người được đào tạo</td>
-        <td class="bold">Trainee</td>
-        <td class="light">place_holder_</td>
+        <td class="bold">Ứng viên / Người được đào tạo (Trainee)</td>
+        <td class="light" style="text-align:left">Ứng tuyển vị trí, tham gia phỏng vấn và làm bài kiểm tra. Khi được chuyển sang trạng thái đào tạo, trở thành Người được đào tạo, có thể theo dõi mục tiêu đào tạo, lịch trình, tài liệu và kết quả đánh giá đào tạo.</td>
       </tr>
     </tbody>
   </table>

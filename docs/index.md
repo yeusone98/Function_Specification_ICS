@@ -50,14 +50,49 @@ Hệ sinh thái khép kín này hỗ trợ đồng thời cho quản lý nội b
 
 ICS hiện được triển khai tại **6 trung tâm đào tạo ngoại ngữ**, với ứng dụng học tập trung tâm ngoại ngữ hỗ trợ chính cho tiếng Nhật tại Nhật Ngữ Sakumi (bao gồm phiên bản mở). Các trung tâm khác cũng có thể tích hợp ứng dụng học tập tương tự tùy theo ngôn ngữ đào tạo.
 
-| Trung tâm        | Ngôn ngữ đào tạo | Hỗ trợ ICS |
-| ---------------- | ---------------- | ---------- |
-| Betreux Deutsch  | Tiếng Đức        | Có         |
-| Creatis Français | Tiếng Pháp       | Có         |
-| Creative English | Tiếng Anh        | Có         |
-| SaeChang         | Tiếng Hàn        | Có         |
-| Hoa Ngữ Đắc Nhân | Tiếng Trung      | Có         |
-| Nhật Ngữ Sakumi  | Tiếng Nhật       | Có         |
+<div class="table-container">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th class="smaller_th">Trung tâm</th>
+        <th>Ngôn ngữ đào tạo</th>
+        <th>Hỗ trợ ICS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="bold">Betreux Deutsch</td>
+        <td class="light">Tiếng Đức</td>
+        <td class="light">Có</td>
+      </tr>
+      <tr>
+        <td class="bold">Creatis Français</td>
+        <td class="light">Tiếng Pháp</td>
+        <td class="light">Có</td>
+      </tr>
+      <tr>
+        <td class="bold">Creative English</td>
+        <td class="light">Tiếng Anh</td>
+        <td class="light">Có</td>
+      </tr>
+      <tr>
+        <td class="bold">SaeChang</td>
+        <td class="light">Tiếng Hàn</td>
+        <td class="light">Có</td>
+      </tr>
+      <tr>
+        <td class="bold">Hoa Ngữ Đắc Nhân</td>
+        <td class="light">Tiếng Trung</td>
+        <td class="light">Có</td>
+      </tr>
+      <tr>
+        <td class="bold">Nhật Ngữ Sakumi</td>
+        <td class="light">Tiếng Nhật</td>
+        <td class="light">Có</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 
