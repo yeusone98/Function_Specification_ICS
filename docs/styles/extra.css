@@ -21,7 +21,7 @@
   white-space: normal;
 }
 
-.md-typeset table td, 
+.md-typeset table td,
 .md-typeset table th {
   text-align: justify;
 }
@@ -33,7 +33,7 @@
   border-collapse: collapse;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Tiêu đề bảng */
@@ -60,16 +60,20 @@
 
 /* --- DARK MODE: 2 màu xen kẽ rõ ràng --- */
 [data-md-color-scheme="slate"] .md-typeset table tr:nth-child(odd) td {
-  background-color: #1f1f1f; /* màu tối hơn */
+  background-color: #1f1f1f;
+  /* màu tối hơn */
 }
+
 [data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) td {
-  background-color: #2a2a2a; /* màu sáng hơn */
+  background-color: #2a2a2a;
+  /* màu sáng hơn */
 }
 
 /* Hover (hiệu ứng nhẹ) */
 .md-typeset table tr:hover td {
   background-color: rgba(255, 255, 255, 0.05);
 }
+
 [data-md-color-scheme="default"] .md-typeset table tr:hover td {
   background-color: rgba(0, 0, 0, 0.04);
 }
@@ -81,55 +85,65 @@
 
 .md-typeset .admonition.book,
 .md-typeset details.book {
-  border-color: #4caf50; /* xanh lá nhẹ */
+  border-color: #4caf50;
+  /* xanh lá nhẹ */
 }
 
-.md-typeset .book > .admonition-title,
-.md-typeset .book > summary {
-  background-color: rgba(76, 175, 80, 0.1); /* nền xanh lá mờ */
+.md-typeset .book>.admonition-title,
+.md-typeset .book>summary {
+  background-color: rgba(76, 175, 80, 0.1);
+  /* nền xanh lá mờ */
   border-color: #4caf50;
 }
 
 /* Icon quyển sách */
-.md-typeset .book > .admonition-title::before,
-.md-typeset .book > summary::before {
+.md-typeset .book>.admonition-title::before,
+.md-typeset .book>summary::before {
   background-color: #4caf50;
   -webkit-mask-image: var(--md-admonition-icon--book);
   mask-image: var(--md-admonition-icon--book);
 }
 
 
-details.book[open] summary ~ * {
+details.book[open] summary~* {
   animation: fadeIn 0.2s ease-in;
 }
+
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* BUDDY */
 .highlight_text_farLeft {
-    text-align: right;
-    color: red;
-    font-style: italic;
-    font-weight: 600;
+  text-align: right;
+  color: red;
+  font-style: italic;
+  font-weight: 600;
 }
 
 /* Tuỳ chỉnh màu cho ??? info */
 .md-typeset .admonition.info,
 .md-typeset details.info {
-  border-color: #4caf50; /* viền xanh lá */
+  border-color: #4caf50;
+  /* viền xanh lá */
 }
 
-.md-typeset .info > .admonition-title,
-.md-typeset .info > summary {
-  background-color: rgba(76, 175, 80, 0.1); /* nền xanh lá mờ */
+.md-typeset .info>.admonition-title,
+.md-typeset .info>summary {
+  background-color: rgba(76, 175, 80, 0.1);
+  /* nền xanh lá mờ */
   border-color: #4caf50;
 }
 
 /* Icon info */
-.md-typeset .info > .admonition-title::before,
-.md-typeset .info > summary::before {
+.md-typeset .info>.admonition-title::before,
+.md-typeset .info>summary::before {
   background-color: #4caf50;
 }
 
@@ -174,4 +188,18 @@ details.book[open] summary ~ * {
   border: 1px solid #666666;
   text-align: center;
 }
+
+.custom-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
 /*BUDDY*/
