@@ -45,10 +45,10 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
   </table>
 </div>
 
-## III. Đặc tả chức năng của hệ thống
-???+ info "1. Phân quyền hệ thống dựa vào tài khoản đăng nhập"
-    #### 1. Phân quyền hệ thống dựa vào tài khoản đăng nhập
-    ##### a. Đăng nhập tài khoản {#toc-1-1}
+## III. Đặc tả chức năng chung của các vai trò
+???+ info "1. Các chức năng chung của các vai trò"
+    ### 1. Các chức năng chung của các vai trò {#toc-3-1}
+    #### 1.1. Đăng nhập tài khoản {#toc-3-1-1}
     ??? book "Đăng nhập tài khoản"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -60,7 +60,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện**                   | - Người dùng có tài khoản trong hệ thống. <br>- Tài khoản đang không bị vô hiệu hóa. <br>- Tên đăng nhập và mật khẩu nhập chính xác. |
         | **Kết quả hiển thị**            | - Đăng nhập thành công: hệ thống hiển thị giao diện chính ứng với phân quyền cao nhất. <br>- Đăng nhập thất bại: hiển thị thông báo lỗi (ví dụ: *“Sai tài khoản hoặc mật khẩu”*). |
         | **Trường hợp không có dữ liệu** | - Nếu tài khoản không tồn tại: hiển thị thông báo *“Tài khoản không tồn tại trong hệ thống”*. |
-    #####  b. Cập nhật tài khoản {#toc-1.2}
+    ####  1.2. Cập nhật tài khoản {#toc-3-1-2}
     ??? book "Cập nhật tài khoản"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -72,7 +72,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện**                   | - Người dùng đã đăng nhập hệ thống. <br>- Tài khoản tồn tại và đang hoạt động. <br>- Các trường thông tin nhập vào hợp lệ (ví dụ: Ngày sinh không phải là ngày tương lai, số điện thoại đúng định dạng). |
         | **Kết quả hiển thị**            | - Thông tin cá nhân được cập nhật thành công và hiển thị lại trên giao diện. <br>- Thông báo *“Cập nhật dữ liệu thành công !”*. |
         | **Trường hợp không có dữ liệu** | - Nếu không có thay đổi gì nhưng vẫn nhấn **Cập nhật tài khoản**, hệ thống vẫn cập nhật lại dữ liệu hiện tại và hiển thị thông báo thành công. |
-    #####  c. Đổi mật khẩu {#toc-1.3}
+    ####  1.3. Đổi mật khẩu {#toc-3-1-3}
     ??? book "Đổi mật khẩu"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -84,7 +84,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện**                   | - Người dùng có tài khoản đã đăng ký trong hệ thống. <br>- Email nhập vào (hoặc email đã gán cho tài khoản đăng nhập) tồn tại trong hệ thống. <br>- Người dùng truy cập hợp lệ vào link reset mật khẩu trong thời hạn cho phép. |
         | **Kết quả hiển thị**            | - Hệ thống gửi email chứa link đặt lại mật khẩu. <br>- Khi người dùng đặt lại mật khẩu thành công: hiển thị thông báo *“Đặt lại mật khẩu thành công!”*. <br>- Người dùng có thể dùng mật khẩu mới để đăng nhập. |
         | **Trường hợp không có dữ liệu** | - Email nhập không tồn tại trong hệ thống: hiển thị thông báo *“Email không tồn tại trong hệ thống”*. <br>- Nếu người dùng chưa đăng nhập và không nhập email: hệ thống yêu cầu nhập email trước khi thực hiện. |
-    #####  d. Thay đổi vai trò (đối với tài khoản được gán nhiều vai trò) {#toc-1.4}
+    ####  1.4. Thay đổi vai trò (đối với tài khoản được gán nhiều vai trò) {#toc-3-1-4}
     ??? book "Thay đổi vai trò"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -94,9 +94,9 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Giao diện liên quan**         | - Icon **Account** trên thanh điều hướng (góc trên cùng bên phải). <br>- Droplist hiển thị danh sách các vai trò đã được gán cho tài khoản. |
         | **Luồng thao tác chính**        | 1. Người dùng đăng nhập vào hệ thống. <br>2. Nhấn vào icon **Account** (góc trên cùng bên phải). <br>3. Droplist hiển thị danh sách các vai trò đã gán. <br>4. Người dùng chọn một vai trò trong danh sách. <br>5. Hệ thống tải lại trang web và hiển thị giao diện + chức năng theo vai trò đã chọn. |
         | **Điều kiện**                   | - Người dùng đã đăng nhập hợp lệ. <br>- Tài khoản người dùng được gán từ 2 vai trò trở lên. |
-        | **Kết quả hiển thị**            | - Giao diện và chức năng thay đổi theo vai trò vừa chọn. <br>- Các menu theo vai trò cụ thể: <br>&emsp;• **Người phụ trách**: Ứng Viên, Vị Trí, Lịch Phỏng Vấn, Trang Cá Nhân. <br>&emsp;• **Người đào tạo**: Lịch Đào Tạo Chung, Danh Sách Đào Tạo, Trang Cá Nhân. <br>&emsp;• **Người phỏng vấn**: Lịch Phỏng Vấn, Lịch Sử Phỏng Vấn, Trang Cá Nhân. <br>&emsp;• **Người được đào tạo**: Mục Tiêu Đào Tạo, Lịch Trình Đào Tạo, Tài Liệu, Biên Bản Đánh Giá, Trang Cá Nhân. |
+        | **Kết quả hiển thị**            | - Giao diện và chức năng thay đổi theo vai trò vừa chọn. <br>- Các menu theo vai trò cụ thể: <br>&emsp;+ **Người phụ trách**: Ứng Viên, Vị Trí, Lịch Phỏng Vấn, Trang Cá Nhân. <br>&emsp;+ **Người đào tạo**: Lịch Đào Tạo Chung, Danh Sách Đào Tạo, Trang Cá Nhân. <br>&emsp;+ **Người phỏng vấn**: Lịch Phỏng Vấn, Lịch Sử Phỏng Vấn, Trang Cá Nhân. <br>&emsp;+ **Người được đào tạo**: Mục Tiêu Đào Tạo, Lịch Trình Đào Tạo, Tài Liệu, Biên Bản Đánh Giá, Trang Cá Nhân. |
         | **Trường hợp không có dữ liệu** | - Nếu tài khoản chỉ có một vai trò, droplist không hiển thị lựa chọn thay đổi vai trò. |
-    #####  e. Đăng xuất khỏi tài khoản {#toc-1.5}
+    ####  1.5. Đăng xuất khỏi tài khoản {#toc-3-1-5}
     ??? book "Đăng xuất khỏi tài khoản"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -110,13 +110,14 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Trường hợp không có dữ liệu** | - Không có trường hợp đặc biệt, vì nút **Đăng Xuất** luôn khả dụng khi người dùng đang đăng nhập. |
 ---
 
-???+ info "2. Cụm chức năng quản lý ứng viên"
-    ### 2. Cụm chức năng quản lý ứng viên
-    #### 2.1. Xem và thao tác tại bảng danh sách ứng viên {#toc-2-1}
-    ??? book "Xem và thao tác tại bảng danh sách ứng viên"
+## IV. Đặc tả chức năng dành cho Handler
+???+ info "1. Nhóm chức năng giữa Người phụ trách - Ứng viên "
+    ### 1. Nhóm chức năng giữa Người phụ trách - Ứng viên {#toc-4-1}
+    #### 1.1. Xem bảng danh sách ứng viên {#toc-4-1-1}
+    ??? book "Xem bảng danh sách ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Xem và thao tác tại bảng danh sách ứng viên |
+        | **Tên chức năng** | Xem bảng danh sách ứng viên |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Tìm kiếm nhanh ứng viên theo **Họ và Tên** thông qua ô nhập liệu.<br>3. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
         | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Bảng **Danh sách ứng viên**.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Ngày phỏng vấn**. |
@@ -124,19 +125,19 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên. |
         | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu hiện đang trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu hiện đang trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
-    #### 2.2. Xem chi tiết thông tin ứng viên {#toc-2-2}
+    #### 1.2. Xem chi tiết thông tin ứng viên {#toc-4-1-2}
     ??? book "Xem chi tiết thông tin ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Xem chi tiết thông tin ứng viên |
-        | **Vai trò** | Người phụ trách, Người phỏng vấn, Người đào tạo |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem toàn bộ thông tin chi tiết của ứng viên và quản lý thông tin tài khoản ứng viên. <br><br>- Tại tab **“Thông tin ứng viên”**: hiển thị các thông tin: <br>&emsp;+ Tên ứng viên <br>&emsp;+ Vị trí ứng tuyển <br>&emsp;+ Trạng thái ứng tuyển (`Mới`, `Passed`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`) <br>&emsp;+ Đánh giá (`Không tốt`, `Trung bình`, `Khá tốt`, `Tốt`) <br>&emsp;+ Trạng thái đào tạo (`Đang đào tạo`, `Đào tạo hoàn thành`, `Đào tạo thất bại`) <br>&emsp;+ Người phụ trách ứng viên <br>&emsp;+ Người đào tạo ứng viên <br>&emsp;+ Thông tin thêm cho người phỏng vấn (CV, bằng cấp, lịch làm việc dự kiến ứng viên đã nhập khi ứng tuyển vào vị trí). <br><br>- Tại tab **“Tài khoản ứng viên”**: cho phép người phụ trách **xem, sửa, xóa** thông tin tài khoản ứng viên: Họ và tên, Giới tính, Ngày sinh, Số điện thoại, Gmail, Mã OTP, Vị trí ứng tuyển. Có nút **“Cập nhật tài khoản”** để lưu thay đổi. |
-        | **Giao diện liên quan** | - Menu **Ứng Viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** gồm 2 tab: **Thông tin ứng viên**, **Tài khoản ứng viên** |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập hệ thống. <br>2. Chọn menu **Ứng Viên**. <br>3. Tại bảng **Danh sách ứng viên**, chọn một dòng dữ liệu. <br>4. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>5. Tại tab **Thông tin ứng viên**, xem các thông tin chi tiết. <br>6. Chuyển sang tab **Tài khoản ứng viên** để xem, chỉnh sửa hoặc xóa thông tin tài khoản. <br>7. Khi chỉnh sửa, nhấn nút **Cập nhật tài khoản** để lưu thay đổi. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập chức năng. <br>- Ứng viên phải tồn tại trong bảng **Danh sách ứng viên**. |
-        | **Kết quả hiển thị** | - Hệ thống hiển thị đầy đủ chi tiết ứng viên tại tab **Thông tin ứng viên**. <br>- Thông tin tài khoản ứng viên hiển thị tại tab **Tài khoản ứng viên**. <br>- Sau khi chỉnh sửa và nhấn **Cập nhật tài khoản**, dữ liệu được cập nhật thành công và thông báo xác nhận hiển thị. |
-        | **Trường hợp không có dữ liệu** | - Một số thông tin chưa được bổ sung sẽ có ô dữ liệu trống. |
-    #### 2.3. Thêm ứng viên mới {#toc-2-3}
+        | Tên chức năng | Xem và quản lý thông tin chi tiết ứng viên |
+        | Vai trò | Người phụ trách |
+        | Mô tả | Người phụ trách có thể xem toàn bộ thông tin chi tiết của ứng viên và quản lý tài khoản ứng viên. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin hồ sơ (Tên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Đánh giá, Trạng thái đào tạo, Người phụ trách, Người đào tạo, Thông tin thêm như CV, bằng cấp, lịch làm việc dự kiến). <br>- Tại tab “Tài khoản ứng viên”: có quyền xem, sửa, xóa thông tin tài khoản (Họ và tên, Giới tính, Ngày sinh, Số điện thoại, Gmail, Mã OTP, Vị trí ứng tuyển). Có nút “Cập nhật tài khoản” để lưu thay đổi. |
+        | Giao diện liên quan | - Menu Ứng Viên → bảng Danh sách ứng viên <br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên, Tài khoản ứng viên |
+        | Luồng thao tác chính | 1. Người phụ trách đăng nhập hệ thống.<br>2. Vào menu Ứng viên, chọn một ứng viên.<br>3. Xem thông tin ở tab Thông tin ứng viên.<br>4. Chuyển sang tab Tài khoản ứng viên để xem, chỉnh sửa hoặc xóa thông tin.<br>5. Nhấn Cập nhật tài khoản để lưu thay đổi. |
+        | Điều kiện | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
+        | Kết quả hiển thị | - Hiển thị chi tiết ứng viên và thông tin tài khoản.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo “Cập nhật dữ liệu thành công!”. |
+        | Trường hợp không có dữ liệu | - Thông tin chưa có sẽ để trống. |
+    #### 1.3. Thêm ứng viên mới {#toc-4-1-3}
     ??? book "Thêm ứng viên mới"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -148,46 +149,23 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp. <br>- Dữ liệu nhập hợp lệ. <br>- Người phụ trách nhấn nút **“Thêm ứng viên”**. |
         | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình *Danh sách ứng viên*. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên vừa thêm chưa hiển thị: người phụ trách tải lại trang (F5). <br>- Nếu vẫn không thấy: liên hệ bộ phận có thẩm quyền để kiểm tra. |
-    #### 2.4. Chỉ định người nhận trách nhiệm cho ứng viên {#toc-2-4}
-    ??? book "Chỉ định người nhận trách nhiệm cho ứng viên"
+    #### 1.4. Gán người nhận trách nhiệm cho ứng viên {#toc-4-1-4}
+    ??? book "Gán người nhận trách nhiệm cho ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Chỉ định người nhận trách nhiệm cho ứng viên |
-        | **Vai trò** | Người phụ trách, Người đào tạo |
-        | **Mô tả** | Chức năng cho phép phân công trách nhiệm cho từng ứng viên thông qua 2 luồng dữ liệu liên kết:<br><br>1. **Người phụ trách**: Gán, thay đổi hoặc gỡ người phụ trách và người đào tạo cho ứng viên.<br>2. **Người đào tạo**: Khi được gán vào một ứng viên, tự động thấy ứng viên đó trong menu **Danh Sách Đào Tạo** nhưng chỉ với quyền xem, không thể chỉnh sửa thông tin cơ bản (ví dụ: họ tên, email, trạng thái hồ sơ). Người đào tạo chỉ có thể thao tác trong phạm vi đào tạo (ví dụ: cập nhật tiến trình đào tạo nếu hệ thống hỗ trợ). |
-        | **Giao diện liên quan** | - Menu **Ứng Viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → tab **Thông tin ứng viên** <br>- Popup **Thêm người phụ trách** <br>- Popup **Thêm người đào tạo** <br>- Menu **Danh Sách Đào Tạo** → bảng ứng viên đào tạo |
-        | **Luồng thao tác chính** | **Từ phía Người phụ trách:**<br>1. Người phụ trách đăng nhập và chọn menu **Ứng Viên**.<br>2. Tại bảng **Danh sách ứng viên**, chọn một ứng viên → hệ thống mở màn hình **Chi tiết ứng viên**.<br>3. Nhấn nút **Người phụ trách** → popup **Thêm người phụ trách**.<br>4. Tìm kiếm, tick chọn một hoặc nhiều người phụ trách → nhấn **Xác nhận**.<br>5. Nhấn nút **Người đào tạo** → popup **Thêm người đào tạo**.<br>6. Thêm, gỡ hoặc cập nhật người đào tạo → nhấn **Xác nhận**.<br>7. Hệ thống cập nhật dữ liệu và hiển thị danh sách người phụ trách/người đào tạo trên hồ sơ ứng viên.<br><br>**Từ phía Người đào tạo:**<br>8. Khi được gán, hệ thống tự động ghi nhận liên kết ứng viên ↔ người đào tạo.<br>9. Ứng viên xuất hiện trong bảng **Danh Sách Đào Tạo** tại menu tương ứng.<br>10. Người đào tạo có thể truy cập để xem hồ sơ ứng viên, nhưng không thể chỉnh sửa thông tin cơ bản (họ tên, email, trạng thái...).<br>11. Người đào tạo chỉ được phép thực hiện các chức năng trong phạm vi đào tạo (nếu hệ thống định nghĩa). |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống.<br>- Danh sách người phụ trách/người đào tạo có dữ liệu để lựa chọn.<br>- Người đào tạo khi đăng nhập có quyền xem menu **Danh Sách Đào Tạo**. |
-        | **Kết quả hiển thị** | - Tab **Thông tin ứng viên** hiển thị danh sách người phụ trách/người đào tạo đã gán.<br>- Thông báo *“Cập nhật dữ liệu thành công !”*.<br>- Menu **Danh Sách Đào Tạo** của người đào tạo hiển thị ứng viên tương ứng.<br>- Người đào tạo có thể xem thông tin ứng viên nhưng không thể chỉnh sửa dữ liệu cơ bản. |
-        | **Trường hợp không có dữ liệu** | - Nếu danh sách người phụ trách/người đào tạo trống: hiển thị thông báo *“Không có dữ liệu để lựa chọn”*.<br>- Nếu người đào tạo chưa được gán ứng viên nào: bảng **Danh Sách Đào Tạo** hiển thị thông báo *“Bảng này hiện đang trống!”*. |
-    #### 2.5. Cập nhật thông tin ứng viên {#toc-2-5}
-    ??? book "Cập nhật thông tin ứng viên"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Cập nhật thông tin ứng viên |
-        | **Vai trò** | Người phụ trách, Ứng viên |
-        | **Mô tả** | Chức năng cho phép **Người phụ trách** chỉnh sửa, cập nhật và quản lý thông tin chi tiết của ứng viên tại màn hình **Chi tiết ứng viên**. <br><br>Các thao tác bao gồm: <br>- Thay đổi **Trạng thái ứng viên**: Mới, Passed, Đang phỏng vấn, HR xác nhận, Offered, Failed, Dropped, Rejected, Chưa phỏng vấn. <br>- Thay đổi **Đánh giá ứng viên**: Không tốt, Trung bình, Khá tốt, Tốt. <br>- Thay đổi **Trạng thái đào tạo**: Đang đào tạo, Đào tạo hoàn thành, Đào tạo thất bại. <br>&emsp;⮕ Khi trạng thái cập nhật thành *“Đang đào tạo”*: <br>&emsp;&emsp;• Role của **Ứng viên** sẽ được chuyển thành **Người được đào tạo**. <br>&emsp;&emsp;• Ứng viên có thể đăng nhập bằng tài khoản hệ thống đã được cung cấp. <br>- Xem *Lịch làm việc dự kiến** tại popup *“Thông tin ứng viên cung cấp”*. <br>- Cập nhật thông tin tại phần **Thông tin cho người phỏng vấn/ứng viên**. <br>- **Xóa đơn ứng tuyển**: chọn nút *“Xóa đơn ứng tuyển”* → popup xác nhận → nhấn *Xác nhận*. <br>- **Hủy lịch phỏng vấn**: chọn nút *“Hủy lịch phỏng vấn”* → popup xác nhận → nhấn *Xác nhận*. |
-        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Thông tin ứng viên** <br>- Popup **Thông tin ứng viên cung cấp** <br>- Popup xác nhận **Xóa đơn ứng tuyển** <br>- Popup xác nhận **Hủy lịch phỏng vấn** |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên. <br>3. Hệ thống chuyển sang màn hình **Chi tiết ứng viên**. <br>4. Tại thẻ **Thông tin ứng viên**, người phụ trách có thể: <br>&emsp;- Cập nhật **trạng thái ứng viên** từ dropdown. <br>&emsp;- Cập nhật **đánh giá** từ dropdown. <br>&emsp;- Cập nhật **trạng thái đào tạo** từ dropdown.<br>&emsp;&emsp;• Nếu chọn *Đang đào tạo*: hệ thống đổi role của ứng viên thành **Người được đào tạo**, và ứng viên có thể đăng nhập vào hệ thống bằng tài khoản đã cấp. <br>&emsp;- Nhấn nút **Thông tin thêm** → popup *Thông tin ứng viên cung cấp* → xem lịch làm việc dự kiến → nhấn **Xác nhận**. <br>&emsp;- Nhập hoặc chỉnh sửa **Thông tin cho người phỏng vấn/ứng viên**. <br>5. Nếu cần, nhấn nút **Xóa đơn ứng tuyển** → popup xác nhận → nhấn **Xác nhận**. <br>6. Nếu cần, nhấn nút **Hủy lịch phỏng vấn** → popup xác nhận → nhấn **Xác nhận**. <br>7. Hệ thống cập nhật và hiển thị thay đổi. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Các trường thông tin nhập vào hợp lệ (ví dụ: lịch làm việc không để trống ngày/giờ). |
-        | **Kết quả hiển thị** | - Thông tin của ứng viên được cập nhật thành công. <br>- Thông báo *“Cập nhật dữ liệu thành công !”*. <br>- Nếu **Trạng thái đào tạo** là *Đang đào tạo*: role ứng viên chuyển thành **Người được đào tạo**. <br>- Nếu xóa đơn ứng tuyển: đơn bị gỡ khỏi hệ thống, ứng viên không còn hiển thị trên bảng **Danh sách ứng viên**. <br>- Nếu hủy lịch phỏng vấn: lịch phỏng vấn biến mất khỏi màn hình chi tiết và bảng lịch. |
-        | **Trường hợp không có dữ liệu** | - Phần đánh giá và trạng thái đào tạo của ứng viên cho phép trống, khi trống sẽ hiển thị placeholder "Đánh giá" và "Trạng thái đào tạo" màu xanh dương. <br>- Phần "Người đào tạo" cho phép trống nếu ứng viên chưa vượt qua vòng phỏng vấn để đến phần thử việc và đào tạo. |
-    #### 2.6. Cập nhật tài khoản ứng viên {#toc-2-6}
-    ??? book "Cập nhật tài khoản ứng viên"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Cập nhật tài khoản ứng viên |
-        | **Vai trò** | Người phụ trách, Người được đào tạo |
-        | **Mô tả** | Chức năng cho phép người phụ trách cập nhật, chỉnh sửa và quản lý thông tin tài khoản của ứng viên tại thẻ **Tài khoản ứng viên** trong màn hình **Chi tiết ứng viên**. <br><br>Các thao tác bao gồm: <br>- Chỉnh sửa thông tin nhập liệu: **Họ và tên**, **Số điện thoại**, **Gmail**, **Mã OTP**. <br>- Thay đổi các trường dạng lựa chọn: <br>&emsp;• **Giới tính**: chọn từ droplist. <br>&emsp;• **Ngày sinh**: chọn hoặc nhập từ popup lịch (chỉ cho phép chọn ngày trong quá khứ). <br>&emsp;• **Vị trí**: chọn từ droplist các vị trí đang tuyển dụng. <br>- Nhấn nút **Cập nhật tài khoản** để xác nhận thay đổi. <br>- Đặt lại mật khẩu cho ứng viên bằng cách nhấn nút **Reset Password**. |
-        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Tài khoản ứng viên** <br>- Popup lịch chọn ngày (cho trường Ngày sinh) |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống chuyển sang màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Tài khoản ứng viên**. <br>5. Tại đây, người phụ trách có thể: <br>&emsp;- Nhập/chỉnh sửa: **Họ và tên**, **Số điện thoại**, **Gmail**, **Mã OTP**. <br>&emsp;- Chọn **Giới tính** từ droplist. <br>&emsp;- Chọn hoặc nhập **Ngày sinh** từ popup lịch (chỉ được chọn ngày trong quá khứ). <br>&emsp;- Chọn **Vị trí** từ droplist các vị trí đang tuyển. <br>6. Sau khi hoàn tất chỉnh sửa, nhấn nút **Cập nhật tài khoản**. <br>7. Hệ thống lưu thay đổi và hiển thị thông báo thành công. <br>8. Nếu cần đặt lại mật khẩu cho ứng viên, nhấn nút **Reset Password** → hệ thống thực hiện gửi link reset mật khẩu đến G-mail mà ứng viên đã đăng ký. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Các thông tin nhập vào hợp lệ: <br>&emsp;• Số điện thoại đúng định dạng. <br>&emsp;• Gmail đúng định dạng email. <br>&emsp;• Ngày sinh không được lớn hơn ngày hiện tại. |
-        | **Kết quả hiển thị** | - Thông tin tài khoản ứng viên được cập nhật thành công. <br>- Thông báo: *“Cập nhật dữ liệu thành công !”*. <br>- Khi đặt lại mật khẩu: hiển thị thông báo *“Đặt lại mật khẩu thành công”* và gửi mật khẩu mới cho ứng viên theo cơ chế hệ thống. |
-        | **Trường hợp không có dữ liệu** | - Nếu không có thông tin thay đổi, hệ thống vẫn cập nhật dữ liệu và hiển thị thông báo "Cập nhật dữ liệu thành công!" nếu người phụ trách nhấn nút "Cập nhật tài khoản". |
+        | **Tên chức năng** | Gán người nhận trách nhiệm cho ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách có thể gán, thay đổi hoặc gỡ bỏ người phụ trách và người đào tạo cho từng ứng viên. Thông tin này được hiển thị trong hồ sơ ứng viên để phục vụ quản lý và đào tạo. |
+        | **Giao diện liên quan** | - Menu **Ứng Viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → tab **Thông tin ứng viên** <br>- Popup **Thêm người phụ trách** <br>- Popup **Thêm người đào tạo** |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng Viên**.<br>2. Tại bảng **Danh sách ứng viên**, chọn một ứng viên → hệ thống mở màn hình **Chi tiết ứng viên**.<br>3. Nhấn nút **Người phụ trách** → popup **Thêm người phụ trách**.<br>4. Tìm kiếm, tick chọn một hoặc nhiều người phụ trách → nhấn **Xác nhận**.<br>5. Nhấn nút **Người đào tạo** → popup **Thêm người đào tạo**.<br>6. Thêm, gỡ hoặc cập nhật người đào tạo → nhấn **Xác nhận**.<br>7. Hệ thống cập nhật dữ liệu và hiển thị danh sách người phụ trách/người đào tạo đã gán. |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống.<br>- Danh sách người phụ trách/người đào tạo có dữ liệu để lựa chọn. |
+        | **Kết quả hiển thị** | - Tab **Thông tin ứng viên** hiển thị danh sách người phụ trách/người đào tạo đã gán.<br>- Thông báo *“Cập nhật dữ liệu thành công !”*. |
+        | **Trường hợp không có dữ liệu** | - Nếu danh sách người phụ trách/người đào tạo trống: hiển thị thông báo *“Không có dữ liệu để lựa chọn”*. |
+    #### 1.5. Cập nhật thông tin ứng viên {#toc-4-1-5}
 ---
-???+ info "3. Cụm chức năng quản lý vị trí tuyển dụng."
-    ### 3. Cụm chức năng quản lý vị trí tuyển dụng. {#toc-3}
-    #### 3.1. Xem thông tin vị trí tuyển dụng {#toc-3-1}
+???+ info "2. Nhóm chức năng quản lý vị trí tuyển dụng"
+    ### 2. Nhóm chức năng quản lý vị trí tuyển dụng {#toc-4-2}
+    #### 2.1. Xem thông tin vị trí tuyển dụng {#toc-4-2-1}
     ??? book "Xem thông tin vị trí tuyển dụng"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -199,7 +177,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.<br>- Hệ thống đã có dữ liệu về các vị trí tuyển dụng. |
         | **Kết quả hiển thị** | - Bảng **“Danh sách vị trí ứng tuyển”** hiển thị đầy đủ các vị trí cùng các cột thông tin liên quan.<br>- Dữ liệu được cập nhật theo thời gian thực hoặc theo batch (tùy cấu hình hệ thống).<br>- Trạng thái hiển thị trực quan (ví dụ: màu sắc hoặc icon thể hiện Kích hoạt/Vô hiệu/Xóa). |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có vị trí nào, bảng dữ liệu thông báo "Bảng này hiện đang trống" kèm với icon thùng rỗng.<br>- Nếu dữ liệu tại các cột đếm (Ứng viên, Hẹn phỏng vấn, Đang đào tạo) bằng 0: hiển thị giá trị `0` thay vì để trống. |
-    #### 3.2. Thiết lập lịch phỏng vấn tuyển dụng {#toc-3-2}
+    #### 2.2. Thiết lập lịch phỏng vấn tuyển dụng {#toc-4-2-2}
     ??? book "Thiết lập lịch phỏng vấn tuyển dụng"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -211,9 +189,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý lịch phỏng vấn.<br>- Chỉ được thêm lịch tại các ngày trong tương lai.<br>- Trọng số người tham gia phỏng vấn > 0. |
         | **Kết quả hiển thị** | - Lịch phỏng vấn mới xuất hiện tại khung giờ đã chọn.<br>- Popup đóng sau khi lưu thành công.<br>- Hiển thị thông báo xác nhận *“Cập nhật dữ liệu thành công !”*. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có lịch phỏng vấn nào trên bảng, toàn bộ các ô trên bảng đều .<br>- Các ô trong tương lai chưa thiết lập lịch vẫn hiển thị dấu cộng để thêm mới.<br>- Các ô trong quá khứ hiển thị màu xanh dương, không thao tác. |
-    #### 3.3. Thêm mô tả vị trí tuyển dụng (JD) {#toc-3-3}
-    ??? book "Thêm mô tả vị trí tuyển dụng (JD)"
-    #### 3.4. Thiết lập tiêu chuẩn ứng viên {#toc-3-4}
+    #### 2.3. Thiết lập tiêu chuẩn ứng viên cho vị trí tuyển dụng {#toc-4-2-3}
     ??? book "Thiết lập tiêu chuẩn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -226,13 +202,13 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Kết quả hiển thị** | - Danh sách thẻ tiêu chuẩn được hiển thị và có thể thao tác mở rộng/thu gọn.<br>- Sau khi thêm/sửa/xóa, dữ liệu được cập nhật ngay trên màn hình.<br>- Thông báo thành công hiển thị khi thao tác hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có thẻ tiêu chuẩn nào: hiển thị ô **“Nhập Danh Mục Mới”** để thêm.<br>- Nếu thẻ chưa có mục đánh giá: hiển thị thẻ rỗng với nút **“Thêm mục đánh giá”**.<br>- Khi xóa hết thẻ: màn hình trở về trạng thái trống kèm hướng dẫn thêm mới. |
 ---
-???+ info "4. Cụm chức năng thiết lập quy trình phỏng vấn."
-    ### 4. Cụm chức năng thiết lập quy trình phỏng vấn. {#toc-4}
-    #### 4.1. Thiết lập các vòng phỏng vấn {#toc-4-1}
+???+ info "3. Nhóm chức năng quản lý phỏng vấn"
+    ### 3. Nhóm chức năng quản lý phỏng vấn {#toc-4-3}
+    #### 3.1. Thiết lập quy trình phỏng vấn {#toc-4-3-1}
     ??? book "Thiết lập các vòng phỏng vấn"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập các vòng phỏng vấn |
+        | **Tên chức năng** | Thiết lập quy trình phỏng vấn |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Chức năng cho phép người phụ trách quản lý các vòng phỏng vấn của một vị trí tuyển dụng. <br><br>- Các vòng phỏng vấn được hiển thị trong **danh sách bên phải màn hình**, mỗi vòng thể hiện dưới dạng **thẻ** kèm trạng thái (Kích hoạt / Vô hiệu / Xóa). <br>- Khi mở rộng một thẻ, hệ thống hiển thị **danh sách mục con** (tiêu chí đánh giá). <br>- Khi chọn một mục con, phần màn hình bên trái hiển thị chi tiết các **tiêu chí đánh giá** của mục đó. <br>- Người phụ trách có thể **thêm, sửa, xóa** các tiêu chí. <br>- Khi mở rộng tiêu chí, hiển thị chi tiết **các yêu cầu** gắn với tiêu chí đó và trạng thái thể hiện **mức độ cần thiết** của yêu cầu đối với vị trí ứng tuyển. |
         | **Giao diện liên quan** | - Menu chính: **“Vị trí”**.<br>- Menu phụ: **“Phỏng vấn”**.<br>- Sub-menu: **“Các Vòng Phỏng Vấn”**.<br>- Màn hình: **“Các Vòng Phỏng Vấn”** gồm:<br>&emsp;+ Cột bên phải: Danh sách thẻ vòng phỏng vấn.<br>&emsp;+ Khu vực bên trái: Hiển thị tiêu chí và yêu cầu chi tiết của mục con. |
@@ -240,97 +216,31 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại.<br>- Tên vòng phỏng vấn, tiêu chí và yêu cầu phải hợp lệ (không để trống). |
         | **Kết quả hiển thị** | - Danh sách vòng phỏng vấn (thẻ) với trạng thái rõ ràng.<br>- Các mục con, tiêu chí và yêu cầu được hiển thị theo cấu trúc phân cấp.<br>- Sau thao tác thêm/sửa/xóa, dữ liệu được cập nhật tức thì trên giao diện.<br>- Thông báo thành công hiển thị sau mỗi hành động hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu vị trí chưa có vòng phỏng vấn: hiển thị nút **Thêm vòng phỏng vấn**.<br>- Nếu vòng phỏng vấn chưa có tiêu chí: hiển thị thẻ rỗng với nút **“Thêm tiêu chí”**.<br>- Nếu tiêu chí chưa có yêu cầu: hiển thị khu vực trống với nút **“Thêm yêu cầu”**.<br>- Nếu tất cả đã bị xóa: màn hình trở về trạng thái trống kèm hướng dẫn thêm mới. |
-    #### 4.2. Thiết lập câu hỏi phỏng vấn {#toc-4-2}
+    #### 3.2. Thiết lập câu hỏi phỏng vấn {#toc-4-3-2}
     ??? book "Thiết lập câu hỏi phỏng vấn"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Thiết lập câu hỏi phỏng vấn |
-        | **Vai trò** | Người phụ trách, Ứng viên |
-        | **Mô tả** | Chức năng cho phép người phụ trách quản lý các bộ câu hỏi phỏng vấn theo từng vị trí tuyển dụng. <br><br>- Các **bộ câu hỏi** được hiển thị dưới dạng **thẻ có tiêu đề rõ ràng**.<br>- Người phụ trách có thể **thêm, sửa, xóa** các bộ câu hỏi.<br>- Khi mở rộng một bộ câu hỏi, hệ thống hiển thị **danh sách câu hỏi** dưới dạng thẻ, mỗi thẻ có thể mở rộng/thu gọn.<br>- Người phụ trách có thể **thêm, sửa, xóa** từng câu hỏi trong bộ.<br>- Khi mở rộng thẻ câu hỏi, có thể nhập **mô tả chi tiết**, **đính kèm file** (nếu cần thiết) để phục vụ cho việc đánh giá ứng viên theo yêu cầu của từng vị trí.<br><br>Ngoài ra, khi ứng viên nộp hồ sơ ứng tuyển vào một **vị trí tuyển dụng** đã được cấu hình câu hỏi:<br>&emsp;- Hệ thống sẽ **tự động hiển thị bộ câu hỏi** tương ứng cho ứng viên.<br>&emsp;- Ứng viên phải trả lời toàn bộ các câu hỏi trước khi hoàn tất hồ sơ ứng tuyển.<br>&emsp;- Câu trả lời của ứng viên được **hệ thống lưu trữ và gắn trực tiếp với hồ sơ của ứng viên** để phục vụ cho bước phỏng vấn và đánh giá sau này. |
-        | **Giao diện liên quan** | - Menu chính: **“Vị trí”**.<br>- Menu phụ: **“Phỏng vấn”**.<br>- Sub-menu: **“Câu Hỏi Thông Tin”**.<br>- Màn hình **“Câu Hỏi Thông Tin”** gồm:<br>&emsp;+ Khu vực danh sách: hiển thị các bộ câu hỏi dạng thẻ.<br>&emsp;+ Thẻ có thể mở rộng để hiển thị danh sách câu hỏi.<br>&emsp;+ Khu vực nhập mô tả và đính kèm file khi mở rộng câu hỏi.<br>- Giao diện ứng viên: **Form ứng tuyển** hiển thị thêm phần câu hỏi theo vị trí ứng tuyển. |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và truy cập **Menu “Vị trí” → Menu phụ “Phỏng vấn” → Sub-menu “Câu Hỏi Thông Tin”**.<br>2. Hệ thống hiển thị danh sách các bộ câu hỏi dưới dạng thẻ.<br>3. Người phụ trách có thể:<br>&emsp;- Thêm mới, chỉnh sửa, xóa bộ câu hỏi.<br>&emsp;- Mở rộng bộ câu hỏi để xem danh sách câu hỏi.<br>&emsp;- Thêm mới, chỉnh sửa, xóa câu hỏi.<br>&emsp;- Mở rộng câu hỏi để nhập mô tả chi tiết, đính kèm file (nếu cần).<br>4. Hệ thống cập nhật dữ liệu và hiển thị kết quả ngay sau thao tác.<br>5. Khi ứng viên ứng tuyển vào vị trí:<br>&emsp;- Hệ thống hiển thị bộ câu hỏi đã cấu hình.<br>&emsp;- Ứng viên nhập câu trả lời.<br>&emsp;- Hệ thống kiểm tra tính đầy đủ trước khi cho phép hoàn tất ứng tuyển.<br>&emsp;- Câu trả lời được lưu vào hồ sơ ứng viên. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại.<br>- Tên bộ câu hỏi và nội dung câu hỏi không được để trống.<br>- File đính kèm phải đúng định dạng cho phép.<br>- Ứng viên chỉ có thể nộp hồ sơ nếu đã trả lời toàn bộ câu hỏi bắt buộc. |
-        | **Kết quả hiển thị** | - Danh sách các bộ câu hỏi hiển thị thành thẻ, có thể mở rộng/thu gọn.<br>- Các câu hỏi trong bộ hiển thị rõ ràng, có tùy chọn thêm, sửa, xóa.<br>- Khi mở rộng câu hỏi: hiển thị ô nhập mô tả và chức năng đính kèm file.<br>- Sau khi thao tác hợp lệ: dữ liệu cập nhật tức thì, hiển thị thông báo thành công.<br>- Ở giao diện ứng viên: hiển thị form câu hỏi, ứng viên điền câu trả lời, hệ thống lưu và liên kết vào hồ sơ ứng viên. |
-        | **Trường hợp không có dữ liệu** | - Nếu chưa có bộ câu hỏi: hiển thị nút **Thêm bộ câu hỏi**.<br>- Nếu bộ câu hỏi chưa có câu hỏi: hiển thị nút **Thêm câu hỏi**.<br>- Nếu câu hỏi chưa có mô tả hoặc file đính kèm: hiển thị trạng thái trống với nút **Thả file hoặc bấm chọn file ở đây**.<br>- Nếu ứng viên ứng tuyển vào vị trí chưa có cấu hình câu hỏi: form ứng tuyển sẽ không hiển thị phần câu hỏi. |
-    #### 4.3. Thiết lập bài kiểm tra cho vị trí tuyển dụng {#toc-4-3}
-    ??? book "Thiết lập bài kiểm tra cho vị trí tuyển dụng"
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách quản lý các bộ câu hỏi phỏng vấn theo từng vị trí tuyển dụng. <br>- Bộ câu hỏi hiển thị dưới dạng thẻ có tiêu đề. <br>- Có thể thêm, sửa, xóa bộ câu hỏi. <br>- Khi mở rộng thẻ bộ câu hỏi: hiển thị danh sách câu hỏi dưới dạng thẻ. <br>- Có thể thêm, sửa, xóa câu hỏi. <br>- Khi mở rộng thẻ câu hỏi: nhập mô tả chi tiết, đính kèm file để hỗ trợ quá trình đánh giá ứng viên. |
+        | **Giao diện liên quan** | - Menu chính: Vị trí → Phỏng vấn → Câu hỏi thông tin <br>- Màn hình Câu hỏi thông tin gồm: <br> + Khu vực danh sách bộ câu hỏi (thẻ). <br> + Danh sách câu hỏi khi mở rộng thẻ. <br> + Khu vực nhập mô tả, đính kèm file. |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và truy cập Vị trí → Phỏng vấn → Câu hỏi thông tin. <br>2. Hệ thống hiển thị danh sách bộ câu hỏi. <br>3. Người phụ trách có thể: <br> - Thêm mới, chỉnh sửa, xóa bộ câu hỏi. <br> - Mở rộng bộ để quản lý câu hỏi. <br> - Thêm mới, chỉnh sửa, xóa câu hỏi. <br> - Mở rộng câu hỏi để nhập mô tả hoặc đính kèm file. <br>4. Hệ thống cập nhật dữ liệu và hiển thị kết quả ngay sau thao tác. |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí. <br>- Vị trí tuyển dụng tồn tại. <br>- Tên bộ câu hỏi và nội dung câu hỏi không được để trống. <br>- File đính kèm đúng định dạng cho phép. |
+        | **Kết quả hiển thị** | - Danh sách bộ câu hỏi hiển thị dưới dạng thẻ, có thể mở rộng/thu gọn. <br>- Các câu hỏi trong bộ hiển thị chi tiết, có tùy chọn thêm, sửa, xóa. <br>- Khi nhập mô tả hoặc đính kèm file: hệ thống cập nhật và hiển thị ngay. <br>- Hiển thị thông báo thành công khi thao tác hợp lệ. |
+        | **Trường hợp không có dữ liệu** | - Nếu chưa có bộ câu hỏi: hiển thị nút Thêm bộ câu hỏi. <br>- Nếu bộ câu hỏi trống: hiển thị nút Thêm câu hỏi. <br>- Nếu câu hỏi không có mô tả/file: hiển thị trạng thái trống với tùy chọn Thả file hoặc chọn file ở đây. |
+    #### 3.3. Thiết lập bài kiểm tra {#toc-4-3-3}
+    ??? book "Thiết lập bài kiểm tra"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập bài kiểm tra cho vị trí tuyển dụng |
-        | **Vai trò** | Người phụ trách, Ứng viên |
-        | **Mô tả** | - Người phụ trách tạo và quản lý các bài kiểm tra đầu vào cho từng vị trí. <br>- Bài kiểm tra hiển thị dạng **thẻ** kèm trạng thái (Kích hoạt / Vô hiệu / Xóa). <br>- Người phụ trách có thể thêm, sửa tên, đổi trạng thái, quản lý **danh mục** và **câu hỏi** trong bài kiểm tra. <br>- Khi ứng viên ứng tuyển vào vị trí có bài kiểm tra: <br>&emsp;+ Hệ thống hiển thị bài kiểm tra tương ứng. <br>&emsp;+ Ứng viên bắt buộc hoàn thành bài kiểm tra trước khi nộp hồ sơ. <br>&emsp;+ Hệ thống tự động chấm và lưu kết quả gắn với hồ sơ ứng viên. <br>&emsp;+ Ứng viên không được xem kết quả sau khi nộp. |
+        | **Tên chức năng** | Thiết lập bài kiểm tra |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | - Người phụ trách tạo và quản lý các bài kiểm tra đầu vào cho từng vị trí. <br>- Bài kiểm tra hiển thị dạng **thẻ** kèm trạng thái (Kích hoạt / Vô hiệu / Xóa). <br>- Người phụ trách có thể thêm, sửa tên, đổi trạng thái, quản lý **danh mục** và **câu hỏi** trong bài kiểm tra. <br>- Khi ứng viên ứng tuyển vào vị trí có bài kiểm tra: <br>&emsp;+ Hệ thống hiển thị bài kiểm tra tương ứng. <br>&emsp;+ Ứng viên bắt buộc hoàn thành bài kiểm tra trước khi nộp hồ sơ. |
         | **Giao diện liên quan** | - Menu chính: **“Vị trí”**. <br>- Menu phụ: **“Phỏng vấn”**. <br>- Sub-menu: **“Kiểm Tra Đầu Vào”**. <br>- Màn hình quản lý: hiển thị danh sách bài kiểm tra (bên phải) và chi tiết bài kiểm tra (bên trái). <br>- Giao diện ứng viên: form ứng tuyển hiển thị thêm phần bài kiểm tra nếu vị trí có cấu hình. |
-        | **Luồng thao tác chính** | **Người phụ trách** <br>1. Truy cập menu **Vị trí → Phỏng vấn → Kiểm Tra Đầu Vào**. <br>2. Thêm/sửa/xóa bài kiểm tra, đổi trạng thái. <br>3. Quản lý danh mục và câu hỏi trong bài kiểm tra. <br>4. Xác nhận khi xóa danh mục/câu hỏi. <br>5. Hệ thống cập nhật dữ liệu và hiển thị thông báo. <br><br> **Ứng viên** <br>6. Khi ứng tuyển vào vị trí có bài kiểm tra: hệ thống hiển thị form bài kiểm tra. <br>7. Ứng viên trả lời toàn bộ câu hỏi, sau đó mới được hoàn tất hồ sơ. <br>8. Hệ thống tự động chấm, lưu kết quả vào hồ sơ (ứng viên không thấy kết quả). |
+        | **Luồng thao tác chính** | **Người phụ trách** <br>1. Truy cập menu **Vị trí → Phỏng vấn → Kiểm Tra Đầu Vào**. <br>2. Thêm/sửa/xóa bài kiểm tra, đổi trạng thái. <br>3. Quản lý danh mục và câu hỏi trong bài kiểm tra. <br>4. Xác nhận khi xóa danh mục/câu hỏi. <br>5. Hệ thống cập nhật dữ liệu và hiển thị thông báo. <br>6. Khi ứng viên ứng tuyển vào vị trí có bài kiểm tra: hệ thống hiển thị form bài kiểm tra. <br>7. Ứng viên trả lời toàn bộ câu hỏi, sau đó mới được hoàn tất hồ sơ. <br>8. Hệ thống tự động chấm, lưu kết quả vào hồ sơ (ứng viên không thấy kết quả). |
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. <br>- Vị trí tuyển dụng đã tồn tại. <br>- Tên bài kiểm tra/danh mục không để trống. <br>- Câu hỏi kiểm tra có nội dung hợp lệ. |
-        | **Kết quả hiển thị** | - Danh sách bài kiểm tra hiển thị dạng thẻ, có trạng thái và nút thao tác. <br>- Chi tiết bài kiểm tra gồm danh mục và câu hỏi hiển thị rõ ràng. <br>- Ứng viên thấy bài kiểm tra trong form ứng tuyển, làm xong mới nộp hồ sơ. <br>- Hệ thống lưu kết quả và gắn vào hồ sơ (không hiển thị cho ứng viên). |
+        | **Kết quả hiển thị** | - Danh sách bài kiểm tra hiển thị dạng thẻ, có trạng thái và nút thao tác. <br>- Chi tiết bài kiểm tra gồm danh mục và câu hỏi hiển thị rõ ràng. <br>- Ứng viên thấy bài kiểm tra trong form ứng tuyển. |
         | **Trường hợp không có dữ liệu** | - Chưa có bài kiểm tra: hiển thị nút **Thêm bài kiểm tra**, danh sách rỗng. <br>- Bài kiểm tra chưa có danh mục: hiển thị nút **Thêm danh mục**. <br>- Danh mục chưa có câu hỏi: hiển thị nút **Tạo câu hỏi**. <br>- Vị trí chưa cấu hình bài kiểm tra: ứng viên ứng tuyển chỉ nộp hồ sơ, không thấy phần kiểm tra. |
----
-???+ info "5. Cụm chức năng quản lý đào tạo."
-    ### 5. Cụm chức năng quản lý đào tạo.
-    #### 5.1. Cài đặt và sử dụng quy trình đào tạo {#toc-5-1}
-    ??? book "Cài đặt và sử dụng quy trình đào tạo"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Cài đặt và sử dụng quy trình đào tạo |
-        | **Vai trò** | Người phụ trách, Người đào tạo, Người được đào tạo |
-        | **Mô tả** | Chức năng cho phép: <br> - **Người phụ trách**: Quản lý toàn bộ quy trình đào tạo cho từng vị trí tuyển dụng (tạo, chỉnh sửa, xóa, vô hiệu hóa/kích hoạt). Trong mỗi quy trình, có thể quản lý chi tiết các tiêu chuẩn (chỉ mục) và gán tag như *Hướng dẫn*, *Kiểm tra*, *Đánh giá*, *Nhiệm vụ*. <br> - **Người đào tạo**: Xem các quy trình mà mình phụ trách cho ứng viên, quản lý danh sách buổi đào tạo (hiển thị/ẩn, xem lịch, trạng thái Đã xong / Đang tham gia / Đang chờ), xem chi tiết tiêu chí, upload file bổ sung, đồng thời có thể đánh giá từng tiêu chuẩn đào tạo. <br> - **Người được đào tạo**: Xem rõ ràng quy trình đào tạo, danh sách buổi đào tạo mà người đào tạo cho phép, lịch trình, tiêu chí chi tiết và tải file tài liệu liên quan. |
-        | **Giao diện liên quan** | - **Người phụ trách**: Màn hình **"Vị trí"** → chọn vị trí → **"Tổng quan vị trí"** → Tab **"Đào tạo"** → **"Quy trình"**. <br> - **Người đào tạo**: Menu **"Danh sách đào tạo"** → chọn ứng viên → Sub-menu **"Lịch trình"** → Quy trình & buổi đào tạo. <br> - **Người được đào tạo**: Menu **"Lịch trình"** → chọn buổi đào tạo → xem nội dung & tài liệu. |
-        | **Luồng thao tác chính** | - **Người phụ trách**: <br>1. Đăng nhập, chọn vị trí. <br>2. Vào Tab **"Quy trình"**, hệ thống hiển thị danh sách quy trình. <br>3. Thực hiện các thao tác: xem, tạo mới, chỉnh sửa, xóa, vô hiệu/kích hoạt. <br>4. Khi mở quy trình: hệ thống phân chia phần dành cho người đào tạo và người được đào tạo. <br>5. Quản lý tiêu chuẩn trong quy trình (xem, sửa, xóa, gán tag). <br><br>- **Người đào tạo**: <br>1. Vào **"Danh sách đào tạo"**, chọn ứng viên. <br>2. Vào **"Lịch trình"**, xem danh sách buổi đào tạo (lịch + trạng thái). <br>3. Quyết định buổi nào hiển thị/ẩn cho người được đào tạo. <br>4. Xem chi tiết tiêu chí, mở rộng danh mục và tiêu chí con. <br>5. Upload file bổ sung và đánh giá từng tiêu chuẩn. <br><br>- **Người được đào tạo**: <br>1. Vào **"Lịch trình"**, xem các quy trình & buổi được mở quyền. <br>2. Xem danh sách buổi (có lịch nếu có). <br>3. Xem nội dung tiêu chí và tải tài liệu từ người đào tạo. |
-        | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. <br>- Người đào tạo đã được gán cho ứng viên. <br>- Người được đào tạo có tài khoản hợp lệ và đang trong quá trình đào tạo. |
-        | **Kết quả hiển thị** | - Danh sách quy trình đào tạo theo từng vai trò. <br>- **Người phụ trách**: toàn quyền quản lý và chỉnh sửa. <br>- **Người đào tạo**: danh sách buổi, tiêu chí, quyền upload và đánh giá. <br>- **Người được đào tạo**: chỉ xem nội dung và tải tài liệu. |
-        | **Trường hợp không có dữ liệu** | - Không có quy trình: Người phụ trách thấy danh sách rỗng và nút **Nhập quy trình mới**; Người đào tạo/người được đào tạo sẽ không thấy được quy trình đào tạo.<br>- Người được đào tạo nếu chưa được gán quy trình đào tạo sẽ hiển thị thông báo "Ứng viên chưa được gán chương trình đào tạo". <br>- Quy trình không có tiêu chuẩn: chỉ hiển thị tên quy trình và nút **Nhập tiêu chuẩn mới** (đối với người phụ trách). |
-    #### 5.2. Quản lý đầu ra sau đào tạo {#toc-5-2}
-    ??? book "Quản lý đầu ra sau đào tạo"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Quản lý đầu ra sau đào tạo |
-        | **Vai trò** | Người phụ trách, Người đào tạo, Người được đào tạo |
-        | **Mô tả** | Chức năng cho phép **người phụ trách** quản lý các yêu cầu đầu ra (tiêu chuẩn đầu ra) của vị trí tuyển dụng. Các yêu cầu này được hiển thị dưới dạng thẻ. Người phụ trách có thể xem chi tiết, chỉnh sửa nội dung, thêm yêu cầu mới, hoặc xóa từng yêu cầu/thẻ (có xác nhận). Các yêu cầu đầu ra được gắn mức độ (ví dụ: cơ bản, trung bình, nâng cao), và mức độ này thay đổi tùy theo từng vị trí. <br><br>**Người đào tạo** có thể xem các tiêu chuẩn đầu ra được gắn với vị trí mà ứng viên đang theo học, đồng thời đánh giá mức độ đạt được của từng tiêu chuẩn theo thang: **Không tốt, Trung bình, Khá tốt, Tốt** dựa trên kết quả thực hiện của ứng viên trong quá trình đào tạo.<br><br>**Người được đào tạo** có thể xem được các tiêu chí này ở mục "Mục tiêu đào tạo" trên thanh menu sau khi đăng nhập vào tài khoản có gán quyền tương đương, người được đào tạo chỉ được xem, bao gồm các tiêu chí đào tạo và các đánh giá cho tiêu chí đó của người đào tạo, không có quyền chỉnh sửa thông tin. |
-        | **Giao diện liên quan** | - Màn hình **"Vị trí"** → chọn vị trí tuyển dụng cụ thể. <br>- Màn hình **"Tổng quan vị trí"** → Sub-menu **"Đào tạo"** → Tab **"Đầu ra"** (dành cho Người phụ trách). <br>- Màn hình **"Danh sách đào tạo"** → Chọn ứng viên → Menu phụ **"Đầu ra"** (dành cho Người đào tạo). |
-        | **Luồng thao tác chính** | **Đối với Người phụ trách**: <br>1. Đăng nhập và truy cập menu **"Vị trí"**. <br>2. Chọn một vị trí tuyển dụng cụ thể. <br>3. Vào màn hình **"Tổng quan vị trí"** → Tab **"Đào tạo"** → **"Đầu ra"**. <br>4. Quản lý danh sách các yêu cầu đầu ra dưới dạng thẻ. <br>5. Các thao tác chính: <br>&emsp;a. **Mở rộng thẻ** để xem chi tiết nội dung và mức độ yêu cầu. <br>&emsp;b. **Chỉnh sửa** nội dung yêu cầu trong thẻ. <br>&emsp;c. **Xóa** một yêu cầu trong thẻ (popup xác nhận hiển thị). <br>&emsp;d. **Thêm nội dung mới** vào thẻ. <br>&emsp;e. **Xóa toàn bộ thẻ** (popup xác nhận hiển thị). <br>&emsp;f. **Thêm thẻ mới** với tiêu đề và các yêu cầu đầu ra. <br><br>**Đối với Người đào tạo**: <br>1. Đăng nhập và truy cập menu **"Danh sách đào tạo"**. <br>2. Chọn một ứng viên cụ thể. <br>3. Vào tab **"Đào tạo"** → mục **"Đầu ra"**. <br>4. Xem danh sách các tiêu chuẩn đầu ra của vị trí ứng viên. <br>5. Đánh giá từng tiêu chuẩn với một trong 4 mức: **Không tốt, Trung bình, Khá tốt, Tốt**. <br>6. Lưu kết quả đánh giá để cập nhật hồ sơ đào tạo của ứng viên.<br><br>**Đối với người được đào tạo**: <br>1. Đăng nhập và truy cập menu **Mục tiêu đào tạo**. <br>2. Hệ thống hiển thị các mục tiêu đánh giá thành từng cụm với tên rõ ràng, khi mở rộng sẽ thấy được các tiêu chí con của danh mục đánh giá đó. <br>3. Người được đào tạo chỉ có thể xem, không có quyền chỉnh sửa nội dung.  |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập hệ thống và có quyền quản lý vị trí. <br>- Người đào tạo đã được gán cho ứng viên và có quyền truy cập dữ liệu đào tạo. <br>- Người đào tạo đã được cấp tài khoản và đăng nhập thành công. <br>- Vị trí tuyển dụng và ứng viên đã tồn tại trong hệ thống. |
-        | **Kết quả hiển thị** | - **Người phụ trách**: Danh sách thẻ thể hiện các yêu cầu đầu ra của vị trí; có thể thao tác thêm, sửa, xóa, cập nhật. <br>- **Người đào tạo**: Danh sách tiêu chuẩn đầu ra của vị trí ứng viên kèm tùy chọn đánh giá. Sau khi lưu, hệ thống hiển thị kết quả đánh giá đã nhập. <br>- **Người được đào tạo**: Danh sách tiêu chuẩn đầu ra của vị trí kèm theo đánh giá từ **Người đào tạo**. |
-        | **Trường hợp không có dữ liệu** | - Nếu chưa có yêu cầu đầu ra nào: <br>&emsp;+ Người phụ trách: chỉ thấy nút **Thêm thẻ mới**. <br>&emsp;+ Người đào tạo: hiển thị thông báo “Chưa có tiêu chuẩn đầu ra cho vị trí này”. <br>- Nếu thẻ không có nội dung chi tiết: <br>&emsp;+ Người phụ trách: có nút **Thêm nội dung mới**. <br>&emsp;+ Người đào tạo: nếu không có dữ liệu thì vị trí ứng tuyển đó chưa được thiết lập đầu ra đào tạo.<br>&emsp;+ Người được đào tạo: hiển thị thông báo "Ứng viên chưa được gán chương trình đào tạo". |
-    #### 5.3. Quản lý tài liệu phục vụ đào tạo {#toc-5-3}
-    ??? book "Cài đặt và sử dụng tài liệu phục vụ đào tạo"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | Tên chức năng | Cài đặt và sử dụng tài liệu phục vụ đào tạo |
-        | Vai trò | Người phụ trách, Người đào tạo, Người được đào tạo |
-        | Mô tả | Chức năng cho phép quản lý và sử dụng các tài liệu đào tạo theo từng vai trò:<br>- Người phụ trách: Quản lý toàn bộ tài liệu (xem, thêm mới, chỉnh sửa, xóa, thêm danh mục con/nội dung, kích hoạt/vô hiệu hóa).<br>- Người đào tạo: Xem tài liệu đã được kích hoạt, truy cập theo quy trình đào tạo, mở rộng nội dung để tham khảo.<br>- Người được đào tạo: Xem các tài liệu đã được công bố, truy cập mục con để đọc nội dung và tải file đính kèm. |
-        | Giao diện liên quan | - Màn hình “Vị trí” → chọn vị trí tuyển dụng → Sub-menu “Đào tạo” → Tab “Tài liệu” (Người phụ trách).<br>- Menu “Tài liệu” (Người đào tạo, Người được đào tạo). |
-        | Luồng thao tác chính | **Người phụ trách:**<br>1. Truy cập menu “Vị trí” → chọn vị trí cụ thể → Tab “Tài liệu”.<br>2. Quản lý danh sách tài liệu (thêm mới, chỉnh sửa, xóa, thêm danh mục con/nội dung, kích hoạt/vô hiệu hóa).<br>3. Khi chọn một tài liệu, chi tiết hiển thị bên trái (tiêu đề, danh mục con, nội dung).<br><br>**Người đào tạo:**<br>1. Truy cập menu “Tài liệu”.<br>2. Hệ thống hiển thị các tài liệu ở trạng thái kích hoạt.<br>3. Chọn một tài liệu (sub-menu) → hiển thị Danh sách quy trình (bên phải) và Nội dung tài liệu (chính giữa).<br>4. Chọn quy trình trong danh sách → xem chi tiết nội dung, có thể mở rộng các thẻ nội dung. (Chỉ được xem).<br><br>**Người được đào tạo:**<br>1. Truy cập menu “Tài liệu”.<br>2. Hệ thống hiển thị Danh sách tài liệu (bên phải).<br>3. Chọn một tài liệu → xem các mục con hiển thị trong phần nội dung chính.<br>4. Chọn mục con để xem nội dung và tải file đính kèm (nếu có). |
-        | Điều kiện | - Người phụ trách phải có quyền quản lý vị trí.<br>- Tài liệu phải được tạo và kích hoạt thì Người đào tạo và Người được đào tạo mới thấy được. |
-        | Kết quả hiển thị | - Danh sách tài liệu ở bên phải, chi tiết hiển thị ở phần nội dung chính.<br>- Người phụ trách: có đầy đủ thao tác quản lý (thêm/sửa/xóa/kích hoạt).<br>- Người đào tạo: chỉ xem nội dung của tài liệu đã kích hoạt theo quy trình.<br>- Người được đào tạo: chỉ xem nội dung và file đính kèm theo mục con. |
-        | Trường hợp không có dữ liệu | - Người phụ trách: hiển thị thông báo “Chưa có tài liệu đào tạo cho vị trí này” và nút “Nhập Tài Liệu Mới”.<br>- Người đào tạo: nếu chưa có tài liệu được kích hoạt → danh sách trống.<br>- Người được đào tạo: nếu chưa có tài liệu được công bố → hiển thị danh sách trống, nếu chưa được gán quy trình đào tạo, hiển thị thông báo "Ứng viên chưa được gán chương trình đào tạo".  |
----
-???+ info "6. Cụm chức năng quản lý phỏng vấn."
-    ### 6. Cụm chức năng quản lý phỏng vấn {#toc-6}
-    #### 6.1. Xem lại kết quả kiểm tra ứng viên {#toc-6-1}
-    ??? book "Xem lại kết quả kiểm tra ứng viên"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Xem lại kết quả kiểm tra ứng viên |
-        | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem lại kết quả các bài kiểm tra đầu vào mà ứng viên đã thực hiện. <br><br>Người phụ trách có thể truy cập từ thẻ **Thông tin ứng viên** trong màn hình **Chi tiết ứng viên**, nhấn nút **Kiểm tra đầu vào** để mở popup **Bài kiểm tra ứng viên**. Tại popup này, người phụ trách có thể tìm kiếm, chọn bài kiểm tra, và xem chi tiết kết quả của bài kiểm tra đã chọn. |
-        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Thông tin ứng viên** <br>- Popup **Bài kiểm tra ứng viên** (hiển thị danh sách các bài kiểm tra đã thực hiện) <br>- Màn hình/Popup hiển thị chi tiết kết quả kiểm tra |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Thông tin ứng viên**. <br>5. Tại đây, nhấn nút **Kiểm tra đầu vào**. <br>6. Hệ thống mở popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>7. Người phụ trách có thể sử dụng thanh tìm kiếm trong popup để tìm bài kiểm tra theo tên hoặc ngày thực hiện. <br>8. Chọn một bài kiểm tra từ danh sách. <br>9. Hệ thống hiển thị chi tiết kết quả của bài kiểm tra (bao gồm: điểm số, thời gian làm bài, ngày thi, chi tiết các câu trả lời nếu có). |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra. |
-        | **Kết quả hiển thị** | - Popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi & câu trả lời. |
-        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo *“Không có bài kiểm tra”*. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo *“Không có bài kiểm tra”*. |
-    #### 6.2. Xem lại phản hồi ứng viên {#toc-6-2}
-    ??? book "Xem lại phản hồi ứng viên"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Xem lại phản hồi ứng viên (check log) |
-        | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
-        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách buổi phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;• **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;• **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
-        | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
-        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
-    #### 6.3. Tạo buổi phỏng vấn cho ứng viên {#toc-6-3}
+    #### 3.4. Tạo buổi phỏng vấn cho ứng viên {#toc-4-3-4}
     ??? book "Tạo buổi phỏng vấn cho ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -342,40 +252,232 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập và có quyền thao tác trên hồ sơ ứng viên. <br>2. Hệ thống đã tải được chi tiết ứng viên và danh sách các vòng phỏng vấn cố định. <br>3. Danh sách người phỏng vấn phải tồn tại trong hệ thống để hiển thị popup chọn. |
         | **Kết quả hiển thị** | - Sau khi chọn thành công, tên người phỏng vấn và thời gian phỏng vấn được hiển thị thay thế cho nút `"Handler chưa assign"`. <br>- Dữ liệu được cập nhật trong hệ thống và đồng bộ với bảng lịch phỏng vấn. <br>- Người phụ trách có thể quay lại tab "Phỏng vấn" để xem hoặc chỉnh sửa thông tin vừa gán. |
         | **Trường hợp không có dữ liệu** | - Nếu danh sách người phỏng vấn rỗng: popup "Chọn người phỏng vấn" hiển thị thông báo `"Không có dữ liệu người phỏng vấn"` kèm icon minh họa. <br>- Nếu chưa chọn ngày giờ phỏng vấn trong popup Lịch, hệ thống sẽ không thêm vào buổi phỏng vấn cho ứng viên. |
-    #### 6.4. Xem lại buổi phỏng vấn của ứng viên {#toc-6-4}
-    ??? book "Xem lại buổi phỏng vấn của ứng viên"
+---
+???+ info "4. Nhóm chức năng để đánh giá ứng viên"
+    ### 4. Nhóm chức năng để đánh giá ứng viên {#toc-4-4}
+    #### 4.1. Xem lại kết quả kiểm tra của ứng viên {#toc-4-4-1}
+    ??? book "Xem lại kết quả kiểm tra ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | Tên chức năng | Xem lại buổi phỏng vấn của ứng viên |
-        | Vai trò | Người phụ trách, Người phỏng vấn |
-        | Mô tả | Chức năng cho phép theo dõi chi tiết buổi phỏng vấn đã hoàn thành của ứng viên:<br>- Người phụ trách: Xem lại toàn bộ kết quả phỏng vấn, bao gồm câu hỏi, câu trả lời và đánh giá.<br>- Người phỏng vấn: Xem lại các buổi phỏng vấn mà mình được gán. Có thể xem chi tiết câu hỏi, kết quả bài kiểm tra, câu trả lời ứng viên, đồng thời gán trạng thái cho các tiêu chí phỏng vấn. |
-        | Giao diện liên quan | - Người phụ trách: Trang Danh sách ứng viên → chọn ứng viên → Tab Phỏng vấn → nút “Xem chi tiết”.<br>- Người phỏng vấn: Trang Chi tiết ứng viên (truy cập từ Lịch phỏng vấn hoặc Danh sách ứng viên đã phỏng vấn) → nút “Xem chi tiết”. |
-        | Luồng thao tác chính | **Người phụ trách:**<br>1. Vào Danh sách ứng viên → chọn ứng viên cụ thể.<br>2. Tại tab Phỏng vấn, chọn vòng phỏng vấn đã hoàn thành → nhấn “Xem chi tiết”.<br>3. Hệ thống điều hướng sang trang Phỏng vấn ứng viên gồm 2 thẻ:<br> a. Câu hỏi phỏng vấn: hiển thị bộ câu hỏi theo vị trí/trung tâm, kèm câu trả lời & đánh giá chi tiết.<br> b. Đánh giá: hiển thị nhóm tiêu chí, có thanh tiến trình, mở thẻ để xem chi tiết từng tiêu chí.<br><br>**Người phỏng vấn:**<br>1. Vào Chi tiết ứng viên từ Lịch phỏng vấn hoặc Danh sách ứng viên đã phỏng vấn.<br>2. Chọn buổi phỏng vấn đã hoàn thành → nhấn “Xem chi tiết”.<br>3. Tại trang Phỏng vấn ứng viên:<br> a. Câu hỏi phỏng vấn: xem lại toàn bộ câu hỏi, kết quả làm bài kiểm tra, câu trả lời ứng viên.<br> b. Đánh giá: xem và gán trạng thái cho các tiêu chí phỏng vấn được thiết lập sẵn. |
-        | Điều kiện | - Người phụ trách có quyền xem chi tiết ứng viên.<br>- Người phỏng vấn chỉ xem được ứng viên được gán cho mình.<br>- Ứng viên đã có ít nhất một buổi phỏng vấn hoàn thành. |
-        | Kết quả hiển thị | - Tab Phỏng vấn hiển thị nút “Xem chi tiết” cho các buổi đã hoàn thành.<br>- Trang Phỏng vấn ứng viên có đủ 2 thẻ: Câu hỏi phỏng vấn và Đánh giá.<br>- Người phụ trách xem được toàn bộ chi tiết.<br>- Người phỏng vấn xem được câu hỏi, câu trả lời, kết quả kiểm tra và có thể gán trạng thái cho các tiêu chí đánh giá. |
-        | Trường hợp không có dữ liệu | - Ứng viên chưa có buổi phỏng vấn nào: tab Phỏng vấn chỉ hiển thị danh sách buổi phỏng vấn cần thực hiện, không có nút “Xem chi tiết”.<br>- Người phỏng vấn nếu không được gán cho ứng viên sẽ không thấy dữ liệu phỏng vấn của ứng viên đó. |
-    #### 6.5. Xem lịch phỏng vấn của các ứng viên {#toc-6-5}
-    ??? book "Xem lịch phỏng vấn của các ứng viên" 
+        | **Tên chức năng** | Xem lại kết quả kiểm tra ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem lại kết quả các bài kiểm tra đầu vào mà ứng viên đã thực hiện. <br><br>Người phụ trách có thể truy cập từ thẻ **Thông tin ứng viên** trong màn hình **Chi tiết ứng viên**, nhấn nút **Kiểm tra đầu vào** để mở popup **Bài kiểm tra ứng viên**. Tại popup này, người phụ trách có thể tìm kiếm, chọn bài kiểm tra, và xem chi tiết kết quả của bài kiểm tra đã chọn. |
+        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Thông tin ứng viên** <br>- Popup **Bài kiểm tra ứng viên** (hiển thị danh sách các bài kiểm tra đã thực hiện) <br>- Màn hình/Popup hiển thị chi tiết kết quả kiểm tra |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Thông tin ứng viên**. <br>5. Tại đây, nhấn nút **Kiểm tra đầu vào**. <br>6. Hệ thống mở popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>7. Người phụ trách có thể sử dụng thanh tìm kiếm trong popup để tìm bài kiểm tra theo tên hoặc ngày thực hiện. <br>8. Chọn một bài kiểm tra từ danh sách. <br>9. Hệ thống hiển thị chi tiết kết quả của bài kiểm tra (bao gồm: điểm số, thời gian làm bài, ngày thi, chi tiết các câu trả lời nếu có). |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra. |
+        | **Kết quả hiển thị** | - Popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi & câu trả lời. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo *“Không có bài kiểm tra”*. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo *“Không có bài kiểm tra”*. |
+    #### 4.2. Xem lại các phản hồi của ứng viên {#toc-4-4-5}
+    ??? book "Xem lại phản hồi ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | Tên chức năng | Xem lịch/danh sách phỏng vấn của các ứng viên |
-        | Vai trò | - Người phụ trách<br>- Người phỏng vấn |
-        | Mô tả | Người phụ trách: <br>Cho phép người phụ trách xem toàn bộ lịch phỏng vấn của các ứng viên mình quản lý. Chức năng này chỉ hỗ trợ xem, không cho phép chỉnh sửa dữ liệu.<br><br>Người phỏng vấn: <br>Người phỏng vấn có thể xem lịch phỏng vấn tại menu "Lịch Phỏng Vấn", và chỉ nhìn thấy những ứng viên mà người phụ trách đã gán cho mình. Người phỏng vấn được phép hủy lịch phỏng vấn của ứng viên đó tại popup "Chi tiết ca phỏng vấn" sau khi chọn vào một buổi phỏng vấn cụ thể. <br><br>Các chế độ hiển thị chung:<br> (1) Xem dạng lịch: dữ liệu hiển thị theo tuần, mỗi ngày chia thành 11 khung giờ (từ 9h đến 20h). Nếu có lịch phỏng vấn, khung giờ tương ứng được highlight kèm số lượng ứng viên.<br> (2) Xem dạng danh sách: dữ liệu hiển thị dưới dạng bảng với các cột Ngày, Giờ bắt đầu, Số lượng ứng viên, Trạng thái. Người dùng có thể chuyển trang để xem toàn bộ danh sách.<br><br>Ở cả hai chế độ, khi nhấn vào một ca phỏng vấn, hệ thống mở popup "Chi tiết ca phỏng vấn" hiển thị:<br> - Thời gian phỏng vấn<br> - Số lượng ứng viên<br> - Thông tin ứng viên: tên, giờ phỏng vấn, vị trí ứng tuyển.<br><br>Người dùng (tùy vai trò) có thể thay đổi chế độ hiển thị và tuần để phù hợp với nhu cầu. |
-        | Giao diện liên quan | 1. Trang "Lịch Phỏng Vấn".<br>2. Popup "Chi tiết ca phỏng vấn".<br>3. Chế độ "Xem dạng lịch".<br>4. Chế độ "Xem dạng danh sách". |
-        | Luồng thao tác chính | 1. Người dùng (phụ trách hoặc phỏng vấn) điều hướng đến trang "Lịch Phỏng Vấn" từ menu.<br>2. Hệ thống mặc định hiển thị ở chế độ 'Xem dạng lịch'.<br>3. Người dùng có thể:<br> - Nhấn vào ô được highlight để xem popup chi tiết.<br> - Nhấn vào biểu tượng ≡ để chuyển sang chế độ 'Xem dạng danh sách'.<br>4. Ở chế độ danh sách, hệ thống hiển thị bảng dữ liệu "Lịch phỏng vấn" với đầy đủ thông tin và hỗ trợ phân trang.<br>5. Người phụ trách: chỉ xem dữ liệu, không chỉnh sửa.<br>6. Người phỏng vấn: có thể hủy lịch phỏng vấn với ứng viên được gán tại popup "Chi tiết ca phỏng vấn".<br>7. Người dùng có thể thay đổi tuần để xem trước hoặc kiểm tra lại lịch phỏng vấn. |
-        | Điều kiện | - Người phụ trách đăng nhập vào tài khoản có phân quyền tương đương và quản lý ít nhất một ứng viên.<br>- Người phỏng vấn đăng nhập vào tài khoản có phân quyền tương đương và được người phụ trách gán cho ít nhất một ứng viên có lịch phỏng vấn. |
-        | Kết quả hiển thị | - Ở chế độ lịch: hệ thống hiển thị theo tuần với các khung giờ được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị bảng dữ liệu với các cột ngày, giờ, số lượng ứng viên, trạng thái.<br>- Khi nhấn vào ca phỏng vấn: popup chi tiết xuất hiện.<br> • Người phụ trách: chỉ xem.<br> • Người phỏng vấn: có thêm chức năng Hủy lịch phỏng vấn đối với ứng viên được gán. |
-        | Trường hợp không có dữ liệu | - Ở chế độ lịch: không có ô nào được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị thông báo "Bảng dữ liệu này đang trống" kèm biểu tượng thùng rỗng. |
-    #### 6.6. Xem lịch sử phỏng vấn {#toc-6-6}
+        | **Tên chức năng** | Xem lại phản hồi ứng viên (check log) |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
+        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách buổi phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;+ **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
+        | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
+    #### 4.3. Xem lại buổi phỏng vấn của ứng viên {#toc-4-4-6}
+    ??? book "Xem lại buổi phỏng vấn của ứng viên (Người phụ trách)"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Xem lại buổi phỏng vấn của ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách có thể xem lại toàn bộ chi tiết các buổi phỏng vấn đã hoàn thành của ứng viên, bao gồm câu hỏi, câu trả lời, kết quả bài kiểm tra và đánh giá theo tiêu chí. |
+        | **Giao diện liên quan** | - Trang **Danh sách ứng viên** → chọn ứng viên → Tab **Phỏng vấn** → nút **“Xem chi tiết”** |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và truy cập **Danh sách ứng viên**.<br>2. Chọn một ứng viên cụ thể.<br>3. Tại tab **Phỏng vấn**, chọn vòng phỏng vấn đã hoàn thành → nhấn **“Xem chi tiết”**.<br>4. Hệ thống mở trang **Phỏng vấn ứng viên** với 2 thẻ:<br> a. **Câu hỏi phỏng vấn**: hiển thị toàn bộ bộ câu hỏi, câu trả lời của ứng viên và đánh giá chi tiết.<br> b. **Đánh giá**: hiển thị nhóm tiêu chí, thanh tiến trình và chi tiết từng tiêu chí đã được chấm. |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem chi tiết ứng viên.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành. |
+        | **Kết quả hiển thị** | - Tab **Phỏng vấn** hiển thị nút **“Xem chi tiết”** cho các buổi phỏng vấn đã hoàn thành.<br>- Trang **Phỏng vấn ứng viên** hiển thị đầy đủ 2 thẻ: Câu hỏi phỏng vấn và Đánh giá.<br>- Người phụ trách xem được toàn bộ dữ liệu phỏng vấn của ứng viên. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào hoàn thành: tab **Phỏng vấn** không hiển thị nút **“Xem chi tiết”**. |  
+--- 
+???+ info "5. Nhóm chức năng quản lý đào tạo"
+    ### 5. Nhóm chức năng quản lý đào tạo {#toc-4-5}
+    #### 5.1. Quản lý quy trình đào tạo {#toc-4-5-1}
+    ??? book "Quản lý quy trình đào tạo"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Quản lý quy trình đào tạo |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách có toàn quyền quản lý các quy trình đào tạo theo từng vị trí tuyển dụng: <br>- Tạo mới, chỉnh sửa, xóa quy trình. <br>- Vô hiệu hóa/kích hoạt quy trình. <br>- Quản lý chi tiết các tiêu chuẩn trong quy trình, bao gồm: thêm, sửa, xóa, gán tag (Hướng dẫn, Kiểm tra, Đánh giá, Nhiệm vụ). |
+        | **Giao diện liên quan** | - Menu Vị trí → chọn vị trí → Tổng quan vị trí → Tab Đào tạo → Quy trình |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập, chọn vị trí. <br>2. Truy cập tab Quy trình. <br>3. Hệ thống hiển thị danh sách quy trình hiện có. <br>4. Người phụ trách thực hiện thao tác: thêm mới, chỉnh sửa, xóa, vô hiệu hóa/kích hoạt quy trình. <br>5. Khi mở một quy trình: có thể xem, quản lý, gán tag cho các tiêu chuẩn và tiêu chí. |
+        | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. <br>- Vị trí tồn tại trong hệ thống. |
+        | **Kết quả hiển thị** | - Danh sách quy trình đào tạo hiển thị chi tiết. <br>- Người phụ trách có toàn quyền thao tác. <br>- Thông báo “Cập nhật dữ liệu thành công” sau khi thao tác hợp lệ. |
+        | **Trường hợp không có dữ liệu** | - Nếu chưa có quy trình: hiển thị danh sách rỗng và nút Nhập quy trình mới. <br>- Nếu quy trình không có tiêu chuẩn: chỉ hiển thị tên quy trình và nút Nhập tiêu chuẩn mới. |
+    #### 5.2. Quản lý đầu ta đào tạo {#toc-4-5-2}
+    ??? book "Quản lý đầu ta đào tạo"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | Tên chức năng | Quản lý đầu ta đào tạo |
+        | Vai trò | Người phụ trách |
+        | Mô tả | Người phụ trách quản lý các tiêu chuẩn đầu ra của từng vị trí tuyển dụng, hiển thị dưới dạng thẻ. Có thể: <br>- Thêm mới thẻ đầu ra. <br>- Chỉnh sửa nội dung yêu cầu. <br>- Xóa một yêu cầu trong thẻ (có xác nhận). <br>- Xóa toàn bộ thẻ (có xác nhận). <br>- Gắn mức độ cho từng yêu cầu (Cơ bản, Trung bình, Nâng cao). |
+        | Giao diện liên quan | - Màn hình Vị trí → chọn vị trí → Tổng quan vị trí → Tab Đào tạo → Đầu ra |
+        | Luồng thao tác chính | 1. Người phụ trách đăng nhập và chọn Vị trí. <br>2. Vào tab Đầu ra. <br>3. Quản lý danh sách yêu cầu đầu ra bằng các thao tác: mở rộng, thêm mới, sửa, xóa yêu cầu hoặc thẻ. <br>4. Hệ thống lưu và hiển thị thay đổi ngay lập tức. |
+        | Điều kiện | - Người phụ trách có quyền quản lý vị trí. |
+        | Kết quả hiển thị | - Danh sách thẻ yêu cầu đầu ra hiển thị theo vị trí. <br>- Các thao tác cập nhật thành công kèm thông báo “Cập nhật dữ liệu thành công”. |
+        | Trường hợp không có dữ liệu | - Nếu chưa có yêu cầu: hiển thị nút Thêm thẻ mới. <br>- Nếu thẻ rỗng: hiển thị nút Thêm nội dung mới. |
+---
+## V. Đặc tả chức năng dành cho Interviewer
+???+ info "1. Nhóm chức năng quản lý lịch phỏng vấn"
+    ### 1. Nhóm chức năng quản lý lịch phỏng vấn {#toc-5-1}
+    #### 1.1. Xem lịch phỏng vấn các ứng viên {#toc-5-1-1}
+    ??? book "Xem lịch phỏng vấn của các ứng viên"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Xem lịch/danh sách phỏng vấn của các ứng viên |
+        | **Vai trò** | - Người phụ trách, Người phỏng vấn |
+        | **Mô tả** | Người phụ trách: <br>Cho phép người phụ trách xem toàn bộ lịch phỏng vấn của các ứng viên mình quản lý. Chức năng này chỉ hỗ trợ xem, không cho phép chỉnh sửa dữ liệu.<br><br>Người phỏng vấn: <br>Người phỏng vấn có thể xem lịch phỏng vấn tại menu "Lịch Phỏng Vấn", và chỉ nhìn thấy những ứng viên mà người phụ trách đã gán cho mình. Người phỏng vấn được phép hủy lịch phỏng vấn của ứng viên đó tại popup "Chi tiết ca phỏng vấn" sau khi chọn vào một buổi phỏng vấn cụ thể. <br><br>Các chế độ hiển thị chung:<br> (1) Xem dạng lịch: dữ liệu hiển thị theo tuần, mỗi ngày chia thành 11 khung giờ (từ 9h đến 20h). Nếu có lịch phỏng vấn, khung giờ tương ứng được highlight kèm số lượng ứng viên.<br> (2) Xem dạng danh sách: dữ liệu hiển thị dưới dạng bảng với các cột Ngày, Giờ bắt đầu, Số lượng ứng viên, Trạng thái. Người dùng có thể chuyển trang để xem toàn bộ danh sách.<br><br>Ở cả hai chế độ, khi nhấn vào một ca phỏng vấn, hệ thống mở popup "Chi tiết ca phỏng vấn" hiển thị:<br> - Thời gian phỏng vấn<br> - Số lượng ứng viên<br> - Thông tin ứng viên: tên, giờ phỏng vấn, vị trí ứng tuyển.<br><br>Người dùng (tùy vai trò) có thể thay đổi chế độ hiển thị và tuần để phù hợp với nhu cầu. |
+        | **Giao diện liên quan** | 1. Trang "Lịch Phỏng Vấn".<br>2. Popup "Chi tiết ca phỏng vấn".<br>3. Chế độ "Xem dạng lịch".<br>4. Chế độ "Xem dạng danh sách". |
+        | **Luồng thao tác chính** | 1. Người dùng (phụ trách hoặc phỏng vấn) điều hướng đến trang "Lịch Phỏng Vấn" từ menu.<br>2. Hệ thống mặc định hiển thị ở chế độ 'Xem dạng lịch'.<br>3. Người dùng có thể:<br> - Nhấn vào ô được highlight để xem popup chi tiết.<br> - Nhấn vào biểu tượng ≡ để chuyển sang chế độ 'Xem dạng danh sách'.<br>4. Ở chế độ danh sách, hệ thống hiển thị bảng dữ liệu "Lịch phỏng vấn" với đầy đủ thông tin và hỗ trợ phân trang.<br>5. Người phụ trách: chỉ xem dữ liệu, không chỉnh sửa.<br>6. Người phỏng vấn: có thể hủy lịch phỏng vấn với ứng viên được gán tại popup "Chi tiết ca phỏng vấn".<br>7. Người dùng có thể thay đổi tuần để xem trước hoặc kiểm tra lại lịch phỏng vấn. |
+        | **Điều kiện** | - Người phụ trách đăng nhập vào tài khoản có phân quyền tương đương và quản lý ít nhất một ứng viên.<br>- Người phỏng vấn đăng nhập vào tài khoản có phân quyền tương đương và được người phụ trách gán cho ít nhất một ứng viên có lịch phỏng vấn. |
+        | **Kết quả hiển thị** | - Ở chế độ lịch: hệ thống hiển thị theo tuần với các khung giờ được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị bảng dữ liệu với các cột ngày, giờ, số lượng ứng viên, trạng thái.<br>- Khi nhấn vào ca phỏng vấn: popup chi tiết xuất hiện.<br> + Người phụ trách: chỉ xem.<br> + Người phỏng vấn: có thêm chức năng Hủy lịch phỏng vấn đối với ứng viên được gán. |
+        | **Trường hợp không có dữ liệu** | - Ở chế độ lịch: không có ô nào được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị thông báo "Bảng dữ liệu này đang trống" kèm biểu tượng thùng rỗng. |
+    #### 1.2. Xem lịch sử phỏng vấn {#toc-5-1-2}
     ??? book "Xem lịch sử phỏng vấn"
         | Trường | Nội dung |
         | ------ | -------- |
-        | Tên chức năng | Xem lịch sử phỏng vấn |
-        | Vai trò | Người phỏng vấn |
-        | Mô tả | Cho phép Người phỏng vấn xem lại toàn bộ danh sách ứng viên đã hoàn thành phỏng vấn với mình. <br>Người phỏng vấn chỉ nhìn thấy những ứng viên mà Người phụ trách đã gán cho.<br><br>Chức năng hiển thị dưới dạng bảng "Danh sách ứng viên đã phỏng vấn" với cấu trúc và giao diện tương tự bảng "Danh sách ứng viên", hỗ trợ:<br> - Tìm kiếm ứng viên theo tên, email, số điện thoại.<br> - Lọc ứng viên theo trạng thái (VD: Đạt, Không đạt, Đang chờ đánh giá).<br><br>Khi Người phỏng vấn bấm chọn một ứng viên, hệ thống hiển thị màn hình "Chi tiết ứng viên", bao gồm các thông tin cơ bản:<br> - Họ tên ứng viên<br> - Vị trí ứng tuyển<br> - Thời gian phỏng vấn<br> - Kết quả phỏng vấn<br> - Các thông tin bổ sung khác mà Người phụ trách đã công khai.<br><br>Toàn bộ dữ liệu chỉ ở chế độ xem, Người phỏng vấn không thể chỉnh sửa. |
-        | Giao diện liên quan | 1. Trang "Danh sách ứng viên đã phỏng vấn".<br>2. Bảng "Danh sách ứng viên đã phỏng vấn".<br>3. Trang "Chi tiết ứng viên". |
-        | Luồng thao tác chính | 1. Người phỏng vấn điều hướng đến menu "Lịch sử phỏng vấn".<br>2. Hệ thống hiển thị bảng "Danh sách ứng viên đã phỏng vấn" mặc định với dữ liệu ứng viên đã phỏng vấn.<br>3. Người phỏng vấn có thể:<br> - Sử dụng thanh tìm kiếm để tìm ứng viên.<br> - Dùng bộ lọc để lọc theo trạng thái.<br> - Nhấn vào một ứng viên trong bảng để mở trang "Chi tiết ứng viên".<br>4. Tại trang "Chi tiết ứng viên", hệ thống hiển thị đầy đủ thông tin cơ bản về ứng viên như: Họ và tên, vị trí ứng tuyển, thời gian phỏng vấn gần nhất (chỉ xem). |
-        | Điều kiện | - Người phỏng vấn đăng nhập bằng tài khoản hợp lệ.<br>- Có ít nhất một ứng viên được gán cho Người phỏng vấn và có buổi phỏng vấn được lên lịch. |
-        | Kết quả hiển thị | - Bảng "Danh sách ứng viên đã phỏng vấn" hiển thị dữ liệu ứng viên theo phân quyền.<br>- Khi chọn một ứng viên, trang "Chi tiết ứng viên" xuất hiện với thông tin chỉ đọc. |
-        | Trường hợp không có dữ liệu | - Nếu chưa có ứng viên nào đã phỏng vấn, hệ thống hiển thị thông báo "Bảng dữ liệu này trống." kèm biểu tượng thùng rỗng. |
+        | **Tên chức năng** | Xem lịch sử phỏng vấn |
+        | **Vai trò** | Người phỏng vấn |
+        | **Mô tả** | Cho phép Người phỏng vấn xem lại toàn bộ danh sách ứng viên đã hoàn thành phỏng vấn với mình. <br>Người phỏng vấn chỉ nhìn thấy những ứng viên mà Người phụ trách đã gán cho.<br><br>Chức năng hiển thị dưới dạng bảng "Danh sách ứng viên đã phỏng vấn" với cấu trúc và giao diện tương tự bảng "Danh sách ứng viên", hỗ trợ:<br> - Tìm kiếm ứng viên theo tên, email, số điện thoại.<br> - Lọc ứng viên theo trạng thái (VD: Đạt, Không đạt, Đang chờ đánh giá).<br><br>Khi Người phỏng vấn bấm chọn một ứng viên, hệ thống hiển thị màn hình "Chi tiết ứng viên", bao gồm các thông tin cơ bản:<br> - Họ tên ứng viên<br> - Vị trí ứng tuyển<br> - Thời gian phỏng vấn<br> - Kết quả phỏng vấn<br> - Các thông tin bổ sung khác mà Người phụ trách đã công khai.<br><br>Toàn bộ dữ liệu chỉ ở chế độ xem, Người phỏng vấn không thể chỉnh sửa. |
+        | **Giao diện liên quan** | 1. Trang "Danh sách ứng viên đã phỏng vấn".<br>2. Bảng "Danh sách ứng viên đã phỏng vấn".<br>3. Trang "Chi tiết ứng viên". |
+        | **Luồng thao tác chính** | 1. Người phỏng vấn điều hướng đến menu "Lịch sử phỏng vấn".<br>2. Hệ thống hiển thị bảng "Danh sách ứng viên đã phỏng vấn" mặc định với dữ liệu ứng viên đã phỏng vấn.<br>3. Người phỏng vấn có thể:<br> - Sử dụng thanh tìm kiếm để tìm ứng viên.<br> - Dùng bộ lọc để lọc theo trạng thái.<br> - Nhấn vào một ứng viên trong bảng để mở trang "Chi tiết ứng viên".<br>4. Tại trang "Chi tiết ứng viên", hệ thống hiển thị đầy đủ thông tin cơ bản về ứng viên như: Họ và tên, vị trí ứng tuyển, thời gian phỏng vấn gần nhất (chỉ xem). |
+        | **Điều kiện** | - Người phỏng vấn đăng nhập bằng tài khoản hợp lệ.<br>- Có ít nhất một ứng viên được gán cho Người phỏng vấn và có buổi phỏng vấn được lên lịch. |
+        | **Kết quả hiển thị** | - Bảng "Danh sách ứng viên đã phỏng vấn" hiển thị dữ liệu ứng viên theo phân quyền.<br>- Khi chọn một ứng viên, trang "Chi tiết ứng viên" xuất hiện với thông tin chỉ đọc. |
+        | **Trường hợp không có dữ liệu** | - Nếu chưa có ứng viên nào đã phỏng vấn, hệ thống hiển thị thông báo "Bảng dữ liệu này trống." kèm biểu tượng thùng rỗng. |
+---
+???+ info "2. Xem thông tin về ứng viên"
+    ### 2. Xem thông tin về ứng viên {#toc-5-2}
+    #### 2.1. Xem thông tin cá nhân ứng viên {#toc-5-2-1}
+    ??? book "Xem chi tiết thông tin ứng viên (Người phỏng vấn)"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Xem thông tin ứng viên |
+        | **Vai trò** | Người phỏng vấn |
+        | **Mô tả** | Người phỏng vấn có thể xem thông tin chi tiết của ứng viên được phân công phỏng vấn để chuẩn bị trước buổi phỏng vấn. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin cần thiết như Tên ứng viên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Người phụ trách, Người đào tạo, CV, bằng cấp và lịch làm việc dự kiến. <br>- Người phỏng vấn chỉ có quyền xem, không thể chỉnh sửa hay xóa dữ liệu. |
+        | **Giao diện liên quan** | - Menu Ứng viên hoặc Lịch phỏng vấn → chọn ứng viên.<br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên |
+        | **Luồng thao tác chính** | 1. Người phỏng vấn đăng nhập hệ thống.<br>2. Vào menu Ứng viên hoặc Lịch phỏng vấn, chọn ứng viên.<br>3. Xem thông tin tại tab Thông tin ứng viên. |
+        | **Điều kiện** | - Người phỏng vấn được gán phỏng vấn ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
+        | **Kết quả hiển thị** | Hiển thị chi tiết hồ sơ ứng viên với đầy đủ thông tin phục vụ phỏng vấn. |
+        | **Trường hợp không có dữ liệu** | Thông tin nào chưa có sẽ hiển thị trống. |
+    #### 2.2. Xem kết quả bài kiểm tra của ứng viên {#toc-5-2-2}
+    ??? book "Xem lại kết quả kiểm tra ứng viên"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Xem lại kết quả kiểm tra ứng viên |
+        | **Vai trò** | Người phỏng vấn |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem lại kết quả các bài kiểm tra đầu vào mà ứng viên đã thực hiện. <br><br>Người phụ trách có thể truy cập từ thẻ **Thông tin ứng viên** trong màn hình **Chi tiết ứng viên**, nhấn nút **Kiểm tra đầu vào** để mở popup **Bài kiểm tra ứng viên**. Tại popup này, người phụ trách có thể tìm kiếm, chọn bài kiểm tra, và xem chi tiết kết quả của bài kiểm tra đã chọn. |
+        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Thông tin ứng viên** <br>- Popup **Bài kiểm tra ứng viên** (hiển thị danh sách các bài kiểm tra đã thực hiện) <br>- Màn hình/Popup hiển thị chi tiết kết quả kiểm tra |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Thông tin ứng viên**. <br>5. Tại đây, nhấn nút **Kiểm tra đầu vào**. <br>6. Hệ thống mở popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>7. Người phụ trách có thể sử dụng thanh tìm kiếm trong popup để tìm bài kiểm tra theo tên hoặc ngày thực hiện. <br>8. Chọn một bài kiểm tra từ danh sách. <br>9. Hệ thống hiển thị chi tiết kết quả của bài kiểm tra (bao gồm: điểm số, thời gian làm bài, ngày thi, chi tiết các câu trả lời nếu có). |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra. |
+        | **Kết quả hiển thị** | - Popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi & câu trả lời. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo *“Không có bài kiểm tra”*. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo *“Không có bài kiểm tra”*. |
+    #### 2.3. Xem câu trả lời của ứng viên {#toc-5-2-3}
+    ??? book "Xem câu trả lời của ứng viên"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Xem câu trả lời của ứng viên |
+        | **Vai trò** | Người phỏng vấn |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
+        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách buổi phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;+ **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
+        | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
+    #### 2.4. Xem lại buổi phỏng vấn ứng viên {#toc-5-2-4}
+    ??? book "Xem lại buổi phỏng vấn của ứng viên (Người phỏng vấn)"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Xem lại buổi phỏng vấn của ứng viên |
+          | **Vai trò** | Người phỏng vấn |
+          | **Mô tả** | Người phỏng vấn có thể xem lại các buổi phỏng vấn mà mình được phân công, bao gồm câu hỏi, kết quả bài kiểm tra, câu trả lời ứng viên, và có thể gán trạng thái cho các tiêu chí phỏng vấn. |
+          | **Giao diện liên quan** | - Trang **Chi tiết ứng viên** (truy cập từ **Danh sách ứng viên đã phỏng vấn**) → nút **“Xem chi tiết”** tại các buổi phỏng vấn trước đó. |
+          | **Luồng thao tác chính** | 1. Người phỏng vấn đăng nhập và truy cập **Chi tiết ứng viên** từ **Lịch phỏng vấn** hoặc **Danh sách ứng viên đã phỏng vấn**.<br>2. Chọn buổi phỏng vấn đã hoàn thành → nhấn **“Xem chi tiết”**.<br>3. Hệ thống mở trang **Phỏng vấn ứng viên** với 2 thẻ:<br> a. **Câu hỏi phỏng vấn**: xem lại toàn bộ câu hỏi, kết quả làm bài kiểm tra, câu trả lời ứng viên.<br> b. **Đánh giá**: xem và gán trạng thái cho các tiêu chí phỏng vấn được thiết lập sẵn. |
+          | **Điều kiện** | - Người phỏng vấn đã đăng nhập.<br>- Người phỏng vấn chỉ có thể xem lại buổi phỏng vấn của các ứng viên được gán cho mình.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành. |
+          | **Kết quả hiển thị** | - Người phỏng vấn có thể xem lại chi tiết buổi phỏng vấn (câu hỏi, câu trả lời, kết quả kiểm tra).<br>- Người phỏng vấn có thể gán trạng thái cho từng tiêu chí đánh giá. |
+          | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn hoàn thành → không có nút **“Xem chi tiết”**.<br>- Nếu người phỏng vấn không được gán cho ứng viên → không thấy dữ liệu phỏng vấn của ứng viên đó. |
+---
+## VI. Đặc tả chức năng dành cho Trainer
+???+ info "1. Xem thông tin về ứng viên"
+    ### 1. Xem thông tin về ứng viên {#toc-6-1}
+    #### 1.1. Xem thông tin cá nhân ứng viên {#toc-6-1-1}
+    ??? book "Xem thông tin cá nhân ứng viên"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Xem thông tin cá nhân ứng viên |
+          | **Vai trò** | Người đào tạo |
+          | **Mô tả** | Người đào tạo có thể xem thông tin chi tiết của ứng viên đã được phân công đào tạo. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin cơ bản như Tên ứng viên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Trạng thái đào tạo, Người phụ trách, CV, bằng cấp, lịch làm việc dự kiến. <br>- Người đào tạo chỉ có quyền xem, không được chỉnh sửa hoặc quản lý tài khoản ứng viên. |
+          | **Giao diện liên quan** | - Menu Danh sách đào tạo → chọn ứng viên.<br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên |
+          | **Luồng thao tác chính** | 1. Người đào tạo đăng nhập hệ thống.<br>2. Vào menu Danh sách đào tạo, chọn ứng viên.<br>3. Xem thông tin tại tab Thông tin ứng viên. |
+          | **Điều kiện** | - Người đào tạo được gán đào tạo ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
+          | **Kết quả hiển thị** | Hiển thị chi tiết hồ sơ ứng viên phục vụ đào tạo. |
+          | **Trường hợp không có dữ liệu** | Các trường thông tin chưa bổ sung sẽ để trống. |
+    #### 1.2. Xem tất cả các ứng viên được gán {#toc-6-1-2}
+    ??? book "Xem ứng viên được gán trách nhiệm"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Xem ứng viên được gán trách nhiệm đào tạo |
+          | **Vai trò** | Người đào tạo |
+          | **Mô tả** | Khi được gán vào một ứng viên, người đào tạo tự động thấy ứng viên đó trong menu Danh Sách Đào Tạo. Người đào tạo chỉ có quyền xem thông tin cơ bản của ứng viên, không thể chỉnh sửa dữ liệu như họ tên, email, trạng thái hồ sơ. Người đào tạo chỉ có thể thao tác trong phạm vi đào tạo (ví dụ: cập nhật tiến trình đào tạo nếu hệ thống hỗ trợ). |
+          | **Giao diện liên quan** | - Menu Danh Sách Đào Tạo → bảng ứng viên đào tạo <br>- Màn hình Chi tiết ứng viên (chỉ đọc) |
+          | **Luồng thao tác chính** | 1. Người đào tạo đăng nhập hệ thống.<br>2. Vào menu Danh Sách Đào Tạo.<br>3. Xem danh sách các ứng viên được gán.<br>4. Chọn một ứng viên để xem hồ sơ (chỉ đọc). |
+          | **Điều kiện** | - Người đào tạo đã được người phụ trách gán vào ứng viên.<br>- Người đào tạo đăng nhập có quyền xem menu Danh Sách Đào Tạo. |
+          | **Kết quả hiển thị** | - Menu Danh Sách Đào Tạo hiển thị ứng viên được gán.<br>- Người đào tạo có thể xem thông tin ứng viên nhưng không thể chỉnh sửa dữ liệu cơ bản. |
+          | **Trường hợp không có dữ liệu** | - Nếu người đào tạo chưa được gán ứng viên nào: bảng Danh Sách Đào Tạo hiển thị thông báo “Bảng này hiện đang trống!”. |
+---
+???+ info "2. Cụm chức năng quản lý đào tạo"
+    ### 2. Cụm chức năng quản lý đào tạo {#toc-6-2}
+    #### 2.1. Quản lý và đánh giá quy trình đào tạo {#toc-6-2-1}
+    ??? book "Quản lý và đánh giá quy trình đào tạo"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Quản lý và đánh giá quy trình đào tạo |
+          | **Vai trò** | Người đào tạo |
+          | **Mô tả** | Người đào tạo theo dõi và quản lý tiến trình đào tạo của ứng viên đã được gán: <br>- Xem quy trình và danh sách buổi đào tạo. <br>- Quyết định buổi nào hiển thị hoặc ẩn với người được đào tạo. <br>- Xem chi tiết tiêu chuẩn, mở rộng danh mục và tiêu chí con. <br>- Upload file bổ sung. <br>- Đánh giá từng tiêu chuẩn đào tạo (ví dụ: đạt/không đạt, nhận xét). |
+          | **Giao diện liên quan** | - Menu Danh sách đào tạo → chọn ứng viên → Sub-menu Lịch trình → Quy trình & buổi đào tạo |
+          | **Luồng thao tác chính** | 1. Người đào tạo đăng nhập và chọn menu Danh sách đào tạo. <br>2. Chọn một ứng viên trong danh sách. <br>3. Truy cập sub-menu Lịch trình, hệ thống hiển thị quy trình & buổi đào tạo. <br>4. Người đào tạo có thể: <br> - Quyết định buổi nào hiển thị/ẩn. <br> - Xem chi tiết tiêu chuẩn, tiêu chí. <br> - Upload file bổ sung. <br> - Đánh giá từng tiêu chuẩn. |
+          | **Điều kiện** | - Người đào tạo đã được gán cho ứng viên. |
+          | **Kết quả hiển thị** | - Danh sách quy trình & buổi đào tạo hiển thị rõ ràng. <br>- Người đào tạo có thể thao tác trong phạm vi cho phép. <br>- Hệ thống hiển thị thông báo thành công sau khi upload/đánh giá. |
+          | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa được gán quy trình: bảng hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu quy trình không có tiêu chuẩn: danh sách rỗng. |
+    #### 2.2. Đánh giá đầu ra đào tạo {#toc-6-2-2}
+    ??? book "Đánh giá đầu ra đào tạo"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Đánh giá đầu ra đào tạo |
+          | **Vai trò** | Người đào tạo |
+          | **Mô tả** | Người đào tạo xem các tiêu chuẩn đầu ra gắn với vị trí ứng viên đang đào tạo và đánh giá mức độ đạt được theo 4 thang: Không tốt, Trung bình, Khá tốt, Tốt. Kết quả được lưu lại để phục vụ quản lý tiến trình đào tạo. |
+          | **Giao diện liên quan** | - Menu Danh sách đào tạo → chọn ứng viên → Tab Đào tạo → mục Đầu ra |
+          | **Luồng thao tác chính** | 1. Người đào tạo đăng nhập, vào Danh sách đào tạo. <br>2. Chọn ứng viên cần theo dõi. <br>3. Truy cập tab Đào tạo → mục Đầu ra. <br>4. Xem danh sách tiêu chuẩn đầu ra. <br>5. Đánh giá từng tiêu chuẩn theo thang 4 mức. <br>6. Nhấn Lưu để ghi nhận kết quả. |
+          | **Điều kiện** | - Người đào tạo được gán cho ứng viên. <br>- Ứng viên đã có vị trí với tiêu chuẩn đầu ra. |
+          | **Kết quả hiển thị** | - Danh sách tiêu chuẩn đầu ra hiển thị kèm các tùy chọn đánh giá. <br>- Sau khi lưu, kết quả được cập nhật vào hồ sơ đào tạo ứng viên. |
+          | **Trường hợp không có dữ liệu** | - Nếu chưa có tiêu chuẩn: hiển thị thông báo “Chưa có tiêu chuẩn đầu ra cho vị trí này”. |
+---
+## VII. Đặc tả chức năng dành cho Trainee
+???+ info "1. Cụm chức năng dành cho Trainee"
+    ### 1. Cụm chức năng dành cho Trainee {#toc-7-1}
+    #### 1.1. Xem quy trình đào tạo {#toc-7-1-1}
+    ??? book "Xem quy trình đào tạo"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Xem quy trình đào tạo |
+          | **Vai trò** | Người được đào tạo |
+          | **Mô tả** | Người được đào tạo có thể: <br>- Xem quy trình và các buổi đào tạo mà người đào tạo cho phép hiển thị. <br>- Theo dõi lịch trình đào tạo. <br>- Xem chi tiết tiêu chí. <br>- Tải file tài liệu được người đào tạo cung cấp. |
+          | **Giao diện liên quan** | - Menu Lịch trình → chọn buổi đào tạo → xem nội dung & tài liệu |
+          | **Luồng thao tác chính** | 1. Người được đào tạo đăng nhập và chọn menu Lịch trình. <br>2. Hệ thống hiển thị danh sách quy trình & buổi đào tạo được mở quyền. <br>3. Người được đào tạo chọn một buổi đào tạo để xem chi tiết. <br>4. Có thể xem tiêu chí chi tiết và tải file tài liệu liên quan. |
+          | **Điều kiện** | - Người được đào tạo có tài khoản hợp lệ và đang trong quá trình đào tạo. |
+          | **Kết quả hiển thị** | - Người được đào tạo thấy danh sách buổi đào tạo được mở. <br>- Có thể xem chi tiết tiêu chí và tải tài liệu. |
+          | **Trường hợp không có dữ liệu** | - Nếu chưa được gán quy trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu chưa có buổi đào tạo nào hiển thị: danh sách rỗng. |
+    #### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
+    ??? book "Xem mục tiêu (đầu ra) đào tạo (Người được đào tạo)"
+          | Trường | Nội dung |
+          | ------ | -------- |
+          | **Tên chức năng** | Xem mục tiêu (đầu ra) đào tạo |
+          | **Vai trò** | Người được đào tạo |
+          | **Mô tả** | Người được đào tạo có thể xem các tiêu chuẩn đầu ra của vị trí, bao gồm: <br>- Danh mục yêu cầu đầu ra hiển thị thành cụm rõ ràng. <br>- Khi mở rộng danh mục, hiển thị các tiêu chí con và mức đánh giá do Người đào tạo nhập. <br>- Chỉ có quyền xem, không thể chỉnh sửa. |
+          | **Giao diện liên quan** | - Menu Mục tiêu đào tạo |
+          | **Luồng thao tác chính** | 1. Người được đào tạo đăng nhập và chọn menu Mục tiêu đào tạo. <br>2. Hệ thống hiển thị danh sách mục tiêu đầu ra. <br>3. Người được đào tạo có thể mở rộng danh mục để xem các tiêu chí con và đánh giá. |
+          | **Điều kiện** | - Người được đào tạo có tài khoản hợp lệ. <br>- Ứng viên đã được gán vào quy trình đào tạo có tiêu chuẩn đầu ra. |
+          | **Kết quả hiển thị** | - Danh sách tiêu chuẩn đầu ra hiển thị kèm đánh giá từ người đào tạo. |
+          | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa được gán chương trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. |
 ---
