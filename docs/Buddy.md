@@ -161,7 +161,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống.<br>- Danh sách người phụ trách/người đào tạo có dữ liệu để lựa chọn. |
         | **Kết quả hiển thị** | - Tab **Thông tin ứng viên** hiển thị danh sách người phụ trách/người đào tạo đã gán.<br>- Thông báo *“Cập nhật dữ liệu thành công !”*. |
         | **Trường hợp không có dữ liệu** | - Nếu danh sách người phụ trách/người đào tạo trống: hiển thị thông báo *“Không có dữ liệu để lựa chọn”*. |
-    #### 1.5. Cập nhật thông tin ứng viên {#toc-4-1-5}
 ---
 ???+ info "2. Nhóm chức năng quản lý vị trí tuyển dụng"
     ### 2. Nhóm chức năng quản lý vị trí tuyển dụng {#toc-4-2}
