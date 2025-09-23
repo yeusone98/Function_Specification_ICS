@@ -56,4 +56,3 @@ extra:
       info: material/book-open-variant
 extra_javascript:
   - scripts/open-toc-book.js
-  - scripts/open-image-when-click-anchor.js
