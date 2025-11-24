@@ -1,4 +1,4 @@
-# 🌸 Tài liệu đặc tả chức năng Buddy
+# 👔 Tài liệu đặc tả chức năng Buddy
 
 # Tài liệu đặc tả chức năng dành cho PLS Buddy +
 ## I. Giới thiệu hệ thống và tài liệu
