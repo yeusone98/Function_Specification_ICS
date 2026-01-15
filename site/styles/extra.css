@@ -317,7 +317,6 @@ details.book[open] summary~* {
 
 [data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav {
   background: rgba(255, 255, 255, 0.04);
-  width: 22rem;
 }
 
 .md-sidebar--secondary .md-nav__title {
@@ -354,6 +353,10 @@ details.book[open] summary~* {
 
 .md-typeset details > summary:hover {
   filter: brightness(1.05);
+}
+
+.md-nav md-nav--secondary {
+  width: 22rem;
 }
 
 /* ---- Wider layout ---- */
