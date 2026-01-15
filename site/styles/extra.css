@@ -355,10 +355,6 @@ details.book[open] summary~* {
   filter: brightness(1.05);
 }
 
-.md-nav md-nav--secondary {
-  width: 22rem;
-}
-
 /* ---- Wider layout ---- */
 .md-grid {
   max-width: 96rem;
@@ -370,7 +366,8 @@ details.book[open] summary~* {
   }
 
   .md-sidebar--secondary {
-    width: 22rem;
+    min-width: 20rem;
+    max-width: 22rem;
   }
 
   .md-main__inner {
