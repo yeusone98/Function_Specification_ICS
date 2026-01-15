@@ -317,6 +317,7 @@ details.book[open] summary~* {
 
 [data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav {
   background: rgba(255, 255, 255, 0.04);
+  width: 22rem;
 }
 
 .md-sidebar--secondary .md-nav__title {
