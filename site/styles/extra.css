@@ -313,6 +313,7 @@ details.book[open] summary~* {
   padding: 0.8rem;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0.04);
+  width: 19rem;
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav {
@@ -366,7 +367,6 @@ details.book[open] summary~* {
   }
 
   .md-sidebar--secondary {
-    min-width: 20rem;
     max-width: 22rem;
   }
 
