@@ -367,6 +367,7 @@ details.book[open] summary~* {
 
   .md-sidebar--secondary {
     width: 22rem;
+    max-width: 100%;
   }
 
   .md-main__inner {
