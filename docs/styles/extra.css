@@ -366,8 +366,8 @@ details.book[open] summary~* {
   }
 
   .md-sidebar--secondary {
-    width: 22rem;
-    max-width: 100%;
+    min-width: 20rem;
+    max-width: 22rem;
   }
 
   .md-main__inner {
