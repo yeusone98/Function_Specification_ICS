@@ -1,6 +1,5 @@
 # 👔 Tài liệu đặc tả chức năng Buddy
 
-# Tài liệu đặc tả chức năng dành cho PLS Buddy +
 ## I. Giới thiệu hệ thống và tài liệu
 ### 1. Về hệ thống PLS Buddy +
 PLS Buddy+ là hệ thống hỗ trợ quản lý toàn bộ vòng đời tuyển dụng và đào tạo nhân sự trong doanh nghiệp.
@@ -15,7 +14,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 ---
 
 ## II. Các vai trò trong hệ thống
-### Bảng vai trò {#toc-2.1}
+### Bảng vai trò {#toc-2-1}
 <div class="table-container">
   <table class="custom-table">
     <thead>
@@ -45,7 +44,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
   </table>
 </div>
 
-## III. Đặc tả chức năng chung của các vai trò
+## III. Đặc tả chức năng chung của các vai trò {#toc-3}
 ???+ info "1. Các chức năng chung của các vai trò"
     ### 1. Các chức năng chung của các vai trò {#toc-3-1}
     #### 1.1. Đăng nhập tài khoản {#toc-3-1-1}

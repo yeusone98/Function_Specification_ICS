@@ -14,16 +14,16 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Dark mode
-      primary: green
-      accent: deep purple
+      primary: teal
+      accent: amber
 
     # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
         name: Light mode
-      primary: pink
-      accent: deep orange
+      primary: teal
+      accent: amber
 extra_css:
   - styles/extra.css
 markdown_extensions:
@@ -49,6 +49,9 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - tables
+  - toc:
+      permalink: true
+      toc_depth: 5
 
 extra:
   admonition:
