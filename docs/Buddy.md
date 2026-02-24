@@ -151,7 +151,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Luồng thao tác chính** | 1. Người phụ trách chọn một ứng viên từ danh sách ứng viên trong menu "Ứng viên".<br>2. Sau khi hệ thống hiển thị màn hình "Thông tin" và sidebar chứa các submenu thì người phụ trách có thể xem toàn bộ nội dung cần thiết.<br>3. Người phụ trách có thể mở rộng các item câu hỏi để xem nội dung bên trong, nội dung có thể là câu trả lời của ứng viên hoặc câu trả lời được HR thêm vào khi tạo profile cho ứng viên. |
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống và được nhìn thấy trên bảng danh sách ứng viên. |
         | **Kết quả hiển thị** | - Hiển thị toàn bộ thông tin về ứng viên mà hệ thống ghi nhận được.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo dạng toast với nội dung *"Cập nhật dữ liệu thành công!"*. |
-        | **Trường hợp không có dữ liệu** | - Thông tin chưa có sẽ để trống. |
+        | **Trường hợp không có dữ liệu** | Item không có thông tin bên trong sẽ hiển thị hint *`Nhập thêm nội dung`*.  |
     #### 1.4. Thêm ứng viên mới {#toc-4-1-4}
     ??? book "Thêm ứng viên mới"
         | Trường | Nội dung |
@@ -159,23 +159,23 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Tên chức năng** | Thêm ứng viên mới |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Chức năng cho phép người phụ trách tạo và lưu thông tin ứng viên mới vào hệ thống. <br><br>Khi chọn biểu tượng **(+)** tại màn hình *Danh sách ứng viên*, popup **“Thêm ứng viên”** xuất hiện, yêu cầu nhập đầy đủ các thông tin bắt buộc: <br>&emsp;- Họ và tên <br>&emsp;- Vị trí <br>&emsp;- Gmail <br>&emsp;- Ngày gửi <br> *Người phụ trách có thể upload file thông tin thêm về ứng viên (bằng cấp, giấy tờ tùy thân, cover letter,...), hệ thống cho phép tổng dung lượng cho một lần upload là 25MB (không tính số lượng file).*<br><br>Sau khi nhập thông tin và được hệ thống nhận định là hợp lệ, người phụ trách cần nhấn nút **“Thêm ứng viên”** để hệ thống tiến hành lưu dữ liệu và hiển thị ứng viên trong bảng. |
-        | **Giao diện liên quan** | - Màn hình **Danh sách ứng viên** (menu *Ứng viên*). <br>- Popup **Thêm ứng viên phỏng vấn**. |
-        | **Luồng thao tác chính** | 1. Người phụ trách chọn nút **(+)** tại màn hình *Danh sách ứng viên*. <br>2. Hệ thống hiển thị popup **Thêm ứng viên phỏng vấn**. <br>3. Người phụ trách nhập thông tin: <br>&emsp;- **Họ và tên**. <br>&emsp;- **Vị trí**: chọn từ danh sách vị trí đang tuyển dụng (dropdown-list). <br>&emsp;- **Gmail**: đúng định dạng email. <br>&emsp;- **Người phụ trách**: chọn từ danh sách có sẵn. <br>&emsp;- **Ngày gửi CV**: chọn qua popup lịch (không được chọn ngày trong tương lai; khi nhập thủ công theo định dạng *dd/mm/yyyy* cũng không được vượt quá ngày hiện tại). <br>4. Hệ thống kiểm tra dữ liệu. Nếu hợp lệ, người phụ trách nhấn **“Thêm ứng viên”**. <br>5. Hệ thống lưu thông tin, cập nhật bảng dữ liệu và hiển thị ứng viên mới. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp. <br>- Dữ liệu nhập hợp lệ. <br>- Người phụ trách nhấn nút **“Thêm ứng viên”**. |
-        | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình *Danh sách ứng viên*. |
-        | **Trường hợp không có dữ liệu** | - Nếu ứng viên vừa thêm chưa hiển thị: người phụ trách tải lại trang (F5). <br>- Nếu vẫn không thấy: liên hệ bộ phận có thẩm quyền để kiểm tra. |
-    #### 1.5. Gán người nhận trách nhiệm cho ứng viên {#toc-4-1-5}
-    ??? book "Gán người nhận trách nhiệm cho ứng viên"
+        | **Giao diện liên quan** | - Màn hình **Danh sách ứng viên** (menu *Ứng viên*). <br>- Popup **Thêm ứng viên**. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn nút **(+)** tại màn hình *Danh sách ứng viên*. <br>2. Hệ thống hiển thị popup **Thêm ứng viên phỏng vấn**. <br>3. Người phụ trách nhập thông tin: <br>&emsp;- **Họ và tên**. <br>&emsp;- **Vị trí**: chọn từ danh sách vị trí đang tuyển dụng (dropdown-list). <br>&emsp;- **Gmail**: đúng định dạng email. <br>&emsp;- **Ngày gửi CV**: chọn qua popup lịch (không được chọn ngày trong tương lai; khi nhập thủ công theo định dạng *dd/mm/yyyy* cũng không được vượt quá ngày hiện tại). <br>4. Hệ thống kiểm tra dữ liệu. Nếu hợp lệ, người phụ trách nhấn **“Thêm ứng viên”**. <br>5. Hệ thống lưu thông tin, cập nhật bảng dữ liệu và hiển thị ứng viên mới. |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**.<br><br>**Trường hợp Email của ứng viên đã tồn tại trong hệ thống:**<br>- Người phụ trách phải xác nhận việc ghi đè thông tin nếu như muốn tạo profile mới hoàn toàn cho ứng viên tại vị trí được chọn.<br>- Người phụ trách phải xác nhận việc tạo profile mới cho ứng viên tại một vị trí mới (trong trường hợp ứng tuyển vào nhiều hơn 1 vị trí), lúc này hệ thống sẽ ghi nhận nhiều hơn 1 profile có cùng địa chỉ Email nhưng vẫn được cho phép tạo vì có vị trí ứng tuyển khác nhau. |
+        | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.  |
+    #### 1.5. Tự động gán người phụ trách ứng viên {#toc-4-1-5}
+    ??? book "Tự động gán người phụ trách ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Gán người nhận trách nhiệm cho ứng viên |
+        | **Tên chức năng** | Tự động gán người phụ trách ứng viên |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Người phụ trách có thể gán, thay đổi hoặc gỡ bỏ người phụ trách và người đào tạo cho từng ứng viên. Thông tin này được hiển thị trong hồ sơ ứng viên để phục vụ quản lý và đào tạo. |
-        | **Giao diện liên quan** | - Menu **Ứng Viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → tab **Thông tin ứng viên** <br>- Popup **Thêm người phụ trách** <br>- Popup **Thêm người đào tạo** |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng Viên**.<br>2. Tại bảng **Danh sách ứng viên**, chọn một ứng viên → hệ thống mở màn hình **Chi tiết ứng viên**.<br>3. Nhấn nút **Người phụ trách** → popup **Thêm người phụ trách**.<br>4. Tìm kiếm, tick chọn một hoặc nhiều người phụ trách → nhấn **Xác nhận**.<br>5. Nhấn nút **Người đào tạo** → popup **Thêm người đào tạo**.<br>6. Thêm, gỡ hoặc cập nhật người đào tạo → nhấn **Xác nhận**.<br>7. Hệ thống cập nhật dữ liệu và hiển thị danh sách người phụ trách/người đào tạo đã gán. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống.<br>- Danh sách người phụ trách/người đào tạo có dữ liệu để lựa chọn. |
-        | **Kết quả hiển thị** | - Tab **Thông tin ứng viên** hiển thị danh sách người phụ trách/người đào tạo đã gán.<br>- Thông báo *“Cập nhật dữ liệu thành công !”*. |
-        | **Trường hợp không có dữ liệu** | - Nếu danh sách người phụ trách/người đào tạo trống: hiển thị thông báo *“Không có dữ liệu để lựa chọn”*. |
+        | **Mô tả** | Chức năng này cho phép hệ thống tự động gán người phụ trách khi thêm ứng viên vào hệ thống.<br>*( hệ thống lấy thông tin người phụ trách đang thực hiện việc tạo profile và gán cho ứng viên đó )* |
+        | **Giao diện liên quan** | - Màn hình **Danh sách ứng viên** (menu *Ứng viên*). <br>- Popup **Thêm ứng viên**. |
+        | **Luồng thao tác chính** | - Khi người phụ trách tạo một profile mới dành cho một ứng viên, hệ thống tự động lấy thông tin của người phụ trách đó để gán.<br>- Hệ thống xác nhận việc ghi nhận thông tin người phụ trách khi người phụ trách nhấn nút **Thêm ứng viên** trên popup. |
+        | **Điều kiện** | Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách. |
+        | **Kết quả hiển thị** | Sau khi hệ thống thông báo thêm thành công và người dùng sử dụng filter *Phụ trách* trên danh sách ứng viên, hệ thống thực hiện truy vấn các profiles ứng viên được tạo bởi các người phụ trách được chọn. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp người phụ trách được chọn chưa tạo bất kỳ profile ứng viên nào :**<br>&emsp;- Hệ thống hiển thị mô tả *“Bảng dữ liệu trống!”* kèm icon thùng rỗng. |
 ---
 ???+ info "2. Nhóm chức năng quản lý vị trí tuyển dụng"
     ### 2. Nhóm chức năng quản lý vị trí tuyển dụng {#toc-4-2}
