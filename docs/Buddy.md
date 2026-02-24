@@ -24,22 +24,26 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="bold">Người phụ trách (Handler)</td>
-        <td class="light" style="text-align:left">Quản lý toàn bộ quy trình tuyển dụng: thêm và cập nhật ứng viên, gán người phỏng vấn/người đào tạo, theo dõi trạng thái ứng viên, thiết lập vị trí tuyển dụng, tiêu chuẩn, lịch phỏng vấn và quy trình đào tạo.</td>
-      </tr>
-      <tr>
-        <td class="bold">Người phỏng vấn (Interviewer)</td>
-        <td class="light" style="text-align:left">Thực hiện phỏng vấn ứng viên được phân công, đánh giá kết quả phỏng vấn theo bộ câu hỏi và tiêu chí đánh giá, xem lịch và lịch sử phỏng vấn các ứng viên được gán.</td>
-      </tr>
-      <tr>
-        <td class="bold">Người đào tạo (Trainer)</td>
-        <td class="light" style="text-align:left">Tham gia đào tạo ứng viên/nhân sự sau khi được gán, theo dõi và đánh giá tiến trình đào tạo, sử dụng tài liệu đào tạo, quản lý lịch trình và tiêu chuẩn đào tạo của ứng viên được phân công.</td>
-      </tr>
-      <tr>
-        <td class="bold">Ứng viên / Người được đào tạo (Trainee)</td>
-        <td class="light" style="text-align:left">Ứng tuyển vị trí, tham gia phỏng vấn và làm bài kiểm tra. Khi được chuyển sang trạng thái đào tạo, trở thành Người được đào tạo, có thể theo dõi mục tiêu đào tạo, lịch trình, tài liệu và kết quả đánh giá đào tạo.</td>
-      </tr>
+        <tr>
+            <td class="bold">Người quản lý (Master)</td>
+            <td class="light" style="text-align:left">Quyền hạn cao nhất trong hệ thống, Master có quyền thêm / xóa / sửa tài khoản của các vai trò vào hệ thống, thêm / xóa / sửa các vị trí tuyển dụng được hiển thị trên hệ thống</td>
+        </tr>
+        <tr>
+            <td class="bold">Người phụ trách (Handler)</td>
+            <td class="light" style="text-align:left">Quản lý toàn bộ quy trình tuyển dụng: thêm và cập nhật ứng viên, gán người phỏng vấn/người đào tạo, theo dõi trạng thái ứng viên, thiết lập vị trí tuyển dụng, tiêu chuẩn, lịch phỏng vấn và quy trình đào tạo.</td>
+        </tr>
+        <tr>
+            <td class="bold">Người phỏng vấn (Interviewer)</td>
+            <td class="light" style="text-align:left">Thực hiện phỏng vấn ứng viên được phân công, đánh giá kết quả phỏng vấn theo bộ câu hỏi và tiêu chí đánh giá, xem lịch và lịch sử phỏng vấn các ứng viên được gán.</td>
+        </tr>
+        <tr>
+            <td class="bold">Người đào tạo (Trainer)</td>
+            <td class="light" style="text-align:left">Tham gia đào tạo ứng viên/nhân sự sau khi được gán, theo dõi và đánh giá tiến trình đào tạo, sử dụng tài liệu đào tạo, quản lý lịch trình và tiêu chuẩn đào tạo của ứng viên được phân công.</td>
+        </tr>
+        <tr>
+            <td class="bold">Ứng viên / Người được đào tạo (Trainee)</td>
+            <td class="light" style="text-align:left">Ứng tuyển vị trí, tham gia phỏng vấn và làm bài kiểm tra. Khi được chuyển sang trạng thái đào tạo, trở thành Người được đào tạo, có thể theo dõi mục tiêu đào tạo, lịch trình, tài liệu và kết quả đánh giá đào tạo.</td>
+        </tr>
     </tbody>
   </table>
 </div>
@@ -83,7 +87,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện**                   | - Người dùng có tài khoản đã đăng ký trong hệ thống. <br>- Email nhập vào (hoặc email đã gán cho tài khoản đăng nhập) tồn tại trong hệ thống. <br>- Người dùng truy cập hợp lệ vào link reset mật khẩu trong thời hạn cho phép. |
         | **Kết quả hiển thị**            | - Hệ thống gửi email chứa link đặt lại mật khẩu. <br>- Khi người dùng đặt lại mật khẩu thành công: hiển thị thông báo *“Đặt lại mật khẩu thành công!”*. <br>- Người dùng có thể dùng mật khẩu mới để đăng nhập. |
         | **Trường hợp không có dữ liệu** | - Email nhập không tồn tại trong hệ thống: hiển thị thông báo *“Email không tồn tại trong hệ thống”*. <br>- Nếu người dùng chưa đăng nhập và không nhập email: hệ thống yêu cầu nhập email trước khi thực hiện. |
-    ####  1.4. Thay đổi vai trò (đối với tài khoản được gán nhiều vai trò) {#toc-3-1-4}
+    ####  1.4. Thay đổi vai trò (đối với tài khoản có nhiều vai trò) {#toc-3-1-4}
     ??? book "Thay đổi vai trò"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -109,46 +113,58 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Trường hợp không có dữ liệu** | - Không có trường hợp đặc biệt, vì nút **Đăng Xuất** luôn khả dụng khi người dùng đang đăng nhập. |
 ---
 
-## IV. Đặc tả chức năng dành cho Handler
-???+ info "1. Nhóm chức năng giữa Người phụ trách - Ứng viên "
-    ### 1. Nhóm chức năng giữa Người phụ trách - Ứng viên {#toc-4-1}
-    #### 1.1. Xem bảng danh sách ứng viên {#toc-4-1-1}
-    ??? book "Xem bảng danh sách ứng viên"
+## IV. Đặc tả chức năng dành cho Handler (Người Phụ Trách)
+???+ info "1. Nhóm chức năng giữa người phụ trách - ứng viên"
+    ### 1. Nhóm chức năng giữa người phụ trách - ứng viên {#toc-4-1}
+    #### 1.1. Hiển thị bảng danh sách các ứng viên cho người phụ trách {#toc-4-1-1}
+    ??? book "Hiển thị bảng danh sách các ứng viên cho người phụ trách"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Xem bảng danh sách ứng viên |
+        | **Tên chức năng** | Hiển thị bảng danh sách các ứng viên cho người phụ trách |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Tìm kiếm nhanh ứng viên theo **Họ và Tên** thông qua ô nhập liệu.<br>3. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
+        | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
         | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Bảng **Danh sách ứng viên**.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Ngày phỏng vấn**. |
-        | **Luồng thao tác chính** | **Xem danh sách:**<br>1. Người phụ trách chọn menu **Ứng Viên**.<br>2. Hệ thống tải dữ liệu của **toàn bộ ứng viên** trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br>**Tìm kiếm:**<br>5. Người phụ trách nhập ký tự vào ô tìm kiếm.<br>6. Hệ thống tự động lọc danh sách theo Họ và Tên có chứa chuỗi ký tự nhập, kết quả cập nhật ngay khi thay đổi ký tự.<br>7. Khi ô tìm kiếm trống, hiển thị lại toàn bộ dữ liệu ban đầu.<br><br>**Lọc ứng viên:**<br>8. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- **Vị trí**: chọn nhiều vị trí từ dropdown.<br>&emsp;- **Trạng thái**: chọn nhiều giá trị từ danh sách trạng thái (`Mới`, `Passed`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`).<br>&emsp;- **Người phụ trách**: chọn nhiều người phụ trách (logic OR trong bộ lọc này).<br>&emsp;- **Ngày phỏng vấn**: chọn khoảng thời gian bằng popup lịch.<br>9. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các nhóm lọc, OR trong từng nhóm).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ `(03) Vị trí`. |
+        | **Luồng thao tác chính** | **Xem danh sách:**<br>1. Người phụ trách chọn menu **Ứng Viên**.<br>2. Hệ thống tải dữ liệu của **toàn bộ ứng viên** trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br>**Lọc ứng viên:**<br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- **Vị trí**: chọn nhiều vị trí từ dropdown.<br>&emsp;- **Trạng thái**: chọn nhiều giá trị từ danh sách trạng thái (`Mới`, `Passed`, `Đã phỏng vấn`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`).<br>&emsp;- **Người phụ trách**: chọn nhiều người phụ trách (logic OR trong bộ lọc này).<br>&emsp;- **Ngày phỏng vấn**: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ `(03) Vị trí`. |
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên. |
-        | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu hiện đang trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu hiện đang trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
-    #### 1.2. Xem chi tiết thông tin ứng viên {#toc-4-1-2}
-    ??? book "Xem chi tiết thông tin ứng viên"
+        | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
+    #### 1.2. Tìm kiếm ứng viên theo ký tự {#toc-4-1-2}
+    ??? book "Tìm kiếm ứng viên theo ký tự"
         | Trường | Nội dung |
         | ------ | -------- |
-        | Tên chức năng | Xem và quản lý thông tin chi tiết ứng viên |
-        | Vai trò | Người phụ trách |
-        | Mô tả | Người phụ trách có thể xem toàn bộ thông tin chi tiết của ứng viên và quản lý tài khoản ứng viên. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin hồ sơ (Tên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Đánh giá, Trạng thái đào tạo, Người phụ trách, Người đào tạo, Thông tin thêm như CV, bằng cấp, lịch làm việc dự kiến). <br>- Tại tab “Tài khoản ứng viên”: có quyền xem, sửa, xóa thông tin tài khoản (Họ và tên, Giới tính, Ngày sinh, Số điện thoại, Gmail, Mã OTP, Vị trí ứng tuyển). Có nút “Cập nhật tài khoản” để lưu thay đổi. |
-        | Giao diện liên quan | - Menu Ứng Viên → bảng Danh sách ứng viên <br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên, Tài khoản ứng viên |
-        | Luồng thao tác chính | 1. Người phụ trách đăng nhập hệ thống.<br>2. Vào menu Ứng viên, chọn một ứng viên.<br>3. Xem thông tin ở tab Thông tin ứng viên.<br>4. Chuyển sang tab Tài khoản ứng viên để xem, chỉnh sửa hoặc xóa thông tin.<br>5. Nhấn Cập nhật tài khoản để lưu thay đổi. |
-        | Điều kiện | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
-        | Kết quả hiển thị | - Hiển thị chi tiết ứng viên và thông tin tài khoản.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo “Cập nhật dữ liệu thành công!”. |
-        | Trường hợp không có dữ liệu | - Thông tin chưa có sẽ để trống. |
-    #### 1.3. Thêm ứng viên mới {#toc-4-1-3}
+        | **Tên chức năng** | Tìm kiếm ứng viên theo ký tự |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng này cho phép người phụ trách tìm kiếm nhanh ứng viên theo **Họ và Tên** thông qua ô nhập liệu tại trang **Danh sách ứng viên**. Hệ thống tự động lọc danh sách theo chuỗi ký tự được nhập. |
+        | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>3. Bảng **Danh sách ứng viên**. |
+        | **Luồng thao tác chính** | 1. Người phụ trách truy cập trang **Danh sách ứng viên**.<br>2. Người phụ trách nhập ký tự vào ô tìm kiếm.<br>3. Hệ thống tự động lọc danh sách theo **Họ và Tên** có chứa chuỗi ký tự nhập.<br>4. Kết quả được cập nhật ngay khi thay đổi ký tự.<br>5. Khi ô tìm kiếm trống, hệ thống hiển thị lại toàn bộ dữ liệu ban đầu. |
+        | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
+        | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** chỉ hiển thị những ứng viên có **Họ và Tên** chứa chuỗi ký tự đã nhập.<br>- Kết quả cập nhật tức thời khi thay đổi ký tự.<br>- Khi ô tìm kiếm trống, hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
+        | **Trường hợp không có dữ liệu** | - Nếu không có kết quả phù hợp với chuỗi ký tự nhập: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
+    #### 1.3. Quản lý thông tin chi tiết của ứng viên {#toc-4-1-3}
+    ??? book "Quản lý thông tin chi tiết của ứng viên"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Quản lý thông tin chi tiết của ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách có thể xem các thông tin liên quan về ứng viên khi chọn vào tab "Thông tin" của submenu sau khi chọn một ứng viên trên danh sách ứng viên.<br>Các thông tin được hiển thị bao gồm:<br>&emsp;- Câu trả lời của ứng viên khi ứng tuyển tại miền dành cho ứng viên <a href="https://buddy.pls.edu.vn/ung-vien" target="_blank">(buddy.pls.edu.vn/ung-vien)</a>.<br>&emsp;- Trong trường hợp ứng viên ứng tuyển qua kênh email, các câu trả lời của ứng viên sẽ được HR thêm trực tiếp vào bên dưới các câu hỏi, hệ thống sẽ ghi nhận lịch sử chỉnh sửa gần nhất và hiển thị cho người phụ trách đang xem thông tin.<br>&emsp;- Người phụ trách có quyền thay đổi trạng thái và đánh giá về ứng viên, các thay đổi này sẽ được cập nhật và hiển thị trên bảng danh sách ứng viên.<br>&emsp;- Các thông tin khác như thời gian ứng tuyển, giấy tờ tùy thân, bằng cấp, lịch làm việc mong muốn, thông tin thêm về ứng viên cũng sẽ được hệ thống ghi nhận và hiển thị cho người phụ trách đang xem thông tin chi tiết về ứng viên. |
+        | **Giao diện liên quan** | - Submenu "Thông tin" sau khi chọn ứng viên.<br>- Màn hình submenu "Thông tin". |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn một ứng viên từ danh sách ứng viên trong menu "Ứng viên".<br>2. Sau khi hệ thống hiển thị màn hình "Thông tin" và sidebar chứa các submenu thì người phụ trách có thể xem toàn bộ nội dung cần thiết.<br>3. Người phụ trách có thể mở rộng các item câu hỏi để xem nội dung bên trong, nội dung có thể là câu trả lời của ứng viên hoặc câu trả lời được HR thêm vào khi tạo profile cho ứng viên. |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống và được nhìn thấy trên bảng danh sách ứng viên. |
+        | **Kết quả hiển thị** | - Hiển thị toàn bộ thông tin về ứng viên mà hệ thống ghi nhận được.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo dạng toast với nội dung *"Cập nhật dữ liệu thành công!"*. |
+        | **Trường hợp không có dữ liệu** | - Thông tin chưa có sẽ để trống. |
+    #### 1.4. Thêm ứng viên mới {#toc-4-1-4}
     ??? book "Thêm ứng viên mới"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Thêm ứng viên mới |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách tạo và lưu thông tin ứng viên mới vào hệ thống. <br><br>Khi chọn biểu tượng **(+)** tại màn hình *Danh sách ứng viên*, popup **“Thêm ứng viên phỏng vấn”** xuất hiện, yêu cầu nhập đầy đủ các thông tin bắt buộc: <br>&emsp;- Họ và tên <br>&emsp;- Vị trí <br>&emsp;- Gmail <br>&emsp;- Người phụ trách <br>&emsp;- Ngày gửi CV <br><br>Sau khi nhập hợp lệ và nhấn **“Thêm ứng viên”**, hệ thống lưu dữ liệu và hiển thị ứng viên trong bảng. |
+        | **Mô tả** | Chức năng cho phép người phụ trách tạo và lưu thông tin ứng viên mới vào hệ thống. <br><br>Khi chọn biểu tượng **(+)** tại màn hình *Danh sách ứng viên*, popup **“Thêm ứng viên”** xuất hiện, yêu cầu nhập đầy đủ các thông tin bắt buộc: <br>&emsp;- Họ và tên <br>&emsp;- Vị trí <br>&emsp;- Gmail <br>&emsp;- Ngày gửi <br> *Người phụ trách có thể upload file thông tin thêm về ứng viên (bằng cấp, giấy tờ tùy thân, cover letter,...), hệ thống cho phép tổng dung lượng cho một lần upload là 25MB (không tính số lượng file).*<br><br>Sau khi nhập thông tin và được hệ thống nhận định là hợp lệ, người phụ trách cần nhấn nút **“Thêm ứng viên”** để hệ thống tiến hành lưu dữ liệu và hiển thị ứng viên trong bảng. |
         | **Giao diện liên quan** | - Màn hình **Danh sách ứng viên** (menu *Ứng viên*). <br>- Popup **Thêm ứng viên phỏng vấn**. |
         | **Luồng thao tác chính** | 1. Người phụ trách chọn nút **(+)** tại màn hình *Danh sách ứng viên*. <br>2. Hệ thống hiển thị popup **Thêm ứng viên phỏng vấn**. <br>3. Người phụ trách nhập thông tin: <br>&emsp;- **Họ và tên**. <br>&emsp;- **Vị trí**: chọn từ danh sách vị trí đang tuyển dụng (dropdown-list). <br>&emsp;- **Gmail**: đúng định dạng email. <br>&emsp;- **Người phụ trách**: chọn từ danh sách có sẵn. <br>&emsp;- **Ngày gửi CV**: chọn qua popup lịch (không được chọn ngày trong tương lai; khi nhập thủ công theo định dạng *dd/mm/yyyy* cũng không được vượt quá ngày hiện tại). <br>4. Hệ thống kiểm tra dữ liệu. Nếu hợp lệ, người phụ trách nhấn **“Thêm ứng viên”**. <br>5. Hệ thống lưu thông tin, cập nhật bảng dữ liệu và hiển thị ứng viên mới. |
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp. <br>- Dữ liệu nhập hợp lệ. <br>- Người phụ trách nhấn nút **“Thêm ứng viên”**. |
         | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình *Danh sách ứng viên*. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên vừa thêm chưa hiển thị: người phụ trách tải lại trang (F5). <br>- Nếu vẫn không thấy: liên hệ bộ phận có thẩm quyền để kiểm tra. |
-    #### 1.4. Gán người nhận trách nhiệm cho ứng viên {#toc-4-1-4}
+    #### 1.5. Gán người nhận trách nhiệm cho ứng viên {#toc-4-1-5}
     ??? book "Gán người nhận trách nhiệm cho ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
