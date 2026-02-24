@@ -1,4 +1,4 @@
-# 📄 TÀI LIỆU ĐẶC TẢ CHỨC NĂNG ICS
+# 📄 Tài liệu đặc tả chức năng ICS
 ---
 ## 1. Giới thiệu hệ thống
 
