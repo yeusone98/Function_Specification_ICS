@@ -114,7 +114,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 ---
 
 ## IV. Đặc tả chức năng dành cho Handler (Người Phụ Trách)
-???+ info "1. Nhóm chức năng giữa người phụ trách - ứng viên"
+???+ info "1. Nhóm chức năng giữa người phụ trách - ứng viên (Buddy_v2)"
     ### 1. Nhóm chức năng giữa người phụ trách - ứng viên {#toc-4-1}
     #### 1.1. Hiển thị bảng danh sách các ứng viên cho người phụ trách {#toc-4-1-1}
     ??? book "Hiển thị bảng danh sách các ứng viên cho người phụ trách"
