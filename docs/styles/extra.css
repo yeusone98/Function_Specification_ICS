@@ -11,7 +11,8 @@
 /* Mở rộng bảng trong bài viết */
 .md-typeset table {
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
+  overflow-x: auto;
 }
 
 /* Cho phép nội dung xuống dòng nếu cần */
@@ -29,10 +30,10 @@
 /* Áp dụng chung */
 .md-typeset table {
   width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
   border-collapse: collapse;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: clip;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -338,6 +339,7 @@ details.book[open] summary~* {
 .md-typeset details {
   border-radius: 12px;
   border: 1px solid rgba(20, 108, 95, 0.35);
+  overflow: visible;
 }
 
 [data-md-color-scheme="slate"] .md-typeset details {
@@ -368,12 +370,25 @@ details.book[open] summary~* {
     width: 17rem;
   }
 
+  @media (max-width: 1200px) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
   .md-sidebar--secondary {
     min-width: 20rem;
     max-width: 22rem;
   }
 
-  .md-main__inner {
-    gap: 1.6rem;
+  /* Fix Chrome sidebar padding bug */
+  @supports selector(::-webkit-scrollbar) {
+    [dir=ltr] .md-sidebar__inner {
+      padding-right: 0 !important;
+    }
+
+    [dir=rtl] .md-sidebar__inner {
+      padding-left: 0 !important;
+    }
   }
 }

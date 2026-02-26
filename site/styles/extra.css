@@ -371,8 +371,4 @@ details.book[open] summary~* {
   .md-sidebar--secondary {
     max-width: 22rem;
   }
-
-  .md-main__inner {
-    gap: 1.6rem;
-  }
 }
