@@ -128,7 +128,43 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên. |
         | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
-    #### 1.2. Tìm kiếm ứng viên theo ký tự {#toc-4-1-2}
+    #### 1.2. Tùy chọn hiển thị cột trong bảng danh sách ứng viên {#toc-4-1-2}
+    ??? book "Tùy chọn hiển thị cột trong bảng danh sách ứng viên"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Tùy chọn hiển thị cột trong bảng danh sách ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Bảng **Danh sách ứng viên** có tổng cộng 10 cột gồm: Vị trí phỏng vấn, Trạng thái, Phỏng vấn, Đào tạo, Ngày gửi CV, Ngày phỏng vấn, Ngày hết hạn hợp đồng, Ngày sinh, Thời gian training, Thời gian phỏng vấn. Người phụ trách có thể tùy chọn cột nào được hiển thị bằng cách nhấn vào biểu tượng `👁️` ở góc trên bên phải của bảng và chọn các cột mong muốn. Những cột không được chọn sẽ không hiển thị trên màn hình. Cài đặt này được lưu theo từng tài khoản. |
+        | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên**.<br>2. Biểu tượng `👁️` ở góc trên bên phải bảng.<br>3. Danh sách 10 cột có thể chọn hiển thị. |
+        | **Luồng thao tác chính** | 1. Người phụ trách nhấn vào biểu tượng `👁️`.<br>2. Hệ thống hiển thị danh sách 10 cột.<br>3. Người phụ trách chọn hoặc bỏ chọn các cột muốn hiển thị.<br>4. Hệ thống cập nhật bảng theo các cột đã chọn.<br>5. Hệ thống lưu cấu hình hiển thị theo từng tài khoản. |
+        | **Điều kiện** | 1. Người phụ trách đã đăng nhập hợp lệ.<br>2. Trang **Danh sách ứng viên** đã tải được chọn. |
+        | **Kết quả hiển thị** | - Bảng chỉ hiển thị các cột đã được chọn.<br>- Các cột không được chọn sẽ không hiển thị.<br>- Cấu hình được lưu riêng theo từng tài khoản. |
+        | **Trường hợp không có dữ liệu** | **Nếu không có ứng viên**: Bảng hiển thị thông báo “Bảng dữ liệu trống!” kèm icon thùng rỗng. |
+    #### 1.3. Sắp xếp thứ tự ưu tiên theo từng cột {#toc-4-1-3}
+    ??? book "Sắp xếp thứ tự ưu tiên theo từng cột"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Sắp xếp thứ tự ưu tiên theo từng cột |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách có thể sắp xếp thứ tự ưu tiên hiển thị theo từng cột bằng cách nhấn vào biểu tượng `☰` bên phải tiêu đề cột. Hệ thống hiển thị dropdown-list “Theo thứ tự ưu tiên” chứa nội dung tương ứng với cột muốn sắp xếp. Người phụ trách có thể kéo thả các item để sắp xếp lại thứ tự hoặc nhấn nút `⟳` để reset về mặc định. |
+        | **Giao diện liên quan** | 1. Cột được hiển thị trên bảng (các cột mà người phụ trách đã chọn khi thực hiện thao tác ở chức năng <a href="/Buddy/#toc-4-1-2">tùy chọn cột muốn xem</a> ).<br>2. Biểu tượng `☰` bên phải tiêu đề cột.<br>3. Dropdown-list “Theo thứ tự ưu tiên”.<br>4. Nút `⟳` reset thứ tự mặc định. |
+        | **Luồng thao tác chính** | 1. Người phụ trách nhấn vào biểu tượng `☰` tại cột muốn sắp xếp.<br>2. Hệ thống hiển thị dropdown-list “Theo thứ tự ưu tiên” với nội dung tương ứng cho từng cột.<br>3. Người phụ trách kéo thả các item để thay đổi thứ tự ưu tiên.<br>4. Hệ thống áp dụng thứ tự đã sắp xếp.<br>5. Người phụ trách có thể nhấn `⟳` để reset về thứ tự mặc định. |
+        | **Điều kiện** | 1. Cột *Vị trí phỏng vấn* đang được hiển thị.<br>2. Có ít nhất một vị trí đang có đơn ứng tuyển. |
+        | **Kết quả hiển thị** | - Danh sách ứng viên được sắp xếp theo thứ tự ưu tiên đã thiết lập.<br>- Có thể reset về thứ tự mặc định bằng nút `⟳`. |
+        | **Trường hợp không có dữ liệu** | **Nếu không có vị trí có đơn ứng tuyển**: Không hiển thị item trong dropdown-list. |
+    #### 1.4. Cơ chế sắp xếp theo nhiều cột đã chọn {#toc-4-1-4}
+    ??? book "Cơ chế sắp xếp theo nhiều cột đã chọn"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Cơ chế sắp xếp theo nhiều cột đã chọn |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Thứ tự của 10 cột tại biểu tượng `👁️` có ý nghĩa trong quá trình sắp xếp. Khi người phụ trách chọn các cột để hiển thị, hệ thống lấy thứ tự mặc định (1 đến 10), sau đó sắp xếp lại theo thứ tự tăng dần để tạo thành thứ tự ưu tiên sắp xếp.<br>*Ví dụ: người dùng chọn cột 2, cột 8, cột 3, cột 6 → hệ thống sắp xếp thành 2 - 3 - 6 - 8 → hoàn tất sort cột 2 → tiếp tục sort cột 3 → 6 → 8. Không giới hạn số lượng cột được chọn. Người phụ trách có thể chọn cả 10 cột và sắp xếp tối đa 9 cột (cột Đào tạo không cần sort)*. |
+        | **Giao diện liên quan** | 1. Biểu tượng `👁️`.<br>2. Các cột được chọn hiển thị trên bảng.<br>3. Biểu tượng `☰` tại tiêu đề từng cột. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn các cột muốn hiển thị tại biểu tượng `👁️`.<br>2. Hệ thống xác định thứ tự mặc định của các cột (1 đến 10).<br>3. Hệ thống sắp xếp lại theo thứ tự tăng dần để tạo thứ tự ưu tiên.<br>4. Hệ thống thực hiện sort lần lượt theo từng cột trong thứ tự đã xác định. |
+        | **Điều kiện** | 1. Có ít nhất một cột được chọn hiển thị.<br>2. Các cột được chọn có hỗ trợ sắp xếp (trừ cột Đào tạo). |
+        | **Kết quả hiển thị** | - Danh sách ứng viên được sắp xếp theo thứ tự ưu tiên các cột đã chọn.<br>- Có thể chọn tối đa 10 cột và sắp xếp tối đa 9 cột. |
+        | **Trường hợp không có dữ liệu** | **Nếu không có dữ liệu ứng viên**: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng. |
+    #### 1.5. Tìm kiếm ứng viên theo ký tự {#toc-4-1-5}
     ??? book "Tìm kiếm ứng viên theo ký tự"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -140,7 +176,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** chỉ hiển thị những ứng viên có **Họ và Tên** chứa chuỗi ký tự đã nhập.<br>- Kết quả cập nhật tức thời khi thay đổi ký tự.<br>- Khi ô tìm kiếm trống, hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
         | **Trường hợp không có dữ liệu** | - Nếu không có kết quả phù hợp với chuỗi ký tự nhập: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
-    #### 1.3. Quản lý thông tin chi tiết của ứng viên {#toc-4-1-3}
+    #### 1.6. Quản lý thông tin chi tiết của ứng viên {#toc-4-1-6}
     ??? book "Quản lý thông tin chi tiết của ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -152,7 +188,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống và được nhìn thấy trên bảng danh sách ứng viên. |
         | **Kết quả hiển thị** | - Hiển thị toàn bộ thông tin về ứng viên mà hệ thống ghi nhận được.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo dạng toast với nội dung *"Cập nhật dữ liệu thành công!"*. |
         | **Trường hợp không có dữ liệu** | Item không có thông tin bên trong sẽ hiển thị hint *`Nhập thêm nội dung`*.  |
-    #### 1.4. Thêm ứng viên mới {#toc-4-1-4}
+    #### 1.7. Thêm ứng viên mới {#toc-4-1-7}
     ??? book "Thêm ứng viên mới"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -164,7 +200,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên không tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**. |
         | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.  |
-    #### 1.5. Tạo đơn ứng tuyển cho ứng viên đã từng apply {#toc-4-1-5}
+    #### 1.8. Tạo đơn ứng tuyển cho ứng viên đã từng apply {#toc-4-1-8}
     ??? book "Tạo đơn ứng tuyển cho ứng viên đã từng apply"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -176,7 +212,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên đã tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**.<br>- Người phụ trách nhấn nút **"Xác nhận"**. |
         | **Kết quả hiển thị** | Ứng viên xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.<br><br>**Trường hợp ứng viên có đơn ứng tuyển chưa được hoàn thành**: hệ thống sẽ hiển thị popup thông báo cho người dùng rằng ứng viên này đang có đơn ứng tuyển chưa hoàn thành và cung cấp đường dẫn đến đơn ứng tuyển đó, người phụ trách cần thực hiện đánh giá đơn ứng tuyển đó hoặc xóa đơn ứng tuyển để hệ thống có thể tiếp nhận đơn ứng tuyển mới của ứng viên. |
-    #### 1.6. Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên {#toc-4-1-6}
+    #### 1.9. Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên {#toc-4-1-9}
     ??? book "Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -188,7 +224,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Người phụ trách tick vào tickbox *Chọn ứng viên có sẵn*.<br>- Email của ứng viên đã tồn tại trên hệ thống. |
         | **Kết quả hiển thị** | - Nội dung popup thay đổi về mặt giao diện.<br>- Ứng viên xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên` sau khi xác nhận thêm. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.<br><br>**Trường hợp không có ứng viên nào trong CSDL**: Khi mở dropdown-list để chọn ứng viên trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có ứng viên nào!"** |
-    #### 1.7. Tự động gán người phụ trách ứng viên {#toc-4-1-7}
+    #### 1.10. Tự động gán người phụ trách ứng viên {#toc-4-1-10}
     ??? book "Tự động gán người phụ trách ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
