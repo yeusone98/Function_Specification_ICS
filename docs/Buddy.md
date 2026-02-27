@@ -128,6 +128,10 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên. |
         | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
+
+        ![Danh sách ứng viên - Handler](assets/images/buddy/danh-sach-ung-vien-handler.png){ .image-widget-thumb loading=lazy } ![Popup thêm ứng viên (nhập tay nhưng chưa có mail trên hệ thống)](assets/images/buddy/popup-them-ung-vien-chua-co-mail.png){ .image-widget-thumb loading=lazy } ![Popup thêm ứng viên (nhập tay nhưng đã có mail trên hệ thống)](assets/images/buddy/popup-them-ung-vien-da-co-mail.png){ .image-widget-thumb loading=lazy }
+
+        *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Tùy chọn hiển thị cột trong bảng danh sách ứng viên {#toc-4-1-2}
     ??? book "Tùy chọn hiển thị cột trong bảng danh sách ứng viên"
         | Trường | Nội dung |
