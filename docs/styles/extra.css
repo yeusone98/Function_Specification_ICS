@@ -846,8 +846,8 @@ body {
 
 .md-sidebar--primary .md-nav--primary>.md-nav__title {
   padding: 0.2rem 0.65rem 0.55rem !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
+  font-size: 0.7rem !important;
+  line-height: 1.2 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
   color: var(--serinus-text-3) !important;
