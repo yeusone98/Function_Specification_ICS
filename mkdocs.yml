@@ -1,13 +1,11 @@
-site_name: ICS docs 
+site_name: ""
 theme:
   name: material
   font:
     text: Merriweather Sans
     code: Red Hat Mono
-  logo: assets/images/favicon.png
+  logo: assets/images/pls-logo.svg
   favicon: assets/images/favicon.png
-  features:
-    - navigation.footer
   palette:
     # Dark Mode
     - scheme: slate
@@ -50,7 +48,7 @@ markdown_extensions:
   - pymdownx.details
   - tables
   - toc:
-      permalink: true
+      permalink: false
       toc_depth: 5
 extra:
   admonition:
@@ -58,3 +56,4 @@ extra:
       info: material/book-open-variant
 extra_javascript:
   - scripts/open-toc-book.js
+  - scripts/serinus-layout.js
