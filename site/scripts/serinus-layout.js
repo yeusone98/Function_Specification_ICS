@@ -268,6 +268,136 @@
     });
   }
 
+  function mountImageLightbox() {
+    var content = document.querySelector(".md-content .md-typeset");
+    if (!content) {
+      return;
+    }
+
+    var images = Array.from(content.querySelectorAll("img")).filter(function (image) {
+      var src = image.getAttribute("src") || "";
+      if (!src) {
+        return false;
+      }
+      if (image.classList.contains("twemoji")) {
+        return false;
+      }
+      return !src.startsWith("data:image/svg+xml");
+    });
+
+    if (!images.length) {
+      return;
+    }
+
+    var lightbox = document.querySelector(".md-image-lightbox");
+    var lightboxImage;
+    var lightboxCaption;
+    var lastActiveElement = null;
+
+    if (!lightbox) {
+      lightbox = document.createElement("div");
+      lightbox.className = "md-image-lightbox";
+      lightbox.setAttribute("role", "dialog");
+      lightbox.setAttribute("aria-modal", "true");
+      lightbox.setAttribute("hidden", "hidden");
+
+      var closeButton = document.createElement("button");
+      closeButton.type = "button";
+      closeButton.className = "md-image-lightbox__close";
+      closeButton.setAttribute("aria-label", "Close image preview");
+      closeButton.textContent = "×";
+
+      var figure = document.createElement("figure");
+      figure.className = "md-image-lightbox__figure";
+
+      lightboxImage = document.createElement("img");
+      lightboxImage.className = "md-image-lightbox__img";
+      lightboxImage.alt = "";
+
+      lightboxCaption = document.createElement("figcaption");
+      lightboxCaption.className = "md-image-lightbox__caption";
+
+      figure.appendChild(lightboxImage);
+      figure.appendChild(lightboxCaption);
+      lightbox.appendChild(closeButton);
+      lightbox.appendChild(figure);
+      document.body.appendChild(lightbox);
+
+      function closeLightbox() {
+        lightbox.setAttribute("hidden", "hidden");
+        document.body.classList.remove("md-image-lightbox-open");
+        lightboxImage.removeAttribute("src");
+        lightboxCaption.textContent = "";
+        if (lastActiveElement && typeof lastActiveElement.focus === "function") {
+          lastActiveElement.focus();
+        }
+      }
+
+      closeButton.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !lightbox.hasAttribute("hidden")) {
+          closeLightbox();
+        }
+      });
+    } else {
+      lightboxImage = lightbox.querySelector(".md-image-lightbox__img");
+      lightboxCaption = lightbox.querySelector(".md-image-lightbox__caption");
+    }
+
+    function openLightbox(image) {
+      var source = image.currentSrc || image.getAttribute("src");
+      if (!source) {
+        return;
+      }
+
+      var altText = (image.getAttribute("alt") || "").trim();
+      lastActiveElement = document.activeElement;
+
+      lightboxImage.setAttribute("src", source);
+      lightboxImage.setAttribute("alt", altText || "Image preview");
+      lightboxCaption.textContent = altText;
+      lightboxCaption.hidden = !altText;
+
+      lightbox.removeAttribute("hidden");
+      document.body.classList.add("md-image-lightbox-open");
+    }
+
+    images.forEach(function (image) {
+      if (image.dataset.lightboxBound === "true") {
+        return;
+      }
+
+      image.dataset.lightboxBound = "true";
+      image.classList.add("md-image-zoomable");
+
+      if (!image.hasAttribute("tabindex")) {
+        image.setAttribute("tabindex", "0");
+      }
+
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-label", image.getAttribute("alt") || "Open image preview");
+
+      image.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openLightbox(image);
+      });
+
+      image.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openLightbox(image);
+        }
+      });
+    });
+  }
+
   function buildSectionTree() {
     var container = document.querySelector(".md-content .md-typeset");
     if (!container) {
@@ -766,6 +896,7 @@
   function boot() {
     mountDocumentSwitcher();
     mountSingleThemeToggle();
+    mountImageLightbox();
     mountSectionAwareToc();
   }
 
