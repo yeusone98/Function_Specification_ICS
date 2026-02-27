@@ -709,6 +709,38 @@ body {
   font-weight: 500;
 }
 
+.md-header__option[data-md-component="palette"] > .md-header__button.md-icon:not(.md-single-theme-toggle) {
+  display: none !important;
+}
+
+.md-header__option[data-md-component="palette"] .md-single-theme-toggle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--serinus-link) 32%, var(--serinus-divider));
+  background: color-mix(in srgb, var(--serinus-link) 10%, transparent);
+  color: var(--serinus-link) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  padding: 0;
+}
+
+.md-header__option[data-md-component="palette"] .md-single-theme-toggle svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+
+.md-header__option[data-md-component="palette"] .md-single-theme-toggle:hover,
+.md-header__option[data-md-component="palette"] .md-single-theme-toggle:focus-visible {
+  border-color: var(--serinus-link);
+  background: color-mix(in srgb, var(--serinus-link) 18%, transparent);
+  color: var(--serinus-text-1) !important;
+  outline: none;
+}
+
 .md-document-switch {
   position: relative;
   width: 100%;
