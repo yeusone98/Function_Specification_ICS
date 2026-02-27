@@ -263,6 +263,18 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí. |
         | **Kết quả hiển thị** | - Hệ thống hiển thị thông báo dạng toast với nội dung *"Vị trí mới được thêm thành công!"*<br>- Vị trí mới tạo được thêm vào ngay dòng đầu tiên của **"Danh sách vị trí ứng tuyển"**. |
         | **Trường hợp không có dữ liệu** | **Không có** |
+    #### 2.3. Xem thông tin tổng quan về vị trí tuyển dụng {#toc-4-2-3}
+    ??? book "Xem thông tin tổng quan về vị trí tuyển dụng"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Xem thông tin tổng quan về vị trí tuyển dụng |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem được các insight về vị trí tuyển dụng đã chọn tại **"Danh sách vị trí ứng tuyển"** |
+        | **Giao diện liên quan** |  |
+        | **Luồng thao tác chính** |  |
+        | **Điều kiện** |  |
+        | **Kết quả hiển thị** |  |
+        | **Trường hợp không có dữ liệu** |  |
     #### 2.2. Thiết lập lịch phỏng vấn tuyển dụng {#toc-4-2-2}
     ??? book "Thiết lập lịch phỏng vấn tuyển dụng"
         | Trường | Nội dung |
