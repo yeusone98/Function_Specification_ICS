@@ -25,7 +25,7 @@
 
     <div class="pls-hero__cta">
       <a class="pls-btn pls-btn--primary" href="#giai-phap">Xem bản đồ giải pháp</a>
-      <a class="pls-btn pls-btn--ghost" href="#van-hanh">Xem danh mục giải pháp</a>
+      <a class="pls-btn pls-btn--ghost" href="#doi-tuong">Xem nhóm đội ngũ</a>
     </div>
 
     <div class="pls-metric-row">
@@ -111,59 +111,6 @@
           <li>Quản lý khóa học, bài học và trạng thái điểm danh</li>
           <li>Nhiều dạng bài thực hành: flashcard, nghe nói, điền từ, viết</li>
           <li>Theo dõi hiệu suất học tập theo lớp và theo cá nhân</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="pls-section" id="van-hanh" data-reveal>
-    <header class="pls-section__head">
-      <p class="pls-section__eyebrow">Danh mục giải pháp</p>
-      <h2>Các hệ thống độc lập trong hệ sinh thái</h2>
-    </header>
-
-    <div class="pls-portfolio-grid">
-      <article class="pls-portfolio-card" data-tilt>
-        <p class="pls-portfolio-card__kicker">Giải pháp vận hành đào tạo</p>
-        <h3>Insight Connect System</h3>
-        <p>Hệ thống quản trị nội bộ cho trung tâm đào tạo, bao gồm lớp học, lịch dạy, học viên, giáo viên, tài chính và chất lượng giảng dạy.</p>
-        <ul class="pls-portfolio-list">
-          <li>Phân quyền chi tiết theo vai trò vận hành</li>
-          <li>Đồng bộ dữ liệu hai chiều với ứng dụng học tập</li>
-          <li>Theo dõi chỉ số hiệu quả và chất lượng đào tạo</li>
-        </ul>
-      </article>
-
-      <article class="pls-portfolio-card" data-tilt>
-        <p class="pls-portfolio-card__kicker">Giải pháp tuyển dụng doanh nghiệp</p>
-        <h3>Recruitment & Training Management</h3>
-        <p>Hệ thống quản lý quy trình tuyển dụng và đào tạo nhân sự từ đầu vào ứng viên đến theo dõi kết quả phỏng vấn và đào tạo thực tế.</p>
-        <ul class="pls-portfolio-list">
-          <li>Quản lý vị trí tuyển dụng, lịch phỏng vấn và đánh giá</li>
-          <li>Phân vai trò rõ ràng cho người phụ trách và người đào tạo</li>
-          <li>Theo dõi xuyên suốt trạng thái ứng viên</li>
-        </ul>
-      </article>
-
-      <article class="pls-portfolio-card" data-tilt>
-        <p class="pls-portfolio-card__kicker">Nền tảng học tiếng Nhật</p>
-        <h3>Japanese Learning Platform</h3>
-        <p>Ứng dụng học tiếng Nhật gồm phiên bản mở và phiên bản học viên trung tâm, tập trung vào lộ trình học, luyện tập và theo dõi tiến độ.</p>
-        <ul class="pls-portfolio-list">
-          <li>Học từ vựng, ngữ pháp, hán tự và kỹ năng</li>
-          <li>Bài tập, kiểm tra, phản hồi và lịch sử học tập</li>
-          <li>Mô hình bản miễn phí và bản nâng cao</li>
-        </ul>
-      </article>
-
-      <article class="pls-portfolio-card" data-tilt>
-        <p class="pls-portfolio-card__kicker">Nền tảng học tiếng Trung</p>
-        <h3>Chinese Learning Platform</h3>
-        <p>Ứng dụng học tiếng Trung dành cho học viên trung tâm, nhấn mạnh bài học theo buổi, luyện tập đa dạng và đo lường hiệu quả học tập.</p>
-        <ul class="pls-portfolio-list">
-          <li>Theo dõi điểm danh, bài tập và kiểm tra theo lớp</li>
-          <li>Hỗ trợ học theo flashcard, luyện nghe nói và viết</li>
-          <li>Hiển thị tổng quan tiến độ học trực quan</li>
         </ul>
       </article>
     </div>
