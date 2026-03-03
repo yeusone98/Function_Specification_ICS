@@ -122,9 +122,9 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Hiển thị bảng danh sách các ứng viên cho người phụ trách |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
-        | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Bảng **Danh sách ứng viên**.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Ngày phỏng vấn**. |
-        | **Luồng thao tác chính** | **Xem danh sách:**<br>1. Người phụ trách chọn menu **Ứng Viên**.<br>2. Hệ thống tải dữ liệu của **toàn bộ ứng viên** trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br>**Lọc ứng viên:**<br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- **Vị trí**: chọn nhiều vị trí từ dropdown.<br>&emsp;- **Trạng thái**: chọn nhiều giá trị từ danh sách trạng thái (`Mới`, `Passed`, `Đã phỏng vấn`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`).<br>&emsp;- **Người phụ trách**: chọn nhiều người phụ trách (logic OR trong bộ lọc này).<br>&emsp;- **Ngày phỏng vấn**: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ `(03) Vị trí`. |
+        | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Người đào tạo** và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
+        | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Bảng **Danh sách ứng viên**.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Người đào tạo**, **Ngày phỏng vấn**. |
+        | **Luồng thao tác chính** | **Xem danh sách:**<br>1. Người phụ trách chọn menu **Ứng Viên**.<br>2. Hệ thống tải dữ liệu của **toàn bộ ứng viên** trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br>**Lọc ứng viên:**<br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- **Vị trí**: chọn nhiều vị trí từ dropdown.<br>&emsp;- **Trạng thái**: chọn nhiều giá trị từ danh sách trạng thái (`Mới`, `Passed`, `Đã phỏng vấn`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`).<br>&emsp;- **Người đào tạo**: chọn nhiều người đào tạo (logic AND vì một trainee có thể có nhiều trainer).<br>&emsp;- **Người phụ trách**: chọn nhiều người phụ trách (logic OR trong bộ lọc này vì hiện tại mỗi user chỉ do một người phụ trách chịu trách nhiệm).<br>&emsp;- **Ngày phỏng vấn**: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ `(03) Vị trí`. |
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên. |
         | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
@@ -269,33 +269,33 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Xem thông tin tổng quan về vị trí tuyển dụng |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem được các insight về vị trí tuyển dụng đã chọn tại **"Danh sách vị trí ứng tuyển"** |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
-    #### 2.2. Thiết lập lịch phỏng vấn tuyển dụng {#toc-4-2-2}
-    ??? book "Thiết lập lịch phỏng vấn tuyển dụng"
+        | **Mô tả** | Chức năng cho phép người phụ trách xem được các thống kê về vị trí tuyển dụng đã chọn tại **"Danh sách vị trí ứng tuyển"** |
+        | **Giao diện liên quan** | 1. Menu **“Quản lý vị trí”**.<br>2. Màn hình **“Danh sách vị trí ứng tuyển”** hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ **“Danh sách vị trí ứng tuyển”**, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình **Tổng quan vị trí** của submenu Tổng quan. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn một vị trí muốn thao tác trên bảng **“Danh sách vị trí ứng tuyển”** của ở menu **"Quản lý vị trí"**.<br>2. Hệ thống hiển thị thêm một sidebar mới, sidebar này sẽ chứa nội dung của sub-menu.<br>3. Người phụ trách cần chọn vào submenu *Tổng quan*.<br>4. Hệ thống hiển thị màn hình *Tổng quan vị trí*, trên màn hình này bao gồm các nội dung sau:<br>&emsp;+ Thông tin vị trí: bao gồm tên vị trí, icon của vị trí (người phụ trách có thể thay đổi tên và icon của vị trí bằng cách nhấn vào nút `✏️`. )<br>&emsp;+ Người phụ trách được phép thay đổi trạng thái của vị trí này bằng cách nhấn nút toggle_on-off ở bên phải màn hình<br>&emsp;+ Các biểu đồ `Số lượng CV`, `Số lượng phỏng vấn`, `Pass phỏng vấn`, `Training`, `Thử việc` sẽ mặc định hiển thị toàn bộ dữ liệu về vị trí tính từ lúc tạo vị trí, người dùng có thể tùy chọn thay đổi thời gian xem biểu đồ bằng cách tùy chỉnh thời gian ở nút `📅` ở góc trên cùng bên phải của màn hình này.<br>&emsp;+ Người phụ trách có thể thực hiện thao tác xóa bằng cách chọn vào nút `Xóa vị trí` và xác nhận thao tác trên popup cảnh báo. |
+        | **Điều kiện** | Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí. |
+        | **Kết quả hiển thị** | **Trường hợp xem thông tin của vị trí**: Hiển thị giao diện đầy đủ thông tin về vị trí, các nút đúng với mô tả.<br>**Trường hợp xóa vị trí**: Hệ thống điều hướng người phụ trách về màn hình chứa **"Danh sách vị trí ứng tuyển"** và thông báo dạng toast "Vị trí {`Tên vị trí`} đã được xóa!". |
+        | **Trường hợp không có dữ liệu** | **Trường hợp vị trí chưa từng ghi nhận bất kỳ dữ liệu nào**: Hệ thống hiển thị thông tin tổng quan mô tả vị trí, các biểu đồ vẫn được hiển thị nhưng sẽ hiển thị dữ liệu = 0, biểu đồ đường sẽ nằm trùng với trục X (thể hiện không có dữ liệu gì). |
+    #### 2.3. Thiết lập mô tả vị trí tuyển dụng (JD) {#toc-4-2-3}
+    ??? book "Thiết lập mô tả vị trí tuyển dụng (JD)"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập lịch phỏng vấn tuyển dụng |
+        | **Tên chức năng** | Thiết lập mô tả vị trí tuyển dụng (JD) |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách thiết lập lịch phỏng vấn cho vị trí đang quản lý. Người phụ trách có thể chọn ngày và khung giờ trong tương lai để thêm lịch phỏng vấn. Hệ thống hỗ trợ hiển thị trực quan: <br> - Ngày trong tương lai: ô màu xanh lá, có dấu cộng, cho phép thao tác. <br> - Ngày trong quá khứ: ô màu xanh dương, không cho phép thao tác. <br> - Ngày hiện tại: được highlight bằng nền đen, chữ trắng và viền tròn. Khi chọn một khung giờ, hệ thống mở popup nhập chi tiết lịch phỏng vấn. |
-        | **Giao diện liên quan** | - Menu **“Vị trí”**.<br>- Menu phụ **“Tổng quan”**.<br>- Màn hình **“Tổng quan vị trí”** → khu vực **“Lịch phỏng vấn vị trí”** với bảng **“Thiết lập lịch phỏng vấn”**.<br>- Popup **“Thêm lịch phỏng vấn”**. |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập vào hệ thống.<br>2. Vào menu **“Vị trí”** → menu phụ **“Tổng quan”**.<br>3. Hệ thống hiển thị màn hình **“Tổng quan vị trí”** với bảng **“Thiết lập lịch phỏng vấn”**.<br>4. Người phụ trách chọn tuần cần hiển thị để xem các ngày và khung giờ.<br>5. Tại bảng:<br>&emsp;- Ngày trong tương lai: ô xanh lá + dấu cộng → có thể click.<br>&emsp;- Ngày hiện tại: highlight đen/trắng, viền tròn.<br>&emsp;- Ngày quá khứ: ô xanh dương, không click được.<br>6. Người phụ trách click vào ô xanh lá (khung giờ trong tương lai).<br>7. Hệ thống hiển thị popup **“Thêm lịch phỏng vấn”** với thông tin sẵn có:<br>&emsp;- **Vị trí** (tự động điền).<br>&emsp;- **Thời gian phỏng vấn** (tương ứng ô được chọn).<br>8. Người phụ trách nhập/điều chỉnh **Trọng số người tham gia phỏng vấn** (giá trị > 0).<br>9. Click **“Thêm lịch phỏng vấn”**.<br>10. Hệ thống lưu dữ liệu và hiển thị thông báo **“Cập nhật dữ liệu thành công !”**.<br>11. Lịch mới được hiển thị trong bảng. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý lịch phỏng vấn.<br>- Chỉ được thêm lịch tại các ngày trong tương lai.<br>- Trọng số người tham gia phỏng vấn > 0. |
-        | **Kết quả hiển thị** | - Lịch phỏng vấn mới xuất hiện tại khung giờ đã chọn.<br>- Popup đóng sau khi lưu thành công.<br>- Hiển thị thông báo xác nhận *“Cập nhật dữ liệu thành công !”*. |
-        | **Trường hợp không có dữ liệu** | - Nếu chưa có lịch phỏng vấn nào trên bảng, toàn bộ các ô trên bảng đều .<br>- Các ô trong tương lai chưa thiết lập lịch vẫn hiển thị dấu cộng để thêm mới.<br>- Các ô trong quá khứ hiển thị màu xanh dương, không thao tác. |
-    #### 2.3. Thiết lập tiêu chuẩn ứng viên cho vị trí tuyển dụng {#toc-4-2-3}
+        | **Mô tả** | Chức năng này cho phép người phụ trách tạo các profile cho mô tả công việc, mỗi profile sẽ là một biến thể của mô tả công việc dành cho vị trí đang được chọn. Người phụ trách có toàn quyền tùy chỉnh JD cho vị trí tuyển dụng đang có trong hệ thống. Các profile này sẽ được lưu và hiển thị ở phần **Danh sách mô tả** khi người phụ trách truy cập vào submenu *Mô Tả (JD)*. |
+        | **Giao diện liên quan** | 1. Menu **“Quản lý vị trí”**.<br>2. Màn hình **“Danh sách vị trí ứng tuyển”** hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ **“Danh sách vị trí ứng tuyển”**, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình chứa *Danh sách mô tả* ở submenu *Mô Tả (JD)*. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn một vị trí tuyển dụng từ **"Danh sách vị trí ứng tuyển"**.<br>2. Hệ thống điều hướng sang màn hình chứa submenu và mặc định trỏ vào submenu *Tổng Quan*.<br>3. Người phụ trách chuyển sang submenu *Mô Tả (JD)*.<br>4. Để thiết lập một profile mô tả (JD) mới, người phụ trách cần đặt tên cho profile và phải nhấn [ENTER] để lưu.<br>5. Sau khi hệ thống đã lưu profile mới, hệ thống sẽ hiển thị tên của profile JD này lên giữa màn hình với tên của profile được in đậm ở phía trên cùng của màn hình, bên dưới tên của profile này sẽ bao gồm 2 phần:<br>&emsp;- *Nhập mô tả*: Người phụ trách nhập mô tả vào phần này, khi nhập xong và nhấn [ENTER] thì hệ thống sẽ thực hiện việc lưu dữ liệu và thông báo dạng toast cho người dùng với nội dung *"Đã lưu thay đổi cho +  {tên của profile đang thiết lập}"*  <br>&emsp;- *Nhập danh mục mới*: hệ thống quy định các danh mục để người phụ trách dễ dàng quản lý nội dung của JD, khi tạo danh mục mới, người phụ trách phải nhập tên của danh mục vào và nhấn [ENTER] để hệ thống thực hiện lưu. Sau khi lưu, hệ thống cập nhật lại danh mục đó để hiển thị ngay trên màn hình của người phụ trách (không reload).<br>6. Các thao tác với danh mục chứa nội dung của JD:<br>&emsp;- Thêm mô tả danh mục và các nội dung chi tiết bên trong<br>&emsp;- Xóa danh mục và xóa nội dung chi tiết bên trong (Khi xóa thì phải xác nhận thông qua popup cảnh báo)<br>&emsp;- Sắp xếp lại thứ tự của danh mục và sắp xếp nội dung của từng danh mục<br>7. Người phụ trách có thể bật nhiều mô tả công việc cùng lúc để tùy biến cách sử dụng (ví dụ: có thể tạo vị trí Data và tạo nhiều JD cho 6 trung tâm: Anh, Pháp, Đức, Trung, Nhật, Hàn).|
+        | **Điều kiện** | Người phụ trách đã đăng nhập và truy cập vào thông tin vị trí. |
+        | **Kết quả hiển thị** | - Khi hoàn tất việc thiết lập một JD tiêu chuẩn, người phụ trách sẽ xem được nội dung của JD bao gồm: tên. mô tả, danh mục, mô tả của danh mục, các tiêu chí con trong từng danh mục.<br>- Trường hợp có nhiều JD, người phụ trách sẽ xem được nội dung tương ứng khi chọn vào JD đó.  |
+        | **Trường hợp không có dữ liệu** | **Trường hợp đã tạo JD nhưng không xem được**: Cần có thông báo lỗi khi tải dữ liệu để người dùng report đến IT.<br>**Trường hợp vị trí tuyển dụng chưa có profile JD nào được thiết lập**: Hệ thống hiển thị màn hình trống với biểu tượng "Không có dữ liệu!"|
+    #### 2.4. Thiết lập tiêu chuẩn ứng viên {#toc-4-2-4}
     ??? book "Thiết lập tiêu chuẩn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Thiết lập tiêu chuẩn ứng viên |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách quản lý các tiêu chuẩn đánh giá ứng viên cho từng vị trí tuyển dụng. Các tiêu chuẩn được hiển thị dưới dạng **thẻ** (card) có thể mở rộng/thu gọn để xem chi tiết. Bên trong mỗi thẻ là danh sách các mục đánh giá, nội dung này thay đổi tùy theo vị trí. Người phụ trách có thể thêm, sửa, xóa cả **mục đánh giá** lẫn **thẻ tiêu chuẩn**. Ngoài ra, có thể tạo thẻ mới bằng cách nhập tên tiêu chuẩn vào ô **“Nhập Danh Mục Mới”** và nhấn icon **(+)**. |
-        | **Giao diện liên quan** | - Menu chính: **“Vị trí”**.<br>- Menu phụ: **“Phỏng vấn”**.<br>- Sub-menu: **“Tiêu chuẩn ứng viên”**.<br>- Màn hình: **“Tiêu chuẩn ứng viên”**, hiển thị danh sách các thẻ tiêu chuẩn. |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập vào hệ thống.<br>2. Truy cập **Menu “Vị trí” → Menu phụ “Phỏng vấn” → Sub-menu “Tiêu chuẩn ứng viên”**.<br>3. Hệ thống hiển thị màn hình **“Tiêu chuẩn ứng viên”** với danh sách thẻ.<br>4. Người phụ trách có thể:<br>&emsp;- Nhấn vào một thẻ để mở rộng/thu gọn chi tiết.<br>&emsp;- Thêm **mục đánh giá** trong thẻ (nhập nội dung, bấm lưu).<br>&emsp;- Sửa nội dung mục đánh giá có sẵn.<br>&emsp;- Xóa mục đánh giá khi không cần.<br>&emsp;- Thêm **thẻ tiêu chuẩn mới** bằng ô **“Nhập Danh Mục Mới”** và nhấn **(+)**.<br>&emsp;- Sửa tên thẻ hoặc xóa thẻ khi cần.<br>5. Sau khi thao tác, hệ thống cập nhật và hiển thị dữ liệu mới. |
+        | **Mô tả** | Chức năng giúp người phụ trách thiết lập các tiêu chuẩn để người phỏng vấn có thể đánh giá ứng viên trong quá trình phỏng vấn. Các tiêu chuẩn phỏng vấn mà người phụ trách được phép thiết lập ở chức năng / màn hình này là [`action_type : check (action kiểm tra)`]. |
+        | **Giao diện liên quan** | - Menu **“Quản Lý Vị trí”**.<br>- Submenu: **“Phỏng vấn”**, bao gồm các tab: **Tiêu chuẩn ứng viên**, **Các câu hỏi thông tin**, **Các vòng phỏng vấn**, **Thiết lập K.tra đầu vào**.<br>- Tab **“Tiêu chuẩn ứng viên”**. |
+        | **Luồng thao tác chính** |  |
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại trong hệ thống.<br>- Khi thêm mới thẻ: tên tiêu chuẩn không được để trống.<br>- Khi thêm/sửa mục: nội dung mục đánh giá phải hợp lệ (không trống). |
         | **Kết quả hiển thị** | - Danh sách thẻ tiêu chuẩn được hiển thị và có thể thao tác mở rộng/thu gọn.<br>- Sau khi thêm/sửa/xóa, dữ liệu được cập nhật ngay trên màn hình.<br>- Thông báo thành công hiển thị khi thao tác hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có thẻ tiêu chuẩn nào: hiển thị ô **“Nhập Danh Mục Mới”** để thêm.<br>- Nếu thẻ chưa có mục đánh giá: hiển thị thẻ rỗng với nút **“Thêm mục đánh giá”**.<br>- Khi xóa hết thẻ: màn hình trở về trạng thái trống kèm hướng dẫn thêm mới. |
@@ -566,7 +566,89 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người được đào tạo có tài khoản hợp lệ và đang trong quá trình đào tạo. |
           | **Kết quả hiển thị** | - Người được đào tạo thấy danh sách buổi đào tạo được mở. <br>- Có thể xem chi tiết tiêu chí và tải tài liệu. |
           | **Trường hợp không có dữ liệu** | - Nếu chưa được gán quy trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu chưa có buổi đào tạo nào hiển thị: danh sách rỗng. |
-    #### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
+---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    📸 Hình ảnh minh họa
+
+    > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-1/`
+
+            !!! warning "⚠️ Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+
+        *Bấm vào từng ảnh để xem chi tiết.*
+
+
+#### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
     ??? book "Xem mục tiêu (đầu ra) đào tạo (Người được đào tạo)"
           | Trường | Nội dung |
           | ------ | -------- |
