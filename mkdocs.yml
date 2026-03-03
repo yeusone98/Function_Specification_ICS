@@ -1,4 +1,12 @@
-site_name: ""
+site_name: "Poro Language Space"
+nav:
+  - Trang Chủ: index.md
+  - Tài Liệu:
+      - ICS: ics.md
+      - Buddy: Buddy.md
+      - App Sakumi: appsakumi.md
+      - App Đắc Nhân: appdacnhan.md
+      - Test Plan: testplan.md
 theme:
   name: material
   font:
@@ -24,6 +32,7 @@ theme:
       accent: amber
 extra_css:
   - styles/extra.css
+  - styles/home.css
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
@@ -57,3 +66,4 @@ extra:
 extra_javascript:
   - scripts/open-toc-book.js
   - scripts/serinus-layout.js
+  - scripts/home.js

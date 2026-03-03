@@ -152,6 +152,226 @@
     }
   }
 
+  function getSiteLinks() {
+    var logo = document.querySelector(".md-header__button.md-logo");
+    var baseUrl;
+
+    try {
+      baseUrl = new URL(logo ? logo.getAttribute("href") || "." : ".", window.location.href);
+    } catch (_error) {
+      baseUrl = new URL(".", window.location.href);
+    }
+
+    return {
+      home: new URL(".", baseUrl).href,
+      ics: new URL("ics/", baseUrl).href,
+      buddy: new URL("Buddy/", baseUrl).href,
+      sakumi: new URL("appsakumi/", baseUrl).href,
+      dacnhan: new URL("appdacnhan/", baseUrl).href,
+      testplan: new URL("testplan/", baseUrl).href,
+    };
+  }
+
+  function mountMegaNavbar() {
+    if (document.querySelector(".md-header__mega")) {
+      return;
+    }
+
+    var headerInner = document.querySelector(".md-header__inner");
+    if (!headerInner) {
+      return;
+    }
+
+    var palette = headerInner.querySelector("[data-md-component='palette']");
+    var links = getSiteLinks();
+    var currentPath = normalizePathname(window.location.pathname);
+    var homePath = normalizePathname(new URL(links.home).pathname);
+
+    var wrapper = document.createElement("div");
+    wrapper.className = "md-header__option md-header__mega";
+
+    var nav = document.createElement("nav");
+    nav.className = "md-mega-nav";
+    nav.setAttribute("aria-label", "Main navigation");
+
+    var homeLink = document.createElement("a");
+    homeLink.className = "md-mega-nav__item md-mega-nav__item--home";
+    if (currentPath === homePath) {
+      homeLink.className += " md-mega-nav__item--active";
+    }
+    homeLink.href = links.home;
+    homeLink.textContent = "Trang chủ";
+    nav.appendChild(homeLink);
+
+    var productTrigger = document.createElement("button");
+    productTrigger.type = "button";
+    productTrigger.className = "md-mega-nav__item md-mega-nav__item--toggle";
+    productTrigger.setAttribute("aria-expanded", "false");
+    productTrigger.setAttribute("aria-haspopup", "dialog");
+    productTrigger.innerHTML =
+      '<span class="md-mega-nav__text">Tài Liệu</span><span class="md-mega-nav__caret" aria-hidden="true"></span>';
+    nav.appendChild(productTrigger);
+
+    var panel = document.createElement("section");
+    panel.className = "md-mega-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "Tài Liệu menu");
+    panel.setAttribute("hidden", "hidden");
+
+    var panelBody = document.createElement("div");
+    panelBody.className = "md-mega-panel__body";
+
+    var leftSection = document.createElement("div");
+    leftSection.className = "md-mega-panel__section";
+    leftSection.innerHTML = '<h3 class="md-mega-panel__heading">Tài liệu theo trung tâm</h3>';
+
+    var leftGrid = document.createElement("div");
+    leftGrid.className = "md-mega-panel__grid";
+
+    [
+      {
+        icon: "ICS",
+        title: "ICS",
+        desc: "Đặc tả quy trình vận hành và quản lý đào tạo nội bộ.",
+        href: links.ics,
+      },
+      {
+        icon: "BDY",
+        title: "Buddy",
+        desc: "Đặc tả chức năng cho hệ thống tuyển dụng Buddy.",
+        href: links.buddy,
+      },
+      {
+        icon: "SKM",
+        title: "App Sakumi",
+        desc: "Tài liệu chức năng ứng dụng học tập Sakumi.",
+        href: links.sakumi,
+      },
+      {
+        icon: "DNH",
+        title: "App Đắc Nhân",
+        desc: "Tài liệu chức năng ứng dụng học tập Đắc Nhân.",
+        href: links.dacnhan,
+      },
+      {
+        icon: "TPL",
+        title: "Test Plan",
+        desc: "Danh sách kịch bản kiểm thử và checklist chất lượng.",
+        href: links.testplan,
+      },
+    ].forEach(function (item) {
+      var feature = document.createElement("a");
+      feature.className = "md-mega-feature";
+      feature.href = item.href;
+
+      feature.innerHTML =
+        '<span class="md-mega-feature__icon">' +
+        item.icon +
+        "</span>" +
+        '<span class="md-mega-feature__body">' +
+        '<span class="md-mega-feature__title">' +
+        item.title +
+        "</span>" +
+        '<span class="md-mega-feature__desc">' +
+        item.desc +
+        "</span>" +
+        "</span>";
+
+      leftGrid.appendChild(feature);
+    });
+
+    leftSection.appendChild(leftGrid);
+    panelBody.classList.add("md-mega-panel__body--single");
+    panelBody.appendChild(leftSection);
+    panel.appendChild(panelBody);
+
+    wrapper.appendChild(nav);
+    wrapper.appendChild(panel);
+
+    function setOpen(open) {
+      wrapper.classList.toggle("is-open", open);
+      productTrigger.setAttribute("aria-expanded", String(open));
+      if (open) {
+        panel.removeAttribute("hidden");
+      } else {
+        panel.setAttribute("hidden", "hidden");
+      }
+    }
+
+    var closeTimer = 0;
+    function cancelClose() {
+      if (closeTimer) {
+        window.clearTimeout(closeTimer);
+        closeTimer = 0;
+      }
+    }
+
+    function scheduleClose() {
+      cancelClose();
+      closeTimer = window.setTimeout(function () {
+        setOpen(false);
+      }, 220);
+    }
+
+    productTrigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      cancelClose();
+      setOpen(!wrapper.classList.contains("is-open"));
+    });
+
+    productTrigger.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(min-width: 76.25em)").matches) {
+        cancelClose();
+        setOpen(true);
+      }
+    });
+
+    productTrigger.addEventListener("mouseleave", function () {
+      if (window.matchMedia("(min-width: 76.25em)").matches) {
+        scheduleClose();
+      }
+    });
+
+    panel.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(min-width: 76.25em)").matches) {
+        cancelClose();
+      }
+    });
+
+    panel.addEventListener("mouseleave", function (event) {
+      if (!window.matchMedia("(min-width: 76.25em)").matches) {
+        return;
+      }
+
+      var next = event.relatedTarget;
+      if (next && wrapper.contains(next)) {
+        return;
+      }
+      scheduleClose();
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!wrapper.contains(event.target)) {
+        cancelClose();
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    if (palette && palette.parentElement === headerInner) {
+      headerInner.insertBefore(wrapper, palette);
+    } else {
+      headerInner.appendChild(wrapper);
+    }
+
+    document.body.classList.add("md-has-mega-nav");
+  }
+
   function mountSingleThemeToggle() {
     var paletteForm = document.querySelector(".md-header [data-md-component='palette']");
     if (!paletteForm) {
@@ -894,10 +1114,14 @@
   }
 
   function boot() {
-    mountDocumentSwitcher();
+    mountMegaNavbar();
     mountSingleThemeToggle();
     mountImageLightbox();
-    mountSectionAwareToc();
+
+    // Keep landing page as a standalone experience without section paging behavior.
+    if (!document.querySelector(".pls-home-page")) {
+      mountSectionAwareToc();
+    }
   }
 
   if (document.readyState === "loading") {
