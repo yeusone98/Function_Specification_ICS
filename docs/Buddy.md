@@ -63,18 +63,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện**                   | - Người dùng có tài khoản trong hệ thống. <br>- Tài khoản đang không bị vô hiệu hóa. <br>- Tên đăng nhập và mật khẩu nhập chính xác. |
         | **Kết quả hiển thị**            | - Đăng nhập thành công: hệ thống hiển thị giao diện chính ứng với phân quyền cao nhất. <br>- Đăng nhập thất bại: hiển thị thông báo lỗi (ví dụ: *“Sai tài khoản hoặc mật khẩu”*). |
         | **Trường hợp không có dữ liệu** | - Nếu tài khoản không tồn tại: hiển thị thông báo *“Tài khoản không tồn tại trong hệ thống”*. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/3-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.2. Cập nhật tài khoản {#toc-3-1-2}
     ??? book "Cập nhật tài khoản"
         | Trường                          | Nội dung |
@@ -134,26 +122,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Hiển thị bảng danh sách các ứng viên cho người phụ trách |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
-        | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Bảng **Danh sách ứng viên**.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Ngày phỏng vấn**. |
-        | **Luồng thao tác chính** | **Xem danh sách:**<br>1. Người phụ trách chọn menu **Ứng Viên**.<br>2. Hệ thống tải dữ liệu của **toàn bộ ứng viên** trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br>**Lọc ứng viên:**<br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- **Vị trí**: chọn nhiều vị trí từ dropdown.<br>&emsp;- **Trạng thái**: chọn nhiều giá trị từ danh sách trạng thái (`Mới`, `Passed`, `Đã phỏng vấn`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`).<br>&emsp;- **Người phụ trách**: chọn nhiều người phụ trách (logic OR trong bộ lọc này).<br>&emsp;- **Ngày phỏng vấn**: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ `(03) Vị trí`. |
+        | **Mô tả** | Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về **tất cả ứng viên trong hệ thống** tại bảng **Danh sách ứng viên**.<br>2. Lọc danh sách ứng viên theo các điều kiện: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Người đào tạo** và **Ngày phỏng vấn**.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây. |
+        | **Giao diện liên quan** | 1. Trang **Danh sách ứng viên** (truy cập từ menu "Ứng Viên").<br>2. Bảng **Danh sách ứng viên**.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: **Vị trí**, **Trạng thái**, **Người phụ trách**, **Người đào tạo**, **Ngày phỏng vấn**. |
+        | **Luồng thao tác chính** | **Xem danh sách:**<br>1. Người phụ trách chọn menu **Ứng Viên**.<br>2. Hệ thống tải dữ liệu của **toàn bộ ứng viên** trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br>**Lọc ứng viên:**<br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- **Vị trí**: chọn nhiều vị trí từ dropdown.<br>&emsp;- **Trạng thái**: chọn nhiều giá trị từ danh sách trạng thái (`Mới`, `Passed`, `Đã phỏng vấn`, `Đang phỏng vấn`, `HR xác nhận`, `Offered`, `Failed`, `Dropped`, `Rejected`, `Chưa phỏng vấn`).<br>&emsp;- **Người đào tạo**: chọn nhiều người đào tạo (logic AND vì một trainee có thể có nhiều trainer).<br>&emsp;- **Người phụ trách**: chọn nhiều người phụ trách (logic OR trong bộ lọc này vì hiện tại mỗi user chỉ do một người phụ trách chịu trách nhiệm).<br>&emsp;- **Ngày phỏng vấn**: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ `(03) Vị trí`. |
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên. |
         | **Trường hợp không có dữ liệu** | - Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-1/`
-        
-        ![Abc](assets/images/buddy/4-1-1/abc.png){ .image-widget-thumb loading=lazy }
-        ![Def](assets/images/buddy/4-1-1/def.png){ .image-widget-thumb loading=lazy }
-        ![Popup Them Ung Vien Da Co Mail](assets/images/buddy/4-1-1/popup-them-ung-vien-da-co-mail.png){ .image-widget-thumb loading=lazy }
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-    
     #### 1.2. Tùy chọn hiển thị cột trong bảng danh sách ứng viên {#toc-4-1-2}
     ??? book "Tùy chọn hiển thị cột trong bảng danh sách ứng viên"
         | Trường | Nội dung |
@@ -166,19 +140,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập hợp lệ.<br>2. Trang **Danh sách ứng viên** đã tải được chọn. |
         | **Kết quả hiển thị** | - Bảng chỉ hiển thị các cột đã được chọn.<br>- Các cột không được chọn sẽ không hiển thị.<br>- Cấu hình được lưu riêng theo từng tài khoản. |
         | **Trường hợp không có dữ liệu** | **Nếu không có ứng viên**: Bảng hiển thị thông báo “Bảng dữ liệu trống!” kèm icon thùng rỗng. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.3. Sắp xếp thứ tự ưu tiên theo từng cột {#toc-4-1-3}
     ??? book "Sắp xếp thứ tự ưu tiên theo từng cột"
         | Trường | Nội dung |
@@ -186,24 +147,11 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Tên chức năng** | Sắp xếp thứ tự ưu tiên theo từng cột |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Người phụ trách có thể sắp xếp thứ tự ưu tiên hiển thị theo từng cột bằng cách nhấn vào biểu tượng `☰` bên phải tiêu đề cột. Hệ thống hiển thị dropdown-list “Theo thứ tự ưu tiên” chứa nội dung tương ứng với cột muốn sắp xếp. Người phụ trách có thể kéo thả các item để sắp xếp lại thứ tự hoặc nhấn nút `⟳` để reset về mặc định. |
-        | **Giao diện liên quan** | 1. Cột được hiển thị trên bảng (các cột mà người phụ trách đã chọn khi thực hiện thao tác ở chức năng <a href="/Buddy/#toc-4-1-2">tùy chọn cột muốn xem</a> ).<br>2. Biểu tượng `☰` bên phải tiêu đề cột.<br>3. Dropdown-list “Theo thứ tự ưu tiên”.<br>4. Nút `⟳` reset thứ tự mặc định. |
+        | **Giao diện liên quan** | 1. Cột được hiển thị trên bảng (các cột mà người phụ trách đã chọn khi thực hiện thao tác ở chức năng tùy chọn cột muốn xem).<br>2. Biểu tượng `☰` bên phải tiêu đề cột.<br>3. Dropdown-list “Theo thứ tự ưu tiên”.<br>4. Nút `⟳` reset thứ tự mặc định. |
         | **Luồng thao tác chính** | 1. Người phụ trách nhấn vào biểu tượng `☰` tại cột muốn sắp xếp.<br>2. Hệ thống hiển thị dropdown-list “Theo thứ tự ưu tiên” với nội dung tương ứng cho từng cột.<br>3. Người phụ trách kéo thả các item để thay đổi thứ tự ưu tiên.<br>4. Hệ thống áp dụng thứ tự đã sắp xếp.<br>5. Người phụ trách có thể nhấn `⟳` để reset về thứ tự mặc định. |
         | **Điều kiện** | 1. Cột *Vị trí phỏng vấn* đang được hiển thị.<br>2. Có ít nhất một vị trí đang có đơn ứng tuyển. |
         | **Kết quả hiển thị** | - Danh sách ứng viên được sắp xếp theo thứ tự ưu tiên đã thiết lập.<br>- Có thể reset về thứ tự mặc định bằng nút `⟳`. |
         | **Trường hợp không có dữ liệu** | **Nếu không có vị trí có đơn ứng tuyển**: Không hiển thị item trong dropdown-list. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-3/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.4. Cơ chế sắp xếp theo nhiều cột đã chọn {#toc-4-1-4}
     ??? book "Cơ chế sắp xếp theo nhiều cột đã chọn"
         | Trường | Nội dung |
@@ -216,19 +164,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Có ít nhất một cột được chọn hiển thị.<br>2. Các cột được chọn có hỗ trợ sắp xếp (trừ cột Đào tạo). |
         | **Kết quả hiển thị** | - Danh sách ứng viên được sắp xếp theo thứ tự ưu tiên các cột đã chọn.<br>- Có thể chọn tối đa 10 cột và sắp xếp tối đa 9 cột. |
         | **Trường hợp không có dữ liệu** | **Nếu không có dữ liệu ứng viên**: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-4/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.5. Tìm kiếm ứng viên theo ký tự {#toc-4-1-5}
     ??? book "Tìm kiếm ứng viên theo ký tự"
         | Trường | Nội dung |
@@ -241,19 +176,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** chỉ hiển thị những ứng viên có **Họ và Tên** chứa chuỗi ký tự đã nhập.<br>- Kết quả cập nhật tức thời khi thay đổi ký tự.<br>- Khi ô tìm kiếm trống, hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
         | **Trường hợp không có dữ liệu** | - Nếu không có kết quả phù hợp với chuỗi ký tự nhập: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-5/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-5/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.6. Quản lý thông tin chi tiết của ứng viên {#toc-4-1-6}
     ??? book "Quản lý thông tin chi tiết của ứng viên"
         | Trường | Nội dung |
@@ -266,19 +188,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống và được nhìn thấy trên bảng danh sách ứng viên. |
         | **Kết quả hiển thị** | - Hiển thị toàn bộ thông tin về ứng viên mà hệ thống ghi nhận được.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo dạng toast với nội dung *"Cập nhật dữ liệu thành công!"*. |
         | **Trường hợp không có dữ liệu** | Item không có thông tin bên trong sẽ hiển thị hint *`Nhập thêm nội dung`*.  |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-6/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-6/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.7. Thêm ứng viên mới {#toc-4-1-7}
     ??? book "Thêm ứng viên mới"
         | Trường | Nội dung |
@@ -291,19 +200,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên không tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**. |
         | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.  |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-7/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-7/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.8. Tạo đơn ứng tuyển cho ứng viên đã từng apply {#toc-4-1-8}
     ??? book "Tạo đơn ứng tuyển cho ứng viên đã từng apply"
         | Trường | Nội dung |
@@ -316,19 +212,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên đã tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**.<br>- Người phụ trách nhấn nút **"Xác nhận"**. |
         | **Kết quả hiển thị** | Ứng viên xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.<br><br>**Trường hợp ứng viên có đơn ứng tuyển chưa được hoàn thành**: hệ thống sẽ hiển thị popup thông báo cho người dùng rằng ứng viên này đang có đơn ứng tuyển chưa hoàn thành và cung cấp đường dẫn đến đơn ứng tuyển đó, người phụ trách cần thực hiện đánh giá đơn ứng tuyển đó hoặc xóa đơn ứng tuyển để hệ thống có thể tiếp nhận đơn ứng tuyển mới của ứng viên. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-8/`
-        
-        !!! warning "⚠️ Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-1-8/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.9. Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên {#toc-4-1-9}
     ??? book "Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên"
         | Trường | Nội dung |
@@ -341,19 +224,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Người phụ trách tick vào tickbox *Chọn ứng viên có sẵn*.<br>- Email của ứng viên đã tồn tại trên hệ thống. |
         | **Kết quả hiển thị** | - Nội dung popup thay đổi về mặt giao diện.<br>- Ứng viên xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên` sau khi xác nhận thêm. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.<br><br>**Trường hợp không có ứng viên nào trong CSDL**: Khi mở dropdown-list để chọn ứng viên trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có ứng viên nào!"** |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-9/`
-        
-        !!! warning "⚠️ Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-1-9/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.10. Tự động gán người phụ trách ứng viên {#toc-4-1-10}
     ??? book "Tự động gán người phụ trách ứng viên"
         | Trường | Nội dung |
@@ -366,19 +236,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách. |
         | **Kết quả hiển thị** | Sau khi hệ thống thông báo thêm thành công và người dùng sử dụng filter *Phụ trách* trên danh sách ứng viên, hệ thống thực hiện truy vấn các profiles ứng viên được tạo bởi các người phụ trách được chọn. |
         | **Trường hợp không có dữ liệu** | **Trường hợp người phụ trách được chọn chưa tạo bất kỳ profile ứng viên nào :**<br>&emsp;- Hệ thống hiển thị mô tả *“Bảng dữ liệu trống!”* kèm icon thùng rỗng. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-10/`
-        
-        !!! warning "⚠️ Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-1-10/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ???+ info "2. Nhóm chức năng quản lý vị trí tuyển dụng"
     ### 2. Nhóm chức năng quản lý vị trí tuyển dụng {#toc-4-2}
@@ -394,19 +251,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.<br>- Hệ thống đã có dữ liệu về các vị trí tuyển dụng. |
         | **Kết quả hiển thị** | - Bảng **“Danh sách vị trí ứng tuyển”** hiển thị đầy đủ các vị trí cùng các cột thông tin liên quan.<br>- Dữ liệu được cập nhật theo thời gian thực hoặc theo batch (tùy cấu hình hệ thống).<br>- Trạng thái được thể hiện trực quan bằng nút toggle_on-off. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có vị trí nào, bảng dữ liệu thông báo *Bảng này hiện đang trống!* kèm với icon thùng rỗng.<br>- Nếu dữ liệu tại các cột đếm (Ứng viên, Chờ phỏng vấn, Đang đào tạo) bằng 0: hiển thị giá trị `0` thay vì để trống. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 2.2. Tạo vị trí tuyển dụng mới {#toc-4-2-2}
     ??? book "Tạo vị trí tuyển dụng mới"
         | Trường | Nội dung |
@@ -419,94 +263,42 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí. |
         | **Kết quả hiển thị** | - Hệ thống hiển thị thông báo dạng toast với nội dung *"Vị trí mới được thêm thành công!"*<br>- Vị trí mới tạo được thêm vào ngay dòng đầu tiên của **"Danh sách vị trí ứng tuyển"**. |
         | **Trường hợp không có dữ liệu** | **Không có** |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 2.3. Xem thông tin tổng quan về vị trí tuyển dụng {#toc-4-2-3}
     ??? book "Xem thông tin tổng quan về vị trí tuyển dụng"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Xem thông tin tổng quan về vị trí tuyển dụng |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem được các insight về vị trí tuyển dụng đã chọn tại **"Danh sách vị trí ứng tuyển"** |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-3/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-2-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
-    #### 2.2. Thiết lập lịch phỏng vấn tuyển dụng {#toc-4-2-2}
-    ??? book "Thiết lập lịch phỏng vấn tuyển dụng"
+        | **Mô tả** | Chức năng cho phép người phụ trách xem được các thống kê về vị trí tuyển dụng đã chọn tại **"Danh sách vị trí ứng tuyển"** |
+        | **Giao diện liên quan** | 1. Menu **“Quản lý vị trí”**.<br>2. Màn hình **“Danh sách vị trí ứng tuyển”** hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ **“Danh sách vị trí ứng tuyển”**, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình **Tổng quan vị trí** của submenu Tổng quan. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn một vị trí muốn thao tác trên bảng **“Danh sách vị trí ứng tuyển”** của ở menu **"Quản lý vị trí"**.<br>2. Hệ thống hiển thị thêm một sidebar mới, sidebar này sẽ chứa nội dung của sub-menu.<br>3. Người phụ trách cần chọn vào submenu *Tổng quan*.<br>4. Hệ thống hiển thị màn hình *Tổng quan vị trí*, trên màn hình này bao gồm các nội dung sau:<br>&emsp;+ Thông tin vị trí: bao gồm tên vị trí, icon của vị trí (người phụ trách có thể thay đổi tên và icon của vị trí bằng cách nhấn vào nút `✏️`. )<br>&emsp;+ Người phụ trách được phép thay đổi trạng thái của vị trí này bằng cách nhấn nút toggle_on-off ở bên phải màn hình<br>&emsp;+ Các biểu đồ `Số lượng CV`, `Số lượng phỏng vấn`, `Pass phỏng vấn`, `Training`, `Thử việc` sẽ mặc định hiển thị toàn bộ dữ liệu về vị trí tính từ lúc tạo vị trí, người dùng có thể tùy chọn thay đổi thời gian xem biểu đồ bằng cách tùy chỉnh thời gian ở nút `📅` ở góc trên cùng bên phải của màn hình này.<br>&emsp;+ Người phụ trách có thể thực hiện thao tác xóa bằng cách chọn vào nút `Xóa vị trí` và xác nhận thao tác trên popup cảnh báo. |
+        | **Điều kiện** | Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí. |
+        | **Kết quả hiển thị** | **Trường hợp xem thông tin của vị trí**: Hiển thị giao diện đầy đủ thông tin về vị trí, các nút đúng với mô tả.<br>**Trường hợp xóa vị trí**: Hệ thống điều hướng người phụ trách về màn hình chứa **"Danh sách vị trí ứng tuyển"** và thông báo dạng toast "Vị trí {`Tên vị trí`} đã được xóa!". |
+        | **Trường hợp không có dữ liệu** | **Trường hợp vị trí chưa từng ghi nhận bất kỳ dữ liệu nào**: Hệ thống hiển thị thông tin tổng quan mô tả vị trí, các biểu đồ vẫn được hiển thị nhưng sẽ hiển thị dữ liệu = 0, biểu đồ đường sẽ nằm trùng với trục X (thể hiện không có dữ liệu gì). |
+    #### 2.3. Thiết lập mô tả vị trí tuyển dụng (JD) {#toc-4-2-3}
+    ??? book "Thiết lập mô tả vị trí tuyển dụng (JD)"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập lịch phỏng vấn tuyển dụng |
+        | **Tên chức năng** | Thiết lập mô tả vị trí tuyển dụng (JD) |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách thiết lập lịch phỏng vấn cho vị trí đang quản lý. Người phụ trách có thể chọn ngày và khung giờ trong tương lai để thêm lịch phỏng vấn. Hệ thống hỗ trợ hiển thị trực quan: <br> - Ngày trong tương lai: ô màu xanh lá, có dấu cộng, cho phép thao tác. <br> - Ngày trong quá khứ: ô màu xanh dương, không cho phép thao tác. <br> - Ngày hiện tại: được highlight bằng nền đen, chữ trắng và viền tròn. Khi chọn một khung giờ, hệ thống mở popup nhập chi tiết lịch phỏng vấn. |
-        | **Giao diện liên quan** | - Menu **“Vị trí”**.<br>- Menu phụ **“Tổng quan”**.<br>- Màn hình **“Tổng quan vị trí”** → khu vực **“Lịch phỏng vấn vị trí”** với bảng **“Thiết lập lịch phỏng vấn”**.<br>- Popup **“Thêm lịch phỏng vấn”**. |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập vào hệ thống.<br>2. Vào menu **“Vị trí”** → menu phụ **“Tổng quan”**.<br>3. Hệ thống hiển thị màn hình **“Tổng quan vị trí”** với bảng **“Thiết lập lịch phỏng vấn”**.<br>4. Người phụ trách chọn tuần cần hiển thị để xem các ngày và khung giờ.<br>5. Tại bảng:<br>&emsp;- Ngày trong tương lai: ô xanh lá + dấu cộng → có thể click.<br>&emsp;- Ngày hiện tại: highlight đen/trắng, viền tròn.<br>&emsp;- Ngày quá khứ: ô xanh dương, không click được.<br>6. Người phụ trách click vào ô xanh lá (khung giờ trong tương lai).<br>7. Hệ thống hiển thị popup **“Thêm lịch phỏng vấn”** với thông tin sẵn có:<br>&emsp;- **Vị trí** (tự động điền).<br>&emsp;- **Thời gian phỏng vấn** (tương ứng ô được chọn).<br>8. Người phụ trách nhập/điều chỉnh **Trọng số người tham gia phỏng vấn** (giá trị > 0).<br>9. Click **“Thêm lịch phỏng vấn”**.<br>10. Hệ thống lưu dữ liệu và hiển thị thông báo **“Cập nhật dữ liệu thành công !”**.<br>11. Lịch mới được hiển thị trong bảng. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý lịch phỏng vấn.<br>- Chỉ được thêm lịch tại các ngày trong tương lai.<br>- Trọng số người tham gia phỏng vấn > 0. |
-        | **Kết quả hiển thị** | - Lịch phỏng vấn mới xuất hiện tại khung giờ đã chọn.<br>- Popup đóng sau khi lưu thành công.<br>- Hiển thị thông báo xác nhận *“Cập nhật dữ liệu thành công !”*. |
-        | **Trường hợp không có dữ liệu** | - Nếu chưa có lịch phỏng vấn nào trên bảng, toàn bộ các ô trên bảng đều .<br>- Các ô trong tương lai chưa thiết lập lịch vẫn hiển thị dấu cộng để thêm mới.<br>- Các ô trong quá khứ hiển thị màu xanh dương, không thao tác. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
-    #### 2.3. Thiết lập tiêu chuẩn ứng viên cho vị trí tuyển dụng {#toc-4-2-3}
+        | **Mô tả** | Chức năng này cho phép người phụ trách tạo các profile cho mô tả công việc, mỗi profile sẽ là một biến thể của mô tả công việc dành cho vị trí đang được chọn. Người phụ trách có toàn quyền tùy chỉnh JD cho vị trí tuyển dụng đang có trong hệ thống. Các profile này sẽ được lưu và hiển thị ở phần **Danh sách mô tả** khi người phụ trách truy cập vào submenu *Mô Tả (JD)*. |
+        | **Giao diện liên quan** | 1. Menu **“Quản lý vị trí”**.<br>2. Màn hình **“Danh sách vị trí ứng tuyển”** hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ **“Danh sách vị trí ứng tuyển”**, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình chứa *Danh sách mô tả* ở submenu *Mô Tả (JD)*. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn một vị trí tuyển dụng từ **"Danh sách vị trí ứng tuyển"**.<br>2. Hệ thống điều hướng sang màn hình chứa submenu và mặc định trỏ vào submenu *Tổng Quan*.<br>3. Người phụ trách chuyển sang submenu *Mô Tả (JD)*.<br>4. Để thiết lập một profile mô tả (JD) mới, người phụ trách cần đặt tên cho profile và phải nhấn [ENTER] để lưu.<br>5. Sau khi hệ thống đã lưu profile mới, hệ thống sẽ hiển thị tên của profile JD này lên giữa màn hình với tên của profile được in đậm ở phía trên cùng của màn hình, bên dưới tên của profile này sẽ bao gồm 2 phần:<br>&emsp;- *Nhập mô tả*: Người phụ trách nhập mô tả vào phần này, khi nhập xong và nhấn [ENTER] thì hệ thống sẽ thực hiện việc lưu dữ liệu và thông báo dạng toast cho người dùng với nội dung *"Đã lưu thay đổi cho +  {tên của profile đang thiết lập}"*  <br>&emsp;- *Nhập danh mục mới*: hệ thống quy định các danh mục để người phụ trách dễ dàng quản lý nội dung của JD, khi tạo danh mục mới, người phụ trách phải nhập tên của danh mục vào và nhấn [ENTER] để hệ thống thực hiện lưu. Sau khi lưu, hệ thống cập nhật lại danh mục đó để hiển thị ngay trên màn hình của người phụ trách (không reload).<br>6. Các thao tác với danh mục chứa nội dung của JD:<br>&emsp;- Thêm mô tả danh mục và các nội dung chi tiết bên trong<br>&emsp;- Xóa danh mục và xóa nội dung chi tiết bên trong (Khi xóa thì phải xác nhận thông qua popup cảnh báo)<br>&emsp;- Sắp xếp lại thứ tự của danh mục và sắp xếp nội dung của từng danh mục<br>7. Người phụ trách có thể bật nhiều mô tả công việc cùng lúc để tùy biến cách sử dụng (ví dụ: có thể tạo vị trí Data và tạo nhiều JD cho 6 trung tâm: Anh, Pháp, Đức, Trung, Nhật, Hàn).|
+        | **Điều kiện** | Người phụ trách đã đăng nhập và truy cập vào thông tin vị trí. |
+        | **Kết quả hiển thị** | - Khi hoàn tất việc thiết lập một JD tiêu chuẩn, người phụ trách sẽ xem được nội dung của JD bao gồm: tên. mô tả, danh mục, mô tả của danh mục, các tiêu chí con trong từng danh mục.<br>- Trường hợp có nhiều JD, người phụ trách sẽ xem được nội dung tương ứng khi chọn vào JD đó.  |
+        | **Trường hợp không có dữ liệu** | **Trường hợp đã tạo JD nhưng không xem được**: Cần có thông báo lỗi khi tải dữ liệu để người dùng report đến IT.<br>**Trường hợp vị trí tuyển dụng chưa có profile JD nào được thiết lập**: Hệ thống hiển thị màn hình trống với biểu tượng "Không có dữ liệu!"|
+    #### 2.4. Thiết lập tiêu chuẩn ứng viên {#toc-4-2-4}
     ??? book "Thiết lập tiêu chuẩn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Thiết lập tiêu chuẩn ứng viên |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách quản lý các tiêu chuẩn đánh giá ứng viên cho từng vị trí tuyển dụng. Các tiêu chuẩn được hiển thị dưới dạng **thẻ** (card) có thể mở rộng/thu gọn để xem chi tiết. Bên trong mỗi thẻ là danh sách các mục đánh giá, nội dung này thay đổi tùy theo vị trí. Người phụ trách có thể thêm, sửa, xóa cả **mục đánh giá** lẫn **thẻ tiêu chuẩn**. Ngoài ra, có thể tạo thẻ mới bằng cách nhập tên tiêu chuẩn vào ô **“Nhập Danh Mục Mới”** và nhấn icon **(+)**. |
-        | **Giao diện liên quan** | - Menu chính: **“Vị trí”**.<br>- Menu phụ: **“Phỏng vấn”**.<br>- Sub-menu: **“Tiêu chuẩn ứng viên”**.<br>- Màn hình: **“Tiêu chuẩn ứng viên”**, hiển thị danh sách các thẻ tiêu chuẩn. |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập vào hệ thống.<br>2. Truy cập **Menu “Vị trí” → Menu phụ “Phỏng vấn” → Sub-menu “Tiêu chuẩn ứng viên”**.<br>3. Hệ thống hiển thị màn hình **“Tiêu chuẩn ứng viên”** với danh sách thẻ.<br>4. Người phụ trách có thể:<br>&emsp;- Nhấn vào một thẻ để mở rộng/thu gọn chi tiết.<br>&emsp;- Thêm **mục đánh giá** trong thẻ (nhập nội dung, bấm lưu).<br>&emsp;- Sửa nội dung mục đánh giá có sẵn.<br>&emsp;- Xóa mục đánh giá khi không cần.<br>&emsp;- Thêm **thẻ tiêu chuẩn mới** bằng ô **“Nhập Danh Mục Mới”** và nhấn **(+)**.<br>&emsp;- Sửa tên thẻ hoặc xóa thẻ khi cần.<br>5. Sau khi thao tác, hệ thống cập nhật và hiển thị dữ liệu mới. |
+        | **Mô tả** | Chức năng giúp người phụ trách thiết lập các tiêu chuẩn để người phỏng vấn có thể đánh giá ứng viên trong quá trình phỏng vấn. Các tiêu chuẩn phỏng vấn mà người phụ trách được phép thiết lập ở chức năng / màn hình này là [`action_type : check (action kiểm tra)`]. |
+        | **Giao diện liên quan** | - Menu **“Quản Lý Vị trí”**.<br>- Submenu: **“Phỏng vấn”**, bao gồm các tab: **Tiêu chuẩn ứng viên**, **Các câu hỏi thông tin**, **Các vòng phỏng vấn**, **Thiết lập K.tra đầu vào**.<br>- Tab **“Tiêu chuẩn ứng viên”**. |
+        | **Luồng thao tác chính** |  |
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại trong hệ thống.<br>- Khi thêm mới thẻ: tên tiêu chuẩn không được để trống.<br>- Khi thêm/sửa mục: nội dung mục đánh giá phải hợp lệ (không trống). |
         | **Kết quả hiển thị** | - Danh sách thẻ tiêu chuẩn được hiển thị và có thể thao tác mở rộng/thu gọn.<br>- Sau khi thêm/sửa/xóa, dữ liệu được cập nhật ngay trên màn hình.<br>- Thông báo thành công hiển thị khi thao tác hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có thẻ tiêu chuẩn nào: hiển thị ô **“Nhập Danh Mục Mới”** để thêm.<br>- Nếu thẻ chưa có mục đánh giá: hiển thị thẻ rỗng với nút **“Thêm mục đánh giá”**.<br>- Khi xóa hết thẻ: màn hình trở về trạng thái trống kèm hướng dẫn thêm mới. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-3/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-2-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ???+ info "3. Nhóm chức năng quản lý phỏng vấn"
     ### 3. Nhóm chức năng quản lý phỏng vấn {#toc-4-3}
@@ -522,19 +314,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại.<br>- Tên vòng phỏng vấn, tiêu chí và yêu cầu phải hợp lệ (không để trống). |
         | **Kết quả hiển thị** | - Danh sách vòng phỏng vấn (thẻ) với trạng thái rõ ràng.<br>- Các mục con, tiêu chí và yêu cầu được hiển thị theo cấu trúc phân cấp.<br>- Sau thao tác thêm/sửa/xóa, dữ liệu được cập nhật tức thì trên giao diện.<br>- Thông báo thành công hiển thị sau mỗi hành động hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu vị trí chưa có vòng phỏng vấn: hiển thị nút **Thêm vòng phỏng vấn**.<br>- Nếu vòng phỏng vấn chưa có tiêu chí: hiển thị thẻ rỗng với nút **“Thêm tiêu chí”**.<br>- Nếu tiêu chí chưa có yêu cầu: hiển thị khu vực trống với nút **“Thêm yêu cầu”**.<br>- Nếu tất cả đã bị xóa: màn hình trở về trạng thái trống kèm hướng dẫn thêm mới. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-3-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-3-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 3.2. Thiết lập câu hỏi phỏng vấn {#toc-4-3-2}
     ??? book "Thiết lập câu hỏi phỏng vấn"
         | Trường | Nội dung |
@@ -547,19 +326,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí. <br>- Vị trí tuyển dụng tồn tại. <br>- Tên bộ câu hỏi và nội dung câu hỏi không được để trống. <br>- File đính kèm đúng định dạng cho phép. |
         | **Kết quả hiển thị** | - Danh sách bộ câu hỏi hiển thị dưới dạng thẻ, có thể mở rộng/thu gọn. <br>- Các câu hỏi trong bộ hiển thị chi tiết, có tùy chọn thêm, sửa, xóa. <br>- Khi nhập mô tả hoặc đính kèm file: hệ thống cập nhật và hiển thị ngay. <br>- Hiển thị thông báo thành công khi thao tác hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có bộ câu hỏi: hiển thị nút Thêm bộ câu hỏi. <br>- Nếu bộ câu hỏi trống: hiển thị nút Thêm câu hỏi. <br>- Nếu câu hỏi không có mô tả/file: hiển thị trạng thái trống với tùy chọn Thả file hoặc chọn file ở đây. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-3-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-3-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 3.3. Thiết lập bài kiểm tra {#toc-4-3-3}
     ??? book "Thiết lập bài kiểm tra"
         | Trường | Nội dung |
@@ -572,19 +338,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. <br>- Vị trí tuyển dụng đã tồn tại. <br>- Tên bài kiểm tra/danh mục không để trống. <br>- Câu hỏi kiểm tra có nội dung hợp lệ. |
         | **Kết quả hiển thị** | - Danh sách bài kiểm tra hiển thị dạng thẻ, có trạng thái và nút thao tác. <br>- Chi tiết bài kiểm tra gồm danh mục và câu hỏi hiển thị rõ ràng. <br>- Ứng viên thấy bài kiểm tra trong form ứng tuyển. |
         | **Trường hợp không có dữ liệu** | - Chưa có bài kiểm tra: hiển thị nút **Thêm bài kiểm tra**, danh sách rỗng. <br>- Bài kiểm tra chưa có danh mục: hiển thị nút **Thêm danh mục**. <br>- Danh mục chưa có câu hỏi: hiển thị nút **Tạo câu hỏi**. <br>- Vị trí chưa cấu hình bài kiểm tra: ứng viên ứng tuyển chỉ nộp hồ sơ, không thấy phần kiểm tra. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-3-3/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-3-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 3.4. Tạo buổi phỏng vấn cho ứng viên {#toc-4-3-4}
     ??? book "Tạo buổi phỏng vấn cho ứng viên"
         | Trường | Nội dung |
@@ -597,19 +350,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập và có quyền thao tác trên hồ sơ ứng viên. <br>2. Hệ thống đã tải được chi tiết ứng viên và danh sách các vòng phỏng vấn cố định. <br>3. Danh sách người phỏng vấn phải tồn tại trong hệ thống để hiển thị popup chọn. |
         | **Kết quả hiển thị** | - Sau khi chọn thành công, tên người phỏng vấn và thời gian phỏng vấn được hiển thị thay thế cho nút `"Handler chưa assign"`. <br>- Dữ liệu được cập nhật trong hệ thống và đồng bộ với bảng lịch phỏng vấn. <br>- Người phụ trách có thể quay lại tab "Phỏng vấn" để xem hoặc chỉnh sửa thông tin vừa gán. |
         | **Trường hợp không có dữ liệu** | - Nếu danh sách người phỏng vấn rỗng: popup "Chọn người phỏng vấn" hiển thị thông báo `"Không có dữ liệu người phỏng vấn"` kèm icon minh họa. <br>- Nếu chưa chọn ngày giờ phỏng vấn trong popup Lịch, hệ thống sẽ không thêm vào buổi phỏng vấn cho ứng viên. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-3-4/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-3-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ???+ info "4. Nhóm chức năng để đánh giá ứng viên"
     ### 4. Nhóm chức năng để đánh giá ứng viên {#toc-4-4}
@@ -625,19 +365,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra. |
         | **Kết quả hiển thị** | - Popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi & câu trả lời. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo *“Không có bài kiểm tra”*. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo *“Không có bài kiểm tra”*. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-4-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-4-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 4.2. Xem lại các phản hồi của ứng viên {#toc-4-4-5}
     ??? book "Xem lại phản hồi ứng viên"
         | Trường | Nội dung |
@@ -650,19 +377,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
         | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-4-5/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-4-5/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 4.3. Xem lại buổi phỏng vấn của ứng viên {#toc-4-4-6}
     ??? book "Xem lại buổi phỏng vấn của ứng viên (Người phụ trách)"
         | Trường | Nội dung |
@@ -675,19 +389,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem chi tiết ứng viên.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành. |
         | **Kết quả hiển thị** | - Tab **Phỏng vấn** hiển thị nút **“Xem chi tiết”** cho các buổi phỏng vấn đã hoàn thành.<br>- Trang **Phỏng vấn ứng viên** hiển thị đầy đủ 2 thẻ: Câu hỏi phỏng vấn và Đánh giá.<br>- Người phụ trách xem được toàn bộ dữ liệu phỏng vấn của ứng viên. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào hoàn thành: tab **Phỏng vấn** không hiển thị nút **“Xem chi tiết”**. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-4-6/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-4-6/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ???+ info "5. Nhóm chức năng quản lý đào tạo"
     ### 5. Nhóm chức năng quản lý đào tạo {#toc-4-5}
@@ -703,43 +404,18 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. <br>- Vị trí tồn tại trong hệ thống. |
         | **Kết quả hiển thị** | - Danh sách quy trình đào tạo hiển thị chi tiết. <br>- Người phụ trách có toàn quyền thao tác. <br>- Thông báo “Cập nhật dữ liệu thành công” sau khi thao tác hợp lệ. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có quy trình: hiển thị danh sách rỗng và nút Nhập quy trình mới. <br>- Nếu quy trình không có tiêu chuẩn: chỉ hiển thị tên quy trình và nút Nhập tiêu chuẩn mới. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-5-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-5-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 5.2. Quản lý đầu ta đào tạo {#toc-4-5-2}
     ??? book "Quản lý đầu ta đào tạo"
         | Trường | Nội dung |
         | ------ | -------- |
-        | Tên chức năng | Quản lý đầu ta đào tạo |
-        | Vai trò | Người phụ trách |
-        | Mô tả | Người phụ trách quản lý các tiêu chuẩn đầu ra của từng vị trí tuyển dụng, hiển thị dưới dạng thẻ. Có thể: <br>- Thêm mới thẻ đầu ra. <br>- Chỉnh sửa nội dung yêu cầu. <br>- Xóa một yêu cầu trong thẻ (có xác nhận). <br>- Xóa toàn bộ thẻ (có xác nhận). <br>- Gắn mức độ cho từng yêu cầu (Cơ bản, Trung bình, Nâng cao). |
-        | Giao diện liên quan | - Màn hình Vị trí → chọn vị trí → Tổng quan vị trí → Tab Đào tạo → Đầu ra |
+        | **Tên chức năng** | Quản lý đầu ta đào tạo |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Người phụ trách quản lý các tiêu chuẩn đầu ra của từng vị trí tuyển dụng, hiển thị dưới dạng thẻ. Có thể: <br>- Thêm mới thẻ đầu ra. <br>- Chỉnh sửa nội dung yêu cầu. <br>- Xóa một yêu cầu trong thẻ (có xác nhận). <br>- Xóa toàn bộ thẻ (có xác nhận). <br>- Gắn mức độ cho từng yêu cầu (Cơ bản, Trung bình, Nâng cao). |
+        | **Giao diện liên quan** | - Màn hình Vị trí → chọn vị trí → Tổng quan vị trí → Tab Đào tạo → Đầu ra |
         | Luồng thao tác chính | 1. Người phụ trách đăng nhập và chọn Vị trí. <br>2. Vào tab Đầu ra. <br>3. Quản lý danh sách yêu cầu đầu ra bằng các thao tác: mở rộng, thêm mới, sửa, xóa yêu cầu hoặc thẻ. <br>4. Hệ thống lưu và hiển thị thay đổi ngay lập tức. |
-        | Điều kiện | - Người phụ trách có quyền quản lý vị trí. |
-        | Kết quả hiển thị | - Danh sách thẻ yêu cầu đầu ra hiển thị theo vị trí. <br>- Các thao tác cập nhật thành công kèm thông báo “Cập nhật dữ liệu thành công”. |
-        | Trường hợp không có dữ liệu | - Nếu chưa có yêu cầu: hiển thị nút Thêm thẻ mới. <br>- Nếu thẻ rỗng: hiển thị nút Thêm nội dung mới. |
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-5-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-5-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
+        | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. |
+        | **Kết quả hiển thị** | - Danh sách thẻ yêu cầu đầu ra hiển thị theo vị trí. <br>- Các thao tác cập nhật thành công kèm thông báo “Cập nhật dữ liệu thành công”. |
+        | **Trường hợp không có dữ liệu** | - Nếu chưa có yêu cầu: hiển thị nút Thêm thẻ mới. <br>- Nếu thẻ rỗng: hiển thị nút Thêm nội dung mới. |
 ---
 ## V. Đặc tả chức năng dành cho Interviewer
 ???+ info "1. Nhóm chức năng quản lý lịch phỏng vấn"
@@ -756,18 +432,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đăng nhập vào tài khoản có phân quyền tương đương và quản lý ít nhất một ứng viên.<br>- Người phỏng vấn đăng nhập vào tài khoản có phân quyền tương đương và được người phụ trách gán cho ít nhất một ứng viên có lịch phỏng vấn. |
         | **Kết quả hiển thị** | - Ở chế độ lịch: hệ thống hiển thị theo tuần với các khung giờ được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị bảng dữ liệu với các cột ngày, giờ, số lượng ứng viên, trạng thái.<br>- Khi nhấn vào ca phỏng vấn: popup chi tiết xuất hiện.<br> + Người phụ trách: chỉ xem.<br> + Người phỏng vấn: có thêm chức năng Hủy lịch phỏng vấn đối với ứng viên được gán. |
         | **Trường hợp không có dữ liệu** | - Ở chế độ lịch: không có ô nào được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị thông báo "Bảng dữ liệu này đang trống" kèm biểu tượng thùng rỗng. |
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/5-1-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.2. Xem lịch sử phỏng vấn {#toc-5-1-2}
     ??? book "Xem lịch sử phỏng vấn"
         | Trường | Nội dung |
@@ -780,19 +444,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phỏng vấn đăng nhập bằng tài khoản hợp lệ.<br>- Có ít nhất một ứng viên được gán cho Người phỏng vấn và có buổi phỏng vấn được lên lịch. |
         | **Kết quả hiển thị** | - Bảng "Danh sách ứng viên đã phỏng vấn" hiển thị dữ liệu ứng viên theo phân quyền.<br>- Khi chọn một ứng viên, trang "Chi tiết ứng viên" xuất hiện với thông tin chỉ đọc. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có ứng viên nào đã phỏng vấn, hệ thống hiển thị thông báo "Bảng dữ liệu này trống." kèm biểu tượng thùng rỗng. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/5-1-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ???+ info "2. Xem thông tin về ứng viên"
     ### 2. Xem thông tin về ứng viên {#toc-5-2}
@@ -808,19 +459,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phỏng vấn được gán phỏng vấn ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
         | **Kết quả hiển thị** | Hiển thị chi tiết hồ sơ ứng viên với đầy đủ thông tin phục vụ phỏng vấn. |
         | **Trường hợp không có dữ liệu** | Thông tin nào chưa có sẽ hiển thị trống. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 2.2. Xem kết quả bài kiểm tra của ứng viên {#toc-5-2-2}
     ??? book "Xem lại kết quả kiểm tra ứng viên"
         | Trường | Nội dung |
@@ -833,19 +471,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra. |
         | **Kết quả hiển thị** | - Popup **Bài kiểm tra ứng viên** hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi & câu trả lời. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo *“Không có bài kiểm tra”*. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo *“Không có bài kiểm tra”*. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 2.3. Xem câu trả lời của ứng viên {#toc-5-2-3}
     ??? book "Xem câu trả lời của ứng viên"
         | Trường | Nội dung |
@@ -858,19 +483,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
         | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
         | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-3/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 2.4. Xem lại buổi phỏng vấn ứng viên {#toc-5-2-4}
     ??? book "Xem lại buổi phỏng vấn của ứng viên (Người phỏng vấn)"
           | Trường | Nội dung |
@@ -883,19 +495,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người phỏng vấn đã đăng nhập.<br>- Người phỏng vấn chỉ có thể xem lại buổi phỏng vấn của các ứng viên được gán cho mình.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành. |
           | **Kết quả hiển thị** | - Người phỏng vấn có thể xem lại chi tiết buổi phỏng vấn (câu hỏi, câu trả lời, kết quả kiểm tra).<br>- Người phỏng vấn có thể gán trạng thái cho từng tiêu chí đánh giá. |
           | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn hoàn thành → không có nút **“Xem chi tiết”**.<br>- Nếu người phỏng vấn không được gán cho ứng viên → không thấy dữ liệu phỏng vấn của ứng viên đó. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-4/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ## VI. Đặc tả chức năng dành cho Trainer
 ???+ info "1. Xem thông tin về ứng viên"
@@ -912,19 +511,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người đào tạo được gán đào tạo ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
           | **Kết quả hiển thị** | Hiển thị chi tiết hồ sơ ứng viên phục vụ đào tạo. |
           | **Trường hợp không có dữ liệu** | Các trường thông tin chưa bổ sung sẽ để trống. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/6-1-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 1.2. Xem tất cả các ứng viên được gán {#toc-6-1-2}
     ??? book "Xem ứng viên được gán trách nhiệm"
           | Trường | Nội dung |
@@ -937,19 +523,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người đào tạo đã được người phụ trách gán vào ứng viên.<br>- Người đào tạo đăng nhập có quyền xem menu Danh Sách Đào Tạo. |
           | **Kết quả hiển thị** | - Menu Danh Sách Đào Tạo hiển thị ứng viên được gán.<br>- Người đào tạo có thể xem thông tin ứng viên nhưng không thể chỉnh sửa dữ liệu cơ bản. |
           | **Trường hợp không có dữ liệu** | - Nếu người đào tạo chưa được gán ứng viên nào: bảng Danh Sách Đào Tạo hiển thị thông báo “Bảng này hiện đang trống!”. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/6-1-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ???+ info "2. Cụm chức năng quản lý đào tạo"
     ### 2. Cụm chức năng quản lý đào tạo {#toc-6-2}
@@ -965,19 +538,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người đào tạo đã được gán cho ứng viên. |
           | **Kết quả hiển thị** | - Danh sách quy trình & buổi đào tạo hiển thị rõ ràng. <br>- Người đào tạo có thể thao tác trong phạm vi cho phép. <br>- Hệ thống hiển thị thông báo thành công sau khi upload/đánh giá. |
           | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa được gán quy trình: bảng hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu quy trình không có tiêu chuẩn: danh sách rỗng. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/6-2-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
     #### 2.2. Đánh giá đầu ra đào tạo {#toc-6-2-2}
     ??? book "Đánh giá đầu ra đào tạo"
           | Trường | Nội dung |
@@ -990,19 +550,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người đào tạo được gán cho ứng viên. <br>- Ứng viên đã có vị trí với tiêu chuẩn đầu ra. |
           | **Kết quả hiển thị** | - Danh sách tiêu chuẩn đầu ra hiển thị kèm các tùy chọn đánh giá. <br>- Sau khi lưu, kết quả được cập nhật vào hồ sơ đào tạo ứng viên. |
           | **Trường hợp không có dữ liệu** | - Nếu chưa có tiêu chuẩn: hiển thị thông báo “Chưa có tiêu chuẩn đầu ra cho vị trí này”. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/6-2-2/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-
 ---
 ## VII. Đặc tả chức năng dành cho Trainee
 ???+ info "1. Cụm chức năng dành cho Trainee"
@@ -1019,20 +566,89 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người được đào tạo có tài khoản hợp lệ và đang trong quá trình đào tạo. |
           | **Kết quả hiển thị** | - Người được đào tạo thấy danh sách buổi đào tạo được mở. <br>- Có thể xem chi tiết tiêu chí và tải tài liệu. |
           | **Trường hợp không có dữ liệu** | - Nếu chưa được gán quy trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu chưa có buổi đào tạo nào hiển thị: danh sách rỗng. |
+---
 
+    ---
 
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/7-1-1/`
-        
-        !!! warning "⚠️ Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/7-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    ---
+
+    📸 Hình ảnh minh họa
+
+    > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-1/`
+
+            !!! warning "⚠️ Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
-        
-    #### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
+
+
+#### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
     ??? book "Xem mục tiêu (đầu ra) đào tạo (Người được đào tạo)"
           | Trường | Nội dung |
           | ------ | -------- |
@@ -1044,16 +660,3 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
           | **Điều kiện** | - Người được đào tạo có tài khoản hợp lệ. <br>- Ứng viên đã được gán vào quy trình đào tạo có tiêu chuẩn đầu ra. |
           | **Kết quả hiển thị** | - Danh sách tiêu chuẩn đầu ra hiển thị kèm đánh giá từ người đào tạo. |
           | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa được gán chương trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. |
-
-
-        ---
-        
-        📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/7-1-2/`
-        
-        !!! warning "⚠️ Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/7-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-    ---

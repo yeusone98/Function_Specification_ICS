@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-Script để tự động cập nhật Buddy.md với cấu trúc hình ảnh theo quy định.
-Tìm tất cả các section (#toc-X-X-X) và thêm template hình ảnh tương ứng.
+Script để tự động cập nhật Buddy.md với hình ảnh.
+- Quét tất cả folder hình ảnh tương ứng
+- Nếu có hình ảnh → sinh markdown tự động
+- Nếu không có → hiển thị warning
+- Tự động thêm vào Buddy.md từ cuối file
 """
 
 import re
@@ -20,13 +23,14 @@ def folder_exists_and_has_images(section_id):
     folder_path = Path(f"docs/assets/images/buddy/{section_id}").resolve()
     
     if not folder_path.exists():
-        return False, False  # (exists, has_images)
+        return False, []  # (exists, images_list)
     
     # Kiểm tra xem có file hình ảnh
     image_extensions = {'.png', '.jpg', '.jpeg', '.gif', '.webp'}
-    has_images = any(f.suffix.lower() in image_extensions for f in folder_path.iterdir() if f.is_file())
+    images = sorted([f.name for f in folder_path.iterdir() 
+                     if f.is_file() and f.suffix.lower() in image_extensions])
     
-    return True, has_images
+    return True, images
 
 def get_image_files(section_id):
     """Lấy danh sách file hình ảnh trong folder"""
@@ -42,30 +46,28 @@ def get_image_files(section_id):
 
 def generate_image_section(section_id):
     """Tạo template HTML/Markdown cho phần hình ảnh"""
-    exists, has_images = folder_exists_and_has_images(section_id)
+    exists, images = folder_exists_and_has_images(section_id)
     
-    template = f"""
+    template = f"""---
 
-        ---
-        
-        ### 📸 Hình ảnh minh họa
-        
-        > **📁 Thư mục nguồn:** `assets/images/buddy/{section_id}/`
-        
-"""
+    📸 Hình ảnh minh họa
+
+    > **📁 Thư mục nguồn:** `assets/images/buddy/{section_id}/`
+
+    """
     
     if not exists:
         template += f"""        !!! warning "⚠️ Thư mục không tồn tại"
             Thư mục `assets/images/buddy/{section_id}/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
 """
-    elif not has_images:
+    elif not images:
         template += f"""        !!! warning "⚠️ Chưa có hình ảnh minh họa"
             Thư mục `assets/images/buddy/{section_id}/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
 """
     else:
-        images = get_image_files(section_id)
+        # Tự động tạo markdown cho từng hình ảnh
         for image in images:
             # Tạo mô tả từ tên file
             desc = image.replace('-', ' ').replace('_', ' ').rsplit('.', 1)[0].title()
@@ -73,23 +75,14 @@ def generate_image_section(section_id):
 """
         template += "\n"
     
-    template += """        *Bấm vào từng ảnh để xem chi tiết.*"""
+    template += """        *Bấm vào từng ảnh để xem chi tiết.*\n\n"""
     return template
-
-def find_book_sections(content):
-    """Tìm tất cả các book collapse sections trong Markdown"""
-    # Pattern: #### X.X. ... {#toc-X-X-X}
-    pattern = r'(#### \d+\.\d+\. .* {#toc-\d+-\d+-\d+})'
-    matches = list(re.finditer(pattern, content, re.MULTILINE))
-    return matches
 
 def has_image_section(content, section_start):
     """Kiểm tra xem section này đã có phần hình ảnh chưa"""
-    # Tìm dấu hiệu của phần hình ảnh
-    image_pattern = r'### 📸 Hình ảnh minh họa'
+    image_pattern = r'📸 Hình ảnh minh họa'
     next_section_pattern = r'####\s+\d+\.\d+\.'
     
-    # Lấy nội dung từ vị trí hiện tại đến section tiếp theo
     start_pos = section_start
     next_match = re.search(next_section_pattern, content[start_pos:])
     
@@ -99,6 +92,37 @@ def has_image_section(content, section_start):
         section_content = content[start_pos:]
     
     return bool(re.search(image_pattern, section_content))
+
+def replace_image_section(content, section_start, section_id):
+    """
+    Nếu đã tồn tại block '📸 Hình ảnh minh họa'
+    → replace toàn bộ block đó bằng nội dung mới
+    """
+    image_header_pattern = r'📸 Hình ảnh minh họa'
+    next_section_pattern = r'####\s+\d+\.\d+\.'
+
+    sub_content = content[section_start:]
+
+    header_match = re.search(image_header_pattern, sub_content)
+    if not header_match:
+        return content, False  # chưa có block
+
+    block_start = section_start + header_match.start()
+
+    # tìm section tiếp theo
+    next_match = re.search(next_section_pattern, sub_content[header_match.start():])
+
+    if next_match:
+        block_end = block_start + next_match.start()
+    else:
+        block_end = len(content)
+
+    # generate block mới
+    new_block = generate_image_section(section_id)
+
+    new_content = content[:block_start] + new_block + "\n" + content[block_end:]
+
+    return new_content, True
 
 def update_buddy_file():
     """Cập nhật file Buddy.md"""
@@ -112,9 +136,11 @@ def update_buddy_file():
     
     sections = list(re.finditer(pattern, content))
     
-    print(f"Tìm thấy {len(sections)} sections")
+    print(f"Found {len(sections)} sections")
+    print()
     
     updates = 0
+    stats = {'with_images': 0, 'without_images': 0, 'folder_missing': 0}
     
     # Duyệt từ cuối về đầu để tránh vấn đề vị trí
     for match in reversed(sections):
@@ -122,12 +148,26 @@ def update_buddy_file():
         section_start = match.end()
         
         # Kiểm tra xem section này đã có phần hình ảnh chưa
-        if has_image_section(content, section_start):
-            print(f"  ✓ {section_id} - đã có phần hình ảnh")
+        # Nếu đã có block → replace
+        content, replaced = replace_image_section(content, section_start, section_id)
+        if replaced:
+            exists, images = folder_exists_and_has_images(section_id)
+
+            if not exists:
+                stats['folder_missing'] += 1
+                status = f"📁 Chưa có folder"
+            elif images:
+                stats['with_images'] += 1
+                status = f"♻️ Updated {len(images)} hình ảnh"
+            else:
+                stats['without_images'] += 1
+                status = "⏳ Folder trống (updated warning)"
+
+            print(f"  {section_id}: {status}")
+            updates += 1
             continue
         
-        # Tìm vị trí cuối cùng của table để chèn
-        # Tìm khoảng trắng hoặc line break sau "| **Trường hợp không có dữ liệu**"
+        # Tìm vị trí cuối cùng của table
         sub_content = content[section_start:]
         no_data_pattern = r"\| \*\*Trường hợp không có dữ liệu\*\*\s*\|[^\n]*\|[^\n]*\n"
         no_data_match = re.search(no_data_pattern, sub_content)
@@ -135,25 +175,56 @@ def update_buddy_file():
         if no_data_match:
             insert_pos = section_start + no_data_match.end()
             
-            # Tạo template hình ảnh
+            # Tạo template hình ảnh (tự động sinh markdown từ hình ảnh thực tế)
             image_section = generate_image_section(section_id)
             
-            # Chèn template với newline trước để tách section tiếp theo
-            content = content[:insert_pos] + image_section + "\n" + content[insert_pos:]
+            # Chèn template
+            content = content[:insert_pos] + image_section + content[insert_pos:]
             
-            print(f"  ✓ {section_id} - đã thêm template hình ảnh")
+            # Thống kê
+            exists, images = folder_exists_and_has_images(section_id)
+            if not exists:
+                status = "📁 Chưa có folder"
+                stats['folder_missing'] += 1
+            elif images:
+                status = f"✅ Thêm {len(images)} hình ảnh"
+                stats['with_images'] += 1
+            else:
+                status = "⏳ Folder trống (sẽ cảnh báo)"
+                stats['without_images'] += 1
+            
+            print(f"  {section_id}: {status} - ✓ THÊM")
             updates += 1
         else:
-            print(f"  ⚠ {section_id} - không tìm thấy vị trí 'Trường hợp không có dữ liệu'")
+            print(f"  {section_id}: ⚠️ Không tìm thấy 'Trường hợp không có dữ liệu'")
     
     # Ghi file
     if updates > 0:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
-        print(f"\n✓ Cập nhật thành công! {updates} sections được cập nhật.")
+        print()
+        print("=" * 60)
+        print(f"✅ CẬP NHẬT THÀNH CÔNG: {updates} sections được cập nhật")
+        print("=" * 60)
+        print()
+        print("📊 THỐNG KÊ:")
+        print(f"  🖼️  Sections với hình ảnh: {stats['with_images']}")
+        print(f"  ⏳ Sections chưa có hình: {stats['without_images']}")
+        print(f"  📁 Folders chưa tồn tại: {stats['folder_missing']}")
+        print()
     else:
-        print(f"\n✓ Không có cập nhật nào được yêu cầu.")
+        print()
+        print("=" * 60)
+        print("✅ TẤT CẢ SECTIONS ĐÃ CÓ PHẦN HÌNH ẢNH")
+        print("=" * 60)
+        print()
+        print("📊 THỐNG KÊ:")
+        print(f"  🖼️  Sections với hình ảnh: {stats['with_images']}")
+        print(f"  ⏳ Sections chưa có hình: {stats['without_images']}")
+        print(f"  📁 Folders chưa tồn tại: {stats['folder_missing']}")
+        print()
 
 if __name__ == "__main__":
-    os.chdir("d:\\GitHub\\Function_Specification_ICS")
+    script_dir = Path(__file__).resolve().parent
+    os.chdir(script_dir)
     update_buddy_file()
