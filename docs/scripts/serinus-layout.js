@@ -409,7 +409,7 @@
       var checkedInput = inputs.find(function (input) {
         return input.checked;
       });
-      return checkedInput ? checkedInput.getAttribute("data-md-color-scheme") || "default" : "default";
+      return checkedInput ? checkedInput.getAttribute("data-md-color-scheme") || "slate" : "slate";
     }
 
     function applyPalette(input) {
@@ -437,6 +437,26 @@
       document.body.setAttribute("data-md-color-scheme", scheme);
       document.body.setAttribute("data-md-color-primary", primary);
       document.body.setAttribute("data-md-color-accent", accent);
+    }
+
+    function hasStoredPalette() {
+      if (typeof __md_get !== "function") {
+        return false;
+      }
+
+      try {
+        return Boolean(__md_get("__palette"));
+      } catch (error) {
+        return false;
+      }
+    }
+
+    if (!hasStoredPalette()) {
+      var defaultDarkInput = getSchemeInput("slate");
+      if (defaultDarkInput) {
+        defaultDarkInput.checked = true;
+        applyPalette(defaultDarkInput);
+      }
     }
 
     var button = document.createElement("button");
