@@ -315,6 +315,40 @@
   transform: perspective(700px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
 }
 
+.pls-doc-card,
+.pls-role-card,
+.pls-highlight-card {
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --mouse-glow-opacity: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.pls-doc-card::after,
+.pls-role-card::after,
+.pls-highlight-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  opacity: calc(var(--mouse-glow-opacity) * 0.88);
+  transition: opacity 0.22s ease;
+  background: radial-gradient(18rem circle at var(--mouse-x) var(--mouse-y),
+      color-mix(in srgb, var(--serinus-link) 34%, #dbe7ff),
+      transparent 62%);
+}
+
+.pls-doc-card > *,
+.pls-role-card > *,
+.pls-highlight-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 .pls-doc-card:hover,
 .pls-doc-card:focus-visible {
   border-color: color-mix(in srgb, var(--serinus-link) 52%, var(--serinus-divider));
@@ -938,5 +972,12 @@ body.pls-home-active label.md-header__button[for="__toc"] {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .pls-doc-card::after,
+  .pls-role-card::after,
+  .pls-highlight-card::after {
+    opacity: 0 !important;
+    transition: none !important;
   }
 }

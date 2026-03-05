@@ -5,6 +5,10 @@
     return 1 - Math.pow(1 - t, 3);
   }
 
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
   function animateCounter(element, target) {
     var duration = 1100;
     var startTs = 0;
@@ -92,25 +96,68 @@
     });
   }
 
+  function mountCursorAura(homeRoot) {
+    if (!window.matchMedia) {
+      return;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    if (!window.matchMedia("(pointer: fine)").matches) {
+      return;
+    }
+
+    function syncAura(event) {
+      var rect = homeRoot.getBoundingClientRect();
+      var x = ((event.clientX - rect.left) / rect.width) * 100;
+      var y = ((event.clientY - rect.top) / rect.height) * 100;
+
+      homeRoot.style.setProperty("--cursor-x", String(clamp(x, 0, 100).toFixed(2)) + "%");
+      homeRoot.style.setProperty("--cursor-y", String(clamp(y, 0, 100).toFixed(2)) + "%");
+      homeRoot.style.setProperty("--cursor-aura-opacity", "1");
+    }
+
+    homeRoot.addEventListener("pointerenter", syncAura);
+    homeRoot.addEventListener("pointermove", syncAura);
+    homeRoot.addEventListener("pointerleave", function () {
+      homeRoot.style.setProperty("--cursor-aura-opacity", "0");
+    });
+  }
+
   function mountCardTilt(homeRoot) {
+    if (
+      window.matchMedia &&
+      (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !window.matchMedia("(pointer: fine)").matches)
+    ) {
+      return;
+    }
+
     var cards = Array.from(homeRoot.querySelectorAll("[data-tilt]"));
     if (!cards.length) {
       return;
     }
 
     cards.forEach(function (card) {
-      card.addEventListener("mousemove", function (event) {
+      card.addEventListener("pointermove", function (event) {
         var rect = card.getBoundingClientRect();
         var rx = ((event.clientY - rect.top) / rect.height) * 2 - 1;
         var ry = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        var px = ((event.clientX - rect.left) / rect.width) * 100;
+        var py = ((event.clientY - rect.top) / rect.height) * 100;
 
         card.style.setProperty("--tilt-x", String(rx * -2.1) + "deg");
         card.style.setProperty("--tilt-y", String(ry * 2.1) + "deg");
+        card.style.setProperty("--mouse-x", String(clamp(px, 0, 100).toFixed(2)) + "%");
+        card.style.setProperty("--mouse-y", String(clamp(py, 0, 100).toFixed(2)) + "%");
+        card.style.setProperty("--mouse-glow-opacity", "1");
       });
 
-      card.addEventListener("mouseleave", function () {
+      card.addEventListener("pointerleave", function () {
         card.style.setProperty("--tilt-x", "0deg");
         card.style.setProperty("--tilt-y", "0deg");
+        card.style.setProperty("--mouse-glow-opacity", "0");
       });
     });
   }
@@ -122,6 +169,7 @@
     }
 
     document.body.classList.add("pls-home-active");
+    mountCursorAura(homeRoot);
     mountReveal(homeRoot);
     mountCounters(homeRoot);
     mountCardTilt(homeRoot);
