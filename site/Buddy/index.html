@@ -53,6 +53,8 @@
     
       <link rel="stylesheet" href="../styles/home.css">
     
+      <link rel="stylesheet" href="../styles/motion-refresh.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -738,10 +740,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toc-4-2-2" class="md-nav__link">
+  <a href="#toc-4-2-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Thiết lập lịch phỏng vấn tuyển dụng
+        2.3. Thiết lập mô tả vị trí tuyển dụng (JD)
       
     </span>
   </a>
@@ -749,10 +751,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toc-4-2-3" class="md-nav__link">
+  <a href="#toc-4-2-4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Thiết lập tiêu chuẩn ứng viên cho vị trí tuyển dụng
+        2.4. Thiết lập tiêu chuẩn ứng viên
       
     </span>
   </a>
@@ -1654,10 +1656,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toc-4-2-2" class="md-nav__link">
+  <a href="#toc-4-2-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. Thiết lập lịch phỏng vấn tuyển dụng
+        2.3. Thiết lập mô tả vị trí tuyển dụng (JD)
       
     </span>
   </a>
@@ -1665,10 +1667,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#toc-4-2-3" class="md-nav__link">
+  <a href="#toc-4-2-4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.3. Thiết lập tiêu chuẩn ứng viên cho vị trí tuyển dụng
+        2.4. Thiết lập tiêu chuẩn ứng viên
       
     </span>
   </a>
@@ -2215,16 +2217,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/3-1-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/3-1-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-3-1-2">1.2. Cập nhật tài khoản</h4>
 <details class="book">
@@ -2437,15 +2429,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về <strong>tất cả ứng viên trong hệ thống</strong> tại bảng <strong>Danh sách ứng viên</strong>.<br>2. Lọc danh sách ứng viên theo các điều kiện: <strong>Vị trí</strong>, <strong>Trạng thái</strong>, <strong>Người phụ trách</strong>, và <strong>Ngày phỏng vấn</strong>.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây.</td>
+<td>Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về <strong>tất cả ứng viên trong hệ thống</strong> tại bảng <strong>Danh sách ứng viên</strong>.<br>2. Lọc danh sách ứng viên theo các điều kiện: <strong>Vị trí</strong>, <strong>Trạng thái</strong>, <strong>Người phụ trách</strong>, <strong>Người đào tạo</strong> và <strong>Ngày phỏng vấn</strong>.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây.</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
-<td>1. Trang <strong>Danh sách ứng viên</strong> (truy cập từ menu "Ứng Viên").<br>2. Bảng <strong>Danh sách ứng viên</strong>.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: <strong>Vị trí</strong>, <strong>Trạng thái</strong>, <strong>Người phụ trách</strong>, <strong>Ngày phỏng vấn</strong>.</td>
+<td>1. Trang <strong>Danh sách ứng viên</strong> (truy cập từ menu "Ứng Viên").<br>2. Bảng <strong>Danh sách ứng viên</strong>.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: <strong>Vị trí</strong>, <strong>Trạng thái</strong>, <strong>Người phụ trách</strong>, <strong>Người đào tạo</strong>, <strong>Ngày phỏng vấn</strong>.</td>
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
-<td><strong>Xem danh sách:</strong><br>1. Người phụ trách chọn menu <strong>Ứng Viên</strong>.<br>2. Hệ thống tải dữ liệu của <strong>toàn bộ ứng viên</strong> trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br><strong>Lọc ứng viên:</strong><br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- <strong>Vị trí</strong>: chọn nhiều vị trí từ dropdown.<br>&emsp;- <strong>Trạng thái</strong>: chọn nhiều giá trị từ danh sách trạng thái (<code>Mới</code>, <code>Passed</code>, <code>Đã phỏng vấn</code>, <code>Đang phỏng vấn</code>, <code>HR xác nhận</code>, <code>Offered</code>, <code>Failed</code>, <code>Dropped</code>, <code>Rejected</code>, <code>Chưa phỏng vấn</code>).<br>&emsp;- <strong>Người phụ trách</strong>: chọn nhiều người phụ trách (logic OR trong bộ lọc này).<br>&emsp;- <strong>Ngày phỏng vấn</strong>: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ <code>(03) Vị trí</code>.</td>
+<td><strong>Xem danh sách:</strong><br>1. Người phụ trách chọn menu <strong>Ứng Viên</strong>.<br>2. Hệ thống tải dữ liệu của <strong>toàn bộ ứng viên</strong> trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br><strong>Lọc ứng viên:</strong><br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- <strong>Vị trí</strong>: chọn nhiều vị trí từ dropdown.<br>&emsp;- <strong>Trạng thái</strong>: chọn nhiều giá trị từ danh sách trạng thái (<code>Mới</code>, <code>Passed</code>, <code>Đã phỏng vấn</code>, <code>Đang phỏng vấn</code>, <code>HR xác nhận</code>, <code>Offered</code>, <code>Failed</code>, <code>Dropped</code>, <code>Rejected</code>, <code>Chưa phỏng vấn</code>).<br>&emsp;- <strong>Người đào tạo</strong>: chọn nhiều người đào tạo (logic AND vì một trainee có thể có nhiều trainer).<br>&emsp;- <strong>Người phụ trách</strong>: chọn nhiều người phụ trách (logic OR trong bộ lọc này vì hiện tại mỗi user chỉ do một người phụ trách chịu trách nhiệm).<br>&emsp;- <strong>Ngày phỏng vấn</strong>: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ <code>(03) Vị trí</code>.</td>
 </tr>
 <tr>
 <td><strong>Điều kiện</strong></td>
@@ -2461,15 +2453,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-1/</code></p>
-</blockquote>
-<p><img alt="Abc" class="image-widget-thumb" loading="lazy" src="../assets/images/buddy/4-1-1/abc.png" />
-<img alt="Def" class="image-widget-thumb" loading="lazy" src="../assets/images/buddy/4-1-1/def.png" />
-<img alt="Popup Them Ung Vien Da Co Mail" class="image-widget-thumb" loading="lazy" src="../assets/images/buddy/4-1-1/popup-them-ung-vien-da-co-mail.png" /></p>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-2">1.2. Tùy chọn hiển thị cột trong bảng danh sách ứng viên</h4>
 <details class="book">
@@ -2516,16 +2499,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-1-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-3">1.3. Sắp xếp thứ tự ưu tiên theo từng cột</h4>
 <details class="book">
@@ -2552,7 +2525,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
-<td>1. Cột được hiển thị trên bảng (các cột mà người phụ trách đã chọn khi thực hiện thao tác ở chức năng <a href="/Buddy/#toc-4-1-2">tùy chọn cột muốn xem</a> ).<br>2. Biểu tượng <code>☰</code> bên phải tiêu đề cột.<br>3. Dropdown-list “Theo thứ tự ưu tiên”.<br>4. Nút <code>⟳</code> reset thứ tự mặc định.</td>
+<td>1. Cột được hiển thị trên bảng (các cột mà người phụ trách đã chọn khi thực hiện thao tác ở chức năng tùy chọn cột muốn xem).<br>2. Biểu tượng <code>☰</code> bên phải tiêu đề cột.<br>3. Dropdown-list “Theo thứ tự ưu tiên”.<br>4. Nút <code>⟳</code> reset thứ tự mặc định.</td>
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
@@ -2572,16 +2545,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-3/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-1-3/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-4">1.4. Cơ chế sắp xếp theo nhiều cột đã chọn</h4>
 <details class="book">
@@ -2628,16 +2591,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-4/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-1-4/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-5">1.5. Tìm kiếm ứng viên theo ký tự</h4>
 <details class="book">
@@ -2684,16 +2637,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-5/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-1-5/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-6">1.6. Quản lý thông tin chi tiết của ứng viên</h4>
 <details class="book">
@@ -2740,16 +2683,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-6/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-1-6/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-7">1.7. Thêm ứng viên mới</h4>
 <details class="book">
@@ -2796,16 +2729,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-7/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-1-7/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-8">1.8. Tạo đơn ứng tuyển cho ứng viên đã từng apply</h4>
 <details class="book">
@@ -2852,16 +2775,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-8/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Thư mục không tồn tại</p>
-<p>Thư mục <code>assets/images/buddy/4-1-8/</code> chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-9">1.9. Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên</h4>
 <details class="book">
@@ -2908,16 +2821,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-9/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Thư mục không tồn tại</p>
-<p>Thư mục <code>assets/images/buddy/4-1-9/</code> chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-1-10">1.10. Tự động gán người phụ trách ứng viên</h4>
 <details class="book">
@@ -2964,16 +2867,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-1-10/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Thư mục không tồn tại</p>
-<p>Thư mục <code>assets/images/buddy/4-1-10/</code> chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -3025,16 +2918,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-2-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-2-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-2-2">2.2. Tạo vị trí tuyển dụng mới</h4>
 <details class="book">
@@ -3081,16 +2964,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-2-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-2-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-2-3">2.3. Xem thông tin tổng quan về vị trí tuyển dụng</h4>
 <details class="book">
@@ -3113,44 +2986,34 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng cho phép người phụ trách xem được các insight về vị trí tuyển dụng đã chọn tại <strong>"Danh sách vị trí ứng tuyển"</strong></td>
+<td>Chức năng cho phép người phụ trách xem được các thống kê về vị trí tuyển dụng đã chọn tại <strong>"Danh sách vị trí ứng tuyển"</strong></td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
-<td></td>
+<td>1. Menu <strong>“Quản lý vị trí”</strong>.<br>2. Màn hình <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ <strong>“Danh sách vị trí ứng tuyển”</strong>, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình <strong>Tổng quan vị trí</strong> của submenu Tổng quan.</td>
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
-<td></td>
+<td>1. Người phụ trách chọn một vị trí muốn thao tác trên bảng <strong>“Danh sách vị trí ứng tuyển”</strong> của ở menu <strong>"Quản lý vị trí"</strong>.<br>2. Hệ thống hiển thị thêm một sidebar mới, sidebar này sẽ chứa nội dung của sub-menu.<br>3. Người phụ trách cần chọn vào submenu <em>Tổng quan</em>.<br>4. Hệ thống hiển thị màn hình <em>Tổng quan vị trí</em>, trên màn hình này bao gồm các nội dung sau:<br>&emsp;+ Thông tin vị trí: bao gồm tên vị trí, icon của vị trí (người phụ trách có thể thay đổi tên và icon của vị trí bằng cách nhấn vào nút <code>✏️</code>. )<br>&emsp;+ Người phụ trách được phép thay đổi trạng thái của vị trí này bằng cách nhấn nút toggle_on-off ở bên phải màn hình<br>&emsp;+ Các biểu đồ <code>Số lượng CV</code>, <code>Số lượng phỏng vấn</code>, <code>Pass phỏng vấn</code>, <code>Training</code>, <code>Thử việc</code> sẽ mặc định hiển thị toàn bộ dữ liệu về vị trí tính từ lúc tạo vị trí, người dùng có thể tùy chọn thay đổi thời gian xem biểu đồ bằng cách tùy chỉnh thời gian ở nút <code>📅</code> ở góc trên cùng bên phải của màn hình này.<br>&emsp;+ Người phụ trách có thể thực hiện thao tác xóa bằng cách chọn vào nút <code>Xóa vị trí</code> và xác nhận thao tác trên popup cảnh báo.</td>
 </tr>
 <tr>
 <td><strong>Điều kiện</strong></td>
-<td></td>
+<td>Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.</td>
 </tr>
 <tr>
 <td><strong>Kết quả hiển thị</strong></td>
-<td></td>
+<td><strong>Trường hợp xem thông tin của vị trí</strong>: Hiển thị giao diện đầy đủ thông tin về vị trí, các nút đúng với mô tả.<br><strong>Trường hợp xóa vị trí</strong>: Hệ thống điều hướng người phụ trách về màn hình chứa <strong>"Danh sách vị trí ứng tuyển"</strong> và thông báo dạng toast "Vị trí {<code>Tên vị trí</code>} đã được xóa!".</td>
 </tr>
 <tr>
 <td><strong>Trường hợp không có dữ liệu</strong></td>
-<td></td>
+<td><strong>Trường hợp vị trí chưa từng ghi nhận bất kỳ dữ liệu nào</strong>: Hệ thống hiển thị thông tin tổng quan mô tả vị trí, các biểu đồ vẫn được hiển thị nhưng sẽ hiển thị dữ liệu = 0, biểu đồ đường sẽ nằm trùng với trục X (thể hiện không có dữ liệu gì).</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-2-3/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-2-3/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
-<h4 id="toc-4-2-2">2.2. Thiết lập lịch phỏng vấn tuyển dụng</h4>
+<h4 id="toc-4-2-3">2.3. Thiết lập mô tả vị trí tuyển dụng (JD)</h4>
 <details class="book">
-<summary>Thiết lập lịch phỏng vấn tuyển dụng</summary>
+<summary>Thiết lập mô tả vị trí tuyển dụng (JD)</summary>
 <table>
 <thead>
 <tr>
@@ -3161,7 +3024,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 <tbody>
 <tr>
 <td><strong>Tên chức năng</strong></td>
-<td>Thiết lập lịch phỏng vấn tuyển dụng</td>
+<td>Thiết lập mô tả vị trí tuyển dụng (JD)</td>
 </tr>
 <tr>
 <td><strong>Vai trò</strong></td>
@@ -3169,42 +3032,32 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng cho phép người phụ trách thiết lập lịch phỏng vấn cho vị trí đang quản lý. Người phụ trách có thể chọn ngày và khung giờ trong tương lai để thêm lịch phỏng vấn. Hệ thống hỗ trợ hiển thị trực quan: <br> - Ngày trong tương lai: ô màu xanh lá, có dấu cộng, cho phép thao tác. <br> - Ngày trong quá khứ: ô màu xanh dương, không cho phép thao tác. <br> - Ngày hiện tại: được highlight bằng nền đen, chữ trắng và viền tròn. Khi chọn một khung giờ, hệ thống mở popup nhập chi tiết lịch phỏng vấn.</td>
+<td>Chức năng này cho phép người phụ trách tạo các profile cho mô tả công việc, mỗi profile sẽ là một biến thể của mô tả công việc dành cho vị trí đang được chọn. Người phụ trách có toàn quyền tùy chỉnh JD cho vị trí tuyển dụng đang có trong hệ thống. Các profile này sẽ được lưu và hiển thị ở phần <strong>Danh sách mô tả</strong> khi người phụ trách truy cập vào submenu <em>Mô Tả (JD)</em>.</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
-<td>- Menu <strong>“Vị trí”</strong>.<br>- Menu phụ <strong>“Tổng quan”</strong>.<br>- Màn hình <strong>“Tổng quan vị trí”</strong> → khu vực <strong>“Lịch phỏng vấn vị trí”</strong> với bảng <strong>“Thiết lập lịch phỏng vấn”</strong>.<br>- Popup <strong>“Thêm lịch phỏng vấn”</strong>.</td>
+<td>1. Menu <strong>“Quản lý vị trí”</strong>.<br>2. Màn hình <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ <strong>“Danh sách vị trí ứng tuyển”</strong>, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình chứa <em>Danh sách mô tả</em> ở submenu <em>Mô Tả (JD)</em>.</td>
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
-<td>1. Người phụ trách đăng nhập vào hệ thống.<br>2. Vào menu <strong>“Vị trí”</strong> → menu phụ <strong>“Tổng quan”</strong>.<br>3. Hệ thống hiển thị màn hình <strong>“Tổng quan vị trí”</strong> với bảng <strong>“Thiết lập lịch phỏng vấn”</strong>.<br>4. Người phụ trách chọn tuần cần hiển thị để xem các ngày và khung giờ.<br>5. Tại bảng:<br>&emsp;- Ngày trong tương lai: ô xanh lá + dấu cộng → có thể click.<br>&emsp;- Ngày hiện tại: highlight đen/trắng, viền tròn.<br>&emsp;- Ngày quá khứ: ô xanh dương, không click được.<br>6. Người phụ trách click vào ô xanh lá (khung giờ trong tương lai).<br>7. Hệ thống hiển thị popup <strong>“Thêm lịch phỏng vấn”</strong> với thông tin sẵn có:<br>&emsp;- <strong>Vị trí</strong> (tự động điền).<br>&emsp;- <strong>Thời gian phỏng vấn</strong> (tương ứng ô được chọn).<br>8. Người phụ trách nhập/điều chỉnh <strong>Trọng số người tham gia phỏng vấn</strong> (giá trị &gt; 0).<br>9. Click <strong>“Thêm lịch phỏng vấn”</strong>.<br>10. Hệ thống lưu dữ liệu và hiển thị thông báo <strong>“Cập nhật dữ liệu thành công !”</strong>.<br>11. Lịch mới được hiển thị trong bảng.</td>
+<td>1. Người phụ trách chọn một vị trí tuyển dụng từ <strong>"Danh sách vị trí ứng tuyển"</strong>.<br>2. Hệ thống điều hướng sang màn hình chứa submenu và mặc định trỏ vào submenu <em>Tổng Quan</em>.<br>3. Người phụ trách chuyển sang submenu <em>Mô Tả (JD)</em>.<br>4. Để thiết lập một profile mô tả (JD) mới, người phụ trách cần đặt tên cho profile và phải nhấn [ENTER] để lưu.<br>5. Sau khi hệ thống đã lưu profile mới, hệ thống sẽ hiển thị tên của profile JD này lên giữa màn hình với tên của profile được in đậm ở phía trên cùng của màn hình, bên dưới tên của profile này sẽ bao gồm 2 phần:<br>&emsp;- <em>Nhập mô tả</em>: Người phụ trách nhập mô tả vào phần này, khi nhập xong và nhấn [ENTER] thì hệ thống sẽ thực hiện việc lưu dữ liệu và thông báo dạng toast cho người dùng với nội dung <em>"Đã lưu thay đổi cho +  {tên của profile đang thiết lập}"</em>  <br>&emsp;- <em>Nhập danh mục mới</em>: hệ thống quy định các danh mục để người phụ trách dễ dàng quản lý nội dung của JD, khi tạo danh mục mới, người phụ trách phải nhập tên của danh mục vào và nhấn [ENTER] để hệ thống thực hiện lưu. Sau khi lưu, hệ thống cập nhật lại danh mục đó để hiển thị ngay trên màn hình của người phụ trách (không reload).<br>6. Các thao tác với danh mục chứa nội dung của JD:<br>&emsp;- Thêm mô tả danh mục và các nội dung chi tiết bên trong<br>&emsp;- Xóa danh mục và xóa nội dung chi tiết bên trong (Khi xóa thì phải xác nhận thông qua popup cảnh báo)<br>&emsp;- Sắp xếp lại thứ tự của danh mục và sắp xếp nội dung của từng danh mục<br>7. Người phụ trách có thể bật nhiều mô tả công việc cùng lúc để tùy biến cách sử dụng (ví dụ: có thể tạo vị trí Data và tạo nhiều JD cho 6 trung tâm: Anh, Pháp, Đức, Trung, Nhật, Hàn).</td>
 </tr>
 <tr>
 <td><strong>Điều kiện</strong></td>
-<td>- Người phụ trách đã đăng nhập và có quyền quản lý lịch phỏng vấn.<br>- Chỉ được thêm lịch tại các ngày trong tương lai.<br>- Trọng số người tham gia phỏng vấn &gt; 0.</td>
+<td>Người phụ trách đã đăng nhập và truy cập vào thông tin vị trí.</td>
 </tr>
 <tr>
 <td><strong>Kết quả hiển thị</strong></td>
-<td>- Lịch phỏng vấn mới xuất hiện tại khung giờ đã chọn.<br>- Popup đóng sau khi lưu thành công.<br>- Hiển thị thông báo xác nhận <em>“Cập nhật dữ liệu thành công !”</em>.</td>
+<td>- Khi hoàn tất việc thiết lập một JD tiêu chuẩn, người phụ trách sẽ xem được nội dung của JD bao gồm: tên. mô tả, danh mục, mô tả của danh mục, các tiêu chí con trong từng danh mục.<br>- Trường hợp có nhiều JD, người phụ trách sẽ xem được nội dung tương ứng khi chọn vào JD đó.</td>
 </tr>
 <tr>
 <td><strong>Trường hợp không có dữ liệu</strong></td>
-<td>- Nếu chưa có lịch phỏng vấn nào trên bảng, toàn bộ các ô trên bảng đều .<br>- Các ô trong tương lai chưa thiết lập lịch vẫn hiển thị dấu cộng để thêm mới.<br>- Các ô trong quá khứ hiển thị màu xanh dương, không thao tác.</td>
+<td><strong>Trường hợp đã tạo JD nhưng không xem được</strong>: Cần có thông báo lỗi khi tải dữ liệu để người dùng report đến IT.<br><strong>Trường hợp vị trí tuyển dụng chưa có profile JD nào được thiết lập</strong>: Hệ thống hiển thị màn hình trống với biểu tượng "Không có dữ liệu!"</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-2-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-2-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
-<h4 id="toc-4-2-3">2.3. Thiết lập tiêu chuẩn ứng viên cho vị trí tuyển dụng</h4>
+<h4 id="toc-4-2-4">2.4. Thiết lập tiêu chuẩn ứng viên</h4>
 <details class="book">
 <summary>Thiết lập tiêu chuẩn ứng viên</summary>
 <table>
@@ -3225,15 +3078,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng cho phép người phụ trách quản lý các tiêu chuẩn đánh giá ứng viên cho từng vị trí tuyển dụng. Các tiêu chuẩn được hiển thị dưới dạng <strong>thẻ</strong> (card) có thể mở rộng/thu gọn để xem chi tiết. Bên trong mỗi thẻ là danh sách các mục đánh giá, nội dung này thay đổi tùy theo vị trí. Người phụ trách có thể thêm, sửa, xóa cả <strong>mục đánh giá</strong> lẫn <strong>thẻ tiêu chuẩn</strong>. Ngoài ra, có thể tạo thẻ mới bằng cách nhập tên tiêu chuẩn vào ô <strong>“Nhập Danh Mục Mới”</strong> và nhấn icon <strong>(+)</strong>.</td>
+<td>Chức năng giúp người phụ trách thiết lập các tiêu chuẩn để người phỏng vấn có thể đánh giá ứng viên trong quá trình phỏng vấn. Các tiêu chuẩn phỏng vấn mà người phụ trách được phép thiết lập ở chức năng / màn hình này là [<code>action_type : check (action kiểm tra)</code>].</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
-<td>- Menu chính: <strong>“Vị trí”</strong>.<br>- Menu phụ: <strong>“Phỏng vấn”</strong>.<br>- Sub-menu: <strong>“Tiêu chuẩn ứng viên”</strong>.<br>- Màn hình: <strong>“Tiêu chuẩn ứng viên”</strong>, hiển thị danh sách các thẻ tiêu chuẩn.</td>
+<td>- Menu <strong>“Quản Lý Vị trí”</strong>.<br>- Submenu: <strong>“Phỏng vấn”</strong>, bao gồm các tab: <strong>Tiêu chuẩn ứng viên</strong>, <strong>Các câu hỏi thông tin</strong>, <strong>Các vòng phỏng vấn</strong>, <strong>Thiết lập K.tra đầu vào</strong>.<br>- Tab <strong>“Tiêu chuẩn ứng viên”</strong>.</td>
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
-<td>1. Người phụ trách đăng nhập vào hệ thống.<br>2. Truy cập <strong>Menu “Vị trí” → Menu phụ “Phỏng vấn” → Sub-menu “Tiêu chuẩn ứng viên”</strong>.<br>3. Hệ thống hiển thị màn hình <strong>“Tiêu chuẩn ứng viên”</strong> với danh sách thẻ.<br>4. Người phụ trách có thể:<br>&emsp;- Nhấn vào một thẻ để mở rộng/thu gọn chi tiết.<br>&emsp;- Thêm <strong>mục đánh giá</strong> trong thẻ (nhập nội dung, bấm lưu).<br>&emsp;- Sửa nội dung mục đánh giá có sẵn.<br>&emsp;- Xóa mục đánh giá khi không cần.<br>&emsp;- Thêm <strong>thẻ tiêu chuẩn mới</strong> bằng ô <strong>“Nhập Danh Mục Mới”</strong> và nhấn <strong>(+)</strong>.<br>&emsp;- Sửa tên thẻ hoặc xóa thẻ khi cần.<br>5. Sau khi thao tác, hệ thống cập nhật và hiển thị dữ liệu mới.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>Điều kiện</strong></td>
@@ -3249,16 +3102,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-2-3/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-2-3/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -3310,16 +3153,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-3-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-3-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-3-2">3.2. Thiết lập câu hỏi phỏng vấn</h4>
 <details class="book">
@@ -3366,16 +3199,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-3-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-3-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-3-3">3.3. Thiết lập bài kiểm tra</h4>
 <details class="book">
@@ -3422,16 +3245,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-3-3/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-3-3/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-3-4">3.4. Tạo buổi phỏng vấn cho ứng viên</h4>
 <details class="book">
@@ -3478,16 +3291,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-3-4/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-3-4/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -3539,16 +3342,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-4-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-4-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-4-5">4.2. Xem lại các phản hồi của ứng viên</h4>
 <details class="book">
@@ -3595,16 +3388,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-4-5/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-4-5/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-4-6">4.3. Xem lại buổi phỏng vấn của ứng viên</h4>
 <details class="book">
@@ -3651,16 +3434,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-4-6/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-4-6/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -3712,16 +3485,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-5-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-5-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-4-5-2">5.2. Quản lý đầu ta đào tạo</h4>
 <details class="book">
@@ -3735,19 +3498,19 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </thead>
 <tbody>
 <tr>
-<td>Tên chức năng</td>
+<td><strong>Tên chức năng</strong></td>
 <td>Quản lý đầu ta đào tạo</td>
 </tr>
 <tr>
-<td>Vai trò</td>
+<td><strong>Vai trò</strong></td>
 <td>Người phụ trách</td>
 </tr>
 <tr>
-<td>Mô tả</td>
+<td><strong>Mô tả</strong></td>
 <td>Người phụ trách quản lý các tiêu chuẩn đầu ra của từng vị trí tuyển dụng, hiển thị dưới dạng thẻ. Có thể: <br>- Thêm mới thẻ đầu ra. <br>- Chỉnh sửa nội dung yêu cầu. <br>- Xóa một yêu cầu trong thẻ (có xác nhận). <br>- Xóa toàn bộ thẻ (có xác nhận). <br>- Gắn mức độ cho từng yêu cầu (Cơ bản, Trung bình, Nâng cao).</td>
 </tr>
 <tr>
-<td>Giao diện liên quan</td>
+<td><strong>Giao diện liên quan</strong></td>
 <td>- Màn hình Vị trí → chọn vị trí → Tổng quan vị trí → Tab Đào tạo → Đầu ra</td>
 </tr>
 <tr>
@@ -3755,29 +3518,19 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 <td>1. Người phụ trách đăng nhập và chọn Vị trí. <br>2. Vào tab Đầu ra. <br>3. Quản lý danh sách yêu cầu đầu ra bằng các thao tác: mở rộng, thêm mới, sửa, xóa yêu cầu hoặc thẻ. <br>4. Hệ thống lưu và hiển thị thay đổi ngay lập tức.</td>
 </tr>
 <tr>
-<td>Điều kiện</td>
+<td><strong>Điều kiện</strong></td>
 <td>- Người phụ trách có quyền quản lý vị trí.</td>
 </tr>
 <tr>
-<td>Kết quả hiển thị</td>
+<td><strong>Kết quả hiển thị</strong></td>
 <td>- Danh sách thẻ yêu cầu đầu ra hiển thị theo vị trí. <br>- Các thao tác cập nhật thành công kèm thông báo “Cập nhật dữ liệu thành công”.</td>
 </tr>
 <tr>
-<td>Trường hợp không có dữ liệu</td>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
 <td>- Nếu chưa có yêu cầu: hiển thị nút Thêm thẻ mới. <br>- Nếu thẻ rỗng: hiển thị nút Thêm nội dung mới.</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/4-5-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/4-5-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -3830,16 +3583,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/5-1-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/5-1-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-5-1-2">1.2. Xem lịch sử phỏng vấn</h4>
 <details class="book">
@@ -3886,16 +3629,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/5-1-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/5-1-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -3947,16 +3680,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/5-2-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/5-2-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-5-2-2">2.2. Xem kết quả bài kiểm tra của ứng viên</h4>
 <details class="book">
@@ -4003,16 +3726,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/5-2-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/5-2-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-5-2-3">2.3. Xem câu trả lời của ứng viên</h4>
 <details class="book">
@@ -4059,16 +3772,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/5-2-3/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/5-2-3/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-5-2-4">2.4. Xem lại buổi phỏng vấn ứng viên</h4>
 <details class="book">
@@ -4115,16 +3818,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/5-2-4/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/5-2-4/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -4177,16 +3870,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/6-1-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/6-1-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-6-1-2">1.2. Xem tất cả các ứng viên được gán</h4>
 <details class="book">
@@ -4233,16 +3916,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/6-1-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/6-1-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -4294,16 +3967,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/6-2-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/6-2-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 <h4 id="toc-6-2-2">2.2. Đánh giá đầu ra đào tạo</h4>
 <details class="book">
@@ -4350,16 +4013,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/6-2-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/6-2-2/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
 </details>
 <hr />
@@ -4412,75 +4065,101 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/7-1-1/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Chưa có hình ảnh minh họa</p>
-<p>Thư mục <code>assets/images/buddy/7-1-1/</code> hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
 </details>
+</details>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+📸 Hình ảnh minh họa
+
+&gt; **📁 Thư mục nguồn:** `assets/images/buddy/3-1-1/`
+
+        !!! warning &quot;⚠️ Chưa có hình ảnh minh họa&quot;
+        Thư mục `assets/images/buddy/3-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+
+    *Bấm vào từng ảnh để xem chi tiết.*
+</code></pre></div>
 <h4 id="toc-7-1-2">1.2. Xem mục tiêu (đầu ra) đào tạo</h4>
-<details class="book">
-<summary>Xem mục tiêu (đầu ra) đào tạo (Người được đào tạo)</summary>
-<table>
-<thead>
-<tr>
-<th>Trường</th>
-<th>Nội dung</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Tên chức năng</strong></td>
-<td>Xem mục tiêu (đầu ra) đào tạo</td>
-</tr>
-<tr>
-<td><strong>Vai trò</strong></td>
-<td>Người được đào tạo</td>
-</tr>
-<tr>
-<td><strong>Mô tả</strong></td>
-<td>Người được đào tạo có thể xem các tiêu chuẩn đầu ra của vị trí, bao gồm: <br>- Danh mục yêu cầu đầu ra hiển thị thành cụm rõ ràng. <br>- Khi mở rộng danh mục, hiển thị các tiêu chí con và mức đánh giá do Người đào tạo nhập. <br>- Chỉ có quyền xem, không thể chỉnh sửa.</td>
-</tr>
-<tr>
-<td><strong>Giao diện liên quan</strong></td>
-<td>- Menu Mục tiêu đào tạo</td>
-</tr>
-<tr>
-<td><strong>Luồng thao tác chính</strong></td>
-<td>1. Người được đào tạo đăng nhập và chọn menu Mục tiêu đào tạo. <br>2. Hệ thống hiển thị danh sách mục tiêu đầu ra. <br>3. Người được đào tạo có thể mở rộng danh mục để xem các tiêu chí con và đánh giá.</td>
-</tr>
-<tr>
-<td><strong>Điều kiện</strong></td>
-<td>- Người được đào tạo có tài khoản hợp lệ. <br>- Ứng viên đã được gán vào quy trình đào tạo có tiêu chuẩn đầu ra.</td>
-</tr>
-<tr>
-<td><strong>Kết quả hiển thị</strong></td>
-<td>- Danh sách tiêu chuẩn đầu ra hiển thị kèm đánh giá từ người đào tạo.</td>
-</tr>
-<tr>
-<td><strong>Trường hợp không có dữ liệu</strong></td>
-<td>- Nếu ứng viên chưa được gán chương trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<p>📸 Hình ảnh minh họa</p>
-<blockquote>
-<p><strong>📁 Thư mục nguồn:</strong> <code>assets/images/buddy/7-1-2/</code></p>
-</blockquote>
-<div class="admonition warning">
-<p class="admonition-title">⚠️ Thư mục không tồn tại</p>
-<p>Thư mục <code>assets/images/buddy/7-1-2/</code> chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.</p>
-</div>
-<p><em>Bấm vào từng ảnh để xem chi tiết.</em></p>
-</details>
-<hr />
-</details>
+<div class="language-text highlight"><pre><span></span><code>??? book &quot;Xem mục tiêu (đầu ra) đào tạo (Người được đào tạo)&quot;
+      | Trường | Nội dung |
+      | ------ | -------- |
+      | **Tên chức năng** | Xem mục tiêu (đầu ra) đào tạo |
+      | **Vai trò** | Người được đào tạo |
+      | **Mô tả** | Người được đào tạo có thể xem các tiêu chuẩn đầu ra của vị trí, bao gồm: &lt;br&gt;- Danh mục yêu cầu đầu ra hiển thị thành cụm rõ ràng. &lt;br&gt;- Khi mở rộng danh mục, hiển thị các tiêu chí con và mức đánh giá do Người đào tạo nhập. &lt;br&gt;- Chỉ có quyền xem, không thể chỉnh sửa. |
+      | **Giao diện liên quan** | - Menu Mục tiêu đào tạo |
+      | **Luồng thao tác chính** | 1. Người được đào tạo đăng nhập và chọn menu Mục tiêu đào tạo. &lt;br&gt;2. Hệ thống hiển thị danh sách mục tiêu đầu ra. &lt;br&gt;3. Người được đào tạo có thể mở rộng danh mục để xem các tiêu chí con và đánh giá. |
+      | **Điều kiện** | - Người được đào tạo có tài khoản hợp lệ. &lt;br&gt;- Ứng viên đã được gán vào quy trình đào tạo có tiêu chuẩn đầu ra. |
+      | **Kết quả hiển thị** | - Danh sách tiêu chuẩn đầu ra hiển thị kèm đánh giá từ người đào tạo. |
+      | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa được gán chương trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. |
+</code></pre></div>
 
 
 
@@ -4538,6 +4217,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         <script src="../scripts/open-toc-book.js"></script>
       
         <script src="../scripts/serinus-layout.js"></script>
+      
+        <script src="../scripts/global-motion.js"></script>
       
         <script src="../scripts/home.js"></script>
       

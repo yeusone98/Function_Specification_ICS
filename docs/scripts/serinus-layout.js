@@ -1,5 +1,6 @@
 (function () {
   "use strict";
+  var mobileDocumentsOpen = false;
 
   function normalizePathname(pathname) {
     return pathname.replace(/\/index\.html$/, "/").replace(/\/$/, "") || "/";
@@ -719,14 +720,23 @@
       return;
     }
 
-    title.removeAttribute("for");
-
     var icon = title.querySelector(".md-nav__icon");
     title.textContent = "";
     if (icon) {
       title.appendChild(icon);
     }
     title.appendChild(document.createTextNode(labelText));
+  }
+
+  function getHomeHref() {
+    var logo = document.querySelector(".md-header__button.md-logo");
+    var rawHref = logo ? logo.getAttribute("href") || "." : ".";
+
+    try {
+      return new URL(rawHref, window.location.href).href;
+    } catch (_error) {
+      return rawHref;
+    }
   }
 
   function renderPrimaryTableOfContents(sections, activeSectionId) {
@@ -743,6 +753,101 @@
     }
 
     tocList.innerHTML = "";
+
+    function appendNavItem(label, href, isActive) {
+      var item = document.createElement("li");
+      item.className = "md-nav__item";
+
+      var link = document.createElement("a");
+      link.className = "md-nav__link" + (isActive ? " md-nav__link--active" : "");
+      link.href = href;
+
+      var text = document.createElement("span");
+      text.className = "md-ellipsis";
+      text.textContent = label;
+
+      link.appendChild(text);
+      item.appendChild(link);
+      tocList.appendChild(item);
+    }
+
+    var currentPath = normalizePathname(window.location.pathname);
+    var links = getSiteLinks();
+    var globalNav = [
+      { label: "Trang chủ", href: links.home },
+      { label: "ICS", href: links.ics },
+      { label: "Buddy", href: links.buddy },
+      { label: "App Sakumi", href: links.sakumi },
+      { label: "App Đắc Nhân", href: links.dacnhan },
+      { label: "Test Plan", href: links.testplan },
+    ];
+
+    if (window.matchMedia("(max-width: 76.24em)").matches) {
+      var docsItem = document.createElement("li");
+      docsItem.className = "md-nav__item md-nav__item--nested md-mobile-docs";
+
+      var docsToggle = document.createElement("button");
+      docsToggle.type = "button";
+      docsToggle.className = "md-nav__link md-mobile-docs__toggle";
+      docsToggle.setAttribute("aria-expanded", mobileDocumentsOpen ? "true" : "false");
+
+      var docsText = document.createElement("span");
+      docsText.className = "md-ellipsis";
+      docsText.textContent = "Tài Liệu";
+
+      var docsCaret = document.createElement("span");
+      docsCaret.className = "md-mobile-docs__caret";
+      docsCaret.setAttribute("aria-hidden", "true");
+
+      docsToggle.appendChild(docsText);
+      docsToggle.appendChild(docsCaret);
+
+      var docsNav = document.createElement("nav");
+      docsNav.className = "md-nav md-mobile-docs__menu";
+
+      var docsList = document.createElement("ul");
+      docsList.className = "md-nav__list";
+
+      globalNav.forEach(function (entry) {
+        var entryPath = normalizePathname(new URL(entry.href, window.location.href).pathname);
+        var docItem = document.createElement("li");
+        docItem.className = "md-nav__item";
+
+        var docLink = document.createElement("a");
+        docLink.className = "md-nav__link" + (entryPath === currentPath ? " md-nav__link--active" : "");
+        docLink.href = entry.href;
+
+        var docText = document.createElement("span");
+        docText.className = "md-ellipsis";
+        docText.textContent = entry.label;
+
+        docLink.appendChild(docText);
+        docItem.appendChild(docLink);
+        docsList.appendChild(docItem);
+      });
+
+      docsNav.appendChild(docsList);
+      docsItem.appendChild(docsToggle);
+      docsItem.appendChild(docsNav);
+      tocList.appendChild(docsItem);
+
+      function applyDocsState() {
+        docsItem.classList.toggle("is-open", mobileDocumentsOpen);
+        docsToggle.setAttribute("aria-expanded", mobileDocumentsOpen ? "true" : "false");
+        docsNav.hidden = !mobileDocumentsOpen;
+      }
+
+      docsToggle.addEventListener("click", function () {
+        mobileDocumentsOpen = !mobileDocumentsOpen;
+        applyDocsState();
+      });
+
+      applyDocsState();
+    } else {
+      var homeHref = getHomeHref();
+      var homePath = normalizePathname(new URL(homeHref, window.location.href).pathname);
+      appendNavItem("Trang chủ", homeHref, homePath === currentPath);
+    }
 
     sections.forEach(function (section) {
       var item = document.createElement("li");

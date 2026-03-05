@@ -365,15 +365,9 @@ details.book[open] summary~* {
   max-width: 96rem;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 76.25em) {
   .md-sidebar--primary {
     width: 17rem;
-  }
-
-  @media (max-width: 1200px) {
-    .md-sidebar--secondary {
-      display: none;
-    }
   }
 
   .md-sidebar--secondary {
@@ -1500,6 +1494,23 @@ body.md-has-mega-nav .md-search {
     height: 100% !important;
   }
 
+  .md-sidebar--primary,
+  .md-sidebar--primary .md-sidebar__scrollwrap,
+  .md-sidebar--primary .md-sidebar__inner,
+  .md-sidebar--primary nav.md-nav--primary {
+    background: var(--serinus-bg) !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .md-sidebar--primary {
+    border-right: 1px solid color-mix(in srgb, var(--serinus-divider) 92%, transparent) !important;
+  }
+
+  .md-sidebar--primary .md-nav--primary > .md-nav__title {
+    background: var(--serinus-bg-alt) !important;
+  }
+
   .md-sidebar--primary .md-nav__list,
   .md-sidebar--secondary [data-md-component="toc"] {
     border-left: 0 !important;
@@ -1517,6 +1528,58 @@ body.md-has-mega-nav .md-search {
   .md-sidebar--primary .md-nav--primary>.md-nav__title::after,
   .md-sidebar--secondary .md-nav__title::after {
     content: none !important;
+  }
+
+  .md-sidebar--primary .md-nav__title {
+    pointer-events: auto !important;
+  }
+
+  .md-sidebar--primary .md-nav__title .md-nav__icon {
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .md-sidebar--primary .md-nav__item--nested > label.md-nav__link .md-nav__icon {
+    display: none !important;
+  }
+
+  .md-sidebar--primary .md-mobile-docs__toggle {
+    width: 100%;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .md-sidebar--primary .md-mobile-docs__caret {
+    flex: none;
+    width: 0.42rem;
+    height: 0.42rem;
+    border-right: 1.7px solid currentColor;
+    border-bottom: 1.7px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -0.12rem;
+    transition: transform 0.18s ease;
+  }
+
+  .md-sidebar--primary .md-mobile-docs.is-open .md-mobile-docs__caret {
+    transform: rotate(225deg);
+    margin-top: 0.08rem;
+  }
+
+  .md-sidebar--primary .md-mobile-docs__menu[hidden] {
+    display: none !important;
+  }
+
+  .md-sidebar--primary .md-mobile-docs__menu .md-nav__list {
+    margin-top: 0.12rem;
+    padding-left: 0.72rem;
+    border-left: 1px solid color-mix(in srgb, var(--serinus-divider) 92%, transparent);
   }
 }
 

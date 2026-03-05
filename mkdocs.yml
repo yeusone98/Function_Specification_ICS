@@ -33,6 +33,7 @@ theme:
 extra_css:
   - styles/extra.css
   - styles/home.css
+  - styles/motion-refresh.css
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
@@ -66,4 +67,5 @@ extra:
 extra_javascript:
   - scripts/open-toc-book.js
   - scripts/serinus-layout.js
+  - scripts/global-motion.js
   - scripts/home.js
