@@ -48,7 +48,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
   </table>
 </div>
 
-## III. Đặc tả chức năng chung của các vai trò {#toc-3}
+## III. Đặc tả chức năng chung của các vai trò và mô tả action board {#toc-3}
 ???+ info "1. Các chức năng chung của các vai trò"
     ### 1. Các chức năng chung của các vai trò {#toc-3-1}
     #### 1.1. Đăng nhập tài khoản {#toc-3-1-1}
@@ -515,7 +515,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
     ??? book "Thiết lập các vòng phỏng vấn"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập quy trình phỏng vấn |
+        | **Tên chức năng** | Thiết lập các vòng phỏng vấn |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Chức năng cho phép người phụ trách quản lý các vòng phỏng vấn của một vị trí tuyển dụng. <br><br>- Các vòng phỏng vấn được hiển thị trong **danh sách bên phải màn hình**, mỗi vòng thể hiện dưới dạng **thẻ** kèm trạng thái (Kích hoạt / Vô hiệu / Xóa). <br>- Khi mở rộng một thẻ, hệ thống hiển thị **danh sách mục con** (tiêu chí đánh giá). <br>- Khi chọn một mục con, phần màn hình bên trái hiển thị chi tiết các **tiêu chí đánh giá** của mục đó. <br>- Người phụ trách có thể **thêm, sửa, xóa** các tiêu chí. <br>- Khi mở rộng tiêu chí, hiển thị chi tiết **các yêu cầu** gắn với tiêu chí đó và trạng thái thể hiện **mức độ cần thiết** của yêu cầu đối với vị trí ứng tuyển. |
         | **Giao diện liên quan** | - Menu chính: **“Vị trí”**.<br>- Menu phụ: **“Phỏng vấn”**.<br>- Sub-menu: **“Các Vòng Phỏng Vấn”**.<br>- Màn hình: **“Các Vòng Phỏng Vấn”** gồm:<br>&emsp;+ Cột bên phải: Danh sách thẻ vòng phỏng vấn.<br>&emsp;+ Khu vực bên trái: Hiển thị tiêu chí và yêu cầu chi tiết của mục con. |
@@ -559,7 +559,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
     ??? book "Thiết lập bài kiểm tra"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập bài kiểm tra |
+        | **Tên chức năng** | Quản lý quy trình đào tạo |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | - Người phụ trách tạo và quản lý các bài kiểm tra đầu vào cho từng vị trí. <br>- Bài kiểm tra hiển thị dạng **thẻ** kèm trạng thái (Kích hoạt / Vô hiệu / Xóa). <br>- Người phụ trách có thể thêm, sửa tên, đổi trạng thái, quản lý **danh mục** và **câu hỏi** trong bài kiểm tra. <br>- Khi ứng viên ứng tuyển vào vị trí có bài kiểm tra: <br>&emsp;+ Hệ thống hiển thị bài kiểm tra tương ứng. <br>&emsp;+ Ứng viên bắt buộc hoàn thành bài kiểm tra trước khi nộp hồ sơ. |
         | **Giao diện liên quan** | - Menu chính: **“Vị trí”**. <br>- Menu phụ: **“Phỏng vấn”**. <br>- Sub-menu: **“Kiểm Tra Đầu Vào”**. <br>- Màn hình quản lý: hiển thị danh sách bài kiểm tra (bên phải) và chi tiết bài kiểm tra (bên trái). <br>- Giao diện ứng viên: form ứng tuyển hiển thị thêm phần bài kiểm tra nếu vị trí có cấu hình. |
@@ -581,7 +581,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
     ??? book "Tạo buổi phỏng vấn cho ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Tạo buổi phỏng vấn cho ứng viên |
+        | **Tên chức năng** | Quản lý đầu ta đào tạo |
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Chức năng cho phép người phụ trách gán thông tin về **người phỏng vấn** và **thời gian phỏng vấn** cho từng vòng phỏng vấn đã được hệ thống cố định sẵn của ứng viên. Khi một buổi phỏng vấn chưa có người thực hiện (interviewer), hệ thống hiển thị nút `"Handler chưa assign"` kèm theo 2 nút thao tác: <br> - **Nút "Handler chưa assign" kèm icon lịch:** mở popup Lịch để chọn thời gian phỏng vấn. <br> - **Nút "Handler chưa assign":** mở popup "Chọn người phỏng vấn", hiển thị danh sách tất cả người phỏng vấn trong công ty để chọn. |
         | **Giao diện liên quan** | - Trang "Danh sách ứng viên" → chọn một ứng viên cụ thể. <br>- Tab "Phỏng vấn" trong trang chi tiết ứng viên.<br>- Popup lịch chọn ngày phỏng vấn.<br>- Popup "Chọn người phỏng vấn". |
@@ -598,9 +598,9 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
-???+ info "4. Nhóm chức năng để đánh giá ứng viên"
-    ### 4. Nhóm chức năng để đánh giá ứng viên {#toc-4-4}
-    #### 4.1. Xem lại kết quả kiểm tra của ứng viên {#toc-4-4-1}
+???+ info "5. Nhóm chức năng để đánh giá ứng viên"
+    ### 5. Nhóm chức năng để đánh giá ứng viên {#toc-4-5}
+    #### 5.1. Xem lại kết quả kiểm tra của ứng viên {#toc-4-5-1}
     ??? book "Xem lại kết quả kiểm tra ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
