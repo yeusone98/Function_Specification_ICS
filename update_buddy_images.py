@@ -46,10 +46,10 @@ def generate_image_section(section_id, boundary_type='next_section'):
     lines.append(f"")
 
     if not exists:
-        lines.append(f'        !!! warning "⚠️ Thư mục không tồn tại"')
+        lines.append(f'        !!! warning "Thư mục không tồn tại"')
         lines.append(f"            Thư mục `assets/images/buddy/{section_id}/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.")
     elif not images:
-        lines.append(f'        !!! warning "⚠️ Chưa có hình ảnh minh họa"')
+        lines.append(f'        !!! warning "Chưa có hình ảnh minh họa"')
         lines.append(f"            Thư mục `assets/images/buddy/{section_id}/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.")
     else:
         for image in images:
