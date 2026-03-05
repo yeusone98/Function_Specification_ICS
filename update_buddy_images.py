@@ -64,7 +64,7 @@ def generate_image_section(section_id, boundary_type='next_section'):
     if boundary_type == 'next_section':
         lines.append(f"")
 
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines)
 
 
 def find_image_block_range(content, search_from):
