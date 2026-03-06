@@ -400,6 +400,18 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | Người phụ trách đã đăng nhập và truy cập vào thông tin vị trí. |
         | **Kết quả hiển thị** | - Khi hoàn tất việc thiết lập một JD tiêu chuẩn, người phụ trách sẽ xem được nội dung của JD bao gồm: tên. mô tả, danh mục, mô tả của danh mục, các tiêu chí con trong từng danh mục.<br>- Trường hợp có nhiều JD, người phụ trách sẽ xem được nội dung tương ứng khi chọn vào JD đó.  |
         | **Trường hợp không có dữ liệu** | **Trường hợp đã tạo JD nhưng không xem được**: Cần có thông báo lỗi khi tải dữ liệu để người dùng report đến IT.<br>**Trường hợp vị trí tuyển dụng chưa có profile JD nào được thiết lập**: Hệ thống hiển thị màn hình trống với biểu tượng "Không có dữ liệu!"|
+    #### 3.5. Thiết lập bài kiểm tra đầu vào {#toc-4-3-4}
+    ??? book "Thiết lập bài kiểm tra đầu vào"
+        | Trường | Nội dung |
+        | ------ | -------- |
+        | **Tên chức năng** | Thiết lập bài kiểm tra đầu vào |
+        | **Vai trò** |  |
+        | **Mô tả** |  |
+        | **Giao diện liên quan** |  |
+        | **Luồng thao tác chính** |  |
+        | **Điều kiện** |  |
+        | **Kết quả hiển thị** |  |
+        | **Trường hợp không có dữ liệu** |  |
 ---
 ???+ info "4. Nhóm chức năng quản lý phỏng vấn"
     ### 4. Nhóm chức năng quản lý phỏng vấn {#toc-4-4}
