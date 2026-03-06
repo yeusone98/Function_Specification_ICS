@@ -16,6 +16,6 @@
 
 **TỰ ĐỘNG UPDATE HÌNH ẢNH (SỬ DỤNG CỬA SỔ TERMINAL)**
 *Chạy lệnh sau*
-python update_buddy_images.py
+python buddy_images.py
 
 *Lưu ý: Đảm bảo có môi trường dành cho Python*
