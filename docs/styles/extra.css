@@ -224,7 +224,7 @@ details.book[open] summary~* {
   margin-bottom: 1.2rem;
   padding: 1.1rem 1.4rem;
   border-radius: 16px;
-  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, #146c5f 100%);
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, #283593 100%);
   color: #ffffff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -304,7 +304,7 @@ details.book[open] summary~* {
 .md-sidebar--primary .md-nav__link--active,
 .md-sidebar--primary .md-nav__link:focus,
 .md-sidebar--primary .md-nav__link:hover {
-  background: rgba(20, 108, 95, 0.15);
+  background: rgba(63, 81, 181, 0.15);
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link--active,
@@ -338,22 +338,22 @@ details.book[open] summary~* {
 /* ---- Details blocks (accordion) ---- */
 .md-typeset details {
   border-radius: 12px;
-  border: 1px solid rgba(20, 108, 95, 0.35);
+  border: 1px solid rgba(63, 81, 181, 0.35);
   overflow: visible;
 }
 
 [data-md-color-scheme="slate"] .md-typeset details {
-  border-color: rgba(20, 108, 95, 0.55);
+  border-color: rgba(63, 81, 181, 0.55);
 }
 
 .md-typeset details>summary {
-  background: linear-gradient(90deg, rgba(20, 108, 95, 0.18), rgba(20, 108, 95, 0.06));
-  border-bottom: 1px solid rgba(20, 108, 95, 0.25);
+  background: linear-gradient(90deg, rgba(63, 81, 181, 0.18), rgba(63, 81, 181, 0.06));
+  border-bottom: 1px solid rgba(63, 81, 181, 0.25);
 }
 
 [data-md-color-scheme="slate"] .md-typeset details>summary {
-  background: linear-gradient(90deg, rgba(20, 108, 95, 0.28), rgba(20, 108, 95, 0.08));
-  border-bottom-color: rgba(20, 108, 95, 0.4);
+  background: linear-gradient(90deg, rgba(63, 81, 181, 0.28), rgba(63, 81, 181, 0.08));
+  border-bottom-color: rgba(63, 81, 181, 0.4);
 }
 
 .md-typeset details>summary:hover {
@@ -1526,3 +1526,38 @@ body.md-has-mega-nav .md-search {
     height: 2.35rem !important;
   }
 }
+
+/* ==========================================================
+   ANIMATIONS — Reading Progress Bar, Fade-in, Smooth Accordion
+   ========================================================== */
+
+/* ---- 1. Reading Progress Bar ---- */
+#pls-read-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #5e73ff, #818cf8, #a5b4fc);
+  border-radius: 0 999px 999px 0;
+  transition: width 0.1s linear;
+  pointer-events: none;
+  /* subtle glow */
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.7);
+}
+
+/* ---- 2. Content Fade-in on Page Load ---- */
+.pls-fade-enter {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.pls-fade-enter--active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.52s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+

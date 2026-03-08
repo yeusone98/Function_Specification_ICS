@@ -10,26 +10,34 @@ nav:
 theme:
   name: material
   font:
-    text: Merriweather Sans
-    code: Red Hat Mono
+    text: Inter
+    code: Fira Code
   logo: assets/images/pls-logo.svg
   favicon: assets/images/favicon.png
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - header.autohide
   palette:
     # Dark Mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
-      primary: teal
-      accent: amber
+        name: Chế độ sáng (Light mode)
+      primary: indigo
+      accent: blue
 
     # Light Mode
     - scheme: default
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: teal
-      accent: amber
+        name: Chế độ tối (Dark mode)
+      primary: indigo
+      accent: blue
 extra_css:
   - styles/extra.css
   - styles/home.css
@@ -67,3 +75,4 @@ extra_javascript:
   - scripts/open-toc-book.js
   - scripts/serinus-layout.js
   - scripts/home.js
+  - scripts/animations.js

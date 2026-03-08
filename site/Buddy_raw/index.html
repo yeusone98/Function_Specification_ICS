@@ -1,0 +1,3849 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>👔 Tài liệu đặc tả chức năng Buddy - Poro Language Space</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/extra.css">
+    
+      <link rel="stylesheet" href="../styles/home.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tai-lieu-ac-ta-chuc-nang-buddy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Poro Language Space" class="md-header__button md-logo" aria-label="Poro Language Space" data-md-component="logo">
+      
+  <img src="../assets/images/pls-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Poro Language Space
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              👔 Tài liệu đặc tả chức năng Buddy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Chế độ sáng (Light mode)"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Chế độ sáng (Light mode)" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Chế độ tối (Dark mode)"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Chế độ tối (Dark mode)" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Poro Language Space" class="md-nav__button md-logo" aria-label="Poro Language Space" data-md-component="logo">
+      
+  <img src="../assets/images/pls-logo.svg" alt="logo">
+
+    </a>
+    Poro Language Space
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trang Chủ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tài Liệu
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tài Liệu
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ICS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Buddy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Buddy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appsakumi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App Sakumi
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appdacnhan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App Đắc Nhân
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Test Plan
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-gioi-thieu-he-thong-va-tai-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      I. Giới thiệu hệ thống và tài liệu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I. Giới thiệu hệ thống và tài liệu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-ve-he-thong-pls-buddy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Về hệ thống PLS Buddy +
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ve-fsd-pls-buddy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Về FSD PLS Buddy +
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-cac-vai-tro-trong-he-thong" class="md-nav__link">
+    <span class="md-ellipsis">
+      II. Các vai trò trong hệ thống
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II. Các vai trò trong hệ thống">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bảng vai trò
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#toc-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      III. Đặc tả chức năng chung của các vai trò và mô tả action board
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="III. Đặc tả chức năng chung của các vai trò và mô tả action board">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Các chức năng chung của các vai trò
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Các chức năng chung của các vai trò">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Đăng nhập tài khoản
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Cập nhật tài khoản
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Đổi mật khẩu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Thay đổi vai trò (đối với tài khoản có nhiều vai trò)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Đăng xuất khỏi tài khoản
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mô tả action board
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Mô tả action board">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-3-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Chi tiết về action board
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-ac-ta-chuc-nang-danh-cho-handler-nguoi-phu-trach" class="md-nav__link">
+    <span class="md-ellipsis">
+      IV. Đặc tả chức năng dành cho Handler (Người Phụ Trách)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IV. Đặc tả chức năng dành cho Handler (Người Phụ Trách)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Nhóm chức năng giữa người phụ trách - ứng viên
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Nhóm chức năng giữa người phụ trách - ứng viên">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Hiển thị bảng danh sách các ứng viên cho người phụ trách
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Tùy chọn hiển thị cột trong bảng danh sách ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Sắp xếp thứ tự ưu tiên theo từng cột
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Cơ chế sắp xếp theo nhiều cột đã chọn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Tìm kiếm ứng viên theo ký tự
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. Quản lý thông tin chi tiết của ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7. Thêm ứng viên mới
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8. Tạo đơn ứng tuyển cho ứng viên đã từng apply
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-9" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9. Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-1-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.10. Tự động gán người phụ trách ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Nhóm chức năng quản lý tuyển dụng ứng viên
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Nhóm chức năng quản lý tuyển dụng ứng viên">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Tạo buổi phỏng vấn ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Xem chi tiết buổi phỏng vấn ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Quản lý ghi chú dành cho ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Đánh giá ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Xem lại các đánh giá gần đây
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6. Quản lý HĐLĐ với ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7. Quản lý HĐLĐ với ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-2-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8. Quản lý thử việc dành cho ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Nhóm chức năng quản lý vị trí tuyển dụng
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Nhóm chức năng quản lý vị trí tuyển dụng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Xem danh sách vị trí tuyển dụng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Tạo vị trí tuyển dụng mới
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3. Xem thông tin tổng quan về vị trí tuyển dụng
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4. Thiết lập mô tả vị trí tuyển dụng (JD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5. Thiết lập bài kiểm tra đầu vào
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Nhóm chức năng quản lý phỏng vấn
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Nhóm chức năng quản lý phỏng vấn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-4-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Thiết lập tiêu chuẩn ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Thiết lập các vòng phỏng vấn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-4-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. Thiết lập bài kiểm tra đầu vào (Request Anh Dương để sửa nên sẽ thêm vào sau)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Nhóm chức năng quản lý đào tạo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Nhóm chức năng quản lý đào tạo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-5-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Quản lý quy trình đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-5-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Quản lý đầu ra đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-5-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Quản lý tài liệu đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Nhóm chức năng quản lý sau đào tạo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Nhóm chức năng quản lý sau đào tạo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-6-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Quản lý quá trình thử việc sau khi hoàn thành đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-6-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Quản lý các tiêu chí đánh giá sau đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Nhóm chức năng để đánh giá ứng viên
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Nhóm chức năng để đánh giá ứng viên">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-7-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Xem lại kết quả kiểm tra của ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-7-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Xem lại phản hồi ứng viên (check log)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-4-7-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Xem lại buổi phỏng vấn của ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-ac-ta-chuc-nang-danh-cho-interviewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      V. Đặc tả chức năng dành cho Interviewer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="V. Đặc tả chức năng dành cho Interviewer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Nhóm chức năng quản lý lịch phỏng vấn
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Nhóm chức năng quản lý lịch phỏng vấn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Xem lịch phỏng vấn các ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Xem lịch sử phỏng vấn
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Xem thông tin về ứng viên
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Xem thông tin về ứng viên">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Xem thông tin cá nhân ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Xem kết quả bài kiểm tra của ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Xem câu trả lời của ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-5-2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Xem lại buổi phỏng vấn ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-ac-ta-chuc-nang-danh-cho-trainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      VI. Đặc tả chức năng dành cho Trainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VI. Đặc tả chức năng dành cho Trainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-6-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Xem thông tin về ứng viên
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Xem thông tin về ứng viên">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-6-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Xem thông tin cá nhân ứng viên
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-6-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Xem tất cả các ứng viên được gán
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-6-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Cụm chức năng quản lý đào tạo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Cụm chức năng quản lý đào tạo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-6-2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Quản lý và đánh giá quy trình đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-6-2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Đánh giá đầu ra đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-ac-ta-chuc-nang-danh-cho-trainee" class="md-nav__link">
+    <span class="md-ellipsis">
+      VII. Đặc tả chức năng dành cho Trainee
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VII. Đặc tả chức năng dành cho Trainee">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-7-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Cụm chức năng dành cho Trainee
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Cụm chức năng dành cho Trainee">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toc-7-1-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Xem quy trình đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-7-1-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Xem mục tiêu (đầu ra) đào tạo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tai-lieu-ac-ta-chuc-nang-buddy">👔 Tài liệu đặc tả chức năng Buddy</h1>
+<h2 id="i-gioi-thieu-he-thong-va-tai-lieu">I. Giới thiệu hệ thống và tài liệu</h2>
+<h3 id="1-ve-he-thong-pls-buddy">1. Về hệ thống PLS Buddy +</h3>
+<p>PLS Buddy+ là hệ thống hỗ trợ quản lý toàn bộ vòng đời tuyển dụng và đào tạo nhân sự trong doanh nghiệp.
+Hệ thống cung cấp các chức năng chính bao gồm: quản lý ứng viên, quản lý vị trí tuyển dụng, quản lý phỏng vấn, quản lý đào tạo, và phân quyền theo vai trò.
+Mục tiêu của PLS Buddy+ là giúp các bên liên quan (người phụ trách, người phỏng vấn, người đào tạo, ứng viên) dễ dàng tương tác, theo dõi tiến trình, và tối ưu hiệu quả quản lý tuyển dụng – đào tạo.</p>
+<h3 id="2-ve-fsd-pls-buddy">2. Về FSD PLS Buddy +</h3>
+<p>FSD PLS Buddy+ là tài liệu đặc tả chức năng (Functional Specification Document – FSD) của hệ thống <strong>PLS Buddy+</strong>.
+Tài liệu này mô tả chi tiết các <strong>chức năng, luồng xử lý, giao diện liên quan, điều kiện và kết quả hiển thị</strong> của từng chức năng trong hệ thống.
+Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội ngũ phát triển, kiểm thử và vận hành hệ thống, đảm bảo việc xây dựng, triển khai và sử dụng PLS Buddy+ thống nhất và hiệu quả.</p>
+<hr />
+<h2 id="ii-cac-vai-tro-trong-he-thong">II. Các vai trò trong hệ thống</h2>
+<h3 id="toc-2-1">Bảng vai trò</h3>
+<div class="table-container">
+  <table class="custom-table">
+    <thead>
+      <tr>
+        <th class="smaller_th">Vai trò</th>
+        <th>Mô tả chức năng chính</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="bold">Người quản lý (Master)</td>
+            <td class="light" style="text-align:left">Quyền hạn cao nhất trong hệ thống, Master có quyền thêm / xóa / sửa tài khoản của các vai trò vào hệ thống, thêm / xóa / sửa các vị trí tuyển dụng được hiển thị trên hệ thống</td>
+        </tr>
+        <tr>
+            <td class="bold">Người phụ trách (Handler)</td>
+            <td class="light" style="text-align:left">Quản lý toàn bộ quy trình tuyển dụng: thêm và cập nhật ứng viên, gán người phỏng vấn/người đào tạo, theo dõi trạng thái ứng viên, thiết lập vị trí tuyển dụng, tiêu chuẩn, lịch phỏng vấn và quy trình đào tạo.</td>
+        </tr>
+        <tr>
+            <td class="bold">Người phỏng vấn (Interviewer)</td>
+            <td class="light" style="text-align:left">Thực hiện phỏng vấn ứng viên được phân công, đánh giá kết quả phỏng vấn theo bộ câu hỏi và tiêu chí đánh giá, xem lịch và lịch sử phỏng vấn các ứng viên được gán.</td>
+        </tr>
+        <tr>
+            <td class="bold">Người đào tạo (Trainer)</td>
+            <td class="light" style="text-align:left">Tham gia đào tạo ứng viên/nhân sự sau khi được gán, theo dõi và đánh giá tiến trình đào tạo, sử dụng tài liệu đào tạo, quản lý lịch trình và tiêu chuẩn đào tạo của ứng viên được phân công.</td>
+        </tr>
+        <tr>
+            <td class="bold">Ứng viên / Người được đào tạo (Trainee)</td>
+            <td class="light" style="text-align:left">Ứng tuyển vị trí, tham gia phỏng vấn và làm bài kiểm tra. Khi được chuyển sang trạng thái đào tạo, trở thành Người được đào tạo, có thể theo dõi mục tiêu đào tạo, lịch trình, tài liệu và kết quả đánh giá đào tạo.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="toc-3">III. Đặc tả chức năng chung của các vai trò và mô tả action board</h2>
+<details class="info" open="open">
+<summary>1. Các chức năng chung của các vai trò</summary>
+<h3 id="toc-3-1">1. Các chức năng chung của các vai trò</h3>
+<h4 id="toc-3-1-1">1.1. Đăng nhập tài khoản</h4>
+<details class="book">
+<summary>Đăng nhập tài khoản</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Đăng nhập tài khoản</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách, Người đào tạo, Người phỏng vấn, Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người dùng có tài khoản hợp lệ đăng nhập vào hệ thống. <br>- Người dùng nhập thông tin tài khoản và chọn trung tâm muốn làm việc. <br>- Hệ thống kiểm tra tính hợp lệ của tài khoản (đúng tên đăng nhập/mật khẩu, và tài khoản không bị vô hiệu hóa). <br>- Nếu tài khoản có nhiều phân quyền, hệ thống mặc định chọn phân quyền <strong>cao nhất</strong> được gán để hiển thị giao diện tương ứng. <br>- Sau khi đăng nhập thành công, người dùng được điều hướng đến màn hình chính phù hợp với phân quyền.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Trang <strong>Đăng nhập</strong> <br>- Màn hình chính.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người dùng truy cập trang <strong>Đăng nhập</strong>. <br>2. Nhập tên đăng nhập, mật khẩu và chọn trung tâm. <br>3. Nhấn nút <strong>Đăng nhập</strong>. <br>4. Hệ thống kiểm tra thông tin tài khoản: <br>&emsp;- Nếu hợp lệ → xác định phân quyền cao nhất của tài khoản. <br>&emsp;- Nếu không hợp lệ → hiển thị thông báo lỗi. <br>5. Hệ thống điều hướng người dùng đến màn hình chính theo phân quyền tương ứng.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người dùng có tài khoản trong hệ thống. <br>- Tài khoản đang không bị vô hiệu hóa. <br>- Tên đăng nhập và mật khẩu nhập chính xác.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Đăng nhập thành công: hệ thống hiển thị giao diện chính ứng với phân quyền cao nhất. <br>- Đăng nhập thất bại: hiển thị thông báo lỗi (ví dụ: <em>“Sai tài khoản hoặc mật khẩu”</em>).</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu tài khoản không tồn tại: hiển thị thông báo <em>“Tài khoản không tồn tại trong hệ thống”</em>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-1-2">1.2. Cập nhật tài khoản</h4>
+<details class="book">
+<summary>Cập nhật tài khoản</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Cập nhật tài khoản</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách, Người đào tạo, Người phỏng vấn, Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người dùng chỉnh sửa một số thông tin cá nhân của tài khoản sau khi đăng nhập. <br>- Thông tin hiển thị gồm: <strong>Họ và tên, Giới tính, Ngày sinh, Số điện thoại, Gmail, Vai trò</strong>. <br>- Người dùng có thể thay đổi: <strong>Họ và tên, Giới tính, Ngày sinh, Số điện thoại</strong>. <br>- Người dùng không thể thay đổi: <strong>Gmail, Vai trò</strong>. <br>- Sau khi chỉnh sửa, người dùng nhấn nút <strong>“Cập nhật tài khoản”</strong> để lưu lại thông tin.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>Trang Cá Nhân</strong></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người dùng đăng nhập hệ thống. <br>2. Chọn menu <strong>Trang Cá Nhân</strong>. <br>3. Hệ thống hiển thị thông tin tài khoản. <br>4. Người dùng chỉnh sửa thông tin (Họ và tên, Giới tính, Ngày sinh, Số điện thoại). <br>5. Nhấn nút <strong>Cập nhật tài khoản</strong>. <br>6. Hệ thống lưu thông tin mới và hiển thị thông báo <em>“Cập nhật dữ liệu thành công !”</em>.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người dùng đã đăng nhập hệ thống. <br>- Tài khoản tồn tại và đang hoạt động. <br>- Các trường thông tin nhập vào hợp lệ (ví dụ: Ngày sinh không phải là ngày tương lai, số điện thoại đúng định dạng).</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Thông tin cá nhân được cập nhật thành công và hiển thị lại trên giao diện. <br>- Thông báo <em>“Cập nhật dữ liệu thành công !”</em>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có thay đổi gì nhưng vẫn nhấn <strong>Cập nhật tài khoản</strong>, hệ thống vẫn cập nhật lại dữ liệu hiện tại và hiển thị thông báo thành công.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-1-3">1.3. Đổi mật khẩu</h4>
+<details class="book">
+<summary>Đổi mật khẩu</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Đổi mật khẩu</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách, Người đào tạo, Người phỏng vấn, Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người dùng thay đổi mật khẩu tài khoản thông qua 2 cách: <br>1. <strong>Tại màn hình đăng nhập</strong>: nhấn nút <em>“Quên mật khẩu”</em> → nhập email đã đăng ký → hệ thống xác minh và gửi link đặt lại mật khẩu về email. <br>2. <strong>Tại menu Trang Cá Nhân</strong>: nhấn nút <em>“Reset mật khẩu”</em> → hệ thống tự động lấy email của tài khoản đang đăng nhập và gửi link đặt lại mật khẩu về email. Người dùng cần truy cập link trong email để đặt lại mật khẩu mới.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình <strong>Đăng nhập</strong> (nút <em>Quên mật khẩu</em>). <br>- Menu <strong>Trang Cá Nhân</strong> (nút <em>Reset mật khẩu</em>). <br>- Màn hình đặt lại mật khẩu từ link trong email.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td><strong>Trường hợp 1 – Quên mật khẩu (ngoài đăng nhập):</strong> <br>1. Người dùng mở màn hình đăng nhập. <br>2. Nhấn nút <strong>Quên mật khẩu</strong>. <br>3. Nhập email đã đăng ký vào hệ thống. <br>4. Hệ thống xác minh email và gửi link đặt lại mật khẩu. <br>5. Người dùng truy cập link từ email để đặt lại mật khẩu mới. <br><br> <strong>Trường hợp 2 – Reset mật khẩu (trong khi đã đăng nhập):</strong> <br>1. Người dùng đăng nhập và truy cập <strong>Menu Trang Cá Nhân</strong>. <br>2. Nhấn nút <strong>Reset mật khẩu</strong>. <br>3. Hệ thống gửi link đặt lại mật khẩu đến email của tài khoản đang đăng nhập. <br>4. Người dùng truy cập link từ email để đặt lại mật khẩu mới.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người dùng có tài khoản đã đăng ký trong hệ thống. <br>- Email nhập vào (hoặc email đã gán cho tài khoản đăng nhập) tồn tại trong hệ thống. <br>- Người dùng truy cập hợp lệ vào link reset mật khẩu trong thời hạn cho phép.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hệ thống gửi email chứa link đặt lại mật khẩu. <br>- Khi người dùng đặt lại mật khẩu thành công: hiển thị thông báo <em>“Đặt lại mật khẩu thành công!”</em>. <br>- Người dùng có thể dùng mật khẩu mới để đăng nhập.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Email nhập không tồn tại trong hệ thống: hiển thị thông báo <em>“Email không tồn tại trong hệ thống”</em>. <br>- Nếu người dùng chưa đăng nhập và không nhập email: hệ thống yêu cầu nhập email trước khi thực hiện.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-1-4">1.4. Thay đổi vai trò (đối với tài khoản có nhiều vai trò)</h4>
+<details class="book">
+<summary>Thay đổi vai trò</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Thay đổi vai trò</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách, Người đào tạo, Người phỏng vấn, Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người dùng đã được gán nhiều vai trò trong hệ thống lựa chọn thay đổi vai trò để sử dụng giao diện và chức năng phù hợp. Khi thay đổi, hệ thống sẽ tải lại trang web và hiển thị menu, quyền và chức năng ứng với vai trò vừa chọn.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Icon <strong>Account</strong> trên thanh điều hướng (góc trên cùng bên phải). <br>- Droplist hiển thị danh sách các vai trò đã được gán cho tài khoản.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người dùng đăng nhập vào hệ thống. <br>2. Nhấn vào icon <strong>Account</strong> (góc trên cùng bên phải). <br>3. Droplist hiển thị danh sách các vai trò đã gán. <br>4. Người dùng chọn một vai trò trong danh sách. <br>5. Hệ thống tải lại trang web và hiển thị giao diện + chức năng theo vai trò đã chọn.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người dùng đã đăng nhập hợp lệ. <br>- Tài khoản người dùng được gán từ 2 vai trò trở lên.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Giao diện và chức năng thay đổi theo vai trò vừa chọn. <br>- Các menu theo vai trò cụ thể: <br>&emsp;+ <strong>Người phụ trách</strong>: Ứng Viên, Vị Trí, Lịch Phỏng Vấn, Trang Cá Nhân. <br>&emsp;+ <strong>Người đào tạo</strong>: Lịch Đào Tạo Chung, Danh Sách Đào Tạo, Trang Cá Nhân. <br>&emsp;+ <strong>Người phỏng vấn</strong>: Lịch Phỏng Vấn, Lịch Sử Phỏng Vấn, Trang Cá Nhân. <br>&emsp;+ <strong>Người được đào tạo</strong>: Mục Tiêu Đào Tạo, Lịch Trình Đào Tạo, Tài Liệu, Biên Bản Đánh Giá, Trang Cá Nhân.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu tài khoản chỉ có một vai trò, droplist không hiển thị lựa chọn thay đổi vai trò.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-3-1-5">1.5. Đăng xuất khỏi tài khoản</h4>
+<details class="book">
+<summary>Đăng xuất khỏi tài khoản</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Đăng xuất khỏi tài khoản</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách, Người đào tạo, Người phỏng vấn, Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người dùng thoát khỏi hệ thống một cách an toàn. Khi đăng xuất, hệ thống kết thúc phiên làm việc hiện tại và đưa người dùng trở về màn hình đăng nhập.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Icon <strong>Account</strong> trên thanh điều hướng (góc trên cùng bên phải). <br>- Droplist hiển thị khi nhấn vào icon <strong>Account</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người dùng đăng nhập vào hệ thống. <br>2. Nhấn vào icon <strong>Account</strong> (góc trên cùng bên phải). <br>3. Droplist hiển thị các tùy chọn, chọn <strong>“Đăng Xuất”</strong>. <br>4. Hệ thống kết thúc phiên đăng nhập hiện tại. <br>5. Hệ thống chuyển hướng về màn hình <strong>Đăng nhập</strong>.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người dùng đã đăng nhập và đang có phiên làm việc hợp lệ.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Phiên đăng nhập của người dùng kết thúc. <br>- Người dùng được chuyển hướng về màn hình <strong>Đăng nhập</strong>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Không có trường hợp đặc biệt, vì nút <strong>Đăng Xuất</strong> luôn khả dụng khi người dùng đang đăng nhập.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>2. Mô tả action board</summary>
+<h3 id="toc-3-2">2. Mô tả action board</h3>
+<h4 id="toc-3-2-1">2.1 Chi tiết về action board</h4>
+<details class="book">
+<summary>Chi tiết về action board</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<h2 id="iv-ac-ta-chuc-nang-danh-cho-handler-nguoi-phu-trach">IV. Đặc tả chức năng dành cho Handler (Người Phụ Trách)</h2>
+<details class="info" open="open">
+<summary>1. Nhóm chức năng giữa người phụ trách - ứng viên (Buddy_v2)</summary>
+<h3 id="toc-4-1">1. Nhóm chức năng giữa người phụ trách - ứng viên</h3>
+<h4 id="toc-4-1-1">1.1. Hiển thị bảng danh sách các ứng viên cho người phụ trách</h4>
+<details class="book">
+<summary>Hiển thị bảng danh sách các ứng viên cho người phụ trách</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Hiển thị bảng danh sách các ứng viên cho người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách:<br>1. Xem toàn bộ thông tin về <strong>tất cả ứng viên trong hệ thống</strong> tại bảng <strong>Danh sách ứng viên</strong>.<br>2. Lọc danh sách ứng viên theo các điều kiện: <strong>Vị trí</strong>, <strong>Trạng thái</strong>, <strong>Người phụ trách</strong>, <strong>Người đào tạo</strong> và <strong>Ngày phỏng vấn</strong>.<br><br>Bảng dữ liệu được phân trang, cho phép di chuyển giữa các trang mà không cần tải lại dữ liệu. Người phụ trách chỉ có thể xem, không thể chỉnh sửa thông tin ứng viên tại đây.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Trang <strong>Danh sách ứng viên</strong> (truy cập từ menu "Ứng Viên").<br>2. Bảng <strong>Danh sách ứng viên</strong>.<br>3. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>4. Bộ lọc (filter bar) gồm: <strong>Vị trí</strong>, <strong>Trạng thái</strong>, <strong>Người phụ trách</strong>, <strong>Người đào tạo</strong>, <strong>Ngày phỏng vấn</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td><strong>Xem danh sách:</strong><br>1. Người phụ trách chọn menu <strong>Ứng Viên</strong>.<br>2. Hệ thống tải dữ liệu của <strong>toàn bộ ứng viên</strong> trong hệ thống.<br>3. Bảng hiển thị các cột thông tin: Họ và Tên (kèm mã ứng viên khi trỏ chuột), Vị trí phỏng vấn (xem mô tả khi trỏ chuột), Người phụ trách (nhiều người sẽ hiển thị icon có số, trỏ chuột hiện tên), Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon kèm mô tả), Đánh giá (icon kèm mô tả), Ngày gửi CV.<br>4. Người phụ trách có thể chuyển trang để xem thêm dữ liệu.<br><br><strong>Lọc ứng viên:</strong><br>1. Người phụ trách chọn giá trị trong bộ lọc:<br>&emsp;- <strong>Vị trí</strong>: chọn nhiều vị trí từ dropdown.<br>&emsp;- <strong>Trạng thái</strong>: chọn nhiều giá trị từ danh sách trạng thái (<code>Mới</code>, <code>Passed</code>, <code>Đã phỏng vấn</code>, <code>Đang phỏng vấn</code>, <code>HR xác nhận</code>, <code>Offered</code>, <code>Failed</code>, <code>Dropped</code>, <code>Rejected</code>, <code>Chưa phỏng vấn</code>).<br>&emsp;- <strong>Người đào tạo</strong>: chọn nhiều người đào tạo (logic AND vì một trainee có thể có nhiều trainer).<br>&emsp;- <strong>Người phụ trách</strong>: chọn nhiều người phụ trách (logic OR trong bộ lọc này vì hiện tại mỗi user chỉ do một người phụ trách chịu trách nhiệm).<br>&emsp;- <strong>Ngày phỏng vấn</strong>: chọn khoảng thời gian bằng popup lịch.<br>2. Hệ thống tự động áp dụng bộ lọc và hiển thị kết quả theo điều kiện (logic AND giữa các bộ lọc, OR trong từng bộ lọc).<br>10. Icon bộ lọc hiển thị số lượng giá trị đã chọn, ví dụ <code>(03) Vị trí</code>.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Hệ thống có ít nhất một ứng viên được ghi nhận.<br>3. Trang <strong>Danh sách ứng viên</strong> đã tải dữ liệu thành công.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Bảng <strong>Danh sách ứng viên</strong> với các cột: Họ và Tên, Vị trí phỏng vấn, Người phụ trách, Ngày phỏng vấn, Giờ phỏng vấn, Trạng thái (icon + mô tả), Đánh giá (icon + mô tả), Ngày gửi CV.<br>- Dữ liệu phân trang, có thể di chuyển giữa các trang.<br>- Kết quả tìm kiếm và lọc hiển thị tức thời, chỉ giữ lại những ứng viên phù hợp.<br>- Người phụ trách có thể kết hợp nhiều bộ lọc cùng lúc để thu hẹp dữ liệu.<br>- Mọi người phụ trách đều nhìn thấy danh sách đầy đủ ứng viên, không bị giới hạn theo quyền sở hữu ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có ứng viên nào trong hệ thống: Bảng hiển thị thông báo <em>“Bảng dữ liệu trống!”</em> kèm icon thùng rỗng.<br>- Nếu không có kết quả tìm kiếm hoặc lọc: Bảng hiển thị thông báo <em>“Bảng dữ liệu trống!”</em> kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống và không áp dụng bộ lọc: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có).</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-2">1.2. Tùy chọn hiển thị cột trong bảng danh sách ứng viên</h4>
+<details class="book">
+<summary>Tùy chọn hiển thị cột trong bảng danh sách ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Tùy chọn hiển thị cột trong bảng danh sách ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Bảng <strong>Danh sách ứng viên</strong> có tổng cộng 10 cột gồm: Vị trí phỏng vấn, Trạng thái, Phỏng vấn, Đào tạo, Ngày gửi CV, Ngày phỏng vấn, Ngày hết hạn hợp đồng, Ngày sinh, Thời gian training, Thời gian phỏng vấn. Người phụ trách có thể tùy chọn cột nào được hiển thị bằng cách nhấn vào biểu tượng <code>👁️</code> ở góc trên bên phải của bảng và chọn các cột mong muốn. Những cột không được chọn sẽ không hiển thị trên màn hình. Cài đặt này được lưu theo từng tài khoản.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Trang <strong>Danh sách ứng viên</strong>.<br>2. Biểu tượng <code>👁️</code> ở góc trên bên phải bảng.<br>3. Danh sách 10 cột có thể chọn hiển thị.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách nhấn vào biểu tượng <code>👁️</code>.<br>2. Hệ thống hiển thị danh sách 10 cột.<br>3. Người phụ trách chọn hoặc bỏ chọn các cột muốn hiển thị.<br>4. Hệ thống cập nhật bảng theo các cột đã chọn.<br>5. Hệ thống lưu cấu hình hiển thị theo từng tài khoản.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>1. Người phụ trách đã đăng nhập hợp lệ.<br>2. Trang <strong>Danh sách ứng viên</strong> đã tải được chọn.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Bảng chỉ hiển thị các cột đã được chọn.<br>- Các cột không được chọn sẽ không hiển thị.<br>- Cấu hình được lưu riêng theo từng tài khoản.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Nếu không có ứng viên</strong>: Bảng hiển thị thông báo “Bảng dữ liệu trống!” kèm icon thùng rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-3">1.3. Sắp xếp thứ tự ưu tiên theo từng cột</h4>
+<details class="book">
+<summary>Sắp xếp thứ tự ưu tiên theo từng cột</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Sắp xếp thứ tự ưu tiên theo từng cột</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phụ trách có thể sắp xếp thứ tự ưu tiên hiển thị theo từng cột bằng cách nhấn vào biểu tượng <code>☰</code> bên phải tiêu đề cột. Hệ thống hiển thị dropdown-list “Theo thứ tự ưu tiên” chứa nội dung tương ứng với cột muốn sắp xếp. Người phụ trách có thể kéo thả các item để sắp xếp lại thứ tự hoặc nhấn nút <code>⟳</code> để reset về mặc định.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Cột được hiển thị trên bảng (các cột mà người phụ trách đã chọn khi thực hiện thao tác ở chức năng tùy chọn cột muốn xem).<br>2. Biểu tượng <code>☰</code> bên phải tiêu đề cột.<br>3. Dropdown-list “Theo thứ tự ưu tiên”.<br>4. Nút <code>⟳</code> reset thứ tự mặc định.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách nhấn vào biểu tượng <code>☰</code> tại cột muốn sắp xếp.<br>2. Hệ thống hiển thị dropdown-list “Theo thứ tự ưu tiên” với nội dung tương ứng cho từng cột.<br>3. Người phụ trách kéo thả các item để thay đổi thứ tự ưu tiên.<br>4. Hệ thống áp dụng thứ tự đã sắp xếp.<br>5. Người phụ trách có thể nhấn <code>⟳</code> để reset về thứ tự mặc định.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>1. Cột <em>Vị trí phỏng vấn</em> đang được hiển thị.<br>2. Có ít nhất một vị trí đang có đơn ứng tuyển.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách ứng viên được sắp xếp theo thứ tự ưu tiên đã thiết lập.<br>- Có thể reset về thứ tự mặc định bằng nút <code>⟳</code>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Nếu không có vị trí có đơn ứng tuyển</strong>: Không hiển thị item trong dropdown-list.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-4">1.4. Cơ chế sắp xếp theo nhiều cột đã chọn</h4>
+<details class="book">
+<summary>Cơ chế sắp xếp theo nhiều cột đã chọn</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Cơ chế sắp xếp theo nhiều cột đã chọn</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Thứ tự của 10 cột tại biểu tượng <code>👁️</code> có ý nghĩa trong quá trình sắp xếp. Khi người phụ trách chọn các cột để hiển thị, hệ thống lấy thứ tự mặc định (1 đến 10), sau đó sắp xếp lại theo thứ tự tăng dần để tạo thành thứ tự ưu tiên sắp xếp.<br><em>Ví dụ: người dùng chọn cột 2, cột 8, cột 3, cột 6 → hệ thống sắp xếp thành 2 - 3 - 6 - 8 → hoàn tất sort cột 2 → tiếp tục sort cột 3 → 6 → 8. Không giới hạn số lượng cột được chọn. Người phụ trách có thể chọn cả 10 cột và sắp xếp tối đa 9 cột (cột Đào tạo không cần sort)</em>.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Biểu tượng <code>👁️</code>.<br>2. Các cột được chọn hiển thị trên bảng.<br>3. Biểu tượng <code>☰</code> tại tiêu đề từng cột.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn các cột muốn hiển thị tại biểu tượng <code>👁️</code>.<br>2. Hệ thống xác định thứ tự mặc định của các cột (1 đến 10).<br>3. Hệ thống sắp xếp lại theo thứ tự tăng dần để tạo thứ tự ưu tiên.<br>4. Hệ thống thực hiện sort lần lượt theo từng cột trong thứ tự đã xác định.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>1. Có ít nhất một cột được chọn hiển thị.<br>2. Các cột được chọn có hỗ trợ sắp xếp (trừ cột Đào tạo).</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách ứng viên được sắp xếp theo thứ tự ưu tiên các cột đã chọn.<br>- Có thể chọn tối đa 10 cột và sắp xếp tối đa 9 cột.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Nếu không có dữ liệu ứng viên</strong>: Bảng hiển thị thông báo <em>“Bảng dữ liệu trống!”</em> kèm icon thùng rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-5">1.5. Tìm kiếm ứng viên theo ký tự</h4>
+<details class="book">
+<summary>Tìm kiếm ứng viên theo ký tự</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Tìm kiếm ứng viên theo ký tự</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách tìm kiếm nhanh ứng viên theo <strong>Họ và Tên</strong> thông qua ô nhập liệu tại trang <strong>Danh sách ứng viên</strong>. Hệ thống tự động lọc danh sách theo chuỗi ký tự được nhập.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Trang <strong>Danh sách ứng viên</strong> (truy cập từ menu "Ứng Viên").<br>2. Ô tìm kiếm đặt phía trên hoặc bên cạnh bảng dữ liệu.<br>3. Bảng <strong>Danh sách ứng viên</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách truy cập trang <strong>Danh sách ứng viên</strong>.<br>2. Người phụ trách nhập ký tự vào ô tìm kiếm.<br>3. Hệ thống tự động lọc danh sách theo <strong>Họ và Tên</strong> có chứa chuỗi ký tự nhập.<br>4. Kết quả được cập nhật ngay khi thay đổi ký tự.<br>5. Khi ô tìm kiếm trống, hệ thống hiển thị lại toàn bộ dữ liệu ban đầu.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Trang <strong>Danh sách ứng viên</strong> đã tải dữ liệu thành công.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Bảng <strong>Danh sách ứng viên</strong> chỉ hiển thị những ứng viên có <strong>Họ và Tên</strong> chứa chuỗi ký tự đã nhập.<br>- Kết quả cập nhật tức thời khi thay đổi ký tự.<br>- Khi ô tìm kiếm trống, hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có).</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu không có kết quả phù hợp với chuỗi ký tự nhập: Bảng hiển thị thông báo <em>“Bảng dữ liệu trống!”</em> kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có).</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-6">1.6. Quản lý thông tin chi tiết của ứng viên</h4>
+<details class="book">
+<summary>Quản lý thông tin chi tiết của ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý thông tin chi tiết của ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phụ trách có thể xem các thông tin liên quan về ứng viên khi chọn vào tab "Thông tin" của submenu sau khi chọn một ứng viên trên danh sách ứng viên.<br>Các thông tin được hiển thị bao gồm:<br>&emsp;- Câu trả lời của ứng viên khi ứng tuyển tại miền dành cho ứng viên <a href="https://buddy.pls.edu.vn/ung-vien" target="_blank">(buddy.pls.edu.vn/ung-vien)</a>.<br>&emsp;- Trong trường hợp ứng viên ứng tuyển qua kênh email, các câu trả lời của ứng viên sẽ được HR thêm trực tiếp vào bên dưới các câu hỏi, hệ thống sẽ ghi nhận lịch sử chỉnh sửa gần nhất và hiển thị cho người phụ trách đang xem thông tin.<br>&emsp;- Người phụ trách có quyền thay đổi trạng thái và đánh giá về ứng viên, các thay đổi này sẽ được cập nhật và hiển thị trên bảng danh sách ứng viên.<br>&emsp;- Các thông tin khác như thời gian ứng tuyển, giấy tờ tùy thân, bằng cấp, lịch làm việc mong muốn, thông tin thêm về ứng viên cũng sẽ được hệ thống ghi nhận và hiển thị cho người phụ trách đang xem thông tin chi tiết về ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Submenu "Thông tin" sau khi chọn ứng viên.<br>- Màn hình submenu "Thông tin".</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn một ứng viên từ danh sách ứng viên trong menu "Ứng viên".<br>2. Sau khi hệ thống hiển thị màn hình "Thông tin" và sidebar chứa các submenu thì người phụ trách có thể xem toàn bộ nội dung cần thiết.<br>3. Người phụ trách có thể mở rộng các item câu hỏi để xem nội dung bên trong, nội dung có thể là câu trả lời của ứng viên hoặc câu trả lời được HR thêm vào khi tạo profile cho ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống và được nhìn thấy trên bảng danh sách ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hiển thị toàn bộ thông tin về ứng viên mà hệ thống ghi nhận được.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo dạng toast với nội dung <em>"Cập nhật dữ liệu thành công!"</em>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Item không có thông tin bên trong sẽ hiển thị hint <em><code>Nhập thêm nội dung</code></em>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-7">1.7. Thêm ứng viên mới</h4>
+<details class="book">
+<summary>Thêm ứng viên mới</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Thêm ứng viên mới</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách tạo và lưu thông tin ứng viên chưa từng ứng tuyển trước đó vào hệ thống. <br><br>Khi chọn biểu tượng <strong>(+)</strong> tại màn hình <em>Danh sách ứng viên</em>, popup <strong>“Thêm ứng viên mới”</strong> xuất hiện, yêu cầu nhập đầy đủ các thông tin bắt buộc: <br>&emsp;- Họ và tên <br>&emsp;- Vị trí <br>&emsp;- Gmail <br>&emsp;- Ngày gửi <br> <em>Người phụ trách có thể upload file thông tin thêm về ứng viên (bằng cấp, giấy tờ tùy thân, cover letter,...), hệ thống cho phép tổng dung lượng cho một lần upload là 25MB (không tính số lượng file).</em><br><br>Sau khi nhập thông tin và được hệ thống nhận định là hợp lệ, người phụ trách cần nhấn nút  <strong>“Thêm ứng viên”</strong> để hệ thống tiến hành lưu dữ liệu và hiển thị ứng viên trong bảng.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình <strong>Danh sách ứng viên</strong> (menu <em>Ứng viên</em>). <br>- Popup <strong>Thêm ứng viên</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn nút <strong>(+)</strong> tại màn hình <em>Danh sách ứng viên</em>. <br>2. Hệ thống hiển thị popup <strong>Thêm ứng viên mới</strong>. <br>3. Người phụ trách nhập thông tin: <br>&emsp;- <strong>Họ và tên</strong>. <br>&emsp;- <strong>Vị trí</strong>: chọn từ danh sách vị trí đang tuyển dụng (dropdown-list). <br>&emsp;- <strong>Gmail</strong>: đúng định dạng email. <br>&emsp;- <strong>Ngày gửi CV</strong>: chọn qua popup lịch (không được chọn ngày trong tương lai; khi nhập thủ công theo định dạng <em>dd/mm/yyyy</em> cũng không được vượt quá ngày hiện tại). <br>4. Hệ thống kiểm tra dữ liệu. Nếu hợp lệ, người phụ trách nhấn <strong>“Thêm ứng viên”</strong>. <br>5. Hệ thống lưu thông tin, cập nhật bảng dữ liệu và hiển thị ứng viên mới.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên không tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút <strong>“Thêm ứng viên”</strong>.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình <code>Danh sách ứng viên</code>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở</strong>: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup <strong>Thêm ứng viên mới</strong>, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả <strong>"Không có vị trí khả dụng!"</strong>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-8">1.8. Tạo đơn ứng tuyển cho ứng viên đã từng apply</h4>
+<details class="book">
+<summary>Tạo đơn ứng tuyển cho ứng viên đã từng apply</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Tạo đơn ứng tuyển cho ứng viên đã từng apply</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép hệ thống xử lý 2 trường hợp sau:<br><strong>1. Ứng viên đã từng ứng tuyển trước đó và có nguyện vọng ứng tuyển lại.</strong><br><strong>2. Ứng viên ứng tuyển vào nhiều vị trí cùng một lúc.</strong><br><br>Trong cả 2 trường hợp, hệ thống sẽ tự động kiểm tra email và tự động điền đầy đủ họ và tên của ứng viên đã từng ứng tuyển vào popup <strong>Thêm ứng viên mới</strong>.<br>Khi người phụ trách nhấn nút <strong>Thêm ứng viên</strong>, hệ thống sẽ kiểm tra đơn ứng tuyển gần nhất của ứng viên đã hoàn thành chưa (Đã được phỏng vấn và có đánh giá thì tính là hoàn thành), nếu chưa hoàn thành thì cần phải được đánh giá hoặc xóa thì mới có thể tạo mới đơn ứng tuyển tiếp theo.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình <strong>Danh sách ứng viên</strong> (menu <em>Ứng viên</em>). <br>- Popup <strong>Thêm ứng viên</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn nút <strong>(+)</strong> tại màn hình <em>Danh sách ứng viên</em>. <br>2. Hệ thống hiển thị popup <strong>Thêm ứng viên mới</strong>. <br>3. Người phụ trách nhập thông tin: <br>&emsp;- <strong>Họ và tên</strong>. <br>&emsp;- <strong>Vị trí</strong>: chọn từ danh sách vị trí đang tuyển dụng (dropdown-list). <br>&emsp;- <strong>Gmail</strong>: đúng định dạng email. <br>&emsp;- <strong>Ngày gửi CV</strong>: chọn qua popup lịch (không được chọn ngày trong tương lai; khi nhập thủ công theo định dạng <em>dd/mm/yyyy</em> cũng không được vượt quá ngày hiện tại). <br>4. Hệ thống kiểm tra dữ liệu. Nếu hợp lệ, người phụ trách nhấn <strong>“Thêm ứng viên”</strong>. <br>5. Hệ thống kiểm tra thông tin về ứng viên và hiển thị popup chứa nội dung<br><em>Email này đã được đăng ký trước đó. Hệ thống sẽ tạo hồ sơ ứng tuyển mới cho vị trí này trên tài khoản hiện có. Bạn có muốn tiếp tục không?</em>.<br>6. Người phụ trách nhấn nút <strong>"Xác nhận"</strong> để tiếp tục thao tác.<br>7. Hệ thống thực hiện lưu đơn ứng tuyển mới cho ứng viên đó và hiển thị lên danh sách ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên đã tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút <strong>“Thêm ứng viên”</strong>.<br>- Người phụ trách nhấn nút <strong>"Xác nhận"</strong>.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>Ứng viên xuất hiện trong bảng dữ liệu tại màn hình <code>Danh sách ứng viên</code>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở</strong>: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup <strong>Thêm ứng viên mới</strong>, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả <strong>"Không có vị trí khả dụng!"</strong>.<br><br><strong>Trường hợp ứng viên có đơn ứng tuyển chưa được hoàn thành</strong>: hệ thống sẽ hiển thị popup thông báo cho người dùng rằng ứng viên này đang có đơn ứng tuyển chưa hoàn thành và cung cấp đường dẫn đến đơn ứng tuyển đó, người phụ trách cần thực hiện đánh giá đơn ứng tuyển đó hoặc xóa đơn ứng tuyển để hệ thống có thể tiếp nhận đơn ứng tuyển mới của ứng viên.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-9">1.9. Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên</h4>
+<details class="book">
+<summary>Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Chức năng chuyển đổi giữa nhập liệu bằng tay và chọn ứng viên từ CSDL khi thêm ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách chọn ứng viên dựa trên email mà ứng viên cung cấp từ CSDL của hệ thống, khi người phụ trách lựa chọn một ứng viên từ dropdown-list, hệ thống sẽ tự động điền dữ liệu về họ và tên và ngày tháng năm sinh (định dạng <em>dd/mm/yyyy</em>) vào các trường thông tin trên popup <strong>Thêm ứng viên mới</strong>. Sau khi đã chọn xong thì thực hiện chức năng <strong>1.5. Tạo đơn ứng tuyển cho ứng viên đã từng apply</strong>.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình <strong>Danh sách ứng viên</strong> (menu <em>Ứng viên</em>). <br>- Popup <strong>Thêm ứng viên</strong>:<br>&emsp;Tickbox <em>Chọn ứng viên có sẵn</em><br>&emsp;Dropdown-list <em>Chọn Gmail</em></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn nút <strong>(+)</strong> tại màn hình <em>Danh sách ứng viên</em>. <br>2. Hệ thống hiển thị popup <strong>Thêm ứng viên mới</strong>.<br>3. Người phụ trách tick vào tickbox <em>Chọn ứng viên có sẵn</em>.<br>4. Hệ thống thay đổi ô <em>Nhập Email</em> thành dropdown-list để chọn địa chỉ email từ CSDL, người phụ trách có thể tìm kiếm địa chỉ email.<br>5. Sau khi chọn email, hệ thống tự động điền các thông tin tại ô <em>Họ và tên</em> và <em>Ngày tháng năm sinh</em> (nếu có).<br>6. Tương tự chức năng <strong>1.5. Tạo đơn ứng tuyển cho ứng viên đã từng apply</strong>.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Người phụ trách tick vào tickbox <em>Chọn ứng viên có sẵn</em>.<br>- Email của ứng viên đã tồn tại trên hệ thống.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Nội dung popup thay đổi về mặt giao diện.<br>- Ứng viên xuất hiện trong bảng dữ liệu tại màn hình <code>Danh sách ứng viên</code> sau khi xác nhận thêm.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở</strong>: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup <strong>Thêm ứng viên mới</strong>, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả <strong>"Không có vị trí khả dụng!"</strong>.<br><br><strong>Trường hợp không có ứng viên nào trong CSDL</strong>: Khi mở dropdown-list để chọn ứng viên trên popup <strong>Thêm ứng viên mới</strong>, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả <strong>"Không có ứng viên nào!"</strong></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-1-10">1.10. Tự động gán người phụ trách ứng viên</h4>
+<details class="book">
+<summary>Tự động gán người phụ trách ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Tự động gán người phụ trách ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép hệ thống tự động gán người phụ trách khi thêm ứng viên vào hệ thống.<br><em>( hệ thống lấy thông tin người phụ trách đang thực hiện việc tạo profile và gán cho ứng viên đó )</em></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Màn hình <strong>Danh sách ứng viên</strong> (menu <em>Ứng viên</em>). <br>- Popup <strong>Thêm ứng viên</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>- Khi người phụ trách tạo một profile mới dành cho một ứng viên, hệ thống tự động lấy thông tin của người phụ trách đó để gán.<br>- Hệ thống xác nhận việc ghi nhận thông tin người phụ trách khi người phụ trách nhấn nút <strong>Thêm ứng viên</strong> trên popup.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>Sau khi hệ thống thông báo thêm thành công và người dùng sử dụng filter <em>Phụ trách</em> trên danh sách ứng viên, hệ thống thực hiện truy vấn các profiles ứng viên được tạo bởi các người phụ trách được chọn.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp người phụ trách được chọn chưa tạo bất kỳ profile ứng viên nào :</strong><br>&emsp;- Hệ thống hiển thị mô tả <em>“Bảng dữ liệu trống!”</em> kèm icon thùng rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>2. Nhóm chức năng quản lý tuyển dụng ứng viên</summary>
+<h3 id="toc-4-2">2. Nhóm chức năng quản lý tuyển dụng ứng viên</h3>
+<h4 id="toc-4-2-1">2.1. Tạo buổi phỏng vấn ứng viên</h4>
+<details class="book">
+<summary>Tạo buổi phỏng vấn ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Tạo buổi phỏng vấn ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-2">2.2. Xem chi tiết buổi phỏng vấn ứng viên</h4>
+<details class="book">
+<summary>Xem chi tiết buổi phỏng vấn ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem chi tiết buổi phỏng vấn ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-3">2.3. Quản lý ghi chú dành cho ứng viên</h4>
+<details class="book">
+<summary>Quản lý ghi chú dành cho ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý ghi chú dành cho ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-4">2.4. Đánh giá ứng viên</h4>
+<details class="book">
+<summary>Quản lý ghi chú dành cho ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý ghi chú dành cho ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-5">2.5. Xem lại các đánh giá gần đây</h4>
+<details class="book">
+<summary>Xem lại các đánh giá gần đây</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lại các đánh giá gần đây</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-6">2.6. Quản lý HĐLĐ với ứng viên</h4>
+<details class="book">
+<summary>Quản lý HĐLĐ với ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý HĐLĐ với ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-7">2.7. Quản lý HĐLĐ với ứng viên</h4>
+<details class="book">
+<summary>Quản lý HĐLĐ với ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý HĐLĐ với ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-2-8">2.8. Quản lý thử việc dành cho ứng viên</h4>
+<details class="book">
+<summary>Quản lý thử việc dành cho ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý thử việc dành cho ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>3. Nhóm chức năng quản lý vị trí tuyển dụng</summary>
+<h3 id="toc-4-3">3. Nhóm chức năng quản lý vị trí tuyển dụng</h3>
+<h4 id="toc-4-3-1">3.1. Xem danh sách vị trí tuyển dụng</h4>
+<details class="book">
+<summary>Xem danh sách vị trí tuyển dụng</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem danh sách vị trí tuyển dụng</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách xem danh sách toàn bộ các vị trí đã và đang tuyển dụng. Thông tin được hiển thị tại bảng <strong>“Danh sách vị trí ứng tuyển”</strong> với các cột dữ liệu mô tả tình trạng và tiến độ tuyển dụng. Người phụ trách có thể theo dõi số lượng ứng viên, tình trạng phỏng vấn, quá trình đào tạo và trạng thái hiện tại của từng vị trí.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>“Quản lý vị trí”</strong>.<br>- Màn hình <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị danh sách tất cả các vị trí.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập vào hệ thống.<br>2. Chọn menu <strong>“Quản lý vị trí”</strong>.<br>3. Hệ thống hiển thị bảng <strong>“Danh sách vị trí ứng tuyển”</strong>.<br>4. Người phụ trách theo dõi thông tin từng vị trí qua các cột:<br>&emsp;a. <strong>Tên và vai trò</strong>: tên vị trí tuyển dụng.<br>&emsp;b. <strong>Ứng viên</strong>: số lượng ứng viên đã ứng tuyển.<br>&emsp;c. <strong>Chờ phỏng vấn</strong>: số lượng ứng viên đã được lên lịch phỏng vấn.<br>&emsp;d. <strong>Đang đào tạo</strong>: số lượng ứng viên đã pass phỏng vấn và đang tham gia đào tạo.<br>&emsp;e. <strong>Trạng thái</strong>: tình trạng của vị trí <em>(Đang hoạt động / Dừng hoạt động)</em>, cho phép người phụ trách thay đổi bằng cách nhấn nút toggle_on-off.<br>5. Người dùng có thể xóa vị trí bằng cách hover vào từng item và nhấn biểu tượng <em>(x)</em> ở góc trên bên phải của từng item.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.<br>- Hệ thống đã có dữ liệu về các vị trí tuyển dụng.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Bảng <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị đầy đủ các vị trí cùng các cột thông tin liên quan.<br>- Dữ liệu được cập nhật theo thời gian thực hoặc theo batch (tùy cấu hình hệ thống).<br>- Trạng thái được thể hiện trực quan bằng nút toggle_on-off.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa có vị trí nào, bảng dữ liệu thông báo <em>Bảng này hiện đang trống!</em> kèm với icon thùng rỗng.<br>- Nếu dữ liệu tại các cột đếm (Ứng viên, Chờ phỏng vấn, Đang đào tạo) bằng 0: hiển thị giá trị <code>0</code> thay vì để trống.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-3-2">3.2. Tạo vị trí tuyển dụng mới</h4>
+<details class="book">
+<summary>Tạo vị trí tuyển dụng mới</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Tạo vị trí tuyển dụng mới</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách tạo ra các vị trí tuyển dụng mới chưa có trên hệ thống. Các vị trí mới được thiết lập bao gồm các nội dung:<br>- Tên vị trí<br>- Màu đại diện<br>- Biểu tượng của vị trí</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>“Quản lý vị trí”</strong>.<br>- Màn hình <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị danh sách tất cả các vị trí.<br>- Popup <strong>Thêm vị trí ứng tuyển</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn vào biểu tượng <strong>(+)</strong> ở bên cạnh dòng chữ <strong>"Danh sách vị trí ứng tuyển"</strong> ở màn hình của menu <strong>"Quản lý vị trí"</strong>.<br>2. Hệ thống hiển thị popup <strong>"Thêm vị trí ứng tuyển"</strong> bao gồm các thông tin sau:<br>&emsp;- Trường nhập liệu <em>Nhập vị trí</em><br>&emsp;- Dropdown-list <strong>Icon</strong> để mở pool icon được thiết lập sẵn<br>&emsp;- Pool màu sắc được tùy chỉnh trước (để đảm bảo tính tương phản, người dùng có thể request một màu mới)<br>3. Thao tác tạo mới một vị trí tuyển dụng tuân thủ các bước sau:<br>&emsp;- Điền đầy đủ các trường thông tin <em>Nhập vị trí</em>, chọn icon mong muốn (từ pool icon có sẵn hoặc tải về file mới bằng cách nhấn nút <a href="https://iconify.design" target="_blank"><em>Thêm ...</em></a>)<br>&emsp;- Chọn một bộ màu từ pool màu sắc trên popup, bộ màu được chọn sẽ được highlight bằng border, các màu còn lại sẽ bị giảm oppacity đi 50%<br>&emsp;- <em>Chọn trạng thái</em> mong muốn cho vị trí sắp tạo bằng cách tùy chỉnh nút toggle_on-off ở góc trên bên phải của popup này, mặc định khi tạo sẽ là <strong>toggle_on</strong><br>&emsp;- Nhấn nút <strong>Thêm mới</strong><br>&emsp;- Hệ thống kiểm tra tên của vị trí mới và đảm bảo không tồn tại vị trí nào có trùng tên<br>&emsp;- Tiến hành việc thêm vị trí mới khi đã có đủ tên vị trí và màu sắc tương ứng.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Hệ thống hiển thị thông báo dạng toast với nội dung <em>"Vị trí mới được thêm thành công!"</em><br>- Vị trí mới tạo được thêm vào ngay dòng đầu tiên của <strong>"Danh sách vị trí ứng tuyển"</strong>.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Không có</strong></td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-3-3">3.3. Xem thông tin tổng quan về vị trí tuyển dụng</h4>
+<details class="book">
+<summary>Xem thông tin tổng quan về vị trí tuyển dụng</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem thông tin tổng quan về vị trí tuyển dụng</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách xem được các thống kê về vị trí tuyển dụng đã chọn tại <strong>"Danh sách vị trí ứng tuyển"</strong></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Menu <strong>“Quản lý vị trí”</strong>.<br>2. Màn hình <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ <strong>“Danh sách vị trí ứng tuyển”</strong>, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình <strong>Tổng quan vị trí</strong> của submenu Tổng quan.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn một vị trí muốn thao tác trên bảng <strong>“Danh sách vị trí ứng tuyển”</strong> của ở menu <strong>"Quản lý vị trí"</strong>.<br>2. Hệ thống hiển thị thêm một sidebar mới, sidebar này sẽ chứa nội dung của sub-menu.<br>3. Người phụ trách cần chọn vào submenu <em>Tổng quan</em>.<br>4. Hệ thống hiển thị màn hình <em>Tổng quan vị trí</em>, trên màn hình này bao gồm các nội dung sau:<br>&emsp;+ Thông tin vị trí: bao gồm tên vị trí, icon của vị trí (người phụ trách có thể thay đổi tên và icon của vị trí bằng cách nhấn vào nút <code>✏️</code>. )<br>&emsp;+ Người phụ trách được phép thay đổi trạng thái của vị trí này bằng cách nhấn nút toggle_on-off ở bên phải màn hình<br>&emsp;+ Các biểu đồ <code>Số lượng CV</code>, <code>Số lượng phỏng vấn</code>, <code>Pass phỏng vấn</code>, <code>Training</code>, <code>Thử việc</code> sẽ mặc định hiển thị toàn bộ dữ liệu về vị trí tính từ lúc tạo vị trí, người dùng có thể tùy chọn thay đổi thời gian xem biểu đồ bằng cách tùy chỉnh thời gian ở nút <code>📅</code> ở góc trên cùng bên phải của màn hình này.<br>&emsp;+ Người phụ trách có thể thực hiện thao tác xóa bằng cách chọn vào nút <code>Xóa vị trí</code> và xác nhận thao tác trên popup cảnh báo.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td><strong>Trường hợp xem thông tin của vị trí</strong>: Hiển thị giao diện đầy đủ thông tin về vị trí, các nút đúng với mô tả.<br><strong>Trường hợp xóa vị trí</strong>: Hệ thống điều hướng người phụ trách về màn hình chứa <strong>"Danh sách vị trí ứng tuyển"</strong> và thông báo dạng toast "Vị trí {<code>Tên vị trí</code>} đã được xóa!".</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp vị trí chưa từng ghi nhận bất kỳ dữ liệu nào</strong>: Hệ thống hiển thị thông tin tổng quan mô tả vị trí, các biểu đồ vẫn được hiển thị nhưng sẽ hiển thị dữ liệu = 0, biểu đồ đường sẽ nằm trùng với trục X (thể hiện không có dữ liệu gì).</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-3-4">3.4. Thiết lập mô tả vị trí tuyển dụng (JD)</h4>
+<details class="book">
+<summary>Thiết lập mô tả vị trí tuyển dụng (JD)</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Thiết lập mô tả vị trí tuyển dụng (JD)</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách tạo các profile cho mô tả công việc, mỗi profile sẽ là một biến thể của mô tả công việc dành cho vị trí đang được chọn. Người phụ trách có toàn quyền tùy chỉnh JD cho vị trí tuyển dụng đang có trong hệ thống. Các profile này sẽ được lưu và hiển thị ở phần <strong>Danh sách mô tả</strong> khi người phụ trách truy cập vào submenu <em>Mô Tả (JD)</em>.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Menu <strong>“Quản lý vị trí”</strong>.<br>2. Màn hình <strong>“Danh sách vị trí ứng tuyển”</strong> hiển thị danh sách tất cả các vị trí.<br>3. Sub-menu dành riêng cho từng vị trí được chọn từ <strong>“Danh sách vị trí ứng tuyển”</strong>, bao gồm các submenu sau:<br>&emsp;- Tổng quan<br>&emsp;- Mô tả (JD)<br>&emsp;- K.Tra đầu vào<br>&emsp;- Phỏng vấn<br>&emsp;- Đào tạo<br>&emsp;- Sau đào tạo. <br>4. Màn hình chứa <em>Danh sách mô tả</em> ở submenu <em>Mô Tả (JD)</em>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn một vị trí tuyển dụng từ <strong>"Danh sách vị trí ứng tuyển"</strong>.<br>2. Hệ thống điều hướng sang màn hình chứa submenu và mặc định trỏ vào submenu <em>Tổng Quan</em>.<br>3. Người phụ trách chuyển sang submenu <em>Mô Tả (JD)</em>.<br>4. Để thiết lập một profile mô tả (JD) mới, người phụ trách cần đặt tên cho profile và phải nhấn [ENTER] để lưu.<br>5. Sau khi hệ thống đã lưu profile mới, hệ thống sẽ hiển thị tên của profile JD này lên giữa màn hình với tên của profile được in đậm ở phía trên cùng của màn hình, bên dưới tên của profile này sẽ bao gồm 2 phần:<br>&emsp;- <em>Nhập mô tả</em>: Người phụ trách nhập mô tả vào phần này, khi nhập xong và nhấn [ENTER] thì hệ thống sẽ thực hiện việc lưu dữ liệu và thông báo dạng toast cho người dùng với nội dung <em>"Đã lưu thay đổi cho +  {tên của profile đang thiết lập}"</em>  <br>&emsp;- <em>Nhập danh mục mới</em>: hệ thống quy định các danh mục để người phụ trách dễ dàng quản lý nội dung của JD, khi tạo danh mục mới, người phụ trách phải nhập tên của danh mục vào và nhấn [ENTER] để hệ thống thực hiện lưu. Sau khi lưu, hệ thống cập nhật lại danh mục đó để hiển thị ngay trên màn hình của người phụ trách (không reload).<br>6. Các thao tác với danh mục chứa nội dung của JD:<br>&emsp;- Thêm mô tả danh mục và các nội dung chi tiết bên trong<br>&emsp;- Xóa danh mục và xóa nội dung chi tiết bên trong (Khi xóa thì phải xác nhận thông qua popup cảnh báo)<br>&emsp;- Sắp xếp lại thứ tự của danh mục và sắp xếp nội dung của từng danh mục<br>7. Người phụ trách có thể bật nhiều mô tả công việc cùng lúc để tùy biến cách sử dụng (ví dụ: có thể tạo vị trí Data và tạo nhiều JD cho 6 trung tâm: Anh, Pháp, Đức, Trung, Nhật, Hàn).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>Người phụ trách đã đăng nhập và truy cập vào thông tin vị trí.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Khi hoàn tất việc thiết lập một JD tiêu chuẩn, người phụ trách sẽ xem được nội dung của JD bao gồm: tên. mô tả, danh mục, mô tả của danh mục, các tiêu chí con trong từng danh mục.<br>- Trường hợp có nhiều JD, người phụ trách sẽ xem được nội dung tương ứng khi chọn vào JD đó.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp đã tạo JD nhưng không xem được</strong>: Cần có thông báo lỗi khi tải dữ liệu để người dùng report đến IT.<br><strong>Trường hợp vị trí tuyển dụng chưa có profile JD nào được thiết lập</strong>: Hệ thống hiển thị màn hình trống với biểu tượng "Không có dữ liệu!"</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-3-4">3.5. Thiết lập bài kiểm tra đầu vào</h4>
+<details class="book">
+<summary>Thiết lập bài kiểm tra đầu vào</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Thiết lập bài kiểm tra đầu vào</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>4. Nhóm chức năng quản lý phỏng vấn</summary>
+<h3 id="toc-4-4">4. Nhóm chức năng quản lý phỏng vấn</h3>
+<h4 id="toc-4-4-1">4.1. Thiết lập tiêu chuẩn ứng viên</h4>
+<details class="book">
+<summary>Thiết lập tiêu chuẩn ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Thiết lập tiêu chuẩn ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng giúp người phụ trách thiết lập các tiêu chuẩn để người phỏng vấn có thể đánh giá ứng viên trong quá trình phỏng vấn. Các tiêu chuẩn phỏng vấn mà người phụ trách được phép thiết lập ở chức năng / màn hình này là [<code>action_type : check (action kiểm tra)</code>]. Người phụ trách có toàn quyền xem / xóa / sửa các danh mục và nội dung chứa trong chúng (các action check).</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>“Quản Lý Vị trí”</strong>.<br>- Submenu: <strong>“Phỏng vấn”</strong>, bao gồm các tab: <strong>Tiêu chuẩn ứng viên</strong>, <strong>Các câu hỏi thông tin</strong>, <strong>Các vòng phỏng vấn</strong>, <strong>Thiết lập K.tra đầu vào</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn vào một ví trí trên bảng <strong>"Danh sách vị trí ứng tuyển"</strong>.<br>2. Hệ thống điều hướng đến màn hình của submenu <strong>Tổng quan</strong>.<br>3. Người phụ trách chọn vào submenu <strong>Phỏng vấn</strong> --&gt; chọn tab <em>Tiêu chuẩn ứng viên</em>.<br>4. Khi ở màn hình của submenu <em>Tiêu chuẩn ứng viên</em> thì người phụ trách được phép thực hiện thao tác thiết lập (thêm / xóa / sửa) các danh mục và action kiểm tra bên trong nó.<br><br><strong>(Lưu ý: Không cho phép người phụ trách check vào các checkbox của action check tại đây)</strong>.<br><br>5. Khi người phụ trách xóa một danh mục hoặc một action check trong danh mục, hệ thống hiển thị popup cảnh báo để người phụ trách xác nhận.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại trong hệ thống.<br>- Khi thêm mới danh mục: không được phép để trống tên của danh mục.<br>- Khi thêm/sửa mục: tên và nội dung của danh mục / các action check bên trong phải hợp lệ (không được để trống).</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh mục được hiển thị và có thể thao tác mở rộng/thu gọn.<br>- Sau khi thêm / sửa / xóa, dữ liệu được cập nhật ngay trên màn hình.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa có danh mục nào: hiển thị ô <strong>“Nhập Danh Mục Mới”</strong> để thêm và hiển thị biểu tượng thùng rỗng (<em>Không có dữ liệu</em>).<br>- Nếu danh mục chưa có nội dung bên trong: hiển thị textbox <strong>“Nhập nội dung mới”</strong>.<br>- Khi xóa hết danh mục: màn hình trở về trạng thái trống, hiển thị ô <strong>“Nhập Danh Mục Mới”</strong> để thêm và hiển thị biểu tượng thùng rỗng (<em>Không có dữ liệu</em>).</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-4-2">4.2. Thiết lập các vòng phỏng vấn</h4>
+<details class="book">
+<summary>Thiết lập các vòng phỏng vấn</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Thiết lập các vòng phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách thiết lập danh mục các vòng phỏng vấn tương ứng dành cho vị trí đã chọn, mỗi vòng phỏng vấn bao gồm 3 phần:<br>&emsp;- Tên vòng phỏng vấn và nút toggle_on-off để thay đổi trạng thái.<br>&emsp;- Tab <em>'Đánh giá'</em>: tab này cho phép người phụ trách thêm / xóa / sửa các danh mục chứa các [<code>action_type : evaluate (action đánh giá)</code>].<br>&emsp;- Tab <em>'Câu hỏi phỏng vấn'</em>: tab này cho phép người phụ trách thêm / xóa / sửa các danh mục chứa các [<code>action_type : instruction (action hướng dẫn)</code>].<br><br><em>(Lưu ý: không cho phép người phụ trách thêm vào tab mới, quy định một vòng phỏng vấn chỉ bao gồm 2 tab </em><em>Đánh giá</em><em> và tab </em><em>Câu hỏi phỏng vấn</em><em>)</em>.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>“Quản Lý Vị trí”</strong>.<br>- Submenu: <strong>“Phỏng vấn”</strong>, bao gồm các tab: <strong>Tiêu chuẩn ứng viên</strong>, <strong>Các câu hỏi thông tin</strong>, <strong>Các vòng phỏng vấn</strong>, <strong>Thiết lập K.tra đầu vào</strong>.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách chọn vào một ví trí trên bảng <strong>"Danh sách vị trí ứng tuyển"</strong>.<br>2. Hệ thống điều hướng đến màn hình của submenu <strong>Tổng quan</strong>.<br>3. Người phụ trách chọn vào submenu <strong>Phỏng vấn</strong> --&gt; chọn tab <em>Các vòng phỏng vấn</em>.<br>4. Hệ thống hiển thị màn hình chính của tab <em>Các vòng phỏng vấn</em> chứa danh sách <strong>"Vòng phỏng vấn"</strong> nằm bên phải của màn hình.<br>5. Khi người phụ trách muốn thêm một vòng phỏng vấn, cần nhập tên của vòng phỏng vấn đó vào ô <em>Thêm mục (+)</em> và nhấn [ENTER], hệ thống lưu --&gt; tự động gán trạng thái toggle_on --&gt; tự động trỏ vào vòng phỏng vấn mới tạo nếu chưa focus vào item nào trước đó.<br>6. Người phụ trách có thể xem được 3 màn hình tương ứng khi chọn vào các item sau:<br><br>&emsp;- Item vòng phỏng vấn: hiển thị tiêu đề là tên của vòng phỏng vấn, mô tả của vòng phỏng vấn<br>&emsp;- Item <em>Đánh giá</em> của vòng phỏng vấn: hiển thị tiêu đề, mô tả và các danh mục chứa các [<code>action đánh giá</code>]<br>&emsp;- Item <em>Câu hỏi phỏng vấn</em> của vòng phỏng vấn: hiển thị tiêu đề, mô tả và các danh mục chứa các [<code>action hướng dẫn</code>].<br><br>7. Khi thực hiện xóa một vòng phỏng vấn (xóa các action trong các tab thì không cần xác nhận), hệ thống sẽ hiển thị popup cảnh báo và người phụ trách cần nhấn vào nút <em><code>Xác nhận</code></em> để hoàn thành thao tác xóa.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại trong hệ thống.<br>- Khi thêm mới danh mục: không được phép để trống tên của danh mục.<br>- Khi thêm/sửa mục: tên và nội dung của danh mục / các action hướng dẫn và đánh giá bên trong phải hợp lệ (không được để trống).</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh mục được hiển thị và có thể thao tác mở rộng/thu gọn, layout của một vòng phỏng vấn hoàn chỉnh đúng với mô tả.<br>- Sau khi thêm / sửa / xóa, dữ liệu được cập nhật ngay trên màn hình.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp chưa có bất kỳ vòng phỏng vấn nào</strong>: hệ thống sẽ hiển thị màn hình chính trống, danh sách các vòng phỏng vấn bên phải màn hình sẽ có biểu tượng thùng rỗng.<br><strong>Trường hợp vòng phỏng vấn chưa được thiết lập bất kỳ action nào bên trong</strong>: người phụ trách chọn vào các tab <em>Đánh giá</em> và <em>Câu hỏi phỏng vấn</em> và mở các item chứa các action bên trong thì chỉ thấy ô <em>Nhập nội dung mới</em>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-4-3">4.3. Thiết lập bài kiểm tra đầu vào (Request Anh Dương để sửa nên sẽ thêm vào sau)</h4>
+<details class="book">
+<summary>Thiết lập bài kiểm tra đầu vào</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>5. Nhóm chức năng quản lý đào tạo</summary>
+<h3 id="toc-4-5">5. Nhóm chức năng quản lý đào tạo</h3>
+<h4 id="toc-4-5-1">5.1. Quản lý quy trình đào tạo</h4>
+<details class="book">
+<summary>Quản lý quy trình đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý quy trình đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phụ trách có toàn quyền quản lý các quy trình đào tạo theo từng vị trí tuyển dụng: <br>- Tạo mới, chỉnh sửa, xóa quy trình. <br>- Vô hiệu hóa/kích hoạt quy trình. <br>- Quản lý chi tiết các tiêu chuẩn trong quy trình, bao gồm: thêm, sửa, xóa, chọn loại action (Hướng dẫn, Kiểm tra, Đánh giá, Nhiệm vụ, Tiến độ).</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong><em>"Quản Lý Vị Trí"</em></strong> → chọn vị trí từ bảng <strong>"Danh sách vị trí ứng tuyển"</strong> → truy cập submenu "Đào tạo" → tab "Quy trình"</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập, chọn vị trí. <br>2. Truy cập tab Quy trình. <br>3. Hệ thống hiển thị danh sách quy trình hiện có. Trường hợp chưa có quy trình được ghi nhận thì phải hiển thị biểu tượng thùng rỗng ở <em>Danh sách quy trình</em>.<br>4. Người phụ trách thực hiện thao tác: thêm mới, chỉnh sửa, xóa, vô hiệu hóa/kích hoạt quy trình bằng nút toggle_on-off. <br>5. Khi mở một quy trình: có thể xem, quản lý các danh mục bên trong. Mỗi danh mục sẽ bao gồm ít nhất một hoặc nhiều action trong đó.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách có quyền quản lý vị trí. <br>- Vị trí tồn tại trong hệ thống.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách quy trình đào tạo hiển thị chi tiết. <br>- Người phụ trách có toàn quyền thao tác. <br>- Thông báo “Cập nhật dữ liệu thành công!” sau khi thao tác thêm / sửa hợp lệ.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp chưa có quy trình</strong>: hiển thị danh sách rỗng và nút <strong>Thêm quy trình mới</strong>. <br> <strong>Trường hợp quy trình chưa được thiết lập danh mục nào</strong>: chỉ hiển thị tên quy trình và nút Nhập tiêu chuẩn mới.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-5-2">5.2. Quản lý đầu ra đào tạo</h4>
+<details class="book">
+<summary>Quản lý đầu ra đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý đầu ta đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách quản lý toàn bộ các tiêu chí đầu ra của quá trình training cho vị trí tuyển dụng được chọn. Các tiêu chí đầu ra sẽ được sắp xếp vào các danh mục, Hệ thống sẽ hiển thị toàn bộ các danh mục đánh giá đã từng được thiết lập cho vị trí này.<br><strong>Nội dung của tài liệu là các action Đánh Giá.</strong><br><br>Tổng quan của cấu trúc tiêu chí đầu ra như sau:<br>&emsp;[---Danh mục chứa các tiêu chí đầu ra<br>&emsp;[------ Danh mục nội dung trong các danh mục (<strong>các action Đánh Giá</strong>)</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong><em>"Quản Lý Vị Trí"</em></strong> → chọn vị trí từ bảng <strong>"Danh sách vị trí ứng tuyển"</strong> → truy cập submenu "Đào tạo" → tab "Đầu ra"</td>
+</tr>
+<tr>
+<td>Luồng thao tác chính</td>
+<td>1. Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Đầu ra".<br>3. Hệ thống hiển thị nội dung của tab "Đầu ra" là các danh mục chứa các [action_type : evaluate (<code>action Đánh Giá</code>)] đã được thiết lập sẵn, nếu không có danh mục nào thì hệ thống sẽ hiển thị biểu tượng thùng rỗng và mô tả "Chưa có nội dung đầu ra!".<br>Để tạo mới một danh mục, người phụ trách cần nhập tên của danh mục vào ô <strong>"Nhập Danh Mục Mới"</strong> và nhấn phím [ENTER].<br>Hệ thống sẽ cập nhật và hiển thị ngay danh mục đó trên màn hình mà không cần phải reload.<br>Để thêm mới một nội dung bên trong danh mục, người phụ trách cần nhập tên của nội dung mới vào ô <strong>"Nhập nội dung mới"</strong> và nhấn [ENTER], hệ thống sẽ tự động cập nhật và hiển thị và không cần phải reload.<br>Người phụ trách có thể xóa danh mục / nội dung danh mục, có thể sắp xếp lại danh mục / nội dung danh mục tùy theo mong muốn.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên <strong>"Danh sách vị trí tuyển dụng"</strong></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt.<br>- Khi xóa một danh mục  / nội dung thì phải hiện thị popup cảnh báo để người phụ trách xác nhận thao tác xóa.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp vị trí chưa có nội dung ở tab </strong>Đầu ra<strong>: hệ thống sẽ hiển thị biểu tượng thùng rỗng và dòng mô tả "Chưa có dữ liệu!".<br></strong>Trường hợp xóa tên của danh mục / nội dung trong danh mục**: hệ thống không cho phép để trống phần tên của danh mục / nội dung trong danh mục, khi xóa thì người phụ trách cần thêm lại một tên mới để lưu và nhấn [ENTER]</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-5-3">5.3. Quản lý tài liệu đào tạo</h4>
+<details class="book">
+<summary>Quản lý tài liệu đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý tài liệu đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách quản lý toàn bộ các bộ tài liệu của quá trình training cho vị trí tuyển dụng được chọn. Hệ thống sẽ hiển thị toàn bộ các bộ tài liệu đã từng được thiết lập cho vị trí này ở <strong>"Danh sách tài liệu"</strong> nằm bên phải của màn hình.<br>Người phụ trách được phép kích hoạt hoặc vô hiệu tài liệu, đồng nghĩa với việc <strong>người được đào tạo</strong> và <strong>người đào tạo</strong> sẽ không xem được bộ tài liệu bị vô hiệu bởi <strong>người phụ trách</strong>.<br>Bên trong tài liệu bao gồm một hoặc nhiều danh mục, trong mỗi danh mục sẽ chứa nội dung.<br><strong>Nội dung của tài liệu là các [action_type : instruction (<code>action Hướng Dẫn</code>), trong các action Hướng Dẫn này, người phụ trách sẽ được phép thêm mô tả và nội dung chi tiết (Văn bản (cho phép thêm định dạng văn bản), file đính kèm, URL)]</strong>.<br><br>Tổng quan của cấu trúc tài liệu như sau:<br>&emsp;[---Bộ tài liệu (hiển thị trên <strong>Danh sách tài liệu</strong>)<br>&emsp;[------ Danh mục nội dung trong các bộ tài liệu<br>&emsp;[------------- Các action Hướng Dẫn trong các danh mục nội dung tài liệu<br>&emsp;[------------------ Các nội dung chi tiết của action Hướng Dẫn</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong><em>"Quản Lý Vị Trí"</em></strong> → chọn vị trí từ bảng <strong>"Danh sách vị trí ứng tuyển"</strong> → truy cập submenu "Đào tạo" → tab "Tài liệu"</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Tài liệu".<br>3. Hệ thống hiển thị nội dung của tab "Tài liệu" là các danh mục chứa các [action_type : instruction (<code>action Hướng Dẫn</code>)] đã được thiết lập sẵn, nếu không có danh mục nào thì hệ thống sẽ hiển thị biểu tượng thùng rỗng và mô tả "Chưa có tài liệu!".<br>4. Các danh mục tài liệu sẽ nằm trong các bộ tài liệu, hệ thống sẽ hiển thị danh sách các bộ tài liệu đã được tạo ở <strong>"Danh sách tài liệu"</strong> ở phần bên phải của màn hình.<br><br><strong>Khi người phụ trách muốn thêm một tài liệu / danh mục / nội dung mới:</strong><br>1. Người phụ trách đang ở màn hình xem tài liệu của vị trí tuyển dụng đã chọn.<br>2. Tại các vị trí:<br>&emsp;- <strong>Danh sách tài liệu</strong>: người phụ trách cần nhập tên của bộ tài liệu mới ==&gt; nhấn [ENTER] để hệ thống thực hiện lưu dữ liệu<br>&emsp;- <strong>Màn hình chính chứa các danh mục nội dung của bộ tài liệu</strong>: người phụ trách cuộn xuống cuối màn hình để thấy ô "Nhập danh mục mới" ==&gt; nhập tên danh mục ==&gt; nhấn [ENTER]<br>&emsp;- <strong>Nội dung của các danh mục</strong>: người phụ trách cần mở rộng danh mục muốn thêm nội dung ==&gt; nhập tiêu đề cho action Hướng Dẫn.<br>&emsp;- <strong>Chi tiết action Hướng Dẫn</strong>: người phụ trách sau khi tạo một action Hướng Dẫn trong danh mục nội dung sẽ thấy action Hướng Dẫn có một ô <em>"Nhập thêm nội dung"</em>, ô này cho phép người phụ trách thêm vào nội dung chi tiết, chèn thêm file và URL, ngoài ra khi nhập liệu văn bản thì người phụ trách có thể tùy chỉnh định dạng của văn bản.<br><br><strong>Khi người phụ trách muốn chỉnh sửa một tài liệu / danh mục / nội dung mới:</strong> Tương tự với toàn bộ quá trình thêm mới tài liệu / danh mục / nội dung, khi chỉnh sửa ở tiêu đề của tài liệu, tiêu đề danh mục hoặc nội dung chi tiết bên trong, người phụ trách bắt buộc phải thay thế bằng một nội dung hợp lệ (tức không được phép bỏ trống), sau đó người phụ trách cần nhấn [ENTER] để hệ thống thực hiện lưu lại dữ liệu mới.<br><br><strong>Khi người phụ trách muốn xóa một tài liệu / danh mục / nội dung mới:</strong> khi người phụ trách xóa một bộ tài liệu / danh mục ==&gt; hệ thống hiển thị popup cảnh báo <em>"Không thể khôi phục dữ liệu!"</em> ==&gt; người phụ trách cần xác nhận thao tác xóa bằng việc nhấn nút "Xác nhận" để tiến hành xóa. Đối với nội dung chi tiết hoặc action Hướng Dẫn, khi xóa thì không có popup xác nhận.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên <strong>"Danh sách vị trí tuyển dụng"</strong></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt.<br>- Khi xóa một bộ tài liệu / danh mục thì phải hiện thị popup cảnh báo để người phụ trách xác nhận thao tác xóa.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp vị trí chưa có nội dung ở tab </strong>Tài liệu<strong><em>*: hệ thống sẽ hiển thị biểu tượng thùng rỗng và dòng mô tả "Chưa có dữ liệu!" ở </em>*"Danh sách tài liệu"</strong>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>6. Nhóm chức năng quản lý sau đào tạo</summary>
+<h3 id="toc-4-6">6. Nhóm chức năng quản lý sau đào tạo</h3>
+<h4 id="toc-4-6-1">6.1. Quản lý quá trình thử việc sau khi hoàn thành đào tạo</h4>
+<details class="book">
+<summary>Quản lý quá trình thử việc sau khi hoàn thành đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý quá trình thử việc sau khi hoàn thành đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng này cho phép người phụ trách thiết lập các tiêu chí dành cho quá trình sau đào tạo (review ứng viên), các tiêu chí này sẽ được dùng ở phần chi tiết ứng viên.<br>Cấu trúc của danh mục tiêu chí thử việc:<br>&emsp;[--- Danh mục tiêu chí thử việc <br>&emsp;[------ Nội dung của danh mục tiêu chí thử việc</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong><em>"Quản Lý Vị Trí"</em></strong> → chọn vị trí từ bảng <strong>"Danh sách vị trí ứng tuyển"</strong> → truy cập submenu "Sau đào tạo" → tab "Thử việc"</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1.Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Thử việc" trong submenu <strong>Sau đào tạo</strong>.<br>3. Hệ thống hiển thị giao diện của tab "Thử việc".<br><br><strong>Để thêm mới danh mục thử việc:</strong><br>1. Người phụ trách nhập tên của danh mục vào ô <em>"Nhập danh mục mới"</em><br>2. Người phụ trách nhấn [ENTER] để hệ thống thực hiện lưu trữ dữ liệu<br>3. Hệ thống focus vào danh mục mới tạo (nếu như người phụ trách chưa chọn danh mục nào để xem trước đó) và tự động mở rộng danh mục, lúc này danh mục sẽ có số [0] để biểu thị danh mục không có nội dung bên trong.<br>4. Người phụ trách sẽ thấy được ô <strong>[+] Thêm nội dung</strong> để có thể thêm mới nội dung vào danh mục thử việc vừa tạo<br><br><strong>Xóa nội dung / danh mục thử việc</strong>:<br>1. Để xóa nội dung của một danh mục thử việc, người phụ trách mở rộng danh mục ==&gt; chọn vào biểu tượng <code>🗑️</code> ở tại mỗi item để xóa (Không có popup xác nhận).<br>2. Để xóa một danh mục thử việc, người phụ trách chọn vào biểu tượng <code>🗑️</code> ở tại mỗi danh mục để xóa, hệ thống sẽ hiển thị popup cảnh báo ==&gt; người phụ trách cần nhấn nút <em>Xác nhận</em> trên popup để xóa.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên <strong>"Danh sách vị trí tuyển dụng"</strong></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp không có danh mục nào</strong>: Hệ thống hiển thị màn hình có biểu tượng thùng rỗng và mô tả "Không có dữ liệu!".</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-6-2">6.2. Quản lý các tiêu chí đánh giá sau đào tạo</h4>
+<details class="book">
+<summary>Quản lý các tiêu chí đánh giá sau đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý các tiêu chí đánh giá sau đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách thiết lập các tiêu chí đánh giá ứng viên sau đào tạo.<br>Cấu trúc của danh mục đánh giá:<br>&emsp;[--- Danh mục đánh giá ứng viên <br>&emsp;[------ Nội dung trong danh mục đánh giá ứng viên</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong><em>"Quản Lý Vị Trí"</em></strong> → chọn vị trí từ bảng <strong>"Danh sách vị trí ứng tuyển"</strong> → truy cập submenu "Sau đào tạo" → tab "Đánh giá"</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1.Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Đánh giá" trong submenu <strong>Sau đào tạo</strong>.<br>3. Hệ thống hiển thị giao diện của tab "Đánh giá" với tiêu đề <strong>CÁC TIÊU CHÍ ĐÁNH GIÁ</strong>.<br><br><strong>Để thêm mới danh mục đánh giá:</strong><br>1. Người phụ trách nhập tên của danh mục vào ô <em>"Nhập danh mục mới"</em><br>2. Người phụ trách nhấn [ENTER] để hệ thống thực hiện lưu trữ dữ liệu<br>3. Hệ thống focus vào danh mục mới tạo (nếu như người phụ trách chưa chọn danh mục nào để xem trước đó) và tự động mở rộng danh mục, lúc này danh mục sẽ có thêm phần 5 ngôi sao với màu mặc định của hệ thống đang dùng.<br>4. Người phụ trách sẽ thấy được ô <strong>[+] Thêm nội dung</strong> để có thể thêm mới nội dung vào danh mục đánh giá vừa tạo<br><br><strong>Xóa nội dung / danh mục đánh giá</strong>:<br>1. Để xóa nội dung của một danh mục đánh giá, người phụ trách mở rộng danh mục ==&gt; chọn vào biểu tượng <code>🗑️</code> ở tại mỗi item để xóa (Không có popup xác nhận).<br>2. Để xóa một danh mục đánh giá, người phụ trách chọn vào biểu tượng <code>🗑️</code> ở tại mỗi danh mục để xóa, hệ thống sẽ hiển thị popup cảnh báo ==&gt; người phụ trách cần nhấn nút <em>Xác nhận</em> trên popup để xóa.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên <strong>"Danh sách vị trí tuyển dụng"</strong></td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td><strong>Trường hợp không có danh mục nào</strong>: Hệ thống hiển thị màn hình có biểu tượng thùng rỗng và mô tả "Không có dữ liệu!".</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>7. Nhóm chức năng để đánh giá ứng viên</summary>
+<h3 id="toc-4-7">7. Nhóm chức năng để đánh giá ứng viên</h3>
+<h4 id="toc-4-7-1">7.1. Xem lại kết quả kiểm tra của ứng viên</h4>
+<details class="book">
+<summary>Xem lại kết quả kiểm tra ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lại kết quả kiểm tra ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách xem lại kết quả các bài kiểm tra đầu vào mà ứng viên đã thực hiện. <br><br>Người phụ trách có thể truy cập từ thẻ <strong>Thông tin ứng viên</strong> trong màn hình <strong>Chi tiết ứng viên</strong>, nhấn nút <strong>Kiểm tra đầu vào</strong> để mở popup <strong>Bài kiểm tra ứng viên</strong>. Tại popup này, người phụ trách có thể tìm kiếm, chọn bài kiểm tra, và xem chi tiết kết quả của bài kiểm tra đã chọn.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>Ứng viên</strong> → bảng <strong>Danh sách ứng viên</strong> <br>- Màn hình <strong>Chi tiết ứng viên</strong> → thẻ <strong>Thông tin ứng viên</strong> <br>- Popup <strong>Bài kiểm tra ứng viên</strong> (hiển thị danh sách các bài kiểm tra đã thực hiện) <br>- Màn hình/Popup hiển thị chi tiết kết quả kiểm tra</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập và chọn menu <strong>Ứng viên</strong>. <br>2. Trên bảng <strong>Danh sách ứng viên</strong>, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình <strong>Chi tiết ứng viên</strong>. <br>4. Người phụ trách chọn thẻ <strong>Thông tin ứng viên</strong>. <br>5. Tại đây, nhấn nút <strong>Kiểm tra đầu vào</strong>. <br>6. Hệ thống mở popup <strong>Bài kiểm tra ứng viên</strong> hiển thị danh sách các bài kiểm tra đã thực hiện. <br>7. Người phụ trách có thể sử dụng thanh tìm kiếm trong popup để tìm bài kiểm tra theo tên hoặc ngày thực hiện. <br>8. Chọn một bài kiểm tra từ danh sách. <br>9. Hệ thống hiển thị chi tiết kết quả của bài kiểm tra (bao gồm: điểm số, thời gian làm bài, ngày thi, chi tiết các câu trả lời nếu có).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Popup <strong>Bài kiểm tra ứng viên</strong> hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi &amp; câu trả lời.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo <em>“Không có bài kiểm tra”</em>. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo <em>“Không có bài kiểm tra”</em>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-7-2">7.2. Xem lại phản hồi ứng viên (check log)</h4>
+<details class="book">
+<summary>Xem lại phản hồi ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lại phản hồi ứng viên (check log)</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>Ứng viên</strong> → bảng <strong>Danh sách ứng viên</strong> <br>- Màn hình <strong>Chi tiết ứng viên</strong> → thẻ <strong>Phỏng vấn</strong> <br>- Nút <strong>Xem chi tiết</strong> trên danh sách buổi phỏng vấn <br>- Màn hình <strong>Phỏng vấn ứng viên</strong> (gồm 2 tab: <strong>Câu hỏi phỏng vấn</strong>, <strong>Đánh giá</strong>)</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập và chọn menu <strong>Ứng viên</strong>. <br>2. Trên bảng <strong>Danh sách ứng viên</strong>, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình <strong>Chi tiết ứng viên</strong>. <br>4. Người phụ trách chọn thẻ <strong>Phỏng vấn</strong> để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút <strong>Xem chi tiết</strong>. <br>6. Hệ thống điều hướng sang màn hình <strong>Phỏng vấn ứng viên</strong>. <br>7. Tại đây, có 2 tab: <br>&emsp;+ <strong>Câu hỏi phỏng vấn</strong>: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ <strong>Đánh giá</strong>: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách buổi phỏng vấn trong thẻ <strong>Phỏng vấn</strong> của màn hình <strong>Chi tiết ứng viên</strong>. <br>- Màn hình <strong>Phỏng vấn ứng viên</strong> hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- <strong>Câu hỏi phỏng vấn</strong>: danh sách câu hỏi &amp; mức đánh giá cho từng câu hỏi. <br>&emsp;- <strong>Đánh giá</strong>: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ <strong>Phỏng vấn</strong> có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình <strong>Phỏng vấn ứng viên</strong> và <strong>Đánh giá</strong> sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình <strong>Đánh giá</strong> sẽ hiển thị 0%.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-4-7-3">7.3. Xem lại buổi phỏng vấn của ứng viên</h4>
+<details class="book">
+<summary>Xem lại buổi phỏng vấn của ứng viên (Người phụ trách)</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lại buổi phỏng vấn của ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phụ trách có thể xem lại toàn bộ chi tiết các buổi phỏng vấn đã hoàn thành của ứng viên, bao gồm câu hỏi, câu trả lời, kết quả bài kiểm tra và đánh giá theo tiêu chí.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Trang <strong>Danh sách ứng viên</strong> → chọn ứng viên → Tab <strong>Phỏng vấn</strong> → nút <strong>“Xem chi tiết”</strong></td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập và truy cập <strong>Danh sách ứng viên</strong>.<br>2. Chọn một ứng viên cụ thể.<br>3. Tại tab <strong>Phỏng vấn</strong>, chọn vòng phỏng vấn đã hoàn thành → nhấn <strong>“Xem chi tiết”</strong>.<br>4. Hệ thống mở trang <strong>Phỏng vấn ứng viên</strong> với 2 thẻ:<br> a. <strong>Câu hỏi phỏng vấn</strong>: hiển thị toàn bộ bộ câu hỏi, câu trả lời của ứng viên và đánh giá chi tiết.<br> b. <strong>Đánh giá</strong>: hiển thị nhóm tiêu chí, thanh tiến trình và chi tiết từng tiêu chí đã được chấm.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền xem chi tiết ứng viên.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Tab <strong>Phỏng vấn</strong> hiển thị nút <strong>“Xem chi tiết”</strong> cho các buổi phỏng vấn đã hoàn thành.<br>- Trang <strong>Phỏng vấn ứng viên</strong> hiển thị đầy đủ 2 thẻ: Câu hỏi phỏng vấn và Đánh giá.<br>- Người phụ trách xem được toàn bộ dữ liệu phỏng vấn của ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa có buổi phỏng vấn nào hoàn thành: tab <strong>Phỏng vấn</strong> không hiển thị nút <strong>“Xem chi tiết”</strong>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<h2 id="v-ac-ta-chuc-nang-danh-cho-interviewer">V. Đặc tả chức năng dành cho Interviewer</h2>
+<details class="info" open="open">
+<summary>1. Nhóm chức năng quản lý lịch phỏng vấn</summary>
+<h3 id="toc-5-1">1. Nhóm chức năng quản lý lịch phỏng vấn</h3>
+<h4 id="toc-5-1-1">1.1. Xem lịch phỏng vấn các ứng viên</h4>
+<details class="book">
+<summary>Xem lịch phỏng vấn của các ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lịch/danh sách phỏng vấn của các ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>- Người phụ trách, Người phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phụ trách: <br>Cho phép người phụ trách xem toàn bộ lịch phỏng vấn của các ứng viên mình quản lý. Chức năng này chỉ hỗ trợ xem, không cho phép chỉnh sửa dữ liệu.<br><br>Người phỏng vấn: <br>Người phỏng vấn có thể xem lịch phỏng vấn tại menu "Lịch Phỏng Vấn", và chỉ nhìn thấy những ứng viên mà người phụ trách đã gán cho mình. Người phỏng vấn được phép hủy lịch phỏng vấn của ứng viên đó tại popup "Chi tiết ca phỏng vấn" sau khi chọn vào một buổi phỏng vấn cụ thể. <br><br>Các chế độ hiển thị chung:<br> (1) Xem dạng lịch: dữ liệu hiển thị theo tuần, mỗi ngày chia thành 11 khung giờ (từ 9h đến 20h). Nếu có lịch phỏng vấn, khung giờ tương ứng được highlight kèm số lượng ứng viên.<br> (2) Xem dạng danh sách: dữ liệu hiển thị dưới dạng bảng với các cột Ngày, Giờ bắt đầu, Số lượng ứng viên, Trạng thái. Người dùng có thể chuyển trang để xem toàn bộ danh sách.<br><br>Ở cả hai chế độ, khi nhấn vào một ca phỏng vấn, hệ thống mở popup "Chi tiết ca phỏng vấn" hiển thị:<br> - Thời gian phỏng vấn<br> - Số lượng ứng viên<br> - Thông tin ứng viên: tên, giờ phỏng vấn, vị trí ứng tuyển.<br><br>Người dùng (tùy vai trò) có thể thay đổi chế độ hiển thị và tuần để phù hợp với nhu cầu.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Trang "Lịch Phỏng Vấn".<br>2. Popup "Chi tiết ca phỏng vấn".<br>3. Chế độ "Xem dạng lịch".<br>4. Chế độ "Xem dạng danh sách".</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người dùng (phụ trách hoặc phỏng vấn) điều hướng đến trang "Lịch Phỏng Vấn" từ menu.<br>2. Hệ thống mặc định hiển thị ở chế độ 'Xem dạng lịch'.<br>3. Người dùng có thể:<br> - Nhấn vào ô được highlight để xem popup chi tiết.<br> - Nhấn vào biểu tượng ≡ để chuyển sang chế độ 'Xem dạng danh sách'.<br>4. Ở chế độ danh sách, hệ thống hiển thị bảng dữ liệu "Lịch phỏng vấn" với đầy đủ thông tin và hỗ trợ phân trang.<br>5. Người phụ trách: chỉ xem dữ liệu, không chỉnh sửa.<br>6. Người phỏng vấn: có thể hủy lịch phỏng vấn với ứng viên được gán tại popup "Chi tiết ca phỏng vấn".<br>7. Người dùng có thể thay đổi tuần để xem trước hoặc kiểm tra lại lịch phỏng vấn.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đăng nhập vào tài khoản có phân quyền tương đương và quản lý ít nhất một ứng viên.<br>- Người phỏng vấn đăng nhập vào tài khoản có phân quyền tương đương và được người phụ trách gán cho ít nhất một ứng viên có lịch phỏng vấn.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Ở chế độ lịch: hệ thống hiển thị theo tuần với các khung giờ được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị bảng dữ liệu với các cột ngày, giờ, số lượng ứng viên, trạng thái.<br>- Khi nhấn vào ca phỏng vấn: popup chi tiết xuất hiện.<br> + Người phụ trách: chỉ xem.<br> + Người phỏng vấn: có thêm chức năng Hủy lịch phỏng vấn đối với ứng viên được gán.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Ở chế độ lịch: không có ô nào được highlight.<br>- Ở chế độ danh sách: hệ thống hiển thị thông báo "Bảng dữ liệu này đang trống" kèm biểu tượng thùng rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-5-1-2">1.2. Xem lịch sử phỏng vấn</h4>
+<details class="book">
+<summary>Xem lịch sử phỏng vấn</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lịch sử phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Cho phép Người phỏng vấn xem lại toàn bộ danh sách ứng viên đã hoàn thành phỏng vấn với mình. <br>Người phỏng vấn chỉ nhìn thấy những ứng viên mà Người phụ trách đã gán cho.<br><br>Chức năng hiển thị dưới dạng bảng "Danh sách ứng viên đã phỏng vấn" với cấu trúc và giao diện tương tự bảng "Danh sách ứng viên", hỗ trợ:<br> - Tìm kiếm ứng viên theo tên, email, số điện thoại.<br> - Lọc ứng viên theo trạng thái (VD: Đạt, Không đạt, Đang chờ đánh giá).<br><br>Khi Người phỏng vấn bấm chọn một ứng viên, hệ thống hiển thị màn hình "Chi tiết ứng viên", bao gồm các thông tin cơ bản:<br> - Họ tên ứng viên<br> - Vị trí ứng tuyển<br> - Thời gian phỏng vấn<br> - Kết quả phỏng vấn<br> - Các thông tin bổ sung khác mà Người phụ trách đã công khai.<br><br>Toàn bộ dữ liệu chỉ ở chế độ xem, Người phỏng vấn không thể chỉnh sửa.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>1. Trang "Danh sách ứng viên đã phỏng vấn".<br>2. Bảng "Danh sách ứng viên đã phỏng vấn".<br>3. Trang "Chi tiết ứng viên".</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phỏng vấn điều hướng đến menu "Lịch sử phỏng vấn".<br>2. Hệ thống hiển thị bảng "Danh sách ứng viên đã phỏng vấn" mặc định với dữ liệu ứng viên đã phỏng vấn.<br>3. Người phỏng vấn có thể:<br> - Sử dụng thanh tìm kiếm để tìm ứng viên.<br> - Dùng bộ lọc để lọc theo trạng thái.<br> - Nhấn vào một ứng viên trong bảng để mở trang "Chi tiết ứng viên".<br>4. Tại trang "Chi tiết ứng viên", hệ thống hiển thị đầy đủ thông tin cơ bản về ứng viên như: Họ và tên, vị trí ứng tuyển, thời gian phỏng vấn gần nhất (chỉ xem).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phỏng vấn đăng nhập bằng tài khoản hợp lệ.<br>- Có ít nhất một ứng viên được gán cho Người phỏng vấn và có buổi phỏng vấn được lên lịch.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Bảng "Danh sách ứng viên đã phỏng vấn" hiển thị dữ liệu ứng viên theo phân quyền.<br>- Khi chọn một ứng viên, trang "Chi tiết ứng viên" xuất hiện với thông tin chỉ đọc.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa có ứng viên nào đã phỏng vấn, hệ thống hiển thị thông báo "Bảng dữ liệu này trống." kèm biểu tượng thùng rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>2. Xem thông tin về ứng viên</summary>
+<h3 id="toc-5-2">2. Xem thông tin về ứng viên</h3>
+<h4 id="toc-5-2-1">2.1. Xem thông tin cá nhân ứng viên</h4>
+<details class="book">
+<summary>Xem chi tiết thông tin ứng viên (Người phỏng vấn)</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem thông tin ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phỏng vấn có thể xem thông tin chi tiết của ứng viên được phân công phỏng vấn để chuẩn bị trước buổi phỏng vấn. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin cần thiết như Tên ứng viên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Người phụ trách, Người đào tạo, CV, bằng cấp và lịch làm việc dự kiến. <br>- Người phỏng vấn chỉ có quyền xem, không thể chỉnh sửa hay xóa dữ liệu.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Ứng viên hoặc Lịch phỏng vấn → chọn ứng viên.<br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phỏng vấn đăng nhập hệ thống.<br>2. Vào menu Ứng viên hoặc Lịch phỏng vấn, chọn ứng viên.<br>3. Xem thông tin tại tab Thông tin ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phỏng vấn được gán phỏng vấn ứng viên.<br>- Ứng viên tồn tại trong hệ thống.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>Hiển thị chi tiết hồ sơ ứng viên với đầy đủ thông tin phục vụ phỏng vấn.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Thông tin nào chưa có sẽ hiển thị trống.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-5-2-2">2.2. Xem kết quả bài kiểm tra của ứng viên</h4>
+<details class="book">
+<summary>Xem lại kết quả kiểm tra ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lại kết quả kiểm tra ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách xem lại kết quả các bài kiểm tra đầu vào mà ứng viên đã thực hiện. <br><br>Người phụ trách có thể truy cập từ thẻ <strong>Thông tin ứng viên</strong> trong màn hình <strong>Chi tiết ứng viên</strong>, nhấn nút <strong>Kiểm tra đầu vào</strong> để mở popup <strong>Bài kiểm tra ứng viên</strong>. Tại popup này, người phụ trách có thể tìm kiếm, chọn bài kiểm tra, và xem chi tiết kết quả của bài kiểm tra đã chọn.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>Ứng viên</strong> → bảng <strong>Danh sách ứng viên</strong> <br>- Màn hình <strong>Chi tiết ứng viên</strong> → thẻ <strong>Thông tin ứng viên</strong> <br>- Popup <strong>Bài kiểm tra ứng viên</strong> (hiển thị danh sách các bài kiểm tra đã thực hiện) <br>- Màn hình/Popup hiển thị chi tiết kết quả kiểm tra</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập và chọn menu <strong>Ứng viên</strong>. <br>2. Trên bảng <strong>Danh sách ứng viên</strong>, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình <strong>Chi tiết ứng viên</strong>. <br>4. Người phụ trách chọn thẻ <strong>Thông tin ứng viên</strong>. <br>5. Tại đây, nhấn nút <strong>Kiểm tra đầu vào</strong>. <br>6. Hệ thống mở popup <strong>Bài kiểm tra ứng viên</strong> hiển thị danh sách các bài kiểm tra đã thực hiện. <br>7. Người phụ trách có thể sử dụng thanh tìm kiếm trong popup để tìm bài kiểm tra theo tên hoặc ngày thực hiện. <br>8. Chọn một bài kiểm tra từ danh sách. <br>9. Hệ thống hiển thị chi tiết kết quả của bài kiểm tra (bao gồm: điểm số, thời gian làm bài, ngày thi, chi tiết các câu trả lời nếu có).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền xem thông tin ứng viên. <br>- Ứng viên đã tồn tại trong hệ thống. <br>- Ứng viên có dữ liệu về kết quả kiểm tra.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Popup <strong>Bài kiểm tra ứng viên</strong> hiển thị danh sách các bài kiểm tra đã thực hiện. <br>- Khi chọn một bài kiểm tra, hệ thống hiển thị đầy đủ thông tin chi tiết về kết quả: <br>&emsp;+ Tên bài kiểm tra <br>&emsp;+ Điểm số đạt được <br>&emsp;+ Thời gian làm bài <br>&emsp;+ Ngày thi <br>&emsp;+ Nội dung câu hỏi &amp; câu trả lời.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa thực hiện bài kiểm tra nào: popup hiển thị thông báo <em>“Không có bài kiểm tra”</em>. <br>- Nếu tìm kiếm không ra kết quả: hiển thị thông báo <em>“Không có bài kiểm tra”</em>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-5-2-3">2.3. Xem câu trả lời của ứng viên</h4>
+<details class="book">
+<summary>Xem câu trả lời của ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem câu trả lời của ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu <strong>Ứng viên</strong> → bảng <strong>Danh sách ứng viên</strong> <br>- Màn hình <strong>Chi tiết ứng viên</strong> → thẻ <strong>Phỏng vấn</strong> <br>- Nút <strong>Xem chi tiết</strong> trên danh sách buổi phỏng vấn <br>- Màn hình <strong>Phỏng vấn ứng viên</strong> (gồm 2 tab: <strong>Câu hỏi phỏng vấn</strong>, <strong>Đánh giá</strong>)</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phụ trách đăng nhập và chọn menu <strong>Ứng viên</strong>. <br>2. Trên bảng <strong>Danh sách ứng viên</strong>, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình <strong>Chi tiết ứng viên</strong>. <br>4. Người phụ trách chọn thẻ <strong>Phỏng vấn</strong> để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút <strong>Xem chi tiết</strong>. <br>6. Hệ thống điều hướng sang màn hình <strong>Phỏng vấn ứng viên</strong>. <br>7. Tại đây, có 2 tab: <br>&emsp;+ <strong>Câu hỏi phỏng vấn</strong>: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ <strong>Đánh giá</strong>: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách buổi phỏng vấn trong thẻ <strong>Phỏng vấn</strong> của màn hình <strong>Chi tiết ứng viên</strong>. <br>- Màn hình <strong>Phỏng vấn ứng viên</strong> hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- <strong>Câu hỏi phỏng vấn</strong>: danh sách câu hỏi &amp; mức đánh giá cho từng câu hỏi. <br>&emsp;- <strong>Đánh giá</strong>: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ <strong>Phỏng vấn</strong> có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình <strong>Phỏng vấn ứng viên</strong> và <strong>Đánh giá</strong> sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình <strong>Đánh giá</strong> sẽ hiển thị 0%.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-5-2-4">2.4. Xem lại buổi phỏng vấn ứng viên</h4>
+<details class="book">
+<summary>Xem lại buổi phỏng vấn của ứng viên (Người phỏng vấn)</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem lại buổi phỏng vấn của ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người phỏng vấn</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người phỏng vấn có thể xem lại các buổi phỏng vấn mà mình được phân công, bao gồm câu hỏi, kết quả bài kiểm tra, câu trả lời ứng viên, và có thể gán trạng thái cho các tiêu chí phỏng vấn.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Trang <strong>Chi tiết ứng viên</strong> (truy cập từ <strong>Danh sách ứng viên đã phỏng vấn</strong>) → nút <strong>“Xem chi tiết”</strong> tại các buổi phỏng vấn trước đó.</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người phỏng vấn đăng nhập và truy cập <strong>Chi tiết ứng viên</strong> từ <strong>Lịch phỏng vấn</strong> hoặc <strong>Danh sách ứng viên đã phỏng vấn</strong>.<br>2. Chọn buổi phỏng vấn đã hoàn thành → nhấn <strong>“Xem chi tiết”</strong>.<br>3. Hệ thống mở trang <strong>Phỏng vấn ứng viên</strong> với 2 thẻ:<br> a. <strong>Câu hỏi phỏng vấn</strong>: xem lại toàn bộ câu hỏi, kết quả làm bài kiểm tra, câu trả lời ứng viên.<br> b. <strong>Đánh giá</strong>: xem và gán trạng thái cho các tiêu chí phỏng vấn được thiết lập sẵn.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người phỏng vấn đã đăng nhập.<br>- Người phỏng vấn chỉ có thể xem lại buổi phỏng vấn của các ứng viên được gán cho mình.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Người phỏng vấn có thể xem lại chi tiết buổi phỏng vấn (câu hỏi, câu trả lời, kết quả kiểm tra).<br>- Người phỏng vấn có thể gán trạng thái cho từng tiêu chí đánh giá.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa có buổi phỏng vấn hoàn thành → không có nút <strong>“Xem chi tiết”</strong>.<br>- Nếu người phỏng vấn không được gán cho ứng viên → không thấy dữ liệu phỏng vấn của ứng viên đó.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<h2 id="vi-ac-ta-chuc-nang-danh-cho-trainer">VI. Đặc tả chức năng dành cho Trainer</h2>
+<details class="info" open="open">
+<summary>1. Xem thông tin về ứng viên</summary>
+<h3 id="toc-6-1">1. Xem thông tin về ứng viên</h3>
+<h4 id="toc-6-1-1">1.1. Xem thông tin cá nhân ứng viên</h4>
+<details class="book">
+<summary>Xem thông tin cá nhân ứng viên</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem thông tin cá nhân ứng viên</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người đào tạo có thể xem thông tin chi tiết của ứng viên đã được phân công đào tạo. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin cơ bản như Tên ứng viên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Trạng thái đào tạo, Người phụ trách, CV, bằng cấp, lịch làm việc dự kiến. <br>- Người đào tạo chỉ có quyền xem, không được chỉnh sửa hoặc quản lý tài khoản ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Danh sách đào tạo → chọn ứng viên.<br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người đào tạo đăng nhập hệ thống.<br>2. Vào menu Danh sách đào tạo, chọn ứng viên.<br>3. Xem thông tin tại tab Thông tin ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người đào tạo được gán đào tạo ứng viên.<br>- Ứng viên tồn tại trong hệ thống.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>Hiển thị chi tiết hồ sơ ứng viên phục vụ đào tạo.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>Các trường thông tin chưa bổ sung sẽ để trống.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-6-1-2">1.2. Xem tất cả các ứng viên được gán</h4>
+<details class="book">
+<summary>Xem ứng viên được gán trách nhiệm</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem ứng viên được gán trách nhiệm đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Khi được gán vào một ứng viên, người đào tạo tự động thấy ứng viên đó trong menu Danh Sách Đào Tạo. Người đào tạo chỉ có quyền xem thông tin cơ bản của ứng viên, không thể chỉnh sửa dữ liệu như họ tên, email, trạng thái hồ sơ. Người đào tạo chỉ có thể thao tác trong phạm vi đào tạo (ví dụ: cập nhật tiến trình đào tạo nếu hệ thống hỗ trợ).</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Danh Sách Đào Tạo → bảng ứng viên đào tạo <br>- Màn hình Chi tiết ứng viên (chỉ đọc)</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người đào tạo đăng nhập hệ thống.<br>2. Vào menu Danh Sách Đào Tạo.<br>3. Xem danh sách các ứng viên được gán.<br>4. Chọn một ứng viên để xem hồ sơ (chỉ đọc).</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người đào tạo đã được người phụ trách gán vào ứng viên.<br>- Người đào tạo đăng nhập có quyền xem menu Danh Sách Đào Tạo.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Menu Danh Sách Đào Tạo hiển thị ứng viên được gán.<br>- Người đào tạo có thể xem thông tin ứng viên nhưng không thể chỉnh sửa dữ liệu cơ bản.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu người đào tạo chưa được gán ứng viên nào: bảng Danh Sách Đào Tạo hiển thị thông báo “Bảng này hiện đang trống!”.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<details class="info" open="open">
+<summary>2. Cụm chức năng quản lý đào tạo</summary>
+<h3 id="toc-6-2">2. Cụm chức năng quản lý đào tạo</h3>
+<h4 id="toc-6-2-1">2.1. Quản lý và đánh giá quy trình đào tạo</h4>
+<details class="book">
+<summary>Quản lý và đánh giá quy trình đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Quản lý và đánh giá quy trình đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người đào tạo theo dõi và quản lý tiến trình đào tạo của ứng viên đã được gán: <br>- Xem quy trình và danh sách buổi đào tạo. <br>- Quyết định buổi nào hiển thị hoặc ẩn với người được đào tạo. <br>- Xem chi tiết tiêu chuẩn, mở rộng danh mục và tiêu chí con. <br>- Upload file bổ sung. <br>- Đánh giá từng tiêu chuẩn đào tạo (ví dụ: đạt/không đạt, nhận xét).</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Danh sách đào tạo → chọn ứng viên → Sub-menu Lịch trình → Quy trình &amp; buổi đào tạo</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người đào tạo đăng nhập và chọn menu Danh sách đào tạo. <br>2. Chọn một ứng viên trong danh sách. <br>3. Truy cập sub-menu Lịch trình, hệ thống hiển thị quy trình &amp; buổi đào tạo. <br>4. Người đào tạo có thể: <br> - Quyết định buổi nào hiển thị/ẩn. <br> - Xem chi tiết tiêu chuẩn, tiêu chí. <br> - Upload file bổ sung. <br> - Đánh giá từng tiêu chuẩn.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người đào tạo đã được gán cho ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách quy trình &amp; buổi đào tạo hiển thị rõ ràng. <br>- Người đào tạo có thể thao tác trong phạm vi cho phép. <br>- Hệ thống hiển thị thông báo thành công sau khi upload/đánh giá.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa được gán quy trình: bảng hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu quy trình không có tiêu chuẩn: danh sách rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-6-2-2">2.2. Đánh giá đầu ra đào tạo</h4>
+<details class="book">
+<summary>Đánh giá đầu ra đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Đánh giá đầu ra đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người đào tạo xem các tiêu chuẩn đầu ra gắn với vị trí ứng viên đang đào tạo và đánh giá mức độ đạt được theo 4 thang: Không tốt, Trung bình, Khá tốt, Tốt. Kết quả được lưu lại để phục vụ quản lý tiến trình đào tạo.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Danh sách đào tạo → chọn ứng viên → Tab Đào tạo → mục Đầu ra</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người đào tạo đăng nhập, vào Danh sách đào tạo. <br>2. Chọn ứng viên cần theo dõi. <br>3. Truy cập tab Đào tạo → mục Đầu ra. <br>4. Xem danh sách tiêu chuẩn đầu ra. <br>5. Đánh giá từng tiêu chuẩn theo thang 4 mức. <br>6. Nhấn Lưu để ghi nhận kết quả.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người đào tạo được gán cho ứng viên. <br>- Ứng viên đã có vị trí với tiêu chuẩn đầu ra.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách tiêu chuẩn đầu ra hiển thị kèm các tùy chọn đánh giá. <br>- Sau khi lưu, kết quả được cập nhật vào hồ sơ đào tạo ứng viên.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa có tiêu chuẩn: hiển thị thông báo “Chưa có tiêu chuẩn đầu ra cho vị trí này”.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+<h2 id="vii-ac-ta-chuc-nang-danh-cho-trainee">VII. Đặc tả chức năng dành cho Trainee</h2>
+<details class="info" open="open">
+<summary>1. Cụm chức năng dành cho Trainee</summary>
+<h3 id="toc-7-1">1. Cụm chức năng dành cho Trainee</h3>
+<h4 id="toc-7-1-1">1.1. Xem quy trình đào tạo</h4>
+<details class="book">
+<summary>Xem quy trình đào tạo</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem quy trình đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người được đào tạo có thể: <br>- Xem quy trình và các buổi đào tạo mà người đào tạo cho phép hiển thị. <br>- Theo dõi lịch trình đào tạo. <br>- Xem chi tiết tiêu chí. <br>- Tải file tài liệu được người đào tạo cung cấp.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Lịch trình → chọn buổi đào tạo → xem nội dung &amp; tài liệu</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người được đào tạo đăng nhập và chọn menu Lịch trình. <br>2. Hệ thống hiển thị danh sách quy trình &amp; buổi đào tạo được mở quyền. <br>3. Người được đào tạo chọn một buổi đào tạo để xem chi tiết. <br>4. Có thể xem tiêu chí chi tiết và tải file tài liệu liên quan.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người được đào tạo có tài khoản hợp lệ và đang trong quá trình đào tạo.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Người được đào tạo thấy danh sách buổi đào tạo được mở. <br>- Có thể xem chi tiết tiêu chí và tải tài liệu.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu chưa được gán quy trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”. <br>- Nếu chưa có buổi đào tạo nào hiển thị: danh sách rỗng.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h4 id="toc-7-1-2">1.2. Xem mục tiêu (đầu ra) đào tạo</h4>
+<details class="book">
+<summary>Xem mục tiêu (đầu ra) đào tạo (Người được đào tạo)</summary>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tên chức năng</strong></td>
+<td>Xem mục tiêu (đầu ra) đào tạo</td>
+</tr>
+<tr>
+<td><strong>Vai trò</strong></td>
+<td>Người được đào tạo</td>
+</tr>
+<tr>
+<td><strong>Mô tả</strong></td>
+<td>Người được đào tạo có thể xem các tiêu chuẩn đầu ra của vị trí, bao gồm: <br>- Danh mục yêu cầu đầu ra hiển thị thành cụm rõ ràng. <br>- Khi mở rộng danh mục, hiển thị các tiêu chí con và mức đánh giá do Người đào tạo nhập. <br>- Chỉ có quyền xem, không thể chỉnh sửa.</td>
+</tr>
+<tr>
+<td><strong>Giao diện liên quan</strong></td>
+<td>- Menu Mục tiêu đào tạo</td>
+</tr>
+<tr>
+<td><strong>Luồng thao tác chính</strong></td>
+<td>1. Người được đào tạo đăng nhập và chọn menu Mục tiêu đào tạo. <br>2. Hệ thống hiển thị danh sách mục tiêu đầu ra. <br>3. Người được đào tạo có thể mở rộng danh mục để xem các tiêu chí con và đánh giá.</td>
+</tr>
+<tr>
+<td><strong>Điều kiện</strong></td>
+<td>- Người được đào tạo có tài khoản hợp lệ. <br>- Ứng viên đã được gán vào quy trình đào tạo có tiêu chuẩn đầu ra.</td>
+</tr>
+<tr>
+<td><strong>Kết quả hiển thị</strong></td>
+<td>- Danh sách tiêu chuẩn đầu ra hiển thị kèm đánh giá từ người đào tạo.</td>
+</tr>
+<tr>
+<td><strong>Trường hợp không có dữ liệu</strong></td>
+<td>- Nếu ứng viên chưa được gán chương trình đào tạo: hiển thị thông báo “Ứng viên chưa được gán chương trình đào tạo”.</td>
+</tr>
+</tbody>
+</table>
+</details>
+</details>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "header.autohide"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../scripts/open-toc-book.js"></script>
+      
+        <script src="../scripts/serinus-layout.js"></script>
+      
+        <script src="../scripts/home.js"></script>
+      
+        <script src="../scripts/animations.js"></script>
+      
+    
+  </body>
+</html>
