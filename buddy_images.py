@@ -4,16 +4,27 @@ Script để tự động cập nhật Buddy.md với hình ảnh.
 - Quét tất cả folder hình ảnh tương ứng
 - Nếu có hình ảnh → sinh markdown tự động
 - Nếu không có → hiển thị warning
-- Tự động thêm vào Buddy.md từ cuối file
+- Idempotent: chạy nhiều lần không gây lỗi format
 """
 
 import re
 import os
 from pathlib import Path
 
+# ─── Constants ────────────────────────────────────────────────────────────────
 
-def folder_exists_and_has_images(section_id):
-    """Kiểm tra xem folder có tồn tại và có chứa hình ảnh hay không"""
+# Indentation cố định: 8 spaces (nằm trong ??? admonition block)
+INDENT = "        "
+
+# Marker cố định để nhận diện block ảnh — dùng để tìm và xóa block cũ
+BLOCK_START_MARKER = "📸 **Hình ảnh minh họa**"
+BLOCK_END_MARKER   = "*Bấm vào từng ảnh để xem chi tiết.*"
+
+
+# ─── Helpers ──────────────────────────────────────────────────────────────────
+
+def folder_exists_and_has_images(section_id: str):
+    """Kiểm tra xem folder có tồn tại và có chứa hình ảnh hay không."""
     folder_path = Path(f"docs/assets/images/buddy/{section_id}").resolve()
 
     if not folder_path.exists():
@@ -28,208 +39,170 @@ def folder_exists_and_has_images(section_id):
     return True, images
 
 
-def generate_image_section(section_id, boundary_type='next_section'):
+def generate_image_block(section_id: str) -> str:
     """
-    Tạo template Markdown cho phần hình ảnh.
-
-    boundary_type:
-      - 'next_section' : section tiếp theo là #### → thêm dòng trống cuối bình thường
-      - 'new_group'    : sau block là --- hoặc ???+ → KHÔNG thêm dòng trống cuối,
-                         để footer nằm sát ngay trên ---
+    Tạo block markdown cho phần hình ảnh.
+    Luôn dùng INDENT cố định (8 spaces) — idempotent.
+    Block KHÔNG có newline đầu; newline cuối được quản lý bởi caller.
     """
     exists, images = folder_exists_and_has_images(section_id)
 
     lines = []
-    lines.append(f"        📸 **Hình ảnh minh họa**")
+    lines.append(f"{INDENT}{BLOCK_START_MARKER}")
     lines.append(f"")
-    lines.append(f"        > **📁 Thư mục nguồn:** `assets/images/buddy/{section_id}/`")
+    lines.append(f"{INDENT}> **📁 Thư mục nguồn:** `assets/images/buddy/{section_id}/`")
     lines.append(f"")
 
     if not exists:
-        lines.append(f'        !!! warning "Thư mục không tồn tại"')
-        lines.append(f"            Thư mục `assets/images/buddy/{section_id}/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.")
+        lines.append(f'{INDENT}!!! warning "Thư mục không tồn tại"')
+        lines.append(f"{INDENT}    Thư mục `assets/images/buddy/{section_id}/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.")
     elif not images:
-        lines.append(f'        !!! warning "Chưa có hình ảnh minh họa"')
-        lines.append(f"            Thư mục `assets/images/buddy/{section_id}/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.")
+        lines.append(f'{INDENT}!!! warning "Chưa có hình ảnh minh họa"')
+        lines.append(f"{INDENT}    Thư mục `assets/images/buddy/{section_id}/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.")
     else:
         for image in images:
             desc = image.replace('-', ' ').replace('_', ' ').rsplit('.', 1)[0].title()
-            lines.append(f"        ![{desc}](assets/images/buddy/{section_id}/{image}){{ .image-widget-thumb loading=lazy }}")
+            lines.append(f"{INDENT}![{desc}](assets/images/buddy/{section_id}/{image}){{ .image-widget-thumb loading=lazy }}")
 
     lines.append(f"")
-    lines.append(f"        *Bấm vào từng ảnh để xem chi tiết.*")
-
-    # Nếu boundary là --- hoặc ???+, KHÔNG thêm dòng trống sau footer
-    # để footer nằm ngay sát trên --- (đúng format MkDocs)
-    if boundary_type == 'next_section':
-        lines.append(f"")
+    lines.append(f"{INDENT}{BLOCK_END_MARKER}")
 
     return "\n".join(lines)
 
 
-def find_image_block_range(content, search_from):
+def find_existing_block(content: str, search_from: int):
     """
-    Tìm vị trí bắt đầu và kết thúc của block ảnh trong content[search_from:].
-    Trả về (abs_start, abs_end) hoặc (None, None) nếu không tìm thấy.
+    Tìm block ảnh hiện có trong content[search_from:].
 
-    Chiến lược: block ảnh luôn kết thúc bằng dòng cố định:
-        *Bấm vào từng ảnh để xem chi tiết.*
-    Cách này không phụ thuộc vào loại boundary phía sau (---/???+/####/...)
+    Chiến lược chắc chắn:
+    - Tìm BLOCK_START_MARKER (bất kể indentation — regex bỏ qua spaces đầu dòng)
+    - Tìm BLOCK_END_MARKER phía sau (bất kể indentation)
+    - Trả về (abs_start, abs_end_after_newline) hoặc (None, None)
     """
-    image_header_pattern = r'📸 \*\*Hình ảnh minh họa\*\*'
-    footer_pattern = r'\*Bấm vào từng ảnh để xem chi tiết\.\*[ \t]*\n'
-
     sub = content[search_from:]
-    header_match = re.search(image_header_pattern, sub)
-    if not header_match:
+
+    # Match bất kể bao nhiêu spaces/tabs trước marker
+    start_pat = re.compile(r'^[ \t]*' + re.escape(BLOCK_START_MARKER), re.MULTILINE)
+    end_pat   = re.compile(r'^[ \t]*' + re.escape(BLOCK_END_MARKER) + r'[ \t]*\n?', re.MULTILINE)
+
+    sm = start_pat.search(sub)
+    if not sm:
         return None, None
 
-    abs_start = search_from + header_match.start()
+    # Tính abs_start từ đầu dòng (kể cả spaces trước marker)
+    # Tìm đầu dòng chứa marker
+    line_start_in_sub = sub.rfind('\n', 0, sm.start()) + 1
+    abs_start = search_from + line_start_in_sub
 
-    after_header = sub[header_match.start():]
-    footer_match = re.search(footer_pattern, after_header)
-
-    if footer_match:
-        abs_end = abs_start + footer_match.end()
-    else:
-        # Block bị corrupt, không tìm thấy footer → trả None để tránh xóa nhầm
+    # Tìm end marker sau start
+    after_start = sub[sm.start():]
+    em = end_pat.search(after_start)
+    if not em:
         return None, None
 
+    abs_end = search_from + sm.start() + em.end()
     return abs_start, abs_end
 
 
-def find_insert_position(content, search_from):
+def find_insert_position(content: str, search_from: int):
     """
-    Tìm vị trí chèn block ảnh và xác định loại boundary ngay sau điểm chèn.
+    Tìm vị trí chèn block ảnh mới: sau dòng '| **Trường hợp không có dữ liệu** |...'
+    Trả về insert_pos (int) hoặc None.
 
-    Trả về (insert_pos, boundary_type) hoặc (None, None).
-
-    boundary_type:
-      - 'next_section' : ngay trước #### mới  → chèn bình thường
-      - 'new_group'    : ngay trước ---/???+/##  → footer phải nằm sát trên ---
+    KHÔNG dùng re.DOTALL: pattern chỉ match 1 dòng để tránh ăn qua nhiều rows
+    và match sai vị trí (e.g. match row cuối cùng trong file thay vì row của section hiện tại).
     """
     sub = content[search_from:]
 
-    # Row "Trường hợp không có dữ liệu" có thể nhiều dòng (có <br>)
-    # Lookahead để KHÔNG tiêu thụ boundary, giữ nguyên content[insert_pos:]
-    no_data_pattern = (
-        r'\|\s*\*\*Trường hợp không có dữ liệu\*\*\s*\|'
-        r'.*?\n'
-        r'(?='
-            r'\s{0,8}\|'      # dòng tiếp theo vẫn là table row
-            r'|\s{0,8}####'   # section con mới
-            r'|\s{0,4}\?\?\?' # admonition mới
-            r'|---'           # separator mục lớn
-            r'|\Z'            # EOF
-        r')'
+    # Match đúng 1 dòng: từ | **Trường hợp...** | đến cuối dòng (\n)
+    # KHÔNG dùng re.DOTALL
+    no_data_pat = re.compile(
+        r'\|[ \t]*\*\*Trường hợp không có dữ liệu\*\*[ \t]*\|[^\n]*\n'
     )
-    match = re.search(no_data_pattern, sub, re.DOTALL)
-    if not match:
-        return None, None
 
-    insert_pos = search_from + match.end()
+    m = no_data_pat.search(sub)
+    if not m:
+        return None
 
-    # Xác định loại boundary ngay tại insert_pos để quyết định format footer
-    after = content[insert_pos:]
-    stripped = after.lstrip('\n')  # bỏ qua dòng trống trung gian nếu có
-
-    if re.match(r'[ \t]*---', stripped) or re.match(r'\s{0,4}\?\?\?', stripped) or re.match(r'#{2,3} ', stripped):
-        boundary_type = 'new_group'
-    else:
-        boundary_type = 'next_section'
-
-    return insert_pos, boundary_type
+    return search_from + m.end()
 
 
-def get_boundary_type_for_existing_block(content, abs_end):
-    """
-    Sau khi xác định được abs_end của block ảnh hiện tại,
-    kiểm tra xem boundary ngay sau đó là loại gì.
-    Dùng khi REPLACE block cũ để generate đúng format footer.
-    """
-    after = content[abs_end:]
-    stripped = after.lstrip('\n')
-
-    if re.match(r'[ \t]*---', stripped) or re.match(r'\s{0,4}\?\?\?', stripped) or re.match(r'#{2,3} ', stripped):
-        return 'new_group'
-    return 'next_section'
-
+# ─── Main update logic ────────────────────────────────────────────────────────
 
 def update_buddy_file():
-    """Cập nhật file Buddy.md"""
+    """Cập nhật file Buddy.md — idempotent."""
     file_path = Path("docs/Buddy.md")
 
     with open(file_path, 'r', encoding='utf-8') as f:
         original_content = f.read()
 
     # Tìm tất cả các section #### X.X. ... {#toc-X-X-X}
-    pattern = r'(####\s+\d+\.\d+\.[^\n]*\{#toc-(\d+-\d+-\d+)\})'
-    sections = list(re.finditer(pattern, original_content))
+    section_pattern = re.compile(r'####\s+\d+\.\d+\.[^\n]*\{#toc-(\d+-\d+-\d+)\}')
+    sections = list(section_pattern.finditer(original_content))
 
     print(f"Found {len(sections)} sections")
     print()
 
-    stats = {'with_images': 0, 'without_images': 0, 'folder_missing': 0}
-    updates = 0
+    stats = {'updated': 0, 'inserted': 0, 'with_images': 0,
+             'without_images': 0, 'folder_missing': 0, 'skipped': 0}
 
-    # --- Bước 1: Thu thập tất cả edits cần thực hiện ---
-    # Mỗi edit là (start, end, new_text)
-    # Duyệt xuôi để tính đúng vị trí, sau đó apply từ cuối lên đầu
+    # Thu thập edits: (abs_start, abs_end, new_text)
+    # Sau đó apply từ cuối lên đầu để không làm lệch offset
     edits = []
 
     for match in sections:
-        section_id = match.group(2)
+        section_id = match.group(1)
         section_start = match.end()
 
+        exists, images = folder_exists_and_has_images(section_id)
+        new_block = generate_image_block(section_id)
+
         # Kiểm tra block ảnh đã tồn tại chưa
-        abs_start, abs_end = find_image_block_range(original_content, section_start)
+        abs_start, abs_end = find_existing_block(original_content, section_start)
 
         if abs_start is not None:
-            # Xác định boundary để generate đúng format
-            boundary_type = get_boundary_type_for_existing_block(original_content, abs_end)
-            new_block = generate_image_section(section_id, boundary_type)
-            edits.append((abs_start, abs_end, new_block))
+            # REPLACE block cũ bằng block mới
+            edits.append((abs_start, abs_end, new_block + "\n"))
+            stats['updated'] += 1
 
-            exists, images = folder_exists_and_has_images(section_id)
             if not exists:
                 stats['folder_missing'] += 1
                 status = "📁 Chưa có folder"
             elif images:
                 stats['with_images'] += 1
-                status = f"♻️ Updated {len(images)} hình ảnh"
+                status = f"♻️  Updated ({len(images)} ảnh)"
             else:
                 stats['without_images'] += 1
                 status = "⏳ Folder trống (updated warning)"
 
-            print(f"  {section_id}: {status} [REPLACE] boundary={boundary_type}")
-            updates += 1
+            print(f"  {section_id}: {status} [REPLACE]")
 
         else:
-            # Chèn block mới sau "Trường hợp không có dữ liệu"
-            insert_pos, boundary_type = find_insert_position(original_content, section_start)
+            # INSERT block mới sau "Trường hợp không có dữ liệu"
+            insert_pos = find_insert_position(original_content, section_start)
 
             if insert_pos is not None:
-                new_block = generate_image_section(section_id, boundary_type)
-                edits.append((insert_pos, insert_pos, new_block))
+                edits.append((insert_pos, insert_pos, new_block + "\n"))
+                stats['inserted'] += 1
 
-                exists, images = folder_exists_and_has_images(section_id)
                 if not exists:
                     stats['folder_missing'] += 1
                     status = "📁 Chưa có folder"
                 elif images:
                     stats['with_images'] += 1
-                    status = f"✅ Thêm {len(images)} hình ảnh"
+                    status = f"✅ Thêm ({len(images)} ảnh)"
                 else:
                     stats['without_images'] += 1
-                    status = "⏳ Folder trống (sẽ cảnh báo)"
+                    status = "⏳ Folder trống (warning placed)"
 
-                print(f"  {section_id}: {status} [INSERT] boundary={boundary_type}")
-                updates += 1
+                print(f"  {section_id}: {status} [INSERT]")
             else:
-                print(f"  {section_id}: ⚠️ Không tìm thấy 'Trường hợp không có dữ liệu'")
+                stats['skipped'] += 1
+                print(f"  {section_id}: ⚠️  Không tìm thấy 'Trường hợp không có dữ liệu' — BỎ QUA")
 
-    # --- Bước 2: Apply edits từ cuối lên đầu (tránh offset lệch) ---
-    if edits:
+    # Apply edits từ cuối lên đầu (tránh offset lệch)
+    total_edits = len(edits)
+    if total_edits > 0:
         edits.sort(key=lambda e: e[0], reverse=True)
 
         content = original_content
@@ -239,19 +212,20 @@ def update_buddy_file():
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
 
-    # --- Báo cáo ---
+    # Báo cáo
     print()
     print("=" * 60)
-    if updates > 0:
-        print(f"✅ CẬP NHẬT THÀNH CÔNG: {updates} sections được cập nhật")
+    if total_edits > 0:
+        print(f"✅ CẬP NHẬT THÀNH CÔNG: {stats['updated']} replaced, {stats['inserted']} inserted")
     else:
-        print("✅ TẤT CẢ SECTIONS ĐÃ CÓ PHẦN HÌNH ẢNH")
+        print("✅ TẤT CẢ SECTIONS ĐÃ CÓ PHẦN HÌNH ẢNH (không có thay đổi)")
     print("=" * 60)
     print()
     print("📊 THỐNG KÊ:")
-    print(f"  🖼️  Sections với hình ảnh: {stats['with_images']}")
-    print(f"  ⏳ Sections chưa có hình: {stats['without_images']}")
-    print(f"  📁 Folders chưa tồn tại: {stats['folder_missing']}")
+    print(f"  🖼️   Sections với hình ảnh : {stats['with_images']}")
+    print(f"  ⏳  Sections chưa có hình  : {stats['without_images']}")
+    print(f"  📁  Folders chưa tồn tại  : {stats['folder_missing']}")
+    print(f"  ⚠️   Sections bị bỏ qua    : {stats['skipped']}")
     print()
 
 
