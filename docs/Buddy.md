@@ -416,8 +416,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Giao diện liên quan** | - Màn hình chứa bảng **Danh sách ứng viên** (menu *Ứng viên*).<br>- Submenu sau khi chọn vào ứng viên cụ thể.<br>- Tab "Phỏng vấn" trên submenu đó.<br>- Danh sách các vòng phỏng vấn.<br>- Popup nội dung vòng phỏng vấn|
         | **Luồng thao tác chính** | 1. Người phụ trách chọn vào vòng phỏng vấn muốn xem chi tiết.<br>2. Hệ thống hiển thị popup chứa 2 tab *'Câu hỏi phỏng vấn'* và *'Đánh giá'*, mặc định trỏ vào tab *'Câu hỏi phỏng vấn'* khi người phỏng vấn mở popup lên.<br>3. Người phụ trách xem được các danh mục chứa các nội dung phỏng vấn của vòng phỏng vấn này, khi mở rộng các danh mục sẽ có nhiều câu hỏi phỏng vấn bên trong.<br>4. Tương tự với tab *'Đánh giá'*.<br>*(Lưu ý: người phụ trách không được phép chỉnh sửa nội dung ở popup này)*<br><br>**Trường hợp người phụ trách xem chi tiết vòng phỏng vấn đã phỏng vấn xong**<br>1. Khi mở popup chứa nội dung chi tiết, cả 2 tab *'Câu hỏi phỏng vấn'* và *'Đánh giá'* đều có kết quả do người phỏng vấn thêm vào trong quá trình phỏng vấn. <br>*(Lưu ý: người phụ trách không được phép chỉnh sửa nội dung ở popup này)*|
         | **Điều kiện** | - Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>- Vị trí tuyển dụng đó có ít nhất một vòng phỏng vấn được thiết lập sẵn.<br>- Vòng phỏng vấn được chọn có nội dung chi tiết. |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Kết quả hiển thị** | - Nội dung của popup đúng với dữ liệu được điền vào bởi người phỏng vấn sau khi thực hiện vòng phỏng vấn. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp không có nội dung chi tiết tại các tab trong popup:** hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả  "Không có dữ liệu!". |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-2/`
@@ -431,13 +431,13 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Quản lý ghi chú dành cho ứng viên |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng này cho phép người phụ trách thêm các ghi chú dành cho ứng viên được chọn từ bảng **"Danh sách ứng viên"**.<br>Hệ thống sẽ lưu trữ thông tin của người tạo và thời gian tạo ghi chú (log), hệ thống cho phép người phụ trách thêm / xóa / sửa những ghi chú của mình đã tạo (không được thao tác lên ghi chú của người phụ trách khác).<br> Hệ thống tích hợp một số định dạng văn bản như in đậm, in nghiêng , gạch chân, chèn link, định dạng màu chữ. Khi người phụ trách tạo mới một ghi chú hoặc chỉnh sửa, hệ thống sẽ cho phép người phụ trách thực hiện các định dạng văn bản này. |
+        | **Giao diện liên quan** | - Màn hình chứa bảng Danh sách ứng viên (menu Ứng viên).<br>- Submenu sau khi chọn vào ứng viên cụ thể.<br>- Tab "Ghi Chú" trên submenu đó.<br>- Popup "Thêm ghi chú".<br>- Thanh công cụ định dạng văn bản (Floating Toolbar). |
+        | **Luồng thao tác chính** | 1. Xem danh sách ghi chú:<br>- Người phụ trách chọn ứng viên, chọn tab "Ghi chú". Hệ thống hiển thị danh sách các ghi chú đã tạo theo thứ tự thời gian.<br>2. Thêm mới ghi chú:<br>- Người phụ trách nhấn nút [+ Thêm ghi chú] ở góc phải màn hình.<br>- Hệ thống hiển thị popup "Thêm ghi chú" gồm trường Tiêu đề và Ghi chú.<br>- Người phụ trách nhập nội dung và nhấn nút [Thêm ghi chú] trong popup để lưu.<br>3. Định dạng văn bản:<br>- Khi bôi đen đoạn văn bản trong ghi chú, hệ thống hiển thị thanh công cụ: In đậm (B), In nghiêng (I), Gạch chân (U), Gạch ngang (S), Màu chữ, Chèn Link.<br>4. Chỉnh sửa/Xóa ghi chú:<br>- Người phụ trách nhấn vào icon "Ba chấm" tại ghi chú muốn thao tác.<br>- Chọn "Chỉnh sửa" để cập nhật nội dung hoặc "Xóa" để gỡ bỏ ghi chú.<br>*(Lưu ý: Chỉ được sửa/xóa ghi chú do chính mình tạo. Khi rê chuột vào avatar người tạo, hệ thống hiển thị Họ tên đầy đủ)* |
+        | **Điều kiện** | - Tài khoản đang đăng nhập có phân quyền Người phụ trách.<br>- Đã chọn một ứng viên cụ thể để xem chi tiết. |
+        | **Kết quả hiển thị** | - Ghi chú mới hiển thị ngay lập tức trong danh sách.<br>- Hiển thị đúng: Tiêu đề, nội dung đã định dạng, thời gian tạo (HH:MM, DD/MM/YYYY) và avatar người tạo.<br>- Thông tin người tạo hiển thị chính xác khi hover vào avatar. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa có ghi chú nào:** Hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-3/`
@@ -447,17 +447,17 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.4. Đánh giá ứng viên {#toc-4-2-4}
-    ??? book "Quản lý ghi chú dành cho ứng viên"
+    ??? book "Đánh giá ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Quản lý ghi chú dành cho ứng viên |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Tên chức năng** | Đánh giá ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng này cho phép người phụ trách thực hiện đánh giá ứng viên đang chọn dựa trên các tiêu chí đã được thiết lập sẵn. Người phụ trách nhập tiêu đề, thực hiện chấm điểm bằng sao (Rating) cho từng tiêu chí, chọn các thuộc tính chi tiết trong từng tiêu chí và viết nội dung đánh giá tổng quát. |
+        | **Giao diện liên quan** | - Tab "Đánh giá" trong chi tiết ứng viên.<br>- Form "Đánh giá ứng viên" (khu vực bên trái màn hình).<br>- Các danh mục tiêu chí đánh giá (dạng Accordion/Dropdown). |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn tab "Đánh giá".<br>2. Nhập Tiêu đề đánh giá vào ô textbox.<br>3. Tại mỗi danh mục tiêu chí (Ví dụ: Kỹ năng chuyên môn, Mức độ hoàn thiện task...):<br>- Chọn số sao tương ứng (từ 1 đến 5 sao).<br>- Click mở rộng danh mục để tích chọn các tiêu chí chi tiết bên trong (Checkbox).<br>4. Nhập nội dung chi tiết tại ô "Nội dung đánh giá".<br>5. Nhấn nút [Lưu đánh giá] để hoàn tất. |
+        | **Điều kiện** | - Tài khoản có quyền người phụ trách.<br>- Vị trí ứng tuyển của ứng viên đã được thiết lập bộ tiêu chí đánh giá trong hệ thống. |
+        | **Kết quả hiển thị** | - Dữ liệu đánh giá được lưu vào hệ thống.<br>- Đánh giá mới nhất sẽ xuất hiện ở đầu danh sách "Đánh giá gần đây" ở cột bên phải. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp vị trí tuyển dụng chưa được thiết lập tiêu chí:** Hệ thống hiển thị thông báo "Vị trí này chưa có tiêu chí đánh giá!" hoặc hiển thị khung trống. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-4/`
@@ -470,13 +470,13 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Xem lại các đánh giá gần đây |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Chức năng này liệt kê các bản đánh giá đã thực hiện trong quá khứ của ứng viên dưới dạng danh sách thu gọn, giúp người phụ trách nhanh chóng nắm bắt lịch sử đánh giá mà không cần tải lại trang. |
+        | **Giao diện liên quan** | - Cột "Đánh giá gần đây" (khu vực bên phải màn hình).<br>- Các thẻ (Card) đánh giá chi tiết theo từng đợt. |
+        | **Luồng thao tác chính** | 1. Người phụ trách xem danh sách các thẻ đánh giá ở cột phải (hiển thị thông tin tóm tắt: Tiêu đề, Tag trạng thái, Số sao trung bình, Người đánh giá và Ngày đánh giá).<br>.2. Click vào một thẻ đánh giá cụ thể trong danh sách.<br>3. Hệ thống tự động tìm kiếm bản đánh giá tương ứng ở khu vực bên trái, mở rộng (expand) danh mục đó và cuộn màn hình (scroll) để đưa nội dung đó vào giữa tầm mắt người dùng. |
+        | **Điều kiện** | - Ứng viên đã có ít nhất một bản đánh giá được lưu trong hệ thống. |
+        | **Kết quả hiển thị** | - Hiển thị đúng các Tag trạng thái màu sắc (Ví dụ: Tốt - Xanh lá, Khá tốt - Xanh dương, Trung bình - Cam, Không tốt - Xám).<br>- Hiển thị đúng Avatar và tên người thực hiện đánh giá. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa có lịch sử đánh giá:** Cột bên phải hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-5/`
@@ -490,12 +490,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Quản lý HĐLĐ với ứng viên |
         | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Mô tả** | Chức năng này cho phép người phụ trách tạo và quản lý Hợp đồng lao động (HĐLĐ) cho ứng viên. Hệ thống cung cấp các trường thông tin hành chính, cho phép soạn thảo nội dung hợp đồng trực tiếp và đính kèm các tài liệu liên quan. Sau khi lưu, mọi thay đổi (thêm/xóa/sửa) đều được hệ thống ghi nhận nhưng phải tuân thủ quy trình kiểm duyệt của tổ chức.  |
+        | **Giao diện liên quan** | - Tab "Hợp Đồng" trong chi tiết ứng viên.<br>- Form "Thông Tin Hợp Đồng".<br>- Khu vực soạn thảo "Nội dung".<br>- Khu vực "Tệp đính kèm". |
+        | **Luồng thao tác chính** | **1. Nhập thông tin chung:**<br>- Người phụ trách nhập các thông tin: Số hợp đồng, Phòng ban, Vị trí, Thời hạn hợp đồng, Thời gian thử việc, Mức lương, Ngày ký, Ngày bắt đầu và Ngày kết thúc.<br>- Tại trường Mức lương: Hệ thống mặc định ẩn bằng ký tự ************, người dùng click vào icon "Con mắt" để xem nội dung.<br>**2. Soạn thảo nội dung & địa điểm:**<br>- Nhập địa điểm làm việc cụ thể.<br>- Soạn thảo chi tiết các điều khoản tại khung "Nội dung" (Hợp đồng lao động xác định thời hạn, công việc, trách nhiệm, quyền lợi...).<br>**3. Quản lý tệp đính kèm:**<br>- Nhấn icon [Upload] để tải lên các tệp định dạng PDF, Word, Powerpoint...<br>- Để xóa tệp đã tải lên, nhấn vào icon [X] đỏ tại góc phải của tệp đó.<br>**4. Lưu dữ liệu:**<br>- Sau khi hoàn tất, hệ thống ghi nhận trạng thái chờ duyệt hoặc lưu tùy theo cấu hình phân quyền. |
+        | **Điều kiện** | - Tài khoản đang đăng nhập có phân quyền Người phụ trách.<br>- Ứng viên đã vượt qua các vòng phỏng vấn và chuyển sang giai đoạn ký kết hợp đồng. |
+        | **Kết quả hiển thị** | - Các trường dữ liệu hiển thị đúng định dạng (Ngày tháng theo `dd/mm/yyyy).<br>- Tệp đính kèm hiển thị dưới dạng Thumbnail kèm tên file và định dạng tương ứng. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa có thông tin hợp đồng:** Các trường nhập liệu sẽ để trống, khu vực tệp đính kèm không hiển thị danh sách. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-6/`
@@ -503,13 +503,13 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         ![Chi Tiết Thông Tin Ứng Viên   Hợp Đồng](assets/images/buddy/4-2-6/Chi tiết thông tin Ứng viên - Hợp đồng.png){ .image-widget-thumb loading=lazy }
 
         *Bấm vào từng ảnh để xem chi tiết.*
-    #### 2.7. Quản lý HĐLĐ với ứng viên {#toc-4-2-7}
-    ??? book "Quản lý HĐLĐ với ứng viên"
+    #### 2.7. Quản lý thử việc dành cho ứng viên {#toc-4-2-7}
+    ??? book "Quản lý thử việc dành cho ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Quản lý HĐLĐ với ứng viên |
+        | **Tên chức năng** | Quản lý thử việc dành cho ứng viên |
         | **Vai trò** |  |
-        | **Mô tả** |  |
+        | **Mô tả** | Chức năng này cho phép người phụ trách đánh giá ứng viên trong quá trình thử việc dựa theo bộ tiêu chí được thiết lập sẵn cho mỗi vị trí. Khi đã thực hiện đánh giá cho các tiêu chí trong quá trình thử việc thì chỉ số của danh mục đó sẽ tăng theo thực tế. Người phụ trách có thể thêm đánh giá cụ thể cho mỗi tiêu chí, ngoài ra có thể thêm file, thêm URL và định dạng văn bản tùy theo nhu cầu sử dụng. |
         | **Giao diện liên quan** |  |
         | **Luồng thao tác chính** |  |
         | **Điều kiện** |  |
@@ -520,26 +520,6 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-7/`
 
         ![Chi Tiết Thông Tin Ứng Viên   Thử Việc](assets/images/buddy/4-2-7/Chi tiết thông tin Ứng viên - Thử việc.png){ .image-widget-thumb loading=lazy }
-
-        *Bấm vào từng ảnh để xem chi tiết.*
-    #### 2.8. Quản lý thử việc dành cho ứng viên {#toc-4-2-8}
-    ??? book "Quản lý thử việc dành cho ứng viên"
-        | Trường | Nội dung |
-        | ------ | -------- |
-        | **Tên chức năng** | Quản lý thử việc dành cho ứng viên |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
-        📸 **Hình ảnh minh họa**
-
-        > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-8/`
-
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-2-8/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
