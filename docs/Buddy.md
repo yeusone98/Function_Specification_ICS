@@ -509,12 +509,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Quản lý thử việc dành cho ứng viên |
         | **Vai trò** |  |
-        | **Mô tả** | Chức năng này cho phép người phụ trách đánh giá ứng viên trong quá trình thử việc dựa theo bộ tiêu chí được thiết lập sẵn cho mỗi vị trí. Khi đã thực hiện đánh giá cho các tiêu chí trong quá trình thử việc thì chỉ số của danh mục đó sẽ tăng theo thực tế. Người phụ trách có thể thêm đánh giá cụ thể cho mỗi tiêu chí, ngoài ra có thể thêm file, thêm URL và định dạng văn bản tùy theo nhu cầu sử dụng. |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Mô tả** | Chức năng này cho phép người phụ trách theo dõi và đánh giá chi tiết quá trình thử việc của ứng viên dựa trên các danh mục nhiệm vụ được thiết lập sẵn. Người phụ trách có thể xác nhận hoàn thành từng tiêu chí, viết nhận xét chi tiết, đính kèm tệp tin hoặc liên kết (URL) để làm minh chứng cho kết quả thử việc. |
+        | **Giao diện liên quan** | - Tab *"Thử việc"* trong chi tiết ứng viên.<br>- Danh sách các nhóm nhiệm vụ thử việc (dạng Accordion).<br>- Các thẻ nhiệm vụ chi tiết (Task cards) bên trong mỗi nhóm.<br>- Thanh công cụ tương tác (Upload, Link, Rich Text) tại mỗi nhiệm vụ. |
+        | **Luồng thao tác chính** | **1. Xem tiến độ tổng quát:**<br>.- Người phụ trách xem các nhóm nhiệm vụ (Ví dụ: [Thử việc][CSKH] Theo dõi & đánh giá thử việc).<br>- Quan sát chỉ số tiến độ ở góc phải mỗi nhóm (Ví dụ: 1/3, 4/4) để biết số lượng nhiệm vụ đã hoàn thành trên tổng số.<br>**2. Đánh giá chi tiết nhiệm vụ:**<br>- Click mở rộng nhóm nhiệm vụ để xem các tiêu chí chi tiết.<br>- Tích chọn vào ô Checkbox đầu mỗi tiêu chí để xác nhận đã thực hiện/đánh giá.<br>- Tại ô nhập liệu dưới mỗi tiêu chí, người phụ trách nhập nội dung nhận xét.<br>**3. Thêm tệp/liên kết minh chứng:**<br>- Sử dụng các icon ở góc phải ô nhập liệu để:<br>&emsp;+ Icon Tải lên: Đính kèm file minh chứng.<br>&emsp;+ Icon Link: Chèn URL liên quan.<br>&emsp;+ Icon Văn bản: Định dạng nội dung nhận xét.<br>**4. Lưu vết (Log):**<br>- Sau khi lưu, hệ thống hiển thị thông tin người đánh giá và thời gian (HH:mm - DD/MM/YYYY) ngay phía trên nội dung đánh giá. |
+        | **Điều kiện** | - Ứng viên đang trong giai đoạn thử việc hoặc đã được thiết lập lộ trình thử việc.<br>- Tài khoản đăng nhập có quyền Người phụ trách. |
+        | **Kết quả hiển thị** | - Chỉ số tiến độ (X/Y) tự động cập nhật ngay khi người phụ trách tích chọn hoàn thành nhiệm vụ.<br>- Các nhiệm vụ đã đánh giá hiển thị kèm thông tin định danh (Avatar/Tên) của người phụ trách thực hiện. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa được gán lộ trình thử việc:** Hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu thử việc!". |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-7/`
