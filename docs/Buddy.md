@@ -67,8 +67,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/3-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.2. Cập nhật tài khoản {#toc-3-1-2}
@@ -87,8 +87,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/3-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.3. Đổi mật khẩu {#toc-3-1-3}
@@ -107,8 +107,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-3/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/3-1-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.4. Thay đổi vai trò (đối với tài khoản có nhiều vai trò) {#toc-3-1-4}
@@ -127,8 +127,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-4/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/3-1-4/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.5. Đăng xuất khỏi tài khoản {#toc-3-1-5}
@@ -147,8 +147,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-5/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/3-1-5/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/3-1-5/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -378,8 +378,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-10/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-1-10/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-1-10/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -389,14 +389,14 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
     ??? book "Tạo buổi phỏng vấn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Tạo buổi phỏng vấn ứng viên |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Tên chức năng** | Tạo vòng phỏng vấn ứng viên |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Tính năng này giúp người phụ trách điều phối lịch phỏng vấn bằng cách chỉ định người đánh giá và thời gian cụ thể cho từng vòng phỏng vấn đã được thiết lập theo vị trí tuyển dụng. |
+        | **Giao diện liên quan** | - Màn hình chứa bảng **Danh sách ứng viên** (menu *Ứng viên*).<br>- Submenu sau khi chọn vào ứng viên cụ thể.<br>- Tab "Phỏng vấn" trên submenu đó. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn vào một ứng viên cụ thể trên bảng **Danh sách ứng viên**.<br>2. Hệ thống điều hướng đến phân vùng quản lý tuyển dụng ứng viên và mặc định trỏ vào tab "Thông tin".<br>3. Người phụ trách chọn vào tab "Phỏng vấn".<br>4. Hệ thống hiển thị màn hình với tiêu đề chứa tên + vị trí phỏng vấn của ứng viên, bên dưới chứa các vòng phỏng vấn (nếu chưa kích hoạt thì tức chưa có người phỏng vấn và thời gian phỏng vấn) đã được thiết lập sẵn cho vị trí tuyển dụng của ứng viên.<br><br>**Để kích hoạt một vòng phỏng vấn**<br>1. Người phụ trách chọn vào vòng phỏng vấn chưa được gán người phỏng vấn và thời gian phỏng vấn.<br>2. Người phụ trách chọn vào drop-down list *Người phỏng vấn*.<br>3. Hệ thống hiển thị popup để người phụ trách chọn ít nhất một hoặc nhiều người phỏng vấn dành cho ứng viên đó.<br>4. Sau khi chọn xong, người phụ trách cần nhấn nút *"Xác nhận"* để hệ thống thực hiện việc lưu dữ liệu cho vòng phỏng vấn.<br>5. Tương tự với drop-down list *Ngày phỏng vấn*, người phỏng vấn chọn ngày và giờ phỏng vấn.<br>6. Hệ thống lưu dữ liệu và hiển thị tại vòng phỏng vấn được chọn để kích hoạt.<br><br>**Sau khi kích hoạt vòng phỏng vấn:**<br> Hệ thống hiển thị thông tin của người phỏng vấn và thời gian phỏng vấn lên trên vòng phỏng    vấn vừa kích hoạt. |
+        | **Điều kiện** | - Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>- Vị trí tuyển dụng đó có ít nhất một vòng phỏng vấn được thiết lập sẵn. |
+        | **Kết quả hiển thị** | - Khi kích hoạt một vòng phỏng vấn cho ứng viên đó, các thông tin về người phỏng vấn và thời gian phỏng vấn sẽ được hiển thị lên vòng phỏng vấn đó. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp không có vòng phỏng vấn được tạo sẵn**: hệ thống hiển thị biểu tượng thùng rỗng và mô tả "Không có dữ liệu!".<br>**Trường hợp không có người phỏng vấn nào**: Khi mở drop-down list "Người phỏng vấn" thì hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-1/`
@@ -410,12 +410,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
     ??? book "Xem chi tiết buổi phỏng vấn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Xem chi tiết buổi phỏng vấn ứng viên |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
+        | **Tên chức năng** | Xem chi tiết vòng phỏng vấn ứng viên |
+        | **Vai trò** | Người phụ trách  |
+        | **Mô tả** | Chức năng này cho phép người phụ trách xem nội dung chi tiết về vòng phỏng vấn ở 2 mục *'Câu hỏi phỏng vấn'* và *'Đánh giá'* khi người phụ trách chọn vào vòng phỏng vấn cụ thể. Nội dung của vòng phỏng vấn sẽ được hiển thị trên một popup.<br> Người phỏng vấn có thể xem nội dung trước và sau khi phỏng vấn, trước khi phỏng vấn, popup sẽ chỉ hiển thị các nội dung được thiết lập sẵn cho vòng phỏng vấn đó. |
+        | **Giao diện liên quan** | - Màn hình chứa bảng **Danh sách ứng viên** (menu *Ứng viên*).<br>- Submenu sau khi chọn vào ứng viên cụ thể.<br>- Tab "Phỏng vấn" trên submenu đó.<br>- Danh sách các vòng phỏng vấn.<br>- Popup nội dung vòng phỏng vấn|
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn vào vòng phỏng vấn muốn xem chi tiết.<br>2. Hệ thống hiển thị popup chứa 2 tab *'Câu hỏi phỏng vấn'* và *'Đánh giá'*, mặc định trỏ vào tab *'Câu hỏi phỏng vấn'* khi người phỏng vấn mở popup lên.<br>3. Người phụ trách xem được các danh mục chứa các nội dung phỏng vấn của vòng phỏng vấn này, khi mở rộng các danh mục sẽ có nhiều câu hỏi phỏng vấn bên trong.<br>4. Tương tự với tab *'Đánh giá'*.<br>*(Lưu ý: người phụ trách không được phép chỉnh sửa nội dung ở popup này)*<br><br>**Trường hợp người phụ trách xem chi tiết vòng phỏng vấn đã phỏng vấn xong**<br>1. Khi mở popup chứa nội dung chi tiết, cả 2 tab *'Câu hỏi phỏng vấn'* và *'Đánh giá'* đều có kết quả do người phỏng vấn thêm vào trong quá trình phỏng vấn. <br>*(Lưu ý: người phụ trách không được phép chỉnh sửa nội dung ở popup này)*|
+        | **Điều kiện** | - Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>- Vị trí tuyển dụng đó có ít nhất một vòng phỏng vấn được thiết lập sẵn.<br>- Vòng phỏng vấn được chọn có nội dung chi tiết. |
         | **Kết quả hiển thị** |  |
         | **Trường hợp không có dữ liệu** |  |
         📸 **Hình ảnh minh họa**
@@ -666,8 +666,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-4-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-4-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-4-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 4.2. Thiết lập các vòng phỏng vấn {#toc-4-4-2}
@@ -766,8 +766,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-5-3/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-5-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-5-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -789,8 +789,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-6-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-6-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-6-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 6.2. Quản lý các tiêu chí đánh giá sau đào tạo {#toc-4-6-2}
@@ -809,8 +809,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-6-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-6-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-6-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -832,8 +832,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-7-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-7-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-7-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 7.2. Xem lại phản hồi ứng viên (check log) {#toc-4-7-2}
@@ -852,8 +852,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-7-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-7-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-7-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 7.3. Xem lại buổi phỏng vấn của ứng viên {#toc-4-7-3}
@@ -872,8 +872,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-7-3/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/4-7-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/4-7-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -896,8 +896,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-1-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/5-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/5-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Xem lịch sử phỏng vấn {#toc-5-1-2}
@@ -916,8 +916,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-1-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/5-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/5-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---   
@@ -939,8 +939,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/5-2-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/5-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.2. Xem kết quả bài kiểm tra của ứng viên {#toc-5-2-2}
@@ -959,8 +959,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/5-2-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/5-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.3. Xem câu trả lời của ứng viên {#toc-5-2-3}
@@ -979,8 +979,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-3/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/5-2-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/5-2-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.4. Xem lại buổi phỏng vấn ứng viên {#toc-5-2-4}
@@ -999,8 +999,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-4/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/5-2-4/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/5-2-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -1023,8 +1023,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-1-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/6-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/6-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Xem tất cả các ứng viên được gán {#toc-6-1-2}
@@ -1043,8 +1043,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-1-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/6-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/6-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -1066,8 +1066,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-2-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/6-2-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/6-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.2. Đánh giá đầu ra đào tạo {#toc-6-2-2}
@@ -1086,8 +1086,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-2-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/6-2-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/6-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -1110,8 +1110,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/7-1-1/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/7-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/7-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
@@ -1130,8 +1130,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/7-1-2/`
 
-        !!! warning "Thư mục không tồn tại"
-            Thư mục `assets/images/buddy/7-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
+        !!! warning "Chưa có hình ảnh minh họa"
+            Thư mục `assets/images/buddy/7-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
