@@ -258,13 +258,13 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Tạo buổi phỏng vấn ứng viên |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Vai trò** | Người phụ trách |
+        | **Mô tả** | Tính năng này giúp người phụ trách điều phối lịch phỏng vấn bằng cách chỉ định người đánh giá và thời gian cụ thể cho từng vòng phỏng vấn đã được thiết lập theo vị trí tuyển dụng. |
+        | **Giao diện liên quan** | - Màn hình chứa bảng **Danh sách ứng viên** (menu *Ứng viên*).<br>- Submenu sau khi chọn vào ứng viên cụ thể.<br>- Tab "Phỏng vấn" trên submenu đó. |
+        | **Luồng thao tác chính** | 1. Người phụ trách chọn vào một ứng viên cụ thể trên bảng **Danh sách ứng viên**.<br>2. Hệ thống điều hướng đến phân vùng quản lý tuyển dụng ứng viên và mặc định trỏ vào tab "Thông tin".<br>3. Người phụ trách chọn vào tab "Phỏng vấn".<br>4. Hệ thống hiển thị màn hình với tiêu đề chứa tên + vị trí phỏng vấn của ứng viên, bên dưới chứa các vòng phỏng vấn (nếu chưa kích hoạt thì tức chưa có người phỏng vấn và thời gian phỏng vấn) đã được thiết lập sẵn cho vị trí tuyển dụng của ứng viên.<br><br>**Để kích hoạt một buổi phỏng vấn**<br>1. Người phụ trách chọn vào vòng phỏng vấn chưa được gán người phỏng vấn và thời gian phỏng vấn.<br>2. Người phụ trách chọn vào drop-down list *Người phỏng vấn*.<br>3. Hệ thống hiển thị popup để người phụ trách chọn ít nhất một hoặc nhiều người phỏng vấn dành cho ứng viên đó.<br>4. Sau khi chọn xong, người phụ trách cần nhấn nút *"Xác nhận"* để hệ thống thực hiện việc lưu dữ liệu cho vòng phỏng vấn.<br>5. Tương tự với drop-down list *Ngày phỏng vấn*, người phỏng vấn chọn ngày và giờ phỏng vấn.<br>6. Hệ thống lưu dữ liệu và hiển thị tại buổi phỏng vấn được chọn để kích hoạt.<br><br>**Sau khi kích hoạt buổi phỏng vấn**<br>: Hệ thống hiển thị thông tin của người phỏng vấn và thời gian phỏng vấn lên trên vòng phỏng    vấn vừa kích hoạt. |
+        | **Điều kiện** | - Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>- Vị trí tuyển dụng đó có ít nhất một vòng phỏng vấn được thiết lập sẵn. |
+        | **Kết quả hiển thị** | - Khi kích hoạt một vòng phỏng vấn cho ứng viên đó, các thông tin về người phỏng vấn và thời gian phỏng vấn sẽ được hiển thị lên vòng phỏng vấn đó. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp không có vòng phỏng vấn được tạo sẵn**: hệ thống hiển thị biểu tượng thùng rỗng và mô tả "Không có dữ liệu!".<br>**Trường hợp không có người phỏng vấn nào**: Khi mở drop-down list "Người phỏng vấn" thì hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
     #### 2.2. Xem chi tiết buổi phỏng vấn ứng viên {#toc-4-2-2}
     ??? book "Xem chi tiết buổi phỏng vấn ứng viên"
         | Trường | Nội dung |
