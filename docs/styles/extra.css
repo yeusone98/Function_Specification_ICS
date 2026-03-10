@@ -127,6 +127,12 @@ details.book[open] summary~* {
   animation: fadeIn 0.2s ease-in;
 }
 
+/* Khoảng cách giữa summary và table */
+.md-typeset details.book>table:first-of-type,
+.md-typeset details.info>table:first-of-type {
+  margin-top: 0.8rem;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
