@@ -67,8 +67,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/3-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/3-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.2. Cập nhật tài khoản {#toc-3-1-2}
@@ -87,8 +87,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/3-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/3-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.3. Đổi mật khẩu {#toc-3-1-3}
@@ -107,8 +107,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-3/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/3-1-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/3-1-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.4. Thay đổi vai trò (đối với tài khoản có nhiều vai trò) {#toc-3-1-4}
@@ -127,8 +127,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-4/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/3-1-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/3-1-4/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     ####  1.5. Đăng xuất khỏi tài khoản {#toc-3-1-5}
@@ -147,8 +147,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/3-1-5/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/3-1-5/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/3-1-5/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -378,15 +378,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-1-10/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-1-10/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-1-10/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
 ???+ info "2. Nhóm chức năng quản lý tuyển dụng ứng viên"
     ### 2. Nhóm chức năng quản lý tuyển dụng ứng viên {#toc-4-2}
-    #### 2.1. Tạo buổi phỏng vấn ứng viên {#toc-4-2-1}
-    ??? book "Tạo buổi phỏng vấn ứng viên"
+    #### 2.1. Tạo vòng phỏng vấn ứng viên {#toc-4-2-1}
+    ??? book "Tạo vòng phỏng vấn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Tạo vòng phỏng vấn ứng viên |
@@ -406,8 +406,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         ![Popup Thêm Người Phỏng Vấn](assets/images/buddy/4-2-1/POPUP THÊM NGƯỜI PHỎNG VẤN.png){ .image-widget-thumb loading=lazy }
 
         *Bấm vào từng ảnh để xem chi tiết.*
-    #### 2.2. Xem chi tiết buổi phỏng vấn ứng viên {#toc-4-2-2}
-    ??? book "Xem chi tiết buổi phỏng vấn ứng viên"
+    #### 2.2. Xem chi tiết vòng phỏng vấn ứng viên {#toc-4-2-2}
+    ??? book "Xem chi tiết vòng phỏng vấn ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Xem chi tiết vòng phỏng vấn ứng viên |
@@ -451,6 +451,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Đánh giá ứng viên |
+<<<<<<< Updated upstream
         | **Vai trò** | Người phụ trách |
         | **Mô tả** | Chức năng này cho phép người phụ trách thực hiện đánh giá ứng viên đang chọn dựa trên các tiêu chí đã được thiết lập sẵn. Người phụ trách nhập tiêu đề, thực hiện chấm điểm bằng sao (Rating) cho từng tiêu chí, chọn các thuộc tính chi tiết trong từng tiêu chí và viết nội dung đánh giá tổng quát. |
         | **Giao diện liên quan** | - Tab "Đánh giá" trong chi tiết ứng viên.<br>- Form "Đánh giá ứng viên" (khu vực bên trái màn hình).<br>- Các danh mục tiêu chí đánh giá (dạng Accordion/Dropdown). |
@@ -458,6 +459,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Tài khoản có quyền người phụ trách.<br>- Vị trí ứng tuyển của ứng viên đã được thiết lập bộ tiêu chí đánh giá trong hệ thống. |
         | **Kết quả hiển thị** | - Dữ liệu đánh giá được lưu vào hệ thống.<br>- Đánh giá mới nhất sẽ xuất hiện ở đầu danh sách "Đánh giá gần đây" ở cột bên phải. |
         | **Trường hợp không có dữ liệu** | **Trường hợp vị trí tuyển dụng chưa được thiết lập tiêu chí:** Hệ thống hiển thị thông báo "Vị trí này chưa có tiêu chí đánh giá!" hoặc hiển thị khung trống. |
+=======
+        | **Vai trò** |  |
+        | **Mô tả** |  |
+        | **Giao diện liên quan** |  |
+        | **Luồng thao tác chính** |  |
+        | **Điều kiện** |  |
+        | **Kết quả hiển thị** |  |
+        | **Trường hợp không có dữ liệu** |  |
+>>>>>>> Stashed changes
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-2-4/`
@@ -646,8 +656,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-4-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-4-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-4-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 4.2. Thiết lập các vòng phỏng vấn {#toc-4-4-2}
@@ -746,8 +756,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-5-3/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-5-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-5-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -769,8 +779,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-6-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-6-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-6-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 6.2. Quản lý các tiêu chí đánh giá sau đào tạo {#toc-4-6-2}
@@ -789,8 +799,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-6-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-6-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-6-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -812,8 +822,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-7-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-7-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-7-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 7.2. Xem lại phản hồi ứng viên (check log) {#toc-4-7-2}
@@ -822,38 +832,38 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Xem lại phản hồi ứng viên (check log) |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
-        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách buổi phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;+ **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
-        | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
-        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành vòng phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
+        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách vòng phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các vòng phỏng vấn của ứng viên. <br>5. Tại vòng phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;+ **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong vòng phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một vòng phỏng vấn. <br>- vòng phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
+        | **Kết quả hiển thị** | - Danh sách vòng phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có vòng phỏng vấn nào: không có vòng phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-7-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-7-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-7-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
-    #### 7.3. Xem lại buổi phỏng vấn của ứng viên {#toc-4-7-3}
-    ??? book "Xem lại buổi phỏng vấn của ứng viên (Người phụ trách)"
+    #### 7.3. Xem lại vòng phỏng vấn của ứng viên {#toc-4-7-3}
+    ??? book "Xem lại vòng phỏng vấn của ứng viên (Người phụ trách)"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Xem lại buổi phỏng vấn của ứng viên |
+        | **Tên chức năng** | Xem lại vòng phỏng vấn của ứng viên |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Người phụ trách có thể xem lại toàn bộ chi tiết các buổi phỏng vấn đã hoàn thành của ứng viên, bao gồm câu hỏi, câu trả lời, kết quả bài kiểm tra và đánh giá theo tiêu chí. |
+        | **Mô tả** | Người phụ trách có thể xem lại toàn bộ chi tiết các vòng phỏng vấn đã hoàn thành của ứng viên, bao gồm câu hỏi, câu trả lời, kết quả bài kiểm tra và đánh giá theo tiêu chí. |
         | **Giao diện liên quan** | - Trang **Danh sách ứng viên** → chọn ứng viên → Tab **Phỏng vấn** → nút **“Xem chi tiết”** |
         | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và truy cập **Danh sách ứng viên**.<br>2. Chọn một ứng viên cụ thể.<br>3. Tại tab **Phỏng vấn**, chọn vòng phỏng vấn đã hoàn thành → nhấn **“Xem chi tiết”**.<br>4. Hệ thống mở trang **Phỏng vấn ứng viên** với 2 thẻ:<br> a. **Câu hỏi phỏng vấn**: hiển thị toàn bộ bộ câu hỏi, câu trả lời của ứng viên và đánh giá chi tiết.<br> b. **Đánh giá**: hiển thị nhóm tiêu chí, thanh tiến trình và chi tiết từng tiêu chí đã được chấm. |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem chi tiết ứng viên.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành. |
-        | **Kết quả hiển thị** | - Tab **Phỏng vấn** hiển thị nút **“Xem chi tiết”** cho các buổi phỏng vấn đã hoàn thành.<br>- Trang **Phỏng vấn ứng viên** hiển thị đầy đủ 2 thẻ: Câu hỏi phỏng vấn và Đánh giá.<br>- Người phụ trách xem được toàn bộ dữ liệu phỏng vấn của ứng viên. |
-        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào hoàn thành: tab **Phỏng vấn** không hiển thị nút **“Xem chi tiết”**. |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem chi tiết ứng viên.<br>- Ứng viên có ít nhất một vòng phỏng vấn hoàn thành. |
+        | **Kết quả hiển thị** | - Tab **Phỏng vấn** hiển thị nút **“Xem chi tiết”** cho các vòng phỏng vấn đã hoàn thành.<br>- Trang **Phỏng vấn ứng viên** hiển thị đầy đủ 2 thẻ: Câu hỏi phỏng vấn và Đánh giá.<br>- Người phụ trách xem được toàn bộ dữ liệu phỏng vấn của ứng viên. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có vòng phỏng vấn nào hoàn thành: tab **Phỏng vấn** không hiển thị nút **“Xem chi tiết”**. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/4-7-3/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/4-7-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/4-7-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -866,7 +876,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Xem lịch/danh sách phỏng vấn của các ứng viên |
         | **Vai trò** | - Người phụ trách, Người phỏng vấn |
-        | **Mô tả** | Người phụ trách: <br>Cho phép người phụ trách xem toàn bộ lịch phỏng vấn của các ứng viên mình quản lý. Chức năng này chỉ hỗ trợ xem, không cho phép chỉnh sửa dữ liệu.<br><br>Người phỏng vấn: <br>Người phỏng vấn có thể xem lịch phỏng vấn tại menu "Lịch Phỏng Vấn", và chỉ nhìn thấy những ứng viên mà người phụ trách đã gán cho mình. Người phỏng vấn được phép hủy lịch phỏng vấn của ứng viên đó tại popup "Chi tiết ca phỏng vấn" sau khi chọn vào một buổi phỏng vấn cụ thể. <br><br>Các chế độ hiển thị chung:<br> (1) Xem dạng lịch: dữ liệu hiển thị theo tuần, mỗi ngày chia thành 11 khung giờ (từ 9h đến 20h). Nếu có lịch phỏng vấn, khung giờ tương ứng được highlight kèm số lượng ứng viên.<br> (2) Xem dạng danh sách: dữ liệu hiển thị dưới dạng bảng với các cột Ngày, Giờ bắt đầu, Số lượng ứng viên, Trạng thái. Người dùng có thể chuyển trang để xem toàn bộ danh sách.<br><br>Ở cả hai chế độ, khi nhấn vào một ca phỏng vấn, hệ thống mở popup "Chi tiết ca phỏng vấn" hiển thị:<br> - Thời gian phỏng vấn<br> - Số lượng ứng viên<br> - Thông tin ứng viên: tên, giờ phỏng vấn, vị trí ứng tuyển.<br><br>Người dùng (tùy vai trò) có thể thay đổi chế độ hiển thị và tuần để phù hợp với nhu cầu. |
+        | **Mô tả** | Người phụ trách: <br>Cho phép người phụ trách xem toàn bộ lịch phỏng vấn của các ứng viên mình quản lý. Chức năng này chỉ hỗ trợ xem, không cho phép chỉnh sửa dữ liệu.<br><br>Người phỏng vấn: <br>Người phỏng vấn có thể xem lịch phỏng vấn tại menu "Lịch Phỏng Vấn", và chỉ nhìn thấy những ứng viên mà người phụ trách đã gán cho mình. Người phỏng vấn được phép hủy lịch phỏng vấn của ứng viên đó tại popup "Chi tiết ca phỏng vấn" sau khi chọn vào một vòng phỏng vấn cụ thể. <br><br>Các chế độ hiển thị chung:<br> (1) Xem dạng lịch: dữ liệu hiển thị theo tuần, mỗi ngày chia thành 11 khung giờ (từ 9h đến 20h). Nếu có lịch phỏng vấn, khung giờ tương ứng được highlight kèm số lượng ứng viên.<br> (2) Xem dạng danh sách: dữ liệu hiển thị dưới dạng bảng với các cột Ngày, Giờ bắt đầu, Số lượng ứng viên, Trạng thái. Người dùng có thể chuyển trang để xem toàn bộ danh sách.<br><br>Ở cả hai chế độ, khi nhấn vào một ca phỏng vấn, hệ thống mở popup "Chi tiết ca phỏng vấn" hiển thị:<br> - Thời gian phỏng vấn<br> - Số lượng ứng viên<br> - Thông tin ứng viên: tên, giờ phỏng vấn, vị trí ứng tuyển.<br><br>Người dùng (tùy vai trò) có thể thay đổi chế độ hiển thị và tuần để phù hợp với nhu cầu. |
         | **Giao diện liên quan** | 1. Trang "Lịch Phỏng Vấn".<br>2. Popup "Chi tiết ca phỏng vấn".<br>3. Chế độ "Xem dạng lịch".<br>4. Chế độ "Xem dạng danh sách". |
         | **Luồng thao tác chính** | 1. Người dùng (phụ trách hoặc phỏng vấn) điều hướng đến trang "Lịch Phỏng Vấn" từ menu.<br>2. Hệ thống mặc định hiển thị ở chế độ 'Xem dạng lịch'.<br>3. Người dùng có thể:<br> - Nhấn vào ô được highlight để xem popup chi tiết.<br> - Nhấn vào biểu tượng ≡ để chuyển sang chế độ 'Xem dạng danh sách'.<br>4. Ở chế độ danh sách, hệ thống hiển thị bảng dữ liệu "Lịch phỏng vấn" với đầy đủ thông tin và hỗ trợ phân trang.<br>5. Người phụ trách: chỉ xem dữ liệu, không chỉnh sửa.<br>6. Người phỏng vấn: có thể hủy lịch phỏng vấn với ứng viên được gán tại popup "Chi tiết ca phỏng vấn".<br>7. Người dùng có thể thay đổi tuần để xem trước hoặc kiểm tra lại lịch phỏng vấn. |
         | **Điều kiện** | - Người phụ trách đăng nhập vào tài khoản có phân quyền tương đương và quản lý ít nhất một ứng viên.<br>- Người phỏng vấn đăng nhập vào tài khoản có phân quyền tương đương và được người phụ trách gán cho ít nhất một ứng viên có lịch phỏng vấn. |
@@ -876,8 +886,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-1-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/5-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Xem lịch sử phỏng vấn {#toc-5-1-2}
@@ -889,15 +899,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Mô tả** | Cho phép Người phỏng vấn xem lại toàn bộ danh sách ứng viên đã hoàn thành phỏng vấn với mình. <br>Người phỏng vấn chỉ nhìn thấy những ứng viên mà Người phụ trách đã gán cho.<br><br>Chức năng hiển thị dưới dạng bảng "Danh sách ứng viên đã phỏng vấn" với cấu trúc và giao diện tương tự bảng "Danh sách ứng viên", hỗ trợ:<br> - Tìm kiếm ứng viên theo tên, email, số điện thoại.<br> - Lọc ứng viên theo trạng thái (VD: Đạt, Không đạt, Đang chờ đánh giá).<br><br>Khi Người phỏng vấn bấm chọn một ứng viên, hệ thống hiển thị màn hình "Chi tiết ứng viên", bao gồm các thông tin cơ bản:<br> - Họ tên ứng viên<br> - Vị trí ứng tuyển<br> - Thời gian phỏng vấn<br> - Kết quả phỏng vấn<br> - Các thông tin bổ sung khác mà Người phụ trách đã công khai.<br><br>Toàn bộ dữ liệu chỉ ở chế độ xem, Người phỏng vấn không thể chỉnh sửa. |
         | **Giao diện liên quan** | 1. Trang "Danh sách ứng viên đã phỏng vấn".<br>2. Bảng "Danh sách ứng viên đã phỏng vấn".<br>3. Trang "Chi tiết ứng viên". |
         | **Luồng thao tác chính** | 1. Người phỏng vấn điều hướng đến menu "Lịch sử phỏng vấn".<br>2. Hệ thống hiển thị bảng "Danh sách ứng viên đã phỏng vấn" mặc định với dữ liệu ứng viên đã phỏng vấn.<br>3. Người phỏng vấn có thể:<br> - Sử dụng thanh tìm kiếm để tìm ứng viên.<br> - Dùng bộ lọc để lọc theo trạng thái.<br> - Nhấn vào một ứng viên trong bảng để mở trang "Chi tiết ứng viên".<br>4. Tại trang "Chi tiết ứng viên", hệ thống hiển thị đầy đủ thông tin cơ bản về ứng viên như: Họ và tên, vị trí ứng tuyển, thời gian phỏng vấn gần nhất (chỉ xem). |
-        | **Điều kiện** | - Người phỏng vấn đăng nhập bằng tài khoản hợp lệ.<br>- Có ít nhất một ứng viên được gán cho Người phỏng vấn và có buổi phỏng vấn được lên lịch. |
+        | **Điều kiện** | - Người phỏng vấn đăng nhập bằng tài khoản hợp lệ.<br>- Có ít nhất một ứng viên được gán cho Người phỏng vấn và có vòng phỏng vấn được lên lịch. |
         | **Kết quả hiển thị** | - Bảng "Danh sách ứng viên đã phỏng vấn" hiển thị dữ liệu ứng viên theo phân quyền.<br>- Khi chọn một ứng viên, trang "Chi tiết ứng viên" xuất hiện với thông tin chỉ đọc. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có ứng viên nào đã phỏng vấn, hệ thống hiển thị thông báo "Bảng dữ liệu này trống." kèm biểu tượng thùng rỗng. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-1-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/5-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---   
@@ -909,7 +919,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Xem thông tin ứng viên |
         | **Vai trò** | Người phỏng vấn |
-        | **Mô tả** | Người phỏng vấn có thể xem thông tin chi tiết của ứng viên được phân công phỏng vấn để chuẩn bị trước buổi phỏng vấn. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin cần thiết như Tên ứng viên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Người phụ trách, Người đào tạo, CV, bằng cấp và lịch làm việc dự kiến. <br>- Người phỏng vấn chỉ có quyền xem, không thể chỉnh sửa hay xóa dữ liệu. |
+        | **Mô tả** | Người phỏng vấn có thể xem thông tin chi tiết của ứng viên được phân công phỏng vấn để chuẩn bị trước vòng phỏng vấn. <br><br>- Tại tab “Thông tin ứng viên”: hiển thị các thông tin cần thiết như Tên ứng viên, Vị trí ứng tuyển, Trạng thái ứng tuyển, Người phụ trách, Người đào tạo, CV, bằng cấp và lịch làm việc dự kiến. <br>- Người phỏng vấn chỉ có quyền xem, không thể chỉnh sửa hay xóa dữ liệu. |
         | **Giao diện liên quan** | - Menu Ứng viên hoặc Lịch phỏng vấn → chọn ứng viên.<br>- Màn hình Chi tiết ứng viên → tab Thông tin ứng viên |
         | **Luồng thao tác chính** | 1. Người phỏng vấn đăng nhập hệ thống.<br>2. Vào menu Ứng viên hoặc Lịch phỏng vấn, chọn ứng viên.<br>3. Xem thông tin tại tab Thông tin ứng viên. |
         | **Điều kiện** | - Người phỏng vấn được gán phỏng vấn ứng viên.<br>- Ứng viên tồn tại trong hệ thống. |
@@ -919,8 +929,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/5-2-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.2. Xem kết quả bài kiểm tra của ứng viên {#toc-5-2-2}
@@ -939,8 +949,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/5-2-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.3. Xem câu trả lời của ứng viên {#toc-5-2-3}
@@ -949,38 +959,38 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Xem câu trả lời của ứng viên |
         | **Vai trò** | Người phỏng vấn |
-        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành buổi phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
-        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách buổi phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
-        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các buổi phỏng vấn của ứng viên. <br>5. Tại buổi phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;+ **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong buổi phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
-        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một buổi phỏng vấn. <br>- Buổi phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
-        | **Kết quả hiển thị** | - Danh sách buổi phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
-        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn nào: không có buổi phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
+        | **Mô tả** | Chức năng cho phép người phụ trách xem lại toàn bộ nội dung phản hồi của ứng viên và đánh giá từ người phỏng vấn sau khi ứng viên hoàn thành vòng phỏng vấn. <br><br>Phản hồi được trình bày theo 2 khía cạnh: (1) nội dung phỏng vấn theo bộ câu hỏi, và (2) đánh giá tổng quan theo tiêu chí, nhằm giúp người phụ trách có cái nhìn đầy đủ và khách quan hơn về năng lực ứng viên. |
+        | **Giao diện liên quan** | - Menu **Ứng viên** → bảng **Danh sách ứng viên** <br>- Màn hình **Chi tiết ứng viên** → thẻ **Phỏng vấn** <br>- Nút **Xem chi tiết** trên danh sách vòng phỏng vấn <br>- Màn hình **Phỏng vấn ứng viên** (gồm 2 tab: **Câu hỏi phỏng vấn**, **Đánh giá**) |
+        | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập và chọn menu **Ứng viên**. <br>2. Trên bảng **Danh sách ứng viên**, chọn một ứng viên cụ thể. <br>3. Hệ thống mở màn hình **Chi tiết ứng viên**. <br>4. Người phụ trách chọn thẻ **Phỏng vấn** để xem danh sách các vòng phỏng vấn của ứng viên. <br>5. Tại vòng phỏng vấn đã hoàn thành, nhấn nút **Xem chi tiết**. <br>6. Hệ thống điều hướng sang màn hình **Phỏng vấn ứng viên**. <br>7. Tại đây, có 2 tab: <br>&emsp;+ **Câu hỏi phỏng vấn**: hiển thị bộ câu hỏi đã sử dụng trong vòng phỏng vấn và đánh giá của người phỏng vấn cho từng câu hỏi (Không tốt / Trung bình / Khá / Tốt). <br>&emsp;+ **Đánh giá**: hiển thị các nhóm tiêu chí đánh giá. Người phụ trách có thể xem % đạt tiêu chuẩn tổng quan, mở rộng từng nhóm tiêu chí để xem chi tiết tiêu chí con cùng với đánh giá của người phỏng vấn (Xuất sắc / Tốt / Khá tốt / Trung bình / Không tốt). |
+        | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền truy cập thông tin ứng viên. <br>- Ứng viên đã tham gia ít nhất một vòng phỏng vấn. <br>- vòng phỏng vấn được chọn đã hoàn thành và có dữ liệu đánh giá từ người phỏng vấn. |
+        | **Kết quả hiển thị** | - Danh sách vòng phỏng vấn trong thẻ **Phỏng vấn** của màn hình **Chi tiết ứng viên**. <br>- Màn hình **Phỏng vấn ứng viên** hiển thị chi tiết phản hồi theo 2 tab: <br>&emsp;- **Câu hỏi phỏng vấn**: danh sách câu hỏi & mức đánh giá cho từng câu hỏi. <br>&emsp;- **Đánh giá**: kết quả tổng quan % đạt tiêu chuẩn, danh sách nhóm tiêu chí, khả năng mở rộng để xem tiêu chí con và chi tiết đánh giá. |
+        | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có vòng phỏng vấn nào: không có vòng phỏng vấn nào trong thẻ **Phỏng vấn** có nút "Xem chi tiết". <br>- Nếu không có đánh giá nào được nhập: màn hình **Phỏng vấn ứng viên** và **Đánh giá** sẽ không có mục/ tiêu chí nào được đánh dấu, thanh tính % ở màn hình **Đánh giá** sẽ hiển thị 0%. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-3/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-3/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/5-2-3/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
-    #### 2.4. Xem lại buổi phỏng vấn ứng viên {#toc-5-2-4}
-    ??? book "Xem lại buổi phỏng vấn của ứng viên (Người phỏng vấn)"
+    #### 2.4. Xem lại vòng phỏng vấn ứng viên {#toc-5-2-4}
+    ??? book "Xem lại vòng phỏng vấn của ứng viên (Người phỏng vấn)"
           | Trường | Nội dung |
           | ------ | -------- |
-          | **Tên chức năng** | Xem lại buổi phỏng vấn của ứng viên |
+          | **Tên chức năng** | Xem lại vòng phỏng vấn của ứng viên |
           | **Vai trò** | Người phỏng vấn |
-          | **Mô tả** | Người phỏng vấn có thể xem lại các buổi phỏng vấn mà mình được phân công, bao gồm câu hỏi, kết quả bài kiểm tra, câu trả lời ứng viên, và có thể gán trạng thái cho các tiêu chí phỏng vấn. |
-          | **Giao diện liên quan** | - Trang **Chi tiết ứng viên** (truy cập từ **Danh sách ứng viên đã phỏng vấn**) → nút **“Xem chi tiết”** tại các buổi phỏng vấn trước đó. |
-          | **Luồng thao tác chính** | 1. Người phỏng vấn đăng nhập và truy cập **Chi tiết ứng viên** từ **Lịch phỏng vấn** hoặc **Danh sách ứng viên đã phỏng vấn**.<br>2. Chọn buổi phỏng vấn đã hoàn thành → nhấn **“Xem chi tiết”**.<br>3. Hệ thống mở trang **Phỏng vấn ứng viên** với 2 thẻ:<br> a. **Câu hỏi phỏng vấn**: xem lại toàn bộ câu hỏi, kết quả làm bài kiểm tra, câu trả lời ứng viên.<br> b. **Đánh giá**: xem và gán trạng thái cho các tiêu chí phỏng vấn được thiết lập sẵn. |
-          | **Điều kiện** | - Người phỏng vấn đã đăng nhập.<br>- Người phỏng vấn chỉ có thể xem lại buổi phỏng vấn của các ứng viên được gán cho mình.<br>- Ứng viên có ít nhất một buổi phỏng vấn hoàn thành. |
-          | **Kết quả hiển thị** | - Người phỏng vấn có thể xem lại chi tiết buổi phỏng vấn (câu hỏi, câu trả lời, kết quả kiểm tra).<br>- Người phỏng vấn có thể gán trạng thái cho từng tiêu chí đánh giá. |
-          | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có buổi phỏng vấn hoàn thành → không có nút **“Xem chi tiết”**.<br>- Nếu người phỏng vấn không được gán cho ứng viên → không thấy dữ liệu phỏng vấn của ứng viên đó. |
+          | **Mô tả** | Người phỏng vấn có thể xem lại các vòng phỏng vấn mà mình được phân công, bao gồm câu hỏi, kết quả bài kiểm tra, câu trả lời ứng viên, và có thể gán trạng thái cho các tiêu chí phỏng vấn. |
+          | **Giao diện liên quan** | - Trang **Chi tiết ứng viên** (truy cập từ **Danh sách ứng viên đã phỏng vấn**) → nút **“Xem chi tiết”** tại các vòng phỏng vấn trước đó. |
+          | **Luồng thao tác chính** | 1. Người phỏng vấn đăng nhập và truy cập **Chi tiết ứng viên** từ **Lịch phỏng vấn** hoặc **Danh sách ứng viên đã phỏng vấn**.<br>2. Chọn vòng phỏng vấn đã hoàn thành → nhấn **“Xem chi tiết”**.<br>3. Hệ thống mở trang **Phỏng vấn ứng viên** với 2 thẻ:<br> a. **Câu hỏi phỏng vấn**: xem lại toàn bộ câu hỏi, kết quả làm bài kiểm tra, câu trả lời ứng viên.<br> b. **Đánh giá**: xem và gán trạng thái cho các tiêu chí phỏng vấn được thiết lập sẵn. |
+          | **Điều kiện** | - Người phỏng vấn đã đăng nhập.<br>- Người phỏng vấn chỉ có thể xem lại vòng phỏng vấn của các ứng viên được gán cho mình.<br>- Ứng viên có ít nhất một vòng phỏng vấn hoàn thành. |
+          | **Kết quả hiển thị** | - Người phỏng vấn có thể xem lại chi tiết vòng phỏng vấn (câu hỏi, câu trả lời, kết quả kiểm tra).<br>- Người phỏng vấn có thể gán trạng thái cho từng tiêu chí đánh giá. |
+          | **Trường hợp không có dữ liệu** | - Nếu ứng viên chưa có vòng phỏng vấn hoàn thành → không có nút **“Xem chi tiết”**.<br>- Nếu người phỏng vấn không được gán cho ứng viên → không thấy dữ liệu phỏng vấn của ứng viên đó. |
         📸 **Hình ảnh minh họa**
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/5-2-4/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/5-2-4/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/5-2-4/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -1003,8 +1013,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-1-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/6-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Xem tất cả các ứng viên được gán {#toc-6-1-2}
@@ -1023,8 +1033,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-1-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/6-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -1046,8 +1056,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-2-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-2-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/6-2-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 2.2. Đánh giá đầu ra đào tạo {#toc-6-2-2}
@@ -1066,8 +1076,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/6-2-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/6-2-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/6-2-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---
@@ -1090,8 +1100,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/7-1-1/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/7-1-1/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/7-1-1/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
     #### 1.2. Xem mục tiêu (đầu ra) đào tạo {#toc-7-1-2}
@@ -1110,8 +1120,8 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 
         > **📁 Thư mục nguồn:** `assets/images/buddy/7-1-2/`
 
-        !!! warning "Chưa có hình ảnh minh họa"
-            Thư mục `assets/images/buddy/7-1-2/` hiện đang trống. Vui lòng thêm các hình ảnh minh họa cho tính năng này.
+        !!! warning "Thư mục không tồn tại"
+            Thư mục `assets/images/buddy/7-1-2/` chưa được tạo. Vui lòng tạo thư mục và thêm hình ảnh minh họa.
 
         *Bấm vào từng ảnh để xem chi tiết.*
 ---

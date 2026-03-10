@@ -34,49 +34,68 @@
   border-collapse: collapse;
   border-radius: 8px;
   overflow: clip;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--serinus-divider);
 }
 
-/* Tiêu đề bảng */
+/* Tiêu đề bảng — dark mode default */
 .md-typeset table th {
-  background-color: var(--md-primary-fg-color);
-  color: var(--md-primary-bg-color);
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--serinus-link) 90%, #000),
+      var(--serinus-link));
+  color: #ffffff;
   padding: 10px;
   text-align: center;
   font-weight: 600;
+  border-bottom: 2px solid color-mix(in srgb, var(--serinus-link) 70%, #000);
 }
 
-/* Cài đặt mặc định cho Light Mode */
+/* Ô dữ liệu — mặc định */
 .md-typeset table td {
-  background-color: var(--md-default-bg-color);
-  color: var(--md-default-fg-color);
+  background-color: var(--serinus-bg);
+  color: var(--serinus-text-1);
   padding: 10px;
-  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-top: 1px solid var(--serinus-divider);
 }
 
-/* Xen kẽ dòng trong LIGHT MODE */
-.md-typeset table tr:nth-child(even) td {
-  background-color: rgba(0, 0, 0, 0.03);
+/* --- LIGHT MODE: nhẹ nhàng, thanh lịch --- */
+[data-md-color-scheme="default"] .md-typeset table {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e2e3;
 }
 
-/* --- DARK MODE: 2 màu xen kẽ rõ ràng --- */
-[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(odd) td {
-  background-color: #1f1f1f;
-  /* màu tối hơn */
+[data-md-color-scheme="default"] .md-typeset table th {
+  background: #f0f2f8;
+  color: #2c3e6b;
+  border-bottom: 2px solid #d0d5e3;
+  font-weight: 700;
 }
 
-[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) td {
-  background-color: #2a2a2a;
-  /* màu sáng hơn */
+[data-md-color-scheme="default"] .md-typeset table td {
+  background-color: #ffffff;
+  color: #3c3c43;
+  border-top: 1px solid #eeeff2;
 }
 
-/* Hover (hiệu ứng nhẹ) */
-.md-typeset table tr:hover td {
-  background-color: rgba(255, 255, 255, 0.05);
+[data-md-color-scheme="default"] .md-typeset table tr:nth-child(even) td {
+  background-color: #f9f9fb;
 }
 
 [data-md-color-scheme="default"] .md-typeset table tr:hover td {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: #eef0f8;
+}
+
+/* --- DARK MODE: giữ nguyên --- */
+[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(odd) td {
+  background-color: var(--serinus-bg);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table tr:nth-child(even) td {
+  background-color: var(--serinus-bg-alt);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table tr:hover td {
+  background-color: color-mix(in srgb, var(--serinus-link) 6%, transparent);
 }
 
 
@@ -86,21 +105,19 @@
 
 .md-typeset .admonition.book,
 .md-typeset details.book {
-  border-color: #4caf50;
-  /* xanh lá nhẹ */
+  border-color: var(--serinus-link);
 }
 
 .md-typeset .book>.admonition-title,
 .md-typeset .book>summary {
-  background-color: rgba(76, 175, 80, 0.1);
-  /* nền xanh lá mờ */
-  border-color: #4caf50;
+  background-color: color-mix(in srgb, var(--serinus-link) 8%, transparent);
+  border-color: var(--serinus-link);
 }
 
 /* Icon quyển sách */
 .md-typeset .book>.admonition-title::before,
 .md-typeset .book>summary::before {
-  background-color: #4caf50;
+  background-color: var(--serinus-link);
   -webkit-mask-image: var(--md-admonition-icon--book);
   mask-image: var(--md-admonition-icon--book);
 }
@@ -131,22 +148,20 @@ details.book[open] summary~* {
 /* Tuỳ chỉnh màu cho ??? info */
 .md-typeset .admonition.info,
 .md-typeset details.info {
-  border-color: #4caf50;
-  /* viền xanh lá */
+  border-color: var(--serinus-link);
 }
 
 .md-typeset .info>.admonition-title,
 .md-typeset .info>summary {
-  background-color: rgba(76, 175, 80, 0.1);
-  /* nền xanh lá mờ */
-  border-color: #4caf50;
+  background-color: color-mix(in srgb, var(--serinus-link) 8%, transparent);
+  border-color: var(--serinus-link);
 }
 
 /* Icon info */
 .md-typeset .info>.admonition-title::before,
 .md-typeset .info>summary::before {
   left: 0.8rem;
-  background-color: #4caf50;
+  background-color: var(--serinus-link);
 }
 
 .table-container {
@@ -162,7 +177,9 @@ details.book[open] summary~* {
 }
 
 .custom-table thead tr {
-  background-color: rgba(64, 81, 181, 1);
+  background: linear-gradient(135deg,
+      color-mix(in srgb, var(--serinus-link) 90%, #000),
+      var(--serinus-link));
   color: #fff;
   text-align: center;
 }
@@ -170,7 +187,7 @@ details.book[open] summary~* {
 .custom-table th,
 .custom-table td {
   padding: 12px;
-  border: 1px solid #666666;
+  border: 1px solid var(--serinus-divider);
 }
 
 .custom-table th.smaller_th {
@@ -181,14 +198,25 @@ details.book[open] summary~* {
 
 .custom-table td.bold {
   font-weight: bold;
-  border: 1px solid #666666;
+  border: 1px solid var(--serinus-divider);
   text-align: left;
 }
 
 .custom-table td.light {
   font-weight: lighter;
-  border: 1px solid #666666;
+  border: 1px solid var(--serinus-divider);
   text-align: center;
+}
+
+/* Light mode override cho custom-table */
+[data-md-color-scheme="default"] .custom-table thead tr {
+  background: #f0f2f8;
+  color: #2c3e6b;
+}
+
+[data-md-color-scheme="default"] .custom-table th,
+[data-md-color-scheme="default"] .custom-table td {
+  border-color: #e2e2e3;
 }
 
 /*BUDDY*/
@@ -1556,6 +1584,7 @@ body.md-has-mega-nav .md-search {
 }
 
 @media (max-width: 61.99em) {
+
   .md-header__button.md-logo img,
   .md-header__button.md-logo svg {
     height: 2.35rem !important;
@@ -1592,7 +1621,5 @@ body.md-has-mega-nav .md-search {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.52s cubic-bezier(0.4, 0, 0.2, 1),
-              transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
