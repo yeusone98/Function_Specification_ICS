@@ -152,6 +152,226 @@
     }
   }
 
+  function getSiteLinks() {
+    var logo = document.querySelector(".md-header__button.md-logo");
+    var baseUrl;
+
+    try {
+      baseUrl = new URL(logo ? logo.getAttribute("href") || "." : ".", window.location.href);
+    } catch (_error) {
+      baseUrl = new URL(".", window.location.href);
+    }
+
+    return {
+      home: new URL(".", baseUrl).href,
+      ics: new URL("ics/", baseUrl).href,
+      buddy: new URL("Buddy/", baseUrl).href,
+      sakumi: new URL("appsakumi/", baseUrl).href,
+      dacnhan: new URL("appdacnhan/", baseUrl).href,
+      testplan: new URL("testplan/", baseUrl).href,
+    };
+  }
+
+  function mountMegaNavbar() {
+    if (document.querySelector(".md-header__mega")) {
+      return;
+    }
+
+    var headerInner = document.querySelector(".md-header__inner");
+    if (!headerInner) {
+      return;
+    }
+
+    var palette = headerInner.querySelector("[data-md-component='palette']");
+    var links = getSiteLinks();
+    var currentPath = normalizePathname(window.location.pathname);
+    var homePath = normalizePathname(new URL(links.home).pathname);
+
+    var wrapper = document.createElement("div");
+    wrapper.className = "md-header__option md-header__mega";
+
+    var nav = document.createElement("nav");
+    nav.className = "md-mega-nav";
+    nav.setAttribute("aria-label", "Main navigation");
+
+    var homeLink = document.createElement("a");
+    homeLink.className = "md-mega-nav__item md-mega-nav__item--home";
+    if (currentPath === homePath) {
+      homeLink.className += " md-mega-nav__item--active";
+    }
+    homeLink.href = links.home;
+    homeLink.textContent = "Trang chủ";
+    nav.appendChild(homeLink);
+
+    var productTrigger = document.createElement("button");
+    productTrigger.type = "button";
+    productTrigger.className = "md-mega-nav__item md-mega-nav__item--toggle";
+    productTrigger.setAttribute("aria-expanded", "false");
+    productTrigger.setAttribute("aria-haspopup", "dialog");
+    productTrigger.innerHTML =
+      '<span class="md-mega-nav__text">Tài Liệu</span><span class="md-mega-nav__caret" aria-hidden="true"></span>';
+    nav.appendChild(productTrigger);
+
+    var panel = document.createElement("section");
+    panel.className = "md-mega-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "Tài Liệu menu");
+    panel.setAttribute("hidden", "hidden");
+
+    var panelBody = document.createElement("div");
+    panelBody.className = "md-mega-panel__body";
+
+    var leftSection = document.createElement("div");
+    leftSection.className = "md-mega-panel__section";
+    leftSection.innerHTML = '<h3 class="md-mega-panel__heading">Tài liệu theo trung tâm</h3>';
+
+    var leftGrid = document.createElement("div");
+    leftGrid.className = "md-mega-panel__grid";
+
+    [
+      {
+        icon: "ICS",
+        title: "ICS",
+        desc: "Đặc tả quy trình vận hành và quản lý đào tạo nội bộ.",
+        href: links.ics,
+      },
+      {
+        icon: "BDY",
+        title: "Buddy",
+        desc: "Đặc tả chức năng cho hệ thống tuyển dụng Buddy.",
+        href: links.buddy,
+      },
+      {
+        icon: "SKM",
+        title: "App Sakumi",
+        desc: "Tài liệu chức năng ứng dụng học tập Sakumi.",
+        href: links.sakumi,
+      },
+      {
+        icon: "DNH",
+        title: "App Đắc Nhân",
+        desc: "Tài liệu chức năng ứng dụng học tập Đắc Nhân.",
+        href: links.dacnhan,
+      },
+      {
+        icon: "TPL",
+        title: "Test Plan",
+        desc: "Danh sách kịch bản kiểm thử và checklist chất lượng.",
+        href: links.testplan,
+      },
+    ].forEach(function (item) {
+      var feature = document.createElement("a");
+      feature.className = "md-mega-feature";
+      feature.href = item.href;
+
+      feature.innerHTML =
+        '<span class="md-mega-feature__icon">' +
+        item.icon +
+        "</span>" +
+        '<span class="md-mega-feature__body">' +
+        '<span class="md-mega-feature__title">' +
+        item.title +
+        "</span>" +
+        '<span class="md-mega-feature__desc">' +
+        item.desc +
+        "</span>" +
+        "</span>";
+
+      leftGrid.appendChild(feature);
+    });
+
+    leftSection.appendChild(leftGrid);
+    panelBody.classList.add("md-mega-panel__body--single");
+    panelBody.appendChild(leftSection);
+    panel.appendChild(panelBody);
+
+    wrapper.appendChild(nav);
+    wrapper.appendChild(panel);
+
+    function setOpen(open) {
+      wrapper.classList.toggle("is-open", open);
+      productTrigger.setAttribute("aria-expanded", String(open));
+      if (open) {
+        panel.removeAttribute("hidden");
+      } else {
+        panel.setAttribute("hidden", "hidden");
+      }
+    }
+
+    var closeTimer = 0;
+    function cancelClose() {
+      if (closeTimer) {
+        window.clearTimeout(closeTimer);
+        closeTimer = 0;
+      }
+    }
+
+    function scheduleClose() {
+      cancelClose();
+      closeTimer = window.setTimeout(function () {
+        setOpen(false);
+      }, 220);
+    }
+
+    productTrigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      cancelClose();
+      setOpen(!wrapper.classList.contains("is-open"));
+    });
+
+    productTrigger.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(min-width: 76.25em)").matches) {
+        cancelClose();
+        setOpen(true);
+      }
+    });
+
+    productTrigger.addEventListener("mouseleave", function () {
+      if (window.matchMedia("(min-width: 76.25em)").matches) {
+        scheduleClose();
+      }
+    });
+
+    panel.addEventListener("mouseenter", function () {
+      if (window.matchMedia("(min-width: 76.25em)").matches) {
+        cancelClose();
+      }
+    });
+
+    panel.addEventListener("mouseleave", function (event) {
+      if (!window.matchMedia("(min-width: 76.25em)").matches) {
+        return;
+      }
+
+      var next = event.relatedTarget;
+      if (next && wrapper.contains(next)) {
+        return;
+      }
+      scheduleClose();
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!wrapper.contains(event.target)) {
+        cancelClose();
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    });
+
+    if (palette && palette.parentElement === headerInner) {
+      headerInner.insertBefore(wrapper, palette);
+    } else {
+      headerInner.appendChild(wrapper);
+    }
+
+    document.body.classList.add("md-has-mega-nav");
+  }
+
   function mountSingleThemeToggle() {
     var paletteForm = document.querySelector(".md-header [data-md-component='palette']");
     if (!paletteForm) {
@@ -189,7 +409,7 @@
       var checkedInput = inputs.find(function (input) {
         return input.checked;
       });
-      return checkedInput ? checkedInput.getAttribute("data-md-color-scheme") || "default" : "default";
+      return checkedInput ? checkedInput.getAttribute("data-md-color-scheme") || "slate" : "slate";
     }
 
     function applyPalette(input) {
@@ -217,6 +437,26 @@
       document.body.setAttribute("data-md-color-scheme", scheme);
       document.body.setAttribute("data-md-color-primary", primary);
       document.body.setAttribute("data-md-color-accent", accent);
+    }
+
+    function hasStoredPalette() {
+      if (typeof __md_get !== "function") {
+        return false;
+      }
+
+      try {
+        return Boolean(__md_get("__palette"));
+      } catch (error) {
+        return false;
+      }
+    }
+
+    if (!hasStoredPalette()) {
+      var defaultDarkInput = getSchemeInput("slate");
+      if (defaultDarkInput) {
+        defaultDarkInput.checked = true;
+        applyPalette(defaultDarkInput);
+      }
     }
 
     var button = document.createElement("button");
@@ -294,6 +534,49 @@
     var lightboxCaption;
     var lastActiveElement = null;
 
+    /* ---- zoom / pan state ---- */
+    var scale = 1;
+    var translateX = 0;
+    var translateY = 0;
+    var isDragging = false;
+    var dragStartX = 0;
+    var dragStartY = 0;
+    var dragStartTX = 0;
+    var dragStartTY = 0;
+    var zoomIndicator;
+    var zoomHideTimer;
+
+    function applyTransform() {
+      if (!lightboxImage) return;
+      lightboxImage.style.transform =
+        "translate(" + translateX + "px, " + translateY + "px) scale(" + scale + ")";
+      lightboxImage.style.cursor = scale > 1 ? "grab" : "default";
+    }
+
+    function resetZoom() {
+      scale = 1;
+      translateX = 0;
+      translateY = 0;
+      if (lightboxImage) {
+        applyTransform();
+      }
+      hideZoomIndicator();
+    }
+
+    function showZoomIndicator() {
+      if (!zoomIndicator) return;
+      var pct = Math.round(scale * 100);
+      zoomIndicator.textContent = pct + "%";
+      zoomIndicator.classList.add("is-visible");
+      clearTimeout(zoomHideTimer);
+      zoomHideTimer = setTimeout(hideZoomIndicator, 1200);
+    }
+
+    function hideZoomIndicator() {
+      if (!zoomIndicator) return;
+      zoomIndicator.classList.remove("is-visible");
+    }
+
     if (!lightbox) {
       lightbox = document.createElement("div");
       lightbox.className = "md-image-lightbox";
@@ -313,14 +596,19 @@
       lightboxImage = document.createElement("img");
       lightboxImage.className = "md-image-lightbox__img";
       lightboxImage.alt = "";
+      lightboxImage.draggable = false;
 
       lightboxCaption = document.createElement("figcaption");
       lightboxCaption.className = "md-image-lightbox__caption";
+
+      zoomIndicator = document.createElement("span");
+      zoomIndicator.className = "md-image-lightbox__zoom-indicator";
 
       figure.appendChild(lightboxImage);
       figure.appendChild(lightboxCaption);
       lightbox.appendChild(closeButton);
       lightbox.appendChild(figure);
+      lightbox.appendChild(zoomIndicator);
       document.body.appendChild(lightbox);
 
       function closeLightbox() {
@@ -328,6 +616,7 @@
         document.body.classList.remove("md-image-lightbox-open");
         lightboxImage.removeAttribute("src");
         lightboxCaption.textContent = "";
+        resetZoom();
         if (lastActiveElement && typeof lastActiveElement.focus === "function") {
           lastActiveElement.focus();
         }
@@ -345,9 +634,73 @@
           closeLightbox();
         }
       });
+
+      /* ---- Scroll-to-zoom ---- */
+      lightbox.addEventListener("wheel", function (event) {
+        if (lightbox.hasAttribute("hidden")) return;
+        event.preventDefault();
+
+        var oldScale = scale;
+        var delta = event.deltaY > 0 ? -0.15 : 0.15;
+        scale = Math.min(5, Math.max(1, scale + delta));
+
+        if (scale === 1) {
+          translateX = 0;
+          translateY = 0;
+        } else {
+          /* zoom toward cursor */
+          var rect = lightboxImage.getBoundingClientRect();
+          var cx = rect.left + rect.width / 2;
+          var cy = rect.top + rect.height / 2;
+          var mouseX = event.clientX - cx;
+          var mouseY = event.clientY - cy;
+          var factor = scale / oldScale;
+          translateX = mouseX - factor * (mouseX - translateX);
+          translateY = mouseY - factor * (mouseY - translateY);
+        }
+
+        applyTransform();
+        showZoomIndicator();
+      }, { passive: false });
+
+      /* ---- Drag-to-pan ---- */
+      lightboxImage.addEventListener("mousedown", function (event) {
+        if (scale <= 1) return;
+        event.preventDefault();
+        isDragging = true;
+        dragStartX = event.clientX;
+        dragStartY = event.clientY;
+        dragStartTX = translateX;
+        dragStartTY = translateY;
+        lightboxImage.style.cursor = "grabbing";
+      });
+
+      document.addEventListener("mousemove", function (event) {
+        if (!isDragging) return;
+        translateX = dragStartTX + (event.clientX - dragStartX);
+        translateY = dragStartTY + (event.clientY - dragStartY);
+        applyTransform();
+      });
+
+      document.addEventListener("mouseup", function () {
+        if (!isDragging) return;
+        isDragging = false;
+        if (lightboxImage) {
+          lightboxImage.style.cursor = scale > 1 ? "grab" : "default";
+        }
+      });
+
+      /* ---- Double-click to reset zoom ---- */
+      lightboxImage.addEventListener("dblclick", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        resetZoom();
+        showZoomIndicator();
+      });
     } else {
       lightboxImage = lightbox.querySelector(".md-image-lightbox__img");
       lightboxCaption = lightbox.querySelector(".md-image-lightbox__caption");
+      zoomIndicator = lightbox.querySelector(".md-image-lightbox__zoom-indicator");
     }
 
     function openLightbox(image) {
@@ -359,6 +712,7 @@
       var altText = (image.getAttribute("alt") || "").trim();
       lastActiveElement = document.activeElement;
 
+      resetZoom();
       lightboxImage.setAttribute("src", source);
       lightboxImage.setAttribute("alt", altText || "Image preview");
       lightboxCaption.textContent = altText;
@@ -894,10 +1248,14 @@
   }
 
   function boot() {
-    mountDocumentSwitcher();
+    mountMegaNavbar();
     mountSingleThemeToggle();
     mountImageLightbox();
-    mountSectionAwareToc();
+
+    // Keep landing page as a standalone experience without section paging behavior.
+    if (!document.querySelector(".pls-home-page")) {
+      mountSectionAwareToc();
+    }
   }
 
   if (document.readyState === "loading") {
