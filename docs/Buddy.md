@@ -358,6 +358,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>- Vị trí tuyển dụng đó có ít nhất một vòng phỏng vấn được thiết lập sẵn. |
         | **Kết quả hiển thị** | - Khi kích hoạt một vòng phỏng vấn cho ứng viên đó, các thông tin về người phỏng vấn và thời gian phỏng vấn sẽ được hiển thị lên vòng phỏng vấn đó.<br>- Layout lịch phỏng vấn cập nhật thông tin liên kết giữa các vòng phỏng vấn liên tiếp. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có vòng phỏng vấn được tạo sẵn**: hệ thống hiển thị biểu tượng thùng rỗng và mô tả "Không có dữ liệu!".<br>**Trường hợp không có người phỏng vấn nào**: Khi mở drop-down list "Người phỏng vấn" thì hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-1/swimlane_tao_vong_phong_van_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Tạo vòng phỏng vấn ứng viên</span>
     #### 2.2. Xem chi tiết buổi phỏng vấn ứng viên {#toc-4-2-2}
     ??? book "Xem chi tiết buổi phỏng vấn ứng viên"
         | Trường | Nội dung |
@@ -370,6 +379,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>- Vị trí tuyển dụng đó có ít nhất một vòng phỏng vấn được thiết lập sẵn.<br>- Vòng phỏng vấn được chọn có nội dung chi tiết. |
         | **Kết quả hiển thị** | - Nội dung của popup đúng với dữ liệu được điền vào bởi người phỏng vấn sau khi thực hiện vòng phỏng vấn. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có nội dung chi tiết tại các tab trong popup:** hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả  "Không có dữ liệu!". |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-2/swimlane_xem_chi_tiet_buoi_phong_van_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Xem chi tiết buổi phỏng vấn ứng viên</span>
     #### 2.3. Quản lý ghi chú về ứng viên dành cho Người phụ trách {#toc-4-2-3}
     ??? book "Quản lý ghi chú về ứng viên dành cho Người phụ trách"
         | Trường | Nội dung |

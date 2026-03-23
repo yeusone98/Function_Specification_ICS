@@ -1,0 +1,196 @@
+<svg width="1600" height="1320" viewBox="0 0 1600 1320" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart xem chi tiết buổi phỏng vấn ứng viên">
+  <defs>
+    <style>
+      .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
+      .divider { stroke: #b5d4f4; stroke-width: 1; }
+      .lane-head { fill: #185fa5; }
+      .lane-title {
+        fill: #e8f2fb;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .lane-handler { fill: #378add; opacity: 0.06; }
+      .lane-system { fill: #378add; opacity: 0.10; }
+      .lane-result { fill: #6b7280; opacity: 0.08; }
+      .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
+      .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
+      .result-empty { fill: #e24b4a; stroke: #a32d2d; stroke-width: 1; }
+      .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .decision { fill: #ef9f27; stroke: #854f0b; stroke-width: 1; }
+      .text-light {
+        fill: #eef6ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .text-dark {
+        fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #4e2c04;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .subtext {
+        fill: #d8eeff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .meta-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrow);
+      }
+      .line-label {
+        fill: #61b3ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: rgba(10, 18, 34, 0.92);
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#378add" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="lane-handler" x="0" y="54" width="520" height="1266"/>
+  <rect class="lane-system" x="520" y="54" width="520" height="1266"/>
+  <rect class="lane-result" x="1040" y="54" width="560" height="1266"/>
+
+  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1318.8"/>
+  <line class="divider" x1="520" y1="0" x2="520" y2="1320"/>
+  <line class="divider" x1="1040" y1="0" x2="1040" y2="1320"/>
+
+  <rect class="lane-head" x="0" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="520" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="1040" y="0" width="560" height="54"/>
+
+  <text class="lane-title" x="260" y="27">Người phụ trách</text>
+  <text class="lane-title" x="780" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="1320" y="27">Popup / Kết quả</text>
+
+  <ellipse class="start-end" cx="260" cy="108" rx="96" ry="28"/>
+  <text class="text-dark" x="260" y="113">Bắt đầu</text>
+
+  <rect class="task" x="120" y="168" width="280" height="86" rx="8"/>
+  <text class="text-light" x="260" y="198">
+    <tspan x="260" dy="0">Chọn một vòng phỏng vấn</tspan>
+    <tspan x="260" dy="16">màu trắng để xem chi tiết</tspan>
+  </text>
+
+  <rect class="task" x="620" y="168" width="320" height="86" rx="8"/>
+  <text class="text-light" x="780" y="198">
+    <tspan x="780" dy="0">Kiểm tra vòng được chọn</tspan>
+    <tspan x="780" dy="16">có status Đã Phỏng Vấn và có nội dung chi tiết</tspan>
+  </text>
+
+  <polygon class="decision" points="780,310 884,384 780,458 676,384"/>
+  <text class="decision-text" x="780" y="380">
+    <tspan x="780" dy="0">Có nội dung chi tiết</tspan>
+    <tspan x="780" dy="16">để hiển thị?</tspan>
+  </text>
+
+  <rect class="result-empty" x="1110" y="338" width="420" height="92" rx="8"/>
+  <text class="text-light" x="1320" y="368">
+    <tspan x="1320" dy="0">Không có dữ liệu!</tspan>
+    <tspan class="subtext" x="1320" dy="18">Popup tab chi tiết không có nội dung để hiển thị</tspan>
+  </text>
+
+  <rect class="task" x="620" y="500" width="320" height="86" rx="8"/>
+  <text class="text-light" x="780" y="530">
+    <tspan x="780" dy="0">Hiển thị popup chi tiết</tspan>
+    <tspan x="780" dy="16">gồm 3 tab: Câu hỏi phỏng vấn, Đánh giá, Ghi chú</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="482" width="500" height="132" rx="8"/>
+  <text class="text-light" x="1320" y="512">
+    <tspan x="1320" dy="0">Popup mở mặc định ở tab Câu hỏi phỏng vấn</tspan>
+    <tspan class="subtext" x="1320" dy="18">Chỉ hiển thị nội dung đã được điền bởi người phỏng vấn</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Chế độ chỉ xem, không cho chỉnh sửa</tspan>
+  </text>
+
+  <rect class="task" x="120" y="676" width="280" height="78" rx="8"/>
+  <text class="text-light" x="260" y="706">
+    <tspan x="260" dy="0">Xem và mở rộng danh mục</tspan>
+    <tspan x="260" dy="16">trong tab Câu hỏi phỏng vấn</tspan>
+  </text>
+
+  <rect class="task" x="120" y="820" width="280" height="78" rx="8"/>
+  <text class="text-light" x="260" y="850">
+    <tspan x="260" dy="0">Chuyển tab và xem</tspan>
+    <tspan x="260" dy="16">Đánh giá, Ghi chú</tspan>
+  </text>
+
+  <rect class="task" x="620" y="824" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="854">
+    <tspan x="780" dy="0">Nạp nội dung của tab đang xem</tspan>
+    <tspan x="780" dy="16">theo dữ liệu vòng phỏng vấn</tspan>
+  </text>
+
+  <polygon class="decision" points="780,950 884,1024 780,1098 676,1024"/>
+  <text class="decision-text" x="780" y="1020">
+    <tspan x="780" dy="0">Tab đang xem có</tspan>
+    <tspan x="780" dy="16">dữ liệu?</tspan>
+  </text>
+
+  <rect class="result-empty" x="1110" y="978" width="420" height="92" rx="8"/>
+  <text class="text-light" x="1320" y="1008">
+    <tspan x="1320" dy="0">Không có dữ liệu!</tspan>
+    <tspan class="subtext" x="1320" dy="18">Tab hiện tại đang ở trạng thái trống</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="1106" width="500" height="118" rx="8"/>
+  <text class="text-light" x="1320" y="1136">
+    <tspan x="1320" dy="0">Hiển thị đúng nội dung chi tiết vòng phỏng vấn</tspan>
+    <tspan class="subtext" x="1320" dy="18">Câu hỏi phỏng vấn, Đánh giá hoặc Ghi chú đều ở chế độ chỉ xem</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Người phụ trách chỉ xem nội dung do người phỏng vấn đã điền</tspan>
+  </text>
+
+  <ellipse class="start-end" cx="1320" cy="1282" rx="96" ry="28"/>
+  <text class="text-dark" x="1320" y="1287">Kết thúc</text>
+
+  <line class="line" x1="260" y1="136" x2="260" y2="168"/>
+  <line class="line" x1="400" y1="211" x2="620" y2="211"/>
+  <line class="line" x1="780" y1="254" x2="780" y2="310"/>
+  <line class="line" x1="884" y1="384" x2="1110" y2="384"/>
+  <line class="line" x1="780" y1="458" x2="780" y2="500"/>
+  <line class="line" x1="940" y1="543" x2="1070" y2="543"/>
+  <path class="line" d="M780 586 V632 H260 V676"/>
+  <line class="line" x1="260" y1="754" x2="260" y2="820"/>
+  <line class="line" x1="400" y1="859" x2="620" y2="859"/>
+  <line class="line" x1="780" y1="894" x2="780" y2="950"/>
+  <line class="line" x1="884" y1="1024" x2="1110" y2="1024"/>
+  <path class="line" d="M780 1098 V1165 H1070"/>
+  <line class="line" x1="1320" y1="1224" x2="1320" y2="1254"/>
+
+  <text class="line-label" x="948" y="370">Không</text>
+  <text class="line-label" x="796" y="478">Có</text>
+  <text class="line-label" x="950" y="1010">Không</text>
+  <text class="line-label" x="796" y="1116">Có</text>
+</svg>
