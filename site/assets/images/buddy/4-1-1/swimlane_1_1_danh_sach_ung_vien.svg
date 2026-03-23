@@ -1,0 +1,277 @@
+<svg width="1600" height="1260" viewBox="0 0 1600 1260" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart mục 1.1">
+  <defs>
+    <style>
+      .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
+      .divider { stroke: #b5d4f4; stroke-width: 1; }
+      .lane-head { fill: #185fa5; }
+      .lane-title {
+        fill: #e8f2fb;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .lane-master { fill: #ef9f27; opacity: 0.08; }
+      .lane-handler { fill: #378add; opacity: 0.06; }
+      .lane-system { fill: #378add; opacity: 0.1; }
+      .lane-result { fill: #6b7280; opacity: 0.08; }
+      .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
+      .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
+      .result-empty { fill: #e24b4a; stroke: #a32d2d; stroke-width: 1; }
+      .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .decision { fill: #ef9f27; stroke: #854f0b; stroke-width: 1; }
+      .text-light {
+        fill: #eef6ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .text-dark {
+        fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #4e2c04;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .subtext {
+        fill: #a8d9ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .legend-card { fill: #1f2937; stroke: #506b89; stroke-width: 1; }
+      .legend-title {
+        fill: #ffffff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .legend-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+      }
+      .meta-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        marker-end: url(#arrow);
+      }
+      .line-dashed {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        stroke-dasharray: 7 4;
+        marker-end: url(#arrow);
+      }
+      .line-label {
+        fill: #61b3ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: rgba(10, 18, 34, 0.92);
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#378add" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="lane-master" x="0" y="54" width="400" height="1206"/>
+  <rect class="lane-handler" x="400" y="54" width="400" height="1206"/>
+  <rect class="lane-system" x="800" y="54" width="400" height="1206"/>
+  <rect class="lane-result" x="1200" y="54" width="400" height="1206"/>
+
+  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1258.8"/>
+  <line class="divider" x1="400" y1="0" x2="400" y2="1260"/>
+  <line class="divider" x1="800" y1="0" x2="800" y2="1260"/>
+  <line class="divider" x1="1200" y1="0" x2="1200" y2="1260"/>
+
+  <rect class="lane-head" x="0" y="0" width="400" height="54"/>
+  <rect class="lane-head" x="400" y="0" width="400" height="54"/>
+  <rect class="lane-head" x="800" y="0" width="400" height="54"/>
+  <rect class="lane-head" x="1200" y="0" width="400" height="54"/>
+
+  <text class="lane-title" x="200" y="27">Master</text>
+  <text class="lane-title" x="600" y="27">Người phụ trách</text>
+  <text class="lane-title" x="1000" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="1400" y="27">Màn hình / Kết quả</text>
+
+  <ellipse class="start-end" cx="600" cy="112" rx="96" ry="28"/>
+  <text class="text-dark" x="600" y="117">Bắt đầu</text>
+
+  <line class="line" x1="600" y1="140" x2="600" y2="174"/>
+
+  <rect class="task" x="500" y="174" width="200" height="62" rx="8"/>
+  <text class="text-light" x="600" y="200">
+    <tspan x="600" dy="0">Đăng nhập tài khoản</tspan>
+    <tspan x="600" dy="16">người phụ trách</tspan>
+  </text>
+
+  <line class="line" x1="700" y1="205" x2="860" y2="205"/>
+
+  <rect class="task" x="860" y="174" width="280" height="62" rx="8"/>
+  <text class="text-light" x="1000" y="200">
+    <tspan x="1000" dy="0">Xác thực tài khoản</tspan>
+    <tspan x="1000" dy="16">&amp; xác định phân quyền</tspan>
+  </text>
+
+  <line class="line" x1="1140" y1="205" x2="1288" y2="205"/>
+
+  <rect class="result-ok" x="1288" y="174" width="224" height="62" rx="8"/>
+  <text class="text-light" x="1400" y="200">
+    <tspan x="1400" dy="0">Hiển thị màn hình chính</tspan>
+    <tspan x="1400" dy="16">của Handler</tspan>
+  </text>
+
+  <rect class="task" x="500" y="300" width="200" height="62" rx="8"/>
+  <text class="text-light" x="600" y="326">
+    <tspan x="600" dy="0">Chọn menu</tspan>
+    <tspan x="600" dy="16">Ứng Viên</tspan>
+  </text>
+
+  <path class="line" d="M1400 236 V276 H600 V300"/>
+  <text class="line-label" x="1014" y="264">Yêu cầu mở danh sách</text>
+
+  <rect class="task" x="100" y="288" width="200" height="72" rx="8"/>
+  <text class="text-light" x="200" y="314">
+    <tspan x="200" dy="0">Gán quyền quản lý</tspan>
+    <tspan x="200" dy="16">vị trí tuyển dụng</tspan>
+    <tspan x="200" dy="16">cho Handler</tspan>
+  </text>
+
+  <rect class="task" x="860" y="300" width="280" height="62" rx="8"/>
+  <text class="text-light" x="1000" y="326">
+    <tspan x="1000" dy="0">Kiểm tra vị trí</tspan>
+    <tspan x="1000" dy="16">được Master gán</tspan>
+  </text>
+
+  <line class="line" x1="700" y1="318" x2="860" y2="318"/>
+
+  <path class="line-dashed" d="M300 324 H350 V348 H860"/>
+  <text class="line-label" x="390" y="338">Phân quyền vị trí</text>
+
+  <line class="line" x1="1000" y1="362" x2="1000" y2="408"/>
+
+  <polygon class="decision" points="1000,408 1094,478 1000,548 906,478"/>
+  <text class="decision-text" x="1000" y="474">
+    <tspan x="1000" dy="0">Có vị trí</tspan>
+    <tspan x="1000" dy="16">được phân quyền?</tspan>
+  </text>
+
+  <line class="line" x1="1000" y1="548" x2="1000" y2="594"/>
+  <text class="line-label" x="1012" y="580">Có</text>
+
+  <path class="line-dashed" d="M1094 478 H1288"/>
+  <text class="line-label" x="1160" y="465">Không</text>
+
+  <rect class="result-empty" x="1276" y="447" width="248" height="62" rx="8"/>
+  <text class="text-light" x="1400" y="473">
+    <tspan x="1400" dy="0">Bảng dữ liệu trống!</tspan>
+    <tspan x="1400" dy="16">Chưa được gán vị trí</tspan>
+  </text>
+
+  <rect class="task" x="860" y="594" width="280" height="62" rx="8"/>
+  <text class="text-light" x="1000" y="620">
+    <tspan x="1000" dy="0">Gọi API lấy danh sách</tspan>
+    <tspan x="1000" dy="16">ứng viên</tspan>
+  </text>
+
+  <line class="line" x1="1000" y1="656" x2="1000" y2="702"/>
+
+  <rect class="task" x="860" y="702" width="280" height="62" rx="8"/>
+  <text class="text-light" x="1000" y="728">
+    <tspan x="1000" dy="0">Join / lọc ứng viên theo</tspan>
+    <tspan x="1000" dy="16">vị trí được phân quyền</tspan>
+  </text>
+
+  <line class="line" x1="1000" y1="764" x2="1000" y2="812"/>
+
+  <polygon class="decision" points="1000,812 1094,882 1000,952 906,882"/>
+  <text class="decision-text" x="1000" y="878">
+    <tspan x="1000" dy="0">Có ứng viên</tspan>
+    <tspan x="1000" dy="16">phù hợp?</tspan>
+  </text>
+
+  <path class="line-dashed" d="M1094 882 H1288"/>
+  <text class="line-label" x="1160" y="869">Không</text>
+
+  <rect class="result-empty" x="1270" y="851" width="260" height="62" rx="8"/>
+  <text class="text-light" x="1400" y="877">
+    <tspan x="1400" dy="0">Bảng dữ liệu trống!</tspan>
+    <tspan x="1400" dy="16">Không có ứng viên phù hợp</tspan>
+  </text>
+
+  <rect class="result-ok" x="1236" y="980" width="328" height="128" rx="8"/>
+  <text class="text-light" x="1400" y="1004">
+    <tspan x="1400" dy="0">Hiển thị bảng Danh sách ứng viên</tspan>
+    <tspan class="subtext" x="1400" dy="18">Họ tên · Vị trí · Loại HĐ · Người phụ trách</tspan>
+    <tspan class="subtext" x="1400" dy="16">Ngày PV · Giờ PV · Trạng thái · Đánh giá</tspan>
+    <tspan class="subtext" x="1400" dy="16">Ngày gửi CV</tspan>
+    <tspan class="meta-text" x="1400" dy="18">Thuộc tính hiển thị: Phân trang</tspan>
+    <tspan class="meta-text" x="1400" dy="14">Quyền thao tác: Chỉ xem</tspan>
+  </text>
+
+  <path class="line" d="M1000 952 V1014 H1236"/>
+  <text class="line-label" x="1014" y="984">Có</text>
+  <text class="line-label" x="1122" y="998">Danh sách ứng viên</text>
+
+  <path class="line" d="M1400 1108 V1128 H760 V1090 H730"/>
+
+  <path class="line" d="M1524 478 H1580 V1114 H730"/>
+
+  <path class="line" d="M1530 882 H1580 V1138 H730"/>
+
+  <rect class="task" x="450" y="1068" width="280" height="86" rx="8"/>
+  <text class="text-light" x="600" y="1114">
+    <tspan x="600" dy="0">Xem kết quả hiển thị</tspan>
+    <tspan x="600" dy="16">trên bảng ứng viên</tspan>
+  </text>
+
+  <line class="line" x1="600" y1="1154" x2="600" y2="1196"/>
+
+  <ellipse class="start-end" cx="600" cy="1224" rx="96" ry="28"/>
+  <text class="text-dark" x="600" y="1229">Kết thúc</text>
+
+  <rect class="legend-card" x="72" y="968" width="268" height="260" rx="12"/>
+  <text class="legend-title" x="96" y="1006">Chú thích</text>
+
+  <ellipse class="start-end" cx="104" cy="1038" rx="16" ry="10"/>
+  <text class="legend-text" x="132" y="1042">Start / End</text>
+
+  <rect class="task" x="88" y="1063" width="32" height="18" rx="4"/>
+  <text class="legend-text" x="132" y="1077">Task</text>
+
+  <polygon class="decision" points="104,1094 120,1106 104,1118 88,1106"/>
+  <text class="legend-text" x="132" y="1110">Decision</text>
+
+  <rect class="result-empty" x="88" y="1131" width="32" height="18" rx="4"/>
+  <text class="legend-text" x="132" y="1145">Empty state</text>
+
+  <line class="line" x1="88" y1="1174" x2="120" y2="1174"/>
+  <text class="legend-text" x="132" y="1178">Luồng chính</text>
+
+  <line class="line-dashed" x1="88" y1="1208" x2="120" y2="1208"/>
+  <text class="legend-text" x="132" y="1212">Luồng điều kiện / phụ</text>
+</svg>

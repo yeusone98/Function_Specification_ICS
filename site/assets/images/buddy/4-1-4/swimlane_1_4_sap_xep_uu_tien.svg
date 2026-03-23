@@ -1,0 +1,239 @@
+<svg width="1600" height="1560" viewBox="0 0 1600 1560" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart mục 1.4">
+  <defs>
+    <style>
+      .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
+      .divider { stroke: #b5d4f4; stroke-width: 1; }
+      .lane-head { fill: #185fa5; }
+      .lane-title {
+        fill: #e8f2fb;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .lane-handler { fill: #378add; opacity: 0.06; }
+      .lane-system { fill: #378add; opacity: 0.10; }
+      .lane-result { fill: #6b7280; opacity: 0.08; }
+      .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
+      .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
+      .result-empty { fill: #e24b4a; stroke: #a32d2d; stroke-width: 1; }
+      .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .decision { fill: #ef9f27; stroke: #854f0b; stroke-width: 1; }
+      .text-light {
+        fill: #eef6ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .text-dark {
+        fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #4e2c04;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .subtext {
+        fill: #d8eeff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .meta-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrow);
+      }
+      .line-label {
+        fill: #61b3ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: rgba(10, 18, 34, 0.92);
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#378add" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="lane-handler" x="0" y="54" width="520" height="1506"/>
+  <rect class="lane-system" x="520" y="54" width="520" height="1506"/>
+  <rect class="lane-result" x="1040" y="54" width="560" height="1506"/>
+
+  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1558.8"/>
+  <line class="divider" x1="520" y1="0" x2="520" y2="1560"/>
+  <line class="divider" x1="1040" y1="0" x2="1040" y2="1560"/>
+
+  <rect class="lane-head" x="0" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="520" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="1040" y="0" width="560" height="54"/>
+
+  <text class="lane-title" x="260" y="27">Người phụ trách</text>
+  <text class="lane-title" x="780" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="1320" y="27">Màn hình / Kết quả</text>
+
+  <ellipse class="start-end" cx="260" cy="108" rx="96" ry="28"/>
+  <text class="text-dark" x="260" y="113">Bắt đầu</text>
+
+  <rect class="task" x="120" y="164" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="190">
+    <tspan x="260" dy="0">Đang xem bảng</tspan>
+    <tspan x="260" dy="16">Danh sách ứng viên</tspan>
+  </text>
+
+  <rect class="task" x="120" y="280" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="306">
+    <tspan x="260" dy="0">Mở bộ lọc cần</tspan>
+    <tspan x="260" dy="16">sắp xếp ưu tiên</tspan>
+  </text>
+
+  <rect class="task" x="640" y="280" width="280" height="62" rx="8"/>
+  <text class="text-light" x="780" y="306">
+    <tspan x="780" dy="0">Render popup</tspan>
+    <tspan x="780" dy="16">sắp xếp ưu tiên</tspan>
+  </text>
+
+  <rect class="task" x="1110" y="224" width="420" height="188" rx="8"/>
+  <text class="text-light" x="1320" y="252">
+    <tspan x="1320" dy="0">Popup THEO THỨ TỰ ƯU TIÊN</tspan>
+    <tspan class="subtext" x="1320" dy="18">Ví dụ: 1 Passed · 2 HR đã xác nhận</tspan>
+    <tspan class="subtext" x="1320" dy="16">3 Offered · 4 Dropped</tspan>
+    <tspan class="subtext" x="1320" dy="16">Item chọn trước = ưu tiên cao hơn</tspan>
+    <tspan class="subtext" x="1320" dy="16">Có nút ⟳ reset và nút Xác nhận</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Áp dụng cho các bộ lọc hiển thị trên Filter bar</tspan>
+  </text>
+
+  <rect class="task" x="120" y="516" width="280" height="70" rx="8"/>
+  <text class="text-light" x="260" y="546">
+    <tspan x="260" dy="0">Chọn item theo</tspan>
+    <tspan x="260" dy="16">thứ tự ưu tiên</tspan>
+  </text>
+
+  <rect class="task" x="620" y="516" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="546">
+    <tspan x="780" dy="0">Ghi nhận thứ tự click</tspan>
+    <tspan x="780" dy="16">và đánh số ưu tiên</tspan>
+  </text>
+
+  <polygon class="decision" points="260,614 344,680 260,746 176,680"/>
+  <text class="decision-text" x="260" y="676">
+    <tspan x="260" dy="0">Nhấn ⟳ reset</tspan>
+    <tspan x="260" dy="16">cho cột này?</tspan>
+  </text>
+
+  <rect class="task" x="120" y="784" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="810">
+    <tspan x="260" dy="0">Nhấn</tspan>
+    <tspan x="260" dy="16">Xác nhận</tspan>
+  </text>
+
+  <rect class="task" x="620" y="632" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="662">
+    <tspan x="780" dy="0">Reset filter / sort</tspan>
+    <tspan x="780" dy="16">về mặc định</tspan>
+  </text>
+
+  <rect class="task" x="620" y="780" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="810">
+    <tspan x="780" dy="0">Gộp Filter Params</tspan>
+    <tspan x="780" dy="16">và Sort Params</tspan>
+  </text>
+
+  <rect class="task" x="620" y="892" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="922">
+    <tspan x="780" dy="0">Áp quy tắc ưu tiên</tspan>
+    <tspan x="780" dy="16">cột trái → phải</tspan>
+  </text>
+
+  <rect class="task" x="620" y="1004" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="1034">
+    <tspan x="780" dy="0">Query danh sách ứng viên</tspan>
+    <tspan x="780" dy="16">theo thứ tự ưu tiên</tspan>
+  </text>
+
+  <polygon class="decision" points="780,1100 884,1176 780,1252 676,1176"/>
+  <text class="decision-text" x="780" y="1172">
+    <tspan x="780" dy="0">Có ứng viên</tspan>
+    <tspan x="780" dy="16">khớp?</tspan>
+  </text>
+
+  <rect class="result-ok" x="1110" y="620" width="420" height="94" rx="8"/>
+  <text class="text-light" x="1320" y="652">
+    <tspan x="1320" dy="0">Bảng về thứ tự mặc định</tspan>
+    <tspan class="subtext" x="1320" dy="18">Xóa ưu tiên của cột đang reset</tspan>
+  </text>
+
+  <rect class="result-empty" x="1120" y="1134" width="400" height="82" rx="8"/>
+  <text class="text-light" x="1320" y="1164">
+    <tspan x="1320" dy="0">Bảng dữ liệu trống!</tspan>
+    <tspan class="subtext" x="1320" dy="18">Không có ứng viên khớp thứ tự lọc</tspan>
+  </text>
+
+  <rect class="result-ok" x="1090" y="1262" width="440" height="126" rx="8"/>
+  <text class="text-light" x="1310" y="1290">
+    <tspan x="1310" dy="0">Hiển thị bảng theo thứ tự ưu tiên</tspan>
+    <tspan class="subtext" x="1310" dy="18">Item chọn trước đứng trên</tspan>
+    <tspan class="subtext" x="1310" dy="16">Nếu nhiều cột: ưu tiên từ trái sang phải</tspan>
+    <tspan class="meta-text" x="1310" dy="18">Dữ liệu đã lọc và sắp xếp đúng trình tự</tspan>
+  </text>
+
+  <rect class="task" x="110" y="1360" width="300" height="86" rx="8"/>
+  <text class="text-light" x="260" y="1406">
+    <tspan x="260" dy="0">Xem kết quả hiển thị</tspan>
+    <tspan x="260" dy="16">trên bảng ứng viên</tspan>
+  </text>
+
+  <ellipse class="start-end" cx="260" cy="1494" rx="96" ry="28"/>
+  <text class="text-dark" x="260" y="1499">Kết thúc</text>
+
+  <line class="line" x1="260" y1="136" x2="260" y2="164"/>
+  <line class="line" x1="260" y1="226" x2="260" y2="280"/>
+  <line class="line" x1="400" y1="311" x2="640" y2="311"/>
+  <line class="line" x1="920" y1="311" x2="1110" y2="311"/>
+  <path class="line" d="M1320 412 V460 H260 V516"/>
+  <line class="line" x1="400" y1="551" x2="620" y2="551"/>
+  <line class="line" x1="260" y1="586" x2="260" y2="614"/>
+  <line class="line" x1="344" y1="680" x2="620" y2="680"/>
+  <line class="line" x1="260" y1="746" x2="260" y2="784"/>
+  <line class="line" x1="400" y1="815" x2="620" y2="815"/>
+  <line class="line" x1="940" y1="667" x2="1110" y2="667"/>
+  <line class="line" x1="780" y1="850" x2="780" y2="892"/>
+  <line class="line" x1="780" y1="962" x2="780" y2="1004"/>
+  <line class="line" x1="780" y1="1074" x2="780" y2="1100"/>
+  <line class="line" x1="884" y1="1176" x2="1120" y2="1176"/>
+  <path class="line" d="M780 1252 V1325 H1090"/>
+  <path class="line" d="M1530 667 H1560 V1403 H410"/>
+  <path class="line" d="M1520 1176 H1542 V1425 H410"/>
+  <path class="line" d="M1090 1325 H460 V1403 H410"/>
+  <line class="line" x1="260" y1="1446" x2="260" y2="1466"/>
+
+  <text class="line-label" x="1014" y="298">Mở popup</text>
+  <text class="line-label" x="780" y="444">Chọn item</text>
+  <text class="line-label" x="480" y="670">Có</text>
+  <text class="line-label" x="274" y="766">Không</text>
+  <text class="line-label" x="946" y="1162">Không</text>
+  <text class="line-label" x="794" y="1272">Có</text>
+</svg>

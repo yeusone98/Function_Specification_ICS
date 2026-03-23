@@ -41,57 +41,13 @@
   }
 
   /* ============================================================
-     3. SMOOTH ACCORDION — CSS Grid trick (zero layout thrashing)
-     Wrap non-summary children in .pls-grid-wrap > .pls-grid-inner.
-     CSS animates grid-template-rows: 0fr -> 1fr on details[open].
-     No scrollHeight, no jank, GPU-composited.
-  ============================================================ */
-  function wrapDetails(details) {
-    if (details.dataset.plsWrapped) return;
-    details.dataset.plsWrapped = "1";
-
-    var children = Array.from(details.childNodes).filter(function (n) {
-      return n.nodeName !== "SUMMARY";
-    });
-    if (!children.length) return;
-
-    var wrap = document.createElement("div");
-    wrap.className = "pls-grid-wrap";
-
-    var inner = document.createElement("div");
-    inner.className = "pls-grid-inner";
-
-    children.forEach(function (child) {
-      inner.appendChild(child);
-    });
-
-    wrap.appendChild(inner);
-    details.appendChild(wrap);
-  }
-
-  function mountSmoothAccordion() {
-    Array.from(document.querySelectorAll("details")).forEach(wrapDetails);
-
-    new MutationObserver(function (mutations) {
-      mutations.forEach(function (m) {
-        m.addedNodes.forEach(function (n) {
-          if (n.nodeType !== 1) return;
-          if (n.tagName === "DETAILS") wrapDetails(n);
-          if (n.querySelectorAll) {
-            Array.from(n.querySelectorAll("details")).forEach(wrapDetails);
-          }
-        });
-      });
-    }).observe(document.body, { childList: true, subtree: true });
-  }
-
-  /* ============================================================
      BOOT
   ============================================================ */
   function boot() {
     mountProgressBar();
     mountPageFadeIn();
-    mountSmoothAccordion();
+    // Accordion animation is handled natively by MkDocs Material
+    // for consistent behavior across all details types (book, info, etc.)
   }
 
   if (document.readyState === "loading") {

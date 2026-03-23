@@ -142,6 +142,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Luồng xử lý (Workflow)**      | 1. Actor truy cập menu **"Ứng Viên"**.<br>2. Client gọi API lấy danh sách ứng viên (kèm tham số phân trang nếu có).<br>3. Server trích xuất danh sách ứng viên, mapping (join) với các vị trí tuyển dụng mà Actor được phân quyền quản lý.<br>4. Client render dữ liệu lên Bảng **Danh sách ứng viên**. |
         | **Pre-conditions (Điều kiện)**  | - Actor đăng nhập hợp lệ.<br>- Được Master gán quyền quản lý ít nhất 1 Vị trí tuyển dụng. |
         | **Post-conditions / Ngoại lệ**  | - **Thành công**: Render bảng dữ liệu, hỗ trợ phân trang.<br>- **Ngoại lệ (Chưa gán vị trí / Không có ứng viên / Không có kết quả lọc)**: Hiển thị Empty State với nội dung *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- **Ngoại lệ (Ô tìm kiếm trống & Không bộ lọc)**: Fetch và render lại toàn bộ danh sách ban đầu. |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-1/swimlane_1_1_danh_sach_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Hiển thị bảng danh sách các ứng viên cho người phụ trách</span>
     #### 1.2. Tùy chọn hiển thị filter trong bảng danh sách ứng viên {#toc-4-1-2}
     ??? book "Tùy chọn hiển thị filter trong bảng danh sách ứng viên"
         | Trường                          | Nội dung |
@@ -154,6 +163,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Luồng xử lý (Workflow)**      | 1. Tại bảng **"Danh sách ứng viên"**, Actor nhấp nút **"☰ Hiển thị"**.<br>2. Client render Popup **"HIỂN THỊ FILTER"** chứa toàn bộ các filter định nghĩa sẵn.<br>3. Actor check/uncheck các option filter.<br>&emsp;- Trạng thái nút Xác nhận: `Disabled` nếu không có sự thay đổi state.<br>&emsp;- Trạng thái nút Xác nhận: `Enabled` nếu có sự thay đổi checkbox state.<br>4. Actor nhấn "Xác nhận". Client update thanh bộ lọc (Filter bar) trên UI ngay lập tức và lưu cấu hình vào User Preferences. |
         | **Pre-conditions (Điều kiện)**  | - Actor đang có phiên đăng nhập hợp lệ. |
         | **Post-conditions / Ngoại lệ**  | - **Thành công**: Filter bar cập nhật hiển thị theo cấu hình mới. Trạng thái filter được giữ nguyên (persist) cho lần đăng nhập sau.<br>- **Ngoại lệ (Chưa định nghĩa filter)**: Popup hiển thị thông báo *"Không có dữ liệu!"*. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-2/swimlane_1_2_hien_thi_filter.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Tùy chọn hiển thị filter trong bảng danh sách ứng viên</span>
     #### 1.3 Tùy chọn hiển thị cột trong bảng danh sách ứng viên {#toc-4-1-3}
     ??? book "Tùy chọn hiển thị cột trong bảng danh sách ứng viên"
         | Trường                          | Nội dung |
@@ -166,6 +184,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Luồng xử lý (Workflow)**      | 1. Actor nhấp biểu tượng `👁️`.<br>2. Client render Popup chứa checkboxes của 10 tùy chọn cột hiển thị.<br>3. Actor check/uncheck options.<br>4. Client lập tức cập nhật logic render các cột của Table (React/Vue reactivity) dựa trên Event onChange.<br>5. Client request lưu trữ trạng thái cột vào API User Preferences. |
         | **Pre-conditions (Điều kiện)**  | - Bảng **Danh sách ứng viên** đã mount thành công lên DOM. |
         | **Post-conditions / Ngoại lệ**  | - **Thành công**: Bảng Component re-render chỉ với những cột được tích.<br>- **Ngoại lệ (Bảng trống do Filter/No Data)**: Vẫn hỗ trợ toggle hiển thị cột, nhưng Data Content sẽ là UI Empty State: *“Bảng dữ liệu trống!”*. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-3/swimlane_1_3_hien_thi_cot.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Tùy chọn hiển thị cột trong bảng danh sách ứng viên</span>
     #### 1.4. Sắp xếp thứ tự ưu tiên theo từng cột {#toc-4-1-4}
     ??? book "Sắp xếp thứ tự ưu tiên theo từng cột"
         | Trường                          | Nội dung |
@@ -178,6 +205,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Luồng xử lý (Workflow)**      | 1. Actor mở Droplist 1 bộ lọc và lần lượt tích chọn các Item theo nhu cầu (VD: Chọn *HĐ Thử Việc*, sau đó chọn *HĐ Chính Thức*).<br>2. Client theo dõi hành vi click để build Sort Params (ưu tiên Item được tích trước).<br>3. Khép dropdown/Nhấn xác nhận, Client gửi API Request gộp chứa các thông số Filter Params + Sort Params.<br>4. Server xử lý query trả về Data Array.<br>5. Tại thanh Filter Bar, Actor có thể nhấn biểu tượng `⟳` để Reset cấu hình của mục đó về default null. |
         | **Pre-conditions (Điều kiện)**  | - Hệ thống phải có sẵn Data Option List bên trong Dropdown của Filter. |
         | **Post-conditions / Ngoại lệ**  | - **Thành công**: Trả về payload danh sách ứng viên được sort/filter đúng trình tự phân cấp.<br>- **Ngoại lệ (No matching data)**: Render component *“Bảng dữ liệu trống!”* kèm icon thùng rỗng. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-4/swimlane_1_4_sap_xep_uu_tien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Sắp xếp thứ tự ưu tiên theo từng cột</span>
     #### 1.5. Tìm kiếm ứng viên theo ký tự {#toc-4-1-5}
     ??? book "Tìm kiếm ứng viên theo ký tự"
         | Trường                          | Nội dung |
@@ -300,7 +336,47 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Data Fields & Validation**    | - **Note Schema**: `Title` (String), `Content` (Rich Text HTML format), `CreatedBy` (UID), `Timestamp`.<br>- **Authorization Logic**: Actor Client ID `===` UID Creator -> Enabled Action Dropdown (Sửa/Xóa). Khác -> Disabled / Hidden Actions.<br>- **Text Parser**: Hỗ trợ CSS Inline Styles Binding (Bold, Italic, Underline, Strike, Font Color, Link). |
         | **Luồng xử lý (Workflow)**      | 1. Actor View Tab **Ghi chú**, Client Fetch Data Array sort DateTime DESC.<br>2. Action Thêm mới: Click Button Mounting Cửa sổ Popup `Thêm ghi chú`. Input Field Title & Nội dung.<br>3. Highlight Content & Trigger Toolbar Component để parse Styles HTML Formatting tags.<br>4. Submit Insert API Record CSDL.<br>5. Action Sửa/Xóa: Trigger Menu Cấu hình View (Icon 3 chấm) từ Info Card thuộc sở hữu Owner Actor. Invoke API Update/Delete, Server return Success status, Map state Update Render List DOM Component màn hình. |
         | **Pre-conditions (Điều kiện)**  | - Actor Account Mapping Session Context Role Người phụ trách Valid. |
-        | **Post-conditions / Ngoại lệ**  | - **Thành công**: View Frame Update New Node Component Card Note Mới. Avatar/Time text format `HH:MM DD/MM/YYYY`.<br>- **Ngoại lệ (0 Length Database Query Array Result List API Record Null Model Empty)**: Layout Content Framework Rendering Module Image Vector Fallback State Default Label Null Value String     #### 3.1. Xem danh sách vị trí tuyển dụng {#toc-4-3-1}
+        | **Post-conditions / Ngoại lệ**  | - **Thành công**: View Frame Update New Node Component Card Note Mới. Avatar/Time text format `HH:MM DD/MM/YYYY`.<br>- **Ngoại lệ (0 Length Database Query Array Result List API Record Null Model Empty)**: Layout Content Framework Rendering Module Image Vector Fallback State Default Label Null Value String *“Không có dữ liệu!”*. |
+    #### 2.5. Đánh giá ứng viên {#toc-4-2-5}
+    ??? book "Đánh giá ứng viên"
+        | Trường                          | Nội dung |
+        | ------------------------------- | -------- |
+        | **Phân loại**                   | 🔴 Mutate / Write |
+        | **Vai trò (Actor)**             | Người phụ trách |
+        | **Mục đích**                    | Cho phép Handler chính thực hiện đánh giá ứng viên theo bộ tiêu chí đã thiết lập. Handler phụ chỉ được xem dữ liệu ở chế độ read-only. |
+        | **Giao diện liên quan**         | - Tab **Đánh giá** trong chi tiết ứng viên.<br>- Form **Đánh giá ứng viên**.<br>- Các danh mục tiêu chí đánh giá dạng Accordion / Dropdown. |
+        | **Data Fields & Validation**    | - **Form Fields**: `Tiêu đề đánh giá`, `Rating` 1-5 sao, Checkbox các tiêu chí chi tiết, `Nội dung đánh giá`.<br>- **Permission Logic**: Chỉ `Main Handler` được phép chỉnh sửa và lưu đánh giá. |
+        | **Luồng xử lý (Workflow)**      | 1. Actor mở tab **Đánh giá**.<br>2. Main Handler nhập tiêu đề, chọn số sao và tích các tiêu chí chi tiết.<br>3. Actor nhập nội dung đánh giá tổng quát.<br>4. Actor nhấn **Lưu đánh giá** để ghi nhận dữ liệu.<br>5. Hệ thống cập nhật danh sách **Đánh giá gần đây** và đồng bộ kết quả cho các Handler liên quan. |
+        | **Pre-conditions (Điều kiện)**  | - Tài khoản có quyền Người phụ trách.<br>- Vị trí ứng tuyển của ứng viên đã được thiết lập bộ tiêu chí đánh giá.<br>- Actor là `Main Handler` nếu muốn thực hiện thao tác ghi dữ liệu. |
+        | **Post-conditions / Ngoại lệ**  | - **Thành công**: Dữ liệu đánh giá được lưu và hiển thị ở lịch sử đánh giá gần đây.<br>- **Ngoại lệ (Chưa có bộ tiêu chí)**: Hệ thống hiển thị thông báo *“Vị trí này chưa có tiêu chí đánh giá!”* hoặc khung trống. |
+    #### 2.6. Quản lý HĐLĐ với ứng viên {#toc-4-2-6}
+    ??? book "Quản lý HĐLĐ với ứng viên"
+        | Trường                          | Nội dung |
+        | ------------------------------- | -------- |
+        | **Phân loại**                   | 🔴 Mutate / Write |
+        | **Vai trò (Actor)**             | Người phụ trách |
+        | **Mục đích**                    | Tạo và quản lý thông tin Hợp đồng lao động của ứng viên, bao gồm dữ liệu hành chính, nội dung hợp đồng và tệp đính kèm liên quan. |
+        | **Giao diện liên quan**         | - Tab **Hợp Đồng** trong chi tiết ứng viên.<br>- Form **Thông Tin Hợp Đồng**.<br>- Khu vực **Nội dung** và **Tệp đính kèm**. |
+        | **Data Fields & Validation**    | - **Contract Types**: `HĐ Thực tập`, `HĐ Thử việc`, `HĐ Chính thức`.<br>- **Behavior Rules**: Nếu chọn `HĐ Chính thức`, form nhập liệu chuyển sang trạng thái disabled / khóa chỉnh sửa.<br>- **Attachment Actions**: Upload, xem, xóa tệp đính kèm. |
+        | **Luồng xử lý (Workflow)**      | 1. Actor mở tab **Hợp Đồng** của ứng viên.<br>2. Actor chọn loại hợp đồng và nhập các thông tin hành chính cần thiết.<br>3. Actor xem / ẩn thông tin lương bằng biểu tượng con mắt nếu cần.<br>4. Actor tải lên hoặc xóa tệp đính kèm liên quan.<br>5. Hệ thống lưu dữ liệu hợp đồng và cập nhật phần hiển thị cho các bên liên quan. |
+        | **Pre-conditions (Điều kiện)**  | - Tài khoản đang đăng nhập có phân quyền Người phụ trách. |
+        | **Post-conditions / Ngoại lệ**  | - **Thành công**: Thông tin hợp đồng được lưu và hiển thị đúng định dạng ngày tháng / tệp đính kèm.<br>- **Ngoại lệ (Chưa có dữ liệu hợp đồng)**: Form giữ trạng thái rỗng, khu vực tệp đính kèm không hiển thị danh sách. |
+    #### 2.7. Quản lý thử việc dành cho ứng viên {#toc-4-2-7}
+    ??? book "Quản lý thử việc dành cho ứng viên"
+        | Trường                          | Nội dung |
+        | ------------------------------- | -------- |
+        | **Phân loại**                   | 🔴 Mutate / Write |
+        | **Vai trò (Actor)**             | Người phụ trách (Chính) |
+        | **Mục đích**                    | Theo dõi và đánh giá chi tiết quá trình thử việc dựa trên các nhóm nhiệm vụ đã được thiết lập. Chỉ Handler chính được phép thao tác ghi nhận kết quả. |
+        | **Giao diện liên quan**         | - Tab **Thử việc** trong chi tiết ứng viên.<br>- Danh sách nhóm nhiệm vụ dạng Accordion.<br>- Các thẻ nhiệm vụ chi tiết và thanh công cụ tương tác. |
+        | **Data Fields & Validation**    | - **Progress Indicator**: Chỉ số tiến độ `X/Y` theo từng nhóm nhiệm vụ.<br>- **Task Actions**: Checkbox hoàn thành, nhận xét, file minh chứng, liên kết liên quan.<br>- **Permission Logic**: Chỉ `Main Handler` được tích chọn và cập nhật dữ liệu. |
+        | **Luồng xử lý (Workflow)**      | 1. Main Handler mở tab **Thử việc** của ứng viên.<br>2. Actor xem các nhóm nhiệm vụ và chỉ số tiến độ tổng quát.<br>3. Actor mở rộng từng nhóm để tích chọn, nhập nhận xét và đính kèm minh chứng cho từng nhiệm vụ.<br>4. Hệ thống lưu log người đánh giá và thời gian cập nhật.<br>5. Hệ thống đồng bộ tiến độ mới lên giao diện chi tiết ứng viên. |
+        | **Pre-conditions (Điều kiện)**  | - Ứng viên đang trong giai đoạn thử việc hoặc đã được gán lộ trình thử việc.<br>- Tài khoản đăng nhập có quyền Người phụ trách.<br>- Actor là `Main Handler` của ứng viên đang chọn. |
+        | **Post-conditions / Ngoại lệ**  | - **Thành công**: Chỉ số tiến độ và log đánh giá được cập nhật ngay trên giao diện.<br>- **Ngoại lệ (Chưa có dữ liệu thử việc)**: Hệ thống hiển thị empty state *“Không có dữ liệu thử việc!”*. |
+---
+???+ info "3. Nhóm chức năng quản lý vị trí tuyển dụng"
+    ### 3. Nhóm chức năng quản lý vị trí tuyển dụng {#toc-4-3}
+    #### 3.1. Xem danh sách vị trí tuyển dụng {#toc-4-3-1}
     ??? book "Xem danh sách vị trí tuyển dụng"
         | Trường                          | Nội dung |
         | ------------------------------- | -------- |
@@ -347,7 +423,9 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Data Fields & Validation**    | - **Data Schema**: (Đang chờ thiết kế chi tiết Form Engine). |
         | **Luồng xử lý (Workflow)**      | - Đang chờ cập nhật chi tiết logic luồng thực thi theo Business Flow. |
         | **Pre-conditions (Điều kiện)**  | - Có Vị trí tuyển dụng được chọn sẵn trong Context. |
-        | **Post-conditions / Ngoại lệ**  | - Component render Fallback State nếu Data Template Null Hoặc Missing Configs. |n đang trống!* kèm với icon thùng rỗng.<br>- Nếu dữ liệu tại các cột đếm (Ứng viên, Chờ phỏng vấn, Đang đào tạo) bằng 0: hiển thị giá trị `0` thay vì để trống.<br>- Bảng dữ liệu chỉ chứa các vị trí mà Master đã phê duyệt quyền xem cho người phụ trách. |
+        | **Post-conditions / Ngoại lệ**  | - Component render Fallback State nếu Data Template Null hoặc Missing Configs. |
+---
+???+ info "4. Nhóm chức năng quản lý phỏng vấn (thêm tác động lên candidate và interviewer)"
     ### 4. Nhóm chức năng quản lý phỏng vấn (thêm tác động lên candidate và interviewer) {#toc-4-4}
     #### 4.1. Thiết lập tiêu chuẩn ứng viên {#toc-4-4-1}
     ??? book "Thiết lập tiêu chuẩn ứng viên"

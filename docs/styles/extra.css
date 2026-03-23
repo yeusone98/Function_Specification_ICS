@@ -1658,3 +1658,26 @@ body.md-has-mega-nav .md-search {
   transition: opacity 0.52s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.52s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.swimlane-chart-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.swimlane-chart-label .fi.fi-tr-flowchart {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+  -webkit-mask-image: url("/assets/images/icons/flowchart.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url("/assets/images/icons/flowchart.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}

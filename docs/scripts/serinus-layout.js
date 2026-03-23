@@ -704,7 +704,7 @@
     }
 
     function openLightbox(image) {
-      var source = image.currentSrc || image.getAttribute("src");
+      var source = image.currentSrc || image.src || image.getAttribute("src");
       if (!source) {
         return;
       }
