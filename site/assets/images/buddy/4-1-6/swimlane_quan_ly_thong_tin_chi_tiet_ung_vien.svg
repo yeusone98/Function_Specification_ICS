@@ -1,4 +1,4 @@
-<svg width="1600" height="1360" viewBox="0 0 1600 1360" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart quản lý thông tin chi tiết của ứng viên">
+<svg width="1800" height="1220" viewBox="0 0 1800 1220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart quản lý thông tin chi tiết của ứng viên">
   <defs>
     <style>
       .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
@@ -14,6 +14,7 @@
       }
       .lane-handler { fill: #378add; opacity: 0.06; }
       .lane-system { fill: #378add; opacity: 0.10; }
+      .lane-role { fill: #378add; opacity: 0.07; }
       .lane-result { fill: #6b7280; opacity: 0.08; }
       .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
       .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
@@ -79,106 +80,126 @@
     </marker>
   </defs>
 
-  <rect class="lane-handler" x="0" y="54" width="520" height="1306"/>
-  <rect class="lane-system" x="520" y="54" width="520" height="1306"/>
-  <rect class="lane-result" x="1040" y="54" width="560" height="1306"/>
+  <rect class="lane-handler" x="0" y="54" width="360" height="1166"/>
+  <rect class="lane-system" x="360" y="54" width="360" height="1166"/>
+  <rect class="lane-role" x="720" y="54" width="360" height="1166"/>
+  <rect class="lane-role" x="1080" y="54" width="360" height="1166"/>
+  <rect class="lane-result" x="1440" y="54" width="360" height="1166"/>
 
-  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1358.8"/>
-  <line class="divider" x1="520" y1="0" x2="520" y2="1360"/>
-  <line class="divider" x1="1040" y1="0" x2="1040" y2="1360"/>
+  <rect class="outer-border" x="0.6" y="0.6" width="1798.8" height="1218.8"/>
+  <line class="divider" x1="360" y1="0" x2="360" y2="1220"/>
+  <line class="divider" x1="720" y1="0" x2="720" y2="1220"/>
+  <line class="divider" x1="1080" y1="0" x2="1080" y2="1220"/>
+  <line class="divider" x1="1440" y1="0" x2="1440" y2="1220"/>
 
-  <rect class="lane-head" x="0" y="0" width="520" height="54"/>
-  <rect class="lane-head" x="520" y="0" width="520" height="54"/>
-  <rect class="lane-head" x="1040" y="0" width="560" height="54"/>
+  <rect class="lane-head" x="0" y="0" width="360" height="54"/>
+  <rect class="lane-head" x="360" y="0" width="360" height="54"/>
+  <rect class="lane-head" x="720" y="0" width="360" height="54"/>
+  <rect class="lane-head" x="1080" y="0" width="360" height="54"/>
+  <rect class="lane-head" x="1440" y="0" width="360" height="54"/>
 
-  <text class="lane-title" x="260" y="27">Người phụ trách</text>
-  <text class="lane-title" x="780" y="27">Hệ thống PLS Buddy+</text>
-  <text class="lane-title" x="1320" y="27">Màn hình / Kết quả</text>
+  <text class="lane-title" x="180" y="27">Người phụ trách</text>
+  <text class="lane-title" x="540" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="900" y="27">Trainer</text>
+  <text class="lane-title" x="1260" y="27">Interviewer</text>
+  <text class="lane-title" x="1620" y="27">Màn hình / Kết quả</text>
 
-  <ellipse class="start-end" cx="260" cy="108" rx="96" ry="28"/>
-  <text class="text-dark" x="260" y="113">Bắt đầu</text>
+  <ellipse class="start-end" cx="180" cy="100" rx="96" ry="28"/>
+  <text class="text-dark" x="180" y="105">Bắt đầu</text>
 
-  <rect class="task" x="120" y="168" width="280" height="62" rx="8"/>
-  <text class="text-light" x="260" y="194">
-    <tspan x="260" dy="0">Chọn một ứng viên</tspan>
-    <tspan x="260" dy="16">từ danh sách</tspan>
+  <rect class="task" x="30" y="160" width="300" height="64" rx="8"/>
+  <text class="text-light" x="180" y="190">
+    <tspan x="180" dy="0">Chọn một ứng viên</tspan>
+    <tspan x="180" dy="16">từ danh sách</tspan>
   </text>
 
-  <rect class="task" x="620" y="164" width="320" height="70" rx="8"/>
-  <text class="text-light" x="780" y="194">
-    <tspan x="780" dy="0">Mở màn hình Thông tin</tspan>
-    <tspan x="780" dy="16">và hiển thị sidebar submenu</tspan>
+  <rect class="task" x="390" y="160" width="300" height="74" rx="8"/>
+  <text class="text-light" x="540" y="190">
+    <tspan x="540" dy="0">Mở màn hình Thông tin</tspan>
+    <tspan x="540" dy="16">và tải các section hồ sơ</tspan>
   </text>
 
-  <rect class="result-ok" x="1070" y="136" width="500" height="146" rx="8"/>
-  <text class="text-light" x="1320" y="166">
-    <tspan x="1320" dy="0">Hiển thị toàn bộ hồ sơ ứng viên</tspan>
-    <tspan class="subtext" x="1320" dy="18">Email · Câu trả lời · Tổng quan · Gán người phụ trách</tspan>
-    <tspan class="subtext" x="1320" dy="16">Hình ảnh · File đính kèm và các section liên quan</tspan>
-    <tspan class="meta-text" x="1320" dy="18">Item không có dữ liệu hiển thị hint “Nhập thêm nội dung”</tspan>
+  <rect class="result-ok" x="1470" y="136" width="300" height="150" rx="8"/>
+  <text class="text-light" x="1620" y="166">
+    <tspan x="1620" dy="0">Hiển thị toàn bộ hồ sơ ứng viên</tspan>
+    <tspan class="subtext" x="1620" dy="18">Email · Câu trả lời · Tổng quan · File đính kèm</tspan>
+    <tspan class="meta-text" x="1620" dy="18">Item trống hiển thị hint “Nhập thêm nội dung”</tspan>
   </text>
 
-  <rect class="task" x="120" y="394" width="280" height="70" rx="8"/>
-  <text class="text-light" x="260" y="424">
-    <tspan x="260" dy="0">Xem nội dung hoặc</tspan>
-    <tspan x="260" dy="16">mở rộng từng item câu hỏi</tspan>
+  <rect class="task" x="30" y="360" width="300" height="74" rx="8"/>
+  <text class="text-light" x="180" y="390">
+    <tspan x="180" dy="0">Xem nội dung hoặc</tspan>
+    <tspan x="180" dy="16">mở rộng từng item câu hỏi</tspan>
   </text>
 
-  <polygon class="decision" points="780,412 884,486 780,560 676,486"/>
-  <text class="decision-text" x="780" y="482">
-    <tspan x="780" dy="0">Có chỉnh sửa</tspan>
-    <tspan x="780" dy="16">dữ liệu?</tspan>
+  <polygon class="decision" points="540,470 650,540 540,610 430,540"/>
+  <text class="decision-text" x="540" y="536">
+    <tspan x="540" dy="0">Có chỉnh sửa</tspan>
+    <tspan x="540" dy="16">dữ liệu?</tspan>
   </text>
 
-  <rect class="result-note" x="1110" y="444" width="420" height="92" rx="8"/>
-  <text class="text-light" x="1320" y="474">
-    <tspan x="1320" dy="0">Tiếp tục xem thông tin ứng viên</tspan>
-    <tspan class="subtext" x="1320" dy="18">Không phát sinh thao tác cập nhật dữ liệu</tspan>
+  <rect class="result-note" x="1470" y="494" width="300" height="92" rx="8"/>
+  <text class="text-light" x="1620" y="524">
+    <tspan x="1620" dy="0">Tiếp tục xem hồ sơ ứng viên</tspan>
+    <tspan class="subtext" x="1620" dy="18">Không phát sinh thao tác cập nhật dữ liệu</tspan>
   </text>
 
-  <polygon class="decision" points="780,652 884,726 780,800 676,726"/>
-  <text class="decision-text" x="780" y="722">
-    <tspan x="780" dy="0">Là phụ trách</tspan>
-    <tspan x="780" dy="16">chính?</tspan>
+  <polygon class="decision" points="540,700 650,770 540,840 430,770"/>
+  <text class="decision-text" x="540" y="766">
+    <tspan x="540" dy="0">Là phụ trách chính</tspan>
+    <tspan x="540" dy="16">khi sửa đánh giá?</tspan>
   </text>
 
-  <rect class="result-note" x="1110" y="684" width="420" height="92" rx="8"/>
-  <text class="text-light" x="1320" y="714">
-    <tspan x="1320" dy="0">Chỉ xem, không chỉnh sửa đánh giá</tspan>
-    <tspan class="subtext" x="1320" dy="18">Người phụ trách phụ không được ghi dữ liệu đánh giá</tspan>
+  <rect class="result-note" x="1470" y="724" width="300" height="92" rx="8"/>
+  <text class="text-light" x="1620" y="754">
+    <tspan x="1620" dy="0">Chỉ xem, không sửa mục Đánh giá</tspan>
+    <tspan class="subtext" x="1620" dy="18">Handler phụ không được ghi dữ liệu đánh giá</tspan>
   </text>
 
-  <rect class="task" x="620" y="926" width="320" height="70" rx="8"/>
-  <text class="text-light" x="780" y="956">
-    <tspan x="780" dy="0">Cập nhật dữ liệu và</tspan>
-    <tspan x="780" dy="16">đồng bộ sang các role liên quan</tspan>
+  <rect class="task" x="390" y="910" width="300" height="74" rx="8"/>
+  <text class="text-light" x="540" y="940">
+    <tspan x="540" dy="0">Lưu dữ liệu hợp lệ</tspan>
+    <tspan x="540" dy="16">vào hồ sơ ứng viên</tspan>
   </text>
 
-  <rect class="result-ok" x="1070" y="900" width="500" height="152" rx="8"/>
-  <text class="text-light" x="1320" y="930">
-    <tspan x="1320" dy="0">Cập nhật dữ liệu thành công!</tspan>
-    <tspan class="subtext" x="1320" dy="18">Hiển thị toast sau khi chỉnh sửa</tspan>
-    <tspan class="subtext" x="1320" dy="16">Dữ liệu đồng bộ cho Handler · Trainer · Interviewer</tspan>
-    <tspan class="meta-text" x="1320" dy="18">Single Source of Truth</tspan>
+  <rect class="task" x="750" y="910" width="300" height="74" rx="8"/>
+  <text class="text-light" x="900" y="940">
+    <tspan x="900" dy="0">Trainer nhận dữ liệu</tspan>
+    <tspan x="900" dy="16">hồ sơ đã đồng bộ</tspan>
   </text>
 
-  <ellipse class="start-end" cx="1320" cy="1116" rx="96" ry="28"/>
-  <text class="text-dark" x="1320" y="1121">Kết thúc</text>
+  <rect class="task" x="1110" y="910" width="300" height="74" rx="8"/>
+  <text class="text-light" x="1260" y="940">
+    <tspan x="1260" dy="0">Interviewer nhận dữ liệu</tspan>
+    <tspan x="1260" dy="16">hồ sơ đã đồng bộ</tspan>
+  </text>
 
-  <line class="line" x1="260" y1="136" x2="260" y2="168"/>
-  <line class="line" x1="400" y1="199" x2="620" y2="199"/>
-  <line class="line" x1="940" y1="199" x2="1070" y2="199"/>
-  <path class="line" d="M1070 230 H260 V394"/>
-  <line class="line" x1="400" y1="429" x2="676" y2="486"/>
-  <line class="line" x1="884" y1="486" x2="1110" y2="486"/>
-  <line class="line" x1="780" y1="560" x2="780" y2="652"/>
-  <line class="line" x1="884" y1="726" x2="1110" y2="726"/>
-  <line class="line" x1="780" y1="800" x2="780" y2="926"/>
-  <line class="line" x1="940" y1="961" x2="1070" y2="961"/>
-  <line class="line" x1="1320" y1="1052" x2="1320" y2="1088"/>
+  <rect class="result-ok" x="1470" y="890" width="300" height="154" rx="8"/>
+  <text class="text-light" x="1620" y="920">
+    <tspan x="1620" dy="0">Cập nhật dữ liệu thành công!</tspan>
+    <tspan class="subtext" x="1620" dy="18">Hiển thị toast sau khi chỉnh sửa</tspan>
+    <tspan class="meta-text" x="1620" dy="18">Single Source of Truth cho Handler · Trainer · Interviewer</tspan>
+  </text>
 
-  <text class="line-label" x="948" y="472">Không</text>
-  <text class="line-label" x="796" y="596">Có</text>
-  <text class="line-label" x="948" y="712">Không</text>
-  <text class="line-label" x="796" y="832">Có</text>
+  <ellipse class="start-end" cx="1620" cy="1130" rx="96" ry="28"/>
+  <text class="text-dark" x="1620" y="1135">Kết thúc</text>
+
+  <line class="line" x1="180" y1="128" x2="180" y2="160"/>
+  <line class="line" x1="330" y1="192" x2="390" y2="192"/>
+  <line class="line" x1="690" y1="197" x2="1470" y2="197"/>
+  <path class="line" d="M540 234 V316 H180 V360"/>
+  <path class="line" d="M330 397 H540 V470"/>
+  <line class="line" x1="650" y1="540" x2="1470" y2="540"/>
+  <line class="line" x1="540" y1="610" x2="540" y2="700"/>
+  <line class="line" x1="650" y1="770" x2="1470" y2="770"/>
+  <line class="line" x1="540" y1="840" x2="540" y2="910"/>
+  <line class="line" x1="690" y1="947" x2="750" y2="947"/>
+  <line class="line" x1="1050" y1="947" x2="1110" y2="947"/>
+  <line class="line" x1="1410" y1="947" x2="1470" y2="947"/>
+  <line class="line" x1="1620" y1="1044" x2="1620" y2="1102"/>
+
+  <text class="line-label" x="708" y="526">Không</text>
+  <text class="line-label" x="556" y="648">Có</text>
+  <text class="line-label" x="708" y="756">Không</text>
+  <text class="line-label" x="556" y="878">Có</text>
 </svg>

@@ -1,0 +1,230 @@
+<svg width="1600" height="1480" viewBox="0 0 1600 1480" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart quản lý ghi chú về ứng viên dành cho người phụ trách">
+  <defs>
+    <style>
+      .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
+      .divider { stroke: #b5d4f4; stroke-width: 1; }
+      .lane-head { fill: #185fa5; }
+      .lane-title {
+        fill: #e8f2fb;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .lane-handler { fill: #378add; opacity: 0.06; }
+      .lane-system { fill: #378add; opacity: 0.10; }
+      .lane-result { fill: #6b7280; opacity: 0.08; }
+      .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
+      .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
+      .result-note { fill: #5f6f82; stroke: #405062; stroke-width: 1; }
+      .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .decision { fill: #ef9f27; stroke: #854f0b; stroke-width: 1; }
+      .text-light {
+        fill: #eef6ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .text-dark {
+        fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #4e2c04;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .subtext {
+        fill: #d8eeff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .meta-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrow);
+      }
+      .line-label {
+        fill: #61b3ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: rgba(10, 18, 34, 0.92);
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#378add" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="lane-handler" x="0" y="54" width="520" height="1426"/>
+  <rect class="lane-system" x="520" y="54" width="520" height="1426"/>
+  <rect class="lane-result" x="1040" y="54" width="560" height="1426"/>
+
+  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1478.8"/>
+  <line class="divider" x1="520" y1="0" x2="520" y2="1480"/>
+  <line class="divider" x1="1040" y1="0" x2="1040" y2="1480"/>
+
+  <rect class="lane-head" x="0" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="520" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="1040" y="0" width="560" height="54"/>
+
+  <text class="lane-title" x="260" y="27">Người phụ trách</text>
+  <text class="lane-title" x="780" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="1320" y="27">Tab Ghi chú / Popup / Kết quả</text>
+
+  <ellipse class="start-end" cx="260" cy="108" rx="96" ry="28"/>
+  <text class="text-dark" x="260" y="113">Bắt đầu</text>
+
+  <rect class="task" x="120" y="168" width="280" height="78" rx="8"/>
+  <text class="text-light" x="260" y="198">
+    <tspan x="260" dy="0">Chọn ứng viên và mở</tspan>
+    <tspan x="260" dy="16">tab Ghi chú</tspan>
+  </text>
+
+  <rect class="task" x="620" y="168" width="320" height="78" rx="8"/>
+  <text class="text-light" x="780" y="198">
+    <tspan x="780" dy="0">Tải danh sách ghi chú</tspan>
+    <tspan x="780" dy="16">theo thứ tự thời gian</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="146" width="500" height="132" rx="8"/>
+  <text class="text-light" x="1320" y="176">
+    <tspan x="1320" dy="0">Hiển thị danh sách ghi chú hiện có</tspan>
+    <tspan class="subtext" x="1320" dy="18">Kèm tiêu đề, nội dung, thời gian tạo và avatar người tạo</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Nếu chưa có ghi chú: hiển thị “Không có dữ liệu!”</tspan>
+  </text>
+
+  <rect class="task" x="120" y="352" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="378">
+    <tspan x="260" dy="0">Nhấn nút</tspan>
+    <tspan x="260" dy="16">+ Thêm ghi chú</tspan>
+  </text>
+
+  <rect class="task" x="620" y="348" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="378">
+    <tspan x="780" dy="0">Hiển thị popup</tspan>
+    <tspan x="780" dy="16">Thêm ghi chú</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="330" width="500" height="110" rx="8"/>
+  <text class="text-light" x="1320" y="360">
+    <tspan x="1320" dy="0">Popup gồm trường Tiêu đề và Ghi chú</tspan>
+    <tspan class="subtext" x="1320" dy="18">Sẵn sàng nhập nội dung ghi chú mới</tspan>
+  </text>
+
+  <rect class="task" x="120" y="506" width="280" height="86" rx="8"/>
+  <text class="text-light" x="260" y="536">
+    <tspan x="260" dy="0">Nhập nội dung và bôi đen</tspan>
+    <tspan x="260" dy="16">đoạn văn bản cần định dạng</tspan>
+  </text>
+
+  <rect class="task" x="620" y="510" width="320" height="78" rx="8"/>
+  <text class="text-light" x="780" y="540">
+    <tspan x="780" dy="0">Hiển thị floating toolbar</tspan>
+    <tspan x="780" dy="16">B, I, U, S, màu chữ, chèn link</tspan>
+  </text>
+
+  <rect class="task" x="120" y="672" width="280" height="78" rx="8"/>
+  <text class="text-light" x="260" y="702">
+    <tspan x="260" dy="0">Áp dụng định dạng và nhấn</tspan>
+    <tspan x="260" dy="16">Thêm ghi chú</tspan>
+  </text>
+
+  <rect class="task" x="620" y="668" width="320" height="78" rx="8"/>
+  <text class="text-light" x="780" y="698">
+    <tspan x="780" dy="0">Lưu ghi chú mới, log người tạo</tspan>
+    <tspan x="780" dy="16">và thời gian tạo</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="648" width="500" height="132" rx="8"/>
+  <text class="text-light" x="1320" y="678">
+    <tspan x="1320" dy="0">Ghi chú mới hiển thị ngay trong danh sách</tspan>
+    <tspan class="subtext" x="1320" dy="18">Hiển thị đúng HH:MM, DD/MM/YYYY và avatar người tạo</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Hover avatar hiển thị đúng họ tên đầy đủ</tspan>
+  </text>
+
+  <rect class="task" x="120" y="860" width="280" height="78" rx="8"/>
+  <text class="text-light" x="260" y="890">
+    <tspan x="260" dy="0">Nhấn icon ba chấm</tspan>
+    <tspan x="260" dy="16">tại ghi chú muốn thao tác</tspan>
+  </text>
+
+  <polygon class="decision" points="780,864 884,938 780,1012 676,938"/>
+  <text class="decision-text" x="780" y="934">
+    <tspan x="780" dy="0">Ghi chú do chính mình</tspan>
+    <tspan x="780" dy="16">tạo ra?</tspan>
+  </text>
+
+  <rect class="result-note" x="1110" y="892" width="420" height="92" rx="8"/>
+  <text class="text-light" x="1320" y="922">
+    <tspan x="1320" dy="0">Chỉ xem ghi chú của người khác</tspan>
+    <tspan class="subtext" x="1320" dy="18">Không được sửa hoặc xóa</tspan>
+  </text>
+
+  <rect class="task" x="120" y="1074" width="280" height="78" rx="8"/>
+  <text class="text-light" x="260" y="1104">
+    <tspan x="260" dy="0">Chọn Chỉnh sửa</tspan>
+    <tspan x="260" dy="16">hoặc Xóa ghi chú</tspan>
+  </text>
+
+  <rect class="task" x="620" y="1070" width="320" height="78" rx="8"/>
+  <text class="text-light" x="780" y="1100">
+    <tspan x="780" dy="0">Cập nhật hoặc gỡ bỏ</tspan>
+    <tspan x="780" dy="16">ghi chú trong danh sách</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="1050" width="500" height="118" rx="8"/>
+  <text class="text-light" x="1320" y="1080">
+    <tspan x="1320" dy="0">Danh sách ghi chú được làm mới theo thao tác</tspan>
+    <tspan class="subtext" x="1320" dy="18">Chỉ các ghi chú của chính mình mới được sửa hoặc xóa</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Giữ nguyên các ghi chú do người khác tạo</tspan>
+  </text>
+
+  <ellipse class="start-end" cx="1320" cy="1386" rx="96" ry="28"/>
+  <text class="text-dark" x="1320" y="1391">Kết thúc</text>
+
+  <line class="line" x1="260" y1="136" x2="260" y2="168"/>
+  <line class="line" x1="400" y1="207" x2="620" y2="207"/>
+  <line class="line" x1="940" y1="207" x2="1070" y2="207"/>
+  <path class="line" d="M780 246 V322 H260 V352"/>
+  <line class="line" x1="400" y1="383" x2="620" y2="383"/>
+  <line class="line" x1="940" y1="383" x2="1070" y2="383"/>
+  <path class="line" d="M780 418 V468 H260 V506"/>
+  <line class="line" x1="400" y1="549" x2="620" y2="549"/>
+  <path class="line" d="M780 588 V634 H260 V672"/>
+  <line class="line" x1="400" y1="711" x2="620" y2="711"/>
+  <line class="line" x1="940" y1="711" x2="1070" y2="711"/>
+  <path class="line" d="M780 746 V822 H260 V860"/>
+  <line class="line" x1="400" y1="899" x2="676" y2="938"/>
+  <line class="line" x1="884" y1="938" x2="1110" y2="938"/>
+  <path class="line" d="M780 1012 V1036 H260 V1074"/>
+  <line class="line" x1="400" y1="1113" x2="620" y2="1113"/>
+  <line class="line" x1="940" y1="1113" x2="1070" y2="1113"/>
+  <line class="line" x1="1320" y1="1168" x2="1320" y2="1358"/>
+
+  <text class="line-label" x="948" y="924">Không</text>
+  <text class="line-label" x="796" y="1028">Có</text>
+</svg>

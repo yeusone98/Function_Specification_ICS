@@ -172,7 +172,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         <img src="/assets/images/buddy/4-1-2/swimlane_1_2_hien_thi_filter.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
 
         <span style="display:block;text-align:center;font-weight:600;">Tùy chọn hiển thị filter trong bảng danh sách ứng viên</span>
-    #### 1.3 Tùy chọn hiển thị cột trong bảng danh sách ứng viên {#toc-4-1-3}
+    #### 1.3. Tùy chọn hiển thị cột trong bảng danh sách ứng viên {#toc-4-1-3}
     ??? book "Tùy chọn hiển thị cột trong bảng danh sách ứng viên"
         | Trường | Nội dung |
         | ------ | -------- |
@@ -400,6 +400,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Tài khoản đang đăng nhập có phân quyền Người phụ trách.<br>- Đã chọn một ứng viên cụ thể để xem chi tiết. |
         | **Kết quả hiển thị** | - Ghi chú mới hiển thị ngay lập tức trong danh sách.<br>- Hiển thị đúng: Tiêu đề, nội dung đã định dạng, thời gian tạo (HH:MM, DD/MM/YYYY) và avatar người tạo.<br>- Thông tin người tạo hiển thị chính xác khi hover vào avatar. |
         | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa có ghi chú nào:** Hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-3/swimlane_quan_ly_ghi_chu_ve_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý ghi chú về ứng viên dành cho Người phụ trách</span>
     #### 2.4. Đánh giá ứng viên {#toc-4-2-4}
     ??? book "Đánh giá ứng viên"
         | Trường | Nội dung |
