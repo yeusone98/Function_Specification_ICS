@@ -1,4 +1,4 @@
-<svg width="1600" height="1240" viewBox="0 0 1600 1240" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart hiển thị bảng danh sách ứng viên">
+<svg width="1600" height="1120" viewBox="0 0 1600 1120" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart tìm kiếm ứng viên theo ký tự">
   <defs>
     <style>
       .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
@@ -79,13 +79,13 @@
     </marker>
   </defs>
 
-  <rect class="lane-handler" x="0" y="54" width="520" height="1186"/>
-  <rect class="lane-system" x="520" y="54" width="520" height="1186"/>
-  <rect class="lane-result" x="1040" y="54" width="560" height="1186"/>
+  <rect class="lane-handler" x="0" y="54" width="520" height="1066"/>
+  <rect class="lane-system" x="520" y="54" width="520" height="1066"/>
+  <rect class="lane-result" x="1040" y="54" width="560" height="1066"/>
 
-  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1238.8"/>
-  <line class="divider" x1="520" y1="0" x2="520" y2="1240"/>
-  <line class="divider" x1="1040" y1="0" x2="1040" y2="1240"/>
+  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1118.8"/>
+  <line class="divider" x1="520" y1="0" x2="520" y2="1120"/>
+  <line class="divider" x1="1040" y1="0" x2="1040" y2="1120"/>
 
   <rect class="lane-head" x="0" y="0" width="520" height="54"/>
   <rect class="lane-head" x="520" y="0" width="520" height="54"/>
@@ -100,71 +100,67 @@
 
   <rect class="task" x="120" y="168" width="280" height="62" rx="8"/>
   <text class="text-light" x="260" y="194">
-    <tspan x="260" dy="0">Mở menu</tspan>
-    <tspan x="260" dy="16">Ứng Viên</tspan>
+    <tspan x="260" dy="0">Nhập ký tự vào</tspan>
+    <tspan x="260" dy="16">ô tìm kiếm</tspan>
   </text>
 
   <rect class="task" x="620" y="164" width="320" height="70" rx="8"/>
   <text class="text-light" x="780" y="194">
-    <tspan x="780" dy="0">Kiểm tra vị trí được</tspan>
-    <tspan x="780" dy="16">Master gán cho Handler</tspan>
+    <tspan x="780" dy="0">Bắt thay đổi keyword</tspan>
+    <tspan x="780" dy="16">và chuẩn bị filter theo Họ và Tên</tspan>
   </text>
 
-  <polygon class="decision" points="780,286 884,360 780,434 676,360"/>
-  <text class="decision-text" x="780" y="356">
-    <tspan x="780" dy="0">Có vị trí</tspan>
-    <tspan x="780" dy="16">được gán?</tspan>
+  <polygon class="decision" points="780,308 884,382 780,456 676,382"/>
+  <text class="decision-text" x="780" y="378">
+    <tspan x="780" dy="0">Keyword</tspan>
+    <tspan x="780" dy="16">trống?</tspan>
   </text>
 
-  <rect class="result-empty" x="1110" y="314" width="420" height="92" rx="8"/>
-  <text class="text-light" x="1320" y="344">
+  <rect class="result-ok" x="1070" y="324" width="500" height="108" rx="8"/>
+  <text class="text-light" x="1320" y="354">
+    <tspan x="1320" dy="0">Hiển thị lại toàn bộ dữ liệu ban đầu</tspan>
+    <tspan class="subtext" x="1320" dy="18">Không còn áp dụng điều kiện tìm kiếm</tspan>
+  </text>
+
+  <rect class="task" x="620" y="534" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="564">
+    <tspan x="780" dy="0">Lọc danh sách theo</tspan>
+    <tspan x="780" dy="16">Họ và Tên chứa keyword</tspan>
+  </text>
+
+  <polygon class="decision" points="780,688 884,762 780,836 676,762"/>
+  <text class="decision-text" x="780" y="758">
+    <tspan x="780" dy="0">Có kết quả</tspan>
+    <tspan x="780" dy="16">khớp?</tspan>
+  </text>
+
+  <rect class="result-empty" x="1110" y="716" width="420" height="92" rx="8"/>
+  <text class="text-light" x="1320" y="746">
     <tspan x="1320" dy="0">Bảng dữ liệu trống!</tspan>
-    <tspan class="subtext" x="1320" dy="18">Chưa được Master gán vị trí tuyển dụng</tspan>
+    <tspan class="subtext" x="1320" dy="18">Không có ứng viên khớp chuỗi ký tự đã nhập</tspan>
   </text>
 
-  <rect class="task" x="620" y="520" width="320" height="70" rx="8"/>
-  <text class="text-light" x="780" y="550">
-    <tspan x="780" dy="0">Query danh sách ứng viên</tspan>
-    <tspan x="780" dy="16">theo vị trí được phân quyền</tspan>
+  <rect class="result-ok" x="1070" y="918" width="500" height="108" rx="8"/>
+  <text class="text-light" x="1320" y="948">
+    <tspan x="1320" dy="0">Hiển thị danh sách ứng viên đã lọc</tspan>
+    <tspan class="subtext" x="1320" dy="18">Chỉ giữ các record có Họ và Tên khớp keyword</tspan>
   </text>
 
-  <polygon class="decision" points="780,644 884,718 780,792 676,718"/>
-  <text class="decision-text" x="780" y="714">
-    <tspan x="780" dy="0">Có dữ liệu</tspan>
-    <tspan x="780" dy="16">ứng viên?</tspan>
-  </text>
-
-  <rect class="result-empty" x="1110" y="672" width="420" height="92" rx="8"/>
-  <text class="text-light" x="1320" y="702">
-    <tspan x="1320" dy="0">Bảng dữ liệu trống!</tspan>
-    <tspan class="subtext" x="1320" dy="18">Không có ứng viên hoặc search / filter không khớp</tspan>
-  </text>
-
-  <rect class="result-ok" x="1070" y="880" width="500" height="152" rx="8"/>
-  <text class="text-light" x="1320" y="910">
-    <tspan x="1320" dy="0">Hiển thị bảng Danh sách ứng viên</tspan>
-    <tspan class="subtext" x="1320" dy="18">Họ tên · Vị trí PV · Loại HĐ · Người phụ trách</tspan>
-    <tspan class="subtext" x="1320" dy="16">Ngày PV · Giờ PV · Trạng thái · Đánh giá</tspan>
-    <tspan class="subtext" x="1320" dy="16">Ngày gửi CV</tspan>
-    <tspan class="meta-text" x="1320" dy="18">Phân trang khả dụng · Chỉ xem, không chỉnh sửa</tspan>
-    <tspan class="meta-text" x="1320" dy="14">Nếu không lọc và ô tìm kiếm trống: hiện lại dữ liệu ban đầu</tspan>
-  </text>
-
-  <ellipse class="start-end" cx="1320" cy="1148" rx="96" ry="28"/>
-  <text class="text-dark" x="1320" y="1153">Kết thúc</text>
+  <ellipse class="start-end" cx="1320" cy="1082" rx="96" ry="28"/>
+  <text class="text-dark" x="1320" y="1087">Kết thúc</text>
 
   <line class="line" x1="260" y1="136" x2="260" y2="168"/>
   <line class="line" x1="400" y1="199" x2="620" y2="199"/>
-  <line class="line" x1="780" y1="234" x2="780" y2="286"/>
-  <line class="line" x1="884" y1="360" x2="1110" y2="360"/>
-  <line class="line" x1="780" y1="434" x2="780" y2="520"/>
-  <line class="line" x1="780" y1="590" x2="780" y2="644"/>
-  <line class="line" x1="884" y1="718" x2="1110" y2="718"/>
-  <path class="line" d="M780 792 V956 H1070"/>
-  <line class="line" x1="1320" y1="1032" x2="1320" y2="1120"/>
+  <line class="line" x1="780" y1="234" x2="780" y2="308"/>
+  <line class="line" x1="884" y1="382" x2="1070" y2="382"/>
+  <line class="line" x1="780" y1="456" x2="780" y2="534"/>
+  <line class="line" x1="780" y1="604" x2="780" y2="688"/>
+  <line class="line" x1="884" y1="762" x2="1110" y2="762"/>
+  <path class="line" d="M780 836 V972 H1070"/>
+  <line class="line" x1="1320" y1="1026" x2="1320" y2="1054"/>
 
-  <text class="line-label" x="950" y="346">Không</text>
-  <text class="line-label" x="796" y="470">Có</text>
-  <text class="line-label" x="950" y="704">Không</text>
-  <text class="line-label" x="796" y="826">Có</text>
+  <text class="line-label" x="948" y="368">Có</text>
+  <text class="line-label" x="796" y="490">Không</text>
+  <text class="line-label" x="950" y="748">Không</text>
+  <text class="line-label" x="796" y="868">Có</text>
 </svg>

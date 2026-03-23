@@ -226,6 +226,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Người phụ trách đã đăng nhập với quyền hợp lệ.<br>2. Trang **Danh sách ứng viên** đã tải dữ liệu thành công. |
         | **Kết quả hiển thị** | - Bảng **Danh sách ứng viên** chỉ hiển thị những ứng viên có **Họ và Tên** chứa chuỗi ký tự đã nhập.<br>- Kết quả cập nhật tức thời khi thay đổi ký tự.<br>- Khi ô tìm kiếm trống, hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
         | **Trường hợp không có dữ liệu** | - Nếu không có kết quả phù hợp với chuỗi ký tự nhập: Bảng hiển thị thông báo *“Bảng dữ liệu trống!”* kèm icon thùng rỗng.<br>- Nếu ô tìm kiếm trống: Hiển thị lại toàn bộ danh sách ứng viên ban đầu (nếu có). |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-5/swimlane_tim_kiem_ung_vien_theo_ky_tu.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Tìm kiếm ứng viên theo ký tự</span>
     #### 1.6. Quản lý thông tin chi tiết của ứng viên (Cần sửa thêm tác động đến flow các role khác ntn) {#toc-4-1-6}
     ??? book "Quản lý thông tin chi tiết của ứng viên"
         | Trường | Nội dung |
@@ -239,6 +248,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý ứng viên.<br>- Ứng viên tồn tại trong hệ thống và được nhìn thấy trên bảng danh sách ứng viên.<br>**Trường hợp muốn thêm đánh giá ứng viên**: người phụ trách phải là phụ trách chính mới được chỉnh sửa đánh giá về ứng viên. |
         | **Kết quả hiển thị** | - Hiển thị toàn bộ thông tin về ứng viên mà hệ thống ghi nhận được.<br>- Sau khi chỉnh sửa, thông tin được cập nhật và hiển thị thông báo dạng toast với nội dung *"Cập nhật dữ liệu thành công!"*. |
         | **Trường hợp không có dữ liệu** | Item không có thông tin bên trong sẽ hiển thị hint *`Nhập thêm nội dung`*.  |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-6/swimlane_quan_ly_thong_tin_chi_tiet_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý thông tin chi tiết của ứng viên</span>
     #### 1.7. Thêm ứng viên mới (Cần sửa thêm tác động đến các role khác) {#toc-4-1-7}
     ??? book "Thêm ứng viên mới"
         | Trường | Nội dung |
@@ -251,6 +269,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên không tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**. |
         | **Kết quả hiển thị** | Ứng viên mới xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.  |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-7/swimlane_them_ung_vien_moi.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Thêm ứng viên mới</span>
     #### 1.8. Tạo đơn ứng tuyển cho ứng viên đã từng apply {#toc-4-1-8}
     ??? book "Tạo đơn ứng tuyển cho ứng viên đã từng apply"
         | Trường | Nội dung |
@@ -263,6 +290,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Email của ứng viên đã tồn tại trên hệ thống.<br>- Dữ liệu nhập hợp lệ.<br>- Người phụ trách nhấn nút **“Thêm ứng viên”**.<br>- Người phụ trách nhấn nút **"Xác nhận"**. |
         | **Kết quả hiển thị** | Ứng viên xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên`. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.<br><br>**Trường hợp ứng viên có đơn ứng tuyển chưa được hoàn thành**: hệ thống sẽ hiển thị popup thông báo cho người dùng rằng ứng viên này đang có đơn ứng tuyển chưa hoàn thành và cung cấp đường dẫn đến đơn ứng tuyển đó, người phụ trách cần thực hiện đánh giá đơn ứng tuyển đó hoặc xóa đơn ứng tuyển để hệ thống có thể tiếp nhận đơn ứng tuyển mới của ứng viên. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-8/swimlane_tao_don_ung_tuyen_cho_ung_vien_da_tung_apply.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Tạo đơn ứng tuyển cho ứng viên đã từng apply</span>
     #### 1.9. Truy vấn và kế thừa dữ liệu ứng viên cũ {#toc-4-1-9}
     ??? book "Truy vấn và kế thừa dữ liệu ứng viên cũ"
         | Trường | Nội dung |
@@ -275,6 +311,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập với quyền phù hợp.<br>- Người phụ trách tick vào tickbox *Chọn ứng viên có sẵn*.<br>- Email của ứng viên đã tồn tại trên hệ thống. |
         | **Kết quả hiển thị** | - Nội dung popup thay đổi về mặt giao diện.<br>- Ứng viên xuất hiện trong bảng dữ liệu tại màn hình `Danh sách ứng viên` sau khi xác nhận thêm. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có dữ liệu về các vị trí ứng tuyển đang mở**: Khi mở dropdown-list để chọn vị trí ứng tuyển trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có vị trí khả dụng!"**.<br><br>**Trường hợp không có ứng viên nào trong CSDL**: Khi mở dropdown-list để chọn ứng viên trên popup **Thêm ứng viên mới**, hệ thống sẽ hiển thị icon thùng rỗng và dòng mô tả **"Không có ứng viên nào!"** |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-9/swimlane_truy_van_ke_thua_du_lieu_ung_vien_cu.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Truy vấn và kế thừa dữ liệu ứng viên cũ</span>
     #### 1.10. Tự động gán người phụ trách ứng viên (Cần sửa flow người phụ trách chính (có thể thay đổi được) --> thêm được người phụ trách phụ) {#toc-4-1-10}
     ??? book "Tự động gán người phụ trách ứng viên"
         | Trường | Nội dung |
@@ -288,6 +333,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | 1. Tài khoản đang đăng nhập đã được gán phân quyền người phụ trách.<br>2. Tài khoản thực hiện thao tác đã đăng nhập và thuộc vị trí tuyển dụng được Master gán quyền quản lý. |
         | **Kết quả hiển thị** | - Hồ sơ ứng viên được tạo thành công kèm theo định danh Handler chính.<br>- Sau khi thay đổi, hệ thống hiển thị thông báo toast: "Cập nhật Người phụ trách chính thành công!".<br>- Filter Người phụ trách trên danh sách ứng viên truy vấn đúng các profile theo vai trò mới.|
         | **Trường hợp không có dữ liệu** | **Trường hợp người phụ trách được chọn chưa tạo bất kỳ profile ứng viên nào :**<br>&emsp;- Hệ thống hiển thị mô tả *“Bảng dữ liệu trống!”* kèm icon thùng rỗng. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-1-10/swimlane_tu_dong_gan_nguoi_phu_trach_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Tự động gán người phụ trách ứng viên</span>
 ---
 ???+ info "2. Nhóm chức năng quản lý tuyển dụng ứng viên Cần sửa add full workflow impact cho tất cả các chức năng"
     ### 2. Nhóm chức năng quản lý tuyển dụng ứng viên (Cần sửa add full workflow impact cho tất cả các chức năng) {#toc-4-2}
