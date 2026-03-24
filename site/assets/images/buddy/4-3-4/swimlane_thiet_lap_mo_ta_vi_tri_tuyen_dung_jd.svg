@@ -1,0 +1,229 @@
+<svg width="1800" height="1260" viewBox="0 0 1800 1260" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart thiết lập mô tả vị trí tuyển dụng JD">
+  <defs>
+    <style>
+      .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
+      .divider { stroke: #b5d4f4; stroke-width: 1; }
+      .lane-head { fill: #185fa5; }
+      .lane-title {
+        fill: #e8f2fb;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .lane-master { fill: #378add; opacity: 0.06; }
+      .lane-handler { fill: #378add; opacity: 0.08; }
+      .lane-system { fill: #378add; opacity: 0.11; }
+      .lane-result { fill: #6b7280; opacity: 0.08; }
+      .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
+      .decision { fill: #f5a623; stroke: #d97706; stroke-width: 1; }
+      .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
+      .result-error { fill: #e54848; stroke: #b52f2f; stroke-width: 1; }
+      .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .text-light {
+        fill: #eef6ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .text-dark {
+        fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #3b2400;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .subtext {
+        fill: #d8eeff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .meta-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrow);
+      }
+      .line-label {
+        fill: #61b3ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: rgba(10, 18, 34, 0.92);
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#378add" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="lane-master" x="0" y="54" width="450" height="1206"/>
+  <rect class="lane-handler" x="450" y="54" width="450" height="1206"/>
+  <rect class="lane-system" x="900" y="54" width="450" height="1206"/>
+  <rect class="lane-result" x="1350" y="54" width="450" height="1206"/>
+
+  <rect class="outer-border" x="0.6" y="0.6" width="1798.8" height="1258.8"/>
+  <line class="divider" x1="450" y1="0" x2="450" y2="1260"/>
+  <line class="divider" x1="900" y1="0" x2="900" y2="1260"/>
+  <line class="divider" x1="1350" y1="0" x2="1350" y2="1260"/>
+
+  <rect class="lane-head" x="0" y="0" width="450" height="54"/>
+  <rect class="lane-head" x="450" y="0" width="450" height="54"/>
+  <rect class="lane-head" x="900" y="0" width="450" height="54"/>
+  <rect class="lane-head" x="1350" y="0" width="450" height="54"/>
+
+  <text class="lane-title" x="225" y="27">Master</text>
+  <text class="lane-title" x="675" y="27">Người phụ trách</text>
+  <text class="lane-title" x="1125" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="1575" y="27">JD / Kết quả</text>
+
+  <ellipse class="start-end" cx="225" cy="102" rx="96" ry="28"/>
+  <text class="text-dark" x="225" y="107">Bắt đầu</text>
+
+  <rect class="task" x="65" y="160" width="320" height="72" rx="8"/>
+  <text class="text-light" x="225" y="190">
+    <tspan x="225" dy="0">Gán quyền quản lý</tspan>
+    <tspan x="225" dy="16">vị trí cho Handler</tspan>
+  </text>
+
+  <rect class="task" x="515" y="160" width="320" height="82" rx="8"/>
+  <text class="text-light" x="675" y="192">
+    <tspan x="675" dy="0">Chọn một vị trí trong</tspan>
+    <tspan x="675" dy="16">Danh sách vị trí ứng tuyển</tspan>
+  </text>
+
+  <rect class="task" x="965" y="160" width="320" height="82" rx="8"/>
+  <text class="text-light" x="1125" y="192">
+    <tspan x="1125" dy="0">Hiển thị sidebar mới</tspan>
+    <tspan x="1125" dy="16">mặc định trỏ Tổng quan</tspan>
+  </text>
+
+  <rect class="task" x="515" y="332" width="320" height="82" rx="8"/>
+  <text class="text-light" x="675" y="364">
+    <tspan x="675" dy="0">Chuyển sang submenu</tspan>
+    <tspan x="675" dy="16">Mô Tả (JD)</tspan>
+  </text>
+
+  <rect class="task" x="965" y="324" width="320" height="82" rx="8"/>
+  <text class="text-light" x="1125" y="356">
+    <tspan x="1125" dy="0">Tải Danh sách mô tả</tspan>
+    <tspan x="1125" dy="16">và profile JD của vị trí</tspan>
+  </text>
+
+  <polygon class="decision" points="1125,466 1235,536 1125,606 1015,536"/>
+  <text class="decision-text" x="1125" y="532">
+    <tspan x="1125" dy="0">Tải JD</tspan>
+    <tspan x="1125" dy="16">thành công?</tspan>
+  </text>
+
+  <rect class="result-error" x="1385" y="470" width="380" height="126" rx="8"/>
+  <text class="text-light" x="1575" y="510">
+    <tspan x="1575" dy="0">Thông báo lỗi tải dữ liệu JD</tspan>
+    <tspan class="subtext" x="1575" dy="18">Người dùng cần report đến IT</tspan>
+    <tspan class="meta-text" x="1575" dy="18">Áp dụng khi đã có JD</tspan>
+    <tspan class="meta-text" x="1575" dy="14">nhưng không xem được</tspan>
+  </text>
+
+  <rect class="result-error" x="1385" y="634" width="380" height="112" rx="8"/>
+  <text class="text-light" x="1575" y="668">
+    <tspan x="1575" dy="0">Màn hình trống / Không có dữ liệu!</tspan>
+    <tspan class="subtext" x="1575" dy="18">Vị trí tuyển dụng chưa có profile JD nào</tspan>
+  </text>
+
+  <rect class="task" x="515" y="650" width="320" height="82" rx="8"/>
+  <text class="text-light" x="675" y="682">
+    <tspan x="675" dy="0">Nhập tên profile JD mới</tspan>
+    <tspan x="675" dy="16">và nhấn [ENTER]</tspan>
+  </text>
+
+  <rect class="task" x="965" y="650" width="320" height="82" rx="8"/>
+  <text class="text-light" x="1125" y="682">
+    <tspan x="1125" dy="0">Lưu profile JD mới</tspan>
+    <tspan x="1125" dy="16">và focus profile vừa tạo</tspan>
+  </text>
+
+  <rect class="task" x="515" y="822" width="320" height="118" rx="8"/>
+  <text class="text-light" x="675" y="856">
+    <tspan x="675" dy="0">Nhập mô tả profile</tspan>
+    <tspan x="675" dy="16">Nhập danh mục mới</tspan>
+    <tspan x="675" dy="16">Nhấn [ENTER] để lưu</tspan>
+  </text>
+
+  <rect class="task" x="965" y="812" width="320" height="138" rx="8"/>
+  <text class="text-light" x="1125" y="844">
+    <tspan x="1125" dy="0">Lưu mô tả và danh mục</tspan>
+    <tspan class="subtext" x="1125" dy="18">Hiển thị toast: Đã lưu thay đổi...</tspan>
+    <tspan class="subtext" x="1125" dy="16">Cập nhật danh mục ngay, không reload</tspan>
+  </text>
+
+  <rect class="task" x="515" y="1012" width="320" height="98" rx="8"/>
+  <text class="text-light" x="675" y="1044">
+    <tspan x="675" dy="0">Thêm, xóa, sắp xếp</tspan>
+    <tspan x="675" dy="16">danh mục và nội dung JD</tspan>
+  </text>
+
+  <rect class="task" x="965" y="1002" width="320" height="118" rx="8"/>
+  <text class="text-light" x="1125" y="1034">
+    <tspan x="1125" dy="0">Lưu thay đổi cấu trúc JD</tspan>
+    <tspan class="subtext" x="1125" dy="18">Xóa danh mục / nội dung cần popup xác nhận</tspan>
+    <tspan class="subtext" x="1125" dy="16">Đồng bộ thứ tự mới của danh mục và nội dung</tspan>
+  </text>
+
+  <rect class="result-ok" x="1385" y="918" width="380" height="212" rx="8"/>
+  <text class="text-light" x="1575" y="950">
+    <tspan x="1575" dy="0">Hiển thị profile JD đã thiết lập</tspan>
+    <tspan class="subtext" x="1575" dy="20">Tên profile · mô tả · danh mục · nội dung</tspan>
+    <tspan class="subtext" x="1575" dy="18">Chọn profile nào thì xem nội dung tương ứng</tspan>
+    <tspan class="meta-text" x="1575" dy="20">Có thể bật nhiều mô tả công việc cùng lúc</tspan>
+    <tspan class="meta-text" x="1575" dy="16">Phù hợp cho nhiều biến thể JD theo từng trung tâm</tspan>
+  </text>
+
+  <ellipse class="start-end" cx="1575" cy="1190" rx="96" ry="28"/>
+  <text class="text-dark" x="1575" y="1195">Kết thúc</text>
+
+  <line class="line" x1="225" y1="130" x2="225" y2="160"/>
+  <line class="line" x1="385" y1="196" x2="515" y2="196"/>
+  <line class="line" x1="835" y1="201" x2="965" y2="201"/>
+  <path class="line" d="M1125 242 V287 H675 V332"/>
+  <line class="line" x1="835" y1="373" x2="965" y2="373"/>
+  <line class="line" x1="1235" y1="536" x2="1385" y2="536"/>
+  <path class="line" d="M1285 373 H1330 V690 H1385"/>
+  <path class="line" d="M1125 606 V628 H675 V650"/>
+  <path class="line" d="M1385 690 H1200 V650 H675"/>
+  <line class="line" x1="835" y1="691" x2="965" y2="691"/>
+  <path class="line" d="M1125 732 V778 H675 V822"/>
+  <line class="line" x1="835" y1="881" x2="965" y2="881"/>
+  <path class="line" d="M1125 950 V982 H675 V1012"/>
+  <line class="line" x1="835" y1="1061" x2="965" y2="1061"/>
+  <line class="line" x1="1285" y1="1061" x2="1385" y2="1061"/>
+  <line class="line" x1="1575" y1="1130" x2="1575" y2="1162"/>
+
+  <text class="line-label" x="414" y="178">Phân quyền</text>
+  <text class="line-label" x="1248" y="522">Không</text>
+  <text class="line-label" x="1338" y="392">Chưa có profile</text>
+  <text class="line-label" x="1188" y="676">Tạo profile mới</text>
+  <text class="line-label" x="1140" y="624">Có</text>
+</svg>

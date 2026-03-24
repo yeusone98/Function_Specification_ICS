@@ -175,7 +175,7 @@
   <path class="line" d="M1125 790 V950 H1385"/>
   <line class="line" x1="1575" y1="1030" x2="1575" y2="1062"/>
 
-  <text class="line-label" x="450" y="178">Phân quyền vị trí</text>
+  <text class="line-label" x="404" y="174">Phân quyền vị trí</text>
   <text class="line-label" x="1310" y="346">Không</text>
   <text class="line-label" x="1143" y="470">Có</text>
   <text class="line-label" x="1310" y="706">Không</text>

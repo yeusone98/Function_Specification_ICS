@@ -166,6 +166,7 @@
       home: new URL(".", baseUrl).href,
       ics: new URL("ics/", baseUrl).href,
       buddy: new URL("Buddy/", baseUrl).href,
+      aiTraining: new URL("ai-training-guide/", baseUrl).href,
       sakumi: new URL("appsakumi/", baseUrl).href,
       dacnhan: new URL("appdacnhan/", baseUrl).href,
       testplan: new URL("testplan/", baseUrl).href,
@@ -240,6 +241,12 @@
         title: "Buddy",
         desc: "Đặc tả chức năng cho hệ thống tuyển dụng Buddy.",
         href: links.buddy,
+      },
+      {
+        icon: "AI",
+        title: "Training AI",
+        desc: "Hướng dẫn tạo model, dataset, OR, AND, test AI và fine-tune.",
+        href: links.aiTraining,
       },
       {
         icon: "SKM",

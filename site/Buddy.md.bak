@@ -422,6 +422,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Tài khoản có quyền người phụ trách.<br>- Vị trí ứng tuyển của ứng viên đã được thiết lập bộ tiêu chí đánh giá trong hệ thống. |
         | **Kết quả hiển thị** | - Dữ liệu đánh giá được lưu vào hệ thống.<br>- Đánh giá mới nhất sẽ xuất hiện ở đầu danh sách "Đánh giá gần đây" ở cột bên phải cho tất cả các người phụ trách (chính / phụ) đều có thể xem. |
         | **Trường hợp không có dữ liệu** | **Trường hợp vị trí tuyển dụng chưa được thiết lập tiêu chí:** Hệ thống hiển thị thông báo "Vị trí này chưa có tiêu chí đánh giá!" hoặc hiển thị khung trống. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-4/swimlane_danh_gia_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Đánh giá ứng viên</span>
     #### 2.5. Xem lại các đánh giá gần đây {#toc-4-2-5}
     ??? book "Xem lại các đánh giá gần đây"
         | Trường | Nội dung |
@@ -434,6 +443,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Ứng viên đã có ít nhất một bản đánh giá được lưu trong hệ thống. |
         | **Kết quả hiển thị** | - Hiển thị đúng các Tag trạng thái màu sắc (Ví dụ: Tốt - Xanh lá, Khá tốt - Xanh dương, Trung bình - Cam, Không tốt - Xám).<br>- Hiển thị đúng Avatar và tên người thực hiện đánh giá. |
         | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa có lịch sử đánh giá:** Cột bên phải hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu!". |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-5/swimlane_xem_lai_cac_danh_gia_gan_day.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Xem lại các đánh giá gần đây</span>
     #### 2.6. Quản lý HĐLĐ với ứng viên {#toc-4-2-6}
     ??? book "Quản lý HĐLĐ với ứng viên"
         | Trường | Nội dung |
@@ -447,6 +465,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Tài khoản đang đăng nhập có phân quyền Người phụ trách. |
         | **Kết quả hiển thị** | - Các trường dữ liệu hiển thị đúng định dạng (Ngày tháng theo `dd/mm/yyyy).<br>- Tệp đính kèm hiển thị dưới dạng Thumbnail kèm tên file và định dạng tương ứng. |
         | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa có thông tin hợp đồng:** Các trường nhập liệu sẽ để trống, khu vực tệp đính kèm không hiển thị danh sách. |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-6/swimlane_quan_ly_hdld_voi_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý HĐLĐ với ứng viên</span>
     #### 2.7. Quản lý thử việc dành cho ứng viên {#toc-4-2-7}
     ??? book "Quản lý thử việc dành cho ứng viên"
         | Trường | Nội dung |
@@ -459,6 +486,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Ứng viên đang trong giai đoạn thử việc hoặc đã được thiết lập lộ trình thử việc.<br>- Tài khoản đăng nhập có quyền Người phụ trách.<br>- Người phụ trách đó phải là người phụ trách chính của ứng viên đang chọn. |
         | **Kết quả hiển thị** | - Chỉ số tiến độ (X/Y) tự động cập nhật ngay khi người phụ trách tích chọn hoàn thành nhiệm vụ.<br>- Các nhiệm vụ đã đánh giá hiển thị kèm thông tin định danh (Avatar/Tên) của người phụ trách thực hiện. |
         | **Trường hợp không có dữ liệu** | **Trường hợp ứng viên chưa được gán lộ trình thử việc:** Hệ thống hiển thị biểu tượng thùng rỗng kèm mô tả "Không có dữ liệu thử việc!". |
+
+        <span class="swimlane-chart-label">
+            <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+            <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-2-7/swimlane_quan_ly_thu_viec_danh_cho_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý thử việc dành cho ứng viên</span>
 ---
 ???+ info "3. Nhóm chức năng quản lý vị trí tuyển dụng"
     ### 3. Nhóm chức năng quản lý vị trí tuyển dụng {#toc-4-3}
@@ -474,6 +510,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.<br>- Hệ thống đã có dữ liệu về các vị trí tuyển dụng.<br>- Master đã thực hiện gán quyền để người phụ trách có thể quản lý trí tuyển dụng cho tài khoản này. |
         | **Kết quả hiển thị** | - Bảng **“Danh sách vị trí ứng tuyển”** hiển thị đầy đủ các vị trí cùng các cột thông tin liên quan. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có vị trí nào, bảng dữ liệu thông báo *Bảng này hiện đang trống!* kèm với icon thùng rỗng.<br>- Nếu dữ liệu tại các cột đếm (Ứng viên, Chờ phỏng vấn, Đang đào tạo) bằng 0: hiển thị giá trị `0` thay vì để trống.<br>- Bảng dữ liệu chỉ chứa các vị trí mà Master đã phê duyệt quyền xem cho người phụ trách. |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-3-1/swimlane_xem_danh_sach_vi_tri_tuyen_dung.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Xem danh sách vị trí tuyển dụng</span>
     #### 3.3. Xem thông tin tổng quan về vị trí tuyển dụng {#toc-4-3-3}
     ??? book "Xem thông tin tổng quan về vị trí tuyển dụng"
         | Trường | Nội dung |
@@ -486,6 +531,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền xem thông tin vị trí.<br>- Vị trí hiện đang hiển thị trong danh sách được phép truy cập của Handler. |
         | **Kết quả hiển thị** | **Trường hợp xem thông tin của vị trí**: Hiển thị giao diện đầy đủ thông tin về vị trí, các nút đúng với mô tả.<br>**Trường hợp xóa vị trí**: Hệ thống điều hướng người phụ trách về màn hình chứa **"Danh sách vị trí ứng tuyển"** và thông báo dạng toast "Vị trí {`Tên vị trí`} đã được xóa!". |
         | **Trường hợp không có dữ liệu** | **Trường hợp vị trí chưa từng ghi nhận bất kỳ dữ liệu nào**: Hệ thống hiển thị thông tin tổng quan mô tả vị trí, các biểu đồ vẫn được hiển thị nhưng sẽ hiển thị dữ liệu = 0, biểu đồ đường sẽ nằm trùng với trục X (thể hiện không có dữ liệu gì). |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-3-3/swimlane_xem_thong_tin_tong_quan_vi_tri_tuyen_dung.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Xem thông tin tổng quan về vị trí tuyển dụng</span>
     #### 3.4. Thiết lập mô tả vị trí tuyển dụng (JD) {#toc-4-3-4}
     ??? book "Thiết lập mô tả vị trí tuyển dụng (JD)"
         | Trường | Nội dung |
@@ -498,6 +552,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | Người phụ trách đã đăng nhập và truy cập vào thông tin vị trí. |
         | **Kết quả hiển thị** | - Khi hoàn tất việc thiết lập một JD tiêu chuẩn, người phụ trách sẽ xem được nội dung của JD bao gồm: tên. mô tả, danh mục, mô tả của danh mục, các tiêu chí con trong từng danh mục.<br>- Trường hợp có nhiều JD, người phụ trách sẽ xem được nội dung tương ứng khi chọn vào JD đó.  |
         | **Trường hợp không có dữ liệu** | **Trường hợp đã tạo JD nhưng không xem được**: Cần có thông báo lỗi khi tải dữ liệu để người dùng report đến IT.<br>**Trường hợp vị trí tuyển dụng chưa có profile JD nào được thiết lập**: Hệ thống hiển thị màn hình trống với biểu tượng "Không có dữ liệu!"|
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-3-4/swimlane_thiet_lap_mo_ta_vi_tri_tuyen_dung_jd.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Thiết lập mô tả vị trí tuyển dụng (JD)</span>
     #### 3.5. Thiết lập bài kiểm tra đầu vào {#toc-4-3-4}
     ??? book "Thiết lập bài kiểm tra đầu vào"
         | Trường | Nội dung |
@@ -525,6 +588,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại trong hệ thống.<br>- Khi thêm mới danh mục: không được phép để trống tên của danh mục.<br>- Khi thêm/sửa mục: tên và nội dung của danh mục / các action check bên trong phải hợp lệ (không được để trống). |
         | **Kết quả hiển thị** | - Danh mục được hiển thị và có thể thao tác mở rộng/thu gọn.<br>- Sau khi thêm / sửa / xóa, dữ liệu được cập nhật ngay trên màn hình. |
         | **Trường hợp không có dữ liệu** | - Nếu chưa có danh mục nào: hiển thị ô **“Nhập Danh Mục Mới”** để thêm và hiển thị biểu tượng thùng rỗng (*Không có dữ liệu*).<br>- Nếu danh mục chưa có nội dung bên trong: hiển thị textbox **“Nhập nội dung mới”**.<br>- Khi xóa hết danh mục: màn hình trở về trạng thái trống, hiển thị ô **“Nhập Danh Mục Mới”** để thêm và hiển thị biểu tượng thùng rỗng (*Không có dữ liệu*). |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-4-1/swimlane_thiet_lap_tieu_chuan_ung_vien.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Thiết lập tiêu chuẩn ứng viên</span>
     #### 4.2. Thiết lập các vòng phỏng vấn {#toc-4-4-2}
     ??? book "Thiết lập các vòng phỏng vấn"
         | Trường | Nội dung |
@@ -537,6 +609,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách đã đăng nhập và có quyền quản lý vị trí.<br>- Vị trí tuyển dụng đã tồn tại trong hệ thống.<br>- Khi thêm mới danh mục: không được phép để trống tên của danh mục.<br>- Khi thêm/sửa mục: tên và nội dung của danh mục / các action hướng dẫn và đánh giá bên trong phải hợp lệ (không được để trống). |
         | **Kết quả hiển thị** | - Danh mục được hiển thị và có thể thao tác mở rộng/thu gọn, layout của một vòng phỏng vấn hoàn chỉnh đúng với mô tả.<br>- Sau khi thêm / sửa / xóa, dữ liệu được cập nhật ngay trên màn hình. |
         | **Trường hợp không có dữ liệu** | **Trường hợp chưa có bất kỳ vòng phỏng vấn nào**: hệ thống sẽ hiển thị màn hình chính trống, danh sách các vòng phỏng vấn bên phải màn hình sẽ có biểu tượng thùng rỗng.<br>**Trường hợp vòng phỏng vấn chưa được thiết lập bất kỳ action nào bên trong**: người phụ trách chọn vào các tab *Đánh giá* và *Câu hỏi phỏng vấn* và mở các item chứa các action bên trong thì chỉ thấy ô *Nhập nội dung mới*. |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-4-2/swimlane_thiet_lap_cac_vong_phong_van.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Thiết lập các vòng phỏng vấn</span>
     #### 4.3. Thiết lập bài kiểm tra đầu vào {#toc-4-4-3}
     ??? book "Thiết lập bài kiểm tra đầu vào"
         | Trường | Nội dung |
@@ -550,6 +631,15 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | Tài khoản đã đăng nhập và là Người phụ trách được Master gán quyền quản lý vị trí này.<br>- Vị trí tuyển dụng đang ở trạng thái hoạt động. |    
         | **Kết quả hiển thị** | - Các thay đổi được cập nhật Real-time và hiển thị đồng bộ cho toàn bộ Handler của vị trí đó.<br>- Số lượng câu hỏi ở tiêu đề bài kiểm tra tự động cập nhật khi thêm/xóa câu hỏi. |
         | **Trường hợp không có dữ liệu** | **Trường hợp vị trí chưa có bài kiểm tra:** Hệ thống hiển thị biểu tượng thùng rỗng kèm nút "Thêm bài kiểm tra mới". |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-4-3/swimlane_thiet_lap_bai_kiem_tra_dau_vao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Thiết lập bài kiểm tra đầu vào</span>
     #### 4.3. Thiết lập bài kiểm tra kiến thức (Kiểm tra khi phỏng vấn trực tiếp) {#toc-4-4-3}
     ??? book "Thiết lập bài kiểm tra đầu vào (Kiểm tra khi phỏng vấn trực tiếp)"
         | Trường | Nội dung |

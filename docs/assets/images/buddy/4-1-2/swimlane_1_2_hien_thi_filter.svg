@@ -197,7 +197,6 @@
   <path class="line" d="M780 1106 V1136 H260 V1172"/>
   <line class="line" x1="400" y1="1203" x2="620" y2="1203"/>
   <line class="line" x1="940" y1="1203" x2="1070" y2="1203"/>
-  <path class="line" d="M1530 472 H1590 V1362 H1416"/>
   <line class="line" x1="1320" y1="1278" x2="1320" y2="1334"/>
 
   <text class="line-label" x="950" y="458">Không</text>

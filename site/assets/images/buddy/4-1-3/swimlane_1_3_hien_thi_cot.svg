@@ -177,7 +177,6 @@
   <line class="line" x1="780" y1="664" x2="780" y2="718"/>
   <line class="line" x1="884" y1="792" x2="1110" y2="792"/>
   <path class="line" d="M780 866 V1003 H1070"/>
-  <path class="line" d="M1530 792 H1590 V1218 H1416"/>
   <line class="line" x1="1320" y1="1076" x2="1320" y2="1190"/>
 
   <text class="line-label" x="950" y="778">Không</text>

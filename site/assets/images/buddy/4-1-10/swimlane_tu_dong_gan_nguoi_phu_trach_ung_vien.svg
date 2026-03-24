@@ -147,10 +147,11 @@
     <tspan x="450" dy="16">profile ứng viên?</tspan>
   </text>
 
-  <rect class="result-empty" x="1490" y="544" width="320" height="92" rx="8"/>
+  <rect class="result-empty" x="1520" y="536" width="260" height="112" rx="8"/>
   <text class="text-light" x="1650" y="574">
     <tspan x="1650" dy="0">Bảng dữ liệu trống!</tspan>
-    <tspan class="subtext" x="1650" dy="18">Người phụ trách được chọn chưa tạo profile ứng viên nào</tspan>
+    <tspan class="subtext" x="1650" dy="18">Người phụ trách được chọn</tspan>
+    <tspan class="subtext" x="1650" dy="16">chưa tạo profile ứng viên nào</tspan>
   </text>
 
   <rect class="task" x="320" y="760" width="260" height="74" rx="8"/>
@@ -177,11 +178,14 @@
     <tspan x="1350" dy="16">phân quyền tức thì</tspan>
   </text>
 
-  <rect class="result-ok" x="1490" y="736" width="320" height="146" rx="8"/>
+  <rect class="result-ok" x="1520" y="724" width="260" height="170" rx="8"/>
   <text class="text-light" x="1650" y="766">
-    <tspan x="1650" dy="0">Cập nhật Người phụ trách chính thành công!</tspan>
-    <tspan class="subtext" x="1650" dy="18">Filter Người phụ trách truy vấn đúng profile theo vai trò mới</tspan>
-    <tspan class="meta-text" x="1650" dy="18">Quyền Đánh giá và Thử việc mở cho Handler chính hiện tại</tspan>
+    <tspan x="1650" dy="0">Cập nhật Người phụ trách</tspan>
+    <tspan x="1650" dy="16">chính thành công!</tspan>
+    <tspan class="subtext" x="1650" dy="18">Filter Người phụ trách truy vấn đúng</tspan>
+    <tspan class="subtext" x="1650" dy="16">profile theo vai trò mới</tspan>
+    <tspan class="meta-text" x="1650" dy="18">Quyền Đánh giá và Thử việc mở</tspan>
+    <tspan class="meta-text" x="1650" dy="14">cho Handler chính hiện tại</tspan>
   </text>
 
   <ellipse class="start-end" cx="1650" cy="980" rx="90" ry="28"/>
@@ -193,12 +197,12 @@
   <path class="line" d="M450 234 V300 H150 V340"/>
   <line class="line" x1="280" y1="384" x2="320" y2="384"/>
   <line class="line" x1="450" y1="436" x2="450" y2="520"/>
-  <line class="line" x1="560" y1="590" x2="1490" y2="590"/>
+  <line class="line" x1="560" y1="590" x2="1520" y2="590"/>
   <line class="line" x1="450" y1="660" x2="450" y2="760"/>
   <line class="line" x1="580" y1="797" x2="620" y2="797"/>
   <line class="line" x1="880" y1="797" x2="920" y2="797"/>
   <line class="line" x1="1180" y1="797" x2="1220" y2="797"/>
-  <line class="line" x1="1480" y1="797" x2="1490" y2="797"/>
+  <line class="line" x1="1480" y1="797" x2="1520" y2="797"/>
   <line class="line" x1="1650" y1="882" x2="1650" y2="952"/>
 
   <text class="line-label" x="620" y="576">Không</text>
