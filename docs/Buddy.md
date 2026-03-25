@@ -561,18 +561,19 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         <img src="/assets/images/buddy/4-3-4/swimlane_thiet_lap_mo_ta_vi_tri_tuyen_dung_jd.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
 
         <span style="display:block;text-align:center;font-weight:600;">Thiết lập mô tả vị trí tuyển dụng (JD)</span>
-    #### 3.5. Thiết lập bài kiểm tra đầu vào {#toc-4-3-4}
-    ??? book "Thiết lập bài kiểm tra đầu vào"
+    #### 3.5. Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn) {#toc-4-3-4}
+    ??? book "Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)"
         | Trường | Nội dung |
         | ------ | -------- |
-        | **Tên chức năng** | Thiết lập bài kiểm tra đầu vào |
-        | **Vai trò** |  |
-        | **Mô tả** |  |
-        | **Giao diện liên quan** |  |
-        | **Luồng thao tác chính** |  |
-        | **Điều kiện** |  |
-        | **Kết quả hiển thị** |  |
-        | **Trường hợp không có dữ liệu** |  |
+        | **Tên chức năng** | Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn) |
+        | **Vai trò** | Người phụ trách |
+        | **Tác động đến role khác** | **Handler khác**: Đồng bộ dữ liệu cấu hình trong cùng một vị trí tuyển dụng.<br>**Ứng viên**: Nhận nội dung bài kiểm tra để thực hiện trực tuyến trước khi tham gia phỏng vấn trực tiếp.  |
+        | **Mô tả** | Chức năng cho phép Handler cấu hình các bộ đề kiểm tra năng lực trực tuyến. Mục đích là để gửi cho ứng viên thực hiện tại nhà hoặc trước buổi phỏng vấn nhằm sàng lọc kỹ thuật sơ bộ. Hệ thống hỗ trợ trình soạn thảo đa phương tiện (Media) và cơ chế chấm điểm tự động cho các câu hỏi trắc nghiệm. |
+        | **Giao diện liên quan** | - Tab "K.Tra đầu vào" trong phần Quản lý vị trí.<br>- Chế độ chuyển đổi "Tạo" và "Đáp án".<br>- Các danh mục câu hỏi (như OOP, Kỹ năng mềm...). |
+        | **Luồng thao tác chính** | **1. Chọn chế độ soạn thảo:**<br>- Gạt nút sang "Tạo" để bắt đầu viết câu hỏi hoặc sang "Đáp án" để thiết lập câu trả lời đúng và xem trước.<br>**2. Soạn thảo câu hỏi & đính kèm tài liệu:**<br>- Nhập nội dung câu hỏi vào ô trống. Có thể chèn thêm Hình ảnh, Video hoặc file âm thanh để ứng viên xem/nghe và trả lời.<br>- Chọn hình thức trả lời: Trắc nghiệm (chọn 1), Hộp kiểm (chọn nhiều), Menu thả xuống hoặc viết văn bản tự luận.<br>**3. Thiết lập điểm & Lưu dữ liệu:**<br>- Nhập số điểm cho mỗi câu (ví dụ: 5 điểm).<br>- Tự động lưu: Hệ thống sẽ tự động lưu lại ngay sau khi bạn hoàn thành xong một câu hỏi, không cần phải tìm nút Lưu tổng quát.<br>**4. Quản lý danh sách đề:**<br>- Bật/Tắt bài kiểm tra bằng nút gạt (Switch) hoặc xóa các bài không còn sử dụng. |
+        | **Điều kiện** | - Người phụ trách đang thao tác trên các vị trí được Master gán quyền quản lý.<br>- Vị trí tuyển dụng phải đang ở trạng thái hoạt động. |
+        | **Kết quả hiển thị** | - Tiêu đề bài kiểm tra hiển thị rõ tổng số điểm và số lượng câu hỏi hiện có.<br>- Mọi thay đổi về nội dung đề thi sẽ được cập nhật ngay lập tức cho các người phụ trách khác cùng xem. |
+        | **Trường hợp không có dữ liệu** | **Trường hợp chưa có bài kiểm tra:** Hệ thống hiển thị thông báo "Không có bài kiểm tra nào" kèm nút để thêm mới. |
 ---
 ???+ info "4. Nhóm chức năng quản lý phỏng vấn"
     ### 4. Nhóm chức năng quản lý phỏng vấn (thêm tác động lên candidate và interviewer) {#toc-4-4}
@@ -625,7 +626,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Tên chức năng** | Thiết lập bài kiểm tra đầu vào |
         | **Vai trò** | Người phụ trách |
         | **Tác động đến role khác** | Tác động đến các Handler khác trong cùng vị trí: Tất cả người phụ trách thuộc vị trí này đều có thể xem và quản lý các bài kiểm tra được thiết lập (bất kể ai là người tạo). |
-        | **Mô tả** | Chức năng này cho phép người phụ trách cấu hình các bài kiểm tra chuyên môn cho từng vị trí tuyển dụng cụ thể. Hệ thống hỗ trợ đa dạng loại câu hỏi và cơ chế tự động lưu (Auto-save bằng cách lưu theo từng câu hỏi) để tối ưu hóa quá trình thiết lập. Các bài kiểm tra này sẽ được sử dụng làm căn cứ đánh giá năng lực ứng viên trong quá trình phỏng vấn trực tiếp. |
+        | **Mô tả** | Chức năng này cho phép người phụ trách cấu hình các bài kiểm tra chuyên môn cho từng vị trí tuyển dụng cụ thể. Hệ thống hỗ trợ đa dạng loại câu hỏi và cơ chế tự động lưu (Auto-save bằng cách lưu theo từng câu hỏi) để tối ưu hóa quá trình thiết lập. Các bài kiểm tra này sẽ được sử dụng làm căn cứ đánh giá năng lực ứng viên trong quá trình **phỏng vấn trực tiếp**. |
         | **Giao diện liên quan** | - Sub-menu "K.Tra đầu vào" trong chi tiết vị trí tuyển dụng.<br>- Nút Switch chế độ "Thiết lập" và "Xem đáp án mẫu".<br>- Danh sách bài kiểm tra (Accordion).<br>- Trình soạn thảo câu hỏi theo từng loại hình. |
         | **Luồng thao tác chính** | 1. Tiếp cận và chuyển đổi chế độ:<br>&emsp;- Người phụ trách chọn vị trí được Master gán quyền, vào mục "K.Tra đầu vào".<br>&emsp;- Sử dụng nút chuyển đổi để switch giữa mode Thiết lập (để chỉnh sửa) và mode Xem đáp án mẫu (để xem trước giao diện và đáp án).<br>2. Cấu hình bài kiểm tra:<br>&emsp;- Hệ thống hiển thị tiêu đề kèm số lượng câu hỏi hiện có của từng bài kiểm tra.<br>&emsp;- Người phụ trách chọn 01 trong 04 loại câu hỏi: Trắc nghiệm (1 đáp án), Hộp kiểm (nhiều đáp án), Dropdown (chọn từ danh sách), Văn bản (tự luận).<br>3. Cơ chế Lưu dữ liệu:<br>&emsp;- Hệ thống thực hiện tự động lưu ngay lập tức sau khi người phụ trách hoàn thành thiết lập cho mỗi câu hỏi (không cần nhấn nút Lưu tổng).<br>4. Quản lý trạng thái và xóa:<br>&emsp;- Sử dụng nút Switch trên từng bài kiểm tra để Kích hoạt hoặc Vô hiệu hóa.<br>&emsp;- Nhấn biểu tượng xóa để gỡ bỏ bài kiểm tra khỏi vị trí đang quản lý. |
         | **Điều kiện** | Tài khoản đã đăng nhập và là Người phụ trách được Master gán quyền quản lý vị trí này.<br>- Vị trí tuyển dụng đang ở trạng thái hoạt động. |
