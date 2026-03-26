@@ -20,6 +20,7 @@
       .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
       .result-error { fill: #e54848; stroke: #b52f2f; stroke-width: 1; }
       .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .decision { fill: #f5a623; stroke: #d97706; stroke-width: 1; }
       .text-light {
         fill: #eef6ff;
         font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
@@ -29,6 +30,13 @@
       }
       .text-dark {
         fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #3b2400;
         font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
         font-size: 12px;
         font-weight: 700;
@@ -125,8 +133,8 @@
     <tspan x="1125" dy="16">và tiêu đề số lượng câu hỏi</tspan>
   </text>
 
-  <polygon class="task" points="1125,470 1235,540 1125,610 1015,540" fill="#f5a623" stroke="#d97706"/>
-  <text class="text-dark" x="1125" y="536">
+  <polygon class="decision" points="1125,470 1235,540 1125,610 1015,540"/>
+  <text class="decision-text" x="1125" y="536">
     <tspan x="1125" dy="0">Có bài kiểm tra</tspan>
     <tspan x="1125" dy="16">đã thiết lập?</tspan>
   </text>
@@ -168,13 +176,13 @@
   <line class="line" x1="835" y1="373" x2="965" y2="373"/>
   <line class="line" x1="1125" y1="406" x2="1125" y2="470"/>
   <line class="line" x1="1235" y1="540" x2="1385" y2="540"/>
-  <path class="line" d="M1015 540 H920 V687 H835"/>
+  <path class="line" d="M1125 610 V628 H675 V646"/>
   <line class="line" x1="835" y1="687" x2="965" y2="687"/>
   <line class="line" x1="1285" y1="687" x2="1385" y2="687"/>
   <line class="line" x1="1575" y1="758" x2="1575" y2="912"/>
 
   <text class="line-label" x="402" y="180">Phân quyền</text>
   <text class="line-label" x="1246" y="525">Không</text>
-  <text class="line-label" x="1128" y="632">Có</text>
-  <text class="line-label" x="1338" y="668">Đồng bộ</text>
+  <text class="line-label" x="1140" y="628">Có</text>
+  <text class="line-label" x="1335" y="668" text-anchor="middle">Đồng bộ</text>
 </svg>

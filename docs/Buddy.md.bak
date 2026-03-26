@@ -667,30 +667,57 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí. <br>- Vị trí tồn tại trong hệ thống. |
         | **Kết quả hiển thị** | - Danh sách quy trình đào tạo hiển thị chi tiết. <br>- Người phụ trách có toàn quyền thao tác. <br>- Thông báo “Cập nhật dữ liệu thành công!” sau khi thao tác thêm / sửa hợp lệ. |
         | **Trường hợp không có dữ liệu** | **Trường hợp chưa có quy trình**: hiển thị danh sách rỗng và nút **Thêm quy trình mới**. <br> **Trường hợp quy trình chưa được thiết lập danh mục nào**: chỉ hiển thị tên quy trình và nút Nhập tiêu chuẩn mới. |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-5-1/swimlane_quan_ly_quy_trinh_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý quy trình đào tạo</span>
     #### 5.2. Quản lý đầu ra đào tạo {#toc-4-5-2}
     ??? book "Quản lý đầu ra đào tạo"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Quản lý đầu ta đào tạo |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng này cho phép người phụ trách quản lý toàn bộ các tiêu chí đầu ra của quá trình training cho vị trí tuyển dụng được chọn. Các tiêu chí đầu ra sẽ được sắp xếp vào các danh mục, Hệ thống sẽ hiển thị toàn bộ các danh mục đánh giá đã từng được thiết lập cho vị trí này.<br>**Nội dung của tài liệu là các action Đánh Giá.**<br><br>Tổng quan của cấu trúc tiêu chí đầu ra như sau:<br>&emsp;[---Danh mục chứa các tiêu chí đầu ra<br>&emsp;[------ Danh mục nội dung trong các danh mục (**các action Đánh Giá**) |
+        | **Mô tả** | Chức năng này cho phép người phụ trách quản lý toàn bộ các tiêu chí đầu ra của quá trình training cho vị trí tuyển dụng được chọn. Các tiêu chí đầu ra sẽ được sắp xếp vào các danh mục, Hệ thống sẽ hiển thị toàn bộ các danh mục đánh giá đã từng được thiết lập cho vị trí này.<br>**Nội dung của tài liệu là các action Đánh Giá.**<br><br>Tổng quan của cấu trúc tiêu chí đầu ra như sau:<br>&emsp;- Danh mục chứa các tiêu chí đầu ra<br>&emsp;&emsp;- Danh mục nội dung trong các danh mục (**các action Đánh Giá**) |
         | **Giao diện liên quan** | - Menu ***"Quản Lý Vị Trí"*** → chọn vị trí từ bảng **"Danh sách vị trí ứng tuyển"** → truy cập submenu "Đào tạo" → tab "Đầu ra" |
         | Luồng thao tác chính | 1. Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Đầu ra".<br>3. Hệ thống hiển thị nội dung của tab "Đầu ra" là các danh mục chứa các [action_type : evaluate (`action Đánh Giá`)] đã được thiết lập sẵn, nếu không có danh mục nào thì hệ thống sẽ hiển thị biểu tượng thùng rỗng và mô tả "Chưa có nội dung đầu ra!".<br>Để tạo mới một danh mục, người phụ trách cần nhập tên của danh mục vào ô **"Nhập Danh Mục Mới"** và nhấn phím [ENTER].<br>Hệ thống sẽ cập nhật và hiển thị ngay danh mục đó trên màn hình mà không cần phải reload.<br>Để thêm mới một nội dung bên trong danh mục, người phụ trách cần nhập tên của nội dung mới vào ô **"Nhập nội dung mới"** và nhấn [ENTER], hệ thống sẽ tự động cập nhật và hiển thị và không cần phải reload.<br>Người phụ trách có thể xóa danh mục / nội dung danh mục, có thể sắp xếp lại danh mục / nội dung danh mục tùy theo mong muốn. |
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên **"Danh sách vị trí tuyển dụng"** |
         | **Kết quả hiển thị** | - Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt.<br>- Khi xóa một danh mục  / nội dung thì phải hiện thị popup cảnh báo để người phụ trách xác nhận thao tác xóa. |
         | **Trường hợp không có dữ liệu** | **Trường hợp vị trí chưa có nội dung ở tab **Đầu ra**: hệ thống sẽ hiển thị biểu tượng thùng rỗng và dòng mô tả "Chưa có dữ liệu!".<br>**Trường hợp xóa tên của danh mục / nội dung trong danh mục**: hệ thống không cho phép để trống phần tên của danh mục / nội dung trong danh mục, khi xóa thì người phụ trách cần thêm lại một tên mới để lưu và nhấn [ENTER] |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-5-2/swimlane_quan_ly_dau_ra_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý đầu ra đào tạo</span>
     #### 5.3. Quản lý tài liệu đào tạo  {#toc-4-5-3}
     ??? book "Quản lý tài liệu đào tạo"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Quản lý tài liệu đào tạo |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng này cho phép người phụ trách quản lý toàn bộ các bộ tài liệu của quá trình training cho vị trí tuyển dụng được chọn. Hệ thống sẽ hiển thị toàn bộ các bộ tài liệu đã từng được thiết lập cho vị trí này ở **"Danh sách tài liệu"** nằm bên phải của màn hình.<br>Người phụ trách được phép kích hoạt hoặc vô hiệu tài liệu, đồng nghĩa với việc **người được đào tạo** và **người đào tạo** sẽ không xem được bộ tài liệu bị vô hiệu bởi **người phụ trách**.<br>Bên trong tài liệu bao gồm một hoặc nhiều danh mục, trong mỗi danh mục sẽ chứa nội dung.<br>**Nội dung của tài liệu là các [action_type : instruction (`action Hướng Dẫn`), trong các action Hướng Dẫn này, người phụ trách sẽ được phép thêm mô tả và nội dung chi tiết (Văn bản (cho phép thêm định dạng văn bản), file đính kèm, URL)]**.<br><br>Tổng quan của cấu trúc tài liệu như sau:<br>&emsp;[---Bộ tài liệu (hiển thị trên **Danh sách tài liệu**)<br>&emsp;[------ Danh mục nội dung trong các bộ tài liệu<br>&emsp;[------------- Các action Hướng Dẫn trong các danh mục nội dung tài liệu<br>&emsp;[------------------ Các nội dung chi tiết của action Hướng Dẫn |
+        | **Mô tả** | Chức năng này cho phép người phụ trách quản lý toàn bộ các bộ tài liệu của quá trình training cho vị trí tuyển dụng được chọn. Hệ thống sẽ hiển thị toàn bộ các bộ tài liệu đã từng được thiết lập cho vị trí này ở **"Danh sách tài liệu"** nằm bên phải của màn hình.<br>Người phụ trách được phép kích hoạt hoặc vô hiệu tài liệu, đồng nghĩa với việc **người được đào tạo** và **người đào tạo** sẽ không xem được bộ tài liệu bị vô hiệu bởi **người phụ trách**.<br>Bên trong tài liệu bao gồm một hoặc nhiều danh mục, trong mỗi danh mục sẽ chứa nội dung.<br>**Nội dung của tài liệu là các [action_type : instruction (`action Hướng Dẫn`), trong các action Hướng Dẫn này, người phụ trách sẽ được phép thêm mô tả và nội dung chi tiết (Văn bản (cho phép thêm định dạng văn bản), file đính kèm, URL)]**.<br><br>Tổng quan của cấu trúc tài liệu như sau:<br>&emsp;- Bộ tài liệu (hiển thị trên **Danh sách tài liệu**)<br>&emsp;&emsp;- Danh mục nội dung trong các bộ tài liệu<br>&emsp;&emsp;&emsp;- Các action Hướng Dẫn trong các danh mục nội dung tài liệu<br>&emsp;&emsp;&emsp;&emsp;- Các nội dung chi tiết của action Hướng Dẫn |
         | **Giao diện liên quan** | - Menu ***"Quản Lý Vị Trí"*** → chọn vị trí từ bảng **"Danh sách vị trí ứng tuyển"** → truy cập submenu "Đào tạo" → tab "Tài liệu" |
         | **Luồng thao tác chính** | 1. Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Tài liệu".<br>3. Hệ thống hiển thị nội dung của tab "Tài liệu" là các danh mục chứa các [action_type : instruction (`action Hướng Dẫn`)] đã được thiết lập sẵn, nếu không có danh mục nào thì hệ thống sẽ hiển thị biểu tượng thùng rỗng và mô tả "Chưa có tài liệu!".<br>4. Các danh mục tài liệu sẽ nằm trong các bộ tài liệu, hệ thống sẽ hiển thị danh sách các bộ tài liệu đã được tạo ở **"Danh sách tài liệu"** ở phần bên phải của màn hình.<br><br>**Khi người phụ trách muốn thêm một tài liệu / danh mục / nội dung mới:**<br>1. Người phụ trách đang ở màn hình xem tài liệu của vị trí tuyển dụng đã chọn.<br>2. Tại các vị trí:<br>&emsp;- **Danh sách tài liệu**: người phụ trách cần nhập tên của bộ tài liệu mới ==> nhấn [ENTER] để hệ thống thực hiện lưu dữ liệu<br>&emsp;- **Màn hình chính chứa các danh mục nội dung của bộ tài liệu**: người phụ trách cuộn xuống cuối màn hình để thấy ô "Nhập danh mục mới" ==> nhập tên danh mục ==> nhấn [ENTER]<br>&emsp;- **Nội dung của các danh mục**: người phụ trách cần mở rộng danh mục muốn thêm nội dung ==> nhập tiêu đề cho action Hướng Dẫn.<br>&emsp;- **Chi tiết action Hướng Dẫn**: người phụ trách sau khi tạo một action Hướng Dẫn trong danh mục nội dung sẽ thấy action Hướng Dẫn có một ô *"Nhập thêm nội dung"*, ô này cho phép người phụ trách thêm vào nội dung chi tiết, chèn thêm file và URL, ngoài ra khi nhập liệu văn bản thì người phụ trách có thể tùy chỉnh định dạng của văn bản.<br><br>**Khi người phụ trách muốn chỉnh sửa một tài liệu / danh mục / nội dung mới:** Tương tự với toàn bộ quá trình thêm mới tài liệu / danh mục / nội dung, khi chỉnh sửa ở tiêu đề của tài liệu, tiêu đề danh mục hoặc nội dung chi tiết bên trong, người phụ trách bắt buộc phải thay thế bằng một nội dung hợp lệ (tức không được phép bỏ trống), sau đó người phụ trách cần nhấn [ENTER] để hệ thống thực hiện lưu lại dữ liệu mới.<br><br>**Khi người phụ trách muốn xóa một tài liệu / danh mục / nội dung mới:** khi người phụ trách xóa một bộ tài liệu / danh mục ==> hệ thống hiển thị popup cảnh báo *"Không thể khôi phục dữ liệu!"* ==> người phụ trách cần xác nhận thao tác xóa bằng việc nhấn nút "Xác nhận" để tiến hành xóa. Đối với nội dung chi tiết hoặc action Hướng Dẫn, khi xóa thì không có popup xác nhận. |
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên **"Danh sách vị trí tuyển dụng"** |
         | **Kết quả hiển thị** | - Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt.<br>- Khi xóa một bộ tài liệu / danh mục thì phải hiện thị popup cảnh báo để người phụ trách xác nhận thao tác xóa. |
         | **Trường hợp không có dữ liệu** | **Trường hợp vị trí chưa có nội dung ở tab **Tài liệu****: hệ thống sẽ hiển thị biểu tượng thùng rỗng và dòng mô tả "Chưa có dữ liệu!" ở **"Danh sách tài liệu"**. |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-5-3/swimlane_quan_ly_tai_lieu_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý tài liệu đào tạo</span>
 ---
 ???+ info "6. Nhóm chức năng quản lý sau đào tạo (high impact giữa trainee và handler)"
     ### 6. Nhóm chức năng quản lý sau đào tạo {#toc-4-6}
@@ -700,24 +727,42 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
         | ------ | -------- |
         | **Tên chức năng** | Quản lý quá trình thử việc sau khi hoàn thành đào tạo |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng này cho phép người phụ trách thiết lập các tiêu chí dành cho quá trình sau đào tạo (review ứng viên), các tiêu chí này sẽ được dùng ở phần chi tiết ứng viên.<br>Cấu trúc của danh mục tiêu chí thử việc:<br>&emsp;[--- Danh mục tiêu chí thử việc <br>&emsp;[------ Nội dung của danh mục tiêu chí thử việc  |
+        | **Mô tả** | Chức năng này cho phép người phụ trách thiết lập các tiêu chí dành cho quá trình sau đào tạo (review ứng viên), các tiêu chí này sẽ được dùng ở phần chi tiết ứng viên.<br>Cấu trúc của danh mục tiêu chí thử việc:<br>&emsp;- Danh mục tiêu chí thử việc<br>&emsp;&emsp;- Nội dung của danh mục tiêu chí thử việc |
         | **Giao diện liên quan** | - Menu ***"Quản Lý Vị Trí"*** → chọn vị trí từ bảng **"Danh sách vị trí ứng tuyển"** → truy cập submenu "Sau đào tạo" → tab "Thử việc" |
         | **Luồng thao tác chính** | 1.Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Thử việc" trong submenu **Sau đào tạo**.<br>3. Hệ thống hiển thị giao diện của tab "Thử việc".<br><br>**Để thêm mới danh mục thử việc:**<br>1. Người phụ trách nhập tên của danh mục vào ô *"Nhập danh mục mới"*<br>2. Người phụ trách nhấn [ENTER] để hệ thống thực hiện lưu trữ dữ liệu<br>3. Hệ thống focus vào danh mục mới tạo (nếu như người phụ trách chưa chọn danh mục nào để xem trước đó) và tự động mở rộng danh mục, lúc này danh mục sẽ có số [0] để biểu thị danh mục không có nội dung bên trong.<br>4. Người phụ trách sẽ thấy được ô **[+] Thêm nội dung** để có thể thêm mới nội dung vào danh mục thử việc vừa tạo<br><br>**Xóa nội dung / danh mục thử việc**:<br>1. Để xóa nội dung của một danh mục thử việc, người phụ trách mở rộng danh mục ==> chọn vào biểu tượng `🗑️` ở tại mỗi item để xóa (Không có popup xác nhận).<br>2. Để xóa một danh mục thử việc, người phụ trách chọn vào biểu tượng `🗑️` ở tại mỗi danh mục để xóa, hệ thống sẽ hiển thị popup cảnh báo ==> người phụ trách cần nhấn nút *Xác nhận* trên popup để xóa. |
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên **"Danh sách vị trí tuyển dụng"** |
         | **Kết quả hiển thị** | - Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có danh mục nào**: Hệ thống hiển thị màn hình có biểu tượng thùng rỗng và mô tả "Không có dữ liệu!". |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-6-1/swimlane_quan_ly_qua_trinh_thu_viec_sau_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý quá trình thử việc sau khi hoàn thành đào tạo</span>
     #### 6.2. Quản lý các tiêu chí đánh giá sau đào tạo {#toc-4-6-2}
     ??? book "Quản lý các tiêu chí đánh giá sau đào tạo"
         | Trường | Nội dung |
         | ------ | -------- |
         | **Tên chức năng** | Quản lý các tiêu chí đánh giá sau đào tạo |
         | **Vai trò** | Người phụ trách |
-        | **Mô tả** | Chức năng cho phép người phụ trách thiết lập các tiêu chí đánh giá ứng viên sau đào tạo.<br>Cấu trúc của danh mục đánh giá:<br>&emsp;[--- Danh mục đánh giá ứng viên <br>&emsp;[------ Nội dung trong danh mục đánh giá ứng viên  |
+        | **Mô tả** | Chức năng cho phép người phụ trách thiết lập các tiêu chí đánh giá ứng viên sau đào tạo.<br>Cấu trúc của danh mục đánh giá:<br>&emsp;- Danh mục đánh giá ứng viên<br>&emsp;&emsp;- Nội dung trong danh mục đánh giá ứng viên |
         | **Giao diện liên quan** | - Menu ***"Quản Lý Vị Trí"*** → chọn vị trí từ bảng **"Danh sách vị trí ứng tuyển"** → truy cập submenu "Sau đào tạo" → tab "Đánh giá" |
         | **Luồng thao tác chính** | 1.Người phụ trách đăng nhập, chọn vị trí.<br>2. Người phụ trách chọn vào tab "Đánh giá" trong submenu **Sau đào tạo**.<br>3. Hệ thống hiển thị giao diện của tab "Đánh giá" với tiêu đề **CÁC TIÊU CHÍ ĐÁNH GIÁ**.<br><br>**Để thêm mới danh mục đánh giá:**<br>1. Người phụ trách nhập tên của danh mục vào ô *"Nhập danh mục mới"*<br>2. Người phụ trách nhấn [ENTER] để hệ thống thực hiện lưu trữ dữ liệu<br>3. Hệ thống focus vào danh mục mới tạo (nếu như người phụ trách chưa chọn danh mục nào để xem trước đó) và tự động mở rộng danh mục, lúc này danh mục sẽ có thêm phần 5 ngôi sao với màu mặc định của hệ thống đang dùng.<br>4. Người phụ trách sẽ thấy được ô **[+] Thêm nội dung** để có thể thêm mới nội dung vào danh mục đánh giá vừa tạo<br><br>**Xóa nội dung / danh mục đánh giá**:<br>1. Để xóa nội dung của một danh mục đánh giá, người phụ trách mở rộng danh mục ==> chọn vào biểu tượng `🗑️` ở tại mỗi item để xóa (Không có popup xác nhận).<br>2. Để xóa một danh mục đánh giá, người phụ trách chọn vào biểu tượng `🗑️` ở tại mỗi danh mục để xóa, hệ thống sẽ hiển thị popup cảnh báo ==> người phụ trách cần nhấn nút *Xác nhận* trên popup để xóa. |
         | **Điều kiện** | - Người phụ trách có quyền quản lý vị trí.<br>- Người phụ trách chọn một vị trí tuyển dụng đã tồn tại trên **"Danh sách vị trí tuyển dụng"** |
         | **Kết quả hiển thị** | - Sau khi thêm một danh mục / nội dung mới, người phụ trách sẽ thấy ngay trên màn hình mà không cần refresh lại trình duyệt. |
         | **Trường hợp không có dữ liệu** | **Trường hợp không có danh mục nào**: Hệ thống hiển thị màn hình có biểu tượng thùng rỗng và mô tả "Không có dữ liệu!". |
+
+        <span class="swimlane-chart-label">
+          <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+          <span>Swimlane chart</span>
+        </span>
+
+        <img src="/assets/images/buddy/4-6-2/swimlane_quan_ly_tieu_chi_danh_gia_sau_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" />
+
+        <span style="display:block;text-align:center;font-weight:600;">Quản lý các tiêu chí đánh giá sau đào tạo</span>
 ---
 ???+ info "7. "
     ### 7.  {#toc-4-7}

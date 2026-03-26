@@ -870,7 +870,7 @@
   <a href="#toc-4-3-4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.5. Thiết lập bài kiểm tra đầu vào
+        3.5. Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)
       
     </span>
   </a>
@@ -1975,7 +1975,7 @@
   <a href="#toc-4-3-4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.5. Thiết lập bài kiểm tra đầu vào
+        3.5. Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)
       
     </span>
   </a>
@@ -3884,9 +3884,9 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 <p><img src="/assets/images/buddy/4-3-4/swimlane_thiet_lap_mo_ta_vi_tri_tuyen_dung_jd.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
 <p><span style="display:block;text-align:center;font-weight:600;">Thiết lập mô tả vị trí tuyển dụng (JD)</span></p>
 </details>
-<h4 id="toc-4-3-4">3.5. Thiết lập bài kiểm tra đầu vào</h4>
+<h4 id="toc-4-3-4">3.5. Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)</h4>
 <details class="book">
-<summary>Thiết lập bài kiểm tra đầu vào</summary>
+<summary>Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)</summary>
 <table>
 <thead>
 <tr>
@@ -3897,38 +3897,48 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 <tbody>
 <tr>
 <td><strong>Tên chức năng</strong></td>
-<td>Thiết lập bài kiểm tra đầu vào</td>
+<td>Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)</td>
 </tr>
 <tr>
 <td><strong>Vai trò</strong></td>
-<td></td>
+<td>Người phụ trách</td>
+</tr>
+<tr>
+<td><strong>Tác động đến role khác</strong></td>
+<td><strong>Handler khác</strong>: Đồng bộ dữ liệu cấu hình trong cùng một vị trí tuyển dụng.<br><strong>Ứng viên</strong>: Nhận nội dung bài kiểm tra để thực hiện trực tuyến trước khi tham gia phỏng vấn trực tiếp.</td>
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td></td>
+<td>Chức năng cho phép Handler cấu hình các bộ đề kiểm tra năng lực trực tuyến. Mục đích là để gửi cho ứng viên thực hiện tại nhà hoặc trước buổi phỏng vấn nhằm sàng lọc kỹ thuật sơ bộ. Hệ thống hỗ trợ trình soạn thảo đa phương tiện (Media) và cơ chế chấm điểm tự động cho các câu hỏi trắc nghiệm.</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
-<td></td>
+<td>- Tab "K.Tra đầu vào" trong phần Quản lý vị trí.<br>- Chế độ chuyển đổi "Tạo" và "Đáp án".<br>- Các danh mục câu hỏi (như OOP, Kỹ năng mềm...).</td>
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
-<td></td>
+<td><strong>1. Chọn chế độ soạn thảo:</strong><br>- Gạt nút sang "Tạo" để bắt đầu viết câu hỏi hoặc sang "Đáp án" để thiết lập câu trả lời đúng và xem trước.<br><strong>2. Soạn thảo câu hỏi &amp; đính kèm tài liệu:</strong><br>- Nhập nội dung câu hỏi vào ô trống. Có thể chèn thêm Hình ảnh, Video hoặc file âm thanh để ứng viên xem/nghe và trả lời.<br>- Chọn hình thức trả lời: Trắc nghiệm (chọn 1), Hộp kiểm (chọn nhiều), Menu thả xuống hoặc viết văn bản tự luận.<br><strong>3. Thiết lập điểm &amp; Lưu dữ liệu:</strong><br>- Nhập số điểm cho mỗi câu (ví dụ: 5 điểm).<br>- Tự động lưu: Hệ thống sẽ tự động lưu lại ngay sau khi bạn hoàn thành xong một câu hỏi, không cần phải tìm nút Lưu tổng quát.<br><strong>4. Quản lý danh sách đề:</strong><br>- Bật/Tắt bài kiểm tra bằng nút gạt (Switch) hoặc xóa các bài không còn sử dụng.</td>
 </tr>
 <tr>
 <td><strong>Điều kiện</strong></td>
-<td></td>
+<td>- Người phụ trách đang thao tác trên các vị trí được Master gán quyền quản lý.<br>- Vị trí tuyển dụng phải đang ở trạng thái hoạt động.</td>
 </tr>
 <tr>
 <td><strong>Kết quả hiển thị</strong></td>
-<td></td>
+<td>- Tiêu đề bài kiểm tra hiển thị rõ tổng số điểm và số lượng câu hỏi hiện có.<br>- Mọi thay đổi về nội dung đề thi sẽ được cập nhật ngay lập tức cho các người phụ trách khác cùng xem.</td>
 </tr>
 <tr>
 <td><strong>Trường hợp không có dữ liệu</strong></td>
-<td></td>
+<td><strong>Trường hợp chưa có bài kiểm tra:</strong> Hệ thống hiển thị thông báo "Không có bài kiểm tra nào" kèm nút để thêm mới.</td>
 </tr>
 </tbody>
 </table>
+<p><span class="swimlane-chart-label">
+  <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+  <span>Swimlane chart</span>
+</span></p>
+<p><img src="/assets/images/buddy/4-3-5/swimlane_thiet_lap_bai_kiem_tra_dau_vao_truoc_phong_van.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><span style="display:block;text-align:center;font-weight:600;">Thiết lập bài kiểm tra đầu vào (Dành cho ứng viên thực hiện trước phỏng vấn)</span></p>
 </details>
 </details>
 <hr />
@@ -4064,7 +4074,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng này cho phép người phụ trách cấu hình các bài kiểm tra chuyên môn cho từng vị trí tuyển dụng cụ thể. Hệ thống hỗ trợ đa dạng loại câu hỏi và cơ chế tự động lưu (Auto-save bằng cách lưu theo từng câu hỏi) để tối ưu hóa quá trình thiết lập. Các bài kiểm tra này sẽ được sử dụng làm căn cứ đánh giá năng lực ứng viên trong quá trình phỏng vấn trực tiếp.</td>
+<td>Chức năng này cho phép người phụ trách cấu hình các bài kiểm tra chuyên môn cho từng vị trí tuyển dụng cụ thể. Hệ thống hỗ trợ đa dạng loại câu hỏi và cơ chế tự động lưu (Auto-save bằng cách lưu theo từng câu hỏi) để tối ưu hóa quá trình thiết lập. Các bài kiểm tra này sẽ được sử dụng làm căn cứ đánh giá năng lực ứng viên trong quá trình <strong>phỏng vấn trực tiếp</strong>.</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
@@ -4166,6 +4176,10 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 <td>Người phụ trách</td>
 </tr>
 <tr>
+<td><strong>Tác động lên các vai trò khác</strong></td>
+<td>- <strong>Tác động chung</strong>: Cả Trainer và Trainee đều sẽ nhìn thấy các quy trình/vòng đào tạo mà Người phụ trách đã thêm mới, với điều kiện quy trình đó đã được Kích hoạt.<br>- <strong>Đối với Trainer</strong>: Có quyền xem toàn bộ nội dung (bao gồm phần của Trainer và Trainee). Quyền chỉnh sửa phụ thuộc vào loại hoạt động (Action), nhưng tuyệt đối không được sửa dữ liệu do Người phụ trách hoặc Trainee đã nhập trước đó.<br>- <strong>Đối với Trainee</strong>: Chỉ xem được các nội dung dành riêng cho mình. Không được thay đổi dữ liệu do người khác điền. Quyền thực hiện/chỉnh sửa sẽ thay đổi linh hoạt dựa trên loại action cụ thể.</td>
+</tr>
+<tr>
 <td><strong>Mô tả</strong></td>
 <td>Người phụ trách có toàn quyền quản lý các quy trình đào tạo theo từng vị trí tuyển dụng: <br>- Tạo mới, chỉnh sửa, xóa quy trình. <br>- Vô hiệu hóa/kích hoạt quy trình. <br>- Quản lý chi tiết các tiêu chuẩn trong quy trình, bao gồm: thêm, sửa, xóa, chọn loại action (Hướng dẫn, Kiểm tra, Đánh giá, Nhiệm vụ, Tiến độ).</td>
 </tr>
@@ -4175,7 +4189,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Luồng thao tác chính</strong></td>
-<td>1. Người phụ trách đăng nhập, chọn vị trí. <br>2. Truy cập tab Quy trình. <br>3. Hệ thống hiển thị danh sách quy trình hiện có. Trường hợp chưa có quy trình được ghi nhận thì phải hiển thị biểu tượng thùng rỗng ở <em>Danh sách quy trình</em>.<br>4. Người phụ trách thực hiện thao tác: thêm mới, chỉnh sửa, xóa, vô hiệu hóa/kích hoạt quy trình bằng nút toggle_on-off. <br>5. Khi mở một quy trình: có thể xem, quản lý các danh mục bên trong. Mỗi danh mục sẽ bao gồm ít nhất một hoặc nhiều action trong đó.</td>
+<td>1. Người phụ trách chọn vị trí cần thiết lập lộ trình và truy cập vào tab Quy trình.<br>2. Quản lý danh sách: Thực hiện thêm mới, sửa tên hoặc xóa các quy trình đào tạo. Sử dụng nút gạt (Switch) để Kích hoạt (cho phép Trainer/Trainee thấy) hoặc Vô hiệu hóa quy trình.<br>3. Thiết lập tiêu chuẩn: Trong mỗi quy trình, Người phụ trách tạo ra các danh mục công việc. Mỗi danh mục chứa các hoạt động (Action) cụ thể.<br>4. Phân loại hoạt động: Người phụ trách chọn loại cho từng hoạt động: Hướng dẫn, Nhận xét, Kiểm tra, Đánh giá, Task nhập liệu, Task tiến trình, Media.</td>
 </tr>
 <tr>
 <td><strong>Điều kiện</strong></td>
@@ -4183,7 +4197,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Kết quả hiển thị</strong></td>
-<td>- Danh sách quy trình đào tạo hiển thị chi tiết. <br>- Người phụ trách có toàn quyền thao tác. <br>- Thông báo “Cập nhật dữ liệu thành công!” sau khi thao tác thêm / sửa hợp lệ.</td>
+<td>- Danh sách quy trình đào tạo hiển thị chi tiết. <br>- Người phụ trách có toàn quyền thao tác. <br>- Thông báo “Cập nhật dữ liệu thành công!” sau khi thao tác thêm / sửa hợp lệ.<br>- Dữ liệu được đồng bộ ngay lập tức tới màn hình của Trainer và Trainee nếu quy trình đang ở trạng thái Kích hoạt.</td>
 </tr>
 <tr>
 <td><strong>Trường hợp không có dữ liệu</strong></td>
@@ -4191,6 +4205,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
+<p><span class="swimlane-chart-label">
+  <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+  <span>Swimlane chart</span>
+</span></p>
+<p><img src="/assets/images/buddy/4-5-1/swimlane_quan_ly_quy_trinh_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><span style="display:block;text-align:center;font-weight:600;">Quản lý quy trình đào tạo</span></p>
 </details>
 <h4 id="toc-4-5-2">5.2. Quản lý đầu ra đào tạo</h4>
 <details class="book">
@@ -4213,7 +4233,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng này cho phép người phụ trách quản lý toàn bộ các tiêu chí đầu ra của quá trình training cho vị trí tuyển dụng được chọn. Các tiêu chí đầu ra sẽ được sắp xếp vào các danh mục, Hệ thống sẽ hiển thị toàn bộ các danh mục đánh giá đã từng được thiết lập cho vị trí này.<br><strong>Nội dung của tài liệu là các action Đánh Giá.</strong><br><br>Tổng quan của cấu trúc tiêu chí đầu ra như sau:<br>&emsp;[---Danh mục chứa các tiêu chí đầu ra<br>&emsp;[------ Danh mục nội dung trong các danh mục (<strong>các action Đánh Giá</strong>)</td>
+<td>Chức năng này cho phép người phụ trách quản lý toàn bộ các tiêu chí đầu ra của quá trình training cho vị trí tuyển dụng được chọn. Các tiêu chí đầu ra sẽ được sắp xếp vào các danh mục, Hệ thống sẽ hiển thị toàn bộ các danh mục đánh giá đã từng được thiết lập cho vị trí này.<br><strong>Nội dung của tài liệu là các action Đánh Giá.</strong><br><br>Tổng quan của cấu trúc tiêu chí đầu ra như sau:<br>&emsp;- Danh mục chứa các tiêu chí đầu ra<br>&emsp;&emsp;- Danh mục nội dung trong các danh mục (<strong>các action Đánh Giá</strong>)</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
@@ -4237,6 +4257,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
+<p><span class="swimlane-chart-label">
+  <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+  <span>Swimlane chart</span>
+</span></p>
+<p><img src="/assets/images/buddy/4-5-2/swimlane_quan_ly_dau_ra_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><span style="display:block;text-align:center;font-weight:600;">Quản lý đầu ra đào tạo</span></p>
 </details>
 <h4 id="toc-4-5-3">5.3. Quản lý tài liệu đào tạo</h4>
 <details class="book">
@@ -4259,7 +4285,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng này cho phép người phụ trách quản lý toàn bộ các bộ tài liệu của quá trình training cho vị trí tuyển dụng được chọn. Hệ thống sẽ hiển thị toàn bộ các bộ tài liệu đã từng được thiết lập cho vị trí này ở <strong>"Danh sách tài liệu"</strong> nằm bên phải của màn hình.<br>Người phụ trách được phép kích hoạt hoặc vô hiệu tài liệu, đồng nghĩa với việc <strong>người được đào tạo</strong> và <strong>người đào tạo</strong> sẽ không xem được bộ tài liệu bị vô hiệu bởi <strong>người phụ trách</strong>.<br>Bên trong tài liệu bao gồm một hoặc nhiều danh mục, trong mỗi danh mục sẽ chứa nội dung.<br><strong>Nội dung của tài liệu là các [action_type : instruction (<code>action Hướng Dẫn</code>), trong các action Hướng Dẫn này, người phụ trách sẽ được phép thêm mô tả và nội dung chi tiết (Văn bản (cho phép thêm định dạng văn bản), file đính kèm, URL)]</strong>.<br><br>Tổng quan của cấu trúc tài liệu như sau:<br>&emsp;[---Bộ tài liệu (hiển thị trên <strong>Danh sách tài liệu</strong>)<br>&emsp;[------ Danh mục nội dung trong các bộ tài liệu<br>&emsp;[------------- Các action Hướng Dẫn trong các danh mục nội dung tài liệu<br>&emsp;[------------------ Các nội dung chi tiết của action Hướng Dẫn</td>
+<td>Chức năng này cho phép người phụ trách quản lý toàn bộ các bộ tài liệu của quá trình training cho vị trí tuyển dụng được chọn. Hệ thống sẽ hiển thị toàn bộ các bộ tài liệu đã từng được thiết lập cho vị trí này ở <strong>"Danh sách tài liệu"</strong> nằm bên phải của màn hình.<br>Người phụ trách được phép kích hoạt hoặc vô hiệu tài liệu, đồng nghĩa với việc <strong>người được đào tạo</strong> và <strong>người đào tạo</strong> sẽ không xem được bộ tài liệu bị vô hiệu bởi <strong>người phụ trách</strong>.<br>Bên trong tài liệu bao gồm một hoặc nhiều danh mục, trong mỗi danh mục sẽ chứa nội dung.<br><strong>Nội dung của tài liệu là các [action_type : instruction (<code>action Hướng Dẫn</code>), trong các action Hướng Dẫn này, người phụ trách sẽ được phép thêm mô tả và nội dung chi tiết (Văn bản (cho phép thêm định dạng văn bản), file đính kèm, URL)]</strong>.<br><br>Tổng quan của cấu trúc tài liệu như sau:<br>&emsp;- Bộ tài liệu (hiển thị trên <strong>Danh sách tài liệu</strong>)<br>&emsp;&emsp;- Danh mục nội dung trong các bộ tài liệu<br>&emsp;&emsp;&emsp;- Các action Hướng Dẫn trong các danh mục nội dung tài liệu<br>&emsp;&emsp;&emsp;&emsp;- Các nội dung chi tiết của action Hướng Dẫn</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
@@ -4283,6 +4309,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
+<p><span class="swimlane-chart-label">
+  <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+  <span>Swimlane chart</span>
+</span></p>
+<p><img src="/assets/images/buddy/4-5-3/swimlane_quan_ly_tai_lieu_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><span style="display:block;text-align:center;font-weight:600;">Quản lý tài liệu đào tạo</span></p>
 </details>
 </details>
 <hr />
@@ -4310,7 +4342,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng này cho phép người phụ trách thiết lập các tiêu chí dành cho quá trình sau đào tạo (review ứng viên), các tiêu chí này sẽ được dùng ở phần chi tiết ứng viên.<br>Cấu trúc của danh mục tiêu chí thử việc:<br>&emsp;[--- Danh mục tiêu chí thử việc <br>&emsp;[------ Nội dung của danh mục tiêu chí thử việc</td>
+<td>Chức năng này cho phép người phụ trách thiết lập các tiêu chí dành cho quá trình sau đào tạo (review ứng viên), các tiêu chí này sẽ được dùng ở phần chi tiết ứng viên.<br>Cấu trúc của danh mục tiêu chí thử việc:<br>&emsp;- Danh mục tiêu chí thử việc<br>&emsp;&emsp;- Nội dung của danh mục tiêu chí thử việc</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
@@ -4334,6 +4366,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
+<p><span class="swimlane-chart-label">
+  <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+  <span>Swimlane chart</span>
+</span></p>
+<p><img src="/assets/images/buddy/4-6-1/swimlane_quan_ly_qua_trinh_thu_viec_sau_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><span style="display:block;text-align:center;font-weight:600;">Quản lý quá trình thử việc sau khi hoàn thành đào tạo</span></p>
 </details>
 <h4 id="toc-4-6-2">6.2. Quản lý các tiêu chí đánh giá sau đào tạo</h4>
 <details class="book">
@@ -4356,7 +4394,7 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 <tr>
 <td><strong>Mô tả</strong></td>
-<td>Chức năng cho phép người phụ trách thiết lập các tiêu chí đánh giá ứng viên sau đào tạo.<br>Cấu trúc của danh mục đánh giá:<br>&emsp;[--- Danh mục đánh giá ứng viên <br>&emsp;[------ Nội dung trong danh mục đánh giá ứng viên</td>
+<td>Chức năng cho phép người phụ trách thiết lập các tiêu chí đánh giá ứng viên sau đào tạo.<br>Cấu trúc của danh mục đánh giá:<br>&emsp;- Danh mục đánh giá ứng viên<br>&emsp;&emsp;- Nội dung trong danh mục đánh giá ứng viên</td>
 </tr>
 <tr>
 <td><strong>Giao diện liên quan</strong></td>
@@ -4380,6 +4418,12 @@ Mục đích của FSD PLS Buddy+ là cung cấp tài liệu chuẩn cho đội 
 </tr>
 </tbody>
 </table>
+<p><span class="swimlane-chart-label">
+  <i class="fi fi-tr-flowchart" aria-hidden="true"></i>
+  <span>Swimlane chart</span>
+</span></p>
+<p><img src="/assets/images/buddy/4-6-2/swimlane_quan_ly_tieu_chi_danh_gia_sau_dao_tao.svg" alt="" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><span style="display:block;text-align:center;font-weight:600;">Quản lý các tiêu chí đánh giá sau đào tạo</span></p>
 </details>
 </details>
 <hr />

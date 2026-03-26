@@ -209,10 +209,11 @@
   <line class="line" x1="835" y1="201" x2="965" y2="201"/>
   <path class="line" d="M1125 242 V287 H675 V332"/>
   <line class="line" x1="835" y1="373" x2="965" y2="373"/>
+  <line class="line" x1="1125" y1="406" x2="1125" y2="466"/>
   <line class="line" x1="1235" y1="536" x2="1385" y2="536"/>
-  <path class="line" d="M1285 373 H1330 V690 H1385"/>
-  <path class="line" d="M1125 606 V628 H675 V650"/>
-  <path class="line" d="M1385 690 H1200 V650 H675"/>
+  <path class="line" d="M1285 365 H1365 V690 H1385"/>
+  <path class="line" d="M1125 606 V628 H745 V822"/>
+  <path class="line" d="M1575 746 V798 H485 V691 H515"/>
   <line class="line" x1="835" y1="691" x2="965" y2="691"/>
   <path class="line" d="M1125 732 V778 H675 V822"/>
   <line class="line" x1="835" y1="881" x2="965" y2="881"/>
@@ -223,7 +224,7 @@
 
   <text class="line-label" x="414" y="178">Phân quyền</text>
   <text class="line-label" x="1248" y="522">Không</text>
-  <text class="line-label" x="1338" y="392">Chưa có profile</text>
-  <text class="line-label" x="1188" y="676">Tạo profile mới</text>
+  <text class="line-label" x="1325" y="350">Chưa có profile</text>
+  <text class="line-label" x="1448" y="790">Tạo profile mới</text>
   <text class="line-label" x="1140" y="624">Có</text>
 </svg>

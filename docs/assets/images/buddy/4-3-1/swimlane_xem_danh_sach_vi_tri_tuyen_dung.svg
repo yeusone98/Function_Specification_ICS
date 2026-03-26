@@ -154,7 +154,7 @@
   <path class="line" d="M1125 452 V772 H1380"/>
   <line class="line" x1="1575" y1="890" x2="1575" y2="1008"/>
 
-  <text class="line-label" x="448" y="178">Phân quyền</text>
+  <text class="line-label" x="450" y="178" text-anchor="middle">Phân quyền</text>
   <text class="line-label" x="1298" y="368">Không</text>
   <text class="line-label" x="1143" y="486">Có</text>
 </svg>
