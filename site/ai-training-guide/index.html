@@ -731,6 +731,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#buoc-11-kiem-tra-model-a-huan-luyen-xong-hay-chua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 11. Kiểm tra model đã huấn luyện xong hay chưa
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1166,6 +1177,17 @@
     <span class="md-ellipsis">
       
         Bước 10. Xem chi phí ước tính và xác nhận huấn luyện
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buoc-11-kiem-tra-model-a-huan-luyen-xong-hay-chua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bước 11. Kiểm tra model đã huấn luyện xong hay chưa
       
     </span>
   </a>
@@ -1620,6 +1642,22 @@
 <p>Theo ghi chú trong giao diện mẫu, thời gian huấn luyện trung bình có thể khoảng từ 1 đến 2 giờ.</p>
 <p><img src="/assets/images/ai-training/11-confirm-fine-tune.png" alt="Bước 10 - Xác nhận Fine-tuning" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
 <p><strong>Bạn cần làm gì ở bước này:</strong> kiểm tra lại dữ liệu và xác nhận huấn luyện.</p>
+<h3 id="buoc-11-kiem-tra-model-a-huan-luyen-xong-hay-chua">Bước 11. Kiểm tra model đã huấn luyện xong hay chưa</h3>
+<p>Sau khi bấm huấn luyện, bạn có thể quay lại tab <code>Test AI</code> để kiểm tra trạng thái của model.</p>
+<p><strong>Cách kiểm tra status của model:</strong></p>
+<ul>
+<li>Nhìn danh sách model ở cột bên phải.</li>
+<li>Rê chuột vào biểu tượng status của từng model để xem trạng thái chi tiết.</li>
+</ul>
+<p>Hệ thống sẽ có 3 trạng thái cơ bản:</p>
+<ul>
+<li><code>Mô hình đã được huấn luyện</code>: model đã training xong. Lúc này bạn có thể test kết quả và dùng model này cho đúng flow đang cần.</li>
+<li><code>Mô hình chưa được huấn luyện</code>: model mới tạo hoặc mới cập nhật dữ liệu nhưng chưa chạy huấn luyện. Lúc này AI chưa có bản training hoàn chỉnh để sử dụng.</li>
+<li><code>Mô hình đang huấn luyện</code>: hệ thống đang chạy training cho model. Bạn nên chờ quá trình này hoàn tất rồi mới test kết quả cuối cùng.</li>
+</ul>
+<p>Nếu trạng thái vẫn là <code>Mô hình đang huấn luyện</code>, hãy đợi hệ thống chạy xong rồi mới đánh giá kết quả cuối cùng của AI.</p>
+<p><img src="/assets/images/ai-training/08-test-ai-screen.png" alt="Bước 11 - Kiểm tra trạng thái huấn luyện của model" style="display:block;margin:0 auto;max-width:1100px;width:100%;" /></p>
+<p><strong>Bạn cần làm gì ở bước này:</strong> kiểm tra model đã train xong hay chưa trước khi dùng hoặc test kết quả cuối cùng.</p>
 <h2 id="11-ket-luan">11. Kết luận</h2>
 <p>Muốn training AI dễ và hiệu quả, bạn chỉ cần nhớ 4 ý:</p>
 <ol>
