@@ -1,0 +1,206 @@
+<svg width="1600" height="1450" viewBox="0 0 1600 1450" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Swimlane chart tùy chọn hiển thị filter">
+  <defs>
+    <style>
+      .outer-border { fill: none; stroke: #b5d4f4; stroke-width: 1.2; }
+      .divider { stroke: #b5d4f4; stroke-width: 1; }
+      .lane-head { fill: #185fa5; }
+      .lane-title {
+        fill: #e8f2fb;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .lane-handler { fill: #378add; opacity: 0.06; }
+      .lane-system { fill: #378add; opacity: 0.10; }
+      .lane-result { fill: #6b7280; opacity: 0.08; }
+      .task { fill: #378add; stroke: #185fa5; stroke-width: 1; }
+      .result-ok { fill: #1d9e75; stroke: #0f6e56; stroke-width: 1; }
+      .result-empty { fill: #e24b4a; stroke: #a32d2d; stroke-width: 1; }
+      .result-note { fill: #5f6f82; stroke: #405062; stroke-width: 1; }
+      .start-end { fill: #5dcaa5; stroke: #0f6e56; stroke-width: 1.2; }
+      .decision { fill: #ef9f27; stroke: #854f0b; stroke-width: 1; }
+      .text-light {
+        fill: #eef6ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .text-dark {
+        fill: #07342c;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .decision-text {
+        fill: #4e2c04;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+      .subtext {
+        fill: #d8eeff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .meta-text {
+        fill: #d6e6f6;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 10px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .line {
+        fill: none;
+        stroke: #378add;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        marker-end: url(#arrow);
+      }
+      .line-label {
+        fill: #61b3ff;
+        font-family: "SF Pro Text", "Inter", "Segoe UI", sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: rgba(10, 18, 34, 0.92);
+        stroke-width: 4px;
+        stroke-linejoin: round;
+      }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1.5 1.5L8 5L1.5 8.5" fill="none" stroke="#378add" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect class="lane-handler" x="0" y="54" width="520" height="1396"/>
+  <rect class="lane-system" x="520" y="54" width="520" height="1396"/>
+  <rect class="lane-result" x="1040" y="54" width="560" height="1396"/>
+
+  <rect class="outer-border" x="0.6" y="0.6" width="1598.8" height="1448.8"/>
+  <line class="divider" x1="520" y1="0" x2="520" y2="1450"/>
+  <line class="divider" x1="1040" y1="0" x2="1040" y2="1450"/>
+
+  <rect class="lane-head" x="0" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="520" y="0" width="520" height="54"/>
+  <rect class="lane-head" x="1040" y="0" width="560" height="54"/>
+
+  <text class="lane-title" x="260" y="27">Người phụ trách</text>
+  <text class="lane-title" x="780" y="27">Hệ thống PLS Buddy+</text>
+  <text class="lane-title" x="1320" y="27">Popup / Kết quả</text>
+
+  <ellipse class="start-end" cx="260" cy="108" rx="96" ry="28"/>
+  <text class="text-dark" x="260" y="113">Bắt đầu</text>
+
+  <rect class="task" x="120" y="164" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="190">
+    <tspan x="260" dy="0">Đang xem bảng</tspan>
+    <tspan x="260" dy="16">Danh sách ứng viên</tspan>
+  </text>
+
+  <rect class="task" x="120" y="278" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="304">
+    <tspan x="260" dy="0">Nhấn nút</tspan>
+    <tspan x="260" dy="16">☰ Hiển thị</tspan>
+  </text>
+
+  <rect class="task" x="620" y="274" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="304">
+    <tspan x="780" dy="0">Lấy định nghĩa filter</tspan>
+    <tspan x="780" dy="16">theo vị trí được phân quyền</tspan>
+  </text>
+
+  <polygon class="decision" points="780,398 884,472 780,546 676,472"/>
+  <text class="decision-text" x="780" y="468">
+    <tspan x="780" dy="0">Có bộ lọc</tspan>
+    <tspan x="780" dy="16">khả dụng?</tspan>
+  </text>
+
+  <rect class="result-empty" x="1110" y="426" width="420" height="92" rx="8"/>
+  <text class="text-light" x="1320" y="456">
+    <tspan x="1320" dy="0">Popup HIỂN THỊ FILTER</tspan>
+    <tspan class="subtext" x="1320" dy="18">Không có dữ liệu!</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="620" width="500" height="140" rx="8"/>
+  <text class="text-light" x="1320" y="650">
+    <tspan x="1320" dy="0">Popup HIỂN THỊ FILTER</tspan>
+    <tspan class="subtext" x="1320" dy="18">Hiển thị các filter hệ thống đang có</tspan>
+    <tspan class="subtext" x="1320" dy="16">Chỉ gồm dữ liệu thuộc vị trí Handler được gán</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Sẵn sàng chọn filter và xác nhận</tspan>
+  </text>
+
+  <rect class="task" x="120" y="838" width="280" height="70" rx="8"/>
+  <text class="text-light" x="260" y="868">
+    <tspan x="260" dy="0">Chọn / bỏ chọn</tspan>
+    <tspan x="260" dy="16">các filter</tspan>
+  </text>
+
+  <rect class="task" x="620" y="834" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="864">
+    <tspan x="780" dy="0">So sánh state</tspan>
+    <tspan x="780" dy="16">checkbox hiện tại</tspan>
+  </text>
+
+  <polygon class="decision" points="780,958 884,1032 780,1106 676,1032"/>
+  <text class="decision-text" x="780" y="1028">
+    <tspan x="780" dy="0">Có thay đổi</tspan>
+    <tspan x="780" dy="16">lựa chọn?</tspan>
+  </text>
+
+  <rect class="result-note" x="1110" y="986" width="420" height="84" rx="8"/>
+  <text class="text-light" x="1320" y="1016">
+    <tspan x="1320" dy="0">Nút Xác nhận disabled</tspan>
+    <tspan class="subtext" x="1320" dy="18">Không gửi request khi chưa có thay đổi</tspan>
+  </text>
+
+  <rect class="task" x="120" y="1172" width="280" height="62" rx="8"/>
+  <text class="text-light" x="260" y="1198">
+    <tspan x="260" dy="0">Nhấn nút</tspan>
+    <tspan x="260" dy="16">Xác nhận</tspan>
+  </text>
+
+  <rect class="task" x="620" y="1168" width="320" height="70" rx="8"/>
+  <text class="text-light" x="780" y="1198">
+    <tspan x="780" dy="0">Đóng popup, cập nhật</tspan>
+    <tspan x="780" dy="16">filter bar và lưu cấu hình</tspan>
+  </text>
+
+  <rect class="result-ok" x="1070" y="1140" width="500" height="138" rx="8"/>
+  <text class="text-light" x="1320" y="1170">
+    <tspan x="1320" dy="0">Hiển thị filter bar mới</tspan>
+    <tspan class="subtext" x="1320" dy="18">Filter được chọn xuất hiện trên thanh công cụ</tspan>
+    <tspan class="subtext" x="1320" dy="16">Filter bỏ chọn biến mất hoàn toàn</tspan>
+    <tspan class="meta-text" x="1320" dy="18">Ghi nhớ cho lần đăng nhập sau</tspan>
+  </text>
+
+  <ellipse class="start-end" cx="1320" cy="1362" rx="96" ry="28"/>
+  <text class="text-dark" x="1320" y="1367">Kết thúc</text>
+
+  <line class="line" x1="260" y1="136" x2="260" y2="164"/>
+  <line class="line" x1="260" y1="226" x2="260" y2="278"/>
+  <line class="line" x1="400" y1="309" x2="620" y2="309"/>
+  <line class="line" x1="780" y1="344" x2="780" y2="398"/>
+  <line class="line" x1="884" y1="472" x2="1110" y2="472"/>
+  <path class="line" d="M780 546 V690 H1070"/>
+  <path class="line" d="M1320 760 V804 H260 V838"/>
+  <line class="line" x1="400" y1="873" x2="620" y2="873"/>
+  <line class="line" x1="780" y1="904" x2="780" y2="958"/>
+  <line class="line" x1="884" y1="1032" x2="1110" y2="1032"/>
+  <path class="line" d="M780 1106 V1136 H260 V1172"/>
+  <line class="line" x1="400" y1="1203" x2="620" y2="1203"/>
+  <line class="line" x1="940" y1="1203" x2="1070" y2="1203"/>
+  <line class="line" x1="1320" y1="1278" x2="1320" y2="1334"/>
+
+  <text class="line-label" x="950" y="458">Không</text>
+  <text class="line-label" x="796" y="580">Có</text>
+  <text class="line-label" x="950" y="1018">Không</text>
+  <text class="line-label" x="796" y="1140">Có</text>
+</svg>
